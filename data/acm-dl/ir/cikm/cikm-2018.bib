@@ -144,8 +144,21 @@ series = {CIKM '18}
 
 @inproceedings{10.1145/3269206.3271753,
 author = {Ciaccia, Paolo and Martinenghi, Davide},
-title = {FA + TA <fsa: flexible="" score="" aggregation},="" year="{2018}," isbn="{9781450360142}," publisher="{Association" for="" computing="" machinery},="" address="{New" york,="" ny,="" usa},="" url="{https://doi.org/10.1145/3269206.3271753}," doi="{10.1145/3269206.3271753}," abstract="{The" problem="" of="" aggregating="" scores,="" so="" as="" to="" provide="" a="" ranking="" objects="" in="" dataset="" according="" different="" evaluation="" criteria,="" is="" central="" many="" modern="" data-intensive="" applications.="" although="" efficient="" (instance="" optimal)="" algorithms="" exist="" this="" purpose="" (such="" the="" threshold="" algorithm="" ta="" and="" its="" variants)="" none="" them="" able="" deal="" with="" scenarios="" which="" function="" used="" aggregate="" scores="" only="" partially="" specified.="" typical="" case="" when="" weighted="" sum,="" user="" unable="" precise="" values="" weights.="" paper,="" we="" consider="" processing="" multi-source="" top-k="" queries,="" constraints,="" rather="" than="" values,="" are="" available="" after="" observing="" that="" so-called="" fagin's="" (fa)="" can="" be="" adapted="" solve="" problem,="" yet="" no="" constraints="" at="" all="" present="" (a="" our="" queries="" will="" return="" k-skyband="" dataset),="" introduce="" novel="" fsa="" algorithm,="" prove="" instance="" optimal="" any="" set="" on="" also="" propose="" several="" optimizations="" basic="" logic="" improve="" execution="" times.="" experimental="" analysis="" both="" real="" synthetic="" datasets="" shows="" indeed="" highly="" effective="" increased="" flexibility="" provided="" by="" introduces="" little="" overhead="" respect="" classical="" queries.},="" booktitle="{Proceedings" 27th="" acm="" international="" conference="" information="" knowledge="" management},="" pages="{57–66}," numpages="{10}," keywords="{monotone" functions,="" f-dominance},="" location="{Torino," italy},="" series="{CIKM" '18}="" }<="" div="">
-  </fsa:>
+title = {FA + TA <FSA: Flexible Score Aggregation},
+year = {2018},
+isbn = {9781450360142},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3269206.3271753},
+doi = {10.1145/3269206.3271693},
+abstract = {The problem of aggregating scores, so as to provide a ranking of objects in a dataset according to different evaluation criteria, is central to many modern data-intensive applications. Although efficient (instance optimal) algorithms exist to this purpose (such as the Threshold Algorithm TA and its variants) none of them is able to deal with scenarios in which the function used to aggregate scores is only partially specified. This is the typical case when the function is a weighted sum, and the user is unable to provide precise values for the weights. In this paper, we consider the problem of processing multi-source top-k queries, when only constraints, rather than precise values, are available for the weights. After observing that the so-called Fagin's Algorithm (FA) can be adapted to solve the problem, yet only when no constraints at all are present (a case in which our queries will return the k-skyband of the dataset), we introduce the novel FSA algorithm, which we prove to be instance optimal for any set of constraints on the weights. We also propose several optimizations to the basic FSA logic so as to improve execution times. Experimental analysis on both real and synthetic datasets shows that our optimizations are indeed highly effective and that the increased flexibility provided by FSA introduces little overhead with respect to the case of classical top-k queries.},
+booktitle = {Proceedings of the 27th ACM International Conference on Information and Knowledge Management},
+pages = {57–66},
+numpages = {10},
+keywords = {top-k queries, monotone functions, f-dominance},
+location = {Torino, Italy},
+series = {CIKM '18}
+}
 
 @inproceedings{10.1145/3269206.3271787,
 author = {Yang, Shuai and Shen, Xipeng},
