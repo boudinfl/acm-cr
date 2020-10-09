@@ -19,15 +19,16 @@ for filename in glob.iglob('data/acm-dl/**', recursive=True):
             if reference.type != "inproceedings":
                 continue
             if {'title', 'abstract', 'keywords'} <= set(reference.fields):
-                collection[key] = reference
+                #collection[key] = reference
+                collection[key] = {}
 
             # dd url
-            url = "https://dl.acm.org/doi/pdf/"+key
+            #url = "https://dl.acm.org/doi/pdf/"+key
 
-            print(key)
-            print(url)
+            #print(key)
+            #print(url)
 
-            exit(0)
+            #exit(0)
 
         print('{} documents in total'.format(len(collection)))
 
