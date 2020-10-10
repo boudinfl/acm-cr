@@ -1,0 +1,14 @@
+<top>
+
+<num> Number: 3397271.3401188.1
+
+<title> While much of the work in information retrieval has been centered around ranking, there is growing interest in methods for ranked list truncation - the problem of determining the appropriate cutoff k of candidate results [1, 9].
+    
+<desc> Description:
+
+</top>
+
+
+
+
+

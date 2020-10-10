@@ -1,0 +1,320 @@
+% [1]
+@inproceedings{10.1145/1571941.1572031,
+author = {Arampatzis, Avi and Kamps, Jaap and Robertson, Stephen},
+title = {Where to Stop Reading a Ranked List? Threshold Optimization Using Truncated Score Distributions},
+year = {2009},
+isbn = {9781605584836},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1571941.1572031},
+doi = {10.1145/1571941.1572031},
+abstract = {Ranked retrieval has a particular disadvantage in comparison with traditional Boolean retrieval: there is no clear cut-off point where to stop consulting results. This is a serious problem in some setups. We investigate and further develop methods to select the rank cut-off value which optimizes a given effectiveness measure. Assuming no other input than a system's output for a query--document scores and their distribution--the task is essentially a score-distributional threshold optimization problem. The recent trend in modeling score distributions is to use a normal-exponential mixture: normal for relevant, and exponential for non-relevant document scores. We discuss the two main theoretical problems with the current model, support incompatibility and non-convexity, and develop new models that address them. The main contributions of the paper are two truncated normal-exponential models, varying in the way the out-truncated score ranges are handled. We conduct a range of experiments using the TREC 2007 and 2008 Legal Track data, and show that the truncated models lead to significantly better results.},
+booktitle = {Proceedings of the 32nd International ACM SIGIR Conference on Research and Development in Information Retrieval},
+pages = {524–531},
+numpages = {8},
+keywords = {probability of relevance, effectiveness measure optimization, threshold optimization, filtering, distributed retrieval, score normalization, meta-search, expectation maximization, fusion, score distribution, truncated distribution},
+location = {Boston, MA, USA},
+series = {SIGIR '09}
+}
+
+% [2]
+@misc{ba2016layer,
+      title={Layer Normalization}, 
+      author={Jimmy Lei Ba and Jamie Ryan Kiros and Geoffrey E. Hinton},
+      year={2016},
+      eprint={1607.06450},
+      archivePrefix={arXiv},
+      primaryClass={stat.ML}
+}
+
+% [3]
+@inproceedings{10.1145/1458082.1458216,
+author = {Broder, Andrei and Ciaramita, Massimiliano and Fontoura, Marcus and Gabrilovich, Evgeniy and Josifovski, Vanja and Metzler, Donald and Murdock, Vanessa and Plachouras, Vassilis},
+title = {To Swing or Not to Swing: Learning When (Not) to Advertise},
+year = {2008},
+isbn = {9781595939913},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1458082.1458216},
+doi = {10.1145/1458082.1458216},
+abstract = {Web textual advertising can be interpreted as a search problem over the corpus of ads available for display in a particular context. In contrast to conventional information retrieval systems, which always return results if the corpus contains any documents lexically related to the query, in Web advertising it is acceptable, and occasionally even desirable, not to show any results. When no ads are relevant to the user's interests, then showing irrelevant ads should be avoided since they annoy the user and produce no economic benefit. In this paper we pose a decision problem "whether to swing", that is, whether or not to show any of the ads for the incoming request. We propose two methods for addressing this problem, a simple thresholding approach and a machine learning approach, which collectively analyzes the set of candidate ads augmented with external knowledge. Our experimental evaluation, based on over 28,000 editorial judgments, shows that we are able to predict, with high accuracy, when to "swing" for both content match and sponsored search advertising.},
+booktitle = {Proceedings of the 17th ACM Conference on Information and Knowledge Management},
+pages = {1003–1012},
+numpages = {10},
+keywords = {result quality prediction, web advertising, ad selection},
+location = {Napa Valley, California, USA},
+series = {CIKM '08}
+}
+
+% [4]
+@inproceedings{10.1145/564376.564429,
+author = {Cronen-Townsend, Steve and Zhou, Yun and Croft, W. Bruce},
+title = {Predicting Query Performance},
+year = {2002},
+isbn = {1581135610},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/564376.564429},
+doi = {10.1145/564376.564429},
+abstract = {We develop a method for predicting query performance by computing the relative entropy between a query language model and the corresponding collection language model. The resulting clarity score measures the coherence of the language usage in documents whose models are likely to generate the query. We suggest that clarity scores measure the ambiguity of a query with respect to a collection of documents and show that they correlate positively with average precision in a variety of TREC test sets. Thus, the clarity score may be used to identify ineffective queries, on average, without relevance information. We develop an algorithm for automatically setting the clarity score threshold between predicted poorly-performing queries and acceptable queries and validate it using TREC data. In particular, we compare the automatic thresholds to optimum thresholds and also check how frequently results as good are achieved in sampling experiments that randomly assign queries to the two classes.},
+booktitle = {Proceedings of the 25th Annual International ACM SIGIR Conference on Research and Development in Information Retrieval},
+pages = {299–306},
+numpages = {8},
+keywords = {clarity, information theory, ambiguity, language models},
+location = {Tampere, Finland},
+series = {SIGIR '02}
+}
+
+% [5]
+@inproceedings{10.1145/3015022.3015026,
+author = {Culpepper, J. Shane and Clarke, Charles L. A. and Lin, Jimmy},
+title = {Dynamic Cutoff Prediction in Multi-Stage Retrieval Systems},
+year = {2016},
+isbn = {9781450348652},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3015022.3015026},
+doi = {10.1145/3015022.3015026},
+abstract = {Modern multi-stage retrieval systems are comprised of a candidate generation stage followed by one or more reranking stages. In such an architecture, the quality of the final ranked list may not be sensitive to the quality of the initial candidate pool, especially in terms of early precision. This provides several opportunities to increase retrieval efficiency without significantly sacrificing effectiveness. In this paper, we explore a new approach to dynamically predicting the size of an initial result set in the candidate generation stage, which can directly affect the overall efficiency and effectiveness of the entire system. Previous work exploring this tradeoff has focused on global parameter settings that apply to all queries, even though optimal settings vary across queries. In contrast, we propose a technique that makes a parameter prediction to maximize efficiency within an effectiveness envelope on a per query basis, using only static pre-retrieval features. Experimental results show that substantial efficiency gains are achievable. In addition, our framework provides a versatile tool that can be used to estimate the effectiveness-efficiency tradeoffs that are possible before selecting and tuning algorithms to make machine-learned predictions.},
+booktitle = {Proceedings of the 21st Australasian Document Computing Symposium},
+pages = {17–24},
+numpages = {8},
+keywords = {Query Prediction, Multi-Stage Retrieval, Measurement, Experimentation},
+location = {Caulfield, VIC, Australia},
+series = {ADCS '16}
+}
+
+% [6]
+@inproceedings{10.1145/2983323.2983769,
+author = {Guo, Jiafeng and Fan, Yixing and Ai, Qingyao and Croft, W. Bruce},
+title = {A Deep Relevance Matching Model for Ad-Hoc Retrieval},
+year = {2016},
+isbn = {9781450340731},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2983323.2983769},
+doi = {10.1145/2983323.2983769},
+abstract = {In recent years, deep neural networks have led to exciting breakthroughs in speech recognition, computer vision, and natural language processing (NLP) tasks. However, there have been few positive results of deep models on ad-hoc retrieval tasks. This is partially due to the fact that many important characteristics of the ad-hoc retrieval task have not been well addressed in deep models yet. Typically, the ad-hoc retrieval task is formalized as a matching problem between two pieces of text in existing work using deep models, and treated equivalent to many NLP tasks such as paraphrase identification, question answering and automatic conversation. However, we argue that the ad-hoc retrieval task is mainly about relevance matching while most NLP matching tasks concern semantic matching, and there are some fundamental differences between these two matching tasks. Successful relevance matching requires proper handling of the exact matching signals, query term importance, and diverse matching requirements. In this paper, we propose a novel deep relevance matching model (DRMM) for ad-hoc retrieval. Specifically, our model employs a joint deep architecture at the query term level for relevance matching. By using matching histogram mapping, a feed forward matching network, and a term gating network, we can effectively deal with the three relevance matching factors mentioned above. Experimental results on two representative benchmark collections show that our model can significantly outperform some well-known retrieval models as well as state-of-the-art deep matching models.},
+booktitle = {Proceedings of the 25th ACM International on Conference on Information and Knowledge Management},
+pages = {55–64},
+numpages = {10},
+keywords = {ranking models, semantic matching, neural models, relevance matching, ad-hoc retrieval},
+location = {Indianapolis, Indiana, USA},
+series = {CIKM '16}
+}
+
+% [7]
+@inproceedings{10.1145/1458082.1458311,
+author = {Hauff, Claudia and Hiemstra, Djoerd and de Jong, Franciska},
+title = {A Survey of Pre-Retrieval Query Performance Predictors},
+year = {2008},
+isbn = {9781595939913},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1458082.1458311},
+doi = {10.1145/1458082.1458311},
+abstract = {The focus of research on query performance prediction is to predict the effectiveness of a query given a search system and a collection of documents. If the performance of queries can be estimated in advance of, or during the retrieval stage, specific measures can be taken to improve the overall performance of the system. In particular, pre-retrieval predictors predict the query performance before the retrieval step and are thus independent of the ranked list of results; such predictors base their predictions solely on query terms, the collection statistics and possibly external sources such as WordNet. In this poster, 22 pre-retrieval predictors are categorized and assessed on three different TREC test collections.},
+booktitle = {Proceedings of the 17th ACM Conference on Information and Knowledge Management},
+pages = {1419–1420},
+numpages = {2},
+keywords = {query performance prediction},
+location = {Napa Valley, California, USA},
+series = {CIKM '08}
+}
+
+% [8]
+@article{10.1162/neco.1997.9.8.1735,
+author = {Hochreiter, Sepp and Schmidhuber, J\"{u}rgen},
+title = {Long Short-Term Memory},
+year = {1997},
+issue_date = {November 15, 1997},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+volume = {9},
+number = {8},
+issn = {0899-7667},
+url = {https://doi.org/10.1162/neco.1997.9.8.1735},
+doi = {10.1162/neco.1997.9.8.1735},
+abstract = {Learning to store information over extended time intervals by recurrent backpropagation takes a very long time, mostly because of insufficient, decaying error backflow. We briefly review Hochreiter's (1991) analysis of this problem, then address it by introducing a novel, efficient, gradient based method called long short-term memory (LSTM). Truncating the gradient where this does not do harm, LSTM can learn to bridge minimal time lags in excess of 1000 discrete-time steps by enforcing constant error flow through constant error carousels within special units. Multiplicative gate units learn to open and close access to the constant error flow. LSTM is local in space and time; its computational complexity per time step and weight is O. 1. Our experiments with artificial data involve local, distributed, real-valued, and noisy pattern representations. In comparisons with real-time recurrent learning, back propagation through time, recurrent cascade correlation, Elman nets, and neural sequence chunking, LSTM leads to many more successful runs, and learns much faster. LSTM also solves complex, artificial long-time-lag tasks that have never been solved by previous recurrent network algorithms.},
+journal = {Neural Comput.},
+month = nov,
+pages = {1735–1780},
+numpages = {46}
+}
+
+% [9]
+@inproceedings{10.1145/3341981.3344234,
+author = {Lien, Yen-Chieh and Cohen, Daniel and Croft, W. Bruce},
+title = {An Assumption-Free Approach to the Dynamic Truncation of Ranked Lists},
+year = {2019},
+isbn = {9781450368810},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3341981.3344234},
+doi = {10.1145/3341981.3344234},
+abstract = {In traditional retrieval environments, a ranked list of candidate documents is produced without regard to the number of documents. With the rise in interactive IR as well as professional searches such as legal retrieval, this results in a substantial ranked list which is scanned by a user until their information need is satisfied. Determining the point at which the ranking model has low confidence in the relevance score is a challenging, but potentially very useful, task. Truncation of the ranked list must balance the needs of the user with the confidence of the retrieval model. Unlike query performance prediction where the task is to estimate the performance of a model based on an initial query and a given set documents, dynamic truncation minimizes the risk of viewing a non-relevant document given an external metric by estimating the confidence of the retrieval model using a distribution over its already calculated output scores, and subsequently truncating the ranking at that position. In this paper, we propose an assumption-free approach to learning a non-parametric score distribution over any retrieval model and demonstrate the efficacy of our method on Robust04, significantly improving user defined metrics compared to previous approaches.},
+booktitle = {Proceedings of the 2019 ACM SIGIR International Conference on Theory of Information Retrieval},
+pages = {79–82},
+numpages = {4},
+keywords = {ranked list truncation, custom loss function, assumption-free method},
+location = {Santa Clara, CA, USA},
+series = {ICTIR '19}
+}
+
+% [10]
+@inproceedings{10.1145/383952.384005,
+author = {Manmatha, R. and Rath, T. and Feng, F.},
+title = {Modeling Score Distributions for Combining the Outputs of Search Engines},
+year = {2001},
+isbn = {1581133316},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/383952.384005},
+doi = {10.1145/383952.384005},
+abstract = {In this paper the score distributions of a number of text search engines are modeled. It is shown empirically that the score distributions on a per query basis may be fitted using an exponential distribution for the set of non-relevant documents and a normal distribution for the set of relevant documents. Experiments show that this model fits TREC-3 and TREC-4 data for not only probabilistic search engines like INQUERY but also vector space search engines like SMART for English. We have also used this model to fit the output of other search engines like LSI search engines and search engines indexing other languages like Chinese.It is then shown that given a query for which relevance information is not available, a mixture model consisting of an exponential and a normal distribution can be fitted to the score distribution. These distributions can be used to map the scores of a search engine to probabilities. We also discuss how the shape of the score distributions arise given certain assumptions about word distributions in documents. We hypothesize that all 'good' text search engines operating on any language have similar characteristics.This model has many possible applications. For example, the outputs of different search engines can be combined by averaging the probabilities (optimal if the search engines are independent) or by using the probabilities to select the best engine for each query. Results show that the technique performs as well as the best current combination techniques.},
+booktitle = {Proceedings of the 24th Annual International ACM SIGIR Conference on Research and Development in Information Retrieval},
+pages = {267–275},
+numpages = {9},
+location = {New Orleans, Louisiana, USA},
+series = {SIGIR '01}
+}
+
+% [11]
+@inproceedings{10.1145/502585.502657,
+author = {Montague, Mark and Aslam, Javed A.},
+title = {Relevance Score Normalization for Metasearch},
+year = {2001},
+isbn = {1581134363},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/502585.502657},
+doi = {10.1145/502585.502657},
+abstract = {Given the ranked lists of documents returned by multiple search engines in response to a given query, the problem of  metasearch is to combine these lists in a way which optimizes the performance of the combination. This problem can be naturally decomposed into three subproblems: (1) normalizing the relevance scores given by the input systems, (2) estimating relevance scores for unretrieved documents, and (3) combining the newly-acquired scores for each document into one, improved score.Research on the problem of metasearch has historically concentrated on algorithms for combining (normalized) scores. In this paper, we show that the techniques used for normalizing relevance scores and estimating the relevance scores of unretrieved documents can have a significant effect on the overall performance of metasearch. We propose two new normalization/estimation techniques and demonstrate empirically that the performance of well known metasearch algorithms can be significantly improved through their use.},
+booktitle = {Proceedings of the Tenth International Conference on Information and Knowledge Management},
+pages = {427–433},
+numpages = {7},
+location = {Atlanta, Georgia, USA},
+series = {CIKM '01}
+}
+
+% [12]
+@misc{ranzato2016sequence,
+      title={Sequence Level Training with Recurrent Neural Networks}, 
+      author={Marc'Aurelio Ranzato and Sumit Chopra and Michael Auli and Wojciech Zaremba},
+      year={2016},
+      eprint={1511.06732},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
+
+% [13]
+@article{10.1561/1500000010,
+author = {Shokouhi, Milad and Si, Luo},
+title = {Federated Search},
+year = {2011},
+issue_date = {January 2011},
+publisher = {Now Publishers Inc.},
+address = {Hanover, MA, USA},
+volume = {5},
+number = {1},
+issn = {1554-0669},
+url = {https://doi.org/10.1561/1500000010},
+doi = {10.1561/1500000010},
+abstract = {Federated search (federated information retrieval or distributed information retrieval) is a technique for searching multiple text collections simultaneously. Queries are submitted to a subset of collections that are most likely to return relevant answers. The results returned by selected collections are integrated and merged into a single list. Federated search is preferred over centralized search alternatives in many environments. For example, commercial search engines such as Google cannot easily index uncrawlable hidden web collections while federated search systems can search the contents of hidden web collections without crawling. In enterprise environments, where each organization maintains an independent search engine, federated search techniques can provide parallel search over multiple collections.There are three major challenges in federated search. For each query, a subset of collections that are most likely to return relevant documents are selected. This creates the collection selection problem. To be able to select suitable collections, federated search systems need to acquire some knowledge about the contents of each collection, creating the collection representation problem. The results returned from the selected collections are merged before the final presentation to the user. This final step is the result merging problem.The goal of this work, is to provide a comprehensive summary of the previous research on the federated search challenges described above.},
+journal = {Found. Trends Inf. Retr.},
+month = jan,
+pages = {1–102},
+numpages = {102}
+}
+
+% [14]
+@inproceedings{tomlinson2007overview,
+  title={Overview of the TREC 2007 Legal Track.},
+  author={Tomlinson, Stephen and Oard, Douglas W and Baron, Jason R and Thompson, Paul},
+  booktitle={TREC},
+  year={2007},
+  organization={Citeseer}
+}
+
+% [15]
+@misc{vaswani2017attention,
+      title={Attention Is All You Need}, 
+      author={Ashish Vaswani and Noam Shazeer and Niki Parmar and Jakob Uszkoreit and Llion Jones and Aidan N. Gomez and Lukasz Kaiser and Illia Polosukhin},
+      year={2017},
+      eprint={1706.03762},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+
+% [16]
+@inproceedings{10.5555/2022850.2022892,
+author = {Wang, Bo and Li, Zhaonan and Tang, Jie and Zhang, Kuo and Chen, Songcan and Ru, Liyun},
+title = {Learning to Advertise: How Many Ads Are Enough?},
+year = {2011},
+isbn = {9783642208461},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {Sponsored advertisement(ad) has already become the major source of revenue for most popular search engines. One fundamental challenge facing all search engines is how to achieve a balance between the number of displayed ads and the potential annoyance to the users. Displaying more ads would improve the chance for the user clicking an ad. However, when the ads are not really relevant to the users' interests, displaying more may annoy them and even "train" them to ignore ads. In this paper, we study an interesting problem that how many ads should be displayed for a given query. We use statistics on real ads click-through data to show the existence of the problem and the possibility to predict the ideal number. There are two main observations: 1) when the click entropy of a query exceeds a threshold, the CTR of that query will be very near zero; 2) the threshold of click entropy can be automatically determined when the number of removed ads is given. Further, we propose a learning approach to rank the ads and to predict the number of displayed ads for a given query. The experimental results on a commercial search engine dataset validate the effectiveness of the proposed approach.},
+booktitle = {Proceedings of the 15th Pacific-Asia Conference on Advances in Knowledge Discovery and Data Mining - Volume Part II},
+pages = {506–518},
+numpages = {13},
+location = {Shenzhen, China},
+series = {PAKDD'11}
+}
+
+% [17]
+@inproceedings{10.1145/2009916.2009934,
+author = {Wang, Lidan and Lin, Jimmy and Metzler, Donald},
+title = {A Cascade Ranking Model for Efficient Ranked Retrieval},
+year = {2011},
+isbn = {9781450307574},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2009916.2009934},
+doi = {10.1145/2009916.2009934},
+abstract = {There is a fundamental tradeoff between effectiveness and efficiency when designing retrieval models for large-scale document collections. Effectiveness tends to derive from sophisticated ranking functions, such as those constructed using learning to rank, while efficiency gains tend to arise from improvements in query evaluation and caching strategies. Given their inherently disjoint nature, it is difficult to jointly optimize effectiveness and efficiency in end-to-end systems. To address this problem, we formulate and develop a novel cascade ranking model, which unlike previous approaches, can simultaneously improve both top k ranked effectiveness and retrieval efficiency. The model constructs a cascade of increasingly complex ranking functions that progressively prunes and refines the set of candidate documents to minimize retrieval latency and maximize result set quality. We present a novel boosting algorithm for learning such cascades to directly optimize the tradeoff between effectiveness and efficiency. Experimental results show that our cascades are faster and return higher quality results than comparable ranking models.},
+booktitle = {Proceedings of the 34th International ACM SIGIR Conference on Research and Development in Information Retrieval},
+pages = {105–114},
+numpages = {10},
+keywords = {effectiveness, learning to rank, efficiency},
+location = {Beijing, China},
+series = {SIGIR '11}
+}
+
+% [18]
+@inproceedings{10.1145/3209978.3210041,
+author = {Zamani, Hamed and Croft, W. Bruce and Culpepper, J. Shane},
+title = {Neural Query Performance Prediction Using Weak Supervision from Multiple Signals},
+year = {2018},
+isbn = {9781450356572},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3209978.3210041},
+doi = {10.1145/3209978.3210041},
+abstract = {Predicting the performance of a search engine for a given query is a fundamental and challenging task in information retrieval. Accurate performance predictors can be used in various ways, such as triggering an action, choosing the most effective ranking function per query, or selecting the best variant from multiple query formulations. In this paper, we propose a general end-to-end query performance prediction framework based on neural networks, called NeuralQPP. Our framework consists of multiple components, each learning a representation suitable for performance prediction. These representations are then aggregated and fed into a prediction sub-network. We train our models with multiple weak supervision signals, which is an unsupervised learning approach that uses the existing unsupervised performance predictors using weak labels. We also propose a simple yet effective component dropout technique to regularize our model. Our experiments on four newswire and web collections demonstrate that NeuralQPP significantly outperforms state-of-the-art baselines, in nearly every case. Furthermore, we thoroughly analyze the effectiveness of each component, each weak supervision signal, and all resulting combinations in our experiments.},
+booktitle = {The 41st International ACM SIGIR Conference on Research &amp; Development in Information Retrieval},
+pages = {105–114},
+numpages = {10},
+keywords = {deep learning, neural networks, query performance prediction, quality estimation, weak supervision},
+location = {Ann Arbor, MI, USA},
+series = {SIGIR '18}
+}
+
+% [19]
+@inproceedings{10.1145/1277741.1277835,
+author = {Zhou, Yun and Croft, W. Bruce},
+title = {Query Performance Prediction in Web Search Environments},
+year = {2007},
+isbn = {9781595935977},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1277741.1277835},
+doi = {10.1145/1277741.1277835},
+abstract = {Current prediction techniques, which are generally designed for content-based queries and are typically evaluated on relatively homogenous test collections of small sizes, face serious challenges in web search environments where collections are significantly more heterogeneous and different types of retrieval tasks exist. In this paper, we present three techniques to address these challenges. We focus on performance prediction for two types of queries in web search environments: content-based and Named-Page finding. Our evaluation is mainly performed on the GOV2 collection. In addition to evaluating our models for the two types of queries separately, we consider a more challenging and realistic situation that the two types of queries are mixed together without prior information on query types. To assist prediction under the mixed-query situation, a novel query classifier is adopted. Results show that our prediction of web query performance is substantially more accurate than the current state-of-the-art prediction techniques. Consequently, our paper provides a practical approach to performance prediction in real-world web settings.},
+booktitle = {Proceedings of the 30th Annual International ACM SIGIR Conference on Research and Development in Information Retrieval},
+pages = {543–550},
+numpages = {8},
+keywords = {query classification, web search, query performance prediction},
+location = {Amsterdam, The Netherlands},
+series = {SIGIR '07}
+}
