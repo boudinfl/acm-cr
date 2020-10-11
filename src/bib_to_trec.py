@@ -8,8 +8,9 @@ from pybtex.database.input import bibtex
 
 
 collection = {}
+root_path = 'data/acm-dl/**'
 
-for filename in glob.iglob('data/acm-dl/**', recursive=True):
+for filename in glob.iglob(root_path, recursive=True):
     if os.path.isfile(filename):
         print('loading documents from {}'.format(filename))
         parser = bibtex.Parser()
