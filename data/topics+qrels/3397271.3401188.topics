@@ -28,6 +28,24 @@
   <title> Another recent study investigated how to leverage bidirectional Long Short-Term Memory (LSTM) models to identify the best position to truncate a given list [9]. This model, BiCut, can be considered the present state-of-the-art approach.
 </top>
 
+<top>
+  <num> Number: 3397271.3401188.7
+  <title> Our work is closely related to the task of query performance prediction [4]. In this task, the objective is to automatically determine the effectiveness of a given query.
+</top>
+
+<top>
+  <num> Number: 3397271.3401188.8
+  <title> Methods for query performance prediction include preretrieval-based approaches [7], relevance-based approaches [4, 19], and neural approaches [18].
+</top>
+
+<top>
+  <num> Number: 3397271.3401188.9
+  <title> For example, in sponsored search, displaying too many irrelevant ads to users may cause frustration, resulting in so-called query blindness. This motivated research that investigated whether any ads should be displayed at all [3].
+</top>
+
+
+
+
 
 
 
