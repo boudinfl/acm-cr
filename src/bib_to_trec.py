@@ -9,6 +9,7 @@ from pybtex.database.input import bibtex
 
 collection = {}
 root_path = 'data/acm-dl/**'
+#root_path = 'data/acm-dl/chi/**'
 nb_entries = 0
 
 for filename in glob.iglob(root_path, recursive=True):

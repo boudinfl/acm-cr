@@ -4,6 +4,13 @@
 
 ```
 pip install pybtex
+
+# install Science Parse
+# https://github.com/allenai/science-parse/
+brew tap AdoptOpenJDK/openjdk
+brew cask install adoptopenjdk8
+sbt -java-home /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/ cli/assembly
+java -Xmx6g -jar cli/target/scala-2.12/science-parse-cli-assembly-3.0.1.jar ../citation_rec/data/open-access-papers/ -o ../citation_rec/data/open-access-papers/
 ```
 
 ## Test collection
@@ -27,8 +34,9 @@ Bibtex files from SIGIR sponsorded conferences:
 | KDD          | '99-'20 |   3966 |     3589 |
 | WWW          | '01-'20 |   6823 |     5962 |
 | SIGMOD       | '75-'20 |   5378 |     2360 |
+| IUI          | '93-'20 |   2043 |     1735 |
 |              |         |        |          |
-| Total        |         |  33364 |    26081 |
+| Total        |         |  35407 |    27816 |
 
 ### Queries
 

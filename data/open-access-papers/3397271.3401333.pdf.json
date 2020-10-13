@@ -1,0 +1,370 @@
+{
+  "name" : "3397271.3401333.pdf",
+  "metadata" : {
+    "source" : "META",
+    "title" : "Feature Transformation for Neural Ranking Models",
+    "authors" : [ "Honglei Zhuang", "Xuanhui Wang", "Michael Bendersky", "Marc Najork" ],
+    "emails" : [ "hlz@google.com", "xuanhui@google.com", "bemike@google.com", "najork@google.com" ],
+    "sections" : [ {
+      "heading" : null,
+      "text" : "CCS CONCEPTS • Information systems → Learning to rank.\nKEYWORDS Feature transformation; neural ranking model; learning-to-rank\nACM Reference Format: Honglei Zhuang, Xuanhui Wang, Michael Bendersky, Marc Najork. 2020. Feature Transformation for Neural Ranking Models. In Proceedings of the 43rd International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR ’20), July 25–30, 2020, Virtual Event, China.ACM, New York, NY, USA, 4 pages. https://doi.org/10.1145/3397271.3401333"
+    }, {
+      "heading" : "1 INTRODUCTION",
+      "text" : "Many machine learning models cannot easily handle features with drastically skewed distributions or extreme scales. Unfortunately, commonly used features often have these patterns. Particularly in web-related applications such as search and recommendation tasks,\nPermission to make digital or hard copies of part or all of this work for personal or classroom use is granted without fee provided that copies are not made or distributed for profit or commercial advantage and that copies bear this notice and the full citation on the first page. Copyrights for third-party components of this work must be honored. For all other uses, contact the owner/author(s). SIGIR ’20, July 25–30, 2020, Virtual Event, China © 2020 Copyright held by the owner/author(s). ACM ISBN 978-1-4503-8016-4/20/07. https://doi.org/10.1145/3397271.3401333\ndata items are often represented by features with a peculiar statistical nature. For example, click counts can be in the scale of billions for some items while other items only have a dozen clicks. Using these numbers directly as input features can result in less optimal models and introduce numerical instability during training. Therefore, feature normalization or transformation is an essential step to improve the effectiveness of many machine learning models [13].\nIn the learning-to-rank setting, tree-based models [6, 11, 17] have been extensively studied in the past and remain competitive on public data sets which primarily consist of numerical features. The tree-based model architecture is generally immune to the adverse impact of directly using raw features. Recently, neural network based deep learning models attract lots of attention for learningto-rank tasks [1, 5]. However, few of them investigate the impact of feature transformation. A possible reason is that neural ranking models are regarded as universal function approximators [14], which leads to the misconception that the optimal ranking function can be automatically learned by current algorithms without feature transformation. Therefore, it is still unclear whether feature transformation is important for neural ranking models.\nWhile there are surveys providing empirical comparison of multiple feature transformation techniques in other domains [2, 19, 24], to the best of our knowledge there is no systematic comparison of feature transformation techniques for neural ranking models. Moreover, the optimal transformation could vary by feature due to different statistical nature. Possible solutions are either to manually specify feature transformation technique for each feature based on expert knowledge or to perform tedious empirical comparison for every single feature. Both practices require significant time and effort and become intractable when the number of features is large.\nIn this paper, we aim to evaluate the importance of feature transformation for neural rankingmodels. We first enumerate three basic feature transformation functions, including commonly used z-score and CDF transformations, and a simple yet effective symmetric logarithm transformation that has been less explored in prior work on ranking. Then, we propose a mixture feature transformation mechanism. In particular, it takes the set of basic feature transformation functions and automatically derives a mixture of them as the final transformation for each feature. The mixture feature transformation module can be jointly trained with the neural ranking model, which saves the human effort to choose transformation functions for different features.\nWe perform experiments on multiple learning-to-rank data sets to provide a thorough view of the effects of different feature transformation functions. We show that applying feature transformation can significantly improve the performance of neural ranking models compared to directly using the raw feature values. We also show that our mixture feature transformation can further improve the performance by selecting a proper transformation per feature without any human effort."
+    }, {
+      "heading" : "2 RELATEDWORK",
+      "text" : "Feature scaling, normalization and transformation is one of themost fundamental data preprocessing techniques inmachine learning [12, 13]. There are surveys comparing different feature transformation techniques in various applications, such as disease detection [24], stock market prediction [19] and video classification [2].\nIn information retrieval, feature transformation is also a common practice. For example, the YAHOO Learning to Rank Challenge data set [8] applies cumulative distribution-based transformation on all features; the LETOR [23] data set also applies query-level minmax scaling on each feature. In traditional information retrieval, feature transformation has been extensively studied on both term frequency and inverse document frequency (e.g., BM25). However, such a study is still missing for neural ranking models.\nAutomatically learning to perform feature transformation is a relatively novel topic. There are only a few studies with similar objectives [3, 7]. Their methods focus on a family of functions such as linear or logistic ones and are not studied for ranking models. In contrast, our methods focus on neural ranking models and work with different forms of transformation functions."
+    }, {
+      "heading" : "3 PROBLEM FORMULATION",
+      "text" : "Learning to rank. We represent a learning-to-rank data set with \uD835\uDC41 lists asD = {(X, y)}\uD835\uDC411 . For a list (X, y) ∈ D,X = {x\uD835\uDC56 } \uD835\uDC59 \uD835\uDC56=1 denotes a set of \uD835\uDC59 data items, each represented by an \uD835\uDC5B-dimensional feature vector x\uD835\uDC56 ∈ R\uD835\uDC5B ; y = {\uD835\uDC66\uD835\uDC56 }\uD835\uDC59\uD835\uDC56=1 are relevance labels of corresponding data items, where \uD835\uDC66\uD835\uDC56 ∈ R. We also use the notation X to represent all the data items in the entire data set, namely X = ⋃X∈D X.\nIn a supervised learning-to-rank setting, we are usually given a training data set D\uD835\uDC3F , where all the relevance labels y are known. We aim to develop a scoring function \uD835\uDC53 : R\uD835\uDC5B ↦→ R such that for any list X = {x\uD835\uDC56 }\uD835\uDC59\uD835\uDC56=1, the ranked list predicted by scoring and sorting items based on \uD835\uDC53 (x\uD835\uDC56 ) can be similar to the ground-truth ranked list obtained by sorting items based on \uD835\uDC66\uD835\uDC56 . Feature transformation. We denote the feature transformation function for the\uD835\uDC58-th feature as\uD835\uDF0E\uD835\uDC58 : R ↦→ R. For a feature vector x\uD835\uDC56 = (\uD835\uDC65\uD835\uDC561, \uD835\uDC65\uD835\uDC562, · · · , \uD835\uDC65\uD835\uDC56\uD835\uDC5B), we apply the feature transformation function on each feature vector and obtain the transformed feature vector as \uD835\uDF0E (x\uD835\uDC56 ) = (\uD835\uDF0E1 (\uD835\uDC65\uD835\uDC561), \uD835\uDF0E2 (\uD835\uDC65\uD835\uDC562), · · · , \uD835\uDF0E\uD835\uDC5B (\uD835\uDC65\uD835\uDC56\uD835\uDC5B)). The scoring function \uD835\uDC53 in the neural ranking model will be trained and evaluated based on the transformed feature vectors, i.e., the predicted ranked list will be obtained by sorting items based on \uD835\uDC53 (\uD835\uDF0E (x\uD835\uDC56 ))."
+    }, {
+      "heading" : "4 FEATURE TRANSFORMATION",
+      "text" : "In this section, we first introduce several basic feature transformation techniques for single features. Then, we introduce a mixture feature transformation mechanism to automatically derive a mixture of multiple transformed values for each feature."
+    }, {
+      "heading" : "4.1 Basic Transformation",
+      "text" : "Gaussian transformation (z-score). We fit a Gaussian distribution for all the data items x\uD835\uDC56 ∈ X in the given data set. We denote each data item as x\uD835\uDC56 = (\uD835\uDC65\uD835\uDC561, · · · , \uD835\uDC65\uD835\uDC56\uD835\uDC5B). For the \uD835\uDC58-th feature, we can\nestimate the mean and standard deviation by:\n\uD835\uDF07\uD835\uDC58 = 1 |X| ∑ x\uD835\uDC56 ∈X \uD835\uDC65\uD835\uDC56\uD835\uDC58 , \uD835\uDC60\uD835\uDC58 = √ 1 |X| ∑ x\uD835\uDC56 ∈X (\uD835\uDC65\uD835\uDC56\uD835\uDC58 − \uD835\uDF07\uD835\uDC58 )2\nAnd the derived transformation function is\n\uD835\uDF0EGauss,\uD835\uDC58 (\uD835\uDC65) = \uD835\uDC65 − \uD835\uDF07\uD835\uDC58 \uD835\uDC60\uD835\uDC58\n(1)\nWe denote the vector containing all transformed features as \uD835\uDF0EGauss (x\uD835\uDC56 ) = (\uD835\uDF0EGauss,1 (\uD835\uDC65\uD835\uDC561), · · · , \uD835\uDF0EGauss,\uD835\uDC5B (\uD835\uDC65\uD835\uDC56\uD835\uDC5B)). We will use similar notation for other feature transformation techniques. CDF transformation. Another idea is to estimate the cumulative distribution function (CDF) for each feature and use the CDF value to represent the feature. Concretely, we still use X as the set of all data items in the data set. For any value \uD835\uDC65 of the \uD835\uDC58-th feature, the transformation function is:\n\uD835\uDF0ECDF,\uD835\uDC58 (\uD835\uDC65) = ∑ x\uD835\uDC56 ∈X I(\uD835\uDC65\uD835\uDC56\uD835\uDC58 < \uD835\uDC65)\n|X| (2)\nSymmetric log1p transformation. We also use a symmetric logarithm function as a transformation function. A regular log(\uD835\uDC65) function cannot be directly applied to any function as it is undefined for \uD835\uDC65 ≤ 0. Moreover, when \uD835\uDC65 is close to 0, the absolute value of the transformed feature could be extremely large. Hence, we use a symmetric version of log(1 + \uD835\uDC65):\n\uD835\uDF0ELog1p,\uD835\uDC58 (\uD835\uDC65) = sgn(\uD835\uDC65) · log(1 + |\uD835\uDC65 |) (3) where sgn(\uD835\uDC65) is the sign function which returns 1 for positive numbers, −1 for negative numbers and 0 for \uD835\uDC65 = 0."
+    }, {
+      "heading" : "4.2 Mixture Transformation",
+      "text" : "There may not be a single optimal feature transformation technique applicable for all scenarios. The effect of different feature transformation techniques depends on both the overall feature value distribution and the model structure. Hence, we introduce a mixture feature transformation module.\nSuppose for the \uD835\uDC58-th feature, we have\uD835\uDC5A feature transformation functions available as a “basis”, denoted as {\uD835\uDF0E1,\uD835\uDC58 , . . . , \uD835\uDF0E\uD835\uDC5A,\uD835\uDC58 }. We\nderive the mixture transformed feature value of the \uD835\uDC58-th feature \uD835\uDF0E\uD835\uDC58 (\uD835\uDC65) as:\n\uD835\uDF0EMixture,\uD835\uDC58 (\uD835\uDC65) = ∑ \uD835\uDC5A \uD835\uDC5D\uD835\uDC5A,\uD835\uDC58\uD835\uDF0E\uD835\uDC5A,\uD835\uDC58 (\uD835\uDC65) (4)\nwhere p\uD835\uDC58 = (\uD835\uDC5D1,\uD835\uDC58 , · · · , \uD835\uDC5D\uD835\uDC5A,\uD835\uDC58 ) is a weighting vector. We derive the weighting vector from an embedding of each feature by\np\uD835\uDC58 = softmax(We\uD835\uDC58 )\nwhere e\uD835\uDC58 is the \uD835\uDC51-dimensional embedding vector of the \uD835\uDC58-th feature andW is an\uD835\uDC5A×\uD835\uDC51 matrix to be learned. Notice that e\uD835\uDC58 is not related to any feature value \uD835\uDC65\uD835\uDC56\uD835\uDC58 , but rather an embedding vector of \uD835\uDC58-th feature per se. There are only \uD835\uDC5B such embedding vectors where \uD835\uDC5B is the number of features.\nNote that the mixture feature transformation layer can be jointly trained with the ranking model to automatically determine the best mixture of feature transformations for each feature."
+    }, {
+      "heading" : "4.3 Ranking Model",
+      "text" : "The ranking model we employ is a feed-forward network where the first layer takes the transformed feature as input. Formally, for a data item x, we can derive the final ranking score \uD835\uDC66 by:\nz1 = ReLU(W1\uD835\uDF0E∗ (x) + b1) z2 = ReLU(W2z1 + b2) . . .\nz\uD835\uDC3B = ReLU(W\uD835\uDC3B z(\uD835\uDC3B−1) + b\uD835\uDC3B ) \uD835\uDC66 = W\uD835\uDC3B+1z\uD835\uDC3B + \uD835\uDC4F\uD835\uDC3B+1\nwhere zℎ is the output of the ℎ-th hidden layer; Wℎ and bℎ are weight matrix and bias vector of the ℎ-th hidden layer to be trained; ReLU(·) refers to the Rectifier [18] activation function; and \uD835\uDC66 is the final output. Notice that \uD835\uDF0E∗ (x) is the transformed input vector, where we can plug in any feature transformation methods mentioned above. For basic feature transformations such as CDF and Log1p, the transformed value \uD835\uDF0ECDF (x) or \uD835\uDF0ELog1p (x) will be fed into the model. For the mixture feature transformation, the module will be jointly trained with the entire model, as shown in Figure 1.\nWe insert a batch normalization [15] layer in front of the input of each layer. We also apply a dropout layer for the output of each hidden layer. The model is trained with an approximate NDCG5 loss [5, 22] with a stochastic treatment as described in [4]."
+    }, {
+      "heading" : "5 EXPERIMENTS",
+      "text" : ""
+    }, {
+      "heading" : "5.1 Data Sets",
+      "text" : "We use two public learning-to-rank data sets with numerical features in our experiments. Another well-known public data set from YAHOO [8] is not used as its feature values are already transformed. WEB30K. WEB30K [21] is a public learning-to-rank data set released by Microsoft. The original data contains 5 folds. We only use Fold1 of the data. The data set is partitioned into three subsets: training, validation and testing. Each document is represented by 136 numerical features. In addition, a label with a 5-level relevance grade varying from 0 to 4 is provided for each document. ISTELLA. Istella released several learning-to-rank data sets to the public. We use the Istella full data set [9]. Each document is\nTable 1: Performance comparison (%). The best performances are bolded. Performances statistically significantly better (\uD835\uDEFC = 0.05) than Raw or Log1p are marked with † and ‡\nrespectively.\nData set Method NDCG1 NDCG5 NDCG10\nWEB30K Raw 45.43 45.25 47.26 Gauss 48.18† 46.81† 48.68† CDF 49.17† 47.75† 49.45† Log1p 49.12† 48.01† 49.88† Mixture 50.55†‡ 48.54†‡ 50.16†‡\nISTELLA Raw 65.81 62.32 67.09 Gauss 66.31 62.41 67.22 CDF 65.94 62.62† 67.55† Log1p 66.60† 63.29† 68.12† Mixture 66.91† 63.57†‡ 68.42†‡\nrepresented by 220 numerical features. The data set is also labeled with graded relevance judgments from 0 to 4. We remove 2 features which contain illegitimate values and only use the remaining 218."
+    }, {
+      "heading" : "5.2 Parameter Configurations",
+      "text" : "In all of our experiments, the ranking model network contains 3 hidden layers with 1024, 512, 256 units respectively. We set the momentum of the batch normalization layers as 0.4 and the dropout rate as 0.5. For all experiments, we set the training batch size to 128 and run for 100,000 steps. We use AdaGrad [10] as the optimizer and tune the learning rate on each data set. The learning rate is set to 0.5 for WEB30K and 0.1 for ISTELLA respectively. The experiments are implemented based on the open-sourced TensorFlow Ranking library [20] and trained on TPU."
+    }, {
+      "heading" : "5.3 Comparison Settings",
+      "text" : "We apply each basic feature transformation and compare the performance to the practice of directly using raw input features (represented by “Raw”). We also include the performance of applying the mixture feature transformation function into the comparison. For each feature \uD835\uDC65\uD835\uDC56\uD835\uDC58 , the mixture transformation takes the raw feature value along with all the three transformed feature values {\uD835\uDC65\uD835\uDC56\uD835\uDC58 , \uD835\uDF0EGauss,\uD835\uDC58 (\uD835\uDC65\uD835\uDC56\uD835\uDC58 ), \uD835\uDF0ECDF,\uD835\uDC58 (\uD835\uDC65\uD835\uDC56\uD835\uDC58 ), \uD835\uDF0ELog1p,\uD835\uDC58 (\uD835\uDC65\uD835\uDC56\uD835\uDC58 )} as the basis and generates the mixture transformation.\nWe adopt normalized discounted cumulative gain (NDCG) [16] as the evaluation metric. In our experiments, we utilize NDCG\uD835\uDC58 to measure the quality of the top-\uD835\uDC58 ranked items where \uD835\uDC58 ∈ {1, 5, 10}."
+    }, {
+      "heading" : "5.4 Results",
+      "text" : "The overall results are shown in Figure 1. As one can observe, applying feature transformation techniques to neural ranking models substantially improves the performance, varying from +1% to +3% (NDCG5) on both data sets. This verifies the importance of utilizing feature transformation methods for neural ranking models.\nAmong all the basic feature transformation methods, Log1p seems to outperform the other two transformation methods. We believe that Log1p is especially effective to transform features with a power law distribution, which are prevalent in web-related data sets likeWEB30K and ISTELLA. The distribution of the transformed feature values will no longer be as skewed as raw feature values,\nallowing neural ranking models to better handle these features in training.\nAnother observation is that the Mixture method outperforms all the basic feature transformation methods on both data sets. On the WEB30K data set, the Mixture method improves NDCG1 by more than +1% compared to the best basic feature transformation method. It shows the effectiveness of the proposed mixture mechanism to automatically derive a better transformation function for each feature from the basic transformation functions. In-depth analysis of theMixture feature transformation. We also take a deeper look into the mixture weights derived by the mixture feature transformation.We select a few features inWEB30K and plot their learned weighting vector p\uD835\uDC58 . By default we select the feature for “body”. We visualize these weighting vectors in Figure 2.\nFirst, for some features that are sophisticated ranking scores per se (e.g., Sum of TF*IDF, BM25 and LMIR.DIR), the model only uses their raw scores, suggesting no further transformation is needed. For features with potentially extremely large values and/or power law distribution (e.g., Sum of TF and PageRank), the model learns that applying Log1p transformation methods is beneficial. The mixture method also applies CDF transformation for some features with smaller values (e.g. Sum of Stream Length Normalized TF) or sparse distributions (e.g., Outlink Number)."
+    }, {
+      "heading" : "6 CONCLUSIONS",
+      "text" : "In this paper, we study the effect of feature transformation for neural ranking models. Through empirical evidence on multiple learning-to-rank data sets, we show that appropriate input feature transformation is crucial to improve the performance of neural ranking models. More importantly, we propose a mixture feature transformation model that can automatically select the optimal transformation given a set of basic transformation functions.\nBased on our study, a further examination of feature transformations in the context of neural ranking models can be appropriate. Although our experiments are only conducted on a feed-forward network ranking models, as the focus of this paper is on feature transformation, the techniques studied and proposed in this work are applicable to any neural ranking models. It would be interesting\nto see whether they can achieve better performances with feature transformations. Moreover, our current work mainly looks into numerical features. It is also intriguing to study how to conduct effective feature transformation for embedding-based features (e.g., text features) in the future."
+    } ],
+    "references" : [ {
+      "title" : "Learning a deep listwise context model for ranking refinement",
+      "author" : [ "Qingyao Ai", "Keping Bi", "Jiafeng Guo", "W Bruce Croft" ],
+      "venue" : "In 41st International ACM SIGIR Conference on Research & Development in Information Retrieval",
+      "citeRegEx" : "1",
+      "shortCiteRegEx" : "1",
+      "year" : 2018
+    }, {
+      "title" : "The effect of normalization in violence video classification performance",
+      "author" : [ "Ashikin Ali", "Norhalina Senan" ],
+      "venue" : "IOP Conference Series: Materials Science and Engineering 226,",
+      "citeRegEx" : "2",
+      "shortCiteRegEx" : "2",
+      "year" : 2017
+    }, {
+      "title" : "Dynamic feature scaling for online learning of binary classifiers",
+      "author" : [ "Danushka Bollegala" ],
+      "venue" : "Knowledge-Based Systems",
+      "citeRegEx" : "3",
+      "shortCiteRegEx" : "3",
+      "year" : 2017
+    }, {
+      "title" : "A stochastic treatment of learning to rank scoring functions",
+      "author" : [ "Sebastian Bruch", "Shuguang Han", "Michael Bendersky", "Marc Najork" ],
+      "venue" : "In 13th International Conference on Web Search and Data",
+      "citeRegEx" : "4",
+      "shortCiteRegEx" : "4",
+      "year" : 2020
+    }, {
+      "title" : "Revisiting approximate metric optimization in the age of deep neural networks",
+      "author" : [ "Sebastian Bruch", "Masrour Zoghi", "Mike Bendersky", "Marc Najork" ],
+      "venue" : "In 42nd International ACM SIGIR Conference on Research & Development in Information Retrieval",
+      "citeRegEx" : "5",
+      "shortCiteRegEx" : "5",
+      "year" : 2019
+    }, {
+      "title" : "From RankNet to LambdaRank to LambdaMART: An overview",
+      "author" : [ "Christopher J.C. Burges" ],
+      "venue" : "Technical Report MSR-TR-2010-82. Microsoft Research",
+      "citeRegEx" : "6",
+      "shortCiteRegEx" : "6",
+      "year" : 2010
+    }, {
+      "title" : "A robust data scaling algorithm to improve classification accuracies in biomedical data",
+      "author" : [ "Xi Hang Cao", "Ivan Stojkovic", "Zoran Obradovic" ],
+      "venue" : "BMC Bioinformatics 17,",
+      "citeRegEx" : "7",
+      "shortCiteRegEx" : "7",
+      "year" : 2016
+    }, {
+      "title" : "Yahoo! Learning to rank challenge overview",
+      "author" : [ "Olivier Chapelle", "Yi Chang" ],
+      "venue" : "In Proceedings of the Learning to Rank Challenge",
+      "citeRegEx" : "8",
+      "shortCiteRegEx" : "8",
+      "year" : 2011
+    }, {
+      "title" : "Fast ranking with additive ensembles of oblivious and non-oblivious regression trees",
+      "author" : [ "Domenico Dato", "Claudio Lucchese", "Franco Maria Nardini", "Salvatore Orlando", "Raffaele Perego", "Nicola Tonellotto", "Rossano Venturini" ],
+      "venue" : "ACM Transactions on Information Systems 35,",
+      "citeRegEx" : "9",
+      "shortCiteRegEx" : "9",
+      "year" : 2016
+    }, {
+      "title" : "Adaptive subgradient methods for online learning and stochastic optimization",
+      "author" : [ "John Duchi", "Elad Hazan", "Yoram Singer" ],
+      "venue" : "Journal of Machine Learning Research 12,",
+      "citeRegEx" : "10",
+      "shortCiteRegEx" : "10",
+      "year" : 2011
+    }, {
+      "title" : "Greedy function approximation: A gradient boosting machine",
+      "author" : [ "Jerome H Friedman" ],
+      "venue" : "Annals of Statistics 29,",
+      "citeRegEx" : "11",
+      "shortCiteRegEx" : "11",
+      "year" : 2001
+    }, {
+      "title" : "Data Preprocessing in Data",
+      "author" : [ "Salvador García", "Julián Luengo", "Francisco Herrera" ],
+      "venue" : null,
+      "citeRegEx" : "12",
+      "shortCiteRegEx" : "12",
+      "year" : 2015
+    }, {
+      "title" : "Data Mining: Concepts and Techniques",
+      "author" : [ "Jiawei Han", "Jian Pei", "Micheline Kamber" ],
+      "venue" : null,
+      "citeRegEx" : "13",
+      "shortCiteRegEx" : "13",
+      "year" : 2011
+    }, {
+      "title" : "Multilayer feedforward networks are universal approximators",
+      "author" : [ "K. Hornik", "M. Stinchcombe", "H.White" ],
+      "venue" : "Neural Networks",
+      "citeRegEx" : "14",
+      "shortCiteRegEx" : "14",
+      "year" : 1989
+    }, {
+      "title" : "Batch normalization: Accelerating deep network training by reducing internal covariate shift",
+      "author" : [ "Sergey Ioffe", "Christian Szegedy" ],
+      "venue" : "In 32nd International Conference on International Conference on Machine Learning",
+      "citeRegEx" : "15",
+      "shortCiteRegEx" : "15",
+      "year" : 2015
+    }, {
+      "title" : "Cumulated gain-based evaluation of IR techniques",
+      "author" : [ "Kalervo Järvelin", "Jaana Kekäläinen" ],
+      "venue" : "ACM Transactions on Information Systems 20,",
+      "citeRegEx" : "16",
+      "shortCiteRegEx" : "16",
+      "year" : 2002
+    }, {
+      "title" : "LightGBM: A highly efficient gradient boosting decision tree",
+      "author" : [ "Guolin Ke", "Qi Meng", "Thomas Finley", "Taifeng Wang", "Wei Chen", "Weidong Ma", "Qiwei Ye", "Tie-Yan Liu" ],
+      "venue" : "In Advances in Neural Information Processing Systems",
+      "citeRegEx" : "17",
+      "shortCiteRegEx" : "17",
+      "year" : 2017
+    }, {
+      "title" : "Rectified linear units improve restricted Boltzmann machines",
+      "author" : [ "Vinod Nair", "Geoffrey E Hinton" ],
+      "venue" : "In 27th International Conference on Machine Learning",
+      "citeRegEx" : "18",
+      "shortCiteRegEx" : "18",
+      "year" : 2010
+    }, {
+      "title" : "The impact of data normalization on stock market prediction: Using SVM and technical indicators",
+      "author" : [ "Jiaqi Pan", "Yan Zhuang", "Simon Fong" ],
+      "venue" : "In International Conference on Soft Computing in Data",
+      "citeRegEx" : "19",
+      "shortCiteRegEx" : "19",
+      "year" : 2016
+    }, {
+      "title" : "TF-Ranking: Scalable tensorflow library for learning-to-rank",
+      "author" : [ "Rama Kumar Pasumarthi", "Sebastian Bruch", "Xuanhui Wang", "Cheng Li", "Michael Bendersky", "Marc Najork", "Jan Pfeifer", "Nadav Golbandi", "Rohan Anil", "Stephan Wolf" ],
+      "venue" : "In 25th ACM SIGKDD International Conference on Knowledge Discovery & Data Mining",
+      "citeRegEx" : "20",
+      "shortCiteRegEx" : "20",
+      "year" : 2019
+    }, {
+      "title" : "Introducing LETOR 4.0 Datasets",
+      "author" : [ "Tao Qin", "Tie-Yan Liu" ],
+      "venue" : null,
+      "citeRegEx" : "21",
+      "shortCiteRegEx" : "21",
+      "year" : 2013
+    }, {
+      "title" : "A general approximation framework for direct optimization of information retrieval measures",
+      "author" : [ "Tao Qin", "Tie-Yan Liu", "Hang Li" ],
+      "venue" : "Information Retrieval 13,",
+      "citeRegEx" : "22",
+      "shortCiteRegEx" : "22",
+      "year" : 2010
+    }, {
+      "title" : "LETOR: A benchmark collection for research on learning to rank for information retrieval",
+      "author" : [ "Tao Qin", "Tie-Yan Liu", "Jun Xu", "Hang Li" ],
+      "venue" : "Information Retrieval 13,",
+      "citeRegEx" : "23",
+      "shortCiteRegEx" : "23",
+      "year" : 2010
+    }, {
+      "title" : "Investigations on impact of feature normalization techniques on classifier’s performance in breast tumor classification",
+      "author" : [ "Bikesh Kumar Singh", "Kesari Verma", "A.S. Thoke" ],
+      "venue" : "International Journal of Computer Applications 116,",
+      "citeRegEx" : "24",
+      "shortCiteRegEx" : "24",
+      "year" : 2015
+    } ],
+    "referenceMentions" : [ {
+      "referenceID" : 12,
+      "context" : "Therefore, feature normalization or transformation is an essential step to improve the effectiveness of many machine learning models [13].",
+      "startOffset" : 133,
+      "endOffset" : 137
+    }, {
+      "referenceID" : 5,
+      "context" : "In the learning-to-rank setting, tree-based models [6, 11, 17] have been extensively studied in the past and remain competitive on public data sets which primarily consist of numerical features.",
+      "startOffset" : 51,
+      "endOffset" : 62
+    }, {
+      "referenceID" : 10,
+      "context" : "In the learning-to-rank setting, tree-based models [6, 11, 17] have been extensively studied in the past and remain competitive on public data sets which primarily consist of numerical features.",
+      "startOffset" : 51,
+      "endOffset" : 62
+    }, {
+      "referenceID" : 16,
+      "context" : "In the learning-to-rank setting, tree-based models [6, 11, 17] have been extensively studied in the past and remain competitive on public data sets which primarily consist of numerical features.",
+      "startOffset" : 51,
+      "endOffset" : 62
+    }, {
+      "referenceID" : 0,
+      "context" : "Recently, neural network based deep learning models attract lots of attention for learningto-rank tasks [1, 5].",
+      "startOffset" : 104,
+      "endOffset" : 110
+    }, {
+      "referenceID" : 4,
+      "context" : "Recently, neural network based deep learning models attract lots of attention for learningto-rank tasks [1, 5].",
+      "startOffset" : 104,
+      "endOffset" : 110
+    }, {
+      "referenceID" : 13,
+      "context" : "A possible reason is that neural ranking models are regarded as universal function approximators [14], which leads to the misconception that the optimal ranking function can be automatically learned by current algorithms without feature transformation.",
+      "startOffset" : 97,
+      "endOffset" : 101
+    }, {
+      "referenceID" : 1,
+      "context" : "While there are surveys providing empirical comparison of multiple feature transformation techniques in other domains [2, 19, 24], to the best of our knowledge there is no systematic comparison of feature transformation techniques for neural ranking models.",
+      "startOffset" : 118,
+      "endOffset" : 129
+    }, {
+      "referenceID" : 18,
+      "context" : "While there are surveys providing empirical comparison of multiple feature transformation techniques in other domains [2, 19, 24], to the best of our knowledge there is no systematic comparison of feature transformation techniques for neural ranking models.",
+      "startOffset" : 118,
+      "endOffset" : 129
+    }, {
+      "referenceID" : 23,
+      "context" : "While there are surveys providing empirical comparison of multiple feature transformation techniques in other domains [2, 19, 24], to the best of our knowledge there is no systematic comparison of feature transformation techniques for neural ranking models.",
+      "startOffset" : 118,
+      "endOffset" : 129
+    }, {
+      "referenceID" : 11,
+      "context" : "Feature scaling, normalization and transformation is one of themost fundamental data preprocessing techniques inmachine learning [12, 13].",
+      "startOffset" : 129,
+      "endOffset" : 137
+    }, {
+      "referenceID" : 12,
+      "context" : "Feature scaling, normalization and transformation is one of themost fundamental data preprocessing techniques inmachine learning [12, 13].",
+      "startOffset" : 129,
+      "endOffset" : 137
+    }, {
+      "referenceID" : 23,
+      "context" : "There are surveys comparing different feature transformation techniques in various applications, such as disease detection [24], stock market prediction [19] and video classification [2].",
+      "startOffset" : 123,
+      "endOffset" : 127
+    }, {
+      "referenceID" : 18,
+      "context" : "There are surveys comparing different feature transformation techniques in various applications, such as disease detection [24], stock market prediction [19] and video classification [2].",
+      "startOffset" : 153,
+      "endOffset" : 157
+    }, {
+      "referenceID" : 1,
+      "context" : "There are surveys comparing different feature transformation techniques in various applications, such as disease detection [24], stock market prediction [19] and video classification [2].",
+      "startOffset" : 183,
+      "endOffset" : 186
+    }, {
+      "referenceID" : 7,
+      "context" : "For example, the YAHOO Learning to Rank Challenge data set [8] applies cumulative distribution-based transformation on all features; the LETOR [23] data set also applies query-level minmax scaling on each feature.",
+      "startOffset" : 59,
+      "endOffset" : 62
+    }, {
+      "referenceID" : 22,
+      "context" : "For example, the YAHOO Learning to Rank Challenge data set [8] applies cumulative distribution-based transformation on all features; the LETOR [23] data set also applies query-level minmax scaling on each feature.",
+      "startOffset" : 143,
+      "endOffset" : 147
+    }, {
+      "referenceID" : 2,
+      "context" : "There are only a few studies with similar objectives [3, 7].",
+      "startOffset" : 53,
+      "endOffset" : 59
+    }, {
+      "referenceID" : 6,
+      "context" : "There are only a few studies with similar objectives [3, 7].",
+      "startOffset" : 53,
+      "endOffset" : 59
+    }, {
+      "referenceID" : 17,
+      "context" : "where zh is the output of the h-th hidden layer; Wh and bh are weight matrix and bias vector of the h-th hidden layer to be trained; ReLU(·) refers to the Rectifier [18] activation function; and y is the final output.",
+      "startOffset" : 165,
+      "endOffset" : 169
+    }, {
+      "referenceID" : 14,
+      "context" : "We insert a batch normalization [15] layer in front of the input of each layer.",
+      "startOffset" : 32,
+      "endOffset" : 36
+    }, {
+      "referenceID" : 4,
+      "context" : "The model is trained with an approximate NDCG5 loss [5, 22] with a stochastic treatment as described in [4].",
+      "startOffset" : 52,
+      "endOffset" : 59
+    }, {
+      "referenceID" : 21,
+      "context" : "The model is trained with an approximate NDCG5 loss [5, 22] with a stochastic treatment as described in [4].",
+      "startOffset" : 52,
+      "endOffset" : 59
+    }, {
+      "referenceID" : 3,
+      "context" : "The model is trained with an approximate NDCG5 loss [5, 22] with a stochastic treatment as described in [4].",
+      "startOffset" : 104,
+      "endOffset" : 107
+    }, {
+      "referenceID" : 7,
+      "context" : "Another well-known public data set from YAHOO [8] is not used as its feature values are already transformed.",
+      "startOffset" : 46,
+      "endOffset" : 49
+    }, {
+      "referenceID" : 20,
+      "context" : "WEB30K [21] is a public learning-to-rank data set released by Microsoft.",
+      "startOffset" : 7,
+      "endOffset" : 11
+    }, {
+      "referenceID" : 9,
+      "context" : "We use AdaGrad [10] as the optimizer and tune the learning rate on each data set.",
+      "startOffset" : 15,
+      "endOffset" : 19
+    }, {
+      "referenceID" : 19,
+      "context" : "The experiments are implemented based on the open-sourced TensorFlow Ranking library [20] and trained on TPU.",
+      "startOffset" : 85,
+      "endOffset" : 89
+    }, {
+      "referenceID" : 15,
+      "context" : "We adopt normalized discounted cumulative gain (NDCG) [16] as the evaluation metric.",
+      "startOffset" : 54,
+      "endOffset" : 58
+    } ],
+    "year" : 2020,
+    "abstractText" : "Although neural network models enjoy tremendous advantages in handling image and text data, tree-based models still remain competitive for learning-to-rank tasks with numerical data. A major strength of tree-based ranking models is the insensitivity to different feature scales, while neural ranking models may suffer from features with varying scales or skewed distributions. Feature transformation or normalization is a simple technique which preprocesses input features to mitigate their potential adverse impact on neural models. However, due to lack of studies, it is unclear to what extent feature transformation can benefit neural ranking models. In this paper, we aim to answer this question by providing empirical evidence for learning-to-rank tasks. First, we present a list of commonly used feature transformation techniques and perform a comparative study on multiple learning-to-rank data sets. Then we propose a mixture feature transformation mechanism which can automatically derive a mixture of basic feature transformation functions to achieve the optimal performance. Our experiments show that applying feature transformation can substantially improve the performance of neural ranking models compared to directly using the raw features. In addition, the proposed mixture transformation method can further improve the performance of the ranking model without any additional human effort.",
+    "creator" : "LaTeX with acmart 2020/04/30 v1.71 Typesetting articles for the Association for Computing Machinery and hyperref 2020/01/14 v7.00d Hypertext links for LaTeX"
+  }
+}

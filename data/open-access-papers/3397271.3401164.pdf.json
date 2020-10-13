@@ -1,0 +1,782 @@
+{
+  "name" : "3397271.3401164.pdf",
+  "metadata" : {
+    "source" : "META",
+    "title" : "Web-to-Voice Transfer for Product Recommendation on Voice",
+    "authors" : [ "Rongting Zhang", "Jie Yang" ],
+    "emails" : [ "rongtz@amazon.com", "jiy@amazon.com" ],
+    "sections" : [ {
+      "heading" : null,
+      "text" : "CCS CONCEPTS • Information systems→Recommender systems; •Computing methodologies → Transfer learning; Neural networks.\nKEYWORDS Voice-based recommendation; Web-to-Voice transfer; Repeated purchase\nACM Reference Format: Rongting Zhang and Jie Yang. 2020. Web-to-Voice Transfer for Product Recommendation on Voice. In Proceedings of the 43rd International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR ’20), July 25–30, 2020, Virtual Event, China. ACM, New York, NY, USA, 10 pages. https://doi.org/10.1145/3397271.3401164\nPermission to make digital or hard copies of part or all of this work for personal or classroom use is granted without fee provided that copies are not made or distributed for profit or commercial advantage and that copies bear this notice and the full citation on the first page. Copyrights for third-party components of this work must be honored. For all other uses, contact the owner/author(s). SIGIR ’20, July 25–30, 2020, Virtual Event, China © 2020 Copyright held by the owner/author(s). ACM ISBN 978-1-4503-8016-4/20/07. https://doi.org/10.1145/3397271.3401164"
+    }, {
+      "heading" : "1 INTRODUCTION",
+      "text" : "In the last few years, there has been an explosion of interest in voicebased technology across industry, with an estimated 144.3 million shipments of voice-enabled devices last year [43]. An important use case for voice-enabled devices is voice shopping, which has become an increasingly important shopping scenario. A recent survey shows that up to 43% of voice-enabled device owners use their device to shop and by 2022, voice is expected to be a $40 billion channel for shopping [9].\nA fundamental task in voice shopping is product recommendation, where the goal is to recommend relevant products to customers by inferring their preferences. While a growing body of research has addressed the voice-based recommendation problem from the dialogue perspective, i.e., improving the effectiveness of questionanswering between the customer and system [7, 8, 11, 23, 25, 44, 45], relatively little work has been focused on addressing the specific challenges arising in recommendation on Voice [40].\nDue to the unique characteristics of voice interfaces (e.g., narrow information channel), customers tend to explore fewer products and choose fewer long-tail products, as compared to Web-based channels [45]. Consequently, products purchased through Voice are much more limited in terms of both quantity and diversity. Due to the fact that voice interfaces are new and not yet widely adopted, customers on Voice do not have a long history as compared with Web. These problems pose a bigger-than-ever data sparsity challenge that impedes effective recommendation. To mitigate the data sparsity issue, a promising approach is transfer learning: a customer is likely to share similar shopping behaviors on the Web and Voice in terms of favored product types and purchase patterns; by transferring the shared shopping patterns from Web, the system can readily generate recommendations for customers with limited historical purchases on Voice, or even those new to Voice.\nDespite its obvious potential, transfer learning from Web to Voice is non-trivial due to customers’ distinct shopping behaviors on Voice [19]. For example, customers are more inclined to purchase low-consideration products (e.g., paper towel and toothpaste) than high-consideration ones (e.g., computer monitors) on Voice. This is in part due to the recency of Voice as a shopping medium that customers are not used to making complex shopping decisions by voice, in part due to the lack of technology for supporting effective interactions. On the other hand, the convenience of voice interactions triggers a strong tendency of repeated purchases in voice shopping: many products are purchased by the same customers over and over, especially those consumables that need to be purchased on a regular basis. We note that repeated purchase behaviors have also been observed on the Web, which is mainly driven by customers’ loyalty to certain brands [5, 10, 42].\nIn the recommendation literature, transfer learning has been implemented by extending recommendation models, e.g., factorization models [28, 29, 33] or neural networks [14, 21, 26], with shared user1 representations for cross-domain recommendation tasks. While being different in the underlying recommendation models (see Section 2 for a detailed discussion), both classes of methods are designed for transferring user representations with less emphasis on transferring the interaction patterns, which has to be carefully considered in our Web-to-Voice transfer context. More recent work [18] attempts to address the problem by modeling the transfer of the purchase patterns from one domain to another using a linear transformation. However, it fails to capture the relationships of interaction patterns across domains, such as similarity and dissimilarity, which are essential for Web to Voice transfer.\nThis paper introduces TransV, a novel neural network-based recommendation method for transferring customers’ shopping behaviors from Web to Voice while considering the uniqueness of voice shopping. TransV is designed to learn shared customer and product representations across both channels and to carefully transfer the purchase patterns from Web to Voice by modeling their relationships explicitly. Specifically, our method is built on the state-of-the-art self-attention neural architecture [41, 49] to learn customer and product representations. To enable effective transfer of customers’ purchase patterns from Web to Voice, TransV adopts a multi-level tri-factorization approach that models web and voice purchase patterns with both shared and separated neural parts. By doing so, TransV distinguishes channel-specific purchase patterns from channel-independent ones. To account for customers’ repeated purchase behaviors that are prevalent in voice shopping, TransV adopts a recency-biased copy mechanism, which leverages the copy mechanism [16, 36] and extends it by considering the impact of the recency of historical purchases on repeated purchases.\nTransV generates recommendations from a mixture of general and repeated purchase probability, thereby unifying Web-to-Voice transfer learning with repeated purchase modeling in a holistic neural model. It can be trained in an end-to-end manner that automatically learns the importance of general and repeated purchases for generating the most relevant product recommendations on Voice. In summary, we make the following key contributions:\n• We introduce the problem of Web-to-Voice transfer learning for effective recommendation in voice shopping. • We propose a multi-level tri-factorization approach that allows for effective Web-to-Voice transfer while taking into account customers’ behaviors on Voice. • We present a unified neural transfer network that orchestrates both transfer learning and repeated purchasemodeling for voice-based recommendation.\nTo the best of our knowledge, this is the first work to study transfer learning for voice-based recommendation. Extensive validation on multiple real-world datasets, including two cross-channel datasets fromAmazon.com andAmazonAlexa (one of today’smajor voice shopping channels), shows that our method is able to improve the quality of voice-based recommendation by 26.8% as compared with non-transfer learning methods measured by NDCG@1.\n1We use “user” as a generic term and “customer” to specifically refer to the user in shopping contexts; similar for “item” vs. “product”, and “interaction” vs. “purchase”."
+    }, {
+      "heading" : "2 RELATEDWORK",
+      "text" : "This section discusses relevant work from the emerging field of voice-based recommendation, and then reviews existing methods related to ours in transfer learning and repeated purchases."
+    }, {
+      "heading" : "2.1 Voice-based Recommendation",
+      "text" : "With the rapid increase of personal assistants, a considerable amount of literature has grown up around conversational recommendation. The focal point of research efforts has been enabling the system to effectively and efficiently infer users’ intents and satisfy their information needs [35, 47]. Due to the complexity of the problem, it has been studied by several research communities including natural language processing [11, 23, 25], human-computer interaction [7, 45], and information retrieval (including recommender systems) [8, 44]. Existing work mainly takes a dialogue perspective with the goal of improving the question-answering process, i.e., asking the most relevant questions to collect user feedback.\nFrom the recommendation perspective, most existing work assumes a cold-start setting that ignores long-term preferences of users. For example, Zhang et al. [47] studies the effect of in-session aspect-based questions for product recommendation using memory networks [39]. Li et al. [25] introduce a neural dialogue model that classifies the sentiment of a user with respect to movies discussed in the conversation session, and based on that, it generates movie recommendations with a pre-trained autoencoder recommender [37]. A recent paper by Sun et al. [40] shows that the integration of users’ past purchasing behaviors boosts the effectiveness of voice-based recommendation. Their work, however, concentrates on methods for integrating recommendation techniques into the dialogue system. Our work takes a step back and aims at bridging the conventional recommendation techniques with the recommendation task on Voice, with a specific focus on Web-to-Voice transfer which is of key importance for successful voice shopping in practice."
+    }, {
+      "heading" : "2.2 Transfer Learning for Recommendation",
+      "text" : "Transfer learning has been a popular approach for tackling the data sparsity problem by transferring the knowledge (e.g., user preferences) in a source domain to the task in the target domain [6, 24]. In recommendation, transfer learning is generally implemented through multi-task learning [48], i.e., joint model training for recommendation in source and target domains, with a specific focus on transferring user and item representations, or interaction patterns across the domains.\nEarly work focuses on adapting matrix factorization techniques for transfer learning [28, 29, 33]. Liu et al. [28] introduce a model based on collective matrix factorization [38], where user latent factors are shared across different domains. The observed interactions in the source domain help to train better latent factors, thus transferring the knowledge to the target domain. Pan et al. [32, 33] propose to model the interaction patterns in different domains as independent parameter matrices. Factorization models, however, only learn latent factors and parameter matrices in a linear fashion, which are oversimplified in capturing the complex user-item interaction patterns. More importantly, these methods fail to capture the relationship between user interactions in different domains.\nNeural network-basedmethods are more capable of learning nonlinear latent representations for users and items and potentially also their interactions (see a recent survey [46]). Specific to neural transfer learning for cross-domain recommendation, Elkahky et al. [14] introduce a multi-view deep learning method that learns shared user representations from user-item interactions in different domains. Lian et al. [26] propose to incorporate content information into the multi-view neural network. Kanagawa et al. [21] go further in this direction and formulate cross-domain recommendation as extreme multi-class classification, where only content features are used for adapting a classifier trained in the source domain to the target domain. These methods focus on learning better representations for users and items, while emphasizing less learning their interaction patterns, which is important for voice shopping.\nA recent paper [18], perhaps the most closely related work to ours, models the transfer of interactions across multiple domains as a linear transformation using cross-stitch networks [30]. In the context of Web-to-Voice transfer, since the same products appear in both Web and Voice, we adopt a tri-factorization approach [12, 31] that fixes the product representations across channels, and extend the approach into a multi-level scheme, which allows to capture channel-independent and channel-specific interaction patterns."
+    }, {
+      "heading" : "2.3 Repeated Purchase",
+      "text" : "Due to the importance for business profitability, repeated purchases are an important customer behavior studied in marketing as a signal of brand loyalty [20, 34]. In Web-based information systems, repeated item consumption has been shown to be most affected by the recency and quality of the item, with recency being more critical [1]. Benson et al. [4] study such a behavior in more detail and reveals the increasing inter-arrival gaps of repeated item consumption that eventually lead to abandonment. In online shopping, Bhagat et al. [5] study repeated purchases for consumable products, e.g., toothpaste and diapers, and propose a prediction model that helps increase the product click-through rate. Our work extends the study to voice shopping and the model to collaborative filtering that recommends both repeated and novel products.\nRepeated purchases have only been considered in recommender system literature recently. Wan et al. [42] introduce a recommendation algorithm, adaLoyal, a personalized grocery recommender. In adaLoyal, the repeated purchase is leveraged in a post-processing procedure to adapt the prediction of purchase probability over an item using the customer’ historical purchases of the item. The adaptation is implemented through a posterior calculation that accounts for both probabilities of general and repeated purchases. Ren et al. [36] propose a unified neural network model that jointly learns repeated and novel consumption for session-based recommendation. Our method is different in that we consider the general sequential recommendation scenario and further model the impact of recency of historical purchases for voice-based recommendation."
+    }, {
+      "heading" : "3 THE TRANSV MODEL",
+      "text" : "This section introduces our proposed method TransV for transferring customers’ shopping patterns from Web to Voice. The overall structure of TransV is illustrated in Figure 1(a). It is composed of the following modules: 1) Sequence Encoder, which learns high-quality\ncustomer and product representations shared across channels given historical customer-product interaction records from both channels; 2) Multi-level Interaction Module, which models the purchase patterns on the Web and Voice as well as their relationships using a multi-level tri-factorization approach; 3) Repeated Purchase Module, which captures customers’ repeated purchase behaviors on both channels; and 4) Mixture Output Module, which generates the output from a mixture of general and repeated purchase probability.\nIn the following, we start by formalizing the problem before introducing each of the modules in a separate subsection. Problem Statement.We model voice-based recommendation as a sequential recommendation problem, i.e., given a sequence of products a customer has previously purchased on theWeb and Voice, we predict the next purchases. Formally, letU andV be the set of customers and products, respectively; let Su = [vu,1,vu,2, . . . ,vu,nu ] andTu = [tu,1, tu,2, . . . , tu,nu ] denote the sequence of products customer u ∈ U purchased on both channels and the corresponding timestamps of the purchases. Note that a timestamp is represented as the difference with respect to a reference time point in terms of the number of weeks; this allows us to map the timestamps to embeddings, so as to model the temporal effect of past purchases.\nSuppose tk is the time of prediction (tu,nu ≤ tk ), our sequential recommendation problem with Web-to-Voice transfer is formulated as predicting the purchase probability of any product on both channels at tk+1:\nP(vdtk+1 = v |Su ,Tu ), v ∈ V,d ∈ D, (1) where D is the set of channels (i.e., Web and Voice in our case)."
+    }, {
+      "heading" : "3.1 Sequence Encoder",
+      "text" : "The sequence encoder takes as input the sequence of products historically purchased by a customer and generates customer representations. It starts by encoding the products and the corresponding timestamps of purchases, then encodes the sequence of embeddings with transformer layers that take into account the dependencies between the purchases, and finally generates customer representations through a self-attention pooling layer. Embedding Products and Timestamps. Item encoding is implemented as a single embedding lookup layer. In our case, we also consider the category taxonomy of products available to obtain higher quality embeddings. Specifically, we define the embedding of a product vj ∈ V as the sum of embeddings of its affiliated categories at different levels of the taxonomy:\nvj = L∑ l=1 v(l )j , (2)\nwhere v(l )j ∈ Rm is the embedding of vj ’s category at the l-th level. To capture the temporal dynamics of Su , we embed the timestamp of a purchase tu,i ∈ Tu : tu,i = τ (tk − tu,i ), (3)\nwhere τ represents a embedding lookup layer such that tu,i ∈ Rm . The final representation of a product purchase is given as the sum of the item embedding and time embedding:\neu,i = vu,i + tu,i . (4)\nTransformer Layers. To learn high-quality customer representations, we leverage the transformer layers [41] that capture the dependency between the purchases based on semantic affinity in the embedding space. To do so, we adopt the multi-head self-attention mechanism [27, 41], which allows jointly attending to information from different parts of the purchase sequence. Formally, let E = [eu,1, eu,2, . . . , eu,nu ]T ∈ Rnu×m be the output from the embedding layer, we construct new representations using h attention heads, each learning a specific dependency relationship within the sequence as follows:\nMH(E) = [head1,head2, . . . ,headh ]WO , (5)\nheadi = Attention(EWQi ,EW K i ,EW V i ,m/h), (6)\nwhereWQi ,W K i ,W V i ∈ Rm×m/h are projection matrices for each attention head and WO ∈ Rm×m is the output projection matrix for the heads combined. The attention function is given by:\nAttention(Q,K,V,m) = Softmax(QK T\n√ m )V. (7)\nIn addition, we apply a position-wise feed-forward layer to the output of the multi-head self-attention layers. The output of the feed-forward layer is calculated as\nA = LayerNorm(E + Dropout(MH(E))), (8) S = Dropout(σ F (AWF1 + bF1 ))WF2 + bF2 , (9) F = LayerNorm(A + Dropout(S)), (10)\nwhere WF1 and W F 2 are parameter matrices and b F 1 and b F 2 are bias terms; σ F (x) Softrelu(x) = log(1 + ex ) is applied element-wise. Here we adopt residual connection [17] and layer normalization [2].\nSelf-Attention Pooling LayerWe then construct three types of customer representations, up , uq , uπ , to model the general customer preference, repeated purchase preference and their relative importance for recommendation, respectively. To do so, we apply an attention-based pooling layer [27]:\nu [up , uq , uπ ]T (11) =FTDropout(Softmax(Dropout(σP (FWP1 ))WP2 )),\nwhere σP Softrelu,WP1 ∈ Rm×m andWP2 ∈ Rm×3 are parameter matrices."
+    }, {
+      "heading" : "3.2 Multi-Level Interaction Module",
+      "text" : "Now we consider the problem of modeling customer-product interactions induced from customers’ general preference (i.e., nonrepeated purchase) on different channels.\nA standard approach to model interactions on different domains when entities are shared is matrix tri-factorization [31], which models the interaction scoring function on a specific domain d as:\nb d,p u, j = u pWd,pvTj , (12)\nwhereWd,p is a channel-specific parametermatrix capturing customerproduct interaction patterns. Such a formulation, however, cannot capture the similarity between interaction patterns across channels.\nWe introduce the multi-level interaction layers which model customer-product interaction as the sum of two factors, the channelindependent affinity of the product to the customer’s taste and the channel-specific one. Formally, we calculate the interaction score by:\nb d,p i, j = u pvTj + ũ pWd,p ṽTj , (13)\nwhere ũp , ṽj are low-dimensional vectors derived from up , vj through fully connected layers with Softrelu activation. The first term upvTj captures customers’ purchase patterns across channels, while the second term ũpWd,p ṽTj captures channel-specific patterns. The details of our multi-level interaction layers are depicted in Figure 1(b).\nWe then obtain the interaction probability over all the products using softmax:\np̂du = Softmax([b d,p u,1 , . . . ,b d,p u, |V |]), (14)\nwhere p̂du, j models the probability that the customer u would purchase a specific product j among all the products on channel d ."
+    }, {
+      "heading" : "3.3 Repeated Purchase Module",
+      "text" : "We now introduce our method for modeling the specific interaction pattern of repeated purchases of the same product. The key idea is to learn a probability of repeating a historical purchase for each customer. To do so, we adopt the copy mechanism [16], which models repeated purchases as copying purchases from the past. In the specific context of product recommendation, the probability is dependent not only on the customer’s repeated purchase preferences, but also on the recency of the historical purchases. We therefore extend the copy mechanism by considering the impact of the recency of historical purchases on repeated purchases.\nSince the repeated purchase behavior can vary across different channels, we model the repeated purchase score of product vu,i ∈ Su for customer u ∈ U by:\nb d,q u,(u,i) = u qvTu,i + ũ qWd,q ṽTu,i , (15)\nwhere vu,i is the vector representation of vu,i and ũq , ṽu,i are lowdimensional vectors derived from uq , vu,i through fully connected layers with Softrelu activation, respectively. Note that here we consider each purchase in the sequence, i.e., vu,i ∈ Su , rather than each product, as a candidate for repetition. The repeated purchase probability for the same product will be summed up.\nIn practice, customers tend to repeatedly purchase products that are recently purchased. We therefore, consider the impact of a historical purchase on current purchase decision as affected by purchase recency. Given the timestamp of the i-th purchase tu,i and the time of prediction tk , we define a bias term for modeling time recency as: дu,i = T (tk − tu,i ), (16) where T (·) is a learnable scalar function which can be represented by a single-dimensional embedding lookup layer. With such a bias term, the distribution of repeated purchase probability over historical purchases is given by:\nqdu,(u,i) = exp(bd,qu,(u,i) + дu,i )∑nu l=1 exp(b d,q u,(u,l ) + дu,l ) . (17)\nConsequently repeated purchase probability of product vj ∈ V is\nqdu, j = nu∑ i=1 1{vj=v(u,i ) }q d u,(u,i), (18)\nwhere 1{·} is the indicator function returning 1 if the statement is True and 0 otherwise. We note that in a degenerate case where the repeated purchase score and time recency bias for all purchased\nproducts are equal, the resulting distribution of repeated purchase probability is equivalent to the empirical purchase frequency."
+    }, {
+      "heading" : "3.4 Mixture Output and Loss Function",
+      "text" : "The overall probability of a customer purchasing a product is modeled as a mixture of the general purchase probability and the repeated purchase probability, i.e., p̂d and qd :\npdu = π d u q d u + (1 − πdu )p̂du . (19)\nwhere πdu is the mixture weight that describes the importance of repeated purchase in customers’ shopping decision.\nThe mixture weight is considered to be dependent on specific customers and the recency of their last purchases. Formally, considering the timestamp of the last purchase tu,nu , we define the time recency bias as:\nhu = S(tk − tu,nu ), (20) where S(·) is a learnable scalar function. The mixture weight πdu is given by:\nπdu = exp(wd,π uπ + bd,π + hu )\n1 + exp(wd,π uπ + bd,π + hu ) , (21)\nwhere wd,π ∈ Rm and bd,π ∈ R are parameters to be learned. Loss Function. Our model generates recommendations on both Web and Voice. To consider the importance of recommendation relevance on both channels for model training, we introduce a hyperparameter αd as the weight for loss on channel d ∈ D. Specifically, let cdu, j be the normalized empirical frequency of observed purchases on channel d for customer u ∈ U and product vj ∈ V , the training loss is given by:\nL = |D |∑ d=1 αd ∑ u ∈U |V |∑ j=1 cdu, j log(pdu, j ). (22)"
+    }, {
+      "heading" : "4 EXPERIMENTS AND RESULTS",
+      "text" : "In this section, we perform experiments to evaluate the performance of TransV.We aim to answer the following questions:\n• Q1: How much benefit does modeling repeated purchases bring to recommendation performance? • Q2: Howwell does our proposedWeb-to-Voice transfer learning perform for recommendation on Voice? • Q3: How effective is TransV in uncovering the impact of historical purchase recency on reorder and weighting the importance of repeated purchases in voice shopping?\nIn addition, we investigate the impact of data sparsity on the effectiveness of our method. In the following, we start by introducing our experimental setup, before answering each of the above questions in a separate subsection."
+    }, {
+      "heading" : "4.1 Experimental Setup",
+      "text" : "Datasets. We evaluate our proposed model on four real-world shopping datasets. Among them, two datasets are publicly available and each contains customers’ purchase records on a single channel. These datasets allow us to evaluate the effectiveness of TransV in modeling repeated purchases.\n• Dunnhumby: This is a grocery shopping dataset released by Dunnhumby.2 It contains shopping history of 2,500 households for around two years. • Instacart: This is another grocery shopping dataset released by Intacart.3 It contains shopping history of more than 200 thousand users. This dataset only records the gap between two consecutive transactions with a cutoff at 30 days where gaps greater than 30 days are logged as 30 days. Thus, we only keep users whose maximum gap between two consecutive orders is less than 30 days so all her shopping timestamps can be reconstructed. To evaluate our model in transfer learning, we construct two cross-channel datasets from Amazon.com4 and Amazon Alexa5 that contain customers’ purchase records on both Web and Voice.6\n• AmazonGrocery:This is a proprietary grocery shopping dataset collected from Amazon. It contains a sample of customers’ grocery shopping histories on both Web and Voice. • Amazon Home: This is a proprietary home products shopping dataset collected from Amazon (e.g., water filter, coffee maker). It contains a sample of customers’ shopping histories of home products on both Web and Voice. For every user, we create sliding windows of Nw + 2 weeks with a step size of 2 weeks from her historical shopping record. TransV consumes purchases from the first Nw weeks and generates recommendations for the last 2 weeks. Each sliding window of a user is considered as a sample. We split the samples into a training and a test set based on the timestamps of the purchases such that the purchases in the last 2 weeks of the test samples do not appear in the training samples. Afterward, we filter the dataset by only keeping items purchased bymore than 10 unique customers. For the Amazon datasets, we only keep samples with at least one purchase on Voice in the test set. Key statistics from public and proprietary datasets are presented in Table 1 and 2 respectively. Comparison Methods. To demonstrate the effectiveness of our method in modeling repeated purchases, we compare with the\n2https://www.dunnhumby.com/careers/engineering/sourcefiles 3https://www.instacart.com/datasets/grocery-shopping-2017 4https://www.amazon.com 5https://developer.amazon.com/alexa 6To protect customers, all data from Amazon.com and Alexa were anonymized and un-identified before the experiment and analysis were performed.\nfollowing state-of-the-art methods: 1) Bi-LSTM [15]: a deep learning model based on bi-directional LSTM, 2) Transformer [22, 41]: a recommendation model based on Transformer that adopts the self-attention mechanism, 3) adaLoyal Transformer: a variant of Transformer where we apply adaLoyal [42] on top of Transformer for modeling repeated purchases, 4) RepeatNet [36]: an RNNbasedmethod thatmodels repeated purchases using an explorerepeatmode switchwhich integrates a copymechanism that chooses item from historical purchases. For fair comparison, we use the same attention based pooling layer and the inner product interaction layer for all the above comparison methods and our model. To ablate the effect of transfer learning, the compared methods are all trained on combined samples from Web and Voice – as repeated purchases are a cross-platform behavior – without learning channel-specific interactions. As an additional baseline, we also compare with user-itemPop which only relies on the customerwise empirical frequency of products for recommendation.\nTo investigate the effectiveness of our multi-level interaction module for transfer learning, we compare the following variants of TransV: 1) Non Transfer: the variant that only utilizes voice data for recommendation, 2)Direct Transfer: the variant that does not learn channel-specific interactions, i.e., the same configuration used in comparing methods for modeling repeated purchases, 3) Tri-Factor: the variant where tri-factorization is used to model interactions across Web and Voice, 4) TransV: the variant where our proposed multi-level interaction module is used for the transfer.\nEvaluation Protocols.We measure the performance of the compared methods using two metrics 1) Normalized Discounted Cumulative Gain (NDCG) at K = {1, 5, 10} and 2) Area Under the ROC Curve (AUC). AUC captures the overall ranking performance by comparing customer purchased products with non-purchased ones in a pairwise manner, regardless of the position of the compared pair in the generated ranking list. Unlike AUC, NDCG@K weights the top-ranking positions as more important than the others. Such a difference makes NDCG@K (especially when K = 1) a more suitable metric for voice-based recommendation, where the top recommendations need to be highly precise due to the narrow information channel. We note that results reported in this section for the two cross-channel datasets are all obtained from Voice.\nParameter Settings.We empirically set optimal parameters based on a head-out validation set that contains 10% of the test data. For all methods, the dimension of the embedding is set to 64. For the learning rate and regularization weight, we apply a grid search in {10−4, 10−3, 10−2, 10−1} . The dropout rate is selected from the set {0.0, 0.1, 0.2, 0.3}. To find the optimal default loyalty l0 for adaLoyal, we apply grid search in {0.1, 0.2, ..., 0.9}. For Transformer models, we set the number of attention heads to 8. To keep the most recent purchases, we set the maximum sequence length of historical purchases as follows: N = 300 for Dunnhumby, N = 200 for Instacart and N = 60 for Amazon Grocery and Home. All the models\nare implemented with MXNet7. Model training is performed using Adagrad [13] with mini-batches of size 128. All the gradients are clipped between −10 and 10 to prevent exploding [3]."
+    }, {
+      "heading" : "4.2 Results on Repeated Purchase (Q1)",
+      "text" : "We start by investigating the effectiveness of our proposed repeated purchase module by comparing it against user-itemPop, Bi-LSTM, Transformer, adaLoyal Transformer and RepeatNet. Results on public and proprietary datasets are reported in Table 3 and 4, respectively. In Table 4, the performance is shown in terms of relative ratio with respect to that of user-itemPop tested on voice purchases.\nWe observe that Bi-LSTM and Transformer achieve better performance than user-itemPop when measured by AUC however are outperformed by user-itemPop when measured by NDCG@K . Recall that Bi-LSTM and Transformer are general collaborative filtering approaches that do not explicitly model customers’ repeated purchase behaviors. The result indicates that while these methods are generally effective in recommendation, they are not suitable for precise recommendation where the top-ranked products need to be highly relevant. Unlike Bi-LSTM and Transformer, methods that consider repeated purchases such as RepeatNet and TransV, achieve higher performance than user-itemPop. Such a comparison clearly demonstrate the need to account for repeated purchases in recommendation.\n7https://mxnet.apache.org/\nAmong these methods, we observe that RepeatNet and TransV outperform adaLoyal Transformer on Amazon Grocery and Amazon Home across both types of metrics; and on Dunnhumby and Instacart, they outperform adaLoyal Transformer when performance is measured by NDCG@K . Recall that adaLoyal Transformer takes a post-processing approach for modeling repeated purchases: it re-ranks the result from the general collaborative filtering method Transformer by considering customers’ historical product purchases; RepeatNet and TransV, on the other hand, consider repeated purchases as an integral part in modeling customers’ purchase behaviors. The comparison results demonstrate the benefit of the latter approach for precise recommendation. This can be explained by its capability of accurately capturing the effect of repeated purchases in customers’ purchase behaviors, which helps generate recommendations that are more relevant.\nOur proposedmethod TransV achieves the best NDCG@K across all the datasets and highest AUC on the two cross-channel datasets. In particular, TransV consistently outperforms RepeatNet on both datasets across both metrics. This is mainly due to the effectiveness of considering time bias in modeling repeated purchases, which we discuss further in section 4.4. Overall, TransV outperforms RepeatNet by 1.97% for the Web datasets (averaged over NDCG@K for K = {1, 5, 10}; p-value < .001, WilCoxon signed-rank test) and by 2.47% for voice-based recommendation on the cross-channel datasets in terms of NDCG@1 (p-value < .001 on Grocery and < .01 on Home, WilCoxon signed-rank test)."
+    }, {
+      "heading" : "4.3 Results on Transfer Learning (Q2)",
+      "text" : "We evaluate our proposed transfer learning module. To understand the impact of the relative sparsity of Web data with respect to that of voice data on the effectiveness of transfer learning, we first divide customers into groups of different historical numbers of purchases on Web; then for each of the group, we further divide customers into groups according to their number of purchases on Voice.\nThe overall results on the two cross-channel datasets, i.e., Amazon Grocery and Home, are reported in Table 5. We observe that Direct Transfer is outperformed by Tri-factor, which is further outperformed by our proposed approach TransV. The result signifies the importance of transferring the interaction patterns between customers and products for voice-based recommendation. More importantly, the superior performance obtained by TransV compared with Tri-factor signifies the advantage of multi-level interaction in Web-to-Voice transfer for taking into account the distinct purchase patterns of customers on Voice.\nCompared with non-transfer learning (Table 5), TransV substantially improves voice-based recommendation by 26.81%, 36.47%, and 37.13% for NDCG@K for K = {1, 5, 10}, respectively.\nImpact of Data Sparsity. Results on customer groups with different numbers of purchases on Web and on Voice are depicted in Figure 2. We first note that applying user-itemPop on Voice (useritemPop voice in the figure) results in different performance for voice-based recommendation than regular user-item Pop which is applied on purchases from both channels; moreover, it generally has better performance. This confirms that customers’ shopping behavior on Voice is different from that on Web and in particular, they tend to have more repeated purchases on Voice. Comparing the transfer learning performance on customers with different numbers of historical purchases on Voice (subgroups in Figure 2(a-d)), we observe that transfer learning is most beneficial for the customers with the least number of historical purchases on Voice. Finally, we observe that for customers with a similar number of voice purchases, transfer learning is more beneficial for customers with more purchases on the Web (Figure 2(a) vs. (b), and (c) vs. (d)). These results demonstrate that Web data indeed can largely alleviate the data sparsity issue in voice-based recommendation.\nImpact of Voice Weight. In transfer learning, TransV weights the importance of the recommendation tasks for different channels with the hyperparamter αd in its loss function. To investigate the impact of the weight, we conduct an experiment with different weight values on Amazon Grocery and Home datasets. We fixed the task weight for Web as 1 and apply a grid search in {1, 2, 5, 10} for the weight for recomendation on Voice. Figure 3 shows the performance measured by NDCG@K . We observe that as the weight for voice increases, the performance first increases then decreases. The best performance is achieved when weight for Voice is 5 for Amazon Grocery and 2 for Amazon Home. This result suggests that with an appropriate setting for the weight of recommendation on Voice, our approach can effectively transfer customers’ purchase patterns from Web-to-Voice while taking into account the unique characteristics of voice shopping. Besides, the similarity in performance variation across αd values on the two datasets shows the robustness of TransV.\n4.4 Properties of TransV (Q3) To further show how TransV works, we conduct an in-depth analysis of the properties of TransV. We show how TransV can strike a balance between modeling general and repeated purchases for effective recommendation and can uncover a time decay phenomenon of the effect of historical purchases on repeated purchases.\nLearning Mixture Weight. TransV learns the mixture weight π to capture the importance of repeated purchases in customers’ shopping decisions. Being able to learn such mixture weight is important for generating recommendations of high-relevance. For comparison, Figure 4 shows the learned mixture weights against the empirical repeated purchase rate for Amazon Grocery and Instacart on the test dataset. We observe that the learned mixture weight correlates positively with the empirical repeated purchase rate. This demonstrates the effectiveness of TransV in striking a balance between modeling general and repeated purchases for recommendation. In particular, we observe that for Amazon Grocery the predicted mixture weight on Voice is higher than that onWeb, which corresponds well with the statistics of the dataset (Table 2). As a remark, we note though that the predicted mixture weight does not reflect the exact empirical repeated purchase rate. This is likely due to the fact that general preference also contributes to repeated purchases and the current model cannot capture all the discriminant factors. We leave the improvement to future work.\nLearning Time Bias. TransV learns time bias functions T (·) and S(·) to weight the importance of the recency of historical purchases on repeated purchases.T (·) captures the relative importance within the historical purchases, while S(·) captures the importance with respect to general collaborative filtering. On our experimental dataset, these functions are learned as piecewise constant functions on equal-spaced bins each representing a week.\nFigure 5(a) shows the learned time bias T (·). We observe a general pattern that the importance of historical purchases decreases when the purchase occurs further in the past. The result implies that recently purchased products are more likely to be repeatedly purchased. We also notice that the time bias function for Amazon Grocery shows a slightly different pattern: it first increases then decreases. This can be explained by the fact that grocery products are generally consumed for a few weeks before being repeatedly purchased, e.g., trash bags, drinks. Interestingly, we observe a specific periodic pattern on the two cross-channel datasets, and the local peaks occur on a monthly basis. This is due to the subscription feature provided by Amazon where customers can elect to subscribe to products monthly.\nSimilar results are observed for S(·) from Figure 5(b): rrecently purchased products are more likely to be repeatedly purchased, thus playing amore important role in the recommenation generation.We note that S(·) of Instacart decreases for the first several weeks and then approaches zero. This is because customers with greater than the maximum gap (30 days) between two consecutive purchases are filtered out. This results in a skewed distribution of time since the last purchase, leading to the diminishing of S(·) after several weeks."
+    }, {
+      "heading" : "5 CONCLUSION",
+      "text" : "We presented TransV, a neural transfer network that addresses the data sparsity issue of voice-based recommendation by transferring customers’ shopping patterns from the Web to Voice. It employs multi-level tri-factorization to capture the similarity and dissimilarity of customers’ shopping patterns on the Web and Voice, thereby allowing effective Web-to-Voice transfer, while taking into account distinct voice shopping patterns. TransV is seamlessly integrated with a recency-based copy mechanism to capture the prevalent behavior of repeated purchases on Voice. Our extensive evaluation on multiple real-world datasets, including two cross-channel datasets from Amazon, shows that TransV significantly improves the performance of voice-based recommendation. Our analysis further offers valuable insights into customers’ voice shopping behaviors, e.g. recent purchases are more likely to be repeated. As future work, we plan to study how to integrate TransV with natural language generation for conversational recommendations."
+    } ],
+    "references" : [ {
+      "title" : "The dynamics of repeat consumption",
+      "author" : [ "Ashton Anderson", "Ravi Kumar", "Andrew Tomkins", "Sergei Vassilvitskii" ],
+      "venue" : "In Proceedings of the 23rd International Conference on World Wide Web",
+      "citeRegEx" : "1",
+      "shortCiteRegEx" : "1",
+      "year" : 2014
+    }, {
+      "title" : "Advances in optimizing recurrent networks",
+      "author" : [ "Yoshua Bengio", "Nicolas Boulanger-Lewandowski", "Razvan Pascanu" ],
+      "venue" : "IEEE International Conference on Acoustics, Speech and Signal Processing",
+      "citeRegEx" : "3",
+      "shortCiteRegEx" : "3",
+      "year" : 2013
+    }, {
+      "title" : "Modeling user consumption sequences",
+      "author" : [ "Austin R Benson", "Ravi Kumar", "Andrew Tomkins" ],
+      "venue" : "In Proceedings of the 25th International Conference on WorldWideWeb. InternationalWorldWideWebConferences Steering Committee,",
+      "citeRegEx" : "4",
+      "shortCiteRegEx" : "4",
+      "year" : 2016
+    }, {
+      "title" : "Buy It Again: Modeling Repeat Purchase Recommendations",
+      "author" : [ "Rahul Bhagat", "Srevatsan Muralidharan", "Alex Lobzhanidze", "Shankar Vishwanath" ],
+      "venue" : "In Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery & Data Mining",
+      "citeRegEx" : "5",
+      "shortCiteRegEx" : "5",
+      "year" : 2018
+    }, {
+      "title" : "Transfer learning for collective link prediction in multiple heterogenous domains",
+      "author" : [ "Bin Cao", "Nathan N Liu", "Qiang Yang" ],
+      "venue" : "In Proceedings of the 27th International Conference on Machine Learning",
+      "citeRegEx" : "6",
+      "shortCiteRegEx" : "6",
+      "year" : 2010
+    }, {
+      "title" : "Q&R: A two-stage approach toward interactive recommendation",
+      "author" : [ "Konstantina Christakopoulou", "Alex Beutel", "Rui Li", "Sagar Jain", "Ed H Chi" ],
+      "venue" : "In Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery & Data Mining",
+      "citeRegEx" : "7",
+      "shortCiteRegEx" : "7",
+      "year" : 2018
+    }, {
+      "title" : "Towards conversational recommender systems",
+      "author" : [ "Konstantina Christakopoulou", "Filip Radlinski", "Katja Hofmann" ],
+      "venue" : "In Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining. ACM,",
+      "citeRegEx" : "8",
+      "shortCiteRegEx" : "8",
+      "year" : 2016
+    }, {
+      "title" : "Has brand loyalty declined? A longitudinal analysis of repeat purchase behavior in the UK and the USA",
+      "author" : [ "John Dawes", "Lars Meyer-Waarden", "Carl Driesener" ],
+      "venue" : "Journal of Business Research 68,",
+      "citeRegEx" : "10",
+      "shortCiteRegEx" : "10",
+      "year" : 2015
+    }, {
+      "title" : "Towards end-to-end reinforcement learning of dialogue agents for information",
+      "author" : [ "Bhuwan Dhingra", "Lihong Li", "Xiujun Li", "Jianfeng Gao", "Yun-Nung Chen", "Faisal Ahmed", "Li Deng" ],
+      "venue" : null,
+      "citeRegEx" : "11",
+      "shortCiteRegEx" : "11",
+      "year" : 2016
+    }, {
+      "title" : "Orthogonal nonnegative matrix t-factorizations for clustering",
+      "author" : [ "Chris Ding", "Tao Li", "Wei Peng", "Haesun Park" ],
+      "venue" : "In Proceedings of the 12th ACM SIGKDD international conference on Knowledge discovery and data mining",
+      "citeRegEx" : "12",
+      "shortCiteRegEx" : "12",
+      "year" : 2006
+    }, {
+      "title" : "Adaptive Subgradient Methods for Online Learning and Stochastic Optimization",
+      "author" : [ "John Duchi", "Elad Hazan", "Yoram Singer" ],
+      "venue" : "The Journal of Machine Learning Research",
+      "citeRegEx" : "13",
+      "shortCiteRegEx" : "13",
+      "year" : 2011
+    }, {
+      "title" : "A multi-view deep learning approach for cross domain usermodeling in recommendation systems",
+      "author" : [ "Ali Mamdouh Elkahky", "Yang Song", "Xiaodong He" ],
+      "venue" : "In Proceedings of the 24th International Conference on World Wide Web. International World Wide Web Conferences Steering Committee,",
+      "citeRegEx" : "14",
+      "shortCiteRegEx" : "14",
+      "year" : 2015
+    }, {
+      "title" : "Hybrid speech recognition with deep bidirectional LSTM",
+      "author" : [ "Alex Graves", "Navdeep Jaitly", "Abdel-rahman Mohamed" ],
+      "venue" : "IEEE Workshop on Automatic Speech Recognition and Understanding",
+      "citeRegEx" : "15",
+      "shortCiteRegEx" : "15",
+      "year" : 2013
+    }, {
+      "title" : "Incorporating copying mechanism in sequence-to-sequence learning",
+      "author" : [ "Jiatao Gu", "Zhengdong Lu", "Hang Li", "Victor OK Li" ],
+      "venue" : "arXiv preprint arXiv:1603.06393",
+      "citeRegEx" : "16",
+      "shortCiteRegEx" : "16",
+      "year" : 2016
+    }, {
+      "title" : "Deep residual learning for image recognition",
+      "author" : [ "Kaiming He", "Xiangyu Zhang", "Shaoqing Ren", "Jian Sun" ],
+      "venue" : "In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition",
+      "citeRegEx" : "17",
+      "shortCiteRegEx" : "17",
+      "year" : 2016
+    }, {
+      "title" : "Conet: Collaborative cross networks for cross-domain recommendation",
+      "author" : [ "Guangneng Hu", "Yu Zhang", "Qiang Yang" ],
+      "venue" : "In Proceedings of the 27th ACM International Conference on Information and Knowledge Management. ACM,",
+      "citeRegEx" : "18",
+      "shortCiteRegEx" : "18",
+      "year" : 2018
+    }, {
+      "title" : "The Challenges of Moving from Web to Voice in Product Search",
+      "author" : [ "Amir Ingber", "Arnon Lazerson", "Liane Lewin-Eytan", "Alexander Libov", "Eliyahu Osherovich" ],
+      "venue" : "In Proceedings of the 1st International Workshop on Generalization in Information Retrieval",
+      "citeRegEx" : "19",
+      "shortCiteRegEx" : "19",
+      "year" : 2018
+    }, {
+      "title" : "Brand loyalty vs. repeat purchasing behavior",
+      "author" : [ "Jacob Jacoby", "David B Kyner" ],
+      "venue" : "Journal of Marketing research 10,",
+      "citeRegEx" : "20",
+      "shortCiteRegEx" : "20",
+      "year" : 1973
+    }, {
+      "title" : "Cross-domain recommendation via deep domain adaptation",
+      "author" : [ "Heishiro Kanagawa", "Hayato Kobayashi", "Nobuyuki Shimizu", "Yukihiro Tagami", "Taiji Suzuki" ],
+      "venue" : "In European Conference on Information",
+      "citeRegEx" : "21",
+      "shortCiteRegEx" : "21",
+      "year" : 2019
+    }, {
+      "title" : "Self-attentive sequential recommendation",
+      "author" : [ "Wang-Cheng Kang", "Julian McAuley" ],
+      "venue" : "IEEE International Conference on Data Mining",
+      "citeRegEx" : "22",
+      "shortCiteRegEx" : "22",
+      "year" : 2018
+    }, {
+      "title" : "Attentive memory networks: Efficient machine reading for conversational search",
+      "author" : [ "Tom Kenter", "Maarten de Rijke" ],
+      "venue" : "arXiv preprint arXiv:1712.07229",
+      "citeRegEx" : "23",
+      "shortCiteRegEx" : "23",
+      "year" : 2017
+    }, {
+      "title" : "Transfer learning for collaborative filtering via a rating-matrix generative model",
+      "author" : [ "Bin Li", "Qiang Yang", "Xiangyang Xue" ],
+      "venue" : "In Proceedings of the 26th Annual International Conference on Machine Learning",
+      "citeRegEx" : "24",
+      "shortCiteRegEx" : "24",
+      "year" : 2009
+    }, {
+      "title" : "Towards deep conversational recommendations",
+      "author" : [ "Raymond Li", "Samira Ebrahimi Kahou", "Hannes Schulz", "Vincent Michalski", "Laurent Charlin", "Chris Pal" ],
+      "venue" : "In Advances in Neural Information Processing Systems",
+      "citeRegEx" : "25",
+      "shortCiteRegEx" : "25",
+      "year" : 2018
+    }, {
+      "title" : "CCCFNet: a content-boosted collaborative filtering neural network for cross domain recommender systems",
+      "author" : [ "Jianxun Lian", "Fuzheng Zhang", "Xing Xie", "Guangzhong Sun" ],
+      "venue" : "In Proceedings of the 26th International Conference onWorld Wide Web companion. International World WideWeb Conferences Steering Committee,",
+      "citeRegEx" : "26",
+      "shortCiteRegEx" : "26",
+      "year" : 2017
+    }, {
+      "title" : "A structured self-attentive sentence embedding",
+      "author" : [ "Zhouhan Lin", "Minwei Feng", "Cicero Nogueira dos Santos", "Mo Yu", "Bing Xiang", "Bowen Zhou", "Yoshua Bengio" ],
+      "venue" : null,
+      "citeRegEx" : "27",
+      "shortCiteRegEx" : "27",
+      "year" : 2017
+    }, {
+      "title" : "Unifying explicit and implicit feedback for collaborative filtering",
+      "author" : [ "Nathan N Liu", "Evan W Xiang", "Min Zhao", "Qiang Yang" ],
+      "venue" : "In Proceedings of the 19th ACM International Conference on Information and Knowledge Management. ACM,",
+      "citeRegEx" : "28",
+      "shortCiteRegEx" : "28",
+      "year" : 2010
+    }, {
+      "title" : "Cross-domain collaborative filtering with factorization machines",
+      "author" : [ "Babak Loni", "Yue Shi", "Martha Larson", "Alan Hanjalic" ],
+      "venue" : "In European Conference on Information",
+      "citeRegEx" : "29",
+      "shortCiteRegEx" : "29",
+      "year" : 2014
+    }, {
+      "title" : "Cross-stitch networks for multi-task learning",
+      "author" : [ "Ishan Misra", "Abhinav Shrivastava", "Abhinav Gupta", "Martial Hebert" ],
+      "venue" : "In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition",
+      "citeRegEx" : "30",
+      "shortCiteRegEx" : "30",
+      "year" : 2016
+    }, {
+      "title" : "A Three-Way Model for Collective Learning on Multi-Relational Data",
+      "author" : [ "Maximilian Nickel", "Volker Tresp", "Hans-Peter Kriegel" ],
+      "venue" : null,
+      "citeRegEx" : "31",
+      "shortCiteRegEx" : "31",
+      "year" : 2011
+    }, {
+      "title" : "Transfer learning to predict missing ratings via heterogeneous user feedbacks",
+      "author" : [ "Weike Pan", "Nathan N Liu", "EvanWXiang", "Qiang Yang" ],
+      "venue" : "In Twenty-Second International Joint Conference on Artificial Intelligence",
+      "citeRegEx" : "32",
+      "shortCiteRegEx" : "32",
+      "year" : 2011
+    }, {
+      "title" : "Transfer Learning in Collaborative Filtering for Sparsity Reduction",
+      "author" : [ "Weike Pan", "Evan Wei Xiang", "Nathan Nan Liu", "Qiang Yang" ],
+      "venue" : "In Twenty-fourth AAAI Conference on Artificial Intelligence,",
+      "citeRegEx" : "33",
+      "shortCiteRegEx" : "33",
+      "year" : 2010
+    }, {
+      "title" : "Product involvement/brand loyalty: is there a link",
+      "author" : [ "Pascale Quester", "Ai Lin Lim" ],
+      "venue" : "Journal of Product & Brand Management 12,",
+      "citeRegEx" : "34",
+      "shortCiteRegEx" : "34",
+      "year" : 2003
+    }, {
+      "title" : "A theoretical framework for conversational search",
+      "author" : [ "Filip Radlinski", "Nick Craswell" ],
+      "venue" : "In Proceedings of the 2017 Conference on Human Information Interaction and Retrieval",
+      "citeRegEx" : "35",
+      "shortCiteRegEx" : "35",
+      "year" : 2017
+    }, {
+      "title" : "RepeatNet: A Repeat Aware Neural Recommendation Machine for Session-based Recommendation",
+      "author" : [ "Pengjie Ren", "Zhumin Chen", "Jing Li", "Zhaochun Ren", "Jun Ma", "Maarten de Rijke" ],
+      "venue" : null,
+      "citeRegEx" : "36",
+      "shortCiteRegEx" : "36",
+      "year" : 2018
+    }, {
+      "title" : "Autorec: Autoencoders meet collaborative filtering",
+      "author" : [ "Suvash Sedhain", "Aditya Krishna Menon", "Scott Sanner", "Lexing Xie" ],
+      "venue" : "In Proceedings of the 24th International Conference on World Wide Web",
+      "citeRegEx" : "37",
+      "shortCiteRegEx" : "37",
+      "year" : 2015
+    }, {
+      "title" : "Relational learning via collective matrix factorization",
+      "author" : [ "Ajit P Singh", "Geoffrey J Gordon" ],
+      "venue" : "In Proceedings of the 14th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining",
+      "citeRegEx" : "38",
+      "shortCiteRegEx" : "38",
+      "year" : 2008
+    }, {
+      "title" : "End-to-end memory networks",
+      "author" : [ "Sainbayar Sukhbaatar", "JasonWeston", "Rob Fergus" ],
+      "venue" : "In Advances in Neural Information Processing Systems",
+      "citeRegEx" : "39",
+      "shortCiteRegEx" : "39",
+      "year" : 2015
+    }, {
+      "title" : "Conversational recommender system",
+      "author" : [ "Yueming Sun", "Yi Zhang" ],
+      "venue" : "In The 41st International ACM SIGIR Conference on Research &Development in Information Retrieval",
+      "citeRegEx" : "40",
+      "shortCiteRegEx" : "40",
+      "year" : 2018
+    }, {
+      "title" : "Attention is all you need",
+      "author" : [ "Ashish Vaswani", "Noam Shazeer", "Niki Parmar", "Jakob Uszkoreit", "Llion Jones", "Aidan N Gomez", "Łukasz Kaiser", "Illia Polosukhin" ],
+      "venue" : "In Advances in neural information processing systems",
+      "citeRegEx" : "41",
+      "shortCiteRegEx" : "41",
+      "year" : 2017
+    }, {
+      "title" : "Representing and Recommending Shopping Baskets with Complementarity, Compatibility and Loyalty",
+      "author" : [ "Mengting Wan", "Di Wang", "Jie Liu", "Paul Bennett", "Julian McAuley" ],
+      "venue" : "In Proceedings of the 27th ACM International Conference on Information and Knowledge Management",
+      "citeRegEx" : "42",
+      "shortCiteRegEx" : "42",
+      "year" : 2018
+    }, {
+      "title" : "Double-Digit Growth Expected in the Smart HomeMarket, Says IDC",
+      "author" : [ "Adam Wright", "Jitesh Ubrani", "Michael Shirer" ],
+      "venue" : "IDC [online; posted 29-March-2018]",
+      "citeRegEx" : "43",
+      "shortCiteRegEx" : "43",
+      "year" : 2019
+    }, {
+      "title" : "Response ranking with deep matching networks and external knowledge in information-seeking conversation systems",
+      "author" : [ "Liu Yang", "Minghui Qiu", "Chen Qu", "Jiafeng Guo", "Yongfeng Zhang", "W Bruce Croft", "Jun Huang", "Haiqing Chen" ],
+      "venue" : "In The 41st International ACM SIGIR Conference on Research & Development in Information Retrieval",
+      "citeRegEx" : "44",
+      "shortCiteRegEx" : "44",
+      "year" : 2018
+    }, {
+      "title" : "Understanding user interactions with podcast recommendations delivered via voice",
+      "author" : [ "Longqi Yang", "Michael Sobolev", "Christina Tsangouri", "Deborah Estrin" ],
+      "venue" : "In Proceedings of the 12th ACM Conference on Recommender Systems",
+      "citeRegEx" : "45",
+      "shortCiteRegEx" : "45",
+      "year" : 2018
+    }, {
+      "title" : "Deep learning based recommender system: A survey and new perspectives",
+      "author" : [ "Shuai Zhang", "Lina Yao", "Aixin Sun", "Yi Tay" ],
+      "venue" : "Comput. Surveys",
+      "citeRegEx" : "46",
+      "shortCiteRegEx" : "46",
+      "year" : 2019
+    }, {
+      "title" : "Towards conversational search and recommendation: System ask, user respond",
+      "author" : [ "Yongfeng Zhang", "Xu Chen", "Qingyao Ai", "Liu Yang", "W Bruce Croft" ],
+      "venue" : "In Proceedings of the 27th ACM International Conference on Information and Knowledge Management",
+      "citeRegEx" : "47",
+      "shortCiteRegEx" : "47",
+      "year" : 2018
+    }, {
+      "title" : "A survey on multi-task learning",
+      "author" : [ "Yu Zhang", "Qiang Yang" ],
+      "venue" : "arXiv preprint arXiv:1707.08114",
+      "citeRegEx" : "48",
+      "shortCiteRegEx" : "48",
+      "year" : 2017
+    }, {
+      "title" : "ATRank: An Attention-Based User Behavior Modeling Framework for Recommendation",
+      "author" : [ "Chang Zhou", "Jinze Bai", "Junshuai Song", "Xiaofei Liu", "Zhengchao Zhao", "Xiusi Chen", "Jun Gao" ],
+      "venue" : "arXiv preprint arXiv:1711.06632",
+      "citeRegEx" : "49",
+      "shortCiteRegEx" : "49",
+      "year" : 2017
+    } ],
+    "referenceMentions" : [ {
+      "referenceID" : 40,
+      "context" : "3 million shipments of voice-enabled devices last year [43].",
+      "startOffset" : 55,
+      "endOffset" : 59
+    }, {
+      "referenceID" : 5,
+      "context" : ", improving the effectiveness of questionanswering between the customer and system [7, 8, 11, 23, 25, 44, 45], relatively little work has been focused on addressing the specific challenges arising in recommendation on Voice [40].",
+      "startOffset" : 83,
+      "endOffset" : 109
+    }, {
+      "referenceID" : 6,
+      "context" : ", improving the effectiveness of questionanswering between the customer and system [7, 8, 11, 23, 25, 44, 45], relatively little work has been focused on addressing the specific challenges arising in recommendation on Voice [40].",
+      "startOffset" : 83,
+      "endOffset" : 109
+    }, {
+      "referenceID" : 8,
+      "context" : ", improving the effectiveness of questionanswering between the customer and system [7, 8, 11, 23, 25, 44, 45], relatively little work has been focused on addressing the specific challenges arising in recommendation on Voice [40].",
+      "startOffset" : 83,
+      "endOffset" : 109
+    }, {
+      "referenceID" : 20,
+      "context" : ", improving the effectiveness of questionanswering between the customer and system [7, 8, 11, 23, 25, 44, 45], relatively little work has been focused on addressing the specific challenges arising in recommendation on Voice [40].",
+      "startOffset" : 83,
+      "endOffset" : 109
+    }, {
+      "referenceID" : 22,
+      "context" : ", improving the effectiveness of questionanswering between the customer and system [7, 8, 11, 23, 25, 44, 45], relatively little work has been focused on addressing the specific challenges arising in recommendation on Voice [40].",
+      "startOffset" : 83,
+      "endOffset" : 109
+    }, {
+      "referenceID" : 41,
+      "context" : ", improving the effectiveness of questionanswering between the customer and system [7, 8, 11, 23, 25, 44, 45], relatively little work has been focused on addressing the specific challenges arising in recommendation on Voice [40].",
+      "startOffset" : 83,
+      "endOffset" : 109
+    }, {
+      "referenceID" : 42,
+      "context" : ", improving the effectiveness of questionanswering between the customer and system [7, 8, 11, 23, 25, 44, 45], relatively little work has been focused on addressing the specific challenges arising in recommendation on Voice [40].",
+      "startOffset" : 83,
+      "endOffset" : 109
+    }, {
+      "referenceID" : 37,
+      "context" : ", improving the effectiveness of questionanswering between the customer and system [7, 8, 11, 23, 25, 44, 45], relatively little work has been focused on addressing the specific challenges arising in recommendation on Voice [40].",
+      "startOffset" : 224,
+      "endOffset" : 228
+    }, {
+      "referenceID" : 42,
+      "context" : ", narrow information channel), customers tend to explore fewer products and choose fewer long-tail products, as compared to Web-based channels [45].",
+      "startOffset" : 143,
+      "endOffset" : 147
+    }, {
+      "referenceID" : 16,
+      "context" : "Despite its obvious potential, transfer learning from Web to Voice is non-trivial due to customers’ distinct shopping behaviors on Voice [19].",
+      "startOffset" : 137,
+      "endOffset" : 141
+    }, {
+      "referenceID" : 3,
+      "context" : "We note that repeated purchase behaviors have also been observed on the Web, which is mainly driven by customers’ loyalty to certain brands [5, 10, 42].",
+      "startOffset" : 140,
+      "endOffset" : 151
+    }, {
+      "referenceID" : 7,
+      "context" : "We note that repeated purchase behaviors have also been observed on the Web, which is mainly driven by customers’ loyalty to certain brands [5, 10, 42].",
+      "startOffset" : 140,
+      "endOffset" : 151
+    }, {
+      "referenceID" : 39,
+      "context" : "We note that repeated purchase behaviors have also been observed on the Web, which is mainly driven by customers’ loyalty to certain brands [5, 10, 42].",
+      "startOffset" : 140,
+      "endOffset" : 151
+    }, {
+      "referenceID" : 25,
+      "context" : ", factorization models [28, 29, 33] or neural networks [14, 21, 26], with shared user1 representations for cross-domain recommendation tasks.",
+      "startOffset" : 23,
+      "endOffset" : 35
+    }, {
+      "referenceID" : 26,
+      "context" : ", factorization models [28, 29, 33] or neural networks [14, 21, 26], with shared user1 representations for cross-domain recommendation tasks.",
+      "startOffset" : 23,
+      "endOffset" : 35
+    }, {
+      "referenceID" : 30,
+      "context" : ", factorization models [28, 29, 33] or neural networks [14, 21, 26], with shared user1 representations for cross-domain recommendation tasks.",
+      "startOffset" : 23,
+      "endOffset" : 35
+    }, {
+      "referenceID" : 11,
+      "context" : ", factorization models [28, 29, 33] or neural networks [14, 21, 26], with shared user1 representations for cross-domain recommendation tasks.",
+      "startOffset" : 55,
+      "endOffset" : 67
+    }, {
+      "referenceID" : 18,
+      "context" : ", factorization models [28, 29, 33] or neural networks [14, 21, 26], with shared user1 representations for cross-domain recommendation tasks.",
+      "startOffset" : 55,
+      "endOffset" : 67
+    }, {
+      "referenceID" : 23,
+      "context" : ", factorization models [28, 29, 33] or neural networks [14, 21, 26], with shared user1 representations for cross-domain recommendation tasks.",
+      "startOffset" : 55,
+      "endOffset" : 67
+    }, {
+      "referenceID" : 15,
+      "context" : "More recent work [18] attempts to address the problem by modeling the transfer of the purchase patterns from one domain to another using a linear transformation.",
+      "startOffset" : 17,
+      "endOffset" : 21
+    }, {
+      "referenceID" : 38,
+      "context" : "Specifically, our method is built on the state-of-the-art self-attention neural architecture [41, 49] to learn customer and product representations.",
+      "startOffset" : 93,
+      "endOffset" : 101
+    }, {
+      "referenceID" : 46,
+      "context" : "Specifically, our method is built on the state-of-the-art self-attention neural architecture [41, 49] to learn customer and product representations.",
+      "startOffset" : 93,
+      "endOffset" : 101
+    }, {
+      "referenceID" : 13,
+      "context" : "To account for customers’ repeated purchase behaviors that are prevalent in voice shopping, TransV adopts a recency-biased copy mechanism, which leverages the copy mechanism [16, 36] and extends it by considering the impact of the recency of historical purchases on repeated purchases.",
+      "startOffset" : 174,
+      "endOffset" : 182
+    }, {
+      "referenceID" : 33,
+      "context" : "To account for customers’ repeated purchase behaviors that are prevalent in voice shopping, TransV adopts a recency-biased copy mechanism, which leverages the copy mechanism [16, 36] and extends it by considering the impact of the recency of historical purchases on repeated purchases.",
+      "startOffset" : 174,
+      "endOffset" : 182
+    }, {
+      "referenceID" : 32,
+      "context" : "The focal point of research efforts has been enabling the system to effectively and efficiently infer users’ intents and satisfy their information needs [35, 47].",
+      "startOffset" : 153,
+      "endOffset" : 161
+    }, {
+      "referenceID" : 44,
+      "context" : "The focal point of research efforts has been enabling the system to effectively and efficiently infer users’ intents and satisfy their information needs [35, 47].",
+      "startOffset" : 153,
+      "endOffset" : 161
+    }, {
+      "referenceID" : 8,
+      "context" : "Due to the complexity of the problem, it has been studied by several research communities including natural language processing [11, 23, 25], human-computer interaction [7, 45], and information retrieval (including recommender systems) [8, 44].",
+      "startOffset" : 128,
+      "endOffset" : 140
+    }, {
+      "referenceID" : 20,
+      "context" : "Due to the complexity of the problem, it has been studied by several research communities including natural language processing [11, 23, 25], human-computer interaction [7, 45], and information retrieval (including recommender systems) [8, 44].",
+      "startOffset" : 128,
+      "endOffset" : 140
+    }, {
+      "referenceID" : 22,
+      "context" : "Due to the complexity of the problem, it has been studied by several research communities including natural language processing [11, 23, 25], human-computer interaction [7, 45], and information retrieval (including recommender systems) [8, 44].",
+      "startOffset" : 128,
+      "endOffset" : 140
+    }, {
+      "referenceID" : 5,
+      "context" : "Due to the complexity of the problem, it has been studied by several research communities including natural language processing [11, 23, 25], human-computer interaction [7, 45], and information retrieval (including recommender systems) [8, 44].",
+      "startOffset" : 169,
+      "endOffset" : 176
+    }, {
+      "referenceID" : 42,
+      "context" : "Due to the complexity of the problem, it has been studied by several research communities including natural language processing [11, 23, 25], human-computer interaction [7, 45], and information retrieval (including recommender systems) [8, 44].",
+      "startOffset" : 169,
+      "endOffset" : 176
+    }, {
+      "referenceID" : 6,
+      "context" : "Due to the complexity of the problem, it has been studied by several research communities including natural language processing [11, 23, 25], human-computer interaction [7, 45], and information retrieval (including recommender systems) [8, 44].",
+      "startOffset" : 236,
+      "endOffset" : 243
+    }, {
+      "referenceID" : 41,
+      "context" : "Due to the complexity of the problem, it has been studied by several research communities including natural language processing [11, 23, 25], human-computer interaction [7, 45], and information retrieval (including recommender systems) [8, 44].",
+      "startOffset" : 236,
+      "endOffset" : 243
+    }, {
+      "referenceID" : 44,
+      "context" : "[47] studies the effect of in-session aspect-based questions for product recommendation using memory networks [39].",
+      "startOffset" : 0,
+      "endOffset" : 4
+    }, {
+      "referenceID" : 36,
+      "context" : "[47] studies the effect of in-session aspect-based questions for product recommendation using memory networks [39].",
+      "startOffset" : 110,
+      "endOffset" : 114
+    }, {
+      "referenceID" : 22,
+      "context" : "[25] introduce a neural dialogue model that classifies the sentiment of a user with respect to movies discussed in the conversation session, and based on that, it generates movie recommendations with a pre-trained autoencoder recommender [37].",
+      "startOffset" : 0,
+      "endOffset" : 4
+    }, {
+      "referenceID" : 34,
+      "context" : "[25] introduce a neural dialogue model that classifies the sentiment of a user with respect to movies discussed in the conversation session, and based on that, it generates movie recommendations with a pre-trained autoencoder recommender [37].",
+      "startOffset" : 238,
+      "endOffset" : 242
+    }, {
+      "referenceID" : 37,
+      "context" : "[40] shows that the integration of users’ past purchasing behaviors boosts the effectiveness of voice-based recommendation.",
+      "startOffset" : 0,
+      "endOffset" : 4
+    }, {
+      "referenceID" : 4,
+      "context" : ", user preferences) in a source domain to the task in the target domain [6, 24].",
+      "startOffset" : 72,
+      "endOffset" : 79
+    }, {
+      "referenceID" : 21,
+      "context" : ", user preferences) in a source domain to the task in the target domain [6, 24].",
+      "startOffset" : 72,
+      "endOffset" : 79
+    }, {
+      "referenceID" : 45,
+      "context" : "In recommendation, transfer learning is generally implemented through multi-task learning [48], i.",
+      "startOffset" : 90,
+      "endOffset" : 94
+    }, {
+      "referenceID" : 25,
+      "context" : "Early work focuses on adapting matrix factorization techniques for transfer learning [28, 29, 33].",
+      "startOffset" : 85,
+      "endOffset" : 97
+    }, {
+      "referenceID" : 26,
+      "context" : "Early work focuses on adapting matrix factorization techniques for transfer learning [28, 29, 33].",
+      "startOffset" : 85,
+      "endOffset" : 97
+    }, {
+      "referenceID" : 30,
+      "context" : "Early work focuses on adapting matrix factorization techniques for transfer learning [28, 29, 33].",
+      "startOffset" : 85,
+      "endOffset" : 97
+    }, {
+      "referenceID" : 25,
+      "context" : "[28] introduce a model based on collective matrix factorization [38], where user latent factors are shared across different domains.",
+      "startOffset" : 0,
+      "endOffset" : 4
+    }, {
+      "referenceID" : 35,
+      "context" : "[28] introduce a model based on collective matrix factorization [38], where user latent factors are shared across different domains.",
+      "startOffset" : 64,
+      "endOffset" : 68
+    }, {
+      "referenceID" : 29,
+      "context" : "[32, 33] propose to model the interaction patterns in different domains as independent parameter matrices.",
+      "startOffset" : 0,
+      "endOffset" : 8
+    }, {
+      "referenceID" : 30,
+      "context" : "[32, 33] propose to model the interaction patterns in different domains as independent parameter matrices.",
+      "startOffset" : 0,
+      "endOffset" : 8
+    }, {
+      "referenceID" : 43,
+      "context" : "Neural network-basedmethods are more capable of learning nonlinear latent representations for users and items and potentially also their interactions (see a recent survey [46]).",
+      "startOffset" : 171,
+      "endOffset" : 175
+    }, {
+      "referenceID" : 11,
+      "context" : "[14] introduce a multi-view deep learning method that learns shared user representations from user-item interactions in different domains.",
+      "startOffset" : 0,
+      "endOffset" : 4
+    }, {
+      "referenceID" : 23,
+      "context" : "[26] propose to incorporate content information into the multi-view neural network.",
+      "startOffset" : 0,
+      "endOffset" : 4
+    }, {
+      "referenceID" : 18,
+      "context" : "[21] go further in this direction and formulate cross-domain recommendation as extreme multi-class classification, where only content features are used for adapting a classifier trained in the source domain to the target domain.",
+      "startOffset" : 0,
+      "endOffset" : 4
+    }, {
+      "referenceID" : 15,
+      "context" : "A recent paper [18], perhaps the most closely related work to ours, models the transfer of interactions across multiple domains as a linear transformation using cross-stitch networks [30].",
+      "startOffset" : 15,
+      "endOffset" : 19
+    }, {
+      "referenceID" : 27,
+      "context" : "A recent paper [18], perhaps the most closely related work to ours, models the transfer of interactions across multiple domains as a linear transformation using cross-stitch networks [30].",
+      "startOffset" : 183,
+      "endOffset" : 187
+    }, {
+      "referenceID" : 9,
+      "context" : "In the context of Web-to-Voice transfer, since the same products appear in both Web and Voice, we adopt a tri-factorization approach [12, 31] that fixes the product representations across channels, and extend the approach into a multi-level scheme, which allows to capture channel-independent and channel-specific interaction patterns.",
+      "startOffset" : 133,
+      "endOffset" : 141
+    }, {
+      "referenceID" : 28,
+      "context" : "In the context of Web-to-Voice transfer, since the same products appear in both Web and Voice, we adopt a tri-factorization approach [12, 31] that fixes the product representations across channels, and extend the approach into a multi-level scheme, which allows to capture channel-independent and channel-specific interaction patterns.",
+      "startOffset" : 133,
+      "endOffset" : 141
+    }, {
+      "referenceID" : 17,
+      "context" : "Due to the importance for business profitability, repeated purchases are an important customer behavior studied in marketing as a signal of brand loyalty [20, 34].",
+      "startOffset" : 154,
+      "endOffset" : 162
+    }, {
+      "referenceID" : 31,
+      "context" : "Due to the importance for business profitability, repeated purchases are an important customer behavior studied in marketing as a signal of brand loyalty [20, 34].",
+      "startOffset" : 154,
+      "endOffset" : 162
+    }, {
+      "referenceID" : 0,
+      "context" : "In Web-based information systems, repeated item consumption has been shown to be most affected by the recency and quality of the item, with recency being more critical [1].",
+      "startOffset" : 168,
+      "endOffset" : 171
+    }, {
+      "referenceID" : 2,
+      "context" : "[4] study such a behavior in more detail and reveals the increasing inter-arrival gaps of repeated item consumption that eventually lead to abandonment.",
+      "startOffset" : 0,
+      "endOffset" : 3
+    }, {
+      "referenceID" : 3,
+      "context" : "[5] study repeated purchases for consumable products, e.",
+      "startOffset" : 0,
+      "endOffset" : 3
+    }, {
+      "referenceID" : 39,
+      "context" : "[42] introduce a recommendation algorithm, adaLoyal, a personalized grocery recommender.",
+      "startOffset" : 0,
+      "endOffset" : 4
+    }, {
+      "referenceID" : 33,
+      "context" : "[36] propose a unified neural network model that jointly learns repeated and novel consumption for session-based recommendation.",
+      "startOffset" : 0,
+      "endOffset" : 4
+    }, {
+      "referenceID" : 38,
+      "context" : "To learn high-quality customer representations, we leverage the transformer layers [41] that capture the dependency between the purchases based on semantic affinity in the embedding space.",
+      "startOffset" : 83,
+      "endOffset" : 87
+    }, {
+      "referenceID" : 24,
+      "context" : "To do so, we adopt the multi-head self-attention mechanism [27, 41], which allows jointly attending to information from different parts of the purchase sequence.",
+      "startOffset" : 59,
+      "endOffset" : 67
+    }, {
+      "referenceID" : 38,
+      "context" : "To do so, we adopt the multi-head self-attention mechanism [27, 41], which allows jointly attending to information from different parts of the purchase sequence.",
+      "startOffset" : 59,
+      "endOffset" : 67
+    }, {
+      "referenceID" : 14,
+      "context" : "Here we adopt residual connection [17] and layer normalization [2].",
+      "startOffset" : 34,
+      "endOffset" : 38
+    }, {
+      "referenceID" : 24,
+      "context" : "To do so, we apply an attention-based pooling layer [27]:",
+      "startOffset" : 52,
+      "endOffset" : 56
+    }, {
+      "referenceID" : 28,
+      "context" : "A standard approach to model interactions on different domains when entities are shared is matrix tri-factorization [31], which models the interaction scoring function on a specific domain d as:",
+      "startOffset" : 116,
+      "endOffset" : 120
+    }, {
+      "referenceID" : 13,
+      "context" : "To do so, we adopt the copy mechanism [16], which models repeated purchases as copying purchases from the past.",
+      "startOffset" : 38,
+      "endOffset" : 42
+    }, {
+      "referenceID" : 12,
+      "context" : "following state-of-the-art methods: 1) Bi-LSTM [15]: a deep learning model based on bi-directional LSTM, 2) Transformer [22, 41]: a recommendation model based on Transformer that adopts the self-attention mechanism, 3) adaLoyal Transformer: a variant of Transformer where we apply adaLoyal [42] on top of Transformer for modeling repeated purchases, 4) RepeatNet [36]: an RNNbasedmethod thatmodels repeated purchases using an explorerepeatmode switchwhich integrates a copymechanism that chooses item from historical purchases.",
+      "startOffset" : 47,
+      "endOffset" : 51
+    }, {
+      "referenceID" : 19,
+      "context" : "following state-of-the-art methods: 1) Bi-LSTM [15]: a deep learning model based on bi-directional LSTM, 2) Transformer [22, 41]: a recommendation model based on Transformer that adopts the self-attention mechanism, 3) adaLoyal Transformer: a variant of Transformer where we apply adaLoyal [42] on top of Transformer for modeling repeated purchases, 4) RepeatNet [36]: an RNNbasedmethod thatmodels repeated purchases using an explorerepeatmode switchwhich integrates a copymechanism that chooses item from historical purchases.",
+      "startOffset" : 120,
+      "endOffset" : 128
+    }, {
+      "referenceID" : 38,
+      "context" : "following state-of-the-art methods: 1) Bi-LSTM [15]: a deep learning model based on bi-directional LSTM, 2) Transformer [22, 41]: a recommendation model based on Transformer that adopts the self-attention mechanism, 3) adaLoyal Transformer: a variant of Transformer where we apply adaLoyal [42] on top of Transformer for modeling repeated purchases, 4) RepeatNet [36]: an RNNbasedmethod thatmodels repeated purchases using an explorerepeatmode switchwhich integrates a copymechanism that chooses item from historical purchases.",
+      "startOffset" : 120,
+      "endOffset" : 128
+    }, {
+      "referenceID" : 39,
+      "context" : "following state-of-the-art methods: 1) Bi-LSTM [15]: a deep learning model based on bi-directional LSTM, 2) Transformer [22, 41]: a recommendation model based on Transformer that adopts the self-attention mechanism, 3) adaLoyal Transformer: a variant of Transformer where we apply adaLoyal [42] on top of Transformer for modeling repeated purchases, 4) RepeatNet [36]: an RNNbasedmethod thatmodels repeated purchases using an explorerepeatmode switchwhich integrates a copymechanism that chooses item from historical purchases.",
+      "startOffset" : 290,
+      "endOffset" : 294
+    }, {
+      "referenceID" : 33,
+      "context" : "following state-of-the-art methods: 1) Bi-LSTM [15]: a deep learning model based on bi-directional LSTM, 2) Transformer [22, 41]: a recommendation model based on Transformer that adopts the self-attention mechanism, 3) adaLoyal Transformer: a variant of Transformer where we apply adaLoyal [42] on top of Transformer for modeling repeated purchases, 4) RepeatNet [36]: an RNNbasedmethod thatmodels repeated purchases using an explorerepeatmode switchwhich integrates a copymechanism that chooses item from historical purchases.",
+      "startOffset" : 363,
+      "endOffset" : 367
+    }, {
+      "referenceID" : 10,
+      "context" : "Model training is performed using Adagrad [13] with mini-batches of size 128.",
+      "startOffset" : 42,
+      "endOffset" : 46
+    }, {
+      "referenceID" : 1,
+      "context" : "All the gradients are clipped between −10 and 10 to prevent exploding [3].",
+      "startOffset" : 70,
+      "endOffset" : 73
+    } ],
+    "year" : 2020,
+    "abstractText" : "While product recommendation algorithms on the Web are wellsupported by a vast amount of interaction data, the same is not true on Voice. A promising approach to mitigate the issue is transfer learning, i.e., transferring the knowledge of customers’ shopping behaviors learned from their shopping activities on the Web to Voice. Such aWeb-to-Voice transfer is challenging due to customers’ distinct shopping behaviors on Voice: customers are inclined to purchase more low-consideration products and are more likely to purchase certain products repeatedly. This paper presents TransV, a novel Web-to-Voice neural transfer network that allows for effective transfer of customers’ shopping patterns from theWeb to Voice, while taking into account customers’ distinct purchase patterns on Voice. Our method extends the state-of-the-art self-attention neural architecture with a multi-level tri-factorization neural component, which allows to explicitly capture the similarity and dissimilarity of customers’ shopping patterns on the Web and Voice. To model repeated purchases, TransV adopts a recency-based copy mechanism that considers the impact of the recency of historical purchases on customers’ behavior of repeated purchases. Extensive validation on multiple real-world datasets, including two cross-platform datasets from Amazon.com and Amazon Alexa, shows that our method is able to improve voice-based recommendation substantially by 26.8% as compared with non-transfer learning methods.",
+    "creator" : "LaTeX with acmart 2019/05/27 v1.61 Typesetting articles for the Association for Computing Machinery and hyperref 2017/03/14 v6.85a Hypertext links for LaTeX"
+  }
+}
