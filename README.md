@@ -35,8 +35,16 @@ Bibtex files from SIGIR sponsorded conferences:
 | WWW          | '01-'20 |   6823 |     5962 |
 | SIGMOD       | '75-'20 |   5378 |     2360 |
 | IUI          | '93-'20 |   2043 |     1735 |
+| DL           | '96-'20 |    244 |       41 |
+| AVI          | '94-'20 |   1108 |      970 |
+| BooksOnline  | '08-'12 |     57 |       43 |
+| CIR          | '11     |      7 |        7 |
+| CompSci      | '13     |      8 |        6 |
+| DTMBIO       | '08-'15 |    151 |      117 |
+| ESAIR        | '09-'15 |    101 |       84 |
+| CSCW         | '86-'19 |   2726 |     2211 |
 |              |         |        |          |
-| Total        |         |  35407 |    27816 |
+| Total        |         |  39809 |    31295 |
 
 ### Queries
 
