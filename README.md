@@ -76,7 +76,19 @@ included if relevant. We only use contexts from Introduction/Related Work.
     [5] 10.1145/2983323.2983769
     [15] 10.1145/3077136.3080809
 
+## Document retrieval
 
+```
+./src/0_create_data.sh
+
+# 31295 entries with T+A+K
+# present: 0.5585539082694746
+# absent: 0.44144609173052485
+# |-> case 1 (all words): 0.1233575106268052
+# |-> case 2 (some words): 0.18370808173335545
+# |-> case 3 (no words): 0.13438049937034974
+# |-> exp. : 0.11816392772776158
+```
 
 
  
