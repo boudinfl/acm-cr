@@ -1,33 +1,4 @@
 <top>
-<num> Number: 3401032-1
-<title> There is an important recognized difference between explanations (why a certain suggestion is given) and justifications (why the user may be interested in the item) [19, 27]. The former consist of an honest account of the mechanism that generated the suggestion, while the latter provides a plausible reason, which may be decoupled from the underlying recommendation algorithm.
-
-<desc> Description:
-
-<narr> Narrative:
-
-</top>
-
-<top>
-<num> Number: 3401032-2
-<title> Recommendations are part of everyday life. Be they made by a person, or by an automated system, the recommendations are often accompanied with an explanation, or reason, underlying the suggestions provided. Explanations are known to strongly impact how the recipient of a recommendation responds [13, 14, 23, 28], yet the effect is still not well understood.
-
-<desc> Description:
-
-<narr> Narrative:
-
-</top>
-
-<top>
-<num> Number: 3401032-3
-<title> The ability for an artificially intelligent system to explain recommendations has been shown to be an important factor for user acceptance and satisfaction [13, 14, 23, 28]. Explanations can be characterized along a number of dimensions, including their content, form of presentation, and system’s intended purpose [20]. Our interest is in the latter category, where we use the term goal to refer to the objective or purpose of the explanation. Specifically, our focus is on natural language explanations, the most commonly used way of presentation both historically [20] and recently [2, 6, 19].
-
-<desc> Description:
-
-<narr> Narrative:
-
-</top>
-<top>
 <num> Number: 3401052-1
 <title> In the past few years, speech has emerged has a natural mean for communicating information need to various search engines via voice assistants such as Amazon Alexa, Apple Siri, and Google Assistant. Among various experiences, voice assistants enable customers to search and shop for products in an intuitive way using natural language. Providing a free-form shopping experience is a challenging task. This is especially true because the voice interface lacks assisting mechanisms, such as query completion and refinement, that can help customers easily express their need and iterate on it. As a consequence, a non-negligible portion of all voice shopping queries are null queries, that is, queries that result with no offers. Such interactions clearly have negative impact on customers shopping experience [40–42]. Query rewriting (QR) attempts to seamlessly replace null queries with alternatives that lead to relevant offers for the customer intent, and by that, help customers progress on their shopping journey.
 
@@ -98,51 +69,3 @@
 
 </top>
 
-<top>
-<num> Number: 3401188-1
-<title> Across the rich history of information retrieval research, there has been extensive work focused on modeling score distributions of IR systems. Early work in this area primarily focused on fitting parametric probability distributions to score distributions [1, 10]. This is often achieved by making the assumption that the overall distribution can be expressed as a mixture of a relevant and a non-relevant distribution. The expectation-maximization (EM) algorithm is often adopted to learn the parameters.
-
-<desc> Description:
-
-<narr> Narrative:
-
-</top>
-
-<top>
-<num> Number: 3401188-2
-<title> There has been considerable recent interest in adopting machine learning based models to optimize and improve the ranked list truncation problem. For instance, cascade-style IR systems [17] seek to achieve a balance between efficiency and effectiveness. Notably, [5] investigates a number of machine learning approaches for learning dynamic cutoffs within cascade-style ranking systems. Another recent study investigated how to leverage bidirectional Long Short-Term Memory (LSTM) models to identify the best position to truncate a given list [9]. This model, BiCut, can be considered the present state-of-the-art approach.
-
-<desc> Description:
-
-<narr> Narrative:
-
-</top>
-
-<top>
-<num> Number: 3401188-3
-<title> Our work is closely related to the task of query performance prediction [4]. In this task, the objective is to automatically determine the effectiveness of a given query. This could be leveraged to determine the optimal set of results to the user for any given measure. Methods for query performance prediction include pre-retrieval-based approaches [7], relevance-based approaches [4, 19], and neural approaches [18].
-
-<desc> Description:
-
-<narr> Narrative:
-
-</top>
-<top>
-<num> Number: 3401204-1
-<title> Document Term Weighting. Most first-stage retrieval models such as BM25 and query likelihood use term frequencies (tf) to term importance in a document. A popular alternative to tf are graph-based methods, e.g., TextRank [6]. A few recent work investigated using word embeddings [5] for document term weighting, but most of them only learn a global idf-like term weight because the word embeddings are context-independent. Our work aims to learn tf-like term weights that are context-specific.
-
-<desc> Description:
-
-<narr> Narrative:
-
-</top>
-
-<top>
-<num> Number: 3401204-2
-<title> Neural Approaches for First Stage Ranking. Most neural ranking models are cost-prohibitive to be used in the first stage [1, 2, 10].
-
-<desc> Description:
-
-<narr> Narrative:
-
-</top>

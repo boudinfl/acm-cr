@@ -47,34 +47,27 @@ Bibtex files from SIGIR/SIGKDD/SIGCHI sponsored conferences:
 | UMAP         | '12-'20 |    728 |      652 |
 | CHI/CHI-EA   | '82-'20 |  19446 |    15364 |
 |              |         |        |          |
-| Total        |         |  62059 |    47209 |
+| Total        |         |  62059 |    48925 |
 
 ### Queries
 
-Citation contexts extracted from Open Access articles. Only full sentences
-where all references covered are kept. The previous/following sentence is
-included if relevant. We only use contexts from Introduction/Related Work.
+Citation contexts extracted from Open Access articles. Only full paragraphs
+where all (most) references covered are kept. Remove explicit citation markers
+He et al. [19] -> [19]
 
-  - 3397271.3401204 (https://doi.org/10.1145/3397271.3401204).
-    Context-Aware Term Weighting For First Stage Passage Retrieval.
-    collection coverage is 4/15 references:
-    [1] 10.1145/3331184.3331303
-    [2] 10.1145/3159652.3159659
-    [5] 10.1145/2983323.2983769
-    [15] 10.1145/3077136.3080809
 
 ## Document retrieval
 
 ```
 ./src/0_create_data.sh
 
-# 31295 entries with T+A+K
-# present: 0.5585539082694746
-# absent: 0.44144609173052485
-# |-> case 1 (all words): 0.1233575106268052
-# |-> case 2 (some words): 0.18370808173335545
-# |-> case 3 (no words): 0.13438049937034974
-# |-> exp. : 0.11816392772776158
+# 48925 entries with T+A+K
+# present: 0.5401404047353576
+# absent: 0.4598595952646439
+# |-> case 1 (all words): 0.11526572176279694
+# |-> case 2 (some words): 0.18780110696675184
+# |-> case 3 (no words): 0.15679276653506607
+# |-> exp. : 0.13187612344762167
 ```
 
 

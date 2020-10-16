@@ -1,0 +1,19 @@
+<top>
+<num> Number: 3401204-1
+<title> Document Term Weighting. Most first-stage retrieval models such as BM25 and query likelihood use term frequencies (tf) to term importance in a document. A popular alternative to tf are graph-based methods, e.g., TextRank [6]. A few recent work investigated using word embeddings [5] for document term weighting, but most of them only learn a global idf-like term weight because the word embeddings are context-independent. Our work aims to learn tf-like term weights that are context-specific.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401204-2
+<title> Neural Approaches for First Stage Ranking. Most neural ranking models are cost-prohibitive to be used in the first stage [1, 2, 10].
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
