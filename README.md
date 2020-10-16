@@ -17,7 +17,7 @@ java -Xmx6g -jar cli/target/scala-2.12/science-parse-cli-assembly-3.0.1.jar ../c
 
 ### Documents (bibtex citations) collected from ACM DL
 
-Bibtex files from SIGIR sponsorded conferences:
+Bibtex files from SIGIR/SIGKDD/SIGCHI sponsored conferences:
 
 | Venue        | Years   | #bib   | #(T+A+K) |
 | ------------ |:-------:| ------:|---------:|
@@ -43,30 +43,17 @@ Bibtex files from SIGIR sponsorded conferences:
 | DTMBIO       | '08-'15 |    151 |      117 |
 | ESAIR        | '09-'15 |    101 |       84 |
 | CSCW         | '86-'19 |   2726 |     2211 |
+| IUST         | '88-'19 |   2076 |     1614 |
+| UMAP         | '12-'20 |    728 |      652 |
+| CHI/CHI-EA   | '82-'20 |  19446 |    15364 |
 |              |         |        |          |
-| Total        |         |  39809 |    31295 |
+| Total        |         |  62059 |    47209 |
 
 ### Queries
 
 Citation contexts extracted from Open Access articles. Only full sentences
 where all references covered are kept. The previous/following sentence is
 included if relevant. We only use contexts from Introduction/Related Work.
-
-  - 3397271.3401188 (https://doi.org/10.1145/3397271.3401188).
-    Choppy: Cut Transformer for Ranked List Truncation.
-    collection coverage is 12/19 references:
-    [1] 10.1145/1571941.1572031
-    [3] 10.1145/1458082.1458216
-    [4] 10.1145/564376.564429
-    [5] 10.1145/3015022.3015026
-    [6] 10.1145/2983323.2983769
-    [7] 10.1145/1458082.1458311
-    [9] 10.1145/383952.384005
-    [10] 10.1145/383952.384005
-    [11] 10.1145/502585.502657
-    [17] 10.1145/2009916.2009934
-    [18] 10.1145/3209978.3210041
-    [19] 10.1145/1277741.1277835
 
   - 3397271.3401204 (https://doi.org/10.1145/3397271.3401204).
     Context-Aware Term Weighting For First Stage Passage Retrieval.

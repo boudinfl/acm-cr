@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # create gold keyphrases files
-#mkdir -p data/keyphrases/
-#python src/bib_to_gold.py --directory data/acm-dl/ --output data/keyphrases/acm-dl.gold
+mkdir -p data/keyphrases/
+python src/bib_to_gold.py --directory data/acm-dl/ --output data/keyphrases/acm-dl.gold
 
 # produce T+A documents
 mkdir -p data/docs/t+a/
