@@ -46,6 +46,9 @@ Bibtex files from SIGIR/SIGKDD/SIGCHI sponsored conferences:
 | IUST         | '88-'19 |   2076 |     1614 |
 | UMAP         | '12-'20 |    728 |      652 |
 | CHI/CHI-EA   | '82-'20 |  19446 |    15364 |
+| WI           | '03-'19 |        |          |
+| TIST journal | '10-'20 |    699 |          |
+| TOIS journal | '83-'20 |    817 |          |
 |              |         |        |          |
 | Total        |         |  62059 |    48925 |
 

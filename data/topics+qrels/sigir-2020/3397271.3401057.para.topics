@@ -10,7 +10,7 @@
 
 <top>
 <num> Number: 3401057-2
-<title> Traditional recommendation strategy, such as collaborative fil- tering (CF), which considers user (students) historical interactions and makes recommendations based on potential common preferences from users with similar interests, has achieved great success. However, CF based methods suffer from the sparsity of user-item (student-knowledge concept) relationships, which limits the recommendation performance. To overcome this problem, a number of efforts have been done by leveraging side information, such as social networks [11], user/item attributes [27], images [33], contexts [25], etc.
+<title> To understand and capture student interests on MOOCs platforms, multiple efforts have been done, including course recommendation [13, 35], behavior prediction [20], user intentions understanding [34], etc. Among these efforts, recommendation system is applied by MOOCs provider to recommend courses to students.
 
 <desc> Description:
 
@@ -20,6 +20,16 @@
 
 <top>
 <num> Number: 3401057-3
+<title> Traditional recommendation strategy, such as collaborative fil- tering (CF), which considers user (students) historical interactions and makes recommendations based on potential common preferences from users with similar interests, has achieved great success. However, CF based methods suffer from the sparsity of user-item (student-knowledge concept) relationships, which limits the recommendation performance. To overcome this problem, a number of efforts have been done by leveraging side information, such as social networks [11], user/item attributes [27], images [33], contexts [25], etc.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401057-4
 <title> [32] proposed to use meta-paths based latent features to represent the connectivity between users and items along with different types of paths. Additionally, Follow previous work, [10, 23, 24] proposed to use meta-path concept to mode the heterogeneous information in HIN.
 
 <desc> Description:
