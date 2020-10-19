@@ -47,6 +47,7 @@ Bibtex files from SIGIR/SIGKDD/SIGCHI sponsored conferences:
 | UMAP         | '12-'20 |    728 |      652 |
 | CHI/CHI-EA   | '82-'20 |  19446 |    15364 |
 | WI           | '03-'19 |        |          |
+| IIIX         | '06-'14 |    248 |          |
 | TIST journal | '10-'20 |    699 |          |
 | TOIS journal | '83-'20 |    817 |          |
 | SIGIR Forum  | '71-'20 |   1032 |          |
