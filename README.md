@@ -43,12 +43,13 @@ Bibtex files from SIGIR/SIGKDD/SIGCHI sponsored conferences:
 | DTMBIO       | '08-'15 |    151 |      117 |
 | ESAIR        | '09-'15 |    101 |       84 |
 | CSCW         | '86-'19 |   2726 |     2211 |
-| IUST         | '88-'19 |   2076 |     1614 |
+| UIST         | '88-'19 |   2076 |     1614 |
 | UMAP         | '12-'20 |    728 |      652 |
 | CHI/CHI-EA   | '82-'20 |  19446 |    15364 |
 | WI           | '03-'19 |        |          |
 | TIST journal | '10-'20 |    699 |          |
 | TOIS journal | '83-'20 |    817 |          |
+| SIGIR Forum  | '71-'20 |   1032 |          |
 |              |         |        |          |
 | Total        |         |  62059 |    48925 |
 
