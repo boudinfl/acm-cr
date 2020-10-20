@@ -17,42 +17,48 @@ java -Xmx6g -jar cli/target/scala-2.12/science-parse-cli-assembly-3.0.1.jar ../c
 
 ### Documents (bibtex citations) collected from ACM DL
 
-Bibtex files from SIGIR/SIGKDD/SIGCHI sponsored conferences:
+`bibtex` files from SIGs IR/KDD/CHI/WEB/MOD sponsored conferences and journals:
 
 | Venue        | Years   | #bib   | #(T+A+K) |
 | ------------ |:-------:| ------:|---------:|
-| SIGIR        | '78-'20 |   5251 |     3775 |
-| CHIIR        | '16-'20 |    374 |      357 |
-| WSDM         | '08-'20 |   1123 |     1051 |
-| JCDL         | '01-'20 |   2183 |     1808 |
-| CIKM         | '93-'20 |   5497 |     4764 |
-| ICTIR        | '13-'20 |    313 |      297 |
-| RecSys       | '07-'20 |   1279 |     1197 |
 | ADCS         | '12-'19 |    115 |       88 |
-| DocEng       | '01-'20 |    971 |      754 |
-| FIRE         | '12-'19 |     91 |       79 |
-| KDD          | '99-'20 |   3966 |     3589 |
-| WWW          | '01-'20 |   6823 |     5962 |
-| SIGMOD       | '75-'20 |   5378 |     2360 |
-| IUI          | '93-'20 |   2043 |     1735 |
-| DL           | '96-'20 |    244 |       41 |
+| AIRS         | '08-'09 |    120 |       84 |
 | AVI          | '94-'20 |   1108 |      970 |
 | BooksOnline  | '08-'12 |     57 |       43 |
+| CHI/CHI-EA   | '82-'20 |  19446 |    15364 |
+| CHIIR        | '16-'20 |    374 |      357 |
+| CIKM         | '93-'20 |   5497 |     4764 |
 | CIR          | '11     |      7 |        7 |
 | CompSci      | '13     |      8 |        6 |
+| CSCW         | '86-'19 |   2726 |     2211 |
+| DL           | '96-'20 |    244 |       41 |
+| DocEng       | '01-'20 |    971 |      754 |
 | DTMBIO       | '08-'15 |    151 |      117 |
 | ESAIR        | '09-'15 |    101 |       84 |
-| CSCW         | '86-'19 |   2726 |     2211 |
+| FIRE         | '12-'19 |     91 |       79 |
+| ICTIR        | '13-'20 |    313 |      297 |
+| IIIX         | '06-'14 |    242 |      181 |
+| IUI          | '93-'20 |   2043 |     1735 |
+| JCDL         | '01-'20 |   2183 |     1808 |
+| KDD          | '99-'20 |   3966 |     3589 |
+| RecSys       | '07-'20 |   1279 |     1197 |
+| SIGIR        | '78-'20 |   5251 |     3775 |
+| SIGMOD       | '75-'20 |   5378 |     2360 |
+| UAI          | '09     |     76 |        0 |
 | UIST         | '88-'19 |   2076 |     1614 |
 | UMAP         | '12-'20 |    728 |      652 |
-| CHI/CHI-EA   | '82-'20 |  19446 |    15364 |
-| WI           | '03-'19 |        |          |
-| IIIX         | '06-'14 |    248 |          |
-| TIST journal | '10-'20 |    699 |          |
+| WI           | '03-'19 |   1127 |      343 |
+| WSDM         | '08-'20 |   1123 |     1051 |
+| WWW          | '01-'20 |   6823 |     5962 |
+| (journals)   |         |        |          |
+| TIST journal | '10-'20 |    699 |       -  |
 | TOIS journal | '83-'20 |    817 |          |
-| SIGIR Forum  | '71-'20 |   1032 |          |
+| SIGIR-Forum  | '71-'20 |   1032 |          |
+| Comp. Surv.  | '69-'20 |   2053 |          |
+|              |         |  4787  |     2386 |
 |              |         |        |          |
-| Total        |         |  62059 |    48925 |
+| Total        |         |  68425 |    51915 |
+
 
 ### Queries
 
@@ -66,13 +72,17 @@ He et al. [19] -> [19]
 ```
 ./src/0_create_data.sh
 
-# 48925 entries with T+A+K
-# present: 0.5401404047353576
-# absent: 0.4598595952646439
-# |-> case 1 (all words): 0.11526572176279694
-# |-> case 2 (some words): 0.18780110696675184
-# |-> case 3 (no words): 0.15679276653506607
-# |-> exp. : 0.13187612344762167
+51915 entries with T+A+K
+present: 0.5399608021160086
+absent: 0.4600391978839947
+|-> case 1 (all words): 0.11586832164444862
+|-> case 2 (some words): 0.18840279640577265
+|-> case 3 (no words): 0.15576807983374585
+|-> exp. : 0.1315192920805101
+
+
+./src/1_create_indexes.sh
+
 ```
 
 

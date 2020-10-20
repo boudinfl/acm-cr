@@ -23,6 +23,8 @@ if [[ ! -f "data/docs/t+a+k/acm-dl.trec.gz" ]]
                --path_to_keyphrases data/keyphrases/acm-dl.gold.all.json.gz
 fi
 
+exit
+
 # T+A + absent K or present K
 for VARIANT in "abs" "pres" "abs_c1" "abs_c2" "abs_c3" "pres+abs_c1" "abs_c2+abs_c3"
 do

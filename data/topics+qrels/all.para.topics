@@ -99,6 +99,336 @@
 </top>
 
 <top>
+<num> Number: 3401057-1
+<title> In recent years, massive open online courses (MOOCs) are gradually becoming a mode of alternative education worldwide. For example, Coursera, edX, and Udacity, the three pioneering MOOC platforms, offer millions of user accesses to numerous courses from internationally renowned universities. In China, millions of users study in XuetangX, which is one of the largest MOOC platforms [20], where thousands of courses are offered on various subjects. Although the number of students in MOOCs is continuously growing, there are still some straits with MOOCs. A challenging problem for MOOCs is how to attract students to study continuously and efficiently on the platforms, where the overall course completion rate is lower than 5% [34]. Therefore, it requires better understanding and capturing of student interests.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401057-2
+<title> To understand and capture student interests on MOOCs platforms, multiple efforts have been done, including course recommendation [13, 35], behavior prediction [20], user intentions understanding [34], etc. Among these efforts, recommendation system is applied by MOOCs provider to recommend courses to students.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401057-3
+<title> Traditional recommendation strategy, such as collaborative fil- tering (CF), which considers user (students) historical interactions and makes recommendations based on potential common preferences from users with similar interests, has achieved great success. However, CF based methods suffer from the sparsity of user-item (student-knowledge concept) relationships, which limits the recommendation performance. To overcome this problem, a number of efforts have been done by leveraging side information, such as social networks [11], user/item attributes [27], images [33], contexts [25], etc.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401057-4
+<title> [32] proposed to use meta-paths based latent features to represent the connectivity between users and items along with different types of paths. Additionally, Follow previous work, [10, 23, 24] proposed to use meta-path concept to mode the heterogeneous information in HIN.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+<top>
+<num> Number: 3401103-1
+<title> Relatively little is known about how dyslexia impacts web search, but several recent studies have begun to shed some light on this topic. Interviews with people with dyslexia suggest that search engine use - including query formulation, search result triage and information extraction from target webpages - is particularly challenging for this population [4, 19, 35, 37, 43]. Online experiments comparing search behaviors of people with and without dyslexia have identified some features of webpages, such as average line length and the ratio of images to text, that impact page readability for people with dyslexia [25].
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401103-2
+<title> Researchers in information retrieval and HCI have extensively studied user interaction with web search systems, particularly for complex informational [16] or exploratory [55] search tasks. Such tasks typically comprise three stages [3, 43]: query formulation (i.e., generating and refining search keywords), search results triage (i.e., determining which parts of the search engine results page - the SERP - are most relevant to the task at hand, and which link to open), and information extraction (i.e., gathering and making sense of the sought-after content).
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401103-3
+<title> Researchers have employed a variety of methods to study web search, including analyzing search engine and web browser logs (e.g., [32, 53, 54]), gathering self-report data from surveys, interviews, or diary studies of end-users (e.g., [42, 43]), and recruiting participants to perform controlled search tasks (e.g., [3, 25, 44]). As with any methodology, there are trade-offs: logs can provide in-situ data for a large set of users, but lack qualitative depth; self-report data may have gaps or inconsistencies with actual observed behavior; controlled, in-lab task performance may differ from natural search behavior in unanticipated ways, etc.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401103-4
+<title> Several researchers have begun to use eye tracking to understand which aspects of the SERP users attend to [22, 23, 36, 52]. Eye tracking allows us to log and track the amount of attention paid to specifc parts of the pages and interactions at a granular level of space and time. For example, eye tracking studies have revealed that searchers usually fixate on SERPs and webpages in an F-shape pattern [45, 46]. These studies have also shown that searchers distribute their visual attention differently across organic and ad results on a SERP [24], and that one can determine a webpage’s most salient parts by looking at the amount of visual attention paid to its diferent elements [17]. 
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401103-5
+<title> Since spelling and query formulation are closely related, this stage of search has been reported to be challenging for those with dyslexia. From their interview study, [43] reported SWD have trouble spelling words at the phonetic level. They also found SWD report a heavy reliance on voice input and on autocomplete when forming queries.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+
+<top>
+<num> Number: 3401103-6
+<title> Furthermore, prior work suggests a strong correlation between dyslexia and lower phonological working memory (i.e., the ability to hold words in short-term memory) [10, 38]. Work done to investigate the effects of working memory on search results triage echoes MacFarlane et al.’s findings. In 2019, a search log study of participants with low and high working memory found that those with lower working memory take more time to frst click on the SERP, open fewer links, and take more time between events [18].
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401103-7
+<title> In [25] found SWD’s relevance ratings of webpages were highly correlated with their readability scores. They identified several visual and textual features such as line length, number of headings, and ratio of images to text, that impact SWDs’ readability and relevance judgements of webpages.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401103-8
+<title> In [35] found using the "Reader View" mode in Firefox web browser, which simplifies a page’s visual structure, improved reading speed for SWD without reducing comprehension.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+<top>
+<num> Number: 3401106-1
+<title> The value of evaluating information based on graded relevance has begun to receive attention in recent years both from system [40, 55] and user [2, 15, 48] point of views. This is particularly important since the granularity of relevance judgements in previous studies have been based on investigating this phenomenon indirectly, via some sort of mediator [29, 71]. This, therefore, limits the understanding of how searchers perceive different degrees of information relevance [55].
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401106-2
+<title> IR systems have employed various techniques to capture the subjective aspect of relevance [2] to improve the effectiveness of retrieved results. Examples of such techniques are explicit [38], implicit (e.g.[24, 36]) and physiological [47] feedback.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401106-3
+<title> More recently, researchers have shown the possibility of capturing the neural processes associated with relevance, using brain imaging techniques [2, 15, 16, 22, 25, 28, 33, 37, 48, 65]. These studies have either investigated relevance in the context of word associations (i.e. relevance of a word with respect to another) [15, 16, 65] without subjects experiencing any IN; or investigated relevance in the context of Information Retrieval (IR) when IN has been introduced to subjects. In the latter scenario, relevance was investigated only as a binary notion [2, 19, 22, 24, 25, 28, 37, 48, 49] leaving the graded nature of it unexplored.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401106-4
+<title> Despite significant attention dedicated to examining this concept, relevance is still not fully understood, and it is a subject of many ongoing scientific debates. Past research has investigated the concept of relevance at different granularity levels from both the user [29, 71] and system [35, 40] perspective. Within the system side, graded relevance (in comparison to the binary one) has been shown to improve ranking functions [34, 55].
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401106-5
+<title> Given the importance of the user side of relevance, IR systems have been employing mechanisms and techniques to capture this phenomenon, namely explicit and implicit feedback. Explicit feedback is easy to use, however, difficult to obtain due to the cognitive burden associated with it [47], as the user is required to explicitly state whether presented content is subjectively perceived as relevant or not [67]. Implicit feedback is an unobtrusive data collection method. Popular techniques used to measure implicit relevance feedback are, for example, dwell time (i.e. [36]), eye-tracking and pupillometry [24], and/or the measurements of affective [4, 47] and physiological signals [47]. However, implicit feedback is often found to be noisy, which decreases its accuracy [2].
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401106-6
+<title> Recent research has begun to apply brain imaging methods to study aspects of the IR process from a neuroscience perspective. One particular area of emphasis for this research has been to examine the IN process [50, 51]. In addition, it has been found that prediction of the IN state experienced by a user is possible using brain signals [50]. Apart from IN, recent studies have employed brain imaging techniques to gain a better understanding of other parts of the information seeking and retrieval process, such as query formulation [28], search [49, 70] and relevance (e.g. [33]).
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401106-7
+<title> Recent research using a neuroscience approach to investigate relevance might be categorised in two ways based on the context within which the relevance was measured. The first line of brain-imaging research has position relevance within the IR task. For instance, Moshfeghi and colleagues [48] employed functional magnetic resonance imaging
+(fMRI), to localise differences in brain activity in cortical regions during the processing of relevant vs non-relevant images. The research was able to identify regions engaged in the relevance judgement processing and the increased activation of these regions for relevant items was related to visuospatial working memory [49, 51].
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401106-8
+<title> Another line of research has examined relevance in the context of word associations, employing EEG in isolation, or in combination with eye gaze [15, 16, 65]. In these scenarios, participants did not experience IN, but they engaged in judging word association to the topic. The findings of these studies have shown that brain signals differ when subjects process relevant vs. non-relevant words across time [16].
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+<top>
+<num> Number: 3401164-1
+<title> A fundamental task in voice shopping is product recommendation, where the goal is to recommend relevant products to customers by inferring their preferences. While a growing body of research has addressed the voice-based recommendation problem from the dialogue perspective, i.e., improving the effectiveness of question-answering between the customer and system [7, 8, 11, 23, 25, 44, 45], relatively little work has been focused on addressing the specific challenges arising in recommendation on Voice [40].
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401164-2
+<title> Due to the unique characteristics of voice interfaces (e.g., narrow information channel), customers tend to explore fewer products and choose fewer long-tail products, as compared to Web-based channels [45].
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401164-3
+<title> We note that repeated purchase behaviors have also been observed on the Web, which is mainly driven by customers’ loyalty to certain brands [5, 10, 42].
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401164-4
+<title> In the recommendation literature, transfer learning has been implemented by extending recommendation models, e.g., factorization models [28, 29, 33] or neural networks [14, 21, 26], with shared user representations for cross-domain recommendation tasks. While being different in the underlying recommendation models (see Section 2 for a detailed discussion), both classes of methods are designed for transferring user representations with less emphasis on transferring the interaction patterns, which has to be carefully considered in our Web-to-Voice transfer context.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401164-5
+<title> More recent work [18] attempts to address the problem by modeling the transfer of the purchase patterns from one domain to another using a linear transformation. However, it fails to capture the relationships of interaction patterns across domains, such as similarity and dissimilarity, which are essential for Web to Voice transfer.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+
+<top>
+<num> Number: 3401164-6
+<title> With the rapid increase of personal assistants, a considerable amount of literature has grown up around conversational recommendation. The focal point of research efforts has been enabling the system to effectively and efficiently infer users’ intents and satisfy their information needs [35, 47]. Due to the complexity of the problem, it has been studied by several research communities including natural language processing [11, 23, 25], human-computer interaction [7, 45], and information retrieval (including recommender systems) [8, 44]. Existing work mainly takes a dialogue perspective with the goal of improving the question-answering process, i.e., asking the most relevant questions to collect user feedback.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401164-7
+<title> From the recommendation perspective, most existing work assumes a cold-start setting that ignores long-term preferences of users. For example, [47] studies the effect of in-session aspect-based questions for product recommendation using memory networks [39]. [25] introduce a neural dialogue model that classifies the sentiment of a user with respect to movies discussed in the conversation session, and based on that, it generates movie recommendations with a pre-trained autoencoder recommender [37].
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401164-8
+<title> A recent paper by [40] shows that the integration of users’ past purchasing behaviors boosts the effectiveness of voice-based recommendation. Their work, however, concentrates on methods for integrating recommendation techniques into the dialogue system. Our work takes a step back and aims at bridging the conventional recommendation techniques with the recommendation task on Voice, with a specific focus on Web-to-Voice transfer which is of key importance for successful voice shopping in practice.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401164-9
+<title> Early work focuses on adapting matrix factorization techniques for transfer learning [28, 29, 33]. [28] introduce a model based on collective matrix factorization [38], where user latent factors are shared across different domains. The observed interactions in the source domain help to train better latent factors, thus transferring the knowledge to the target domain.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+
+<top>
+<num> Number: 3401164-10
+<title> Neural network-based methods are more capable of learning non-linear latent representations for users and items and potentially also their interactions (see a recent survey [46]). Specific to neural transfer learning for cross-domain recommendation, [14] introduce a multi-view deep learning method that learns shared user representations from user-item interactions in different domains. [26] propose to incorporate content information into the multi-view neural network.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401164-11
+<title> A recent paper [18], perhaps the most closely related work to ours, models the transfer of interactions across multiple domains as a linear transformation using cross-stitch networks [30]. In the context of Web-to-Voice transfer, since the same products appear in both Web and Voice, we adopt a tri-factorization approach [12, 31] that fixes the product representations across channels, and extend the approach into a multi-level scheme, which allows to capture channel-independent and channel-specific interaction patterns.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401164-12
+<title> In Web-based information systems, repeated item consumption has been shown to be most affected by the recency and quality of the item, with recency being more critical [1]. [4] study such a behavior in more detail and reveals the increasing inter-arrival gaps of repeated item consumption that eventually lead to abandonment. In online shopping, [5] study repeated purchases for consumable products, e.g., toothpaste and diapers, and propose a prediction model that helps increase the product click-through rate.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401164-13
+<title> Repeated purchases have only been considered in recommender system literature recently. [42] introduce a recommendation algorithm, adaLoyal, a personalized grocery recommender. In adaLoyal, the repeated purchase is leveraged in a post-processing procedure to adapt the prediction of purchase probability over an item using the customer’ historical purchases of the item. The adaptation is implemented through a posterior calculation that accounts for both probabilities of general and repeated purchases.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+<top>
 <num> Number: 3401188-1
 <title> Across the rich history of information retrieval research, there has been extensive work focused on modeling score distributions of IR systems. Early work in this area primarily focused on fitting parametric probability distributions to score distributions [1, 10]. This is often achieved by making the assumption that the overall distribution can be expressed as a mixture of a relevant and a non-relevant distribution. The expectation-maximization (EM) algorithm is often adopted to learn the parameters.
 

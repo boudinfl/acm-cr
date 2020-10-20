@@ -1,0 +1,131 @@
+<top>
+<num> Number: 3401164-1
+<title> A fundamental task in voice shopping is product recommendation, where the goal is to recommend relevant products to customers by inferring their preferences. While a growing body of research has addressed the voice-based recommendation problem from the dialogue perspective, i.e., improving the effectiveness of question-answering between the customer and system [7, 8, 11, 23, 25, 44, 45], relatively little work has been focused on addressing the specific challenges arising in recommendation on Voice [40].
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401164-2
+<title> Due to the unique characteristics of voice interfaces (e.g., narrow information channel), customers tend to explore fewer products and choose fewer long-tail products, as compared to Web-based channels [45].
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401164-3
+<title> We note that repeated purchase behaviors have also been observed on the Web, which is mainly driven by customers’ loyalty to certain brands [5, 10, 42].
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401164-4
+<title> In the recommendation literature, transfer learning has been implemented by extending recommendation models, e.g., factorization models [28, 29, 33] or neural networks [14, 21, 26], with shared user representations for cross-domain recommendation tasks. While being different in the underlying recommendation models (see Section 2 for a detailed discussion), both classes of methods are designed for transferring user representations with less emphasis on transferring the interaction patterns, which has to be carefully considered in our Web-to-Voice transfer context.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401164-5
+<title> More recent work [18] attempts to address the problem by modeling the transfer of the purchase patterns from one domain to another using a linear transformation. However, it fails to capture the relationships of interaction patterns across domains, such as similarity and dissimilarity, which are essential for Web to Voice transfer.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+
+<top>
+<num> Number: 3401164-6
+<title> With the rapid increase of personal assistants, a considerable amount of literature has grown up around conversational recommendation. The focal point of research efforts has been enabling the system to effectively and efficiently infer users’ intents and satisfy their information needs [35, 47]. Due to the complexity of the problem, it has been studied by several research communities including natural language processing [11, 23, 25], human-computer interaction [7, 45], and information retrieval (including recommender systems) [8, 44]. Existing work mainly takes a dialogue perspective with the goal of improving the question-answering process, i.e., asking the most relevant questions to collect user feedback.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401164-7
+<title> From the recommendation perspective, most existing work assumes a cold-start setting that ignores long-term preferences of users. For example, [47] studies the effect of in-session aspect-based questions for product recommendation using memory networks [39]. [25] introduce a neural dialogue model that classifies the sentiment of a user with respect to movies discussed in the conversation session, and based on that, it generates movie recommendations with a pre-trained autoencoder recommender [37].
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401164-8
+<title> A recent paper by [40] shows that the integration of users’ past purchasing behaviors boosts the effectiveness of voice-based recommendation. Their work, however, concentrates on methods for integrating recommendation techniques into the dialogue system. Our work takes a step back and aims at bridging the conventional recommendation techniques with the recommendation task on Voice, with a specific focus on Web-to-Voice transfer which is of key importance for successful voice shopping in practice.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401164-9
+<title> Early work focuses on adapting matrix factorization techniques for transfer learning [28, 29, 33]. [28] introduce a model based on collective matrix factorization [38], where user latent factors are shared across different domains. The observed interactions in the source domain help to train better latent factors, thus transferring the knowledge to the target domain.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+
+<top>
+<num> Number: 3401164-10
+<title> Neural network-based methods are more capable of learning non-linear latent representations for users and items and potentially also their interactions (see a recent survey [46]). Specific to neural transfer learning for cross-domain recommendation, [14] introduce a multi-view deep learning method that learns shared user representations from user-item interactions in different domains. [26] propose to incorporate content information into the multi-view neural network.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401164-11
+<title> A recent paper [18], perhaps the most closely related work to ours, models the transfer of interactions across multiple domains as a linear transformation using cross-stitch networks [30]. In the context of Web-to-Voice transfer, since the same products appear in both Web and Voice, we adopt a tri-factorization approach [12, 31] that fixes the product representations across channels, and extend the approach into a multi-level scheme, which allows to capture channel-independent and channel-specific interaction patterns.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401164-12
+<title> In Web-based information systems, repeated item consumption has been shown to be most affected by the recency and quality of the item, with recency being more critical [1]. [4] study such a behavior in more detail and reveals the increasing inter-arrival gaps of repeated item consumption that eventually lead to abandonment. In online shopping, [5] study repeated purchases for consumable products, e.g., toothpaste and diapers, and propose a prediction model that helps increase the product click-through rate.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401164-13
+<title> Repeated purchases have only been considered in recommender system literature recently. [42] introduce a recommendation algorithm, adaLoyal, a personalized grocery recommender. In adaLoyal, the repeated purchase is leveraged in a post-processing procedure to adapt the prediction of purchase probability over an item using the customer’ historical purchases of the item. The adaptation is implemented through a posterior calculation that accounts for both probabilities of general and repeated purchases.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
