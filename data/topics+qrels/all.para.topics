@@ -476,3 +476,178 @@
 <narr> Narrative:
 
 </top>
+<top>
+<num> Number: 3401207-1
+<title> A number of existing approaches extract cause-effect patterns using lexical, syntactic, and more recently, semantic relations [3–5, 12], primarily taken from headlines or single sentences. The cause-effect pattern approach was extended in [7], where a set of patterns are initially used to create a network of causes and effects, and then a relational embedding method is used to jointly embed causes and effects. 
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401207-2
+<title> Causal IR works in the reverse direction, where a query describes a cause (e.g., current situation or proposed action) and the results provide a list of possible effects was studied in [9, 10].
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+<top>
+<num> Number: 3401266-1
+<title> Our main idea follows the successful cascade approach for ad-hoc document retrieval [19], which considers fast but less accurate rerankers together with more accu- rate but slower models.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401266-2
+<title> Neural models for AS2 typically apply a series of non-linear transformations to the input question and answer, represented as compositions of word or character embeddings and then measure the similarity between the obtained representations. For example, the Rel-CNN [16] has two separate embedding layers for the question and answer, and relational embedding, which aims at connecting them.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401266-3
+<title> In contrast, we propose an alternative (and compatible with the initiatives above) approach following previous work in document retrieval, e.g., the use of sequential rerankers [19]. [21] focused on quickly identifying a set of good candidate documents to be passed to the second and further rerankers of the cascade. [7] presented a new general framework for learning an end-to-end cascade of rankers using backpropagation. [1] studied effectiveness/efficiency trade-offs with three candidate selection approaches. 
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+<top>
+<num> Number: 3401330-1
+<title> Taking this research as a starting point, subsequent advanced approaches, such as memory-based RNNs [3, 12] and self-attention-based RNNs [5, 11], have taken sequential recommendation technology to a new level. These advanced technologies not only complete the modeling of pure behavior (item) sequences but also fully characterize additional information such as knowledge [3] and features [11] related to items to improve the sequence prediction performance.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401330-2
+<title> However, most of the existing models based on sentiment factors [4, 10] focus only on non-sequential recommendations. In other words, they ignore the influence of the temporal sentiment change pattern on the sequence of user behavior; however, this temporal influence sometimes plays a decisive role in generating the final preference.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+<top>
+<num> Number: 3401333-1
+<title> Recently, neural network based deep learning models attract lots of attention for learning-to-rank tasks [1, 5]. 
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401333-2
+<title> We adopt normalized discounted cumulative gain (NDCG) [16] as the evaluation metric. In our experiments, we utilize NDCG k to measure the quality of the top-k ranked items where k ∈ {1, 5, 10}.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401333-3
+<title> The experiments are implemented based on the open-sourced TensorFlow Ranking library [20] and trained on TPU.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+<top>
+<num> Number: 3401467-1
+<title> Efforts have been made on developing supervised or unsupervised methods for these information retrieval mechanisms [21]. However, since the widely use of mobile applications during the recent years, more and more information retrieval services have provided interactive functionality and products [41], these conventional techniques typically face several common challenges.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401467-2
+<title> Given the advantages of reinforcement learning, there have been tremendous interests in developing RL based information retrieval techniques [3, 5, 11, 12, 15, 38–40]. While these successes show the promise of DRL, applying learning from game-based DRL to information retrieval is fraught with unique challenges, including, but not limited to, extreme data sparsity, power-law distributed samples, and large state and action spaces.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401467-3
+<title> For relevance ranking, conventional methods typically optimize the evaluation metric before a predefined position (e.g. NDCG@K), which ignores the information after rank K. [31] is proposed to address this problem by using the metrics calculated upon all the positions as reward function, and the model parameters are be optimized via maximizing the accumulated rewards for all decisions.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401467-4
+<title> [34] formalized diverse ranking as a continuous state Markov decision process, and policy gradient algorithm of REINFORCE is leveraged to maximize the accumulated long-term rewards in terms of the diversity metric.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401467-5
+<title> Recommender systems aim to learn users’ preferences based on their feedback and suggest items to match their preferences. User’s preference is assumed to be static in traditional recommendation algorithms such as collaborative filtering, which is usually not true in real-world recommender systems where users’ preferences are highly dynamic. Bandit methods [33, 37] usually utilizes a variable reward function to delineate the dynamic nature of the environment (reward distributions). Another solution is to introduce the MDP setting [6, 9, 42], where state represents user’s preference and state transition depicts the dynamic nature of user’s preference over time. In [39], a user’s dynamic preference (state) is learned from her browsing history and feedback. Each time a user provides feedback (skip, click or purchase) to an item, the recommender system will update the state to capture user’s new preferences.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401467-6
+<title> Online advertising is to suggest the right ads to the right users so as to maximize the click-through rate (CTR) or return on investment (ROI) of the advertising campaign, which consists of two main marketing strategy, i.e., guaranteed delivery (GD) and real-time bidding (RTB). In guaranteed delivery setting, ads that grouped into campaigns are charged on a pay-per-campaign basis for the pre-specified number of deliveries [23].
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401467-7
+<title> For example, a model-based RL framework is proposed in RTB setting [3], where the state value is approximated by neural network to address the scalability problem of large auction amounts and the limited budget.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401467-8
+<title> In [12], a multi-agent bidding model is proposed to jointly consider all the advertisers’ biddings in the system, and a clustering approach is introduced to deal with a large number of advertisers.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>

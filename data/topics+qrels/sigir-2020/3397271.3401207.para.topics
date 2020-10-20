@@ -1,0 +1,19 @@
+<top>
+<num> Number: 3401207-1
+<title> A number of existing approaches extract cause-effect patterns using lexical, syntactic, and more recently, semantic relations [3–5, 12], primarily taken from headlines or single sentences. The cause-effect pattern approach was extended in [7], where a set of patterns are initially used to create a network of causes and effects, and then a relational embedding method is used to jointly embed causes and effects. 
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401207-2
+<title> Causal IR works in the reverse direction, where a query describes a cause (e.g., current situation or proposed action) and the results provide a list of possible effects was studied in [9, 10].
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>

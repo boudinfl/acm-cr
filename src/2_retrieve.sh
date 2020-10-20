@@ -11,7 +11,7 @@ do
     EXP=${INDEX##*/lucene-index.}
     for MODEL in "bm25" # "qld"
     do
-        if [[ ! -f "output/run.${EXP}.${TOPICFIELD}.${MODEL}.txt" ]]
+        if [[ ! -f "output/run.${EXP}.${TOPICFIELD}.${MODEL}.txt.caca" ]]
         then
             # retrieve documents using the given model
             sh ../ir-using-kg/anserini/target/appassembler/bin/SearchCollection \

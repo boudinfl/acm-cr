@@ -1,0 +1,29 @@
+<top>
+<num> Number: 3401333-1
+<title> Recently, neural network based deep learning models attract lots of attention for learning-to-rank tasks [1, 5]. 
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401333-2
+<title> We adopt normalized discounted cumulative gain (NDCG) [16] as the evaluation metric. In our experiments, we utilize NDCG k to measure the quality of the top-k ranked items where k ∈ {1, 5, 10}.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3401333-3
+<title> The experiments are implemented based on the open-sourced TensorFlow Ranking library [20] and trained on TPU.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
