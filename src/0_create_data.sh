@@ -2,7 +2,10 @@
 
 # create gold keyphrases files
 mkdir -p data/keyphrases/
-python src/bib_to_gold.py --directory data/acm-dl/ --output data/keyphrases/acm-dl.gold
+if [[ ! -f "data/keyphrases/acm-dl.gold.all.json.gz" ]]
+    then
+        python src/bib_to_gold.py --directory data/acm-dl/ --output data/keyphrases/acm-dl.gold
+fi
 
 # produce T+A documents
 mkdir -p data/docs/t+a/
@@ -22,8 +25,6 @@ if [[ ! -f "data/docs/t+a+k/acm-dl.trec.gz" ]]
                --output data/docs/t+a+k/acm-dl.trec.gz \
                --path_to_keyphrases data/keyphrases/acm-dl.gold.all.json.gz
 fi
-
-exit
 
 # T+A + absent K or present K
 for VARIANT in "abs" "pres" "abs_c1" "abs_c2" "abs_c3" "pres+abs_c1" "abs_c2+abs_c3"
