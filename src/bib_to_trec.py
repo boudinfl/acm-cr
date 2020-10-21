@@ -25,13 +25,26 @@ parser.add_argument('--path_to_keyphrases',
                     type=str,
                     default=None)
 
+parser.add_argument('--blacklist',
+                    help='path to a blacklist of files.',
+                    type=str,
+                    default=None)
+
 args = parser.parse_args()
 
 # loading keyphrases if provided
+keyphrases = {}
 if args.path_to_keyphrases:
     with gzip.open(args.path_to_keyphrases, "rt") as f:
         keyphrases = json.loads(f.read())
         print("{} docids loaded for keyphrases".format(len(keyphrases)))
+
+# loading a blacklist if provided
+blacklist = {}
+if args.blacklist:
+    with open(args.blacklist, "rt") as f:
+        blacklist = f.read().splitlines()
+        print("{} docids loaded for blacklist".format(len(blacklist)))
 
 collection = {}
 nb_entries = 0
@@ -45,6 +58,9 @@ for filename in glob.iglob(args.directory+"/**", recursive=True):
         for key, reference in  data.entries.items():
             nb_docs += 1
             if reference.type not in ["inproceedings", "article"]:
+                continue
+
+            if key in blacklist:
                 continue
 
             if {'title', 'abstract', 'keywords'} <= set(reference.fields):
@@ -64,7 +80,7 @@ with gzip.open(args.output, 'wt') as o:
         o.write("<DOCNO>{}</DOCNO>\n".format(doc_id))
         o.write("<TITLE>{}</TITLE>\n".format(entry.fields['title'].strip()))
         o.write("<TEXT>{}</TEXT>\n".format(entry.fields['abstract'].strip()))
-        if args.path_to_keyphrases and doc_id in keyphrases:
+        if doc_id in keyphrases:
             kps = keyphrases[doc_id]
             kps = [k[0] for k in kps]
             o.write("<HEAD>{}</HEAD>\n".format(' // '.join(kps)))

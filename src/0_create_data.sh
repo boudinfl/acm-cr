@@ -13,7 +13,8 @@ if [[ ! -f "data/docs/t+a/acm-dl.trec.gz" ]]
     then
         python src/bib_to_trec.py \
             --directory data/acm-dl/ \
-            --output data/docs/t+a/acm-dl.trec.gz
+            --output data/docs/t+a/acm-dl.trec.gz \
+            --blacklist data/topics+qrels/blacklist.txt
 fi
 
 # produce T+A+K documents
@@ -23,7 +24,8 @@ if [[ ! -f "data/docs/t+a+k/acm-dl.trec.gz" ]]
         python src/bib_to_trec.py \
                --directory data/acm-dl/ \
                --output data/docs/t+a+k/acm-dl.trec.gz \
-               --path_to_keyphrases data/keyphrases/acm-dl.gold.all.json.gz
+               --path_to_keyphrases data/keyphrases/acm-dl.gold.all.json.gz \
+               --blacklist data/topics+qrels/blacklist.txt
 fi
 
 # T+A + absent K or present K
@@ -38,7 +40,8 @@ do
             python src/bib_to_trec.py \
                    --directory data/acm-dl/ \
                    --output data/docs/${EXP}/acm-dl.trec.gz \
-                   --path_to_keyphrases data/keyphrases/acm-dl.gold.${VARIANT}.json.gz
+                   --path_to_keyphrases data/keyphrases/acm-dl.gold.${VARIANT}.json.gz \
+                   --blacklist data/topics+qrels/blacklist.txt
         fi
     done
 done

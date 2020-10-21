@@ -1,0 +1,119 @@
+<top>
+<num> Number: 3377977-1
+<title> Recommender systems have been well integrated into many aspects of our lives [6, 7, 25]. In many domains such as e-commerce, entertainment, news feeds, hiring platforms, and social networks, these systems are primarily used to help users discover new items that might be of interest to them [11, 16, 20, 23, 33]. Document recommendation however, is a unique domain in that its chief concern is to facilitate re-finding of user’s items [26].
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3377977-2
+<title> In comparison with other recommendation domains, document recommendation has been less examined with only few studies in this area focusing on improving the accuracy of the recommender algorithm behind the scenes [15, 26]. While the algorithm is an important aspect of the system, knowing about the effects of other aspects, for instance, presentation, explanations, and users’ interaction with the recommended items on user experience helps with designing more effective recommender systems.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3377977-3
+<title> Inspired by previous work in personal information management and refinding [2, 13], our study seeks to investigate the effects of three important dimensions of users’ past interactions with documents recommended to them on their recognition of, prior intent to open, and interest in the documents.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3377977-4
+<title> [4] study whether improvements in search have changed this fundamental aspect of PIM. They also offer theoretical explanations for differences between PIM and Internet retrieval, and suggest alternative design directions for PIM systems.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3377977-5
+<title> [24] study email use in the context of everyday work practices. They examine how users interlace email with their day-to-day, ongoing work processes.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3377977-6
+<title> Another body of work investigates how people recall and refind previously seen information. Research has shown that a significant portion of an individual’s web accesses tends to be revisits [10, 27, 29].
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3377977-7
+<title> In a user study on search, [28] reports that what makes a search result memorable is the rank and whether it was clicked on.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3377977-8
+<title> In addition to studying refinding in the context of Web search, researchers have studied re-finding of personal information, especially with an emphasis on email. [14] show that, with the increase of email messages over time, users tend to rely on search for refinding emails as opposed to using human-generated folders and tags. [13] describe the design of a system that facilitates information re-use. The system provides a unified index of information that a person has seen, regardless of whether it was seen as email, web page, document, etc. and uses rich contextual cues in the search interface. They found that that email was the most commonly retrieved source of personal information (e.g. files, web history, emails, etc.). More recently, researchers have also studied re-visitation patterns [1] and refinding strategies [21] employed by users to go back to previously seen email messages.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3377977-9
+<title> In another work, [30] examine how different representations of web pages affect refinding and finding new information that the user has never seen before. They find for example, that thumbnails help with refinding, but only when the page’s thumbnail has been seen before.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3377977-10
+<title> Personalized recommendations are increasingly employed in a variety of areas, most commonly in entertainment to for instance recommend music or videos [11, 19, 32, 35], product recommendation in online shopping platforms [25, 34], and social media platforms [16, 23].
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3377977-11
+<title> Document recommendation, on the other hand, has not received as much attention. [15] studied document recommendation in the context of social tagging. They argue that annotating documents with freely chosen keywords (tags) can provide meaningful collaborative semantic data which can potentially be exploited by recommender systems. In more recent work, a document recommendation system to provide quick access to documents on the Google Drive platform was described in [26]. The system aims to surface the most relevant documents when a user visits the home screen. The paper reports significant productivity gains, in terms of time to locate documents, compared to other approaches that rely on search or browsing.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3377977-12
+<title> Although document recommendation is not a heavily studied area, it can benefit from several insights in studying recommendations in other domains. For example, several papers have attempted to model repeated consumption behavior and its impact on recommender systems. Several important aspects such as item popularity, recency of access [2], user reconsumption patterns [8] and interconsumption frequency [3] were highlighted.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>

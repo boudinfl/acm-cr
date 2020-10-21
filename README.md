@@ -41,6 +41,7 @@ java -Xmx6g -jar cli/target/scala-2.12/science-parse-cli-assembly-3.0.1.jar ../c
 | IUI          | '93-'20 |   2043 |     1735 |
 | JCDL         | '01-'20 |   2183 |     1808 |
 | KDD          | '99-'20 |   3966 |     3589 |
+| OzCHI        | '05-'20 |   1271 |     1216 |
 | RecSys       | '07-'20 |   1279 |     1197 |
 | SIGIR        | '78-'20 |   5251 |     3775 |
 | SIGMOD       | '75-'20 |   5378 |     2360 |
@@ -72,16 +73,74 @@ He et al. [19] -> [19]
 ```
 ./src/0_create_data.sh
 
-51915 entries with T+A+K
-present: 0.5399608021160086
-absent: 0.4600391978839947
-|-> case 1 (all words): 0.11586832164444862
-|-> case 2 (some words): 0.18840279640577265
-|-> case 3 (no words): 0.15576807983374585
-|-> exp. : 0.1315192920805101
+53131 entries with T+A+K
+present: 0.5403410268535919
+absent: 0.45965897314641135
+|-> case 1 (all words): 0.11542222320070421
+|-> case 2 (some words): 0.18819805014164132
+|-> case 3 (no words): 0.15603869980403845
+|-> exp. : 0.1315236158617357
 
 
 ./src/1_create_indexes.sh
+./src/2_retrieve.sh
+./src/3_evaluate.sh
+
+Evaluating output/run.t+a+k-abs.title.bm25+rm3.txt
+map                     all     0.2419
+recall_10               all     0.3578
+Evaluating output/run.t+a+k-abs.title.bm25.txt
+map                     all     0.2598
+recall_10               all     0.3872
+Evaluating output/run.t+a+k-abs_c1.title.bm25+rm3.txt
+map                     all     0.2221
+recall_10               all     0.3523
+Evaluating output/run.t+a+k-abs_c1.title.bm25.txt
+map                     all     0.2468
+recall_10               all     0.3670
+Evaluating output/run.t+a+k-abs_c2+abs_c3.title.bm25+rm3.txt
+map                     all     0.2462
+recall_10               all     0.3611
+Evaluating output/run.t+a+k-abs_c2+abs_c3.title.bm25.txt
+map                     all     0.2596
+recall_10               all     0.3927
+Evaluating output/run.t+a+k-abs_c2.title.bm25+rm3.txt
+map                     all     0.2325
+recall_10               all     0.3647
+Evaluating output/run.t+a+k-abs_c2.title.bm25.txt
+map                     all     0.2495
+recall_10               all     0.3799
+Evaluating output/run.t+a+k-abs_c3.title.bm25+rm3.txt
+map                     all     0.2316
+recall_10               all     0.3620
+Evaluating output/run.t+a+k-abs_c3.title.bm25.txt
+map                     all     0.2660
+recall_10               all     0.3799
+Evaluating output/run.t+a+k-pres+abs_c1.title.bm25+rm3.txt
+map                     all     0.2269
+recall_10               all     0.3538
+Evaluating output/run.t+a+k-pres+abs_c1.title.bm25.txt
+map                     all     0.2609
+recall_10               all     0.3698
+Evaluating output/run.t+a+k-pres.title.bm25+rm3.txt
+map                     all     0.2234
+recall_10               all     0.3757
+Evaluating output/run.t+a+k-pres.title.bm25.txt
+map                     all     0.2631
+recall_10               all     0.3698
+Evaluating output/run.t+a+k.title.bm25+rm3.txt
+map                     all     0.2293
+recall_10               all     0.3767
+Evaluating output/run.t+a+k.title.bm25.txt
+map                     all     0.2743
+recall_10               all     0.3817
+Evaluating output/run.t+a.title.bm25+rm3.txt
+map                     all     0.2353
+recall_10               all     0.3650
+Evaluating output/run.t+a.title.bm25.txt
+map                     all     0.2553
+recall_10               all     0.3606
+
 
 ```
 

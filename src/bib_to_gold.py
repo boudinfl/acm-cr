@@ -59,6 +59,7 @@ sum_ratio_absent_kps_case_1 = 0
 sum_ratio_absent_kps_case_2 = 0
 sum_ratio_absent_kps_case_3 = 0
 nb_documents_with_kps = 0
+nb_kps = 0
 
 exp_ratio_case_2 = 0
 exp_ratio_case_3 = 0
@@ -100,6 +101,7 @@ for filename in glob.iglob(args.directory+"/**", recursive=True):
                 for j, kp in enumerate(pp_kw):
 
                     keyphrase = keywords[j]
+                    nb_kps += 1
 
                     # keyphrase is present
                     if contains(kp, pp_ti) or contains(kp, pp_ab):
@@ -187,6 +189,7 @@ print("|-> case 1 (all words): {}".format(sum_ratio_absent_kps_case_1/nb_documen
 print("|-> case 2 (some words): {}".format(sum_ratio_absent_kps_case_2/nb_documents_with_kps))
 print("|-> case 3 (no words): {}".format(sum_ratio_absent_kps_case_3/nb_documents_with_kps))
 print("|-> exp. : {}".format(exp_ratio_case_2_and_3/nb_documents_with_kps))
+print("avg nb kps : {}".format(nb_kps/nb_documents_with_kps))
 
 #print("nb_documents_with_kps: {}".format(nb_documents_with_kps))
 #print("sum_ratio_present_kps: {}".format(sum_ratio_present_kps))
