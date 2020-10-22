@@ -87,59 +87,78 @@ absent: 0.45965897314641135
 ./src/3_evaluate.sh
 
 Evaluating output/run.t+a+k-abs.title.bm25+rm3.txt
-map                     all     0.2419
+recip_rank              all     0.2977
 recall_10               all     0.3578
+ndcg_cut_10             all     0.2785
 Evaluating output/run.t+a+k-abs.title.bm25.txt
-map                     all     0.2598
+recip_rank              all     0.3319
 recall_10               all     0.3872
+ndcg_cut_10             all     0.3007
 Evaluating output/run.t+a+k-abs_c1.title.bm25+rm3.txt
-map                     all     0.2221
+recip_rank              all     0.2797
 recall_10               all     0.3523
+ndcg_cut_10             all     0.2635
 Evaluating output/run.t+a+k-abs_c1.title.bm25.txt
-map                     all     0.2468
+recip_rank              all     0.3152
 recall_10               all     0.3670
+ndcg_cut_10             all     0.2856
 Evaluating output/run.t+a+k-abs_c2+abs_c3.title.bm25+rm3.txt
-map                     all     0.2462
+recip_rank              all     0.3055
 recall_10               all     0.3611
+ndcg_cut_10             all     0.2828
 Evaluating output/run.t+a+k-abs_c2+abs_c3.title.bm25.txt
-map                     all     0.2596
+recip_rank              all     0.3283
 recall_10               all     0.3927
+ndcg_cut_10             all     0.3014
 Evaluating output/run.t+a+k-abs_c2.title.bm25+rm3.txt
-map                     all     0.2325
+recip_rank              all     0.2890
 recall_10               all     0.3647
+ndcg_cut_10             all     0.2744
 Evaluating output/run.t+a+k-abs_c2.title.bm25.txt
-map                     all     0.2495
+recip_rank              all     0.3172
 recall_10               all     0.3799
+ndcg_cut_10             all     0.2902
 Evaluating output/run.t+a+k-abs_c3.title.bm25+rm3.txt
-map                     all     0.2316
+recip_rank              all     0.2838
 recall_10               all     0.3620
+ndcg_cut_10             all     0.2718
 Evaluating output/run.t+a+k-abs_c3.title.bm25.txt
-map                     all     0.2660
+recip_rank              all     0.3350
 recall_10               all     0.3799
+ndcg_cut_10             all     0.3033
 Evaluating output/run.t+a+k-pres+abs_c1.title.bm25+rm3.txt
-map                     all     0.2269
+recip_rank              all     0.2941
 recall_10               all     0.3538
+ndcg_cut_10             all     0.2681
 Evaluating output/run.t+a+k-pres+abs_c1.title.bm25.txt
-map                     all     0.2609
+recip_rank              all     0.3249
 recall_10               all     0.3698
+ndcg_cut_10             all     0.2954
 Evaluating output/run.t+a+k-pres.title.bm25+rm3.txt
-map                     all     0.2234
+recip_rank              all     0.2900
 recall_10               all     0.3757
+ndcg_cut_10             all     0.2718
 Evaluating output/run.t+a+k-pres.title.bm25.txt
-map                     all     0.2631
+recip_rank              all     0.3280
 recall_10               all     0.3698
+ndcg_cut_10             all     0.2971
 Evaluating output/run.t+a+k.title.bm25+rm3.txt
-map                     all     0.2293
+recip_rank              all     0.3118
 recall_10               all     0.3767
+ndcg_cut_10             all     0.2774
 Evaluating output/run.t+a+k.title.bm25.txt
-map                     all     0.2743
+recip_rank              all     0.3477
 recall_10               all     0.3817
+ndcg_cut_10             all     0.3096
 Evaluating output/run.t+a.title.bm25+rm3.txt
-map                     all     0.2353
+recip_rank              all     0.2976
 recall_10               all     0.3650
+ndcg_cut_10             all     0.2744
 Evaluating output/run.t+a.title.bm25.txt
-map                     all     0.2553
+recip_rank              all     0.3242
 recall_10               all     0.3606
+ndcg_cut_10             all     0.2893
+
 
 
 ```

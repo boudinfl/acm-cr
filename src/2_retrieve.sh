@@ -2,9 +2,13 @@
 TOPICS=data/topics+qrels/all.para.topics
 cat data/topics+qrels/sigir-2020/*.para.topics > ${TOPICS}
 cat data/topics+qrels/chiir-2020/*.para.topics >> ${TOPICS}
+cat data/topics+qrels/ictir-2020/*.para.topics >> ${TOPICS}
+cat data/topics+qrels/wsdm-2020/*.para.topics >> ${TOPICS}
 QRELS=data/topics+qrels/all.para.qrels
 cat data/topics+qrels/sigir-2020/*.para.qrels > ${QRELS}
 cat data/topics+qrels/chiir-2020/*.para.qrels >> ${QRELS}
+cat data/topics+qrels/ictir-2020/*.para.qrels >> ${TOPICS}
+cat data/topics+qrels/wsdm-2020/*.para.qrels >> ${TOPICS}
 
 TOPICFIELD="title"
 mkdir -p output

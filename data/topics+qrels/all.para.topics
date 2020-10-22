@@ -909,3 +909,121 @@
 <narr> Narrative:
 
 </top>
+<top>
+<num> Number: 3409819-1
+<title> Recently, neural network based approaches have proven effective for LTR applications [4, 14, 15]. In this context, we formally define the permutation equivariance requirement for a scoring func- tion that models cross-document interactions.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3409819-2
+<title> There are two settings for modeling cross-document interactions: re-ranking and full ranking. In the former setting, a base ranking is provided and the documents are reordered using the ranker. For example, [1] applies sequence modeling on the top k documents of the base ranking and then uses the final state vector to enrich each document for the re-ranking scoring. In the latter setting, we do not have a base ranking but start with a set of documents. For example, [6] takes a pair of documents as input and uses a DNN to produce a preference score for the input documents, while [2] propose a groupwise scoring function to model document interactions, sampling a subset of all permutations of each group and thus not guaranteeing permutation equivariance.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+<top>
+<num> Number: 3409827-1
+<title> A recent work on spotting KG facts uses regular expression based operators at word-level [15, 16]. However, their approach disregards any optimization for efficient execution of hyper-phrase queries. [13, 19] propose a system that retrieves witness documents given a KG fact as a query. However, a limitation of their system is that documents need to be processed apriori and linked to KG facts for their retrieval. Put another way, out-of-KG facts or entities can not be processed with their system.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3409827-2
+<title> [17] investigate how to model query execution plans with respect to recall of relevant documents and the query’s execution time. Their approach contrasts between two models: inverted index based approach versus scanning the entire document collection.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3409827-3
+<title> [21, 23] describe approaches to query phrases using combinations of inverted, phrase, nextword, and direct indexes. Our work in contrast explores ways to compute an optimal plan of hyper-phrase query execution using dictionaries and indexes over n-grams and skip-grams.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+<top>
+<num> Number: 3409838-1
+<title> Notably, deep LMs such as BERT [3] have achieved state-of-the-art performance in several natural language tasks, including text search [2, 7]. In general, BERT rankers are trained by fine-tuning BERT over search logs, using query and passage as the two input sentences and making relevance prediction conditioned on the output sentence/word representations.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+<top>
+<num> Number: 3371820-1
+<title> However, in the personal search setting [2, 5, 12, 28], where both queries and documents are private, building a representative validation set is a challenge, as it involves either relying upon donated data (which can be limited and biased) or utilizing a validation set that only contains partial information (where any sensitive raw data is not logged).
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3371820-2
+<title> [7, 13] discuss the importance of parameter tuning, and [27] gives more insight into the difficulty of parameter management. Since new features are often added to search systems to improve the performance of retrieval functions, these features often increase the number of parameters which makes it more challenging to find optimal parameter values.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3371820-3
+<title> The majority of work regarding parameter tuning is for black-box systems, where no knowledge of the internal implementation is known. For these approaches, given an unknown function f, we are allowed to evaluate f(x) for any value x ∈ X in an effort to maximize (or minimize) f(x). Typical approaches include Bayesian optimization [11, 17] as well as hybrid methods using random search alongside multi-armed bandit techniques [19]. In particular, [17] discusses how Bayesian optimization can be used for optimizing retrieval systems. These approaches generally assume some prior belief over f and draw samples to get a posterior that better approximates f.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3371820-4
+<title> Offline evaluation is critical for production search systems to sanity check any new experiments and prevent system behavior that may be detrimental to the users’ experience. [14] use previously collected click data in order to perform interleaved comparison methods between various rankers and find that it can be less expensive than running live interleaving experiments. [18] provides a method of doing offline evaluation of different contextual bandit based article recommendations, where a primary motivation is to not hurt user experience by exposing potentially poor-quality algorithms.
+
+<desc> Description:
+
+<narr> Narrative:
+
+</top>
+34098191	[4]	10.1145/3331184.3331347	1
+34098191	[14]	10.1145/3397271.3401104	1
+34098191	[15]	10.1145/3292500.3330677	1
+34098192	[1]	10.1145/3209978.3209985	1
+34098192	[6]	10.1145/3077136.3080832	1
+34098192	[2]	10.1145/3341981.3344218	1
+34098271	[15]	10.1145/3269206.3271745	1
+34098271	[16]	10.1145/3289600.3290618	1
+34098271	[19]	10.1145/2063576.2063587	1
+34098272	[17]	10.1145/1142473.1142504	1
+34098273	[23]	10.1145/1028099.1028102	1
+34098381	[2]	10.1145/3331184.3331303	1
+33718201	[2]	10.1145/3038912.3052615	1
+33718201	[5]	10.1145/2806416.2806471	1
+33718201	[12]	10.1145/3308558.3313706	1
+33718201	[28]	10.1145/3038912.3052648	1
+33718202	[13]	10.1145/956863.956867	1
+33718202	[27]	10.1145/1183614.1183698	1
+33718203	[11]	10.1145/3097983.3098043	1
+33718203	[17]	10.1145/3159652.3159665	1
+33718204	[14]	10.1145/2396761.2398516	1
+33718204	[18]	10.1145/1935826.1935878	1
