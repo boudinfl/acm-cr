@@ -19,30 +19,38 @@ Documents are BibTeX citation files collected from ACM DL using the SIGs IR,
 KDD, CHI, WEB and MOD sponsored conferences and journals as filter. More,
 specifically, the test collection contains the following venues:
 
-Conference venues (years, #docs):
+- Conferences (years, #docs):
+    - ADCS (12-19, #115), AIRS (08-09, #120), AVI (94-20, #1108)
+    - BooksOnline (08-12, #57)
+    - CHI/CHI-EA (82-20, #19446), CHIIR (16-20, #374), CIKM (93-20, #5497),
+      CIR (11, #7), CompSci (13, #8), CSCW (86-19, #2726)
+    - DL (96-00, #244), DocEng (01-20, #971), DTMBIO (08-15, #151)
+    - ESAIR (09-15, #101)
+    - FIRE (12-19, #91)
+    - ICTIR (13-20, #313), IIIX (06-14, #242), IUI (93-20, #2043)
+    - JCDL (01-20, #2183)
+    - KDD (99-20, #3966)
+    - OzCHI (05-20, #1271)
+    - RecSys (07-20, #1279)
+    - SIGIR (78-20, #5251), SIGMOD (75-20, #5378)
+    - UAI (09, #76), UIST (88-19, #2076), UMAP (12-20, #728)
+    - WI (03-19, #1127), WSDM (08-20, #1123), WWW (01-20, #6823)
+- Journals (years, #docs):
+    - ACM Transactions on Intelligent Systems and Technology (TIST) (10-20, #699)
+    - ACM Transactions on Information Systems (TOIS) (83-20, #817)
+    - ACM SIGIR Forum (71-20, #1032)
+    - ACM Computing Surveys (CSUR) (69-20, #2053)
+    - ACM Journal of Data and Information Quality (JDIQ) (09-20, #202)
+    - ACM Transactions on Knowledge Discovery from Data (TKDD) (07-20, #515)
+    - ACM Transactions on Asian and Low-Resource Language Information Processing (TALLIP) (02-20, #490)
+    - IEEE/ACM Transactions on Audio, Speech and Language Processing (TASLP) (14-20, #1237)
+    - Proceedings of the ACM on Human-Computer Interaction (PACMHCI) (17-20, #659)
 
-- ADCS (12-19, #115), AIRS (08-09, #120), AVI (94-20, #1108)
-- BooksOnline (08-12, #57)
-- CHI/CHI-EA (82-20, #19446), CHIIR (16-20, #374), CIKM (93-20, #5497),
-  CIR (11, #7), CompSci (13, #8), CSCW (86-19, #2726)
-- DL (96-00, #244), DocEng (01-20, #971), DTMBIO (08-15, #151)
-- ESAIR (09-15, #101)
-- FIRE (12-19, #91)
-- ICTIR (13-20, #313), IIIX (06-14, #242), IUI (93-20, #2043)
-- JCDL (01-20, #2183)
-- KDD (99-20, #3966)
-- OzCHI (05-20, #1271)
-- RecSys (07-20, #1279)
-- SIGIR (78-20, #5251), SIGMOD (75-20, #5378)
-- UAI (09, #76), UIST (88-19, #2076), UMAP (12-20, #728)
-- WI (03-19, #1127), WSDM (08-20, #1123), WWW (01-20, #6823)
+Statistics of the test collection:
 
-Journals (years, #docs):
-
-- ACM Transactions on Intelligent Systems and Technology (TIST) (10-20, #699)
-- ACM Transactions on Information Systems (ToIS) (83-20, #817)
-- ACM SIGIR Forum (71-20, #1032)
-- ACM Computing Surveys (69-20, #2053)
+| #docs (T+A) | #docs (+K) |   %P |   %R |   %M |   %U | %exp | #kps |
+| -----------:| ----------:| ----:| ----:| ----:| ----:| ----:| ----:|
+|       72799 |      55315 | 54.2 | 11.6 | 18.8 | 15.4 | 13.0 |  4.4 |
 
 ### Queries
 
@@ -56,13 +64,15 @@ He et al. [19] -> [19]
 ```
 ./src/0_create_data.sh
 
-53131 entries with T+A+K
-present: 0.5403410268535919
-absent: 0.45965897314641135
-|-> case 1 (all words): 0.11542222320070421
-|-> case 2 (some words): 0.18819805014164132
-|-> case 3 (no words): 0.15603869980403845
-|-> exp. : 0.1315236158617357
+55315 entries with T+A+K
+present: 0.5419029326860507
+absent: 0.4580970673139533
+|-> case 1 (all words): 0.11563620550602775
+|-> case 2 (some words): 0.18800505876294774
+|-> case 3 (no words): 0.15445580304495474
+|-> exp. : 0.1304352691244849
+avg nb kps : 4.3930145199739945
+
 
 
 ./src/1_create_indexes.sh
