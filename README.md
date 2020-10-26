@@ -1,23 +1,33 @@
-# Citation Recommendation
+# Context-aware Citation Recommendation
 
-## Pre-requisites
+This repository presents the test collection for context-aware (or local)
+citation recommendation constructed for running document retrieval experiments.
+
+## Requirements
+
+### Install Python modules 
 
 ```
-pip install pybtex
-
-# install Science Parse
-# https://github.com/allenai/science-parse/
-brew tap AdoptOpenJDK/openjdk
-brew cask install adoptopenjdk8
-sbt -java-home /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/ cli/assembly
-java -Xmx6g -jar cli/target/scala-2.12/science-parse-cli-assembly-3.0.1.jar ../citation_rec/data/open-access-papers/ -o ../citation_rec/data/open-access-papers/
+pip install -r requirements.txt 
 ```
 
 ## Test collection
 
-### Documents (bibtex citations) collected from ACM DL
+### Documents 
 
-`bibtex` files from SIGs IR/KDD/CHI/WEB/MOD sponsored conferences and journals:
+Documents are BibTeX citation files collected from ACM DL using the SIGs IR,
+KDD, CHI, WEB and MOD sponsored conferences and journals as filter. More,
+specifically, the test collection contains the following venues:
+
+Venues with (years, #bib):
+
+- ADCS (12-19, #115), AIRS (08-09, #120), AVI (94-20, #1108)
+- BooksOnline (08-12, #57)
+- CHI/CHI-EA (82-20, #19446), CHIIR (16-20, #374), CIKM (93-20, #5497),
+  CIR (11, #7), CompSci (13, #8), CSCW (86-19, #2726)
+-
+
+
 
 | Venue        | Years   | #bib   | #(T+A+K) |
 | ------------ |:-------:| ------:|---------:|
@@ -158,9 +168,6 @@ Evaluating output/run.t+a.title.bm25.txt
 recip_rank              all     0.3242
 recall_10               all     0.3606
 ndcg_cut_10             all     0.2893
-
-
-
 ```
 
 
