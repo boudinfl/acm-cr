@@ -1,0 +1,10 @@
+<top>
+<num> Number: 340983801
+<title> Understanding BERT Rankers Under Distillation
+
+<desc> Description:
+Notably, deep LMs such as BERT [3] have achieved state-of-the-art performance in several natural language tasks, including text search [2, 7]. In general, BERT rankers are trained by fine-tuning BERT over search logs, using query and passage as the two input sentences and making relevance prediction conditioned on the output sentence/word representations.
+
+<narr> Narrative:
+
+</top>

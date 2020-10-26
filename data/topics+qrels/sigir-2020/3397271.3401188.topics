@@ -1,0 +1,54 @@
+<top>
+<num> Number: 340118801
+<title> Choppy: Cut Transformer for Ranked List Truncation
+
+<desc> Description:
+While much of the work in information retrieval has been centered around ranking, there is growing interest in methods for ranked list truncation - the problem of determining the appropriate cutoff 𝑘 of candidate results [1, 9]. This problem has garnered attention in fields like legal search [14] and sponsored search [3, 16], where there could be a monetary cost for users looking into an irrelevant tail of documents or where showing too many irrelevant ads could result in ad blindness. The fundamental importance of this problem has led to development of methods that are automatically able to learn 𝑘 in a data-driven fashion [9].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340118802
+<title> Choppy: Cut Transformer for Ranked List Truncation
+
+<desc> Description:
+Across the rich history of information retrieval research, there has been extensive work focused on modeling score distributions of IR systems. Early work in this area primarily focused on fitting parametric probability distributions to score distributions [1, 10]. This is often achieved by making the assumption that the overall distribution can be expressed as a mixture of a relevant and a non-relevant distribution. The expectation-maximization (EM) algorithm is often adopted to learn the parameters.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340118803
+<title> Choppy: Cut Transformer for Ranked List Truncation
+
+<desc> Description:
+There has been considerable recent interest in adopting machine learning based models to optimize and improve the ranked list truncation problem. For instance, cascade-style IR systems [17] seek to achieve a balance between efficiency and effectiveness. Notably, [5] investigates a number of machine learning approaches for learning dynamic cutoffs within cascade-style ranking systems. Another recent study investigated how to leverage bidirectional Long Short-Term Memory (LSTM) models to identify the best position to truncate a given list [9]. This model, BiCut, can be considered the present state-of-the-art approach.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340118804
+<title> Choppy: Cut Transformer for Ranked List Truncation
+
+<desc> Description:
+Our work is closely related to the task of query performance prediction [4]. In this task, the objective is to automatically determine the effectiveness of a given query. This could be leveraged to determine the optimal set of results to the user for any given measure. Methods for query performance prediction include pre-retrieval-based approaches [7], relevance-based approaches [4, 19], and neural approaches [18].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340118805
+<title> Choppy: Cut Transformer for Ranked List Truncation
+
+<desc> Description:
+A system that determines the best number of results to display to users has the potential to benefit a wide number of applications. For example, in sponsored search, displaying too many irrelevant ads to users may cause frustration, resulting in so-called query blindness. This motivated research that investigated whether any ads should be displayed at all [3].
+
+<narr> Narrative:
+
+</top>

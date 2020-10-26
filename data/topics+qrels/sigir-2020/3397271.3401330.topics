@@ -1,0 +1,21 @@
+<top>
+<num> Number: 340133001
+<title> Sentiment-guided Sequential Recommendation
+
+<desc> Description:
+This method illustrates the important role of recurrent neural networks (RNNs) [7] in sequential recommendation. Taking this research as a starting point, subsequent advanced approaches, such as memory-based RNNs [3, 12] and self-attention-based RNNs [5, 11], have taken sequential recommendation technology to a new level. These advanced technologies not only complete the modeling of pure behavior (item) sequences but also fully characterize additional information such as knowledge [3] and features [11] related to items to improve the sequence prediction performance.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340133002
+<title> Sentiment-guided Sequential Recommendation
+
+<desc> Description:
+However, most of the existing models based on sentiment factors [4, 10] focus only on non-sequential recommendations. In other words, they ignore the influence of the temporal sentiment change pattern on the sequence of user behavior; however, this temporal influence sometimes plays a decisive role in generating the final preference.
+
+<narr> Narrative:
+
+</top>

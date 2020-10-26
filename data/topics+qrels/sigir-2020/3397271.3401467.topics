@@ -1,0 +1,87 @@
+<top>
+<num> Number: 340146701
+<title> Deep Reinforcement Learning for Information Retrieval: Fundamentals and Advances 
+
+<desc> Description:
+Efforts have been made on developing supervised or unsupervised methods for these information retrieval mechanisms [21]. However, since the widely use of mobile applications during the recent years, more and more information retrieval services have provided interactive functionality and products [41], these conventional techniques typically face several common challenges.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340146702
+<title> Deep Reinforcement Learning for Information Retrieval: Fundamentals and Advances 
+
+<desc> Description:
+Given the advantages of reinforcement learning, there have been tremendous interests in developing RL based information retrieval techniques [3, 5, 11, 12, 15, 38–40]. While these successes show the promise of DRL, applying learning from game-based DRL to information retrieval is fraught with unique challenges, including, but not limited to, extreme data sparsity, power-law distributed samples, and large state and action spaces.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340146703
+<title> Deep Reinforcement Learning for Information Retrieval: Fundamentals and Advances 
+
+<desc> Description:
+For relevance ranking, conventional methods typically optimize the evaluation metric before a predefined position (e.g. NDCG@K), which ignores the information after rank K. [31] is proposed to address this problem by using the metrics calculated upon all the positions as reward function, and the model parameters are be optimized via maximizing the accumulated rewards for all decisions.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340146704
+<title> Deep Reinforcement Learning for Information Retrieval: Fundamentals and Advances 
+
+<desc> Description:
+[34] formalized diverse ranking as a continuous state Markov decision process, and policy gradient algorithm of REINFORCE is leveraged to maximize the accumulated long-term rewards in terms of the diversity metric.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340146705
+<title> Deep Reinforcement Learning for Information Retrieval: Fundamentals and Advances 
+
+<desc> Description:
+Recommender systems aim to learn users’ preferences based on their feedback and suggest items to match their preferences. User’s preference is assumed to be static in traditional recommendation algorithms such as collaborative filtering, which is usually not true in real-world recommender systems where users’ preferences are highly dynamic. Bandit methods [33, 37] usually utilizes a variable reward function to delineate the dynamic nature of the environment (reward distributions). Another solution is to introduce the MDP setting [6, 9, 42], where state represents user’s preference and state transition depicts the dynamic nature of user’s preference over time. In [39], a user’s dynamic preference (state) is learned from her browsing history and feedback. Each time a user provides feedback (skip, click or purchase) to an item, the recommender system will update the state to capture user’s new preferences.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340146706
+<title> Deep Reinforcement Learning for Information Retrieval: Fundamentals and Advances 
+
+<desc> Description:
+Online advertising is to suggest the right ads to the right users so as to maximize the click-through rate (CTR) or return on investment (ROI) of the advertising campaign, which consists of two main marketing strategy, i.e., guaranteed delivery (GD) and real-time bidding (RTB). In guaranteed delivery setting, ads that grouped into campaigns are charged on a pay-per-campaign basis for the pre-specified number of deliveries [23].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340146707
+<title> Deep Reinforcement Learning for Information Retrieval: Fundamentals and Advances 
+
+<desc> Description:
+For example, a model-based RL framework is proposed in RTB setting [3], where the state value is approximated by neural network to address the scalability problem of large auction amounts and the limited budget.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340146708
+<title> Deep Reinforcement Learning for Information Retrieval: Fundamentals and Advances 
+
+<desc> Description:
+In [12], a multi-agent bidding model is proposed to jointly consider all the advertisers’ biddings in the system, and a clustering approach is introduced to deal with a large number of advertisers.
+
+<narr> Narrative:
+
+</top>
