@@ -3,7 +3,7 @@ for EXP in data/docs/t+a*
 do
     if [[ ! -d "data/indexes/lucene-index.${EXP##*/}" ]]
     then
-        sh ../ir-using-kg/anserini/target/appassembler/bin/IndexCollection \
+        sh anserini/target/appassembler/bin/IndexCollection \
             -collection TrecCollection \
             -threads 2 \
             -input ${EXP}/ \
