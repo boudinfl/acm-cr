@@ -4,14 +4,14 @@
 mkdir -p data/keyphrases/
 if [[ ! -f "data/keyphrases/acm-dl.gold.all.json.gz" ]]
     then
-        python src/bib_to_gold.py --directory data/acm-dl/ --output data/keyphrases/acm-dl.gold
+        python3 src/bib_to_gold.py --directory data/acm-dl/ --output data/keyphrases/acm-dl.gold
 fi
 
 # produce T+A documents
 mkdir -p data/docs/t+a/
 if [[ ! -f "data/docs/t+a/acm-dl.trec.gz" ]]
     then
-        python src/bib_to_trec.py \
+        python3 src/bib_to_trec.py \
             --directory data/acm-dl/ \
             --output data/docs/t+a/acm-dl.trec.gz \
             --blacklist data/topics+qrels/blacklist.txt
@@ -21,7 +21,7 @@ fi
 mkdir -p data/docs/t+a+k/
 if [[ ! -f "data/docs/t+a+k/acm-dl.trec.gz" ]]
     then
-        python src/bib_to_trec.py \
+        python3 src/bib_to_trec.py \
                --directory data/acm-dl/ \
                --output data/docs/t+a+k/acm-dl.trec.gz \
                --path_to_keyphrases data/keyphrases/acm-dl.gold.all.json.gz \
@@ -37,7 +37,7 @@ do
     do
         if [[ ! -f "data/docs/${EXP}/acm-dl.trec.gz" ]]
         then
-            python src/bib_to_trec.py \
+            python3 src/bib_to_trec.py \
                    --directory data/acm-dl/ \
                    --output data/docs/${EXP}/acm-dl.trec.gz \
                    --path_to_keyphrases data/keyphrases/acm-dl.gold.${VARIANT}.json.gz \

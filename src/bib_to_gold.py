@@ -185,9 +185,9 @@ with gzip.open(args.output + '.abs_c2+abs_c3.json.gz', 'wt') as o:
 # print out some stats
 print("present: {}".format(sum_ratio_present_kps/nb_documents_with_kps))
 print("absent: {}".format(sum_ratio_absent_kps/nb_documents_with_kps))
-print("|-> case 1 (all words): {}".format(sum_ratio_absent_kps_case_1/nb_documents_with_kps))
-print("|-> case 2 (some words): {}".format(sum_ratio_absent_kps_case_2/nb_documents_with_kps))
-print("|-> case 3 (no words): {}".format(sum_ratio_absent_kps_case_3/nb_documents_with_kps))
+print("|-> c1/Reordored (i.e. all words): {}".format(sum_ratio_absent_kps_case_1/nb_documents_with_kps))
+print("|-> c2/Mixed (i.e. some words): {}".format(sum_ratio_absent_kps_case_2/nb_documents_with_kps))
+print("|-> c3/Unseen (i.e. no words): {}".format(sum_ratio_absent_kps_case_3/nb_documents_with_kps))
 print("|-> exp. : {}".format(exp_ratio_case_2_and_3/nb_documents_with_kps))
 print("avg nb kps : {}".format(nb_kps/nb_documents_with_kps))
 
