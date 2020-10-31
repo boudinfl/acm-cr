@@ -1,0 +1,1473 @@
+@inproceedings{10.5555/1287369.1287370,
+author = {Bosworth, Adam},
+title = {Data Routing Rather than Databases: The Meaning of the next Wave of the Web Revolution to Data Management},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {What is going to be as important in the next 20 years as relational databases were in the prior 20 years is the management of self-describing extensible messages. The net is undergoing a profound change as it moves from an entirely pull-oriented model into a push model. This latter model is far more biological in nature with an increasing amount of information flowing asynchronously through the system to form an InformationBus. The key challenges for the next 20 years will be storing, routing, querying, filtering, managing, and interacting with this bus in a manner that doesn't lead to total systems degradation. Predictive intelligent filtering and rules engines will become more important than querying.Driving factors for this revolution will be the need for push for portable devices due to their poor latency and intermittent communication, an increasing demand for timely information on fully connected devices, a huge rise in application to application integration through asynchronous messaging based on web services and a concomitant requirement for an entirely new type of message broker, and an increasing desire for intelligent agents to cope with information overload as all information becomes available all the time. The key enabling technology will be XML messages and the various technologies that will develop for handling XML ranging from transformation to compression to indexing to storage to programming languages.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {.1},
+numpages = {1},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287371,
+author = {Date, C. J.},
+title = {Foundation Matters},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {This talk is meant as a wake-up call ... The foundation of the database field is, of course, the relational model. Sad to say, however, there are some in the database community--certainly in industry, and to some extent in academia also--who do not seem to be as familiar with that model as they ought to be; there are others who seem to think it is not very interesting or relevant to the day-today business of earning a living; and there are still others who seem to think all of the foundation-level problems have been solved. Indeed, there seems to be a widespread feeling that "the world has moved on," so to speak, and the relational model as such is somehow pass\'{e}. In my opinion, nothing could be further from the truth! In this talk, I want to sketch the results of some of my own investigations into database foundations over the past twenty years or so; my aim is to convey some of the excitement and abiding interest that is still to be found in those investigations, with a view--I hope--to inspiring others in the field to become involved in such activities.First of all, almost all of the ideas I will be covering either are part of, or else build on top of, The Third Manifesto [1]. The Third Manifesto is a detailed proposal for the future direction of data and DBMSs. Like Codd's original papers on the relational model, it can be seen as an abstract blueprint for the design of a DBMS and the language interface to such a DBMS. Among many other things: • It shows that the relational model--and I do mean the relational model, not SQL--is a necessary and sufficient foundation on which to build "object/relational" DBMSs (sometimes called universal servers). • It also points out certain blunders that can unfortunately be observed in some of today's products (not to mention the SQL:1999 standard). • And it explores in depth the idea that a relational database, along with the relational operators, is really a logical system and shows how that idea leads to a solution to the view updating problem, among other things.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {.2},
+numpages = {2},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287372,
+author = {Imielinski, Tomasz and Nath, Badri},
+title = {Wireless Graffiti: Data, Data Everywhere},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {In this paper, we take a retrospective look at the problem of querying and updating location dependent data in massively distributed mobile environments. Looking forward, we paint our vision of the future dataspace - physical space enhanced with embedded digital information. Finally we describe a few of the applications enabled by dataspace due to the availability of large scale ad-hoc sensor networks, short-range wireless communications, and fine-grain location information.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {9–19},
+numpages = {11},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287373,
+author = {Weikum, Gerhard and Moenkeberg, Axel and Hasse, Christof and Zabback, Peter},
+title = {Self-Tuning Database Technology and Information Services: From Wishful Thinking to Viable Engineering},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {Automatic tuning has been an elusive goal for database technology for a long time and is becoming a pressing issue for modern E-services. This paper reviews and assesses the advances that have been made on this important subject during the last ten years. A major conclusion is that self-tuning database technology should be based on the paradigm of a feedback control loop, but is also bound to build on mathematical models and their proper engineering into system components. In addition, the composition of information services into truly self-tuning, higher-level E-services may require a radical departure towards simpler, highly componentized software architectures with narrow interfaces between RISC-style "autonomic" components.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {20–31},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287374,
+author = {Cosley, Dan and Lawrence, Steve and Pennock, David M.},
+title = {REFEREE: An Open Framework for Practical Testing of Recommender Systems Using ResearchIndex},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {Automated recommendation (e.g., personalized product recommendation on an ecommerce web site) is an increasingly valuable service associated with many databases--typically online retail catalogs and web logs. Currently, a major obstacle for evaluating recommendation algorithms is the lack of any standard, public, real-world testbed appropriate for the task. In an attempt to fill this gap, we have created REFEREE, a framework for building recommender systems using ResearchIndex--a huge online digital library of computer science research papers--so that anyone in the research community can develop, deploy, and evaluate recommender systems relatively easily and quickly. Research Index is in many ways ideal for evaluating recommender systems, especially so-called hybrid recommenders that combine information filtering and collaborative filtering techniques. The documents in the database are associated with a wealth of content information (author, title, abstract, full text) and collaborative information (user behaviors), as well as linkage information via the citation structure. Our framework supports more realistic evaluation metrics that assess user buy-in directly, rather than resorting to offline metrics like prediction accuracy that may have little to do with end user utility. The sheer scale of ResearchIndex (over 500,000 documents with thousands of user accesses per hour) will force algorithm designers to make real-world trade-offs that consider performance, not just accuracy. We present our own tradeoff decisions in building an example hybrid recommender called PD-Live. The algorithm uses content-based similarity information to select a set of documents from which to recommend, and collaborative information to rank the documents. PD-Live performs reasonably well compared to other recommenders in ResearchIndex.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {35–46},
+numpages = {12},
+keywords = {researchindex, citeseer, content, information retrieval, recommender systems, digital libraries, social filtering, collaborative filtering, personalization},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287375,
+author = {Ashwin, T. V. and Gupta, Rahul and Ghosal, Sugata},
+title = {Adaptable Similarity Search Using Non-Relevant Information},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {Many modern database applications require content-based similarity search capability in numeric attribute space. Further, users' notion of similarity varies between search sessions. Therefore online techniques for adaptively refining the similarity metric based on relevance feedback from the user are necessary. Existing methods use retrieved items marked relevant by the user to refine the similarity metric, without taking into account the information about non-relevant (or unsatisfactory) items. Consequently items in database close to non-relevant ones continue to be retrieved in further iterations. In this paper a robust technique is proposed to incorporate non-relevant information to efficiently discover the feasible search region. A decision surface is determined to split the attribute space into relevant and nonrelevant regions. The decision surface is composed of hyperplanes, each of which is normal to the minimum distance vector from a nonrelevant point to the convex hull of the relevant points. A similarity metric, estimated using the relevant objects is used to rank and retrieve database objects in the relevant region. Experiments on simulated and benchmark datasets demonstrate robustness and superior performance of the proposed technique over existing adaptive similarity search techniques.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {47–58},
+numpages = {12},
+keywords = {ellipsoid query processing, database navigation, database browsing, non-relevant judgement, information retrieval, relevance feedback},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287376,
+author = {\"{O}zsoyoundefinedlu, G. and Al-Hamdani, A. and Alting\"{o}vde, I. S. and \"{O}zel, S. A. and Ulusoy, \"{O}. and \"{O}zsoyoundefinedlu, Z. M.},
+title = {Sideway Value Algebra for Object-Relational Databases},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {Using functions in various forms, recent database publications have assigned "scores", "preference values", and "probabilistic values" to object-relational database tuples. We generalize these functions and their evaluations as sideway functions and sideway values, respectively. Sideway values represent the advices (recommendations) of data creators or preferences of users, and are employed for the purposes of ranking query outputs and limiting output sizes during query evaluation as well as for application-dependent querying.This paper introduces SQL extensions and a sideway value algebra (SVA) for object-relational databases. SVA operators modify and propagate sideway values of base relations in automated and generic ways. We define the SVA join, and a recursive SVA closure operator, called TClosure. Output tuples of the SVA join operator are assigned sideway values on the basis of the sideway values and similarities of joined tuples, and the operator returns the highest ranking tuples. TClosure operator recursively expands a given set of objects (as tuples) according to a given regular expression of relationship types, and derives sideway values for the set of newly reached objects.We present evaluation algorithms for SVA join and TClosure operators, and report experimental results on the performance of the operators using the DBLP Bibliography data and synthetic data.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {59–70},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287377,
+author = {Conrad, Jack G. and Guo, Xi S. and Jackson, Peter and Meziou, Monem},
+title = {Database Selection Using Actual Physical and Acquired Logical Collection Resources in a Massive Domain-Specific Operational Environment},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {The continued growth of very large data environments such as Westlaw, Dialog, and the World Wide Web, increases the importance of effective and efficient database selection and searching. Recent research has focused on autonomous and automatic collection selection, searching, and results merging in distributed environments. These studies often rely on TREC data and queries for experimentation. We have extended this work to West's on-line production environment where thousands of legal, financial and news databases are accessed by up to a quarter-million professional users each day. Using the WIN natural language search engine, a cousin to UMass's INQUERY, along with a collection retrieval inference network (CORI) to provide database scoring, we examine the effect that a set of optimized parameters has on database selection performance. We also compare current language modeling techniques to this approach. Traditionally, West's information has been structured over 15,000 online databases, representing roughly 6 terabytes of textual data. Given the expense of running global searches in this environment, it is usually not practical to perform full document retrieval over the entire collection. It is therefore necessary to create a new infrastructure to support automatic database selection in the service of broader searching. In this research, we represent our operational environment in two distinct ways. First, we characterize the underlying physical databases that serve as a foundation for the entire Westlaw search system. Second, we create a rearchitected set of logical document collections that corresponds to classes of high level organizational concepts such as jurisdiction, practice area, and document-type. Keeping the end-user in mind, we focus on performance issues relating to optimal database selection, where domain experts have provided complete pre-hoc relevance judgments for collections characterized under each of our physical and logical database models.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {71–82},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287378,
+author = {Park, Chang-Won and Min, Jun-Ki and Chung, Chin-Wan},
+title = {Structural Function Inlining Technique for Structurally Recursive XML Queries},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {Structurally recursive XML queries are an important query class that follows the structure of XML data. At present, it is difficult for XQuery to type and optimize structurally recursive queries because of polymorphic recursive functions involved in the queries.In this paper, we propose a new technique called structural function inlining which inlines recursive functions used in a query by making good use of available type information. Based on the technique, we develop a new approach to typing and optimizing structurally recursive queries. The new approach yields a more precise result type for a query. Furthermore, it produces an optimal algebraic expression for the query with respect to the type information. When a structurally recursive query is applied to non-recursive XML data, our approach translates the query into a finitely nested iterations.We conducted several experiments with commonly used real-life and synthetic datasets. The experimental results show that the number of node lookups by our approach is on the average 3.7 times and up to 279.8 times smaller than that by the XQuery core's current approach in evaluating structurally recursive queries.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {83–94},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287379,
+author = {Gottlob, Georg and Koch, Christoph and Pichler, Reinhard},
+title = {Efficient Algorithms for Processing XPath Queries},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {Our experimental analysis of several popular XPath processors reveals a striking fact: Query evaluation in each of the systems requires time exponential in the size of queries in the worst case. We show that XPath can be processed much more efficiently, and propose main-memory algorithms for this problem with polynomial-time combined query evaluation complexity. Moreover, we present two fragments of XPath for which linear-time query processing algorithms exist.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {95–106},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287380,
+author = {Moerkotte, Guido},
+title = {Incorporating XSL Processing into Database Engines},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {The two observations that 1) many XML documents are stored in a database or generated from data stored in a database and 2) processing these documents with XSL stylesheet processors is an important, often recurring task justify a closer look at the current situation. Typically, the XML document is retrieved or constructed from the database, exported, parsed, and then processed by a special XSL processor. This cumbersome process clearly sets the goal to incorporate XSL stylesheet processing into the database engine.We describe one way to reach this goal by translating XSL stylesheets into algebraic expressions. Further, we present algorithms to optimize the template rule selection process and the algebraic expression resulting from the translation. Along the way, we present several undecidability results hinting at the complexity of the problem on hand.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {107–118},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287381,
+author = {Bohannon, P. and Ganguly, S. and Korth, H. F. and Narayan, P. P. S. and Shenoy, P.},
+title = {Optimizing View Queries in ROLEX to Support Navigable Result Trees},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {An increasing number of applications use XML data published from relational databases. For speed and convenience, such applications routinely cache this XML data locally and access it through standard navigational interfaces such as DOM, sacrificing the consistency and integrity guarantees provided by a DBMS for speed. The ROLEX system is being built to extend the capabilities of relational database systems to deliver fast, consistent and navigable XML views of relational data to an application via a virtual DOM interface. This interface translates navigation operations on a DOM tree into execution-plan actions, allowing a spectrum of possibilities for lazy materialization. The ROLEX query optimizer uses a characterization of the navigation behavior of an application, and optimizes view queries to minimize the expected cost of that navigation. This paper presents the architecture of ROLEX, including its model of query execution and the query optimizer. We demonstrate with a performance study the advantages of the ROLEX approach and the importance of optimizing query execution for navigation.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {119–130},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287382,
+author = {Bouganim, Luc and Pucheral, Philippe},
+title = {Chip-Secured Data Access: Confidential Data on Untrusted Servers},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {The democratization of ubiquitous computing (access data anywhere, anytime, anyhow), the increasing connection of corporate databases to the Internet and the today's natural resort to Web-hosting companies strongly emphasize the need for data confidentiality. Database servers arouse user's suspicion because no one can fully trust traditional security mechanisms against more and more frequent and malicious attacks and no one can be fully confident on an invisible DBA administering confidential data. This paper gives an in-depth analysis of existing security solutions and concludes on the intrinsic weakness of the traditional server-based approach to preserve data confidentiality. With this statement in mind, we propose a solution called C-SDA (Chip-Secured Data Access), which enforces data confidentiality and controls personal privileges thanks to a client-based security component acting as a mediator between a client and an encrypted database. This component is embedded in a smartcard to prevent any tampering to occur. This cooperation of hardware and software security components constitutes a strong guarantee against attacks threatening personal as well as business data.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {131–142},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287383,
+author = {Agrawal, Rakesh and Kiernan, Jerry and Srikant, Ramakrishnan and Xu, Yirong},
+title = {Hippocratic Databases},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {The Hippocratic Oath has guided the conduct of physicians for centuries. Inspired by its tenet of preserving privacy, we argue that future database systems must include responsibility for the privacy of data they manage as a founding tenet. We enunciate the key privacy principles for such Hippocratic database systems. We propose a strawman design for Hippocratic databases, identify the technical challenges and problems in designing such databases, and suggest some approaches that may lead to solutions. Our hope is that this paper will serve to catalyze a fruitful and exciting direction for future database research.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {143–154},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287384,
+author = {Agrawal, Rakesh and Kiernan, Jerry},
+title = {Watermarking Relational Databases},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {We enunciate the need for watermarking database relations to deter their piracy, identify the unique characteristics of relational data which pose new challenges for watermarking, and provide desirable properties of a watermarking system for relational data. A watermark can be applied to any database relation having attributes which are such that changes in a few of their values do not affect the applications.We then present an effective watermarking technique geared for relational data. This technique ensures that some bit positions of some of the attributes of some of the tuples contain specific values. The tuples, attributes within a tuple, bit positions in an attribute, and specific bit values are all algorithmically determined under the control of a private key known only to the owner of the data. This bit pattern constitutes the watermark. Only if one has access to the private key can the watermark be detected with high probability. Detecting the watermark neither requires access to the original data nor the watermark. The watermark can be detected even in a small subset of a watermarked relation as long as the sample contains some of the marks.Our extensive analysis shows that the proposed technique is robust against various forms of malicious attacks and updates to the data. Using an implementation running on DB2, we also show that the performance of the algorithms allows for their use in real world applications.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {155–166},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287385,
+author = {Hulgeri, Arvind and Sudarshan, S.},
+title = {Parametric Query Optimization for Linear and Piecewise Linear Cost Functions},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {The cost of a query plan depends on many parameters, such as predicate selectivities and available memory, whose values may not be known at optimization time. Parametric query optimization (PQO) optimizes a query into a number of candidate plans, each optimal for some region of the parameter space.We first propose a solution for the PQO problem for the case when the cost functions are linear in the given parameters. This solution is minimally intrusive in the sense that an existing query optimizer can be used with minor modifications: the solution invokes the conventional query optimizer multiple times, with different parameter values.We then propose a solution for the PQO problem for the case when the cost functions are piecewise-linear in the given parameters. The solution is based on modification of an existing query optimizer. This solution is quite general, since arbitrary cost functions can be approximated to piecewise linear form. Both the solutions work for an arbitrary number of parameters.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {167–178},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287386,
+author = {Ghosh, Antara and Parikh, Jignashu and Sengar, Vibhuti S. and Haritsa, Jayant R.},
+title = {Plan Selection Based on Query Clustering},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {Query optimization is a computationally intensive process, especially for complex queries. We present here a tool, called PLASTIC, that can be used by query optimizers to amortize the optimization cost. Our scheme groups similar queries into clusters and uses the optimizer-generated plan for the cluster representative to execute all future queries assigned to the cluster. Query similarity is evaluated based on a comparison of query structures and the associated table schemas and statistics, and a classifier is employed for efficient cluster assignments. Experiments with a variety of queries on a commercial optimizer show that PLASTIC predicts the correct plan choice in most cases, thereby providing significantly improved query optimization times. Further, when errors are made, the additional execution cost incurred due to the sub-optimal plan choices is marginal.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {179–190},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287387,
+author = {Manegold, Stefan and Boncz, Peter and Kersten, Martin L.},
+title = {Generic Database Cost Models for Hierarchical Memory Systems},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {Accurate prediction of operator execution time is a prerequisite for database query optimization. Although extensively studied for conventional disk-based DBMSs, cost modeling in main-memory DBMSs is still an open issue. Recent database research has demonstrated that memory access is more and more becoming a significant-- if not the major--cost component of database operations. If used properly, fast but small cache memories--usually organized in cascading hierarchy between CPU and main memory--can help to reduce memory access costs. However, they make the cost estimation problem more complex.In this article, we propose a generic technique to create accurate cost functions for database operations. We identify a few basic memory access patterns and provide cost functions that estimate their access costs for each level of the memory hierarchy. The cost functions are parameterized to accommodate various hardware characteristics appropriately. Combining the basic patterns, we can describe the memory access patterns of database operations. The cost functions of database operations can automatically be derived by combining the basic patterns' cost functions accordingly.To validate our approach, we performed experiments using our DBMS prototype Monet. The results presented here confirm the accuracy of our cost models for different operations.Aside from being useful for query optimization, our models provide insight to tune algorithms not only in a main-memory DBMS, but also in a disk-based DBMS with a large main-memory buffer cache.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {191–202},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287388,
+author = {Chandrasekaran, Sirish and Franklin, Michael J.},
+title = {Streaming Queries over Streaming Data},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {Recent work on querying data streams has focused on systems where newly arriving data is processed and continuously streamed to the user in real-time. In many emerging applications, however, ad hoc queries and/or intermittent connectivity also require the processing of data that arrives prior to query submission or during a period of disconnection. For such applications, we have developed PSoup, a system that combines the processing of ad-hoc and continuous queries by treating data and queries symmetrically, allowing new queries to be applied to old data and new data to be applied to old queries. PSoup also supports intermittent connectivity by separating the computation of query results from the delivery of those results. PSoup builds on adaptive query processing techniques developed in the Telegraph project at UC Berkeley. In this paper, we describe PSoup and present experiments that demonstrate the effectiveness of our approach.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {203–214},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287389,
+author = {Carney, Don and \c{C}etintemel, Uundefinedur and Cherniack, Mitch and Convey, Christian and Lee, Sangdon and Seidman, Greg and Stonebraker, Michael and Tatbul, Nesime and Zdonik, Stan},
+title = {Monitoring Streams: A New Class of Data Management Applications},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {This paper introduces monitoring applications, which we will show differ substantially from conventional business data processing. The fact that a software system must process and react to continual inputs from many sources (e.g., sensors) rather than from human operators requires one to rethink the fundamental architecture of a DBMS for this application area. In this paper, we present Aurora, a new DBMS that is currently under construction at Brandeis University, Brown University, and M.I.T. We describe the basic system architecture, a stream-oriented set of operators, optimization tactics, and support for real-time operation.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {215–226},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287390,
+author = {Lud\"{a}scher, Bertram and Mukhopadhyay, Pratik and Papakonstantinou, Yannis},
+title = {A Transducer-Based XML Query Processor},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {The XML Stream Machine (XSM) system is a novel XQuery processing paradigm that is tuned to the efficient processing of sequentially accessed XML data (streams). The system compiles a given XQuery into an XSM, which is an XML stream transducer, i.e., an abstract device that takes as input one or more XML data streams and produces one or more output streams, potentially using internal buffers. We present a systematic way to translate XQueries into efficient XSMs: First the XQuery is translated into a network of XSMs that correspond to the basic operators of the XQuery language and exchange streams. The network is reduced to a single XSM by repeated application of an XSM composition operation that is optimized to reduce the number of tests and actions that the XSM performs as well as the number of intermediate buffers that it uses. Finally, the optimized XSM is compiled into a C program. First empirical results illustrate the performance benefits of the XSM-based processor.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {227–238},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287391,
+author = {Kaushik, Raghav and Bohannon, Philip and Naughton, Jeffrey F. and Shenoy, Pradeep},
+title = {Updates for Structure Indexes},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {The problem of indexing path queries in semistructured/XML databases has received considerable attention recently, and several proposals have advocated the use of structure indexes as supporting data structures for this problem. In this paper, we investigate efficient update algorithms for structure indexes. We study two kinds of updates -- the addition of a subgraph, intended to represent the addition of a new file to the database, and the addition of an edge, to represent a small incremental change. We focus on three instances of structure indexes that are based on the notion of graph bisimilarity. We propose algorithms to update the bisimulation partition for both kinds of updates and show how they extend to these indexes. Our experiments on two real world data sets show that our update algorithms are an order of magnitude faster than dropping and rebuilding the index. To the best of our knowledge, no previous work has addressed updates for structure indexes based on graph bisimilarity.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {239–250},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287392,
+author = {Chan, Chee-Yong and Garofalakis, Minos and Rastogi, Rajeev},
+title = {RE-Tree: An Efficient Index Structure for Regular Expressions},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {Due to their expressive power, Regular Expressions (REs) are quickly becoming an integral part of language specifications for several important application scenarios. Many of these applications have to manage huge databases of RE specifications and need to provide an effective matching mechanism that, given an input string, quickly identifies the REs in the database that match it. In this paper, we propose the RE-tree, a novel index structure for large databases of RE specifications. Given an input query string, the RE-tree speeds up the retrieval of matching REs by focusing the search and comparing the input string with only a small fraction of REs in the database. Even though the RE-tree is similar in spirit to other tree-based structures that have been proposed for indexing multi-dimensional data, RE indexing is significantly more challenging since REs typically represent infinite sets of strings with no well-defined notion of spatial locality. To address these new challenges, our RE-tree index structure relies on novel measures for comparing the relative sizes of infinite regular languages. We also propose innovative solutions for the various RE-tree operations, including the effective splitting of RE-tree nodes and computing a "tight" bounding RE for a collection of REs. Finally, we demonstrate how sampling-based approximation algorithms can be used to significantly speed up the performance of RE-tree operations. Our experimental results with synthetic data sets indicate that the REtree is very effective in pruning the search space and easily outperforms naive sequential search approaches.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {251–262},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287393,
+author = {Chien, Shu-Yao and Vagena, Zografoula and Zhang, Donghui and Tsotras, Vassilis J. and Zaniolo, Carlo},
+title = {Efficient Structural Joins on Indexed XML Documents},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {Queries on XML documents typically combine selections on element contents, and, via path expressions, the structural relationships between tagged elements. Structural joins are used to find all pairs of elements satisfying the primitive structural relationships specified in the query, namely, parent-child and ancestor-descendant relationships. Efficient support for structural joins is thus the key to efficient implementations of XML queries. Recently proposed node numbering schemes enable the capturing of the XML document structure using traditional indices (such as B+-trees or R-trees). This paper proposes efficient structural join algorithms in the presence of tag indices. We first concentrate on using B+- trees and show how to expedite a structural join by avoiding collections of elements that do not participate in the join. We then introduce an enhancement (based on sibling pointers) that further improves performance. Such sibling pointers are easily implemented and dynamically maintainable. We also present a structural join algorithm that utilizes R-trees. An extensive experimental comparison shows that the B+-tree structural joins are more robust. Furthermore, they provide drastic improvement gains over the current state of the art.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {263–274},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287394,
+author = {Kossmann, Donald and Ramsak, Frank and Rost, Steffen},
+title = {Shooting Stars in the Sky: An Online Algorithm for Skyline Queries},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {Skyline queries ask for a set of interesting points from a potentially large set of data points. If we are traveling, for instance, a restaurant might be interesting if there is no other restaurant which is nearer, cheaper, and has better food. Skyline queries retrieve all such interesting restaurants so that the user can choose the most promising one. In this paper, we present a new online algorithm that computes the Skyline. Unlike most existing algorithms that compute the Skyline in a batch, this algorithm returns the first results immediately, produces more and more results continuously, and allows the user to give preferences during the running time of the algorithm so that the user can control what kind of results are produced next (e.g., rather cheap or rather near restaurants).},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {275–286},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287395,
+author = {Tao, Yufei and Papadias, Dimitris and Shen, Qiongmao},
+title = {Continuous Nearest Neighbor Search},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {A continuous nearest neighbor query retrieves the nearest
+neighbor (NN) of every point on a line segment (e.g., "find all my
+nearest gas stations during my route from points to point
+e. The result contains a set of (point, interval) tuples,
+such that point is the NN of all points in the corresponding
+interval. Existing methods for continuous nearest neighbor search
+are based on the repetitive application of simple NN algorithms,
+which incurs significant overhead. In this paper we propose
+techniques that solve the problem by performing a single query for
+the whole input segment. As a result the cost, depending on the
+query and dataset characteristics, may drop by orders of magnitude.
+In addition, we propose analytical models for the expected size of
+the output, as well as, the cost of query processing, and extend
+out techniques to several variations of the problem.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {287–298},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287396,
+author = {Dittrich, Jens-Peter and Seeger, Bernhard and Taylor, David Scot and Widmayer, Peter},
+title = {Progressive Merge Join: A Generic and Non-Blocking Sort-Based Join Algorithm},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {Many state-of-the-art join-techniques require the input relations to be almost fully sorted before the actual join processing starts. Thus, these techniques start producing first results only after a considerable time period has passed. This blocking behaviour is a serious problem when consequent operators have to stop processing, in order to wait for first results of the join. Furthermore, this behaviour is not acceptable if the result of the join is visualized or/ and requires user interaction. These are typical scenarios for data mining applications. The, off-time' of existing techniques even increases with growing problem sizes.In this paper, we propose a generic technique called Progressive Merge Join (PMJ) that eliminates the blocking behaviour of sort-based join algorithms. The basic idea behind PMJ is to have the join produce results, as early as the external mergesort generates initial runs. Hence, it is possible for PMJ to return first results very early. This paper provides the basic algorithms and the generic framework of PMJ, as well as use-cases for different types of joins. Moreover, we provide a generic online selectivity estimator with probabilistic quality guarantees. For similarity joins in particular, first non-blocking join algorithms are derived from applying PMJ to the state-of-the-art techniques.We have implemented PMJ as part of an object-relational cursor algebra. A set of experiments shows that a substantial amount of results are produced, even before the input relationas would have been sorted. We observed only a moderate increase in the total runtime compared to the blocking counterparts.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {299–310},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287397,
+author = {Kie\ss{}ling, Werner},
+title = {Foundations of Preferences in Database Systems},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {Personalization of e-services poses new challenges to database technology, demanding a powerful and flexible modeling technique for complex preferences. Preference queries have to be answered cooperatively by treating preferences as soft constraints, attempting a best possible match-making. We propose a strict partial order semantics for preferences, which closely matches people's intuition. A variety of natural and of sophisticated preferences are covered by this model. We show how to inductively construct complex preferences by means of various preference constructors. This model is the key to a new discipline called preference engineering and to a preference algebra. Given the Best-Matches-Only (BMO) query model we investigate how complex preference queries can be decomposed into simpler ones, preparing the ground for divide &amp; conquer algorithms. Standard SQL and XPATH can be extended seamlessly by such preferences (presented in detail in the companion paper [15]). We believe that this model is appropriate to extend database technology towards effective support of personalization.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {311–322},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287398,
+author = {Chen, Yixin and Dong, Guozhu and Han, Jiawei and Wah, Benjamin W. and Wang, Jianyong},
+title = {Multi-Dimensional Regression Analysis of Time-Series Data Streams},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {Real-time production systems and other dynamic environments often generate tremendous (potentially infinite) amount of stream data; the volume of data is too huge to be stored on disks or scanned multiple times. Can we perform on-line, multi-dimensional analysis and data mining of such data to alert people about dramatic changes of situations and to initiate timely, high-quality responses? This is a challenging task.In this paper, we investigate methods for on-line, multi-dimensional regression analysis of time-series stream data, with the following contributions: (1) our analysis shows that only a small number of compressed regression measures instead of the complete stream of data need to be registered for multi-dimensional linear regression analysis, (2) to facilitate on-line stream data analysis, a partially materialized data cube model, with regression as measure, and a tilt time frame as its time dimension, is proposed to minimize the amount of data to be retained in memory or stored on disks, and (3) an exception-guided drilling approach is developed for on-line, multi-dimensional exception-based regression analysis. Based on this design, algorithms are proposed for efficient analysis of time-series data streams. Our performance study compares the proposed algorithms and identifies the most memory- and time- efficient one for multi-dimensional stream data analysis.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {323–334},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287399,
+author = {Cormode, Graham and Datar, Mayur and Indyk, Piotr and Muthukrishnan, S.},
+title = {Comparing Data Streams Using Hamming Norms (How to Zero In)},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {Massive data streams are now fundamental to many data processing applications. For example, Internet routers produce large scale diagnostic data streams. Such streams are rarely stored in traditional databases, and instead must be processed "on the fly" as they are produced. Similarly, sensor networks produce multiple data streams of observations from their sensors. There is growing focus on manipulating data streams, and hence, there is a need to identify basic operations of interest in managing data streams, and to support them efficiently.We propose computation of the Hamming norm as a basic operation of interest. The Hamming norm formalises ideas that are used throughout data processing. When applied to a single stream, the Hamming norm gives the number of distinct items that are present in that data stream, which is a statistic of great interest in databases. When applied to a pair of streams, the Hamming norm gives an important measure of (dis)similarity: the number of unequal item counts in the two streams. Hamming norms have many uses in comparing data streams.We present a novel approximation technique for estimating the Hamming norm for massive data streams; this relies on what we call the "l0 sketch" and we prove its accuracy. We test our approximation method on a large quantity of synthetic and real stream data, and show that the estimation is accurate to within a few percentage points.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {335–345},
+numpages = {11},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287400,
+author = {Manku, Gurmeet Singh and Motwani, Rajeev},
+title = {Approximate Frequency Counts over Data Streams},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {We present algorithms for computing frequency counts exceeding a user-specified threshold over data streams. Our algorithms are simple and have provably small memory footprints. Although the output is approximate, the error is guaranteed not to exceed a user-specified parameter. Our algorithms can easily be deployed for streams of singleton items like those found in IP network monitoring. We can also handle streams of variable sized sets of items exemplified by a sequence of market basket transactions at a retail store. For such streams, we describe an optimized implementation to compute frequent itemsets in a single pass.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {346–357},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287401,
+author = {Zhu, Yunyue and Shasha, Dennis},
+title = {StatStream: Statistical Monitoring of Thousands of Data Streams in Real Time},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {Consider the problem of monitoring tens of thousands of time series data streams in an online fashion and making decisions based on them. In addition to single stream statistics such as average and standard deviation, we also want to find high correlations among all pairs of streams. A stock market trader might use such a tool to spot arbitrage opportunities. This paper proposes efficient methods for solving this problem based on Discrete Fourier Transforms and a three level time interval hierarchy. Extensive experiments on synthetic data and real world financial trading data show that our algorithm beats the direct computation approach by several orders of magnitude. It also improves on previous Fourier Transform approaches by allowing the efficient computation of time-delayed correlation over any size sliding window and any time delay. Correlation also lends itself to an efficient grid-based data structure. The result is the first algorithm that we know of to compute correlations over thousands of data streams in real time. The algorithm is incremental, has fixed response time, and can monitor the pairwise correlations of 10,000 streams on a single PC. The algorithm is embarrassingly parallelizable.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {358–369},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287402,
+author = {Lempel, Ronny and Moran, Shlomo},
+title = {Optimizing Result Prefetching in Web Search Engines with Segmented Indices},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {We study the process in which search engines with segmented indices serve queries. In particular, we investigate the number of result pages which search engines should prepare during the query processing phase.Search engine users have been observed to browse through very few pages of results for queries which they submit. This behavior of users suggests that prefetching many results upon processing an initial query is not efficient, since most of the prefetched results will not be requested by the user who initiated the search. However, a policy which abandons result prefetching in favor of retrieving just the first page of search results might not make optimal use of system resources as well.We argue that for a certain behavior of users, engines should prefetch a constant number of result pages per query. We define a concrete query processing model for search engines with segmented indices, and analyze the cost of such prefetching policies. Based on these costs, we show how to determine the constant which optimizes the prefetching policy. Our results are mostly applicable to local index partitions of the inverted files, but are also applicable to processing of short queries in global index architectures.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {370–381},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287403,
+author = {Lifantsev, Maxim and Chiueh, Tzi-cker},
+title = {I/O-Conscious Data Preparation for Large-Scale Web Search Engines},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {Given that commercial search engines cover billions of web pages, efficiently managing the corresponding volumes of disk-resident data needed to answer user queries quickly is a formidable data manipulation challenge. We present a general technique for efficiently carrying out large sets of simple transformation or querying operations over external-memory data tables. It greatly reduces the number of performed disk accesses and seeks by maximizing the temporal locality of data access and organizing most of the necessary disk accesses into long sequential reads or writes of data that is reused many times while in memory. This technique is based on our experience from building a functionally complete and fully operational web search engine called Yuntis. As such, it is in particular well suited for most data manipulation tasks in a modern web search engine and is employed throughout Yuntis. The key idea of this technique is co-ordinated partitioning of related data tables and corresponding partitioning and delayed batched execution of the transformation and querying operations that work with the data. This data and processing partitioning is naturally compatible with distributed data storage and parallel execution on a cluster of workstations. Empirical measurements on the Yuntis prototype demonstrate that our technique can improve the performance of external-memory data preparation runs by a factor of 100 versus a straightforward implementation.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {382–393},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287404,
+author = {Ipeirotis, Panagiotis G. and Gravano, Luis},
+title = {Distributed Search over the Hidden Web: Hierarchical Database Sampling and Selection},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {Many valuable text databases on the web have non-crawlable contents that are "hidden" behind search interfaces. Metasearchers are helpful tools for searching over many such databases at once through a unified query interface. A critical task for a metasearcher to process a query efficiently and effectively is the selection of the most promising databases for the query, a task that typically relies on statistical summaries of the database contents. Unfortunately, web-accessible text databases do not generally export content summaries. In this paper, we present an algorithm to derive content summaries from "uncooperative" databases by using "focused query probes," which adaptively zoom in on and extract documents that are representative of the topic coverage of the databases. Our content summaries are the first to include absolute document frequency estimates for the database words. We also present a novel database selection algorithm that exploits both the extracted content summaries and a hierarchical classification of the databases, automatically derived during probing, to compensate for potentially incomplete content summaries. Finally, we evaluate our techniques thoroughly using a variety of databases, including 50 real web-accessible text databases. Our experiments indicate that our new content-summary construction technique is efficient and produces more accurate summaries than those from previously proposed strategies. Also, our hierarchical database selection algorithm exhibits significantly higher precision than its flat counterparts.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {394–405},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287405,
+author = {Keogh, Eamonn},
+title = {Exact Indexing of Dynamic Time Warping},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {The problem of indexing time series has attracted much research interest in the database community. Most algorithms used to index time series utilize the Euclidean distance or some variation thereof. However is has been forcefully shown that the Euclidean distance is a very brittle distance measure. Dynamic Time Warping (DTW) is a much more robust distance measure for time series, allowing similar shapes to match even if they are out of phase in the time axis. Because of this flexibility, DTW is widely used in science, medicine, industry and finance. Unfortunately however, DTW does not obey the triangular inequality, and thus has resisted attempts at exact indexing. Instead, many researchers have introduced approximate indexing techniques, or abandoned the idea of indexing and concentrated on speeding up sequential search. In this work we introduce a novel technique for the exact indexing of DTW. We prove that our method guarantees no false dismissals and we demonstrate its vast superiority over all competing approaches in the largest and most comprehensive set of time series indexing experiments ever undertaken.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {406–417},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287406,
+author = {Tao, Yufei and Papadias, Dimitris},
+title = {Adaptive Index Structures},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {Traditional indexes aim at optimizing the node accesses during query processing, which, however, does not necessarily minimize the total cost due to the possibly large number of random accesses. In this paper, we propose a general framework for adaptive indexes that improve overall query cost. The performance gain is achieved by allowing index nodes to contain a variable number of disk pages. Update algorithms dynamically re-structure adaptive indexes depending on the data and query characteristics. Extensive experiments show that adaptive B- and R-trees significantly outperform their conventional counterparts, while incurring minimal update overhead.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {418–429},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287407,
+author = {Ramamurthy, Ravishankar and DeWitt, David J. and Su, Qi},
+title = {A Case for Fractured Mirrors},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {The Decomposition Storage Model (DSM) vertically partitions all attributes of a given relation. DSM has excellent I/O behavior when the number of attributes touched in the query is small. It also has a better cache footprint than the n N-ary storage model (NSM) that is used by most database system. However, DSM incurs a high cost in reconstructing the original tuple from the partitions. We first revisit some of the performance problems associated with DSM. We suggest a simple indexing strategy and compare different reconstruction algorithms. The paper then proposes a new mirroring scheme, termed fractured mirrors, using both NSM and DSM models. This scheme combines the best aspects of both models, along with the added benefit of mirroring to better serve an ad-hoc query workload. A prototype system has been built using the Shore storage manager and performance is evaluated using queries from the TPC-H workload.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {430–441},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287408,
+author = {Lim, Lipyeow and Wang, Min and Padmanabhan, Sriram and Vitter, Jeffrey Scott and Parr, Ronald},
+title = {XPathLearner: An on-Line Self-Tuning Markov Histogram for XML Path Selectivity Estimation},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {The extensible mark-up language (XML) is gaining widespread use as a format for data exchange and storage on the World Wide Web. Queries over XML data require accurate selectivity estimation of path expressions to optimize query execution plans. Selectivity estimation of XML path expression is usually done based on summary statistics about the structure of the underlying XML repository. All previous methods require an off-line scan of the XML repository to collect the statistics. In this paper, we propose XPathLearner, a method for estimating selectivity of the most commonly used types of path expressions without looking at the XML data. XPathLearner gathers and refines the statistics using query feedback in an on-line manner and is especially suited to queries in Internet scale applications since the underlying XML repository is either inaccessible or too large to be scanned in its entirety. Besides the on-line property, our method also has two other novel features: (a) XPathLearner is workload-aware in collecting the statistics and thus can be more accurate than the more costly off-line method under tight memory constraints, and (b) XPathLearner automatically adjusts the statistics using query feedback when the underlying XML data change. We show empirically the estimation accuracy of our method using several real data sets.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {442–453},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287409,
+author = {Gilbert, Anna C. and Kotidis, Yannis and Muthukrishnan, S. and Strauss, Martin J.},
+title = {How to Summarize the Universe: Dynamic Maintenance of Quantiles},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {Order statistics, i.e., quantiles, are frequently used in databases both at the database server as well as the application level. For example, they are useful in selectivity estimation during query optimization, in partitioning large relations, in estimating query result sizes when building user interfaces, and in characterizing the data distribution of evolving datasets in the process of data mining.We present a new algorithm for dynamically computing quantiles of a relation subject to insert as well as delete operations. The algorithm monitors the operations and maintains a simple, small-space representation (based on random subset sums or RSSs) of the underlying data distribution. Using these RSSs, we can quickly estimate, without having to access the data, all the quantiles, each guaranteed to be accurate to within user-specified precision. Previously-known one-pass quantile estimation algorithms that provide similar quality and performance guarantees can not handle deletions. Other algorithms that can handle delete operations cannot guarantee performance without rescanning the entire database.We present the algorithm, its theoretical performance analysis and extensive experimental results with synthetic and real datasets. Independent of the rates of insertions and deletions, our algorithm is remarkably precise at estimating quantiles in small space, as our experiments demonstrate.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {454–465},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287410,
+author = {Polyzotis, Neoklis and Garofalakis, Minos},
+title = {Structure and Value Synopses for XML Data Graphs},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {All existing proposals for querying XML (e.g., XQuery) rely on a pattern-specification language that allows (1) path navigation and branching through the label structure of the XML data graph, and (2) predicates on the values of specific path/branch nodes, in order to reach the desired data elements. Optimizing such queries depends crucially on the existence of concise synopsis structures that enable accurate compile-time selectivity estimates for complex path expressions over graph-structured XML data. In this paper, we extent our earlier work on structural XSKETCH synopses and we propose an (augmented) XSKETCH synopsis model that exploits localized stability and value-distribution summaries (e.g., histograms) to accurately capture the complex correlation patterns that can exist between and across path structure and element values in the data graph. We develop a systematic XSKETCH estimation framework for complex path expressions with value predicates and we propose an efficient heuristic algorithm based on greedy forward selection for building an effective XSKETCH for a given amount of space (which is, in general, an NP-hard optimization problem). Implementation results with both synthetic and real-life data sets verify the effectiveness of our approach.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {466–477},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287411,
+author = {Yu, Ting and Srivastava, Divesh and Lakshmanan, Laks V. S. and Jagadish, H. V.},
+title = {Compressed Accessibility Map: Efficient Access Control for XML},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {XML is widely regarded as a promising means for data representation integration, and exchange. As companies transact business over the Internet, the sensitive nature of the information mandates that access must be provided selectively, using sophisticated access control specifications. Using the specification directly to determine if a user has access to a specific XML data item can hence be extremely inefficient. The alternative of fully materializing, for each data item, the users authorized to access it can be space-inefficient. In this paper, we propose a space- and time-efficient solution to the access control problem for XML data. Our solution is based on a novel notion of a compressed accessibility map (CAM), which compactly identifies the XML data items to which a user has access, by exploiting structural locality of accessibility in tree-structured data. We present a CAM lookup algorithm for determining if a user has access to a data item; it takes time proportional to the product of the depth of the item in the XML data and logarithm of the CAM size.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {478–489},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287412,
+author = {Cho, SungRan and Amer-Yahia, Sihem and Lakshmanan, Laks V. S. and Srivastava, Divesh},
+title = {Optimizing the Secure Evaluation of Twig Queries},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {The rapid emergence of XML as a standard for data exchange over the Web has led to considerable interest in the problem of securing XML documents. In this context, query evaluation engines need to ensure that user queries only use and return XML data the user is allowed to access. These added access control checks can considerably increase query evaluation time. In this paper, we consider the problem of optimizing the secure evaluation of XML twig queries.We focus on the simple, but useful, multi-level access control model, where a security level can be either specified at an XML element, or inherited from its parent. For this model, secure query evaluation is possible by rewriting the query to use a recursive function that computes an element's security level. Based on security information in the DTD, we devise efficient algorithms that optimally determine when the recursive check can be eliminated, and when it can be simplified to just a local check on the element's attributes, without violating the access control policy. Finally, we experimentally evaluate the performance benefits of our techniques using a variety of XML data and queries.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {490–501},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287413,
+author = {Bettini, Claudio and Jajodia, Sushil and Wang, X. Sean and Wijesekera, Duminda},
+title = {Provisions and Obligations in Policy Management and Security Applications},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {Policies are widely used in many systems and applications. Recently, it has been recognized that a "yes/no" response to every scenario is just not enough for many modern systems and applications. Many policies require certain conditions to be satisfied and actions to be performed before or after a decision is made. To address this need, this paper introduces the notions of provisions and obligations. Provisions are those conditions that need to be satisfied or actions that must be performed before a decision is rendered, while obligations are those conditions or actions that must be fulfilled by either the users or the system after the decision. This paper formalizes a rule-based policy framework that includes provisions and obligations, and investigates a reasoning mechanism within this framework. A policy decision may be supported by more than one derivation, each associated with a potentially different set of provisions and obligations (called a global PO set). The reasoning mechanism can derive all the global PO sets for each specific policy decision, and facilitates the selection of the best one based on numerical weights assigned to provisions and obligations as well as on semantic relationships among them. The paper also shows the use of the proposed policy framework in a security application.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {502–513},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287414,
+author = {Cho, Junghoo and Ntoulas, Alexandros},
+title = {Effective Change Detection Using Sampling},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {For a large-scale data-intensive environment, such as the World-Wide Web or data warehousing, we often make local copies of remote data sources. Due to limited network and computational resources, however, it is often difficult to monitor the sources constantly to check for changes and to download changed data items to the copies. In this scenario, our goal is to detect as many changes as we can using the fixed download resources that we have. In this paper we propose three sampling-based download policies that can identify more changed data items effectively. In our sampling-based approach, we first sample a small number of data items from each data source and download more data items from the sources with more changed samples. We analyze the effectiveness of the sampling-based policies and compare our proposed policies to existing ones, including the state-of-the-art frequency-based policy in [8, 11]. Our experiments on synthetic and real-world data will show the relative merits of various policies and the great potential of our sampling-based policy. In certain cases, our sampling-based policy could download twice as many changed items as the best existing policy.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {514–525},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287415,
+author = {Shah, Shetal and Ramamritham, Krithi and Shenoy, Prashant},
+title = {Maintaining Coherency of Dynamic Data in Cooperating Repositories},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {In this paper, we consider techniques for disseminating dynamic data--such as stock prices and real-time weather information--from sources to a set of repositories. We focus on the problem of maintaining coherency of dynamic data items in a network of cooperating repositories. We show that cooperation among repositories-- where each repository pushes updates of data items to other repositories--helps reduce system-wide communication and computation overheads for coherency maintenance. However, contrary to intuition, we also show that increasing the degree of cooperation beyond a certain point can, in fact, be detrimental to the goal of maintaining coherency at low communication and computational overheads. We present techniques (i) to derive the "optimal" degree of cooperation among repositories, (ii) to construct an efficient dissemination tree for propagating changes from sources to cooperating repositories, and (iii) to determine when to push an update from one repository to another for coherency maintenance. We evaluate the efficacy of our techniques using real-world traces of dynamically changing data items (specifically, stock prices) and show that careful dissemination of updates through a network of cooperating repositories can substantially lower the cost of coherency maintenance.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {526–537},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287416,
+author = {Uhl, Axel},
+title = {A Bandwidth Model for Internet Search},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {In this paper a formal model for the domain of Internet search is presented that makes it possible to quantify the relations between important parameters of a distributed search architecture. Among these are physical network parameters, query frequency, required currency of search results, change rate of the data to be searched, logical network topology, and total bandwidth consumption for answering one query. The model is then used to compute many important relations between the various parameters. The results can be used to quantitatively assess, streamline, and optimize distributed Internet search architectures.The results back the general perception that a centralized approach to Internet-scale search will no longer be able to provide the desired coverage and currency, especially given that the Internet's content keeps growing much faster than the bandwidth available to index it. Using a hierarchical distribution approach and using change-based update notications instead of polling for changes allows to address sets of objects that are several orders of magnitude larger than what is possible with a centralized approach. Yet, using such an approach does not signicantly increase the total bandwidth required for a single query per object reached by the search.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {538–549},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287417,
+author = {Bright, Laura and Raschid, Louiqa},
+title = {Using Latency-Recency Profiles for Data Delivery on the Web},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {An important challenge to web technologies such as proxy caching, web portals, and application servers is keeping cached data up-to-date. Clients may have different preferences for the latency and recency of their data. Some prefer the most recent data, others will accept stale cached data that can be delivered quickly. Existing approaches to maintaining cache consistency do not consider this diversity and may increase the latency of requests, consume excessive bandwidth, or both. Further, this overhead may be unnecessary in cases where clients will tolerate stale data that can be delivered quickly. This paper introduces latency-recency profiles, a set of parameters that allow clients to express preferences for their different applications. A cache or portal uses profiles to determine whether to deliver a cached object to the client or to download a fresh object from a remote server. We present an architecture for profiles that is both scalable and straightforward to implement at a cache. Experimental results using both synthetic and trace data show that profiles can reduce latency and bandwidth consumption compared to existing approaches, while still delivering fresh data in many cases. When there is insufficient bandwidth to answer all requests at once, profiles significantly reduce latencies for all clients.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {550–561},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287418,
+author = {Candan, K. Sel\c{c}uk and Agrawal, Divyakant and Li, Wen-Syan and Po, Oliver and Hsiung, Wang-Pin},
+title = {View Invalidation for Dynamic Content Caching in Multitiered Architectures},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {In today's multitiered application architectures, clients do not access data stored in the databases directly. Instead, they use applications which in turn invoke the DBMS to generate the relevant content. Since executing application programs may require significant time and other resources, it is more advantageous to cache application results in a result cache. Various view materialization and update management techniques have been proposed to deal with updates to the underlying data. These techniques guarantee that the cached results are always consistent with the underlying data. Several applications, including e-commerce sites, on the other hand, do not require the caches be consistent all the time. Instead, they require that all outdated pages in the caches are invalidated in a timely fashion. In this paper, we show that invalidation is inherently different from view maintenance. We develop algorithms that benefit from this difference in reducing the cost of update management in certain applications and we present an invalidation framework that benefits from these algorithms.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {562–573},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287419,
+author = {Kounev, Samuel and Buchmann, Alejandro},
+title = {Improving Data Access of J2EE Applications by Exploiting Asynchronous Messaging and Caching Services},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {The J2EE platform provides a variety of options for making business data persistent using DBMS technology. However, the integration with existing backend database systems has proven to be of crucial importance for the scalability and performance of J2EE applications, because modern e-business systems are extremely data-intensive. As a result, the data access layer, and the link between the application server and the database server in particular, are very susceptible to turning into a system bottleneck. In this paper we use the ECperf benchmark as an example of a realistic application in order to illustrate the problems mentioned above and discuss how they could be approached and eliminated. In particular, we show how asynchronous, message-based processing could be exploited to reduce the load on the DBMS and improve system performance, scalability and reliability. Furthermore, we discuss the major issues related to the correct use of entity beans (the components provided by J2EE for modelling persistent data) and present a number of methods to optimize their performance utilizing caching mechanisms. We have evaluated the proposed techniques through measurements and have documented the performance gains that they provide.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {574–585},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287420,
+author = {Ananthakrishna, Rohit and Chaudhuri, Surajit and Ganti, Venkatesh},
+title = {Eliminating Fuzzy Duplicates in Data Warehouses},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {The duplicate elimination problem of detecting multiple tuples, which describe the same real world entity, is an important data cleaning problem. Previous domain independent solutions to this problem relied on standard textual similarity functions (e.g., edit distance, cosine metric) between multi-attribute tuples. However, such approaches result in large numbers of false positives if we want to identify domain-specific abbreviations and conventions. In this paper, we develop an algorithm for eliminating duplicates in dimensional tables in a data warehouse, which are usually associated with hierarchies. We exploit hierarchies to develop a high quality, scalable duplicate elimination algorithm, and evaluate it on real datasets from an operational data warehouse.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {586–597},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287421,
+author = {Popa, Lucian and Velegrakis, Yannis and Hern\'{a}ndez, Mauricio A. and Miller, Ren\'{e}e J. and Fagin, Ronald},
+title = {Translating Web Data},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {We present a novel framework for mapping between any combination of XML and relational schemas, in which a high-level, user-specified mapping is translated into semantically meaningful queries that transform source data into the target representation. Our approach works in two phases. In the first phase, the high-level mapping, expressed as a set of inter-schema correspondences, is converted into a set of mappings that capture the design choices made in the source and target schemas (including their hierarchical organization as well as their nested referential constraints). The second phase translates these mappings into queries over the source schemas that produce data satisfying the constraints and structure of the target schema, and preserving the semantic relationships of the source. Nonnull target values may need to be invented in this process. The mapping algorithm is complete in that it produces all mappings that are consistent with the schema constraints. We have implemented the translation algorithm in Clio, a schema mapping tool, and present our experience using Clio on several real schemas.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {598–609},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287422,
+author = {Do, Hong-Hai and Rahm, Erhard},
+title = {COMA: A System for Flexible Combination of Schema Matching Approaches},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {Schema matching is the task of finding semantic correspondences between elements of two schemas. It is needed in many database applications, such as integration of web data sources, data warehouse loading and XML message mapping. To reduce the amount of user effort as much as possible, automatic approaches combining several match techniques are required. While such match approaches have found considerable interest recently, the problem of how to best combine different match algorithms still requires further work. We have thus developed the COMA schema matching system as a platform to combine multiple matchers in a flexible way. We provide a large spectrum of individual matchers, in particular a novel approach aiming at reusing results from previous match operations, and several mechanisms to combine the results of matcher executions. We use COMA as a framework to comprehensively evaluate the effectiveness of different matchers and their combinations for real-world schemas. The results obtained so far show the superiority of combined match approaches and indicate the high value of reuse-oriented strategies.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {610–621},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287423,
+author = {Stolte, Etzard and Alonso, Gustavo},
+title = {Efficient Exploration of Large Scientific Databases},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {One of the challenging aspects of scientific data repositories is how to efficiently explore the catalogues that describe the data. We have encountered such a problem while developing HEDC, HESSI Experimental data center, a multi-terabyte repository built for the recently launched HESSI satellite. In HEDC, scientific users will soon be confronted with a catalogue of many million tuples. In this paper we present a novel technique that allows users to efficiently explore such a large data space in an interactive manner. Our approach is to store a copy of relevant fields in segmented and wavelet encoded views that are streamed to specialized clients. These clients use approximated data and adaptive decoding techniques to allow users to quickly visualize the search space. In the paper we describe how this approach reduces from hours to seconds the time needed to generate meaningful visualizations of millions of tuples.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {622–633},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287424,
+author = {Hammel, Laurie and Patel, Jignesh M.},
+title = {Searching on the Secondary Structure of Protein Sequences},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {In spite of the many decades of progress in database research, surprisingly scientists in the life sciences community still struggle with inefficient and awkward tools for querying biological data sets. This work highlights a specific problem involving searching large volumes of protein data sets based on their secondary structure. In this paper we define an intuitive query language that can be used to express queries on secondary structure and develop several algorithms for evaluating these queries. We implement these algorithms both in Periscope, a native system that we have built, and in a commercial ORDBMS. We show that the choice of algorithms can have a significant impact on query performance. As part of the Periscope implementation we have also developed a framework for optimizing these queries and for accurately estimating the costs of the various query evaluation plans. Our performance studies show that the proposed techniques are very efficient in the Periscope system and can provide scientists with interactive secondary structure querying options even on large protein data sets.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {634–645},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287425,
+author = {Nierman, Andrew and Jagadish, H. V.},
+title = {ProTDB: Probabilistic Data in XML},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {Where as traditional databases manage only deterministic information, many applications that use databases involve uncertain data. This paper presents a Probabilistic Tree Data Base (ProTDB) to manage probabilistic data, represented in XML.Our approach differs from previous efforts to develop probabilistic relational systems in that we build a probabilistic XML database. This design is driven by application needs that involve data not readily amenable to a relational representation. XML data poses several modeling challenges: due to its structure, due to the possibility of uncertainty association at multiple granularities, and due to the possibility of missing and repeated sub-elements. We present a probabilistic XML model that addresses all of these challenges. We devise an implementation of XML query operations using our probability model, and demonstrate the efficiency of our implementation experimentally.We have used ProTDB to manage data from two application areas: protein chemistry data from the bioinformatics domain, and information extraction data obtained from the web using a natural language analysis system. We present a brief case study of the latter to demonstrate the value of probabilistic XML data management.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {646–657},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287426,
+author = {Chakrabarti, Soumen and Roy, Shourya and Soundalgekar, Mahesh V.},
+title = {Fast and Accurate Text Classification via Multiple Linear Discriminant Projections},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {Support vector machines (SVMs) have shown superb performance for text classification tasks. They are accurate, robust, and quick to apply to test instances. Their only potential drawback is their training time and memory requirement. For n training instances held in memory, the best-known SVM implementations take time proportional to na, where a is typically between 1.8 and 2.1. SVMs have been trained on data sets with several thousand instances, but Web directories today contain millions of instances which are valuable for mapping billions of Web pages into Yahoo!-like directories. We present SIMPL, a nearly linear-time classification algorithm which mimics the strengths of SVMs while avoiding the training bottleneck. It uses Fisher's linear discriminant, a classical tool from statistical pattern recognition, to project training instances to a carefully selected low-dimensional subspace before inducing a decision tree on the projected instances. SIMPL uses efficient sequential scans and sorts, and is comparable in speed and memory scalability to widely-used naive Bayes (NB) classifiers, but it beats NB accuracy decisively. It not only approaches and sometimes exceeds SVM accuracy, but also beats SVM running time by orders of magnitude. While developing SIMPL, we also make a detailed experimental analysis of the cache performance of SVMs.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {658–669},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287427,
+author = {Hristidis, Vagelis and Papakonstantinou, Yannis},
+title = {Discover: Keyword Search in Relational Databases},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {DISCOVER operates on relational databases and facilitates information discovery on them by allowing its user to issue keyword queries without any knowledge of the database schema or of SQL. DISCOVER returns qualified joining networks of tuples, that is, sets of tuples that are associated because they join on their primary and foreign keys and collectively contain all the keywords of the query. DISCOVER proceeds in two steps. First the Candidate Network Generator generates all candidate networks of relations, that is, join expressions that generate the joining networks of tuples. Then the Plan Generator builds plans for the efficient evaluation of the set of candidate networks, exploiting the opportunities to reuse common subexpressions of the candidate networks.We prove that DISCOVER finds without redundancy all relevant candidate networks, whose size can be data bound, by exploiting the structure of the schema. We prove that the selection of the optimal execution plan (way to reuse common subexpressions) is NP-complete. We provide a greedy algorithm and we show that it provides near-optimal plan execution time cost. Our experimentation also provides hints on tuning the greedy algorithm.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {670–681},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287428,
+author = {Rizvi, Shariq J. and Haritsa, Jayant R.},
+title = {Maintaining Data Privacy in Association Rule Mining},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {Data mining services require accurate input data for their results to be meaningful, but privacy concerns may influence users to provide spurious information. We investigate here, with respect to mining association rules, whether users can be encouraged to provide correct information by ensuring that the mining process cannot, with any reasonable degree of certainty, violate their privacy. We present a scheme, based on probabilistic distortion of user data, that can simultaneously provide a high degree of privacy to the user and retain a high level of accuracy in the mining results. The performance of the scheme is validated against representative real and synthetic datasets.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {682–693},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287429,
+author = {Senkul, Pinar and Kifer, Michael and Toroslu, Ismail H.},
+title = {A Logical Framework for Scheduling Workflows under Resource Allocation Constraints},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {A workflow consists of a collection of coordinated tasks designed to carry out a well-defined complex process, such as catalog ordering, trip planning, or a business process in an enterprise. Scheduling of workflows is a problem of finding a correct execution sequence for the workflow tasks, i.e., execution that obeys the constraints that embody the business logic of the workflow. Research on workflow scheduling has largely concentrated on temporal constraints, which specify correct ordering of tasks. Another important class of constraints -- those that arise from resource allocation -- has received relatively little attention in workflow modeling. Since typically resources are not limitless and cannot be shared, scheduling of a workflow execution involves decisions as to which resources to use and when. In this work, we present a framework for workflows whose correctness is given by a set of resource allocation constraints and develop techniques for scheduling such systems. Our framework integrates Concurrent Transaction Logic (CTR) with constraint logic programming (CLP), yielding a new logical formalism, which we call Concurrent Constraint Transaction Logic, or CCTR.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {694–705},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287430,
+author = {Blott, Stephen and Korth, Henry F.},
+title = {An Almost-Serial Protocol for Transaction Execution in Main-Memory Database Systems},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {Disk-based database systems benefit from concurrency among transactions - usually with marginal overhead. For main-memory database systems, however, locking overhead can have a serious impact on performance. This paper proposes SP, a serial protocol for the execution of transactions in main-memory systems, and evaluates its performance against that of strict two-phase locking. The novelty of SP lies in the use of timestamps and mutexes to allow one transaction to begin before its predecessors' commit records have been written to disk, while also ensuring that no committed transactions read uncommitted data. We demonstrate seven-fold and two-fold increases in maximum throughput for read-and update-intensive workloads, respectively. At fixed loads, we demonstrate ten-fold and two-fold improvements in response time for the same transaction mixes. We show that for a wide range of practical workloads, SP on a single processor outperforms locking on a multiprocessor, and then present a modified SP, that exploits multiprocessor systems.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {706–717},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287431,
+author = {Dayn\`{e}s, Laurent and Czajkowski, Grzegorz},
+title = {Lightweight Flexible Isolation for Language-Based Extensible Systems},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {Safe programming languages encourage the development of dynamically extensible systems, such as extensible Web servers and mobile agent platforms. Although protection is of utmost importance in these settings, current solutions do not adequately address fault containment. This paper advocates an approach to protection where transactions act as protection domains. This enables direct sharing of objects while protecting against unauthorized accesses and failures of authorized components. The main questions about this approach are what transaction models translate best into protection mechanisms suited for extensible language-based systems and what is the impact of transaction-based protection on performance. A programmable isolation engine has been integrated with the runtime of a safe programming language in order to allow quick experimentation with a variety of isolation models and to answer both questions. This paper reports on the techniques for flexible fine-grained locking and undo devised to meet the functional and performance requirements of transaction-based protection. Performance analysis of a prototype implementation shows that (i) sophisticated concurrency controls do not translate into higher overheads, and (ii) the ability to memoize locking operations is crucial to performance.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {718–729},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287432,
+author = {Karayannidis, Nikos and Tsois, Aris and Sellis, Timos and Pieringer, Roland and Markl, Volker and Ramsak, Frank and Fenk, Robert and Elhardt, Klaus and Bayer, Rudolf},
+title = {Processing Star Queries on Hierarchically-Clustered Fact Tables},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {Star queries are the most prevalent kind of queries in data warehousing, OLAP and business intelligence applications. Thus, there is an imperative need for efficiently processing star queries. To this end, a new class of fact table organizations has emerged that exploits path-based surrogate keys in order to hierarchically cluster the fact table data of a star schema [DRSN98, MRB99, KS01]. In the context of these new organizations, star query processing changes radically. In this paper, we present a complete abstract processing plan that captures all the necessary steps in evaluating such queries over hierarchically clustered fact tables. Furthermore, we present optimizations for surrogate key processing and a novel early grouping transformation for grouping on the dimension hierarchies. Our algorithms have been already implemented in a commercial relational database management system (RDBMS) and the experimental evaluation, as well as customer feedback, indicates speedups of orders of magnitude for typical star queries in real world applications.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {730–741},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287433,
+author = {Kang, Heum-Geun and Chung, Chin-Wan},
+title = {Exploiting Versions for On-Line Data Warehouse Maintenance in MOLAP Servers},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {A data warehouse is an integrated database whose data is collected from several data sources, and supports on-line analytical processing (OLAP). Typically, a query to the data warehouse tends to be complex and involves a large volume of data. To keep the data at the warehouse consistent with the source data, changes to the data sources should be propagated to the data warehouse periodically. Because the propagation of the changes (maintenance) is batch processing, it takes long time. Since both query transactions and maintenance transactions are long and involve large volumes of data, traditional concurrency control mechanisms such as two-phase locking are not adequate for a data warehouse environment. We propose a multi-version concurrency control mechanism suited for data warehouses which use multi-dimensional OLAP (MOLAP) servers. We call the mechanism multiversion concurrency control for data warehouses (MVCCDW). To our knowledge, our work is the first attempt to exploit versions for online data warehouse maintenance in a MOLAP environment. MVCC-DW guarantees the serializability of concurrent transactions. Transactions running under the mechanism do not block each other and do not need to place locks.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {742–753},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287434,
+author = {R\"{o}hm, Uwe and B\"{o}hm, Klemens and Schek, Hans-J\"{o}rg and Schuldt, Heiko},
+title = {FAS: A Freshness-Sensitive Coordination Middleware for a Cluster of OLAP Components},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {Data warehouses offer a compromise between freshness of data and query evaluation times. However, a fixed preference ratio between these two variables is too undifferentiated. With our approach, clients submit a query together with an explicit freshness limit as a new Quality-of-Service parameter. Our architecture is a cluster of databases. The contribution of this article is the design, implementation, and evaluation of a coordination middleware. It schedules and routes updates and queries to cluster nodes, aiming at a high throughput of OLAP queries. The core of the middleware is a new protocol called FAS (Freshness-Aware Scheduling) with the following qualitative characteristics: (1) The requested freshness limit of queries is always met, and (2) data accessed within a transaction is consistent, independent of its freshness. Our evaluation shows that FAS has the following nice properties: OLAP query-evaluation times are close (within 10%) to the ones of an idealistic setup with no updates. FAS allows to effectively trade 'upto-dateness' for query performance. Even when all queries request fresh data, FAS clearly outperforms synchronous replication. Finally, mean response times are independent of the cluster size (up to 128 nodes).},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {754–765},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287435,
+author = {Lakshmanan, Laks V. S. and Ng, Raymond T. and Wang, Christine Xing and Zhou, Xiaodong and Johnson, Theodore J.},
+title = {The Generalized MDL Approach for Summarization},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {There are many applications in OLAP and data analysis where we identify regions of interest. For example, in OLAP, an analysis query involving aggregate sales performance of various products in different locations and seasons could help identify interesting cells, such as cells of a data cube having an aggregate sales higher than a threshold. While a normal answer to such a quiry merely returns all interesting cells, it may be far more informative to the user if the system return summaries or descriptions of regions formed from the identified cells. The minimum Description Length (MDL) principle is a well-known strategy for finding such region descriptions.In this paper, we propose a generalization of the MDL principle, called GMDL, and show that GMDL leads to fewer regions than MDL, and hence more concise "answers" returned to the user. The key idea is that a region may contain "don't care" cells (up to a global maximum), if these "don't care" cells help to form bigger summary regions, leading to a more concise overall summary. We study the problem of generating minimal region descriptions under the GMDL principle for two different scenarios. In the first, all dimensions of the data space are spatial. In the second scenario, all dimentions are categorial and organized in hierarchies. We propose region finding algorithms for both scenarios and evaluate their run time and compression performance using detailed experimentation. Our results show the effectiveness of the GMDL principle and the proposed algorithms.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {766–777},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287436,
+author = {Lakshmanan, Laks V. S. and Pei, Jian and Han, Jiawei},
+title = {Quotient Cube: How to Summarize the Semantics of a Data Cube},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {Partitioning a data cube into sets of cells with "similar behavior" often better exposes the semantics in the cube. E.g., if we find that average boots sales in the West 10th store of Walmart was the same for winter as for the whole year, it signifies something interesting about the trend of boots sales in that location in that year. In this paper, we are interested in finding succinct summaries of the data cube, exploiting regularities present in the cube, with a clear basis. We would like the summary: (i) to be as concise as possible, (ii) to itself form a lattice preserving the rollup/drilldown semantics of the cube, and (iii) to allow the original cube to be fully recovered. We illustrate the utility of solving this problem and discuss the inherent challenges. We develop techniques for partitioning cube cells for obtaining succinct summaries, and introduce the quotient cube. We give efficient algorithms for computing it from a base table. For monotone aggregate functions (e.g., COUNT, MIN, MAX, SUM on non-negative measures, etc.), our solution is optimal (i.e., quotient cube of the least size). For nonmonotone functions (e.g., AVG), we obtain a locally optimal solution. We experimentally demonstrate the efficacy of our ideas and techniques and the scalability of our algorithms.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {778–789},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287437,
+author = {Lee, Young-Koo and Whang, Kyu-Young and Moon, Yang-Sae and Song, Il-Yeol},
+title = {A One-Pass Aggregation Algorithm with the Optimal Buffer Size in Multidimensional OLAP},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {Aggregation is an operation that plays a key role in
+multidimensional OLAP (MOLAP). Existing aggregation methods in
+MOLAP have been proposed for file structures such as
+multidimensional arrays. These file structures are suitable for
+data with uniform distributions, but do not work well with skewed
+distributions. In this paper, we consider an aggregation method
+that uses dynamic multidimensional files adapting to skewed
+distributions. In these multidimensional files, the sizes of page
+regions vary according to the data density in these regions, and
+the pages that belong to a larger region are accessed multiple
+times while computing aggregations. To solve this problem, we first
+present an aggregation computation model, called the
+Disjoint-Inclusive Partition (DIP) computation model, that is the
+formal basis of our approach. Based on this model, we then present
+the one-pass aggregation algorithm. This algorithm computes
+aggregations using the one-pass buffer size, which is the minimum
+buffer size required for guaranteeing one disk access per page. We
+prove that our aggregation algorithm is optimal with respect to the
+one-pass buffer size under our aggregation computation model. Using
+the DIP computation model allows us to correctly predict the order
+of accessing data pages in advance. Thus, our algorithm achieves
+the optimal one-pass buffer size by using a buffer replacement
+policy, such as Belady's B0 or Toss-Immediate policies,
+that exploits the page access order computed in advance. Since the
+page access order is not known a priori in general, these policies
+have been known to lack practicality despite its theoretic
+significance. Nevertheless, in this paper, we show that these
+policies can be effectively used for aggregation computation.We have conducted extensive experiments. We first demonstrate
+that the one-pass buffer size theoretically derived is indeed
+correct in real environments. We then compare the performance of
+the one-pass algorithm with those of other ones. Experimental
+results for a real data set show that the one-pass algorithm
+reduces the number of disk accesses by up to 7.31 times compared
+with a naive algorithm. We also show that the memory requirement of
+our algorithm for processing the aggregation in one-pass is very
+small being 0.05%|0.6% of the size of the database. These results
+indicate that our algorithm is practically usable even for a fairly
+large database. We believe our work provides an excellent formal
+basis for investigating further issues in computing aggregations in
+MOLAP.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {790–801},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287438,
+author = {Palpanas, Themistoklis and Sidle, Richard and Cochrane, Roberta and Pirahesh, Hamid},
+title = {Incremental Maintenance for Non-Distributive Aggregate Functions},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {Incremental view maintenance is a well-known topic that has been addressed in the literature as well as implemented in database products. Yet, incremental refresh has been studied in depth only for a subset of the aggregate functions. In this paper we propose a general incremental maintenance mechanism that applies to all aggregate functions, including those that are not distributive over all operations. This class of functions is of great interest, and includes MIN/MAX, STDDEV, correlation, regression, XML constructor, and user defined functions. We optimize the maintenance of such views in two ways. First, by only recomputing the set of affected groups. Second, we extend the incremental infrastructure with work areas to support the maintenance of functions that are algebraic. We further optimize computation when multiple dissimilar aggregate functions are computed in the same view, and for special cases such as the maintenance of MIN/MAX, which are incrementally maintainable over insertions. We also address the important problem of incremental maintenance of views containing super-aggregates, including materialized OLAP cubes. We have implemented our algorithm on a prototype version of IBM DB2 UDB, and an experimental evaluation proves the validity of our approach.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {802–813},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287439,
+author = {Korn, Flip and Muthukrishnan, S. and Srivastava, Divesh},
+title = {Reverse Nearest Neighbor Aggregates over Data Streams},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {Reverse Nearest Neighbor (RNN) queries have been studied for finite, stored data sets and are of interest for decision support. However, in many applications such as fixed wireless telephony access and sensor-based highway traffic monitoring, the data arrives in a stream and cannot be stored. Exploratory analysis on this data stream can be formalized naturally using the notion of RNN aggregates (RNNAs), which involve the computation of some aggregate (such as C0UNT or MAX DISTANCE) over the set of reverse nearest neighbor "clients" associated with each "server".In this paper, we introduce and investigate the problem of computing three types of RNNA queries over data streams of "client" locations: (i) Max-RNNA: given K servers, return the maximum RNNA over all clients to their closest servers; (ii) List-RNNA: given K servers, return a list of RNNAs over all clients to each of the K servers; and (iii) Opt-RNNA: find a subset of at most K servers for which their RNNAs are below a given threshold. While exact computation of these queries is not possible in the data stream model, we present efficient algorithms to approximately answer these RNNA queries over data streams with error guarantees. We provide analytical proofs of constant factor approximations for many RNNA queries, and complement our analyses with experimental evidence of the accuracy of our techniques.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {814–825},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287440,
+author = {Chan, Chee-Yong and Fan, Wenfei and Felber, Pascal and Garofalakis, Minos and Rastogi, Rajeev},
+title = {Tree Pattern Aggregation for Scalable XML Data Dissemination},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {With the rapid growth of XML-document traffic on the Internet, scalable content-based dissemination of XML documents to a large, dynamic group of consumers has become an important research challenge. To indicate the type of content that they are interested in, data consumers typically specify their subscriptions using some XML pattern specification language (e.g., XPath). Given the large volume of subscribers, system scalability and efficiency mandate the ability to aggregate the set of consumer subscriptions to a smaller set of content specifications, so as to both reduce their storage-space requirements as well as speed up the document-subscription matching process. In this paper, we provide the first systematic study of subscription aggregation where subscriptions are specified with tree patterns (an important subclass of XPath expressions). The main challenge is to aggregate an input set of tree patterns into a smaller set of generalized tree patterns such that: (1) a given space constraint on the total size of the subscriptions is met, and (2) the loss in precision (due to aggregation) during document filtering is minimized. We propose an efficient tree-pattern aggregation algorithm that makes effective use of document-distribution statistics in order to compute a precise set of aggregate tree patterns within the allotted space budget. As part of our solution, we also develop several novel algorithms for tree-pattern containment and minimization, as well as "least-upper-bound" computation for a set of tree patterns. These results are of interest in their own right, and can prove useful in other domains, such as XML query optimization. Extensive results from a prototype implementation validate our approach.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {826–837},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287441,
+author = {Benedikt, Michael and Chan, Chee Yong and Fan, Wenfei and Rastogi, Rajeev and Zheng, Shihui and Zhou, Aoying},
+title = {DTD-Directed Publishing with Attribute Translation Grammars},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {We present a framework for publishing relational data in XML with respect to a fixed DTD. In data exchange on the Web, XML views of relational data are typically required to conform to a predefined DTD. The presence of recursion in a DTD as well as non-determinism makes it challenging to generate DTD-directed, efficient transformations. Our framework provides a language for defining views that are guaranteed to be DTD-conformant, as well as middleware for evaluating these views. It is based on a novel notion of attribute translation grammars (ATGs). An ATG extends a DTD by associating semantic rules via SQL queries. Directed by the DTD, it extracts data from a relational database, and constructs an XML document. We provide algorithms for efficiently evaluating ATGs, along with methods for statically analyzing them. This yields a systematic and effective approach to publishing data with respect to a predefined DTD.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {838–849},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287442,
+author = {Seifert, Andr\'{e} and Scholl, Marc H.},
+title = {A Multi-Version Cache Replacement and Prefetching Policy for Hybrid Data Delivery Environments},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {This paper introduces MICP, a novel multiversion integrated cache replacement and prefetching algorithm designed for efficient cache and transaction management in hybrid data delivery networks. MICP takes into account the dynamically and sporadically changing cost/benefit ratios of cached and/or disseminated object versions by making cache replacement and prefetching decisions sensitive to the objects' access probabilities, their position in the broadcast cycle, and their update frequency. Additionally, to eliminate the issue of a newly created or outdated, but re-cacheable, object version replacing a version that may not be reacquired from the server, MICP logically divides the client cache into two variable-sized partitions, namely the REC and the NON-REC partitions for maintaining re-cacheable and nonre-cacheable object versions, respectively. Besides judiciously selecting replacement victims, MICP selectively prefetches popular object versions from the broadcast channel in order to further improve transaction response time. A simulation study compares MICP with one offline and two online cache replacement and prefetching algorithms. Performance results for the workloads and system settings considered demonstrate that MICP improves transaction throughput rates by about 18.9% compared to the best performing online algorithm and it performs only 40.8% worse than an adapted version of the offline algorithm P.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {850–861},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287443,
+author = {Fox, Armando},
+title = {Toward Recovery-Oriented Computing},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {Recovery Oriented Computing (ROC) is a joint research effort between Stanford University and the University of California, Berkeley. ROC takes the perspective that hardware faults, software bugs, and operator errors are facts to be coped with, not problems to be solved. This perspective is supported both by historical evidence and by recent studies on the main sources of outages in production systems. By concentrating on reducing Mean Time to Repair (MTTR) rather than increasing Mean Time to Failure (MTTF), ROC reduces recovery time and thus offers higher availability. We describe the principles and philosophy behind the joint Stanford/Berkeley ROC effort and outline some of its research areas and current projects.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {873–876},
+numpages = {4},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287444,
+author = {Lohman, Guy M. and Lightstone, Sam S.},
+title = {SMART: Making DB2 (More) Autonomic},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {IBM's SMART (Self-Managing And Resource Tuning) project aims to make DB2 self-managing, i.e. autonomic, to decrease the total cost of ownership and penetrate new markets. Over several releases, increasingly sophisticated SMART features will ease administrative tasks such as initial deployment, database design, system maintenance, problem determination, and ensuring system availability and recovery.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {877–879},
+numpages = {3},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287445,
+author = {Sayal, Mehmet and Casati, Fabio and Dayal, Umeshwar and Shan, Ming-Chien},
+title = {Business Process Cockpit},
+year = {2002},
+publisher = {VLDB Endowment},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {880–883},
+numpages = {4},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287446,
+author = {Vingralek, Radek},
+title = {GnatDb: A Small-Footprint, Secure Database System},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {This paper describes GnatDb, which is an embedded database system that provides protection against both accidental and malicious corruption of data. GnatDb is designed to run on a wide range of appliances, some of which have very limited resources. Therefore, its design is heavily driven by the need to reduce resource consumption. GnatDb employs atomic and durable updates to protect the data against accidental corruption. It prevents malicious corruption of the data using standard cryptographic techniques that leverage the underlying log-structured storage model. We show that the total memory consumption of GnatDb, which includes the code footprint, the stack and the heap, does not exceed 11 KB, while its performance on a typical appliance platform remains at an acceptable level.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {884–893},
+numpages = {10},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287447,
+author = {Zeller, Bernhard and Kemper, Alfons},
+title = {Experience Report: Exploiting Advanced Database Optimization Features for Large-Scale SAP R/3 Installations},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {The database volumes of enterprise resource planning (ERP) systems like SAP R/3 are growing at a tremendous rate and some of them have already reached a size of several Terabytes. OLTP (Online Transaction Processing) databases of this size are hard to maintain and tend to perform poorly. Therefore most database vendors have implemented new features like horizontal partitioning to optimize such mission critical applications. Horizontal partitioning was already investigated in detail in the context of shared nothing distributed database systems but today's ERP systems mostly use a centralized database with a shared everything architecture. In this work, we therefore investigate how an SAP R/3 system performs when the data in the underlying database is partitioned horizontally. Our results show that especially joins, in parallel executed statements, and administrative tasks benefit greatly from horizontal partitioning while the resulting small increase in the execution times of insertions, deletions and updates is tolerable. These positive results have initiated the SAP cooperation partners to pursue a partitioned data layout in some of their largest installed productive systems.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {894–905},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287448,
+author = {Selinger, Pat},
+title = {Information Integration and XML in IBM's DB2},
+year = {2002},
+publisher = {VLDB Endowment},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {906–907},
+numpages = {2},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287449,
+author = {Goto, Koichi and Kambayashi, Yahiko},
+title = {A New Passenger Support System for Public Transport Using Mobile Database Access},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {We have been developing a mobile passenger support system for public transport. Passengers can make their travel plans and purchase necessary tickets by accessing databases via the system. After starting the travel, a mobile terminal checks the travel schedule of its user by accessing several databases and gathering various kinds of information. In this application field, many kinds of data must be handled. Examples of such data are route information, fare information, area map, station map, planned operation schedule, real-time operation schedule, vehicle facilities and so on. Depending on the user's situation, different information should be supplied and personalized. In this paper, we propose a new mechanism to support passengers using the multi-channel data communication environments. On the other hand, transport systerns can gather information about situations and demands of users and modify their services offered for the users. We also describe a prototype system developed for visually handicapped passengers and the results of tests in an actual railway station.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {908–919},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287450,
+author = {Alexandrov, I. and Amorim, A. and Badescu, E. and Barczyk, M. and Burckhart-Chromek, D. and Caprini, M. and Dobson, M. and Flammer, J. and Hart, R. and Jones, R. and Kazarov, A. and Kolos, S. and Kotov, V. and Liko, D. and Lucio, L.},
+title = {OBK: An Online High Energy Physics' Meta-Data Repository},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {ATLAS will be one of the four detectors for the LHC (Large Hadron Collider) particle accelerator currently being built at CERN, Geneva. The project is expected to start production in 2006 and during its lifetime (15-20 years) to generate roughly one petabyte per year of particle physics' data. This vast amount of information will require several meta-data repositories which will ease the manipulation and understanding of physics' data by the final users (physicists doing analysis). Metadata repositories and tools at ATLAS may address such problems as the logical organization of the physics data according to data taking sessions, errors and faults during data gathering, data quality or terciary storage meta-information.The OBK (Online Book-Keeper) is a component of ATLAS' Online Software - the system which provides configuration, control and monitoring services to the DAQ (Data AQquisition system). In this paper we will explain the role of the OBK as one of the main collectors and managers of meta-data produced online, how that data is stored and the interfaces that are provided to access it - merging the physics data with the collected metadata will play an essential role for future analysis and interpretion of the physics events observed at ATLAS. We also provide an historical background to the OBK by analysing the several prototypes implemented in the context of our software development process and the results and experience obtained with the various DBMS technologies used.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {920–927},
+numpages = {8},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287451,
+author = {Laud, Amey V. and Bhowmick, Sourav and Cruz, Pedro and Singh, Dadabhai T. and Rajesh, George},
+title = {The GRNA: A Highly Programmable Infrastructure for Prototyping, Developing and Deploying Genomics-Centric Applications},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {The evolving challenges in lifesciences research cannot be all addressed by off-the-shelf bioinformatics applications. Life scientists need to analyze their data using novel or context-sensitive approaches that might be published in recent journals and publications, or based on their own hypotheses and assumptions. The genomics Research Network Architecture (gRNA) is a highly programmable, modular environment specially designed to invigorate the development of genomics-centric tools for life sciences-research. The gRNA provides the development environment in which new applications can be quickly written, and the deployment environment in which they can systematically avail of computing resources and integrate information from distributed biological data sources.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {928–939},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287452,
+author = {Mohan, C.},
+title = {An Efficient Method for Performing Record Deletions and Updates Using Index Scans},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {We present a method for efficiently performing deletions and updates of records when the records to be deleted or updated are chosen by a range scan on an index. The traditional method involves numerous unnecessary lock calls and traversals of the index from root to leaves, especially when the qualifying records' keys span more than one leaf page of the index. Customers have suffered performance losses from these inefficiencies and have complained about them. Our goal was to minimize the number of interactions with the lock manager, and the number of page fixes, comparison operations and, possibly, I/Os. Some of our improvements come from increased synergy between the query planning and data manager components of a DBMS. Our patented method has been implemented in DB2 V7 to address specific customer requirements. It has also been done to improve performance on the TPC-H benchmark.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {940–949},
+numpages = {10},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287453,
+author = {Ilyas, Ihab F. and Aref, Walid G. and Elmagarmid, Ahmed K.},
+title = {Joining Ranked Inputs in Practice},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {Joining ranked inputs is an essential requirement for many database applications, such as ranking search results from multiple search engines and answering multi-feature queries for multimedia retrieval systems. We introduce a new practical pipelined query operator, termed NRA-RJ, that produces a global rank from input ranked streams based on a score function. The output of NRA-RJ can serve as a valid input to other NRA-RJ operators in the query pipeline. Hence, the NRA-RJ operator can support a hierarchy of join operations and can be easily integrated in query processing engines of commercial database systems. The NRA-RJ operator bridges Fagin's optimal aggregation algorithm into a practical implementation and contains several optimizations that address performance issues. We compare the performance of NRA-RJ against recent rank join algorithms. Experimental results demonstrate the performance trade-offs among these algorithms. The experimental results are based on an empirical study applied to a medical video application on top of a prototype database system. The study reveals important design options and shows that the NRA-RJ operator outperforms other pipelined rank join operators when the join condition is an equi-join on key attributes.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {950–961},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287454,
+author = {Dageville, Beno\^{\i}t and Zait, Mohamed},
+title = {SQL Memory Management in Oracle9i},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {Complex database queries require the use of memory-intensive operators like sort and hash-join. Those operators need memory, also referred to as SQL memory, to process their input data. For example, a sort operator uses a work area to perform the in-memory sort of a set of rows. The amount of memory allocated by these operators greatly affects their performance. However, there is only a finite amount of memory available in the system, shared by all concurrent operators. The challenge for database systems is to design a fair and efficient strategy to manage this memory.Commercial database systems rely on database administrators (DBA) to supply an optimal setting for configuration parameters that are internally used to decide how much memory to allocate to a given database operator. However, database systems continue to be deployed in new areas, e.g, e-commerce, and the database applications are increasingly complex, e.g, to provide more functionality, and support more users. One important consequence is that the application workload is very hard, if not impossible, to predict. So, expecting a DBA to find an optimal value for memory configuration parameters is not realistic. The values can only be optimal for a limited period of time while the workload is within the assumed range.Ideally, the optimal value should adapt in response to variations in the application workload. Several research projects addressed this problem in the past, but very few commercial systems proposed a comprehensive solution to managing memory used by SQL operators in a database application with a variable workload.This paper presents a new model used in Oracle9i to manage memory for database operators. This approach is automatic, adaptive and robust. We will present the architecture of the memory manager, the internal algorithms, and a performance study showing its superiority.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {962–973},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287455,
+author = {Schmidt, Albrecht and Waas, Florian and Kersten, Martin and Carey, Michael J. and Manolescu, Ioana and Busse, Ralph},
+title = {XMark: A Benchmark for XML Data Management},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {While standardization efforts for XML query languages have been progressing, researchers and users increasingly focus on the database technology that has to deliver on the new challenges that the abundance of XML documents poses to data management: validation, performance evaluation and optimization of XML query processors are the upcoming issues. Following a long tradition in database research, we provide a framework to assess the abilities of an XML database to cope with a broad range of different query types typically encountered in real-world scenarios. The benchmark can help both implementors and users to compare XML databases in a standardized application scenario. To this end, we offer a set of queries where each query is intended to challenge a particular aspect of the query processor. The overall workload we propose consists of a scalable document database and a concise, yet comprehensive set of queries which covers the major aspects of XML query processing ranging from textual features to data analysis queries and ad hoc queries. We complement our research with results we obtained from running the benchmark on several XML database platforms. These results are intended to give a first baseline and illustrate the state of the art.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {974–985},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287456,
+author = {Pan, Alberto and Raposo, Juan and \'{A}lvarez, Manuel and Montoto, Paula and Orjales, Vicente and Hidalgo, Justo and Ardao, Luc\'{\i}a and Molano, Anastasio and Vi\~{n}a, \'{A}ngel},
+title = {The Denodo Data Integration Platform},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {The world today is characterised by the proliferation of information sources available through media such as the WWW, databases, semi-structured files (e.g. XML documents), etc. Nevertheless, this information is usually scattered, heterogeneous and weakly structured, so it is difficult to process it automatically. DENODO Corporation has developed a mediator system for the construction of semi-structured and structured data integration applications. This system has already been used in the construction of several applications on the Internet and in corporate environments, which are currently deployed at several important Internet audience sites and large sized business corporations. In this extended abstract, we present an overview of the system and we put forward some conclusions arising from our experience in building real-world data integration applications, focusing in some challenges we believe require more attention from the research community.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {986–989},
+numpages = {4},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287457,
+author = {Kie\ss{}ling, Werner and K\"{o}stler, Gerhard},
+title = {Preference SQL: Design, Implementation, Experiences},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {Current search engines can hardly cope adequately with fuzzy predicates defined by complex preferences. The biggest problem of search engines implemented with standard SQL is that SQL does not directly understand the notion of preferences. Preference SQL extends SQL by a preference model based on strict partial orders (presented in more detail in the companion paper [Kie02]), where preference queries behave like soft selection constraints. Several built-in base preference types and the powerful Pareto operator, combined with the adherence to declarative SQL programming style, guarantees great programming productivity. The Preference SQL optimizer does an efficient re-writing into standard SQL, including a high-level implementation of the skyline perator for Pareto-optimal sets. This pre-processor approach enables a seamless application integration, making Preference SQL available on all major SQL platforms. Several commercial B2C portals are powered by Preference SQL. Its benefits comprise cooperative query answering and smart customer advice, leading to higher e-customer satisfaction and shorter development times of personalized search engines. We report practical experiences ranging from m-commerce and comparison shopping to a large-scale performance test for a job portal.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {990–1001},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287458,
+author = {King, Roger},
+title = {The Rubicon of Smart Data},
+year = {2002},
+publisher = {VLDB Endowment},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {1002–1005},
+numpages = {4},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287459,
+author = {Sripada, Suryanarayana M.},
+title = {Information Management Challenges from the Aerospace Industry},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {The aerospace industry poses significant challenges to information management unlike any other industry. Data management challenges arising from different segments of the aerospace business are identified through illustrative scenarios. These examples and challenges could provide focus and stimulus to further research in information management.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {1006–1007},
+numpages = {2},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287460,
+author = {Ohura, Yusuke and Takahashi, Katsumi and Pramudiono, Iko and Kitsuregawa, Masaru},
+title = {Experiments on Query Expansion for Internet Yellow Page Services Using Web Log Mining},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {Tremendous amount of access log data is accumulated at many web sites. Several efforts to mine the data and apply the results to support end-users or to re-design the Web site's structure have been proposed. This paper describes our trial on access logs utilization from commercial yellow page service called "iTOWNPAGE". Our initial statistical analysis reveals that many users search various categories-even non-sibling ones in the provided hierarchy - together, or finish their search without any results that match their queries. To solve these problems, we first cluster user requests from the access logs using enhanced K-means clustering algorithm and then apply them for query expansion. Our method includes two-steps expansion that 1) recommends similar categories to the request, and 2) suggests related categories although they are nonsimilar in existing category hierarchy. We also report some evaluations that show the effectiveness of the prototype system.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {1008–1018},
+numpages = {11},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287461,
+author = {Li, Wen-Syan and Hsiung, Wang-Pin and Kalashnikov, Dmitri V. and Sion, Radu and Po, Oliver and Agrawal, Divyakant and Candan, K. Sel\c{c}uk},
+title = {Issues and Evaluations of Caching Solutions for Web Application Acceleration},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {Response time is a key differentiation among electronic commerce (e-commerce) applications. For many e-commerce applications, Web pages are created dynamically based on the current state of a business stored in database systems. Recently, the topic of Web acceleration for database-driven Web applications has drawn a lot of attention in both the research community and commercial arena. In this paper, we analyze the factors that have impacts on the performance and scalability of Web applications. We discuss system architecture issues and describe approaches to deploying caching solutions for accelerating Web applications. We give the performance matrix measurement for network latency and various system architectures. The paper is summarized with a road map for creating high performance Web applications.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {1019–1030},
+numpages = {12},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287462,
+author = {Aggarwal, Charu C. and Yu, Philip S.},
+title = {An Automated System for Web Portal Personalization},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {This paper proposes a system for personalization of web portals. A specic implementation is discussed in reference to a web portal containing a news feed service. Techniques are proposed for effective categorization, management, and personalization of news feeds obtained from a live news wire service. The process consists of two steps: first manual input is required to build the domain knowledge which could be site-specific; then the automated component uses this domain knowledge in order to perform the personalization, categorization and presentation. Effective schemes for advertising are proposed, where the targeting is done using both the information about the user and the content of the web page on which the advertising icon appears. Automated techniques for identifying sudden variations in news patterns are described; these may be used for supporting news-alerts. A description of a version of this software for our customer web site is provided.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {1031–1040},
+numpages = {10},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287463,
+author = {Shegalov, German and Weikum, Gerhard and Barga, Roger and Lomet, David},
+title = {EOS: Exactly-Once E-Service Middleware},
+year = {2002},
+publisher = {VLDB Endowment},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {1043–1046},
+numpages = {4},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287464,
+author = {Keidl, Markus and Seltzsam, Stefan and Stocker, Konrad and Kemper, Alfons},
+title = {ServiceGlobe: Distributing E-Services across the Internet},
+year = {2002},
+publisher = {VLDB Endowment},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {1047–1050},
+numpages = {4},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287465,
+author = {Sheng, Quan Z. and Benatallah, Boualem and Dumas, Marlon and Mak, Eileen Oi-Yan},
+title = {SELF-SERV: A Platform for Rapid Composition of Web Services in a Peer-to-Peer Environment},
+year = {2002},
+publisher = {VLDB Endowment},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {1051–1054},
+numpages = {4},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287466,
+author = {Agrawal, Rakesh and Srikant, Ramakrishnan and Xu, Yirong},
+title = {Database Technologies for Electronic Commerce},
+year = {2002},
+publisher = {VLDB Endowment},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {1055–1058},
+numpages = {4},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287467,
+author = {Hsu, Wynne and Lee, Mong Li and Ooi, Beng Chin and Mohanty, Pranab Kumar and Teo, Keng Lik and Xia, Chenyi},
+title = {Advanced Database Technologies in a Diabetic Healthcare System},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {With the increased emphasis on healthcare worldwide, the issue of being able to efficiently and effectively manage large amount of patient information in diverse medium becomes critical. In this work, we will demonstrate how advanced database technologies are used in RETINA, an integrated system for the screening and management of diabetic patients. RETINA captures the profile and retinal images of diabetic patients and automatically processes the retina fundus images to extract interesting features. Given the wealth of information acquired, we employ novel techniques to determine the risk profile of patients for better patient care management and to target significant subpopulations for more detailed studies. The results of such studies can be used to introduce effective preventive measures for the targeted sub-populations.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {1059–1062},
+numpages = {4},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287468,
+author = {Lam, Kam-Yiu and Kwan, Alan and Ramamritham, Krithi},
+title = {RTMonitor: Real-Time Data Monitoring Using Mobile Agent Technologies},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {RTMonitor is a real-time data management system for traffic navigation applications. In our system, mobile vehicles initiate time-constrained navigation requests and RTMonitor calculates and communicates the best paths for the clients based on the road network and real-time traffic data. The correctness of the suggested routes highly depends on how well the system can maintain temporal consistency of the traffic data. To minimize the overheads of maintaining the real-time data, RTMonitor adopts a cooperative and distributed approach using mobile agents which can greatly reduce the amount of communications and improves the scalability of the system. To minimize the space and message overheads, we have designed a two-level traffic graph scheme to organize the real-time traffic data to support navigation requests. In the framework, the agents use an Adaptive PUSH OR PULL (APoP) scheme to maintain the temporal consistency of the traffic data. Our experiments using synthetic traffic data show that RTMonitor can provide efficient support to serve navigation requests in a timely fashion. Although several agents may be needed to serve a request, the size of each agent is very small (only a few kilobytes) and the resulting communication and processing overheads for data monitoring can be maintained within a reasonable level.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {1063–1066},
+numpages = {4},
+keywords = {mobile agents, real-time data, data monitoring, mobile computing},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287469,
+author = {Heymann, Stephan and Tham, Katja and Kilian, Axel and Wegner, Gunnar and Rieger, Peter and Merkel, Dieter and Freytag, Johann Christoph},
+title = {Viator: A Tool Family for Graphical Networking and Data View Creation},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {Web-based data sources, particularly in Life Sciences, grow in diversity and volume. Most of the data collections are equipped with common document search, hyperlink and retrieval utilities. However, users' wishes often exceed simple document-oriented inquiries. With respect to complex scientific issues it becomes imperative to aid knowledge gain from huge interdependent and thus hard to comprehend data collections more efficiently. Especially data categories that constitute relationships between two each or more items require potent set-oriented content management, visualization and navigation utilities. Moreover, strategies are needed to discover correlations within and between data sets of independent origin. Wherever data sets possess intrinsic graph structure (e.g. of tree, forest or network type) or can be transposed into such, graphical support is considered indispensable. The Viator tool family presented during this demo depicts large graphs on the whole in a hyperbolic geometry and provides means for set-oriented context mining as well as for correlation discovery across distinct data sets at once. Its utility is proven for but not restricted to data from functional genome, transcriptome and proteome research. Viator versions are being operated either as user-end database applications or as template-fed stand-alone solutions for graphical networking.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {1067–1070},
+numpages = {4},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287470,
+author = {Cilia, M. and Hasselmeyer, P. and Buchmann, A. P.},
+title = {Profiling and Internet Connectivity in Automotive Environments},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {This demo combines active DB technology in open, heterogeneous environments with the Web presence requirements of nomadic users. It illustrates these through profiling of users and Internet-enabled vehicles. A scenario is developed in which useful functionality is provided, such as instrument adjustments, maintenance and diagnostic information handling with the corresponding workflows, and convenience features, such as position-dependent language translation support and traffic information. The customization mechanism relies on an active functionality service.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {1071–1074},
+numpages = {4},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287471,
+author = {Santini, Simone and Gupta, Amarnath},
+title = {GeMBASE: A Geometric Mediator for Brain Analysis with Surface Ensembles},
+year = {2002},
+publisher = {VLDB Endowment},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {1075–1078},
+numpages = {4},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287472,
+author = {Mahnke, Wolfgang and Mathis, Christian and Steiert, Hans-Peter},
+title = {Extending an ORDBMS: The Statemachine Module},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {Extensibility is one of the mayor benefits of object-relational database management systems. We have used this system property to implement a StateMachine Module inside an object-relational database management system. The module allows the checking of dynamic integrity constraints as well as the execution of active behavior specified with the UML. Our approach demonstrates that extensibility can effectively be applied to integrate such dynamic aspects specified with UML statecharts into an object-relational database management system.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {1079–1082},
+numpages = {4},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287473,
+author = {Aditya, B. and Bhalotia, Gaurav and Chakrabarti, Soumen and Hulgeri, Arvind and Nakhe, Charuta and Parag, Parag and Sudarshan, S.},
+title = {BANKS: Browsing and Keyword Searching in Relational Databases},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {The BANKS system enables keyword-based search on databases, together with data and schema browsing. BANKS enables users to extract information in a simple manner without any knowledge of the schema or any need for writing complex queries. A user can get information by typing a few keywords, following hyperlinks, and interacting with controls on the displayed results. Extensive support for answer ranking forms a critical part of the BANKS system.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {1083–1086},
+numpages = {4},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287474,
+author = {Abitrboul, Serge and Benjellourn, Omar and Manolescu, Ioana and Milo, Tova and Weber, Roger},
+title = {Active XML: Peer-to-Peer Data and Web Services Integration},
+year = {2002},
+publisher = {VLDB Endowment},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {1087–1090},
+numpages = {4},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287475,
+author = {Bohannon, Philip and Freire, Juliana and Haritsa, Jayant R. and Roy, Prasan and Sim\'{e}on, J\'{e}r\^{o}me},
+title = {LegoDB: Customizing Relational Storage for XML Documents},
+year = {2002},
+publisher = {VLDB Endowment},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {1091–1094},
+numpages = {4},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287476,
+author = {Herlekar, Anandi and Deopujari, Atul and Ramamritham, Krithi and Gopale, Shyamsunder and Shukla, Shridhar},
+title = {EnTrans: A System for Flexible Consistency Maintenance in Directory Applications},
+year = {2002},
+publisher = {VLDB Endowment},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {1095–1098},
+numpages = {4},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287477,
+author = {Rantzau, Ralf and Constantinescu, Carmen and Heinkel, Uwe and Meinecke, Holger},
+title = {Champagne: Data Change Propagation for Heterogeneous Information Systems},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {Flexible methods supporting the data interchange between autonomous information systems are important for today's increasingly heterogeneous enterprise IT infrastructures. Updates, insertions, and deletions of data objects in autonomous information systems often have to trigger data changes in other autonomous systems, even if the distributed systems are not integrated into a global schema. We suggest a solution to this problem based on the propagation and transformation of data using several XML technologies. Our prototype manages dependencies between the schemas of distributed data sources and allows to define and process arbitrary actions on changed data by manipulating all dependent data sources. The prototype comprises a propagation engine that interprets scripts based on a workflow specification language, a data dependency specification tool, a system administration tool, and a repository that stores all relevant information for these tools.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {1099–1102},
+numpages = {4},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287478,
+author = {Sarawagi, Sunita and Bhamidipaty, Anuradha and Kirpal, Alok and Mouli, Chandra},
+title = {ALIAS: An Active Learning Led Interactive Deduplication System},
+year = {2002},
+publisher = {VLDB Endowment},
+abstract = {Deduplication, a key operation in integrating data from multiple sources, is a time-consuming, labor-intensive and domain-specific operation. We present our design of ALIAS that uses a novel approach to ease this task by limiting the manual effort to inputing simple, domain-specific attribute similarity functions and interactively labeling a small number of record pairs. We describe how active learning is useful in selecting informative examples of duplicates and nonduplicates that can be used to train a deduplication function. ALIAS provides mechanism for efficiently applying the function on large lists of records using a novel cluster-based execution model.},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {1103–1106},
+numpages = {4},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
+@inproceedings{10.5555/1287369.1287479,
+author = {Liu, Haifeng and Jacobsen, H.-Arno},
+title = {A-TOPSS: A Publish/Subscribe System Supporting Approximate Matching},
+year = {2002},
+publisher = {VLDB Endowment},
+booktitle = {Proceedings of the 28th International Conference on Very Large Data Bases},
+pages = {1107–1110},
+numpages = {4},
+location = {Hong Kong, China},
+series = {VLDB '02}
+}
+
