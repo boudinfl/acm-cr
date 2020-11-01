@@ -1,18 +1,42 @@
 -[1]	10.1023/A:1013689704352	Springer Machine Learning
--[2]	10.1137/S0097539701398375	SIAM sicomp
+-[2]	10.1137/S0097539701398375	sicomp
 [3]	10.1145/3018661.3018702	WSDM
+-[4]	10.1109/TKDE.2006.152	tkde
+-[5]	10.1609/aaai.v33i01.33013312	AAAI
 [6]	10.1145/3289600.3290999	WSDM
 [7]	10.1145/1924475.1924485	SIGIR-FORUM
 -[8]	10.1145/1860702.1860709	SIGMOD record
+-[9]	https://arxiv.org/abs/1808.08013
 -[10]	10.1145/2018396.2018423	Com ACM
+-[11]	https://arxiv.org/abs/1803.07347
 [12]	10.1145/3269206.3272021	CIKM
+-[13]	10.5555/1622737.1622748	JAIR
+-[14]	10.1177/0278364915619772	RBRS
+-[15]	https://arxiv.org/abs/1810.12027
+-[16]	http://proceedings.mlr.press/v48/mniha16.pdf	ICML
+-[17]	https://arxiv.org/abs/1312.5602	NIPS WS
+-[18]	https://arxiv.org/abs/1809.10658
+-[19]	10.18653/v1/D17-1061	EMNLP
+-[20]	https://openreview.net/forum?id=Hk-4OJbuWr	AAAI
 [21]	10.1145/3233770	ToIS
+-[22]	http://infosense.cs.georgetown.edu/publication/mdp-ol-extended-abstract.pdf
 [23]	10.1145/2396761.2398561	CIKM
+-[24]	10.5555/1046920.1088715	JMLR
+-[25]	10.1038/nature16961
+-[26]	10.1038/nature24270
+-[27]	10.1109/tnn.1998.712192	BOOK
 [28]	10.1145/2505515.2514700	CIKM
+-[29]	https://trec.nist.gov/pubs/trec26/papers/georgetown-DD.pdf
+-[30]	PHD THESIS
 [31]	10.1145/3077136.3080685	SIGIR
+-[32]	https://arxiv.org/abs/1809.03152
 [33]	10.1145/3209978.3210051	SIGIR
 [34]	10.1145/3077136.3080775	SIGIR
+-[35]	http://papers.nips.cc/paper/5146-estimation-bias-in-multi-armed-bandit-algorithms-for-search-advertising.pdf
+-[36]	10.1109/ICDM.2016.0177
 [37]	10.1145/2939672.2939878	KDD
 [38]	10.1145/3240323.3240374	RECSYS
 [39]	10.1145/3219819.3219886	KDD
+-[40]	https://arxiv.org/abs/1801.00209
 [41]	10.1145/2505515.2505690	CIKM
+-[42]	10.1145/3394486.3403384	KDD
