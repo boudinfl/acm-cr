@@ -52,3 +52,25 @@ Whereas retrieval work in the literature primarily studies approaches such as BM
 <narr> Narrative:
 
 </top>
+
+<top>
+<num> Number: 337182006
+<title> Parameter Tuning in Personal Search Systems
+
+<desc> Description:
+Modern search engines usually have multiple processing stages in their systems. A typical flow has a retrieval stage followed with a ranking stage, where the retrieval stage selects N documents and passes them to the ranking stage. The ranking stage often employs a machine learning model based on query, document, and user features. In this work, we present a parameter tuning approach which can be used for either stage. This approach is especially impactful for the retrieval stage – while a large amount of work focuses on optimizing the parameters of the ranking stage, relatively little work [3, 8] covers parameter tuning at the retrieval stage.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337182007
+<title> Parameter Tuning in Personal Search Systems
+
+<desc> Description:
+Given that an industrial search system can be very complex, a natural and common approach for parameter tuning is to treat the entire system as a black box and run A/B experiments with either some sort of parameter sweep (e.g. grid search, coordinate ascent) [22] or black-box optimization [17] over various parameters in a guess-and-check manner. The drawback to this is that 1) the user experience can be degraded due to exposure to poor quality results, 2) separate online experiments are required for each test set of parameters, and 3) the tuning process can take months.
+
+<narr> Narrative:
+
+</top>
