@@ -21,7 +21,7 @@ This test collection contains the documents (BibTeX reference files) from the fo
     - RecSys (07-20, #1279)
     - SAICSIT (02-19, #722), SIGIR (78-20, #5251), SIGMOD (75-20, #5378)
     - UAI (09, #76), UIST (88-19, #2076), UMAP (12-20, #728)
-    - VLDB (00-07, #1016)
+    - VLDB (00-07, #1016), PVLDB (08-20, #2717)
     - WI (03-19, #1127), WIDM (99-19, #214), WSDM (08-20, #1123), WWW (01-20, #6823)
 - Journals:
     - ACM Transactions on Intelligent Systems and Technology (TIST)
@@ -47,3 +47,11 @@ This test collection contains the documents (BibTeX reference files) from the fo
     - Journal of Artificial Intelligence Research (jair) (93-19, #1094)
     - Journal of the Association for Information Science and Technology (jaist) (14-20, #1245)
     - Journal of the American Society for Information Science and Technology (jasist) (01-13, #2261)
+    - Information Retrieval (infre) (99-19, #520)
+
+## Using bibtool to remove duplicates from Bibtex files
+
+```
+cat *.bib > big.bib
+bibtool -- 'print.deleted.entries = off' -d big.bib -o big-nodup.bib
+```

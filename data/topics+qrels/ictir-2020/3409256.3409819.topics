@@ -19,3 +19,25 @@ There are two settings for modeling cross-document interactions: re-ranking and 
 <narr> Narrative:
 
 </top>
+
+<top>
+<num> Number: 340981903
+<title> Permutation Equivariant Document Interaction Network for Neural Learning-to-Rank
+
+<desc> Description:
+While much of the research in LTR has been devoted to the evolution of ranking loss functions [11], the nature of the learned scoring function has largely remained the same: a univariate scoring function that computes a relevance score for a document in isolation.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340981904
+<title> Permutation Equivariant Document Interaction Network for Neural Learning-to-Rank
+
+<desc> Description:
+Most of the previous work in LTR [11] focuses on designing loss functions, ranging from pointwise to pairwise to listwise ones. Gradient Boosted Decision Trees (e.g., [10]) are regarded as the state-of-the-art models for LTR on benchmark datasets. Recently, neural network based models have attracted considerable attention [8, 12].
+
+<narr> Narrative:
+
+</top>
