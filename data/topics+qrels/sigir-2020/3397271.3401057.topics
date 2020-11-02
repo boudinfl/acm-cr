@@ -47,7 +47,18 @@ Traditional GCNs can only capture the homogeneous relationships among homogeneou
 <title> Attentional Graph Convolutional Networks for Knowledge Concept Recommendation in MOOCs in a Heterogeneous View
 
 <desc> Description:
-Some information recommendation models are based on heteroge- neous information networks. [32] proposed to use meta-paths based latent features to represent the connectivity between users and items along with different types of paths. Additionally, [10, 23, 24] proposed to use meta-path concept to mode the heterogeneous information in HIN. Different from previous methods, this study focuses on capture the representa- tions of different types of entities on the heterogeneous information network and fuses themselves content feature of different types of entities and the structure features of entities in MOOCs data together for the recommendation task of the knowledge concept.
+Some information recommendation models are based on heterogeneous information networks. [19] proposed Heaters, a graph-based model, to solve the general recommendation problem in heterogeneous networks. [32] proposed to use meta-paths based latent features to represent the connectivity between users and items along with different types of paths. Additionally, [10, 23, 24] proposed to use meta-path concept to mode the heterogeneous information in HIN. Different from previous methods, this study focuses on capture the representations of different types of entities on the heterogeneous information network and fuses themselves content feature of different types of entities and the structure features of entities in MOOCs data together for the recommendation task of the knowledge concept.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105706
+<title> Attentional Graph Convolutional Networks for Knowledge Concept Recommendation in MOOCs in a Heterogeneous View
+
+<desc> Description:
+Based on above observation, we propose Attentional Heterogeneous Graph Convolutional Deep Knowledge Recommender (ACKRec), an end-to-end framework for knowledge concept recommendation on MOOCs platform. To capture heterogeneous complex relationships, we model the MOOCs platform data as a heterogeneous information network (HIN) [23].
 
 <narr> Narrative:
 
