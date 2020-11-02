@@ -42,3 +42,5 @@ This test collection contains the documents (BibTeX reference files) from the fo
     - Foundations and Trends in Information Retrieval (trir) (06-18, #31)
     - The Journal of Machine Learning Research (jmlr) (01-19, #2042)
     - SIAM Journal on Computing (sicomp) (84-17, #2216)
+    - IEEE Transactions on Knowledge and Data Engineering (tkde) (89-20, #3308)
+    - Journal of Artificial Intelligence Research (jair) (93-19, #1094)
