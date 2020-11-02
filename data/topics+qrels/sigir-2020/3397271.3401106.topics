@@ -14,7 +14,7 @@ The value of evaluating information based on graded relevance has begun to recei
 <title> The Cortical Activity of Graded Relevance
 
 <desc> Description:
-IR systems have employed various techniques to capture the subjective aspect of relevance [2] to improve the effectiveness of retrieved results. Examples of such techniques are explicit [38], implicit (e.g.[24, 36]) and physiological [47] feedback.
+Relevance is also known to be subjective and difficult to quantify [48] since it depends on a searcher’s perception of information relating to a specific Information Need (IN) at a certain point in time [8, 57]. However, given the semantic gap between a searcher’s IN and their formulated queries [7, 27, 52], IR systems have employed various techniques to capture the subjective aspect of relevance [2] to improve the effectiveness of retrieved results. Examples of such techniques are explicit [38], implicit (e.g. [24, 36]) and physiological [47] feedback.
 
 <narr> Narrative:
 
@@ -36,7 +36,7 @@ More recently, researchers have shown the possibility of capturing the neural pr
 <title> The Cortical Activity of Graded Relevance
 
 <desc> Description:
-Despite significant attention dedicated to examining this concept, relevance is still not fully understood, and it is a subject of many ongoing scientific debates. Past research has investigated the concept of relevance at different granularity levels from both the user [29, 71] and system [35, 40] perspective. Within the system side, graded relevance (in comparison to the binary one) has been shown to improve ranking functions [34, 55].
+Relevance is the fundamental concept in IR [45, 57–59]. It plays a crucial role in the user-system interaction since it is a substantial indicator of system retrieval performance [8, 57]. Despite significant attention dedicated to examining this concept, relevance is still not fully understood, and it is a subject of many ongoing scientific debates. Past research has investigated the concept of relevance at different granularity levels from both the user [29, 71] and system [35, 40] perspective. Within the system side, graded relevance (in comparison to the binary one) has been shown to improve ranking functions [34, 55]. 
 
 <narr> Narrative:
 
@@ -65,11 +65,11 @@ Recent research has begun to apply brain imaging methods to study aspects of the
 </top>
 
 <top>
-<num> Number: 3401106-7
+<num> Number: 340110607
 <title> The Cortical Activity of Graded Relevance
 
 <desc> Description:
-Recent research using a neuroscience approach to investigate relevance might be categorised in two ways based on the context within which the relevance was measured. The first line of brain-imaging research has position relevance within the IR task. For instance, Moshfeghi and colleagues [48] employed functional magnetic resonance imaging (fMRI), to localise differences in brain activity in cortical regions during the processing of relevant vs non-relevant images. The research was able to identify regions engaged in the relevance judgement processing and the increased activation of these regions for relevant items was related to visuospatial working memory [49, 51].
+Recent research using a neuroscience approach to investigate relevance might be categorised in two ways based on the context within which the relevance was measured. The first line of brain-imaging research has position relevance within the IR task. For instance, [48] employed functional magnetic resonance imaging (fMRI), to localise differences in brain activity in cortical regions during the processing of relevant vs non-relevant images. The research was able to identify regions engaged in the relevance judgement processing and the increased activation of these regions for relevant items was related to visuospatial working memory [49, 51].
 
 <narr> Narrative:
 
@@ -77,6 +77,17 @@ Recent research using a neuroscience approach to investigate relevance might be 
 
 <top>
 <num> Number: 340110608
+<title> The Cortical Activity of Graded Relevance
+
+<desc> Description:
+Relevance has been inferred using EEG [25] or in combination with pupillometry or/and eye-tracking devices [22] within the context of the IR task, not only for textual stimuli but also for videos [37] and images [2]. For instance, [2] examined the processing of relevant vs non-relevant images, finding the most significant differences to occur between 500 – 800ms. [37] explored the ERPs associated with topical relevance of video skims and classified the data based on two specific ERP components (N400 and P600), which have been shown to be indicators of relevant and non-relevant judgements. Moreover, recent findings have shown that relevance can be predicted in real-time from EEG brain signals and eye movements while the user engages with the system and IR task [28].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110609
 <title> The Cortical Activity of Graded Relevance
 
 <desc> Description:

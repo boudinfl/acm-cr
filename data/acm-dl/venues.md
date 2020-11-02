@@ -5,16 +5,17 @@ This test collection contains the documents (BibTeX reference files) from the fo
 - Conferences:
     - ADCS (12-19, #115), AIRS (08-09, #120), AKBC (12-13, #44), AND (08-10, #48), AVI (94-20, #1108)
     - BooksOnline (08-12, #57)
-    - CHI/CHI-EA (82-20, #19446), CHIIR (16-20, #374), CIKM (93-20, #5497),
+    - CERI (16-18, #41), CHI/CHI-EA (82-20, #19446), CHIIR (16-20, #374), CIKM (93-20, #5497),
       CIR (11, #7), CompSci (13, #8), CSCW (86-19, #2726)
     - DL (96-00, #244), DocEng (01-20, #971), DTMBIO (08-15, #151), 
       DLRS (16-18, #24)
     - ECIR (08, 12, #161), ESAIR (09-15, #101)
     - FIRE (12-19, #91)
-    - HT (87-20, #1339)
+    - HCIR (12-13, #9), HT (87-20, #1339)
     - ICTIR (13-20, #313), IIIX (06-14, #242), IUI (93-20, #2043)
     - JCDL (01-20, #2183)
     - KDD (99-20, #3966)
+    - NLPIR (18-19, #43)
     - OzCHI (05-20, #1271)
     - PervasiveHealth (16, #60)
     - RecSys (07-20, #1279)
@@ -44,3 +45,5 @@ This test collection contains the documents (BibTeX reference files) from the fo
     - SIAM Journal on Computing (sicomp) (84-17, #2216)
     - IEEE Transactions on Knowledge and Data Engineering (tkde) (89-20, #3308)
     - Journal of Artificial Intelligence Research (jair) (93-19, #1094)
+    - Journal of the Association for Information Science and Technology (jaist) (14-20, #1245)
+    - Journal of the American Society for Information Science and Technology (jasist) (01-13, #2261)
