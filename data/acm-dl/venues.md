@@ -16,6 +16,7 @@ This test collection contains the documents (BibTeX reference files) from the fo
     - JCDL (01-20, #2183)
     - KDD (99-20, #3966)
     - NLPIR (18-19, #43)
+    - MobileHCI (05-20, #1741)
     - OzCHI (05-20, #1271)
     - PervasiveHealth (16, #60)
     - RecSys (07-20, #1279)
