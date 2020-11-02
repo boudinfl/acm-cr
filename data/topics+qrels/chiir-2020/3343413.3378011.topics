@@ -25,7 +25,7 @@ The most important line of exploiting user information for general web search is
 <title> Personalized Entity Search by Sparse and Scrutable User Profiles
 
 <desc> Description:
-Here, structured data is leveraged, most notably, purchases or ratings of products, likes of news, YouYube videos, Instagram photos, etc. This field has recently paid attention to scrutable recommendations that are comprehensible by end-users and pinpoint the specific data that explains how the recommended item was computed [6, 25, 38].
+Recommender systems have incorporated personalization as well, for ads, products and other contents (e.g., [17, 26, 31]). Here, structured data is leveraged, most notably, purchases or ratings of products, likes of news, YouYube videos, Instagram photos, etc. This field has recently paid attention to scrutable recommendations that are comprehensible by end-users and pinpoint the specific data that explains how the recommended item was computed [6, 25, 38].
 
 <narr> Narrative:
 
@@ -52,7 +52,6 @@ Leveraging this background knowledge for answer ranking, query expansion, and au
 <narr> Narrative:
 
 </top>
-
 
 <top>
 <num> Number: 337801106
@@ -104,6 +103,17 @@ The same assumption holds for prior work on query auto-completion [12, 29], perh
 
 <desc> Description:
 The closest to our work is [3] on personalized product search. It is based on learning embeddings for users and items in the same semantic space, by leveraging user-written reviews on item pages. However, such rich data about individual users is not easily available for general entity search.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337801111
+<title> Personalized Entity Search by Sparse and Scrutable User Profiles
+
+<desc> Description:
+Entity search about people, products or events has received great attention and has been incorporated into major search engines (see, e.g., [4, 7] and further references there). This methodology leverages large knowledge graphs to infer the focus of the query and/or return crisp entities as answers. However, except for special cases such as music recommendation [13] and consumer product search [2], there is hardly any work on personalized entity search with individual user traits.
 
 <narr> Narrative:
 

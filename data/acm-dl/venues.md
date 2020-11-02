@@ -9,7 +9,7 @@ This test collection contains the documents (BibTeX reference files) from the fo
       CIR (11, #7), CompSci (13, #8), CSCW (86-19, #2726)
     - DL (96-00, #244), DocEng (01-20, #971), DTMBIO (08-15, #151), 
       DLRS (16-18, #24)
-    - ECIR (08, 12, #161), ESAIR (09-15, #101)
+    - ECIR (02-14, #921), ESAIR (09-15, #101)
     - FIRE (12-19, #91)
     - HCIR (12-13, #9), HT (87-20, #1339)
     - ICTIR (13-20, #313), IIIX (06-14, #242), IUI (93-20, #2043)
@@ -34,6 +34,7 @@ This test collection contains the documents (BibTeX reference files) from the fo
     - ACM Transactions on Knowledge Discovery from Data (TKDD) (07-20, #515)
     - ACM Transactions on Asian and Low-Resource Language Information Processing
       (TALLIP) (02-20, #490)
+    - ACM Transactions on Management Information Systems (tmis) (08-20, #200)
     - IEEE/ACM Transactions on Audio, Speech and Language Processing (TASLP)
       (14-20, #1237)
     - Proceedings of the ACM on Human-Computer Interaction (PACMHCI)
