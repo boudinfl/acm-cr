@@ -1,0 +1,716 @@
+@inproceedings{10.1145/1065167.1065169,
+author = {Lam, Monica S. and Whaley, John and Livshits, V. Benjamin and Martin, Michael C. and Avots, Dzintars and Carbin, Michael and Unkel, Christopher},
+title = {Context-Sensitive Program Analysis as Database Queries},
+year = {2005},
+isbn = {1595930620},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1065167.1065169},
+doi = {10.1145/1065167.1065169},
+abstract = {Program analysis has been increasingly used in software
+engineering tasks such as auditing programs for security
+vulnerabilities and finding errors in general. Such tools often
+require analyses much more sophisticated than those traditionally
+used in compiler optimizations. In particular, context-sensitive
+pointer alias information is a prerequisite for any sound and
+precise analysis that reasons about uses of heap objects in a
+program. Context-sensitive analysis is challenging because there
+are over 1014 contexts in a typical large program, even
+after recursive cycles are collapsed. Moreover, pointers cannot be
+resolved in general without analyzing the entire program.This paper presents a new framework, based on the concept of
+deductive databases, for context-sensitive program analysis. In
+this framework, all program information is stored as relations;
+data access and analyses are written as Datalog queries. To handle
+the large number of contexts in a program, the database represents
+relations with binary decision diagrams (BDDs). The system we have
+developed, called bddbddb, automatically translates database
+queries into highly optimized BDD programs.Our preliminary experiences suggest that a large class of
+analyses involving heap objects can be described succinctly in
+Datalog and implemented efficiently with BDDs. To make developing
+application-specific analyses easy for programmers, we have also
+created a language called PQL that makes a subset of Datalog
+queries more intuitive to define. We have used the language to find
+many security holes in Web applications.},
+booktitle = {Proceedings of the Twenty-Fourth ACM SIGMOD-SIGACT-SIGART Symposium on Principles of Database Systems},
+pages = {1–12},
+numpages = {12},
+location = {Baltimore, Maryland},
+series = {PODS '05}
+}
+
+@inproceedings{10.1145/1065167.1065171,
+author = {Arenas, Marcelo and Libkin, Leonid},
+title = {XML Data Exchange: Consistency and Query Answering},
+year = {2005},
+isbn = {1595930620},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1065167.1065171},
+doi = {10.1145/1065167.1065171},
+abstract = {Data exchange is the problem of finding an instance of a target schema, given an instance of a source schema and a specification of the relationship between the source and the target. Theoretical foundations of data exchange have recently been investigated for relational data.In this paper, we start looking into the basic properties of XML data exchange, that is, restructuring of XML documents that conform to a source DTD under a target DTD, and answering queries written over the target schema. We define XML data exchange settings in which source-to-target dependencies refer to the hierarchical structure of the data. Combining DTDs and dependencies makes some XML data exchange settings inconsistent. We investigate the consistency problem and determine its exact complexity.We then move to query answering, and prove a dichotomy theorem that classifies data exchange settings into those over which query answering is tractable, and those over which it is coNP-complete, depending on classes of regular expressions used in DTDs. Furthermore, for all tractable cases we give polynomial-time algorithms that compute target XML documents over which queries can be answered.},
+booktitle = {Proceedings of the Twenty-Fourth ACM SIGMOD-SIGACT-SIGART Symposium on Principles of Database Systems},
+pages = {13–24},
+numpages = {12},
+location = {Baltimore, Maryland},
+series = {PODS '05}
+}
+
+@inproceedings{10.1145/1065167.1065172,
+author = {Benedikt, Michael and Fan, Wenfei and Geerts, Floris},
+title = {XPath Satisfiability in the Presence of DTDs},
+year = {2005},
+isbn = {1595930620},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1065167.1065172},
+doi = {10.1145/1065167.1065172},
+abstract = {We study the satisfiability problem associated with XPath in the presence of DTDs. This is the problem of determining, given a query p in an XPath fragment and a DTD D, whether or not there exists an XML document T such that T conforms to D and the answer of p on T is nonempty. We consider a variety of XPath fragments widely used in practice, and investigate the impact of different XPath operators on satisfiability analysis. We first study the problem for negation-free XPath fragments with and without upward axes, recursion and data-value joins, identifying which factors lead to tractability and which to NP-completeness. We then turn to fragments with negation but without data values, establishing lower and upper bounds in the absence and in the presence of upward modalities and recursion. We show that with negation the complexity ranges from PSPACE to EXPTIME. Moreover, when both data values and negation are in place, we find that the complexity ranges from NEXPTIME to undecidable. Finally, we give a finer analysis of the problem for particular classes of DTDs, exploring the impact of various DTD constructs, identifying tractable cases, as well as providing the complexity in the query size alone.},
+booktitle = {Proceedings of the Twenty-Fourth ACM SIGMOD-SIGACT-SIGART Symposium on Principles of Database Systems},
+pages = {25–36},
+numpages = {12},
+location = {Baltimore, Maryland},
+series = {PODS '05}
+}
+
+@inproceedings{10.1145/1065167.1065173,
+author = {Vansummeren, Stijn},
+title = {Deciding Well-Definedness of XQuery Fragments},
+year = {2005},
+isbn = {1595930620},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1065167.1065173},
+doi = {10.1145/1065167.1065173},
+abstract = {Unlike in traditional query languages, expressions in XQuery can have an undefined meaning (i.e., these expressions produce a run-time error). It is hence natural to ask whether we can solve the well-definedness problem for XQuery: given an expression and an input type, check whether the semantics of the expression is defined for all inputs adhering to the input type. In this paper we investigate the well-definedness problem for non-recursive fragments of XQuery under a bounded-depth type system. We identify properties of base operations which can make the problem undecidable and give conditions which are sufficient to ensure decidability.},
+booktitle = {Proceedings of the Twenty-Fourth ACM SIGMOD-SIGACT-SIGART Symposium on Principles of Database Systems},
+pages = {37–48},
+numpages = {12},
+location = {Baltimore, Maryland},
+series = {PODS '05}
+}
+
+@inproceedings{10.1145/1065167.1065174,
+author = {Segoufin, Luc and Vianu, Victor},
+title = {Views and Queries: Determinacy and Rewriting},
+year = {2005},
+isbn = {1595930620},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1065167.1065174},
+doi = {10.1145/1065167.1065174},
+abstract = {We investigate the question of whether a query Q can be answered using a set V of views. We first define the problem in information-theoretic terms: we say that V determines Q if V provides enough information to uniquely determine the answer to Q. Next, we look at the problem of rewriting Q in terms of V using a specific language. Given a view language V and query language Q, we say that a rewriting language R is complete for Vto-Q rewritings if every Q ε Q can be rewritten in terms of V ε v using a query in R, whenever V determines Q. While query rewriting using views has been extensively investigated for some specific languages, the connection to the information-theoretic notion of determinacy, and the question of completeness of a rewriting language, have received little attention. In this paper we investigate systematically the notion of determinacy and its connection to rewriting. The results concern decidability of determinacy for various view and query languages, as well as the power required of complete rewriting languages. We consider languages ranging from first-order to conjunctive queries.},
+booktitle = {Proceedings of the Twenty-Fourth ACM SIGMOD-SIGACT-SIGART Symposium on Principles of Database Systems},
+pages = {49–60},
+numpages = {12},
+location = {Baltimore, Maryland},
+series = {PODS '05}
+}
+
+@inproceedings{10.1145/1065167.1065176,
+author = {Kolaitis, Phokion G.},
+title = {Schema Mappings, Data Exchange, and Metadata Management},
+year = {2005},
+isbn = {1595930620},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1065167.1065176},
+doi = {10.1145/1065167.1065176},
+abstract = {Schema mappings are high-level specifications that describe the relationship between database schemas. Schema mappings are prominent in several different areas of database management, including database design, information integration, data exchange, metadata management, and peer-to-peer data management systems. Our main aim in this paper is to present an overview of recent advances in data exchange and metadata management, where the schema mappings are between relational schemas. In addition, we highlight some research issues and directions for future work.},
+booktitle = {Proceedings of the Twenty-Fourth ACM SIGMOD-SIGACT-SIGART Symposium on Principles of Database Systems},
+pages = {61–75},
+numpages = {15},
+location = {Baltimore, Maryland},
+series = {PODS '05}
+}
+
+@inproceedings{10.1145/1065167.1065178,
+author = {Leinders, Dirk and Van den Bussche, Jan},
+title = {On the Complexity of Division and Set Joins in the Relational Algebra},
+year = {2005},
+isbn = {1595930620},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1065167.1065178},
+doi = {10.1145/1065167.1065178},
+abstract = {We show that any expression of the relational division operator in the relational algebra with union, difference, projection, selection, and equijoins, must produce intermediate results of quadratic size. To prove this result, we show a dichotomy theorem about intermediate sizes of relational algebra expressions (they are either all linear, or at least one is quadratic); we link linear relational algebra expressions to expressions using only semijoins instead of joins; and we link these semijoin algebra expressions to the guarded fragment of first-order logic.},
+booktitle = {Proceedings of the Twenty-Fourth ACM SIGMOD-SIGACT-SIGART Symposium on Principles of Database Systems},
+pages = {76–83},
+numpages = {8},
+location = {Baltimore, Maryland},
+series = {PODS '05}
+}
+
+@inproceedings{10.1145/1065167.1065179,
+author = {Koch, Christoph},
+title = {On the Complexity of Nonrecursive XQuery and Functional Query Languages on Complex Values},
+year = {2005},
+isbn = {1595930620},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1065167.1065179},
+doi = {10.1145/1065167.1065179},
+abstract = {This paper studies the complexity of evaluating functional query languages for complex values such as monad algebra and the recursion-free fragment of XQuery.We show that monad algebra with equality restricted to atomic values is complete for the class TA[2o(n), O(n)] of problems solvable in linear exponential time with a linear number of alternations. The monotone fragment of monad algebra with atomic value equality but without negation is complete for nondeterministic exponential time. For monad algebra with deep equality, we establish TA[2o(n), O(n)] lower and exponential-space upper bounds.Then we study a fragment of XQuery, Core XQuery, that seems to incorporate all the features of a query language on complex values that are traditionally deemed essential. A close connection between monad algebra on lists and Core XQuery (with "child" as the only axis) is exhibited, and it is shown that these languages are expressively equivalent up to representation issues. We show that Core XQuery is just as hard as monad algebra w.r.t. combined complexity, and that it is in TC0 if the query is assumed fixed.},
+booktitle = {Proceedings of the Twenty-Fourth ACM SIGMOD-SIGACT-SIGART Symposium on Principles of Database Systems},
+pages = {84–97},
+numpages = {14},
+location = {Baltimore, Maryland},
+series = {PODS '05}
+}
+
+@inproceedings{10.1145/1065167.1065180,
+author = {Cohen, Sara and Sagiv, Yehoshua},
+title = {An Incremental Algorithm for Computing Ranked Full Disjunctions},
+year = {2005},
+isbn = {1595930620},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1065167.1065180},
+doi = {10.1145/1065167.1065180},
+abstract = {The full disjunction is a variation of the join operator that maximally combines tuples from connected relations, while preserving all information in the relations. The full disjunction can be seen as a natural extension of the binary outerjoin operator to an arbitrary number of relations and is a useful operator for information integration. This paper presents the algorithm INCREMENTALFD for computing the full disjunction of a set of relations. INCREMENTALFD improves upon previous algorithms for computing the full disjunction in three ways. First, it has a lower total run-time when computing the full result and a lower runtime when computing only k tuples of the result, for any constant k. Second, for a natural class of ranking functions, INCREMENTALFD returns tuples in ranking order. Third, INCREMENTALFD can be adapted to have a block-based execution, instead of a tuple-based execution.},
+booktitle = {Proceedings of the Twenty-Fourth ACM SIGMOD-SIGACT-SIGART Symposium on Principles of Database Systems},
+pages = {98–107},
+numpages = {10},
+location = {Baltimore, Maryland},
+series = {PODS '05}
+}
+
+@inproceedings{10.1145/1065167.1065182,
+author = {Abadi, Mart\'{\i}n and Warinschi, Bogdan},
+title = {Security Analysis of Cryptographically Controlled Access to XML Documents},
+year = {2005},
+isbn = {1595930620},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1065167.1065182},
+doi = {10.1145/1065167.1065182},
+abstract = {Some promising recent schemes for XML access control employ encryption for implementing security policies on published data, avoiding data duplication. In this paper we study one such scheme, due to Miklau and Suciu. That scheme was introduced with some intuitive explanations and goals, but without precise definitions and guarantees for the use of cryptography (specifically, symmetric encryption and secret sharing). We bridge this gap in the present work. We analyze the scheme in the context of the rigorous models of modern cryptography. We obtain formal results in simple, symbolic terms close to the vocabulary of Miklau and Suciu. We also obtain more detailed computational results that establish security against probabilistic polynomial-time adversaries. Our approach, which relates these two layers of the analysis, continues a recent thrust in security research and may be applicable to a broad class of systems that rely on cryptographic data protection.},
+booktitle = {Proceedings of the Twenty-Fourth ACM SIGMOD-SIGACT-SIGART Symposium on Principles of Database Systems},
+pages = {108–117},
+numpages = {10},
+location = {Baltimore, Maryland},
+series = {PODS '05}
+}
+
+@inproceedings{10.1145/1065167.1065183,
+author = {Kenthapadi, Krishnaram and Mishra, Nina and Nissim, Kobbi},
+title = {Simulatable Auditing},
+year = {2005},
+isbn = {1595930620},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1065167.1065183},
+doi = {10.1145/1065167.1065183},
+abstract = {Given a data set consisting of private information about individuals, we consider the online query auditing problem: given a sequence of queries that have already been posed about the data, their corresponding answers -- where each answer is either the true answer or "denied" (in the event that revealing the answer compromises privacy) -- and given a new query, deny the answer if privacy may be breached or give the true answer otherwise. A related problem is the offline auditing problem where one is given a sequence of queries and all of their true answers and the goal is to determine if a privacy breach has already occurred.We uncover the fundamental issue that solutions to the offline auditing problem cannot be directly used to solve the online auditing problem since query denials may leak information. Consequently, we introduce a new model called simulatable auditing where query denials provably do not leak information. We demonstrate that max queries may be audited in this simulatable paradigm under the classical definition of privacy where a breach occurs if a sensitive value is fully compromised. We also introduce a probabilistic notion of (partial) compromise. Our privacy definition requires that the a-priori probability that a sensitive value lies within some small interval is not that different from the posterior probability (given the query answers). We demonstrate that sum queries can be audited in a simulatable fashion under this privacy definition.},
+booktitle = {Proceedings of the Twenty-Fourth ACM SIGMOD-SIGACT-SIGART Symposium on Principles of Database Systems},
+pages = {118–127},
+numpages = {10},
+location = {Baltimore, Maryland},
+series = {PODS '05}
+}
+
+@inproceedings{10.1145/1065167.1065184,
+author = {Blum, Avrim and Dwork, Cynthia and McSherry, Frank and Nissim, Kobbi},
+title = {Practical Privacy: The SuLQ Framework},
+year = {2005},
+isbn = {1595930620},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1065167.1065184},
+doi = {10.1145/1065167.1065184},
+abstract = {We consider a statistical database in which a trusted administrator introduces noise to the query responses with the goal of maintaining privacy of individual database entries. In such a database, a query consists of a pair (S, f) where S is a set of rows in the database and f is a function mapping database rows to {0, 1}. The true answer is ΣiεS f(di), and a noisy version is released as the response to the query. Results of Dinur, Dwork, and Nissim show that a strong form of privacy can be maintained using a surprisingly small amount of noise -- much less than the sampling error -- provided the total number of queries is sublinear in the number of database rows. We call this query and (slightly) noisy reply the SuLQ (Sub-Linear Queries) primitive. The assumption of sublinearity becomes reasonable as databases grow increasingly large.We extend this work in two ways. First, we modify the privacy analysis to real-valued functions f and arbitrary row types, as a consequence greatly improving the bounds on noise required for privacy. Second, we examine the computational power of the SuLQ primitive. We show that it is very powerful indeed, in that slightly noisy versions of the following computations can be carried out with very few invocations of the primitive: principal component analysis, k means clustering, the Perceptron Algorithm, the ID3 algorithm, and (apparently!) all algorithms that operate in the in the statistical query learning model [11].},
+booktitle = {Proceedings of the Twenty-Fourth ACM SIGMOD-SIGACT-SIGART Symposium on Principles of Database Systems},
+pages = {128–138},
+numpages = {11},
+location = {Baltimore, Maryland},
+series = {PODS '05}
+}
+
+@inproceedings{10.1145/1065167.1065185,
+author = {Zhong, Sheng and Yang, Zhiqiang and Wright, Rebecca N.},
+title = {Privacy-Enhancing <i>k</i>-Anonymization of Customer Data},
+year = {2005},
+isbn = {1595930620},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1065167.1065185},
+doi = {10.1145/1065167.1065185},
+abstract = {In order to protect individuals' privacy, the technique of k-anonymization has been proposed to de-associate sensitive attributes from the corresponding identifiers. In this paper, we provide privacy-enhancing methods for creating k-anonymous tables in a distributed scenario. Specifically, we consider a setting in which there is a set of customers, each of whom has a row of a table, and a miner, who wants to mine the entire table. Our objective is to design protocols that allow the miner to obtain a k-anonymous table representing the customer data, in such a way that does not reveal any extra information that can be used to link sensitive attributes to corresponding identifiers, and without requiring a central authority who has access to all the original data. We give two different formulations of this problem, with provably private solutions. Our solutions enhance the privacy of k-anonymization in the distributed scenario by maintaining end-to-end privacy from the original customer data to the final k-anonymous results.},
+booktitle = {Proceedings of the Twenty-Fourth ACM SIGMOD-SIGACT-SIGART Symposium on Principles of Database Systems},
+pages = {139–147},
+numpages = {9},
+location = {Baltimore, Maryland},
+series = {PODS '05}
+}
+
+@inproceedings{10.1145/1065167.1065187,
+author = {Gottlob, Georg},
+title = {Computing Cores for Data Exchange: New Algorithms and Practical Solutions},
+year = {2005},
+isbn = {1595930620},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1065167.1065187},
+doi = {10.1145/1065167.1065187},
+abstract = {Data Exchange is the problem of inserting data structured under a source schema into a target schema of different structure (possibly with integrity constraints), while reflecting the source data as accurately as possible. We study computational issues related to data exchange in the setting of Fagin, Kolaitis, and Popa(PODS'03). We use the technique of hypertree decompositions to derive improved algorithms for computing the core of a relational instance with labeled nulls, a problem we show to be fixed-parameter intractable with respect to the block size of the input instances. We show that computing the core of a data exchange problem is tractable for two large and useful classes of target constraints. The first class includes functional dependencies and weakly acyclic inclusion dependencies. The second class consists of full tuple generating dependencies and arbitrary equation generating dependencies. Finally, we show that computing cores is NP-hard in presence of a system-predicate NULL(x), which is true iff x is a null value.},
+booktitle = {Proceedings of the Twenty-Fourth ACM SIGMOD-SIGACT-SIGART Symposium on Principles of Database Systems},
+pages = {148–159},
+numpages = {12},
+location = {Baltimore, Maryland},
+series = {PODS '05}
+}
+
+@inproceedings{10.1145/1065167.1065188,
+author = {Fuxman, Ariel and Kolaitis, Phokion G. and Miller, Ren\'{e}e J. and Tan, Wang-Chiew},
+title = {Peer Data Exchange},
+year = {2005},
+isbn = {1595930620},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1065167.1065188},
+doi = {10.1145/1065167.1065188},
+abstract = {In this paper, we introduce and study a framework, called
+peer data exchange, for sharing and exchanging data between
+peers. This framework is a special case of a full-fledged peer data
+management system and a generalization of data exchange between a
+source schema and a target schema. The motivation behind peer data
+exchange is to model authority relationships between peers, where a
+source peer may contribute data to a target peer, specified using
+source-to-target constraints, and a target peer may use
+target-to-source constraints to restrict the data it is willing to
+receive, but cannot modify the data of the source peer.A fundamental algorithmic problem in this framework is that of
+deciding the existence of a solution: given a source instance and a
+target instance for a fixed peer data exchange setting, can the
+target instance be augmented in such a way that the source instance
+and the augmented target instance satisfy all constraints of the
+setting? We investigate the computational complexity of the problem
+for peer data exchange settings in which the constraints are given
+by tuple generating dependencies. We show that this problem is
+always in NP, and that it can be NP-complete even for "acyclic"
+peer data exchange settings. We also show that the data complexity
+of the certain answers of target conjunctive queries is in coNP,
+and that it can be coNP-complete even for "acyclic" peer data
+exchange settings.After this, we explore the boundary between tractability and
+intractability for the problem of deciding the existence of a
+solution. To this effect, we identify broad syntactic conditions on
+the constraints between the peers under which testing for solutions
+is solvable in polynomial time. These syntactic conditions include
+the important special case of peer data exchange in which the
+source-to-target constraints are arbitrary tuple generating
+dependencies, but the target-to-source constraints are
+local-as-view dependencies. Finally, we show that the syntactic
+conditions we identified are tight, in the sense that minimal
+relaxations of them lead to intractability.},
+booktitle = {Proceedings of the Twenty-Fourth ACM SIGMOD-SIGACT-SIGART Symposium on Principles of Database Systems},
+pages = {160–171},
+numpages = {12},
+location = {Baltimore, Maryland},
+series = {PODS '05}
+}
+
+@inproceedings{10.1145/1065167.1065189,
+author = {Nash, Alan and Bernstein, Philip A. and Melnik, Sergey},
+title = {Composition of Mappings given by Embedded Dependencies},
+year = {2005},
+isbn = {1595930620},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1065167.1065189},
+doi = {10.1145/1065167.1065189},
+abstract = {Composition of mappings between schemas is essential to support schema evolution, data exchange, data integration, and other data management tasks. In many applications, mappings are given by embedded dependencies. In this paper, we study the issues involved in composing such mappings.},
+booktitle = {Proceedings of the Twenty-Fourth ACM SIGMOD-SIGACT-SIGART Symposium on Principles of Database Systems},
+pages = {172–183},
+numpages = {12},
+location = {Baltimore, Maryland},
+series = {PODS '05}
+}
+
+@inproceedings{10.1145/1065167.1065191,
+author = {Fagin, Ronald and Guha, R. and Kumar, Ravi and Novak, Jasmine and Sivakumar, D. and Tomkins, Andrew},
+title = {Multi-Structural Databases},
+year = {2005},
+isbn = {1595930620},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1065167.1065191},
+doi = {10.1145/1065167.1065191},
+abstract = {We introduce the Multi-Structural Database, a new data
+framework to support efficient analysis of large, complex data
+sets. An instance of the model consists of a set of data objects,
+together with a schema that specifies segmentations of the set of
+data objects according to multiple distinct criteria (e.g., into a
+taxonomy based on a hierarchical attribute). Within this model, we
+develop a rich set of analytical operations and design highly
+efficient algorithms for these operations. Our operations are
+formulated as optimization problems, and allow the user to analyze
+the underlying data in terms of the allowed segmentations.Our algorithms and results extend those of Fagin et al. [8] who
+studied composition of mappings given by several kinds of
+constraints. In particular, they proved that full source-to-target
+tuple-generating dependencies (tgds) are closed under composition,
+but embedded source-to-target tgds are not. They introduced a class
+of second-order constraints, <i>SO tgds</i>, that is
+closed under composition and has desirable properties for data
+exchange.We study constraints that need not be source-to-target and we
+concentrate on obtaining (first-order) embedded dependencies. As
+part of this study, we also consider full dependencies and
+second-order constraints that arise from Skolemizing embedded
+dependencies. For each of the three classes of mappings that we
+study, we provide (a) an algorithm that attempts to compute the
+composition and (b) sufficient conditions on the input mappings
+that guarantee that the algorithm will succeed.In addition, we give several negative results. In particular, we
+show that full dependencies are not closed under composition, and
+that second-order dependencies that are not limited to be
+source-to-target are not closed under restricted composition.
+Furthermore, we show that determining whether the composition can
+be given by these kinds of dependencies is undecidable.},
+booktitle = {Proceedings of the Twenty-Fourth ACM SIGMOD-SIGACT-SIGART Symposium on Principles of Database Systems},
+pages = {184–195},
+numpages = {12},
+location = {Baltimore, Maryland},
+series = {PODS '05}
+}
+
+@inproceedings{10.1145/1065167.1065192,
+author = {Cheng, David and Vempala, Santosh and Kannan, Ravi and Wang, Grant},
+title = {A Divide-and-Merge Methodology for Clustering},
+year = {2005},
+isbn = {1595930620},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1065167.1065192},
+doi = {10.1145/1065167.1065192},
+abstract = {We present a divide-and-merge methodology for clustering a set of objects that combines a top-down "divide" phase with a bottom-up "merge" phase. In contrast, previous algorithms either use top-down or bottom-up methods to construct a hierarchical clustering or produce a flat clustering using local search (e.g., k-means). Our divide phase produces a tree whose leaves are the elements of the set. For this phase, we use an efficient spectral algorithm. The merge phase quickly finds an optimal tree-respecting partition for many natural objective functions, e.g., k-means, min-diameter, min-sum, correlation clustering, etc., We present a meta-search engine that uses this methodology to cluster results from web searches. We also give empirical results on text-based data where the algorithm performs better than or competitively with existing clustering algorithms.},
+booktitle = {Proceedings of the Twenty-Fourth ACM SIGMOD-SIGACT-SIGART Symposium on Principles of Database Systems},
+pages = {196–205},
+numpages = {10},
+location = {Baltimore, Maryland},
+series = {PODS '05}
+}
+
+@inproceedings{10.1145/1065167.1065193,
+author = {Fekete, Alan},
+title = {Allocating Isolation Levels to Transactions},
+year = {2005},
+isbn = {1595930620},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1065167.1065193},
+doi = {10.1145/1065167.1065193},
+abstract = {Serializability is a key property for executions of OLTP systems; without this, integrity constraints on the data can be violated due to concurrent activity. Serializability can be guaranteed regardless of application logic, by using a serializable concurrency control mechanism such as strict two-phase locking (S2PL); however the reduction in concurrency from this is often too great, and so a DBMS offers the DBA the opportunity to use different concurrency control mechanisms for some transactions, if it is safe to do so. However, little theory has existed to decide when it is safe! In this paper, we discuss the problem of taking a collection of transactions, and allocating each to run at an appropriate isolation level (and thus use a particular concurrency control mechanism), while still ensuring that every execution will be conflict serializable. When each transaction can use either S2PL, or snapshot isolation, we characterize exactly the acceptable allocations, and provide a simple graph-based algorithm which determines the weakest acceptable allocation.},
+booktitle = {Proceedings of the Twenty-Fourth ACM SIGMOD-SIGACT-SIGART Symposium on Principles of Database Systems},
+pages = {206–215},
+numpages = {10},
+keywords = {consistency, snapshot isolation, anomaly, serializability, two-phase locking, concurrency control},
+location = {Baltimore, Maryland},
+series = {PODS '05}
+}
+
+@inproceedings{10.1145/1065167.1065195,
+author = {Bar-Yossef, Ziv and Fontoura, Marcus and Josifovski, Vanja},
+title = {Buffering in Query Evaluation over XML Streams},
+year = {2005},
+isbn = {1595930620},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1065167.1065195},
+doi = {10.1145/1065167.1065195},
+abstract = {All known algorithms for evaluating advanced XPath queries (e.g., ones with predicates or with closure axes) on XML streams employ buffers to temporarily store fragments of the document stream. In many cases, these buffers grow very large and constitute a major memory bottleneck. In this paper, we identify two broad classes of evaluation problems that independently necessitate the use of large memory buffers in evaluation of queries over XML streams: (1) full-fledged evaluation (as opposed to just filtering) of queries with predicates; (2) evaluation (whether full-fledged or filtering) of queries with "multi-variate" predicates.We prove quantitative lower bounds on the amount of memory required in each of these scenarios. The bounds are stated in terms of novel document properties that we define. We show that these scenarios, in combination with query evaluation over recursive documents, cover the cases in which large buffers are required. Finally, we present algorithms that match the lower bounds for an important fragment of XPath.},
+booktitle = {Proceedings of the Twenty-Fourth ACM SIGMOD-SIGACT-SIGART Symposium on Principles of Database Systems},
+pages = {216–227},
+numpages = {12},
+location = {Baltimore, Maryland},
+series = {PODS '05}
+}
+
+@inproceedings{10.1145/1065167.1065196,
+author = {Dobra, Alin},
+title = {Histograms Revisited: When Are Histograms the Best Approximation Method for Aggregates over Joins?},
+year = {2005},
+isbn = {1595930620},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1065167.1065196},
+doi = {10.1145/1065167.1065196},
+abstract = {The traditional statistical assumption for interpreting histograms and justifying approximate query processing methods based on them is that all elements in a bucket have the same frequency -- the so called uniform distribution assumption. In this paper we show that a significantly less restrictive statistical assumption - the elements within a bucket are randomly arranged even though they might have different frequencies -- leads to identical formulae for approximating aggregate queries using histograms. This observation allows us to identify scenarios in which histograms are well suited as approximation methods -- in fact we show that in these situations sampling and sketching are significantly worse -- and provide tight error guarantees for the quality of approximations. At the same time we show that, on average, histograms are rather poor approximators outside these scenarios.},
+booktitle = {Proceedings of the Twenty-Fourth ACM SIGMOD-SIGACT-SIGART Symposium on Principles of Database Systems},
+pages = {228–237},
+numpages = {10},
+location = {Baltimore, Maryland},
+series = {PODS '05}
+}
+
+@inproceedings{10.1145/1065167.1065197,
+author = {Grohe, Martin and Schweikardt, Nicole},
+title = {Lower Bounds for Sorting with Few Random Accesses to External Memory},
+year = {2005},
+isbn = {1595930620},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1065167.1065197},
+doi = {10.1145/1065167.1065197},
+abstract = {We consider a scenario where we want to query a large dataset that is stored in external memory and does not fit into main memory. The most constrained resources in such a situation are the size of the main memory and the number of random accesses to external memory. We note that sequentially streaming data from external memory through main memory is much less prohibitive.We propose an abstract model of this scenario in which we restrict the size of the main memory and the number of random accesses to external memory, but do not restrict sequential reads. A distinguishing feature of our model is that it admits the usage of unlimited external memory for storing intermediate results, such as several hard disks that can be accessed in parallel. In practice, such auxiliary external memory can be crucial. For example, in a first sequential pass the data can be annotated, and in a second pass this annotation can be used to answer the query. Koch's [9] ARB system for answering XPath queries is based on such a strategy.In this model, we prove lower bounds for sorting the input data. As opposed to related results for models without auxiliary external memory for intermediate results, we cannot rely on communication complexity to establish these lower bounds. Instead, we simulate. our model by a non-uniform computation model for which we can establish the lower bounds by combinatorial means.},
+booktitle = {Proceedings of the Twenty-Fourth ACM SIGMOD-SIGACT-SIGART Symposium on Principles of Database Systems},
+pages = {238–249},
+numpages = {12},
+location = {Baltimore, Maryland},
+series = {PODS '05}
+}
+
+@inproceedings{10.1145/1065167.1065199,
+author = {Srivastava, Utkarsh and Munagala, Kamesh and Widom, Jennifer},
+title = {Operator Placement for In-Network Stream Query Processing},
+year = {2005},
+isbn = {1595930620},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1065167.1065199},
+doi = {10.1145/1065167.1065199},
+abstract = {In sensor networks, data acquisition frequently takes place at low-capability devices. The acquired data is then transmitted through a hierarchy of nodes having progressively increasing network band-width and computational power. We consider the problem of executing queries over these data streams, posed at the root of the hierarchy. To minimize data transmission, it is desirable to perform "in-network" query processing: do some part of the work at intermediate nodes as the data travels to the root. Most previous work on in-network query processing has focused on aggregation and inexpensive filters. In this paper, we address in-network processing for queries involving possibly expensive conjunctive filters, and joins. We consider the problem of placing operators along the nodes of the hierarchy so that the overall cost of computation and data transmission is minimized. We show that the problem is tractable, give an optimal algorithm, and demonstrate that a simpler greedy operator placement algorithm can fail to find the optimal solution. Finally we define a number of interesting variations of the basic operator placement problem and demonstrate their hardness.},
+booktitle = {Proceedings of the Twenty-Fourth ACM SIGMOD-SIGACT-SIGART Symposium on Principles of Database Systems},
+pages = {250–258},
+numpages = {9},
+location = {Baltimore, Maryland},
+series = {PODS '05}
+}
+
+@inproceedings{10.1145/1065167.1065200,
+author = {Ganguly, Sumit and Garofalakis, Minos and Kumar, Amit and Rastogi, Rajeev},
+title = {Join-Distinct Aggregate Estimation over Update Streams},
+year = {2005},
+isbn = {1595930620},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1065167.1065200},
+doi = {10.1145/1065167.1065200},
+abstract = {There is growing interest in algorithms for processing and
+querying continuous data streams (i.e., data that is seen
+only once in a fixed order) with limited memory resources.
+Providing (perhaps approximate) answers to queries over such
+streams is a crucial requirement for many application environments;
+examples include large IP network installations where performance
+data from different parts of the network needs to be continuously
+collected and analyzed.The ability to estimate the number of distinct (sub)tuples in
+the result of a join operation correlating two data streams (i.e.,
+the cardinality of a projection with duplicate elimination over a
+join) is an important requirement for several data-analysis
+scenarios. For instance, to enable real-time traffic analysis and
+load balancing, a network-monitoring application may need to
+estimate the number of distinct (<i>source</i>,
+destination) IP-address pairs occurring in the stream of IP packets
+observed by router <i>R</i><inf>1</inf>,
+where the source address is also seen in packets routed through a
+different router <i>R</i><inf>2</inf>.
+Earlier work has presented solutions to the individual problems of
+distinct counting and join-size estimation (without duplicate
+elimination) over streams. These solutions, however, are
+fundamentally different and extending or combining them to handle
+our more complex "Join-Distinct" estimation problem is far from
+obvious. In this paper, we propose the <i>first</i>
+space-efficient algorithmic solution to the general Join-Distinct
+estimation problem over continuous data streams (our techniques can
+actually handle general <i>update streams</i>
+comprising tuple deletions as well as insertions). Our estimators
+are probabilistic in nature and rely on novel algorithms for
+building and combining a new class of hash-based synopses (termed
+"JD <i>sketches</i>") for individual update streams. We
+demonstrate that our algorithms can provide low error,
+high-confidence Join-Distinct estimates using only small space and
+small processing time per update. In fact, we present lower bounds
+showing that the space usage of our estimators is within small
+factors of the best possible for the Join-Distinct problem.
+Preliminary experimental results verify the effectiveness of our
+approach.},
+booktitle = {Proceedings of the Twenty-Fourth ACM SIGMOD-SIGACT-SIGART Symposium on Principles of Database Systems},
+pages = {259–270},
+numpages = {12},
+location = {Baltimore, Maryland},
+series = {PODS '05}
+}
+
+@inproceedings{10.1145/1065167.1065201,
+author = {Cormode, Graham and Muthukrishnan, S.},
+title = {Space Efficient Mining of Multigraph Streams},
+year = {2005},
+isbn = {1595930620},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1065167.1065201},
+doi = {10.1145/1065167.1065201},
+abstract = {The challenge of monitoring massive amounts of data generated by communication networks has led to the interest in data stream processing. We study streams of edges in massive communication multigraphs, defined by (source, destination) pairs. The goal is to compute properties of the underlying graph while using small space (much smaller than the number of communicants), and to avoid bias introduced because some edges may appear many times, while others are seen only once. We give results for three fundamental problems on multigraph degree sequences: estimating frequency moments of degrees, finding the heavy hitter degrees, and computing range sums of degree values. In all cases we are able to show space bounds for our summarizing algorithms that are significantly smaller than storing complete information. We use a variety of data stream methods: sketches, sampling, hashing and distinct counting, but a common feature is that we use cascaded summaries: nesting multiple estimation techniques within one another. In our experimental study, we see that such summaries are highly effective, enabling massive multigraph streams to be effectively summarized to answer queries of interest with high accuracy using only a small amount of space.},
+booktitle = {Proceedings of the Twenty-Fourth ACM SIGMOD-SIGACT-SIGART Symposium on Principles of Database Systems},
+pages = {271–282},
+numpages = {12},
+location = {Baltimore, Maryland},
+series = {PODS '05}
+}
+
+@inproceedings{10.1145/1065167.1065203,
+author = {Maneth, S. and Berlea, A. and Perst, T. and Seidl, H.},
+title = {XML Type Checking with Macro Tree Transducers},
+year = {2005},
+isbn = {1595930620},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1065167.1065203},
+doi = {10.1145/1065167.1065203},
+abstract = {MSO logic on unranked trees has been identified as a convenient theoretical framework for reasoning about expressiveness and implementations of practical XML query languages. As a corresponding theoretical foundation of XML transformation languages, the "transformation language" TL is proposed. This language is based on the "document transformation language" DTL of Maneth and Neven which incorporates full MSO pattern matching, arbitrary navigation in the input tree using also MSO patterns, and named procedures. The new language generalizes DTL by additionally allowing procedures to accumulate intermediate results in parameters. It is proved that TL -- and thus in particular DTL - despite their expressiveness still allow for effective inverse type inference. This result is obtained by means of a translation of TL programs into compositions of top-down finite state tree transductions with parameters, also called (stay) macro tree transducers.},
+booktitle = {Proceedings of the Twenty-Fourth ACM SIGMOD-SIGACT-SIGART Symposium on Principles of Database Systems},
+pages = {283–294},
+numpages = {12},
+location = {Baltimore, Maryland},
+series = {PODS '05}
+}
+
+@inproceedings{10.1145/1065167.1065204,
+author = {Abiteboul, Serge and Milo, Tova and Benjelloun, Omar},
+title = {Regular Rewriting of Active XML and Unambiguity},
+year = {2005},
+isbn = {1595930620},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1065167.1065204},
+doi = {10.1145/1065167.1065204},
+abstract = {We consider here the exchange of Active XML (AXML) data, i.e., XML documents where some of the data is given explicitly while other parts are given only intensionally as calls to Web services. Peers exchanging AXML data agree on a data exchange schema that specifies in particular which parts of the data are allowed to be intensional. Before sending a document, a peer may need to rewrite it to match the agreed data exchange schema, by calling some of the services and materializing their data. Previous works showed that the rewriting problem is undecidable in the general case and of high complexity in some restricted cases. We argue here that this difficulty is somewhat artificial. Indeed, we study what we believe to be a more adequate, from a practical view point, rewriting problem that is (1) in the spirit of standard 1-unambiguity constraints imposed on XML schema and (2) can be solved by a single pass over the document with a computational device not stronger than a finite state automation. Following previous works, we focus on the core of the problem, i.e., on the problem on words. The results may be extended to (A)XML trees in a straightforward manner.},
+booktitle = {Proceedings of the Twenty-Fourth ACM SIGMOD-SIGACT-SIGART Symposium on Principles of Database Systems},
+pages = {295–303},
+numpages = {9},
+location = {Baltimore, Maryland},
+series = {PODS '05}
+}
+
+@inproceedings{10.1145/1065167.1065205,
+author = {Deutsch, Alin and Katsis, Yannis and Papakonstantinou, Yannis},
+title = {Determining Source Contribution in Integration Systems},
+year = {2005},
+isbn = {1595930620},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1065167.1065205},
+doi = {10.1145/1065167.1065205},
+abstract = {Owners of sources registered in an information integration system, which provides answers to a (potentially evolving) set of client queries, need to know their contribution to the query results. We study the problem of deciding, given a client query Q and a source registration R, whether R is (i) "self-sufficient" (can contribute to the result of Q even if it is the only source in the system) or (ii) "now complementary" (can contribute, but only in cooperation with other specific existing sources), or (iii)"later complementary" (can contribute if in the future appropriate new sources join the system). We consider open-world integration systems in which registrations are expressed using source-to-target constraints, and queries are answered under "certain answer" semantics.},
+booktitle = {Proceedings of the Twenty-Fourth ACM SIGMOD-SIGACT-SIGART Symposium on Principles of Database Systems},
+pages = {304–315},
+numpages = {12},
+location = {Baltimore, Maryland},
+series = {PODS '05}
+}
+
+@inproceedings{10.1145/1065167.1065207,
+author = {Gehrke, Johannes},
+title = {Models and Methods for Privacy-Preserving Data Publishing and Analysis: Invited Tutorial},
+year = {2005},
+isbn = {1595930620},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1065167.1065207},
+doi = {10.1145/1065167.1065207},
+abstract = {The digitization of our daily lives has led to an explosion in the collection of digital data by governments, corporations, and individuals. Protection of confidentiality of this data is of utmost importance. However, knowledge of statistical properties of this private data can have significant societal benefit, for example, in decisions about the allocation of public funds based on Census data, or in the analysis of medical data from different hospitals to understand the interaction of drugs.This tutorial will survey recent research that builds bridges between the two seemingly conflicting goals of sharing data while preserving data privacy and confidentiality. The tutorial will cover definitions of privacy and disclosure, and associated methods how to enforce them.More information, including a list of references to related work can be found at the following website: http://www.cs.cornell.edu/database/privacy.},
+booktitle = {Proceedings of the Twenty-Fourth ACM SIGMOD-SIGACT-SIGART Symposium on Principles of Database Systems},
+pages = {316},
+numpages = {1},
+location = {Baltimore, Maryland},
+series = {PODS '05}
+}
+
+@inproceedings{10.1145/1065167.1065209,
+author = {Alon, Noga and Duffield, Nick and Lund, Carsten and Thorup, Mikkel},
+title = {Estimating Arbitrary Subset Sums with Few Probes},
+year = {2005},
+isbn = {1595930620},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1065167.1065209},
+doi = {10.1145/1065167.1065209},
+abstract = {Suppose we have a large table T of items i, each with a weight wi, e.g., people and their salary. In a general preprocessing step for estimating arbitrary subset sums, we assign each item a random priority depending on its weight. Suppose we want to estimate the sum of an arbitrary subset I ⊆ T. For any q &gt; 2, considering only the q highest priority items from I, we obtain an unbiased estimator of the sum whose relative standard deviation is O(1/√q). Thus to get an expected approximation factor of 1 ± ε, it suffices to consider O(1/±ε2) items from I. Our estimator needs no knowledge of the number of items in the subset I, but we can also estimate that number if we want to estimate averages.The above scheme performs the same role as the on-line aggregation of Hellerstein et al. (SIGMOD'97) but it has the advantage of having expected good performance for any possible sequence of weights. In particular, the performance does not deteriorate in the common case of heavy-tailed weight distributions. This point is illustrated experimentally both with real and synthetic data.We will also show that our approach can be used to improve Cohen's size estimation framework (FOCS'94).},
+booktitle = {Proceedings of the Twenty-Fourth ACM SIGMOD-SIGACT-SIGART Symposium on Principles of Database Systems},
+pages = {317–325},
+numpages = {9},
+keywords = {IP Flows, preprocessing, databases, sampling},
+location = {Baltimore, Maryland},
+series = {PODS '05}
+}
+
+@inproceedings{10.1145/1065167.1065210,
+author = {Sakurai, Yasushi and Yoshikawa, Masatoshi and Faloutsos, Christos},
+title = {FTW: Fast Similarity Search under the Time Warping Distance},
+year = {2005},
+isbn = {1595930620},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1065167.1065210},
+doi = {10.1145/1065167.1065210},
+abstract = {Time-series data naturally arise in countless domains, such as meteorology, astrophysics, geology, multimedia, and economics. Similarity search is very popular, and DTW (Dynamic Time Warping) is one of the two prevailing distance measures. Although DTW incurs a heavy computation cost, it provides scaling along the time axis. In this paper, we propose FTW (Fast search method for dynamic Time Warping), which guarantees no false dismissals in similarity query processing. FTW efficiently prunes a significant number of the search cost. Experiments on real and synthetic sequence data sets reveals that FTW is significantly faster than the best existing method, up to 222 times.},
+booktitle = {Proceedings of the Twenty-Fourth ACM SIGMOD-SIGACT-SIGART Symposium on Principles of Database Systems},
+pages = {326–337},
+numpages = {12},
+location = {Baltimore, Maryland},
+series = {PODS '05}
+}
+
+@inproceedings{10.1145/1065167.1065211,
+author = {Hershberger, John and Shrivastava, Nisheeth and Suri, Subhash and T\'{o}th, Csaba D.},
+title = {Space Complexity of Hierarchical Heavy Hitters in Multi-Dimensional Data Streams},
+year = {2005},
+isbn = {1595930620},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1065167.1065211},
+doi = {10.1145/1065167.1065211},
+abstract = {Heavy hitters, which are items occurring with frequency above a given threshold, are an important aggregation and summary tool when processing data streams or data warehouses. Hierarchical heavy hitters (HHHs) have been introduced as a natural generalization for hierarchical data domains, including multi-dimensional data. An item x in a hierarchy is called a ϕ-HHH if its frequency after discounting the frequencies of all its descendant hierarchical heavy hitters exceeds ϕn, where ϕ is a user-specified parameter and n is the size of the data set. Recently, single-pass schemes have been proposed for computing ϕ-HHHs using space roughly O(1/ϕ log(ϕn)). The frequency estimates of these algorithms, however, hold only for the total frequencies of items, and not the discounted frequencies; this leads to false positives because the discounted frequency can be significantly smaller than the total frequency. This paper attempts to explain the difficulty of finding hierarchical heavy hitters with better accuracy. We show that a single-pass deterministic scheme that computes ϕ-HHHs in a d-dimensional hierarchy with any approximation guarantee must use Ω(1/ϕd+1) space. This bound is tight: in fact, we present a data stream algorithm that can report the ϕ-HHHs without false positives in O(1/ϕd+1) space.},
+booktitle = {Proceedings of the Twenty-Fourth ACM SIGMOD-SIGACT-SIGART Symposium on Principles of Database Systems},
+pages = {338–347},
+numpages = {10},
+location = {Baltimore, Maryland},
+series = {PODS '05}
+}
+
+@inproceedings{10.1145/1065167.1065213,
+author = {Sayrafi, Bassem and Van Gucht, Dirk},
+title = {Differential Constraints},
+year = {2005},
+isbn = {1595930620},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1065167.1065213},
+doi = {10.1145/1065167.1065213},
+abstract = {Differential constraints are a class of finite difference equations specified over functions from the powerset of a finite set into the reals. We characterize the implication problem for such constraints in terms of lattice decompositions, and give a sound and complete set of inference rules. We relate differential constraints to a subclass of propositional logic formulas, allowing us to show that the implication problem is coNP-complete. Furthermore, we apply the theory of differential constraints to the problem of concise representations in the frequent itemset problem by linking differential constraints to disjunctive rules. We also establish a connection to relational databases by associating differential constraints to positive boolean dependencies.},
+booktitle = {Proceedings of the Twenty-Fourth ACM SIGMOD-SIGACT-SIGART Symposium on Principles of Database Systems},
+pages = {348–357},
+numpages = {10},
+location = {Baltimore, Maryland},
+series = {PODS '05}
+}
+
+@inproceedings{10.1145/1065167.1065214,
+author = {Abiteboul, Serge and Abrams, Zo\"{e} and Haar, Stefan and Milo, Tova},
+title = {Diagnosis of Asynchronous Discrete Event Systems: Datalog to the Rescue!},
+year = {2005},
+isbn = {1595930620},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1065167.1065214},
+doi = {10.1145/1065167.1065214},
+abstract = {We consider query optimization techniques for data intensive P2P applications. We show how to adapt an old technique from deductive databases, namely Query-Sub-Query (QSQ), to a setting where autonomous and distributed peers share large volumes of interelated data.We illustrate the technique with an important telecommunication problem, the diagnosis of distributed telecom systems. We show that (i) the problem can be modeled using Datalog programs, and (ii) it can benefit from the large battery of optimization techniques developed for Datalog. In particular, we show that a simple generic use of the extension of QSQ achieves an optimization as good as that previously provided by dedicated diagnosis algorithms. Furthermore, we show that it allows solving efficiently a much larger class of system analysis problems.},
+booktitle = {Proceedings of the Twenty-Fourth ACM SIGMOD-SIGACT-SIGART Symposium on Principles of Database Systems},
+pages = {358–367},
+numpages = {10},
+location = {Baltimore, Maryland},
+series = {PODS '05}
+}
+
+@inproceedings{10.1145/1065167.1065215,
+author = {Li, Haiquan and Li, Jinyan and Wong, Limsoon and Feng, Mengling and Tan, Yap-Peng},
+title = {Relative Risk and Odds Ratio: A Data Mining Perspective},
+year = {2005},
+isbn = {1595930620},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1065167.1065215},
+doi = {10.1145/1065167.1065215},
+abstract = {We are often interested to test whether a given cause has a given effect. If we cannot specify the nature of the factors involved, such tests are called model-free studies. There are two major strategies to demonstrate associations between risk factors (ie. patterns) and outcome phenotypes (ie. class labels). The first is that of prospective study designs, and the analysis is based on the concept of "relative risk": What fraction of the exposed (ie. has the pattern) or unexposed (ie. lacks the pattern) individuals have the phenotype (ie. the class label)? The second is that of retrospective designs, and the analysis is based on the concept of "odds ratio": The odds that a case has been exposed to a risk factor is compared to the odds for a case that has not been exposed. The efficient extraction of patterns that have good relative risk and/or odds ratio has not been previously studied in the data mining context. In this paper, we investigate such patterns. We show that this pattern space can be systematically stratified into plateaus of convex spaces based on their support levels. Exploiting convexity, we formulate a number of sound and complete algorithms to extract the most general and the most specific of such patterns at each support level. We compare these algorithms. We further demonstrate that the most efficient among these algorithms is able to mine these sophisticated patterns at a speed comparable to that of mining frequent closed patterns, which are patterns that satisfy considerably simpler conditions.},
+booktitle = {Proceedings of the Twenty-Fourth ACM SIGMOD-SIGACT-SIGART Symposium on Principles of Database Systems},
+pages = {368–377},
+numpages = {10},
+location = {Baltimore, Maryland},
+series = {PODS '05}
+}
+
