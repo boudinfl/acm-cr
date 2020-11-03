@@ -1,0 +1,43 @@
+<top>
+<num> Number: 340119801
+<title> Bundle Recommendation with Graph Convolutional Networks
+
+<desc> Description:
+Most existing works for bundle recommendation [2, 6, 7] regard item and bundle recommendation as two separate tasks, and associate them by sharing model parameters. A recent study [3] proposed a multi-task framework that transfers the benefits of the item recommendation task to the bundle recommendation to allevi- ate the scarcity of user-bundle interactions.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340119802
+<title> Bundle Recommendation with Graph Convolutional Networks
+
+<desc> Description:
+Although bundles are currently widely used everywhere, few efforts have been made in solving the bundle recommendation problem. List Recommendation Model (LIRE) [6] and Embedding Factorization Machine (EFM) [2] simultaneously utilized the users’ interactions with both items and bundles under the BPR framework. The Bundle BPR (BBPR) Model [7] made use of the parameters previously learned through an item BPR model. Recently, Deep Attentive Multi-Task Model (DAM) [3] jointly modeled user-bundle interactions and user-item interactions in a multi-task manner.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340119803
+<title> Bundle Recommendation with Graph Convolutional Networks
+
+<desc> Description:
+The basic idea of graph convolutional networks (GCN) [5] is to reduce the high-dimensional adjacency information of a node in the graph to a low-dimensional vector representation. With the strong power of learning structure, GCN is widely applied in recommender systems. [1] first applied GCN to the recommendation to factorize several rating matrices. [10] extended it to web-scale recommender systems with neighbor-sampling. Recently, [9] further approached a more general model that uses high-level connectivity learned by GCN to encode CF signals.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340119804
+<title> Bundle Recommendation with Graph Convolutional Networks
+
+<desc> Description:
+MFBPR [8] This is a matrix factorization method under a Bayesian Personalized Ranking pairwise learning framework, which is widely used for implicit feedback.
+
+<narr> Narrative:
+
+</top>

@@ -107,16 +107,14 @@ Actually, there are 20 papers and 113 topics.
 ```
 ./src/0_create_data.sh
 
-56617 entries with T+A+K
-present: 0.542283170700119
-absent: 0.45771682929988433
-|-> c1/Reordored (i.e. all words): 0.11594508357516725
-|-> c2/Mixed (i.e. some words): 0.18817671085940116
-|-> c3/Unseen (i.e. no words): 0.15359503486529488
-|-> exp. : 0.12993978324091304
-avg nb kps : 4.414472638660804
-22 docids loaded for blacklist
-
+70734 entries with T+A+K
+present: 0.5354495560177869
+absent: 0.46455044398220235
+|-> c1/Reordored (i.e. all words): 0.11724343650930177
+|-> c2/Mixed (i.e. some words): 0.19294228320353593
+|-> c3/Unseen (i.e. no words): 0.15436472426937603
+|-> exp. : 0.1342800262770283
+avg nb kps : 4.53530841861254
 
 
 ./src/1_create_indexes.sh
