@@ -667,6 +667,49 @@ A system that determines the best number of results to display to users has the 
 
 </top>
 <top>
+<num> Number: 340119801
+<title> Bundle Recommendation with Graph Convolutional Networks
+
+<desc> Description:
+Most existing works for bundle recommendation [2, 6, 7] regard item and bundle recommendation as two separate tasks, and associate them by sharing model parameters. A recent study [3] proposed a multi-task framework that transfers the benefits of the item recommendation task to the bundle recommendation to allevi- ate the scarcity of user-bundle interactions.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340119802
+<title> Bundle Recommendation with Graph Convolutional Networks
+
+<desc> Description:
+Although bundles are currently widely used everywhere, few efforts have been made in solving the bundle recommendation problem. List Recommendation Model (LIRE) [6] and Embedding Factorization Machine (EFM) [2] simultaneously utilized the users’ interactions with both items and bundles under the BPR framework. The Bundle BPR (BBPR) Model [7] made use of the parameters previously learned through an item BPR model. Recently, Deep Attentive Multi-Task Model (DAM) [3] jointly modeled user-bundle interactions and user-item interactions in a multi-task manner.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340119803
+<title> Bundle Recommendation with Graph Convolutional Networks
+
+<desc> Description:
+The basic idea of graph convolutional networks (GCN) [5] is to reduce the high-dimensional adjacency information of a node in the graph to a low-dimensional vector representation. With the strong power of learning structure, GCN is widely applied in recommender systems. [1] first applied GCN to the recommendation to factorize several rating matrices. [10] extended it to web-scale recommender systems with neighbor-sampling. Recently, [9] further approached a more general model that uses high-level connectivity learned by GCN to encode CF signals.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340119804
+<title> Bundle Recommendation with Graph Convolutional Networks
+
+<desc> Description:
+MFBPR [8] This is a matrix factorization method under a Bayesian Personalized Ranking pairwise learning framework, which is widely used for implicit feedback.
+
+<narr> Narrative:
+
+</top>
+<top>
 <num> Number: 340120401
 <title> Context-Aware Term Weighting For First Stage Passage Retrieval
 
@@ -693,6 +736,38 @@ Neural Approaches for First Stage Ranking. Most neural ranking models are cost-p
 
 <desc> Description:
 A number of existing approaches extract cause-effect patterns using lexical, syntactic, and more recently, semantic relations [3–5, 12], primarily taken from headlines or single sentences. The cause-effect pattern approach was extended in [7], where a set of patterns are initially used to create a network of causes and effects, and then a relational embedding method is used to jointly embed causes and effects. Causal IR works in the reverse direction, where a query describes a cause (e.g., current situation or proposed action) and the results provide a list of possible effects was studied in [9, 10].
+
+<narr> Narrative:
+
+</top>
+<top>
+<num> Number: 340122401
+<title> Local Self-Attention over Long Text for Efficient Document Retrieval
+
+<desc> Description:
+Neural models have shown successful results in a number of IR tasks [9, 10, 17]. [23] proposed a kernel pooling approach (KNRM) based on a bag-of-words representation of words. This was further extended by [5] to incorporate n-gram representations using convolutional architecture. Several others [8, 14] have highlighted important considerations for designing neural ranking models for documents that are distinct from dealing with passages and other short text. [26] have emphasized on efficiency in neural ranking models and introduced neural models for retrieving documents from a large corpus.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340122402
+<title> Local Self-Attention over Long Text for Efficient Document Retrieval
+
+<desc> Description:
+[16] use pretrained contextual embeddings, without fine-tuning, in downstream ranking models.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340122403
+<title> Local Self-Attention over Long Text for Efficient Document Retrieval
+
+<desc> Description:
+Classically, assessing relevance of documents based on relevant parts has been studied in many forms [3, 21] and this study continues that exploration in the context of neural models. Unlike [16, 24], our proposed model is trained in a fully-supervised setting and only requires query-document relevance labels for training.
 
 <narr> Narrative:
 
@@ -912,6 +987,17 @@ Some have proposed novel keypad layouts to facilitate number entry on various de
 <narr> Narrative:
 
 </top>
+
+<top>
+<num> Number: 337795705
+<title> Enabling Predictive Number Entry and Editing on Touchscreen-Based Mobile Devices
+
+<desc> Description:
+Some have proposed novel keypad interactions to increase the security of conventional mobile user authentication approaches. [4] designed a keypad that enables the user to actively select digits and directional gestures as her passwords.
+
+<narr> Narrative:
+
+</top>
 <top>
 <num> Number: 337797701
 <title> Effects of Past Interactions on User Experience with Recommended Documents
@@ -1043,6 +1129,17 @@ Although document recommendation is not a heavily studied area, it can benefit f
 <narr> Narrative:
 
 </top>
+
+<top>
+<num> Number: 337797713
+<title> Effects of Past Interactions on User Experience with Recommended Documents
+
+<desc> Description:
+Other studies focus on documents. Folder navigation to retrieve documents is studied in detail in [5]. They argue that people dedicate considerable time to creating systematic structures to facilitate such retrieval. They also use a predictive model to formulate the effect of folder depth and folder size on retrieval time. An empirical study to compare two methods of organizing documents – placing them into folders or tagging them with labels – is described in [5]. Study results point to the importance of designing tools that combine strengths of folders and labels while avoiding their weaknesses.
+
+<narr> Narrative:
+
+</top>
 <top>
 <num> Number: 337801101
 <title> Personalized Entity Search by Sparse and Scrutable User Profiles
@@ -1070,7 +1167,7 @@ The most important line of exploiting user information for general web search is
 <title> Personalized Entity Search by Sparse and Scrutable User Profiles
 
 <desc> Description:
-Here, structured data is leveraged, most notably, purchases or ratings of products, likes of news, YouYube videos, Instagram photos, etc. This field has recently paid attention to scrutable recommendations that are comprehensible by end-users and pinpoint the specific data that explains how the recommended item was computed [6, 25, 38].
+Recommender systems have incorporated personalization as well, for ads, products and other contents (e.g., [17, 26, 31]). Here, structured data is leveraged, most notably, purchases or ratings of products, likes of news, YouYube videos, Instagram photos, etc. This field has recently paid attention to scrutable recommendations that are comprehensible by end-users and pinpoint the specific data that explains how the recommended item was computed [6, 25, 38].
 
 <narr> Narrative:
 
@@ -1097,7 +1194,6 @@ Leveraging this background knowledge for answer ranking, query expansion, and au
 <narr> Narrative:
 
 </top>
-
 
 <top>
 <num> Number: 337801106
@@ -1153,6 +1249,17 @@ The closest to our work is [3] on personalized product search. It is based on le
 <narr> Narrative:
 
 </top>
+
+<top>
+<num> Number: 337801111
+<title> Personalized Entity Search by Sparse and Scrutable User Profiles
+
+<desc> Description:
+Entity search about people, products or events has received great attention and has been incorporated into major search engines (see, e.g., [4, 7] and further references there). This methodology leverages large knowledge graphs to infer the focus of the query and/or return crisp entities as answers. However, except for special cases such as music recommendation [13] and consumer product search [2], there is hardly any work on personalized entity search with individual user traits.
+
+<narr> Narrative:
+
+</top>
 <top>
 <num> Number: 340981901
 <title> Permutation Equivariant Document Interaction Network for Neural Learning-to-Rank
@@ -1170,6 +1277,28 @@ Recently, neural network based approaches have proven effective for LTR applicat
 
 <desc> Description:
 There are two settings for modeling cross-document interactions: re-ranking and full ranking. In the former setting, a base ranking is provided and the documents are reordered using the ranker. For example, [1] applies sequence modeling on the top k documents of the base ranking and then uses the final state vector to enrich each document for the re-ranking scoring. In the latter setting, we do not have a base ranking but start with a set of documents. For example, [6] takes a pair of documents as input and uses a DNN to produce a preference score for the input documents, while [2] propose a groupwise scoring function to model document interactions, sampling a subset of all permutations of each group and thus not guaranteeing permutation equivariance.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340981903
+<title> Permutation Equivariant Document Interaction Network for Neural Learning-to-Rank
+
+<desc> Description:
+While much of the research in LTR has been devoted to the evolution of ranking loss functions [11], the nature of the learned scoring function has largely remained the same: a univariate scoring function that computes a relevance score for a document in isolation.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340981904
+<title> Permutation Equivariant Document Interaction Network for Neural Learning-to-Rank
+
+<desc> Description:
+Most of the previous work in LTR [11] focuses on designing loss functions, ranging from pointwise to pairwise to listwise ones. Gradient Boosted Decision Trees (e.g., [10]) are regarded as the state-of-the-art models for LTR on benchmark datasets. Recently, neural network based models have attracted considerable attention [8, 12].
 
 <narr> Narrative:
 
@@ -1270,14 +1399,40 @@ Whereas retrieval work in the literature primarily studies approaches such as BM
 <narr> Narrative:
 
 </top>
+
+<top>
+<num> Number: 337182006
+<title> Parameter Tuning in Personal Search Systems
+
+<desc> Description:
+Modern search engines usually have multiple processing stages in their systems. A typical flow has a retrieval stage followed with a ranking stage, where the retrieval stage selects N documents and passes them to the ranking stage. The ranking stage often employs a machine learning model based on query, document, and user features. In this work, we present a parameter tuning approach which can be used for either stage. This approach is especially impactful for the retrieval stage – while a large amount of work focuses on optimizing the parameters of the ranking stage, relatively little work [3, 8] covers parameter tuning at the retrieval stage.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337182007
+<title> Parameter Tuning in Personal Search Systems
+
+<desc> Description:
+Given that an industrial search system can be very complex, a natural and common approach for parameter tuning is to treat the entire system as a black box and run A/B experiments with either some sort of parameter sweep (e.g. grid search, coordinate ascent) [22] or black-box optimization [17] over various parameters in a guess-and-check manner. The drawback to this is that 1) the user experience can be degraded due to exposure to poor quality results, 2) separate online experiments are required for each test set of parameters, and 3) the tuning process can take months.
+
+<narr> Narrative:
+
+</top>
 340981901	[4]	10.1145/3331184.3331347	1
 340981901	[14]	10.1145/3397271.3401104	1
 340981901	[15]	10.1145/3292500.3330677	1
 340981902	[1]	10.1145/3209978.3209985	1
 340981902	[6]	10.1145/3077136.3080832	1
 340981902	[2]	10.1145/3341981.3344218	1
+340981903	[11]	10.1561/1500000016	1
+340981904	[11]	10.1561/1500000016	1
+340981904	[12]	10.1145/3038912.3052579	1
 340982701	[15]	10.1145/3269206.3271745	1
 340982701	[16]	10.1145/3289600.3290618	1
+340982701	[13]	10.14778/1920841.1921046	1
 340982701	[19]	10.1145/2063576.2063587	1
 340982702	[17]	10.1145/1142473.1142504	1
 340982703	[23]	10.1145/1028099.1028102	1
@@ -1295,3 +1450,7 @@ Whereas retrieval work in the literature primarily studies approaches such as BM
 337182004	[18]	10.1145/1935826.1935878	1
 337182005	[26]	10.1561/1500000019	1
 337182005	[13]	10.1145/956863.956867	1
+337182006	[3]	10.1145/2484028.2484132	1
+337182006	[8]	10.1007/978-3-642-36973-5_36	1
+337182007	[17]	10.1145/3159652.3159665	1
+337182007	[22]	10.1007/s10791-006-9019-z	1
