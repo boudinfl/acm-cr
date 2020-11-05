@@ -1,0 +1,54 @@
+<top>
+<num> Number: 340119101
+<title> Hier-SPCNet: A Legal Statute Hierarchy-based Heterogeneous Network for Computing Legal Case Document Similarity
+
+<desc> Description:
+A key step for developing these legal IR systems is to estimate the similarity between two legal case documents, which is challenging because legal documents are long, complicated and unstructured [3, 4, 6, 8]. Also, there is no well defined notion of legal similarity – two legal case documents are considered similar if legal experts judge them to be similar. In this work, we focus on the challenge of automating this similarity computation.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340119102
+<title> Hier-SPCNet: A Legal Statute Hierarchy-based Heterogeneous Network for Computing Legal Case Document Similarity
+
+<desc> Description:
+Although there exists several supervised methods for general document similarity (e.g., for measuring similarity of news articles [5]), having such supervised methods for legal document similarity is not practical. This is because training such supervised models need a gold standard containing thousands of similar document pairs. Since legal document similarity can be verified only by legal experts, developing such a gold standard is prohibitively expensive. Existing methodologies for finding similar legal documents are hence unsupervised [3, 4, 6, 8].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340119103
+<title> Hier-SPCNet: A Legal Statute Hierarchy-based Heterogeneous Network for Computing Legal Case Document Similarity
+
+<desc> Description:
+The existing methods for computing legal document similarity and can be broadly classified into network-based methods that rely on citation to prior case documents [3, 8], and text-based methods that rely on the textual content of the documents [6], and hybrid [4].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340119104
+<title> Hier-SPCNet: A Legal Statute Hierarchy-based Heterogeneous Network for Computing Legal Case Document Similarity
+
+<desc> Description:
+To estimate the similarity between legal documents, we propose to apply the graph embedding algorithm Metapath2vec [1] on the heterogeneous Hier-SPCNet. Our method relies on the key idea that if two documents cite a common statute/precedent or if two documents cite different statutes/precedents that are themselves structurally similar in the network, then the two documents may be discussing similar legal issues, which is a strong signal for estimating document similarity.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340119105
+<title> Hier-SPCNet: A Legal Statute Hierarchy-based Heterogeneous Network for Computing Legal Case Document Similarity
+
+<desc> Description:
+We also compare our proposed network-based method with a state-of-the-art text-based method for computing legal document similarity using document embeddings [6]. We observe that the proposed network-based method can give complimentary insights compared to what is given by the text-similarity method. Combining the two is a promising way of estimating legal document similarity from multiple aspects.
+
+<narr> Narrative:
+
+</top>

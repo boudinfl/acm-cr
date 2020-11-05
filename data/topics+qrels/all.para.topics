@@ -667,6 +667,60 @@ A system that determines the best number of results to display to users has the 
 
 </top>
 <top>
+<num> Number: 340119101
+<title> Hier-SPCNet: A Legal Statute Hierarchy-based Heterogeneous Network for Computing Legal Case Document Similarity
+
+<desc> Description:
+A key step for developing these legal IR systems is to estimate the similarity between two legal case documents, which is challenging because legal documents are long, complicated and unstructured [3, 4, 6, 8]. Also, there is no well defined notion of legal similarity – two legal case documents are considered similar if legal experts judge them to be similar. In this work, we focus on the challenge of automating this similarity computation.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340119102
+<title> Hier-SPCNet: A Legal Statute Hierarchy-based Heterogeneous Network for Computing Legal Case Document Similarity
+
+<desc> Description:
+Although there exists several supervised methods for general document similarity (e.g., for measuring similarity of news articles [5]), having such supervised methods for legal document similarity is not practical. This is because training such supervised models need a gold standard containing thousands of similar document pairs. Since legal document similarity can be verified only by legal experts, developing such a gold standard is prohibitively expensive. Existing methodologies for finding similar legal documents are hence unsupervised [3, 4, 6, 8].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340119103
+<title> Hier-SPCNet: A Legal Statute Hierarchy-based Heterogeneous Network for Computing Legal Case Document Similarity
+
+<desc> Description:
+The existing methods for computing legal document similarity and can be broadly classified into network-based methods that rely on citation to prior case documents [3, 8], and text-based methods that rely on the textual content of the documents [6], and hybrid [4].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340119104
+<title> Hier-SPCNet: A Legal Statute Hierarchy-based Heterogeneous Network for Computing Legal Case Document Similarity
+
+<desc> Description:
+To estimate the similarity between legal documents, we propose to apply the graph embedding algorithm Metapath2vec [1] on the heterogeneous Hier-SPCNet. Our method relies on the key idea that if two documents cite a common statute/precedent or if two documents cite different statutes/precedents that are themselves structurally similar in the network, then the two documents may be discussing similar legal issues, which is a strong signal for estimating document similarity.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340119105
+<title> Hier-SPCNet: A Legal Statute Hierarchy-based Heterogeneous Network for Computing Legal Case Document Similarity
+
+<desc> Description:
+We also compare our proposed network-based method with a state-of-the-art text-based method for computing legal document similarity using document embeddings [6]. We observe that the proposed network-based method can give complimentary insights compared to what is given by the text-similarity method. Combining the two is a promising way of estimating legal document similarity from multiple aspects.
+
+<narr> Narrative:
+
+</top>
+<top>
 <num> Number: 340119801
 <title> Bundle Recommendation with Graph Convolutional Networks
 
@@ -800,6 +854,81 @@ Neural models for AS2 typically apply a series of non-linear transformations to 
 
 <desc> Description:
 In contrast, we propose an alternative (and compatible with the initiatives above) approach following previous work in document retrieval, e.g., the use of sequential rerankers [19]. [21] focused on quickly identifying a set of good candidate documents to be passed to the second and further rerankers of the cascade. [4] proposed two stage approaches using a limited set of textual features and a final model trained using a larger set of query- and document-dependent features. [7] presented a new general framework for learning an end-to-end cascade of rankers using backpropagation. [1] studied effectiveness/efficiency trade-offs with three candidate selection approaches.
+
+<narr> Narrative:
+
+</top>
+<top>
+<num> Number: 340128101
+<title> How Useful are Reviews for Recommendation? A Critical Review and Potential Improvements
+
+<desc> Description:
+Previously, there largely have been two schools of thought regarding employing user reviews for better recommendation. The first type considers reviews as "explanations" for the user giving that specific rating and tries to incorporate them into matrix factorization (MF). HFT [9] is such a model which tries to regularize the latent features being learned through MF by reusing the same latent features for modeling the reviews’ likelihood using LDA [1].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340128102
+<title> How Useful are Reviews for Recommendation? A Critical Review and Potential Improvements
+
+<desc> Description:
+The other type of methods are based on the philosophy that textual reviews are much more expressive than a single rating, and can be used to learn better latent features to perform better MF. [2, 3, 11, 13] are all popular methods which, in some different way, try to extract features from user reviews and item reviews through deep learning architectures like TextCNN [7], and use these extracted features to perform MF.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340128103
+<title> How Useful are Reviews for Recommendation? A Critical Review and Potential Improvements
+
+<desc> Description:
+Our work also connects to recent discussions [4] on the reproducibility of recent neural methods for recommendation. Note that the topic of this paper is different from [4] since, in addition to the correctness of recent works, we also deal with a more general meta-question about the utility of reviews for recommendation.
+
+<narr> Narrative:
+
+</top>
+<top>
+<num> Number: 340132201
+<title> A Study of Neural Matching Models for Cross-lingual IR
+
+<desc> Description:
+CLIR is the task of retrieving documents in target language Lt with queries written in source language Ls. The increasing popularity of projection-based weakly-supervised [4, 6, 14] and unsupervised [1, 2] cross-lingual word embeddings has spurred unsupervised frameworks [8] for CLIR, while in the realm of mono-lingual IR, interaction-based neural matching models [5, 10, 15] that utilize semantics contained in word embeddings have been the dominant force. This study fills the gap of utilizing CLWEs in neural IR models for CLIR.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340132202
+<title> A Study of Neural Matching Models for Cross-lingual IR
+
+<desc> Description:
+Traditional CLIR approaches translate either document or query using off-the-shelf SMT system such that query and document are in the same language. A number of researchers [12, 13] later investigated utilizing translation table to build a probabilistic structured query [3] in the target language. Recently, [8] showed that CLWEs are good translation resources by experimenting with a CLIR method (dubbed TbT-QT) that translates each query term in the source language to the nearest target language term in the CLWE space. CLWEs are obtained by aligning two separately trained embeddings for two languages in the same latent space, where a term in Ls is proximate to its synonyms in Ls and its translations in Lt, and vice versa. TbT-QT takes only the top-1 translation of a query term and uses the query likelihood model [11] for retrieval. The overall retrieval performance can be damaged by vocabulary mismatch magnified with translation error. Using closeness measurement between query and document terms in the shared CLWE space as matching signal for relevance can alleviate the problem, but this area has not been extensively studied.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340132203
+<title> A Study of Neural Matching Models for Cross-lingual IR
+
+<desc> Description:
+The reasons for the success of neural IR models for mono-lingual retrieval can be grouped into two categories: Pattern learning: the construction of word-level query-document interactions enables learning of various matching patterns (e.g., proximity, paragraph match, exact match) via different neural network architectures. Representation learning: models in which interaction features are built with differentiable operations (e.g., kernel pooling [15]) allow customizing word embeddings via end-to-end learning from large-scale training data.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340132204
+<title> A Study of Neural Matching Models for Cross-lingual IR
+
+<desc> Description:
+Although representation learning is capable of further improving overall retrieval performance [15], it was shown in the same study that updating word embeddings requires large-scale training data to work well (more than 100k search sessions in their case). In CLIR, however, datasets usually have fewer than 200 queries per available language pair and can only support training neural models with smaller capacity. Therefore, we focus on the pattern learning aspect of neural models.
 
 <narr> Narrative:
 

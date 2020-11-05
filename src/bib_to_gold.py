@@ -143,6 +143,11 @@ for filename in glob.iglob(args.directory+"/**", recursive=True):
                             absent_case_2_and_3_kps[doc_id].append([keyphrase])
                             nb_absent_kps_case_3 += 1
 
+                # if nb_present_kps > 0 and nb_absent_kps_case_1 > 0 and \
+                #    nb_absent_kps_case_2 > 0 and nb_absent_kps_case_3 > 0\
+                #    and len(pp_ab)+len(pp_ti) < 130 and nb_present_kps >= 2:
+                #    print(reference)
+
                 sum_ratio_present_kps += nb_present_kps / len(keywords)
                 sum_ratio_absent_kps += nb_absent_kps / len(keywords)
                 sum_ratio_absent_kps_case_1 += nb_absent_kps_case_1 / len(

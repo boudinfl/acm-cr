@@ -1,0 +1,43 @@
+<top>
+<num> Number: 340132201
+<title> A Study of Neural Matching Models for Cross-lingual IR
+
+<desc> Description:
+CLIR is the task of retrieving documents in target language Lt with queries written in source language Ls. The increasing popularity of projection-based weakly-supervised [4, 6, 14] and unsupervised [1, 2] cross-lingual word embeddings has spurred unsupervised frameworks [8] for CLIR, while in the realm of mono-lingual IR, interaction-based neural matching models [5, 10, 15] that utilize semantics contained in word embeddings have been the dominant force. This study fills the gap of utilizing CLWEs in neural IR models for CLIR.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340132202
+<title> A Study of Neural Matching Models for Cross-lingual IR
+
+<desc> Description:
+Traditional CLIR approaches translate either document or query using off-the-shelf SMT system such that query and document are in the same language. A number of researchers [12, 13] later investigated utilizing translation table to build a probabilistic structured query [3] in the target language. Recently, [8] showed that CLWEs are good translation resources by experimenting with a CLIR method (dubbed TbT-QT) that translates each query term in the source language to the nearest target language term in the CLWE space. CLWEs are obtained by aligning two separately trained embeddings for two languages in the same latent space, where a term in Ls is proximate to its synonyms in Ls and its translations in Lt, and vice versa. TbT-QT takes only the top-1 translation of a query term and uses the query likelihood model [11] for retrieval. The overall retrieval performance can be damaged by vocabulary mismatch magnified with translation error. Using closeness measurement between query and document terms in the shared CLWE space as matching signal for relevance can alleviate the problem, but this area has not been extensively studied.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340132203
+<title> A Study of Neural Matching Models for Cross-lingual IR
+
+<desc> Description:
+The reasons for the success of neural IR models for mono-lingual retrieval can be grouped into two categories: Pattern learning: the construction of word-level query-document interactions enables learning of various matching patterns (e.g., proximity, paragraph match, exact match) via different neural network architectures. Representation learning: models in which interaction features are built with differentiable operations (e.g., kernel pooling [15]) allow customizing word embeddings via end-to-end learning from large-scale training data.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340132204
+<title> A Study of Neural Matching Models for Cross-lingual IR
+
+<desc> Description:
+Although representation learning is capable of further improving overall retrieval performance [15], it was shown in the same study that updating word embeddings requires large-scale training data to work well (more than 100k search sessions in their case). In CLIR, however, datasets usually have fewer than 200 queries per available language pair and can only support training neural models with smaller capacity. Therefore, we focus on the pattern learning aspect of neural models.
+
+<narr> Narrative:
+
+</top>

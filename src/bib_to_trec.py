@@ -47,31 +47,35 @@ if args.blacklist:
         print("{} docids loaded for blacklist".format(len(blacklist)))
 
 collection = {}
-nb_entries = 0
+nb_entries_with_t = 0
+nb_entries_with_t_a = 0
+nb_entries_with_t_a_k = 0
 for filename in glob.iglob(args.directory+"/**", recursive=True):
     if os.path.isfile(filename):
         print('loading documents from {}'.format(filename))
         parser = bibtex.Parser()
         data = parser.parse_file(filename)
-        nb_docs = 0
 
         for key, reference in  data.entries.items():
-            nb_docs += 1
             if reference.type not in ["inproceedings", "article"]:
                 continue
 
             if key in blacklist:
                 continue
 
+            collection[key] = reference
+
             if {'title', 'abstract', 'keywords'} <= set(reference.fields):
-                collection[key] = reference
+                nb_entries_with_t_a_k += 1
+            elif {'title', 'abstract'} <= set(reference.fields):
+                nb_entries_with_t_a += 1
+            else:
+                nb_entries_with_t += 1
 
             # dd url
             #url = "https://dl.acm.org/doi/pdf/"+key
 
-        nb_entries += nb_docs
-
-print('{} entries with {} T+A+K'.format(nb_entries, len(collection)))
+print('{} T+A+K, {} T+A, {} T over {} entries'.format(nb_entries_with_t_a_k, nb_entries_with_t_a, nb_entries_with_t, len(collection)))
 
 with gzip.open(args.output, 'wt') as o:
     for doc_id in collection:
@@ -79,7 +83,8 @@ with gzip.open(args.output, 'wt') as o:
         o.write("<DOC>\n")
         o.write("<DOCNO>{}</DOCNO>\n".format(doc_id))
         o.write("<TITLE>{}</TITLE>\n".format(entry.fields['title'].strip()))
-        o.write("<TEXT>{}</TEXT>\n".format(entry.fields['abstract'].strip()))
+        if 'abstract' in entry.fields:
+            o.write("<TEXT>{}</TEXT>\n".format(entry.fields['abstract'].strip()))
         if doc_id in keyphrases:
             kps = keyphrases[doc_id]
             kps = [k[0] for k in kps]

@@ -6,7 +6,7 @@ This test collection contains the documents (BibTeX reference files) from the fo
     - ADCS (12-19, #115), AIRS (08-09, #120), AKBC (12-13, #44), AND (08-10, #48), ASONAM (09-19, #2033), AVI (94-20, #1108)
     - BooksOnline (08-12, #57)
     - CERI (16-18, #41), CHI/CHI-EA (82-20, #19446), CHIIR (16-20, #374), CIKM (93-20, #5497),
-      CIR (11, #7), CompSci (13, #8), CSCW (86-19, #2726)
+      CIR (11, #7), CompSci (13, #8), Compute (08-17, #242), CSCW (86-19, #2726)
     - DL (96-00, #244), DocEng (01-20, #971), DTMBIO (08-15, #151), 
       DLRS (16-18, #24)
     - ECIR (02-14, #921), ESAIR (09-15, #101)
