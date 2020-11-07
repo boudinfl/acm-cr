@@ -12,7 +12,7 @@ This test collection contains the documents (BibTeX reference files) from the fo
     - ECIR (02-14, #921), ESAIR (09-15, #101)
     - FIRE (12-19, #91)
     - HCIR (12-13, #9), HT (87-20, #1339)
-    - ICTIR (13-20, #313), IIIX (06-14, #242), IUI (93-20, #2043)
+    - ICML (04-09, #843), ICTIR (13-20, #313), IIIX (06-14, #242), IUI (93-20, #2043)
     - JCDL (01-20, #2183)
     - KDD (99-20, #3966)
     - NLPIR (18-19, #43)
@@ -24,6 +24,7 @@ This test collection contains the documents (BibTeX reference files) from the fo
     - UAI (09, #76), UIST (88-19, #2076), UMAP (12-20, #728)
     - VLDB (00-07, #1016), PVLDB (08-20, #2717)
     - WI (03-19, #1127), WIDM (99-19, #214), WIMS (11-20, #461), WSDM (08-20, #1123), WWW (01-20, #6823)
+    - YLRC (10, #7)
 - Journals:
     - ACM Transactions on Intelligent Systems and Technology (TIST)
       (10-20, #699)
