@@ -21,7 +21,7 @@ This test collection contains the documents (BibTeX reference files) from the fo
     - PervasiveHealth (16, #60), PODS (82-20, #1369)
     - RecSys (07-20, #1279)
     - SAICSIT (02-19, #722), SIGDOC (82-20, #1492) SIGIR (78-20, #5251), SIGMOD (75-20, #5378)
-    - UAI (09, #76), UIST (88-19, #2076), UMAP (12-20, #728)
+    - UAI (09, 14, #170), UIST (88-19, #2076), UMAP (12-20, #728)
     - VLDB (00-07, #1016), PVLDB (08-20, #2717)
     - WI (03-19, #1127), WIDM (99-19, #214), WIMS (11-20, #461), WSDM (08-20, #1123), WWW (01-20, #6823)
     - YLRC (10, #7)
