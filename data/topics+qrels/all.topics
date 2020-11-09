@@ -1,0 +1,1833 @@
+<top>
+<num> Number: 340103201
+<title> Measuring Recommendation Explanation Quality: The Conflicting Goals of Explanations
+
+<desc> Description:
+Recommendations are part of everyday life. Be they made by a person, or by an automated system, the recommendations are often accompanied with an explanation, or reason, underlying the suggestions provided. Explanations are known to strongly impact how the recipient of a recommendation responds [13, 14, 23, 28], yet the effect is still not well understood.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340103202
+<title> Measuring Recommendation Explanation Quality: The Conflicting Goals of Explanations
+
+<desc> Description:
+Most previous studies on generating explanations optimize a single goal [20], and only a handful consider multiple goals [8, 13, 26]. Yet, depending on the perspective of the explanation generator, different goals may be appropriate, and may need to be traded off.
+
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340103203
+<title> Measuring Recommendation Explanation Quality: The Conflicting Goals of Explanations
+
+<desc> Description:
+The ability for an artificially intelligent system to explain recommendations has been shown to be an important factor for user acceptance and satisfaction [13, 14, 23, 28]. Explanations can be characterized along a number of dimensions, including their content, form of presentation, and system’s intended purpose [20]. Our interest is in the latter category, where we use the term goal to refer to the objective or purpose of the explanation. Specifically, our focus is on natural language explanations, the most commonly used way of presentation both historically [20] and recently [2, 6, 19].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340103204
+<title> Measuring Recommendation Explanation Quality: The Conflicting Goals of Explanations
+
+<desc> Description:
+For example, in [20] satisfaction is not considered as a single objective, but is split into ease to use, enjoyment, and usefulness. Nonetheless, these seven goals are regarded as the canonical categorization within explainability research for recommender systems, accurately reflecting the goals that have been studied in the past. Certain goals may be measured objectively and quantitatively. For example, effectiveness may be measured as the change of a user’s rating of (or reported interest in) an item before and after consuming that item [3, 6], efficiency may be measured by time spent on rating an item [13] or reading an explanation [6], and persuasiveness may be measured in terms of click through rate [30].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340103205
+<title> Measuring Recommendation Explanation Quality: The Conflicting Goals of Explanations
+
+<desc> Description:
+Concerning the relationship between the two, one previous study indicates that transparency increases user trust [23], while another study finds that transparency and trust are not related [8]. The second most frequent explanation purpose is effectiveness [20], which can be conflicting with persuasiveness [7].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340103206
+<title> Measuring Recommendation Explanation Quality: The Conflicting Goals of Explanations
+
+<desc> Description:
+There is an important recognized difference between explanations (why a certain suggestion is given) and justifications (why the user may be interested in the item) [19, 27]. The former consist of an honest account of the mechanism that generated the suggestion, while the latter provides a plausible reason, which may be decoupled from the underlying recommendation algorithm.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340103207
+<title> Measuring Recommendation Explanation Quality: The Conflicting Goals of Explanations
+
+<desc> Description:
+Justifications have in the past been created manually using crowdsourcing [6]. A main difference between that and ours, is that we ask humans to pick the recommendation as well as explain it, while [6] perform only the latter.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340103208
+<title> Measuring Recommendation Explanation Quality: The Conflicting Goals of Explanations
+
+<desc> Description:
+Subjective perceptions of explanations are often evaluated qualitatively based on user surveys, with responses typically given on Likert scales [6, 8, 10, 17, 21–23]. Following standard practice, we design a user survey to capture the subjective perception of users regarding the seven goals.
+
+<narr> Narrative:
+
+</top>
+<top>
+<num> Number: 340105201
+<title> Query Rewriting for Voice Shopping Null Queries
+
+<desc> Description:
+In the past few years, speech has emerged has a natural mean for communicating information need to various search engines via voice assistants such as Amazon Alexa, Apple Siri, and Google Assistant. Among various experiences, voice assistants enable customers to search and shop for products in an intuitive way using natural language. Providing a free-form shopping experience is a challenging task. This is especially true because the voice interface lacks assisting mechanisms, such as query completion and refinement, that can help customers easily express their need nand iterate on it. As a cosequence, a non-negligible portion of all voice shopping queries are null queries, that is, queries that result with no offers. Such interactions clearly have negative impact on customers shopping experience [40–42]. Query rewriting (QR) attempts to seamlessly replace null queries with alternatives that lead to relevant offers for the customer intent, and by that, help customers progress on their shopping journey.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105202
+<title> Query Rewriting for Voice Shopping Null Queries
+
+<desc> Description:
+Conceptually, the core of our generation approach is by mapping tail (low frequency) queries to alternative head (high frequency) queries. The main motivation for this approach comes from the fact that head queries are known to exhibit much better performance than tail queries, due to richer historical behavioral features [23]. 
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105203
+<title> Query Rewriting for Voice Shopping Null Queries
+
+<desc> Description:
+For instance, in an e-commerce rewriting scenario, it is essential for the alternative queries to retrieve offers that capture the same intent as the originating query [41]. Rewriting that leads to offers that do not respect the desired product type are clearly poor. 
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105204
+<title> Query Rewriting for Voice Shopping Null Queries
+
+<desc> Description:
+This indicates that web e-commerce null queries are considerably different than voice null queries, and apparently easier to fix. This observation adds to previous line of research identifying differentiating factors between the voice and web domains. For example, it was observed that voice queries are closer to natural language than text queries in general search [15], voice reformulations are distinguishable from textual reformulations [17, 22], and that shopping categories and behavioral patterns defer between voice and web e-commerce search [20].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105205
+<title> Query Rewriting for Voice Shopping Null Queries
+
+<desc> Description:
+Extensive analysis has been done for handling and rewriting of queries in web search. The notion of query refinement, expansion, suggestion, substitution, and reformulation are sometime overloaded and have been commonly used synonymously with query rewriting. Most of the previous methods are not particularly suitable for e-commerce queries, which are shorter and more sensitive to context [34], let alone voice e-commerce queries. Focusing on tail low-frequency e-commerce queries highlights additional unique challenges and opportunities, especially around finding and ranking good query alternatives [13]. Using voice as a new medium for search also reveals differences from traditional search in both web [15, 17, 22] and e-commerce [20, 21].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105206
+<title> Query Rewriting for Voice Shopping Null Queries
+
+<desc> Description:
+One notable research direction in QR, which is also applicable for e-commerce, focuses on increasing the recall. This direction is especially important for null queries that yield no results. Alternative queries are generated by dropping [4, 24, 28, 46, 47] or substituting [7, 16, 25] tokens from the original query. For example, [25] proposed generating query alternatives by using a large set of ordered query pairs obtained from consecutive queries in web-search sessions. Then, various alternatives are generated by breaking a given query into segments and either dropping or generating substitutions for each of them separately. For dealing with null e-commerce queries, [41] suggested a post-retrieval approach for dropping terms from a given query that restricts the search results to the same taxonomy of results returned in the past for the original query. 
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105207
+<title> Query Rewriting for Voice Shopping Null Queries
+
+<desc> Description:
+Our results hint that term-dropping methods for e-commerce null queries do not adjust well to the voice domain. Other ideas for substitution-based solutions, using the query-flow graph [6], were also proposed [7, 16]. However, finding good recommendations for tail e-commerce queries based on session co-occurrence turns to be difficult [16]. For addressing also the long tail of the query distribution, [8] conceptually extend the query-flow graph with term nodes in addition to query nodes. 
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105208
+<title> Query Rewriting for Voice Shopping Null Queries
+
+<desc> Description:
+Recently, several attempts were made to apply deep learning to various query rewriting tasks. [14] proposed to use embedding techniques to expand a query via a k-nearest neighbor search. [19] proposed a framework that learns to rewrite queries by unsupervised candidate generation and supervised candidate ranking. For unsupervised candidate generation, they presented a a sequence-to-sequence LSTM model, but also incorporated several existing QR systems suggestions. Their scoring function required training over a large web click data. [44] applied a similar technique based on post-retrieval method for e-commerce web search. The applicability of these techniques to voice queries is still unclear, especially in light of the data sparsity challenges that still exist as voice interfaces are not yet widely adopted. Indeed, users do not tend to switch between voice and text when reformulating queries [39]. [22] showed that reformulation patterns of voice queries are different from those in conventional textual searches using both lexical and phonetic changes. [17] developed classifiers for distinguishing reformulation of voice query pairs from textual query pairs. They extended text-based approaches with voice signals such as phonetic similarity. This hints regarding the importance of phonetic representations in voice query rewriting. 
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105209
+<title> Query Rewriting for Voice Shopping Null Queries
+
+<desc> Description:
+One related direction in QR focuses on improving its precision by narrowing down a search query. In this case, the goal is to refine the query such that the refined alternative retrieves a more relevant subset of results. Approaches towards this task include learning rewritings based on past users’ query refinements [2, 31, 32] and applying pseudo-relevance feedback techniques [10, 29, 33, 45].
+
+<narr> Narrative:
+
+</top>
+<top>
+<num> Number: 340105701
+<title> Attentional Graph Convolutional Networks for Knowledge Concept Recommendation in MOOCs in a Heterogeneous View
+
+<desc> Description:
+In recent years, massive open online courses (MOOCs) are gradually becoming a mode of alternative education worldwide. For example, Coursera, edX, and Udacity, the three pioneering MOOC platforms, offer millions of user accesses to numerous courses from internationally renowned universities. In China, millions of users study in XuetangX, which is one of the largest MOOC platforms [20], where thousands of courses are offered on various subjects. Although the number of students in MOOCs is continuously growing, there are still some straits with MOOCs. A challenging problem for MOOCs is how to attract students to study continuously and efficiently on the platforms, where the overall course completion rate is lower than 5% [34]. Therefore, it requires better understanding and capturing of student interests.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105702
+<title> Attentional Graph Convolutional Networks for Knowledge Concept Recommendation in MOOCs in a Heterogeneous View
+
+<desc> Description:
+To understand and capture student interests on MOOCs platforms, multiple efforts have been done, including course recommendation [13, 35], behavior prediction [20], user intentions understanding [34], etc. Among these efforts, recommendation system is applied by MOOCs provider to recommend courses to students.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105703
+<title> Attentional Graph Convolutional Networks for Knowledge Concept Recommendation in MOOCs in a Heterogeneous View
+
+<desc> Description:
+Traditional recommendation strategy, such as collaborative filtering (CF), which considers user (students) historical interactions and makes recommendations based on potential common preferences from users with similar interests, has achieved great success. However, CF based methods suffer from the sparsity of user-item (student-knowledge concept) relationships, which limits the recommendation performance. To overcome this problem, a number of efforts have been done by leveraging side information, such as social networks [11], user/item attributes [27], images [33], contexts [25], etc.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105704
+<title> Attentional Graph Convolutional Networks for Knowledge Concept Recommendation in MOOCs in a Heterogeneous View
+
+<desc> Description:
+Traditional GCNs can only capture the homogeneous relationships among homogeneous entities, which overlooks the rich information among heterogeneous relationships. To address this issue, we use meta-paths [25] as the guidance to capture the heterogeneous context information in a HIN via GCN. In this way, the heterogeneous relationships are utilized in a more natural and intuitive way.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105705
+<title> Attentional Graph Convolutional Networks for Knowledge Concept Recommendation in MOOCs in a Heterogeneous View
+
+<desc> Description:
+Some information recommendation models are based on heterogeneous information networks. [19] proposed Heaters, a graph-based model, to solve the general recommendation problem in heterogeneous networks. [32] proposed to use meta-paths based latent features to represent the connectivity between users and items along with different types of paths. Additionally, [10, 23, 24] proposed to use meta-path concept to mode the heterogeneous information in HIN. Different from previous methods, this study focuses on capture the representations of different types of entities on the heterogeneous information network and fuses themselves content feature of different types of entities and the structure features of entities in MOOCs data together for the recommendation task of the knowledge concept.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105706
+<title> Attentional Graph Convolutional Networks for Knowledge Concept Recommendation in MOOCs in a Heterogeneous View
+
+<desc> Description:
+Based on above observation, we propose Attentional Heterogeneous Graph Convolutional Deep Knowledge Recommender (ACKRec), an end-to-end framework for knowledge concept recommendation on MOOCs platform. To capture heterogeneous complex relationships, we model the MOOCs platform data as a heterogeneous information network (HIN) [23].
+
+<narr> Narrative:
+
+</top>
+<top>
+<num> Number: 340110301
+<title> An Eye Tracking Study of Web Search by People With and Without Dyslexia
+
+<desc> Description:
+People with dyslexia tend to experience challenges in tasks involving reading, writing, spelling, and memory, despite having normal intelligence. These challenges often manifest in a slower reading rate and lower reading comprehension [35].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110302
+<title> An Eye Tracking Study of Web Search by People With and Without Dyslexia
+
+<desc> Description:
+
+Relatively little is known about how dyslexia impacts web search, but several recent studies have begun to shed some light on this topic. Interviews with people with dyslexia suggest that search engine use - including query formulation, search result triage and information extraction from target webpages - is particularly challenging for this population [4, 19, 35, 37, 43]. Online experiments comparing search behaviors of people with and without dyslexia have identifed some features of webpages, such as average line length and the ratio of images to text, that impact page readability for people with dyslexia [25].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110303
+<title> An Eye Tracking Study of Web Search by People With and Without Dyslexia
+
+<desc> Description:
+Our findings validate prior self-report findings that Searchers with Dyslexia (SWD) struggle with all stages of the search process: query formulation, search results triage, and information extraction [37, 43].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110304
+<title> An Eye Tracking Study of Web Search by People With and Without Dyslexia
+
+<desc> Description:
+Researchers in information retrieval and HCI have extensively studied user interaction with web search systems, particularly for complex informational [16] or exploratory [55] search tasks. Such tasks typically comprise three stages [3, 43]: query formulation (i.e., generating and refning search keywords), search results triage (i.e., determining which parts of the search engine results page - the SERP - are most relevant to the task at hand, and which link to open), and information extraction (i.e., gathering and making sense of the sought-after content).
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110305
+<title> An Eye Tracking Study of Web Search by People With and Without Dyslexia
+
+<desc> Description:
+Researchers have employed a variety of methods to study web search, including analyzing search engine and web browser logs (e.g., [32, 53, 54]), gathering self-report data from surveys, interviews, or diary studies of end-users (e.g., [42, 43]), and recruiting participants to perform controlled search tasks (e.g., [3, 25, 44]). As with any methodology, there are trade-offs: logs can provide in-situ data for a large set of users, but lack qualitative depth; self-report data may have gaps or inconsistencies with actual observed behavior; controlled, in-lab task performance may differ from natural search behavior in unanticipated ways, etc.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110306
+<title> An Eye Tracking Study of Web Search by People With and Without Dyslexia
+
+<desc> Description:
+Several researchers have begun to use eye tracking to understand which aspects of the SERP users attend to [22, 23, 36, 52]. Eye tracking allows us to log and track the amount of attention paid to specific parts of the pages and interactions at a granular level of space and time.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110307
+<title> An Eye Tracking Study of Web Search by People With and Without Dyslexia
+
+<desc> Description:
+These studies have also shown that searchers distribute their visual attention diferently across organic and ad results on a SERP [24], and that one can determine a webpage’s most salient parts by looking at the amount of visual attention paid to its diferent elements [17].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110308
+<title> An Eye Tracking Study of Web Search by People With and Without Dyslexia
+
+<desc> Description:
+Query Formulation: Since spelling and query formulation are closely related, this stage of search has been reported to be challenging for those with dyslexia. From their interview study, [43] reported SWD have trouble spelling words at the phonetic level. They also found SWD report a heavy reliance on voice input and on autocomplete when forming queries.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110309
+<title> An Eye Tracking Study of Web Search by People With and Without Dyslexia
+
+<desc> Description:
+Furthermore, prior work suggests a strong correlation between dyslexia and lower phonological working memory (i.e., the ability to hold words in short-term memory) [10, 38]. Work done to investigate the efects of working memory on search results triage echoes previous findings. A search log study of participants with low and high working memory found that those with lower working memory take more time to first click on the SERP, open fewer links, and take more time between events [18].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110310
+<title> An Eye Tracking Study of Web Search by People With and Without Dyslexia
+
+<desc> Description:
+[25] found SWD’s relevance ratings of webpages were highly correlated with their readability scores. They identifed several visual and textual features such as line length, number of headings, and ratio of images to text, that impact SWDs’ readability and relevance judgements of webpages. [35] found using the "Reader View" mode in Firefox web browser, which simplifes a page’s visual structure, improved reading speed for SWD without reducing comprehension.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110311
+<title> An Eye Tracking Study of Web Search by People With and Without Dyslexia
+
+<desc> Description:
+However, [14] found that when SWD used Google, a modern interactive search engine with query formulation aids, for formulating Norwegian queries, there were no differences in query formulation behavior. This suggests query formulation aids could help those with dyslexia.
+
+<narr> Narrative:
+
+</top>
+<top>
+<num> Number: 340110601
+<title> The Cortical Activity of Graded Relevance
+
+<desc> Description:
+The value of evaluating information based on graded relevance has begun to receive attention in recent years both from system [40, 55] and user [2, 15, 48] point of views. This is particularly important since the granularity of relevance judgements in previous studies have been based on investigating this phenomenon indirectly, via some sort of mediator [29, 71]. This, therefore, limits the understanding of how searchers perceive different degrees of information relevance [55].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110602
+<title> The Cortical Activity of Graded Relevance
+
+<desc> Description:
+Relevance is also known to be subjective and difficult to quantify [48] since it depends on a searcher’s perception of information relating to a specific Information Need (IN) at a certain point in time [8, 57]. However, given the semantic gap between a searcher’s IN and their formulated queries [7, 27, 52], IR systems have employed various techniques to capture the subjective aspect of relevance [2] to improve the effectiveness of retrieved results. Examples of such techniques are explicit [38], implicit (e.g. [24, 36]) and physiological [47] feedback.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110603
+<title> The Cortical Activity of Graded Relevance
+
+<desc> Description:
+More recently, researchers have shown the possibility of capturing the neural processes associated with relevance, using brain imaging techniques [2, 15, 16, 22, 25, 28, 33, 37, 48, 65]. These studies have either investigated relevance in the context of word associations (i.e. relevance of a word with respect to another) [15, 16, 65] without subjects experiencing any IN; or investigated relevance in the context of Information Retrieval (IR) when IN has been introduced to subjects. In the latter scenario, relevance was investigated only as a binary notion [2, 19, 22, 24, 25, 28, 37, 48, 49] leaving the graded nature of it unexplored.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110604
+<title> The Cortical Activity of Graded Relevance
+
+<desc> Description:
+Relevance is the fundamental concept in IR [45, 57–59]. It plays a crucial role in the user-system interaction since it is a substantial indicator of system retrieval performance [8, 57]. Despite significant attention dedicated to examining this concept, relevance is still not fully understood, and it is a subject of many ongoing scientific debates. Past research has investigated the concept of relevance at different granularity levels from both the user [29, 71] and system [35, 40] perspective. Within the system side, graded relevance (in comparison to the binary one) has been shown to improve ranking functions [34, 55]. 
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110605
+<title> The Cortical Activity of Graded Relevance
+
+<desc> Description:
+Given the importance of the user side of relevance, IR systems have been employing mechanisms and techniques to capture this phenomenon, namely explicit and implicit feedback. Explicit feedback is easy to use, however, difficult to obtain due to the cognitive burden associated with it [47], as the user is required to explicitly state whether presented content is subjectively perceived as relevant or not [67]. Implicit feedback is an unobtrusive data collection method. Popular techniques used to measure implicit relevance feedback are, for example, dwell time (i.e. [36]), eye-tracking and pupillometry [24], and/or the measurements of affective [4, 47] and physiological signals [47]. However, implicit feedback is often found to be noisy, which decreases its accuracy [2].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110606
+<title> The Cortical Activity of Graded Relevance
+
+<desc> Description:
+Recent research has begun to apply brain imaging methods to study aspects of the IR process from a neuroscience perspective. One particular area of emphasis for this research has been to examine the IN process [50, 51]. In addition, it has been found that prediction of the IN state experienced by a user is possible using brain signals [50]. Apart from IN, recent studies have employed brain imaging techniques to gain a better understanding of other parts of the information seeking and retrieval process, such as query formulation [28], search [49, 70] and relevance (e.g. [33]).
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110607
+<title> The Cortical Activity of Graded Relevance
+
+<desc> Description:
+Recent research using a neuroscience approach to investigate relevance might be categorised in two ways based on the context within which the relevance was measured. The first line of brain-imaging research has position relevance within the IR task. For instance, [48] employed functional magnetic resonance imaging (fMRI), to localise differences in brain activity in cortical regions during the processing of relevant vs non-relevant images. The research was able to identify regions engaged in the relevance judgement processing and the increased activation of these regions for relevant items was related to visuospatial working memory [49, 51].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110608
+<title> The Cortical Activity of Graded Relevance
+
+<desc> Description:
+Relevance has been inferred using EEG [25] or in combination with pupillometry or/and eye-tracking devices [22] within the context of the IR task, not only for textual stimuli but also for videos [37] and images [2]. For instance, [2] examined the processing of relevant vs non-relevant images, finding the most significant differences to occur between 500 – 800ms. [37] explored the ERPs associated with topical relevance of video skims and classified the data based on two specific ERP components (N400 and P600), which have been shown to be indicators of relevant and non-relevant judgements. Moreover, recent findings have shown that relevance can be predicted in real-time from EEG brain signals and eye movements while the user engages with the system and IR task [28].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110609
+<title> The Cortical Activity of Graded Relevance
+
+<desc> Description:
+Another line of research has examined relevance in the context of word associations, employing EEG in isolation, or in combination with eye gaze [15, 16, 65]. In these scenarios, participants did not experience IN, but they engaged in judging word association to the topic. The findings of these studies have shown that brain signals differ when subjects process relevant vs. non-relevant words across time [16].
+
+<narr> Narrative:
+
+</top>
+<top>
+<num> Number: 340116401
+<title> Web-to-Voice Transfer for Product Recommendation on Voice
+
+<desc> Description:
+A fundamental task in voice shopping is product recommendation, where the goal is to recommend relevant products to customers by inferring their preferences. While a growing body of research has addressed the voice-based recommendation problem from the dialogue perspective, i.e., improving the effectiveness of question-answering between the customer and system [7, 8, 11, 23, 25, 44, 45], relatively little work has been focused on addressing the specific challenges arising in recommendation on Voice [40].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340116402
+<title> Web-to-Voice Transfer for Product Recommendation on Voice
+
+<desc> Description:
+Due to the unique characteristics of voice interfaces (e.g., narrow information channel), customers tend to explore fewer products and choose fewer long-tail products, as compared to Web-based channels [45].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340116403
+<title> Web-to-Voice Transfer for Product Recommendation on Voice
+
+<desc> Description:
+We note that repeated purchase behaviors have also been observed on the Web, which is mainly driven by customers’ loyalty to certain brands [5, 10, 42].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340116404
+<title> Web-to-Voice Transfer for Product Recommendation on Voice
+
+<desc> Description:
+In the recommendation literature, transfer learning has been implemented by extending recommendation models, e.g., factorization models [28, 29, 33] or neural networks [14, 21, 26], with shared user representations for cross-domain recommendation tasks. While being different in the underlying recommendation models (see Section 2 for a detailed discussion), both classes of methods are designed for transferring user representations with less emphasis on transferring the interaction patterns, which has to be carefully considered in our Web-to-Voice transfer context.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340116405
+<title> Web-to-Voice Transfer for Product Recommendation on Voice
+
+<desc> Description:
+More recent work [18] attempts to address the problem by modeling the transfer of the purchase patterns from one domain to another using a linear transformation. However, it fails to capture the relationships of interaction patterns across domains, such as similarity and dissimilarity, which are essential for Web to Voice transfer.
+
+<narr> Narrative:
+
+</top>
+
+
+<top>
+<num> Number: 340116406
+<title> Web-to-Voice Transfer for Product Recommendation on Voice
+
+<desc> Description:
+With the rapid increase of personal assistants, a considerable amount of literature has grown up around conversational recommendation. The focal point of research efforts has been enabling the system to effectively and efficiently infer users’ intents and satisfy their information needs [35, 47]. Due to the complexity of the problem, it has been studied by several research communities including natural language processing [11, 23, 25], human-computer interaction [7, 45], and information retrieval (including recommender systems) [8, 44]. Existing work mainly takes a dialogue perspective with the goal of improving the question-answering process, i.e., asking the most relevant questions to collect user feedback.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340116407
+<title> Web-to-Voice Transfer for Product Recommendation on Voice
+
+<desc> Description:
+From the recommendation perspective, most existing work assumes a cold-start setting that ignores long-term preferences of users. For example, [47] studies the effect of in-session aspect-based questions for product recommendation using memory networks [39]. [25] introduce a neural dialogue model that classifies the sentiment of a user with respect to movies discussed in the conversation session, and based on that, it generates movie recommendations with a pre-trained autoencoder recommender [37].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340116408
+<title> Web-to-Voice Transfer for Product Recommendation on Voice
+
+<desc> Description:
+A recent paper by [40] shows that the integration of users’ past purchasing behaviors boosts the effectiveness of voice-based recommendation. Their work, however, concentrates on methods for integrating recommendation techniques into the dialogue system. Our work takes a step back and aims at bridging the conventional recommendation techniques with the recommendation task on Voice, with a specific focus on Web-to-Voice transfer which is of key importance for successful voice shopping in practice.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340116409
+<title> Web-to-Voice Transfer for Product Recommendation on Voice
+
+<desc> Description:
+Early work focuses on adapting matrix factorization techniques for transfer learning [28, 29, 33]. [28] introduce a model based on collective matrix factorization [38], where user latent factors are shared across different domains. The observed interactions in the source domain help to train better latent factors, thus transferring the knowledge to the target domain.
+
+<narr> Narrative:
+
+</top>
+
+
+<top>
+<num> Number: 340116410
+<title> Web-to-Voice Transfer for Product Recommendation on Voice
+
+<desc> Description:
+Neural network-based methods are more capable of learning non-linear latent representations for users and items and potentially also their interactions (see a recent survey [46]). Specific to neural transfer learning for cross-domain recommendation, [14] introduce a multi-view deep learning method that learns shared user representations from user-item interactions in different domains. [26] propose to incorporate content information into the multi-view neural network.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340116411
+<title> Web-to-Voice Transfer for Product Recommendation on Voice
+
+<desc> Description:
+A recent paper [18], perhaps the most closely related work to ours, models the transfer of interactions across multiple domains as a linear transformation using cross-stitch networks [30]. In the context of Web-to-Voice transfer, since the same products appear in both Web and Voice, we adopt a tri-factorization approach [12, 31] that fixes the product representations across channels, and extend the approach into a multi-level scheme, which allows to capture channel-independent and channel-specific interaction patterns.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340116412
+<title> Web-to-Voice Transfer for Product Recommendation on Voice
+
+<desc> Description:
+In Web-based information systems, repeated item consumption has been shown to be most affected by the recency and quality of the item, with recency being more critical [1]. [4] study such a behavior in more detail and reveals the increasing inter-arrival gaps of repeated item consumption that eventually lead to abandonment. In online shopping, [5] study repeated purchases for consumable products, e.g., toothpaste and diapers, and propose a prediction model that helps increase the product click-through rate.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340116413
+<title> Web-to-Voice Transfer for Product Recommendation on Voice
+
+<desc> Description:
+Repeated purchases have only been considered in recommender system literature recently. [42] introduce a recommendation algorithm, adaLoyal, a personalized grocery recommender. In adaLoyal, the repeated purchase is leveraged in a post-processing procedure to adapt the prediction of purchase probability over an item using the customer’ historical purchases of the item. The adaptation is implemented through a posterior calculation that accounts for both probabilities of general and repeated purchases.
+
+<narr> Narrative:
+
+</top>
+<top>
+<num> Number: 340118801
+<title> Choppy: Cut Transformer for Ranked List Truncation
+
+<desc> Description:
+While much of the work in information retrieval has been centered around ranking, there is growing interest in methods for ranked list truncation - the problem of determining the appropriate cutoff 𝑘 of candidate results [1, 9]. This problem has garnered attention in fields like legal search [14] and sponsored search [3, 16], where there could be a monetary cost for users looking into an irrelevant tail of documents or where showing too many irrelevant ads could result in ad blindness. The fundamental importance of this problem has led to development of methods that are automatically able to learn 𝑘 in a data-driven fashion [9].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340118802
+<title> Choppy: Cut Transformer for Ranked List Truncation
+
+<desc> Description:
+Across the rich history of information retrieval research, there has been extensive work focused on modeling score distributions of IR systems. Early work in this area primarily focused on fitting parametric probability distributions to score distributions [1, 10]. This is often achieved by making the assumption that the overall distribution can be expressed as a mixture of a relevant and a non-relevant distribution. The expectation-maximization (EM) algorithm is often adopted to learn the parameters.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340118803
+<title> Choppy: Cut Transformer for Ranked List Truncation
+
+<desc> Description:
+There has been considerable recent interest in adopting machine learning based models to optimize and improve the ranked list truncation problem. For instance, cascade-style IR systems [17] seek to achieve a balance between efficiency and effectiveness. Notably, [5] investigates a number of machine learning approaches for learning dynamic cutoffs within cascade-style ranking systems. Another recent study investigated how to leverage bidirectional Long Short-Term Memory (LSTM) models to identify the best position to truncate a given list [9]. This model, BiCut, can be considered the present state-of-the-art approach.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340118804
+<title> Choppy: Cut Transformer for Ranked List Truncation
+
+<desc> Description:
+Our work is closely related to the task of query performance prediction [4]. In this task, the objective is to automatically determine the effectiveness of a given query. This could be leveraged to determine the optimal set of results to the user for any given measure. Methods for query performance prediction include pre-retrieval-based approaches [7], relevance-based approaches [4, 19], and neural approaches [18].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340118805
+<title> Choppy: Cut Transformer for Ranked List Truncation
+
+<desc> Description:
+A system that determines the best number of results to display to users has the potential to benefit a wide number of applications. For example, in sponsored search, displaying too many irrelevant ads to users may cause frustration, resulting in so-called query blindness. This motivated research that investigated whether any ads should be displayed at all [3].
+
+<narr> Narrative:
+
+</top>
+<top>
+<num> Number: 340119101
+<title> Hier-SPCNet: A Legal Statute Hierarchy-based Heterogeneous Network for Computing Legal Case Document Similarity
+
+<desc> Description:
+A key step for developing these legal IR systems is to estimate the similarity between two legal case documents, which is challenging because legal documents are long, complicated and unstructured [3, 4, 6, 8]. Also, there is no well defined notion of legal similarity – two legal case documents are considered similar if legal experts judge them to be similar. In this work, we focus on the challenge of automating this similarity computation.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340119102
+<title> Hier-SPCNet: A Legal Statute Hierarchy-based Heterogeneous Network for Computing Legal Case Document Similarity
+
+<desc> Description:
+Although there exists several supervised methods for general document similarity (e.g., for measuring similarity of news articles [5]), having such supervised methods for legal document similarity is not practical. This is because training such supervised models need a gold standard containing thousands of similar document pairs. Since legal document similarity can be verified only by legal experts, developing such a gold standard is prohibitively expensive. Existing methodologies for finding similar legal documents are hence unsupervised [3, 4, 6, 8].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340119103
+<title> Hier-SPCNet: A Legal Statute Hierarchy-based Heterogeneous Network for Computing Legal Case Document Similarity
+
+<desc> Description:
+The existing methods for computing legal document similarity and can be broadly classified into network-based methods that rely on citation to prior case documents [3, 8], and text-based methods that rely on the textual content of the documents [6], and hybrid [4].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340119104
+<title> Hier-SPCNet: A Legal Statute Hierarchy-based Heterogeneous Network for Computing Legal Case Document Similarity
+
+<desc> Description:
+To estimate the similarity between legal documents, we propose to apply the graph embedding algorithm Metapath2vec [1] on the heterogeneous Hier-SPCNet. Our method relies on the key idea that if two documents cite a common statute/precedent or if two documents cite different statutes/precedents that are themselves structurally similar in the network, then the two documents may be discussing similar legal issues, which is a strong signal for estimating document similarity.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340119105
+<title> Hier-SPCNet: A Legal Statute Hierarchy-based Heterogeneous Network for Computing Legal Case Document Similarity
+
+<desc> Description:
+We also compare our proposed network-based method with a state-of-the-art text-based method for computing legal document similarity using document embeddings [6]. We observe that the proposed network-based method can give complimentary insights compared to what is given by the text-similarity method. Combining the two is a promising way of estimating legal document similarity from multiple aspects.
+
+<narr> Narrative:
+
+</top>
+<top>
+<num> Number: 340119801
+<title> Bundle Recommendation with Graph Convolutional Networks
+
+<desc> Description:
+Most existing works for bundle recommendation [2, 6, 7] regard item and bundle recommendation as two separate tasks, and associate them by sharing model parameters. A recent study [3] proposed a multi-task framework that transfers the benefits of the item recommendation task to the bundle recommendation to allevi- ate the scarcity of user-bundle interactions.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340119802
+<title> Bundle Recommendation with Graph Convolutional Networks
+
+<desc> Description:
+Although bundles are currently widely used everywhere, few efforts have been made in solving the bundle recommendation problem. List Recommendation Model (LIRE) [6] and Embedding Factorization Machine (EFM) [2] simultaneously utilized the users’ interactions with both items and bundles under the BPR framework. The Bundle BPR (BBPR) Model [7] made use of the parameters previously learned through an item BPR model. Recently, Deep Attentive Multi-Task Model (DAM) [3] jointly modeled user-bundle interactions and user-item interactions in a multi-task manner.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340119803
+<title> Bundle Recommendation with Graph Convolutional Networks
+
+<desc> Description:
+The basic idea of graph convolutional networks (GCN) [5] is to reduce the high-dimensional adjacency information of a node in the graph to a low-dimensional vector representation. With the strong power of learning structure, GCN is widely applied in recommender systems. [1] first applied GCN to the recommendation to factorize several rating matrices. [10] extended it to web-scale recommender systems with neighbor-sampling. Recently, [9] further approached a more general model that uses high-level connectivity learned by GCN to encode CF signals.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340119804
+<title> Bundle Recommendation with Graph Convolutional Networks
+
+<desc> Description:
+MFBPR [8] This is a matrix factorization method under a Bayesian Personalized Ranking pairwise learning framework, which is widely used for implicit feedback.
+
+<narr> Narrative:
+
+</top>
+<top>
+<num> Number: 340120401
+<title> Context-Aware Term Weighting For First Stage Passage Retrieval
+
+<desc> Description:
+A few recent work investigated using word embeddings [5] for document term weighting, but most of them only learn a global idf-like term weight because the word embeddings are context-independent.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340120402
+<title> Context-Aware Term Weighting For First Stage Passage Retrieval
+
+<desc> Description:
+Neural Approaches for First Stage Ranking. Most neural ranking models are cost-prohibitive to be used in the first stage [1, 2, 10].
+
+<narr> Narrative:
+
+</top>
+<top>
+<num> Number: 340120701
+<title> Retrieving Potential Causes from a Query Event
+
+<desc> Description:
+A number of existing approaches extract cause-effect patterns using lexical, syntactic, and more recently, semantic relations [3–5, 12], primarily taken from headlines or single sentences. The cause-effect pattern approach was extended in [7], where a set of patterns are initially used to create a network of causes and effects, and then a relational embedding method is used to jointly embed causes and effects. Causal IR works in the reverse direction, where a query describes a cause (e.g., current situation or proposed action) and the results provide a list of possible effects was studied in [9, 10].
+
+<narr> Narrative:
+
+</top>
+<top>
+<num> Number: 340122401
+<title> Local Self-Attention over Long Text for Efficient Document Retrieval
+
+<desc> Description:
+Neural models have shown successful results in a number of IR tasks [9, 10, 17]. [23] proposed a kernel pooling approach (KNRM) based on a bag-of-words representation of words. This was further extended by [5] to incorporate n-gram representations using convolutional architecture. Several others [8, 14] have highlighted important considerations for designing neural ranking models for documents that are distinct from dealing with passages and other short text. [26] have emphasized on efficiency in neural ranking models and introduced neural models for retrieving documents from a large corpus.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340122402
+<title> Local Self-Attention over Long Text for Efficient Document Retrieval
+
+<desc> Description:
+[16] use pretrained contextual embeddings, without fine-tuning, in downstream ranking models.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340122403
+<title> Local Self-Attention over Long Text for Efficient Document Retrieval
+
+<desc> Description:
+Classically, assessing relevance of documents based on relevant parts has been studied in many forms [3, 21] and this study continues that exploration in the context of neural models. Unlike [16, 24], our proposed model is trained in a fully-supervised setting and only requires query-document relevance labels for training.
+
+<narr> Narrative:
+
+</top>
+<top>
+<num> Number: 340126601
+<title> Reranking for Efficient Transformer-based Answer Selection
+
+<desc> Description:
+In this paper, we study and propose solutions to improve the efficiency and cost of modern QA systems based on search engines and Transformer models. Though we mainly focus on AS2, the proposed solution is general, and can be applied to other QA paradigms, including machine reading tasks. Our main idea follows the successful cascade approach for ad-hoc document retrieval [19], which considers fast but less accurate rerankers together with more accurate but slower models.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340126602
+<title> Reranking for Efficient Transformer-based Answer Selection
+
+<desc> Description:
+Neural models for AS2 typically apply a series of non-linear transformations to the input question and answer, represented as compositions of word or character embeddings and then measure the similarity between the obtained representations. For example, the Rel-CNN [16] has two separate embedding layers for the question and answer, and relational embedding, which aims at connecting them.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340126603
+<title> Reranking for Efficient Transformer-based Answer Selection
+
+<desc> Description:
+In contrast, we propose an alternative (and compatible with the initiatives above) approach following previous work in document retrieval, e.g., the use of sequential rerankers [19]. [21] focused on quickly identifying a set of good candidate documents to be passed to the second and further rerankers of the cascade. [4] proposed two stage approaches using a limited set of textual features and a final model trained using a larger set of query- and document-dependent features. [7] presented a new general framework for learning an end-to-end cascade of rankers using backpropagation. [1] studied effectiveness/efficiency trade-offs with three candidate selection approaches.
+
+<narr> Narrative:
+
+</top>
+<top>
+<num> Number: 340128101
+<title> How Useful are Reviews for Recommendation? A Critical Review and Potential Improvements
+
+<desc> Description:
+Previously, there largely have been two schools of thought regarding employing user reviews for better recommendation. The first type considers reviews as "explanations" for the user giving that specific rating and tries to incorporate them into matrix factorization (MF). HFT [9] is such a model which tries to regularize the latent features being learned through MF by reusing the same latent features for modeling the reviews’ likelihood using LDA [1].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340128102
+<title> How Useful are Reviews for Recommendation? A Critical Review and Potential Improvements
+
+<desc> Description:
+The other type of methods are based on the philosophy that textual reviews are much more expressive than a single rating, and can be used to learn better latent features to perform better MF. [2, 3, 11, 13] are all popular methods which, in some different way, try to extract features from user reviews and item reviews through deep learning architectures like TextCNN [7], and use these extracted features to perform MF.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340128103
+<title> How Useful are Reviews for Recommendation? A Critical Review and Potential Improvements
+
+<desc> Description:
+Our work also connects to recent discussions [4] on the reproducibility of recent neural methods for recommendation. Note that the topic of this paper is different from [4] since, in addition to the correctness of recent works, we also deal with a more general meta-question about the utility of reviews for recommendation.
+
+<narr> Narrative:
+
+</top>
+<top>
+<num> Number: 340132201
+<title> A Study of Neural Matching Models for Cross-lingual IR
+
+<desc> Description:
+CLIR is the task of retrieving documents in target language Lt with queries written in source language Ls. The increasing popularity of projection-based weakly-supervised [4, 6, 14] and unsupervised [1, 2] cross-lingual word embeddings has spurred unsupervised frameworks [8] for CLIR, while in the realm of mono-lingual IR, interaction-based neural matching models [5, 10, 15] that utilize semantics contained in word embeddings have been the dominant force. This study fills the gap of utilizing CLWEs in neural IR models for CLIR.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340132202
+<title> A Study of Neural Matching Models for Cross-lingual IR
+
+<desc> Description:
+Traditional CLIR approaches translate either document or query using off-the-shelf SMT system such that query and document are in the same language. A number of researchers [12, 13] later investigated utilizing translation table to build a probabilistic structured query [3] in the target language. Recently, [8] showed that CLWEs are good translation resources by experimenting with a CLIR method (dubbed TbT-QT) that translates each query term in the source language to the nearest target language term in the CLWE space. CLWEs are obtained by aligning two separately trained embeddings for two languages in the same latent space, where a term in Ls is proximate to its synonyms in Ls and its translations in Lt, and vice versa. TbT-QT takes only the top-1 translation of a query term and uses the query likelihood model [11] for retrieval. The overall retrieval performance can be damaged by vocabulary mismatch magnified with translation error. Using closeness measurement between query and document terms in the shared CLWE space as matching signal for relevance can alleviate the problem, but this area has not been extensively studied.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340132203
+<title> A Study of Neural Matching Models for Cross-lingual IR
+
+<desc> Description:
+The reasons for the success of neural IR models for mono-lingual retrieval can be grouped into two categories: Pattern learning: the construction of word-level query-document interactions enables learning of various matching patterns (e.g., proximity, paragraph match, exact match) via different neural network architectures. Representation learning: models in which interaction features are built with differentiable operations (e.g., kernel pooling [15]) allow customizing word embeddings via end-to-end learning from large-scale training data.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340132204
+<title> A Study of Neural Matching Models for Cross-lingual IR
+
+<desc> Description:
+Although representation learning is capable of further improving overall retrieval performance [15], it was shown in the same study that updating word embeddings requires large-scale training data to work well (more than 100k search sessions in their case). In CLIR, however, datasets usually have fewer than 200 queries per available language pair and can only support training neural models with smaller capacity. Therefore, we focus on the pattern learning aspect of neural models.
+
+<narr> Narrative:
+
+</top>
+<top>
+<num> Number: 340133001
+<title> Sentiment-guided Sequential Recommendation
+
+<desc> Description:
+This method illustrates the important role of recurrent neural networks (RNNs) [7] in sequential recommendation. Taking this research as a starting point, subsequent advanced approaches, such as memory-based RNNs [3, 12] and self-attention-based RNNs [5, 11], have taken sequential recommendation technology to a new level. These advanced technologies not only complete the modeling of pure behavior (item) sequences but also fully characterize additional information such as knowledge [3] and features [11] related to items to improve the sequence prediction performance.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340133002
+<title> Sentiment-guided Sequential Recommendation
+
+<desc> Description:
+However, most of the existing models based on sentiment factors [4, 10] focus only on non-sequential recommendations. In other words, they ignore the influence of the temporal sentiment change pattern on the sequence of user behavior; however, this temporal influence sometimes plays a decisive role in generating the final preference.
+
+<narr> Narrative:
+
+</top>
+<top>
+<num> Number: 340133301
+<title> Feature Transformation for Neural Ranking Models
+
+<desc> Description:
+Recently, neural network based deep learning models attract lots of attention for learning-to-rank tasks [1, 5]. However, few of them investigate the impact of feature transformation.
+
+<narr> Narrative:
+
+</top>
+<top>
+<num> Number: 340146701
+<title> Deep Reinforcement Learning for Information Retrieval: Fundamentals and Advances 
+
+<desc> Description:
+Efforts have been made on developing supervised or unsupervised methods for these information retrieval mechanisms [21]. However, since the widely use of mobile applications during the recent years, more and more information retrieval services have provided interactive functionality and products [41], these conventional techniques typically face several common challenges.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340146702
+<title> Deep Reinforcement Learning for Information Retrieval: Fundamentals and Advances 
+
+<desc> Description:
+Given the advantages of reinforcement learning, there have been tremendous interests in developing RL based information retrieval techniques [3, 5, 11, 12, 15, 38–40]. While these successes show the promise of DRL, applying learning from game-based DRL to information retrieval is fraught with unique challenges, including, but not limited to, extreme data sparsity, power-law distributed samples, and large state and action spaces.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340146703
+<title> Deep Reinforcement Learning for Information Retrieval: Fundamentals and Advances 
+
+<desc> Description:
+For relevance ranking, conventional methods typically optimize the evaluation metric before a predefined position (e.g. NDCG@K), which ignores the information after rank K. [31] is proposed to address this problem by using the metrics calculated upon all the positions as reward function, and the model parameters are be optimized via maximizing the accumulated rewards for all decisions.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340146704
+<title> Deep Reinforcement Learning for Information Retrieval: Fundamentals and Advances 
+
+<desc> Description:
+[34] formalized diverse ranking as a continuous state Markov decision process, and policy gradient algorithm of REINFORCE is leveraged to maximize the accumulated long-term rewards in terms of the diversity metric.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340146705
+<title> Deep Reinforcement Learning for Information Retrieval: Fundamentals and Advances 
+
+<desc> Description:
+Recommender systems aim to learn users’ preferences based on their feedback and suggest items to match their preferences. User’s preference is assumed to be static in traditional recommendation algorithms such as collaborative filtering, which is usually not true in real-world recommender systems where users’ preferences are highly dynamic. Bandit methods [33, 37] usually utilizes a variable reward function to delineate the dynamic nature of the environment (reward distributions). Another solution is to introduce the MDP setting [6, 9, 42], where state represents user’s preference and state transition depicts the dynamic nature of user’s preference over time. In [39], a user’s dynamic preference (state) is learned from her browsing history and feedback. Each time a user provides feedback (skip, click or purchase) to an item, the recommender system will update the state to capture user’s new preferences.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340146706
+<title> Deep Reinforcement Learning for Information Retrieval: Fundamentals and Advances 
+
+<desc> Description:
+Online advertising is to suggest the right ads to the right users so as to maximize the click-through rate (CTR) or return on investment (ROI) of the advertising campaign, which consists of two main marketing strategy, i.e., guaranteed delivery (GD) and real-time bidding (RTB). In guaranteed delivery setting, ads that grouped into campaigns are charged on a pay-per-campaign basis for the pre-specified number of deliveries [23].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340146707
+<title> Deep Reinforcement Learning for Information Retrieval: Fundamentals and Advances 
+
+<desc> Description:
+For example, a model-based RL framework is proposed in RTB setting [3], where the state value is approximated by neural network to address the scalability problem of large auction amounts and the limited budget.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340146708
+<title> Deep Reinforcement Learning for Information Retrieval: Fundamentals and Advances 
+
+<desc> Description:
+In [12], a multi-agent bidding model is proposed to jointly consider all the advertisers’ biddings in the system, and a clustering approach is introduced to deal with a large number of advertisers.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340146709
+<title> Deep Reinforcement Learning for Information Retrieval: Fundamentals and Advances 
+
+<desc> Description:
+Recent years have witnessed the increased popularity and explosive growth of the World Wide Web, which has generated huge amounts of data and leaded to progressively severe information overload problem [4].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340146710
+<title> Deep Reinforcement Learning for Information Retrieval: Fundamentals and Advances 
+
+<desc> Description:
+By integrating deep learning into reinforcement learning, DRL is not only capable of continuing sensing and learning to act, but also capturing complex patterns with the power of deep learning. Under the DRL schema, complex problems are addressed by acquiring experiences through interactions with a dynamic environment. The result is an optimal policy that can provide decision making solutions to complex tasks without any specific instructions [13].
+
+<narr> Narrative:
+
+</top>
+<top>
+<num> Number: 337795701
+<title> Enabling Predictive Number Entry and Editing on Touchscreen-Based Mobile Devices
+
+<desc> Description:
+Nowadays, almost all virtual keyboards come with suggestion bars that present the most probable next words and seldom phrases using linguistic models [7, 21, 25].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337795702
+<title> Enabling Predictive Number Entry and Editing on Touchscreen-Based Mobile Devices
+
+<desc> Description:
+For instance, users tend to use a native or a Web app to find a time for a virtual meeting that is appropriate for all international attendees. Incriminating and decrementing numeric values also require the assistance of third-party apps since increasing and decreasing different units, such as time, currency, or length and weight, are fundamentally different from one another. This process is not only time-consuming and tedious but also distracts the user from the task at hand by forcing her to switch between different apps [1].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337795703
+<title> Enabling Predictive Number Entry and Editing on Touchscreen-Based Mobile Devices
+
+<desc> Description:
+Some have proposed novel keypad layouts to facilitate number entry on various devices. [11] designed a gesture-based method for number entry on touchscreens. In a user study, this approach yielded a promising entry speed and accuracy.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337795704
+<title> Enabling Predictive Number Entry and Editing on Touchscreen-Based Mobile Devices
+
+<desc> Description:
+[8] proposed a method for automatically adjusting the layout and position of a virtual keypad based on how the user is holding a mobile device. A study revealed that this approach increases entry speed by 42% compared to a manually adjustable keypad.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337795705
+<title> Enabling Predictive Number Entry and Editing on Touchscreen-Based Mobile Devices
+
+<desc> Description:
+Some have proposed novel keypad interactions to increase the security of conventional mobile user authentication approaches. [4] designed a keypad that enables the user to actively select digits and directional gestures as her passwords.
+
+<narr> Narrative:
+
+</top>
+<top>
+<num> Number: 337797701
+<title> Effects of Past Interactions on User Experience with Recommended Documents
+
+<desc> Description:
+Recommender systems have been well integrated into many aspects of our lives [6, 7, 25]. In many domains such as e-commerce, entertainment, news feeds, hiring platforms, and social networks, these systems are primarily used to help users discover new items that might be of interest to them [11, 16, 20, 23, 33]. Document recommendation however, is a unique domain in that its chief concern is to facilitate re-finding of user’s items [26].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337797702
+<title> Effects of Past Interactions on User Experience with Recommended Documents
+
+<desc> Description:
+In comparison with other recommendation domains, document recommendation has been less examined with only few studies in this area focusing on improving the accuracy of the recommender algorithm behind the scenes [15, 26]. While the algorithm is an important aspect of the system, knowing about the effects of other aspects, for instance, presentation, explanations, and users’ interaction with the recommended items on user experience helps with designing more effective recommender systems.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337797703
+<title> Effects of Past Interactions on User Experience with Recommended Documents
+
+<desc> Description:
+Inspired by previous work in personal information management and refinding [2, 13], our study seeks to investigate the effects of three important dimensions of users’ past interactions with documents recommended to them on their recognition of, prior intent to open, and interest in the documents.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337797704
+<title> Effects of Past Interactions on User Experience with Recommended Documents
+
+<desc> Description:
+[4] study whether improvements in search have changed this fundamental aspect of PIM. They also offer theoretical explanations for differences between PIM and Internet retrieval, and suggest alternative design directions for PIM systems.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337797705
+<title> Effects of Past Interactions on User Experience with Recommended Documents
+
+<desc> Description:
+[24] study email use in the context of everyday work practices. They examine how users interlace email with their day-to-day, ongoing work processes.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337797706
+<title> Effects of Past Interactions on User Experience with Recommended Documents
+
+<desc> Description:
+Another body of work investigates how people recall and refind previously seen information. Research has shown that a significant portion of an individual’s web accesses tends to be revisits [10, 27, 29].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337797707
+<title> Effects of Past Interactions on User Experience with Recommended Documents
+
+<desc> Description:
+In a user study on search, [28] reports that what makes a search result memorable is the rank and whether it was clicked on.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337797708
+<title> Effects of Past Interactions on User Experience with Recommended Documents
+
+<desc> Description:
+In addition to studying refinding in the context of Web search, researchers have studied re-finding of personal information, especially with an emphasis on email. [14] show that, with the increase of email messages over time, users tend to rely on search for refinding emails as opposed to using human-generated folders and tags. [13] describe the design of a system that facilitates information re-use. The system provides a unified index of information that a person has seen, regardless of whether it was seen as email, web page, document, etc. and uses rich contextual cues in the search interface. They found that that email was the most commonly retrieved source of personal information (e.g. files, web history, emails, etc.). More recently, researchers have also studied re-visitation patterns [1] and refinding strategies [21] employed by users to go back to previously seen email messages.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337797709
+<title> Effects of Past Interactions on User Experience with Recommended Documents
+
+<desc> Description:
+In another work, [30] examine how different representations of web pages affect refinding and finding new information that the user has never seen before. They find for example, that thumbnails help with refinding, but only when the page’s thumbnail has been seen before.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337797710
+<title> Effects of Past Interactions on User Experience with Recommended Documents
+
+<desc> Description:
+Personalized recommendations are increasingly employed in a variety of areas, most commonly in entertainment to for instance recommend music or videos [11, 19, 32, 35], product recommendation in online shopping platforms [25, 34], and social media platforms [16, 23].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337797711
+<title> Effects of Past Interactions on User Experience with Recommended Documents
+
+<desc> Description:
+Document recommendation, on the other hand, has not received as much attention. [15] studied document recommendation in the context of social tagging. They argue that annotating documents with freely chosen keywords (tags) can provide meaningful collaborative semantic data which can potentially be exploited by recommender systems. In more recent work, a document recommendation system to provide quick access to documents on the Google Drive platform was described in [26]. The system aims to surface the most relevant documents when a user visits the home screen. The paper reports significant productivity gains, in terms of time to locate documents, compared to other approaches that rely on search or browsing.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337797712
+<title> Effects of Past Interactions on User Experience with Recommended Documents
+
+<desc> Description:
+Although document recommendation is not a heavily studied area, it can benefit from several insights in studying recommendations in other domains. For example, several papers have attempted to model repeated consumption behavior and its impact on recommender systems. Several important aspects such as item popularity, recency of access [2], user reconsumption patterns [8] and interconsumption frequency [3] were highlighted.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337797713
+<title> Effects of Past Interactions on User Experience with Recommended Documents
+
+<desc> Description:
+Other studies focus on documents. Folder navigation to retrieve documents is studied in detail in [5]. They argue that people dedicate considerable time to creating systematic structures to facilitate such retrieval. They also use a predictive model to formulate the effect of folder depth and folder size on retrieval time. An empirical study to compare two methods of organizing documents – placing them into folders or tagging them with labels – is described in [5]. Study results point to the importance of designing tools that combine strengths of folders and labels while avoiding their weaknesses.
+
+<narr> Narrative:
+
+</top>
+<top>
+<num> Number: 337801101
+<title> Personalized Entity Search by Sparse and Scrutable User Profiles
+
+<desc> Description:
+Personalization to improve web search result ranking has been a long-standing theme in information retrieval [34, 36]. With the increasing availability of individual users’ online traces and derived traits, personalization is again gaining importance for chatbots, recommender systems, product search, and more. [5] has formulated a vision and research agenda for constructing and leveraging personal knowledge graphs (PKG’s) in such settings.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337801102
+<title> Personalized Entity Search by Sparse and Scrutable User Profiles
+
+<desc> Description:
+The most important line of exploiting user information for general web search is based on query-and-click logs (e.g., [30, 34]). This helps in interpreting user interests and intents for ambiguous queries as well as for identifying salient pages for popular queries, and for suggestions for query auto-completion (e.g., [29]). In all this, cues about the user’s location and daytime are a major asset, too (e.g., [8]).
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337801103
+<title> Personalized Entity Search by Sparse and Scrutable User Profiles
+
+<desc> Description:
+Recommender systems have incorporated personalization as well, for ads, products and other contents (e.g., [17, 26, 31]). Here, structured data is leveraged, most notably, purchases or ratings of products, likes of news, YouYube videos, Instagram photos, etc. This field has recently paid attention to scrutable recommendations that are comprehensible by end-users and pinpoint the specific data that explains how the recommended item was computed [6, 25, 38].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337801104
+<title> Personalized Entity Search by Sparse and Scrutable User Profiles
+
+<desc> Description:
+Creating user models from explicit signals like queries, clicks, likes, social links, etc. [1] or/and rich contents like email histories or desktop data [14, 22].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337801105
+<title> Personalized Entity Search by Sparse and Scrutable User Profiles
+
+<desc> Description:
+Leveraging this background knowledge for answer ranking, query expansion, and auto-completion suggestion [12, 24, 29].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337801106
+<title> Personalized Entity Search by Sparse and Scrutable User Profiles
+
+<desc> Description:
+On the first dimension, [34] pioneered the analysis of user interests and activities reflected in query, click and mail histories, and possibly even other online contents written or read by a user. [28] focused on short-term context, like browser sessions, to infer the user’s interest and personalize interactive search. Numerous follow-up works addressed the analysis and usage of query-and-click logs and browsing sessions. To learn from this kind of expressive but highly noisy data, [1] introduced predictive models with learning-to-rank features, whereas [15] and [33] explored the use of similarity signals from taxonomies and ontologies. [37] learned models of user interests for proactive “zero-query” search. [8] studied the important role of user location.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337801107
+<title> Personalized Entity Search by Sparse and Scrutable User Profiles
+
+<desc> Description:
+On the second dimension, prior works explored personalization for ranking as well as query expansion and query suggestions. For personalized ranking, [32] developed methods for incorporating user-specific priors into language models. The interplay of a user’s long-term behavior and short-term context for personalized ranking has been investigated in [8, 10]. [35] and [9] addressed the issue of selective personalization: when to incorporate user profiles.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337801108
+<title> Personalized Entity Search by Sparse and Scrutable User Profiles
+
+<desc> Description:
+Another line of research addresses query expansion for personalization. [11, 39] utilize folksonomy data, like user-provided tags in social bookmarking communities, as a source for expanding a user’s queries. [22] personalizes email search via word embeddings learned from email histories. [14] proposes methods for harnessing a user’s desktop files (incl. email). The viability of all these methods relies on the availability of large collections of user data.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337801109
+<title> Personalized Entity Search by Sparse and Scrutable User Profiles
+
+<desc> Description:
+The same assumption holds for prior work on query auto-completion [12, 29], perhaps the most successful line of personalization in major search engines. The underlying user data ranges from long-term query-and-click histories to browser histories to email contents, in addition to location and daytime as short-term context.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337801110
+<title> Personalized Entity Search by Sparse and Scrutable User Profiles
+
+<desc> Description:
+The closest to our work is [3] on personalized product search. It is based on learning embeddings for users and items in the same semantic space, by leveraging user-written reviews on item pages. However, such rich data about individual users is not easily available for general entity search.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337801111
+<title> Personalized Entity Search by Sparse and Scrutable User Profiles
+
+<desc> Description:
+Entity search about people, products or events has received great attention and has been incorporated into major search engines (see, e.g., [4, 7] and further references there). This methodology leverages large knowledge graphs to infer the focus of the query and/or return crisp entities as answers. However, except for special cases such as music recommendation [13] and consumer product search [2], there is hardly any work on personalized entity search with individual user traits.
+
+<narr> Narrative:
+
+</top>
+<top>
+<num> Number: 340981901
+<title> Permutation Equivariant Document Interaction Network for Neural Learning-to-Rank
+
+<desc> Description:
+Recently, neural network based approaches have proven effective for LTR applications [4, 14, 15]. In this context, we formally define the permutation equivariance requirement for a scoring func- tion that models cross-document interactions.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340981902
+<title> Permutation Equivariant Document Interaction Network for Neural Learning-to-Rank
+
+<desc> Description:
+There are two settings for modeling cross-document interactions: re-ranking and full ranking. In the former setting, a base ranking is provided and the documents are reordered using the ranker. For example, [1] applies sequence modeling on the top k documents of the base ranking and then uses the final state vector to enrich each document for the re-ranking scoring. In the latter setting, we do not have a base ranking but start with a set of documents. For example, [6] takes a pair of documents as input and uses a DNN to produce a preference score for the input documents, while [2] propose a groupwise scoring function to model document interactions, sampling a subset of all permutations of each group and thus not guaranteeing permutation equivariance.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340981903
+<title> Permutation Equivariant Document Interaction Network for Neural Learning-to-Rank
+
+<desc> Description:
+While much of the research in LTR has been devoted to the evolution of ranking loss functions [11], the nature of the learned scoring function has largely remained the same: a univariate scoring function that computes a relevance score for a document in isolation.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340981904
+<title> Permutation Equivariant Document Interaction Network for Neural Learning-to-Rank
+
+<desc> Description:
+Most of the previous work in LTR [11] focuses on designing loss functions, ranging from pointwise to pairwise to listwise ones. Gradient Boosted Decision Trees (e.g., [10]) are regarded as the state-of-the-art models for LTR on benchmark datasets. Recently, neural network based models have attracted considerable attention [8, 12].
+
+<narr> Narrative:
+
+</top>
+<top>
+<num> Number: 340982701
+<title> Optimizing Hyper-Phrase Queries
+
+<desc> Description:
+A recent work on spotting KG facts uses regular expression based operators at word-level [15, 16]. However, their approach disregards any optimization for efficient execution of hyper-phrase queries. [13, 19] propose a system that retrieves witness documents given a KG fact as a query. However, a limitation of their system is that documents need to be processed apriori and linked to KG facts for their retrieval. Put another way, out-of-KG facts or entities can not be processed with their system.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982702
+<title> Optimizing Hyper-Phrase Queries
+
+<desc> Description:
+[17] investigate how to model query execution plans with respect to recall of relevant documents and the query’s execution time. Their approach contrasts between two models: inverted index based approach versus scanning the entire document collection.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982703
+<title> Optimizing Hyper-Phrase Queries
+
+<desc> Description:
+[21, 23] describe approaches to query phrases using combinations of inverted, phrase, nextword, and direct indexes. Our work in contrast explores ways to compute an optimal plan of hyper-phrase query execution using dictionaries and indexes over n-grams and skip-grams.
+
+<narr> Narrative:
+
+</top>
+<top>
+<num> Number: 340982901
+<title> Declarative Experimentation in Information Retrieval using PyTerrier
+
+<desc> Description:
+Yet reproducibility is key to impactful science. [10] define reproducibility as the ability for a different team to reproduce the measurement in a different experimental setup. Therefore, focussing evaluation solely on datasets that extract key aspects of a problem using a standard dataset – for instance, evaluating LTR techniques solely on LETOR datasets [25] with common features – does not allow us to understand the wider context, such as how an approach will fare when integrated into a fully-fledged search engine’s retrieval stack. This highlights the importance of end-to-end retrieval experiments – understanding what data are needed for a given approach, and how it interacts with others components (e.g., how many documents should be re-ranked [19] for a LTR approach), reduces the uncertainties when a technique should be deployed to an operational search engine.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982902
+<title> Declarative Experimentation in Information Retrieval using PyTerrier
+
+<desc> Description:
+IR platforms have a long history, dating back to at least SMART [2]. These days, among the open source platforms, Apache Lucene is widely deployed. Implemented in Java, it provides indexing and single-search APIs, and in recent years has adopted BM25 along with LTR [7] and dynamic pruning techniques [11]. However, its ability to handle standard test collections was for many years a known limitation [8], and has been advanced by efforts such as Anserini [29]. Indeed Anserini facilitates the deployment of a number of replicable information retrieval techniques, on standard test collection, on top of the Lucene backend.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982903
+<title> Declarative Experimentation in Information Retrieval using PyTerrier
+
+<desc> Description:
+All of the discussed IR platforms mix the design of experimental retrieval activities with the implementation and optimisations required to make such activities efficient. This approach has been shown to limit the reproducibility of IR experiments. For example, [23] show that different implementations of the same BM25 weighting models in different IR platforms result in different values for the same effectiveness metric. They propose to decouple the IR experiments from the IR platform implementation by storing the inverted index in a column-oriented relational database and by implementing ranking models using SQL. [12] take a step forward and propose the adoption of an IR-specific declarative language to provide higher level abstractions in the implementation of the IR experiments based on a graph query language. 
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982904
+<title> Declarative Experimentation in Information Retrieval using PyTerrier
+
+<desc> Description:
+The most similar work to our own is that in Terrier-Spark [16, 17], where retrieval pipelines for the Terrier platform were created in Scala using Apache Spark. In that work, retrieval operation were expressed as operations on dataframes (relations). However, adoption of that framework was hindered by two factors: firstly, the use of Apache Spark, which is designed for processing massive scale datasets, and introduces significant interactive overheads making Terrier-Spark unsuitable for notebook-style agile development; secondly, the use of the Scala programming language, which is not as popular as Python.
+
+<narr> Narrative:
+
+</top>
+<top>
+<num> Number: 340983801
+<title> Understanding BERT Rankers Under Distillation
+
+<desc> Description:
+Notably, deep LMs such as BERT [3] have achieved state-of-the-art performance in several natural language tasks, including text search [2, 7]. In general, BERT rankers are trained by fine-tuning BERT over search logs, using query and passage as the two input sentences and making relevance prediction conditioned on the output sentence/word representations.
+
+<narr> Narrative:
+
+</top>
+<top>
+<num> Number: 337177501
+<title> Separate and Attend in Personal Email Search
+
+<desc> Description:
+Email has long been an important means of daily communication. Personal email search, which helps users to quickly retrieve the emails they are looking for from their own corpora, has been an intriguing research topic in information retrieval (IR) for years. Email search is formulated as a learning-to-rank problem, which has been tackled with different learning models, such as boosted trees [8], SVM-based linear models [10, 12, 23], and shallow neural networks [9, 11].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177502
+<title> Separate and Attend in Personal Email Search
+
+<desc> Description:
+Recently, deep neural networks (DNNs) have shown great suc- cess in learning-to-rank tasks. They significantly improve the performance of search engines in the presence of large-scale query logs in both web search [19] and email settings [39, 45, 51]. The advantages of DNNs over traditional models are mainly two-fold: (1) DNNs have strong power to learn embedded representations from sparse features, including words [33] and characters [6]. This allows effective and accurate matching of textual features between queries and documents. (2) DNNs are proved to have universal approximation capability [21] and thus are able to capture high-order interactions between query and document features.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177503
+<title> Separate and Attend in Personal Email Search
+
+<desc> Description:
+In the personal email search scenario, user queries impose different requirements on different aspects of email documents to be retrieved. For example, the query “my recent flight to the US” requires the email search system to focus on both the textual contents and the recency of email documents, while queries such as “medical history” expect emails to be retrieved regardless of the recency. In email search models, different properties of email docu- ments are reflected by different types of features, including dense numerical ones (e.g., document age) and sparse categorical ones (e.g., n-grams). However, there have been few efforts that study how to effectively exploit both dense and sparse features in the learning-to-rank setting, probably because a natural approach exists —- simply concatenating dense features with embedded sparse features and feeding them into the DNNs. Indeed, many previous deep neural email search models use direct concatenation of dense features with embedded sparse features [15, 38, 39, 45].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177504
+<title> Separate and Attend in Personal Email Search
+
+<desc> Description:
+Learning-to-rank refers to building ranking models with machine learning algorithms. In early years, learning-to-rank has been studied with different models, such as boosted trees [8], SVM-based linear models [10, 12, 23] and shallow neural networks [9, 11]. Recent years have witnessed great success of applying DNNs to learning-to-rank, such as [7, 15, 36, 38]. For a complete literature review on neural ranking models for information retrieval, please refer to a survey by [34].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177505
+<title> Separate and Attend in Personal Email Search
+
+<desc> Description:
+There have been several studies in the IR community focusing on the task of email search. The Enterprise tracks of TREC 2005 [40] and TREC 2006 [41] provide public datasets containing email data and summarize some early explorations [14, 31, 35]. A typical trade-off in email search system is to balance the importance of content-based relevance and other features, e.g. freshness. [12] proposed an email search framework with a learning-to-rank re-ranking module that combines freshness with relevance signals of emails as well as other features such as user actions. Alternatively, [13] studied to present users with both the relevance-ranked results as well as the time-ranked results in two separate lists for better user experience. A number of studies specifically focus on improving the content-based relevance signals in email search. [27] explored several methods to expand the usually short and sparse queries by finding more related terms to improve the relevance results. [29] studied a more specific synonym expansion problem to improve email search performance.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177506
+<title> Separate and Attend in Personal Email Search
+
+<desc> Description:
+User interaction data such as clicks is another important signal for learning-to-rank models in email search. [4] leveraged user interactions by attribute parameterization. [48] mitigated the position bias in click data for better training of the model. In addition, [51] showed that contexts such as search request time and location of users were helpful for email search quality.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177507
+<title> Separate and Attend in Personal Email Search
+
+<desc> Description:
+There are also studies on understanding and leveraging query intent information in email search. [2] conducted a thorough survey of search intent by analyzing user logs of email search. [39] categorized email search queries into different clusters before adding the query cluster information to improve email ranking.
+
+<narr> Narrative:
+
+</top>
+<top>
+<num> Number: 337181401
+<title> Listwise Learning to Rank by Exploring Unique Ratings
+
+<desc> Description:
+Learning-to-rank is one of the most classical research topics in information retrieval, and researchers have put tremendous efforts into modeling ranking behaviors. In training, existing ranking models learn a scoring function from query-document features and multi-level ratings/labels, e.g., 0, 1, 2. During inference, the learned scoring function is used to obtain prediction scores for ordering documents. There are two major challenges for learning-to-rank. The first challenge is that there can be a mismatch between ratings and the correct ranking orders in training. Although it is straightforward to infer partial ranking orders from ratings and prediction scores, it is not easy to design loss functions modeling the order of ratings and the order of prediction scores. Many prediction scores indicate the same ranking, i.e., the order of documents. This implies that a model does not necessarily have to match ratings, opening opportunities and ambiguities. Moreover, the top ranking positions are more important. The second challenge is that raw features may not be representative enough for learning a reasonable scoring function. Existing ranking models tackle the two challenges by: (1) designing loss functions or reward functions to map prediction scores with correct ranking orders in training, and (2) tuning loss functions with evaluation metrics such as NDCG [24], or ERR [10], and (3) calculating prediction scores using richer features such as a local ranking context [1, 3, 5, 18, 38].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337181402
+<title> Listwise Learning to Rank by Exploring Unique Ratings
+
+<desc> Description:
+Pointwise learning maps the prediction scores of individual documents with their exact ratings [31], which is not necessary for obtaining correct orders.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337181403
+<title> Listwise Learning to Rank by Exploring Unique Ratings
+
+<desc> Description:
+Pairwise learning [7, 8, 14, 20, 28, 43, 44, 46, 50] naturally compares pairs of documents to minimize the number of inversions. Earlier pairwise models such as RankSVM [20], RankBoost [14], RankNet [7], and Ordinal Regression [28] may overly update weights for different pairs as they treat all pairs with equal importance. For instance, suppose the correct order is (a -> b -> c -> d). When a pairwise model catches an inversion (c -> b) in a predicted order (a -> c -> b -> d), it tries to update weights to increase the score of b and decrease the score of c. However, if the score of b becomes too high – higher than a – this causes another inversion (b, a). LambdaMart [8, 22, 43] and NDCG-LOSS++ [46] largely limit this issue by assigning different weights for different pairs when calculating their gradients [8]. Their best models rely on using gradient boosting regression trees [11, 26, 35], which are effective but very sensitive to hyper-parameters.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337181404
+<title> Listwise Learning to Rank by Exploring Unique Ratings
+
+<desc> Description:
+Listwise learning [9, 17, 25, 27, 34, 36, 45, 48] tries to learn the best document permutation based on permutation probabilities proposed by Plackett [40] and Luce [32]. The classical Plackett-Luce model has a constraint that the permutation probabilities are targeted for unique ratings. For instance, maximizing the likelihood of choosing a document from a set of documents that have the same rating can confuse a model. Since the number of unique rating levels is typically much smaller than the number of candidate documents per query, there can be a large number of ties. Also, in order to calculate the joint probability of a ranking sequence, the number of steps a Plackett-Luce model, such as ListMLE [48], needs to go through is bound by the number of candidate documents per query. Therefore, obtaining one permutation can be computationally inefficient. Furthermore, top documents are more important, but each step of a Plackett-Luce model is equally important along the entire sequence. Variants such as SoftRank [45], p-ListMLE [27], and ApproxNDCG [6] use NDCG or ranking positions to tune their loss functions. Nevertheless, when the number of documents in a permutation is large, gradients can vanish or explode very fast as the product of their permutation probabilities is close to 0. Highlights from research studies in recent years for scoring functions include ensemble scoring functions [2, 16, 31], ranking refinement [1], and reinforcement learning [13, 30, 33, 37, 47, 49]. Despite being effective, training efficiency is still their common bottleneck, which limits their usage in real-world applications.
+
+<narr> Narrative:
+
+</top>
+<top>
+<num> Number: 337182001
+<title> Parameter Tuning in Personal Search Systems
+
+<desc> Description:
+Offline tuning using a validation set is another option [21]. For instance, as the retrieval component of a search system usually works with query strings and document contents directly, offline tuning in this setting involves collecting raw queries and historical click data and simulating how retrieval effectiveness changes when utilizing different parameters. However, in the personal search setting [2, 5, 12, 28], where both queries and documents are private, building a representative validation set is a challenge, as it involves either relying upon donated data (which can be limited and biased) or utilizing a validation set that only contains partial information (where any sensitive raw data is not logged).
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337182002
+<title> Parameter Tuning in Personal Search Systems
+
+<desc> Description:
+[7, 13] discuss the importance of parameter tuning, and [27] gives more insight into the difficulty of parameter management. Since new features are often added to search systems to improve the performance of retrieval functions, these features often increase the number of parameters which makes it more challenging to find optimal parameter values.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337182003
+<title> Parameter Tuning in Personal Search Systems
+
+<desc> Description:
+The majority of work regarding parameter tuning is for black-box systems, where no knowledge of the internal implementation is known. For these approaches, given an unknown function f, we are allowed to evaluate f(x) for any value x ∈ X in an effort to maximize (or minimize) f(x). Typical approaches include Bayesian optimization [11, 17] as well as hybrid methods using random search alongside multi-armed bandit techniques [19]. In particular, [17] discusses how Bayesian optimization can be used for optimizing retrieval systems. These approaches generally assume some prior belief over f and draw samples to get a posterior that better approximates f.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337182004
+<title> Parameter Tuning in Personal Search Systems
+
+<desc> Description:
+Offline evaluation is critical for production search systems to sanity check any new experiments and prevent system behavior that may be detrimental to the users’ experience. [14] use previously collected click data in order to perform interleaved comparison methods between various rankers and find that it can be less expensive than running live interleaving experiments. [18] provides a method of doing offline evaluation of different contextual bandit based article recommendations, where a primary motivation is to not hurt user experience by exposing potentially poor-quality algorithms.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337182005
+<title> Parameter Tuning in Personal Search Systems
+
+<desc> Description:
+Whereas retrieval work in the literature primarily studies approaches such as BM25 [26], search engines in industry have an entirely different set of challenges. Commercial web search engines have been developed for decades by many engineers. The various search system components quickly become complicated and typically have numerous parameters to be tuned. As [7, 13] note that even small variations in parameters of information retrieval systems lead to large variations in retrieval effectiveness, it motivates thoroughly tuning parameters.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337182006
+<title> Parameter Tuning in Personal Search Systems
+
+<desc> Description:
+Modern search engines usually have multiple processing stages in their systems. A typical flow has a retrieval stage followed with a ranking stage, where the retrieval stage selects N documents and passes them to the ranking stage. The ranking stage often employs a machine learning model based on query, document, and user features. In this work, we present a parameter tuning approach which can be used for either stage. This approach is especially impactful for the retrieval stage – while a large amount of work focuses on optimizing the parameters of the ranking stage, relatively little work [3, 8] covers parameter tuning at the retrieval stage.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337182007
+<title> Parameter Tuning in Personal Search Systems
+
+<desc> Description:
+Given that an industrial search system can be very complex, a natural and common approach for parameter tuning is to treat the entire system as a black box and run A/B experiments with either some sort of parameter sweep (e.g. grid search, coordinate ascent) [22] or black-box optimization [17] over various parameters in a guess-and-check manner. The drawback to this is that 1) the user experience can be degraded due to exposure to poor quality results, 2) separate online experiments are required for each test set of parameters, and 3) the tuning process can take months.
+
+<narr> Narrative:
+
+</top>
+<top>
+<num> Number: 337184401
+<title> A Stochastic Treatment of Learning to Rank Scoring Functions
+
+<desc> Description:
+Learning-to-rank algorithms generally address the ranking problem using a score-and-sort approach [4, 5, 7, 20, 21, 25, 40]. The goal is to learn a scoring function to compute relevance scores which, in turn, induce a ranking. In its most general form, the domain of learning-to-rank functions is a set rather than a single item. However, virtually all learning-to-rank methods with a few exceptions [1, 10, 33] simplify the problem further by learning a univariate function that produces a relevance score for a document independently of other documents in the input set.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337184402
+<title> A Stochastic Treatment of Learning to Rank Scoring Functions
+
+<desc> Description:
+It is true then that learning-to-rank can be formulated as classification or regression — in fact, many early learning-to-rank methods such as RankSVM [20] or RankNet [4] take a very similar approach. These algorithms reduce the ranking problem to one of correctly predicting relevance scores by optimizing a “pointwise” loss [13] or correctly classifying ordered pairs of documents by optimizing a “pairwise” loss [4, 5, 20]. These simplified reformulations of learning-to-rank are, however, misaligned with the ranking utilities.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337184403
+<title> A Stochastic Treatment of Learning to Rank Scoring Functions
+
+<desc> Description:
+Ranking utilities such as Normalized Discounted Cumulative Gain [19] or Expected Reciprocal Rank [9] work with permutations (i.e., ranked lists) which are discrete structures. As a result, ranking utilities, as a function of a set of input documents, are flat almost everywhere and discontinuous at some finite set of points.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337184404
+<title> A Stochastic Treatment of Learning to Rank Scoring Functions
+
+<desc> Description:
+The non-smoothness of ranking utilities pose a challenge that the learning-to-rank community has sought to study. The literature offers a range of methods from direct optimization of metrics using coordinate ascent over parameters of linear models [29], to optimizing an exponential upper-bound of ranking metrics using boosted weak learners [41], to optimizing a differentiable surrogate loss function [7, 32, 36, 38, 40]. Other methods, such as LambdaRank [6] and its gradient boosted regression tree-based [12] variant LambdaMART [39], assume the existence of an unknown loss function whose gradients are however designed based on some heuristic. The list of so-called “listwise” algorithms goes on but the individual methods fall into one of the above categories.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337184405
+<title> A Stochastic Treatment of Learning to Rank Scoring Functions
+
+<desc> Description:
+Despite these differences, existing listwise learning-to-rank algorithms agree on one element: scores computed by the learned scoring function are deterministically mapped to a ranked list by way of a sort operation. One exception is SoftRank [36]. They consider a score to be the mean of a Gaussian distribution. With scores being smooth in this way, they go on to estimate position distributions and ultimately define a smoothed version of ranking metrics. We note that while our work bears some superficial resemblance with SoftRank, our approach is fundamentally different: SoftRank considers each score to itself be a Gaussian distribution—an arbitrary choice—whereas in this work, we take a set of scores to define a distribution from which a permutation may be sampled. Furthermore, our method is efficient while in SoftRank, estimating position distributions given score distributions requires an inefficient construction.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337184406
+<title> A Stochastic Treatment of Learning to Rank Scoring Functions
+
+<desc> Description:
+Another work that uses additive noise is YetiRank [16]. In particular, YetiRank perturbs relevance scores by a noise sampled from the Logistic distribution, and uses the perturbed scores to weight document pairs. YetiRank is different from our work in the following ways: (a) while the authors demonstrated that additive noise results in an improved model, the use of Logistic distribution was not justified, whereas in this work we mathematically motivate the use of the Gumbel distribution; and (b) YetiRank uses noise to identify and re-weight document pairs, whereas our methodology could be used to sample from the space of permutations, thereby presenting a more general, ranking-appropriate framework.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337184407
+<title> A Stochastic Treatment of Learning to Rank Scoring Functions
+
+<desc> Description:
+Finally, another related work is the LambdaLoss framework [38]. They propose a probabilistic framework to model ranking loss functions and show that existing ranking losses are instances of LambdaLoss. One term in LambdaLoss captures the probability of a permutation given a set of scores, p(π|f(x)). In their work, however, they use a degenerate distribution where this probability is 1 for a permutation (deterministically) obtained by sorting scores in decreasing order. Our proposed stochastic framework allows one to construct a non-degenerate distribution over permutations, from which a permutation may be sampled directly and efficiently.
+
+<narr> Narrative:
+
+</top>
+<top>
+<num> Number: 337185501
+<title> Addressing Marketing Bias in Product Recommendations
+
+<desc> Description:
+By connecting users to relevant products across the vast range available on e-commerce platforms, modern recommender systems are already ubiquitous and critical on both sides of the market, i.e., consumers and product sellers. Among recommendation algorithms used in practice, many fall under the umbrella of collaborative filtering [13, 17, 20, 25], which collect and generalize users’ preference patterns from logged consumer-product interactions (e.g. purchases, ratings). These feedback interactions can be biased by multiple factors, potentially surfacing unfair (or irrelevant) recommendations to users or items underrepresented in the input data. Such phenomena have already raised some attention from the recommender system community: a handful of types of algorithmic biases have been addressed, including selection bias [26], popularity bias [29], and several fairness-aware recommendation algorithms have been proposed [3, 6]. In this paper, we focus on a relatively underexplored factor—marketing bias—in consumer-product interaction data, and study how recommendation algorithms respond to its effect.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337185502
+<title> Addressing Marketing Bias in Product Recommendations
+
+<desc> Description:
+Our analysis is related to previous work which examines particular types of biases in real-world interactions and their effects in recommendation algorithms, including the popularity effect and catalog coverage [14], the bias regarding the book author gender for book recommenders [7], and the herding effect in product ratings [31].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337185503
+<title> Addressing Marketing Bias in Product Recommendations
+
+<desc> Description:
+Another closely related line of work includes developing evaluation metrics and algorithms to address fairness issues in recommendations. ‘Unbiased’ recommender systems with missing-not-at-random training data are developed by considering the propensity of each item [15, 26]. A fairness-aware tensor-based algorithm is proposed to address the absolute statistical parity (i.e., items are expected to be presented at the same rate across groups) [32]. Several fairness metrics and their corresponding algorithms are proposed for both pointwise prediction frameworks [6, 30] and pairwise ranking frameworks [3]. Methodologically, these algorithms can be summarized as reweighting schemes where underrepresented samples are upweighted [6, 15, 26] or schemes where additional fairness terms are added to regularize the model [1, 3, 30].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337185504
+<title> Addressing Marketing Bias in Product Recommendations
+
+<desc> Description:
+Note that most of the above studies focus on bias and fairness on one side of the market only (i.e., either user or producer). Our concern about marketing bias is that it could affect fairness for both consumers and product providers. Without global market fairness in mind, the imbalance of the consumer-product segment distribution could be exacerbated through the deployment of recommendation algorithms. Multi-sided fairness is addressed by [3] by considering C(onsumer)-fairness and P(rovider)-fairness. Trade-off between accuracy and fairness in two-sided marketplaces is further explored and a counterfactual framework is proposed to evaluate different recommendation policies without extensive A/B tests [22]. However the CP-fairness condition where fairness is protected for both sides at the same time still remains an open question.
+
+<narr> Narrative:
+
+</top>

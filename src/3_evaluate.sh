@@ -5,9 +5,9 @@ do
     # -m P.30
     # -q
     anserini/tools/eval/trec_eval.9.0.4/trec_eval -m recall.1000 -q \
-                                            data/topics+qrels/all.para.qrels \
+                                            data/topics+qrels/all.qrels \
                                             ${RUN} > ${RUN%.*}.results
     anserini/tools/eval/trec_eval.9.0.4/trec_eval -m ndcg_cut.10 -m recall.10 \
-                                            data/topics+qrels/all.para.qrels \
+                                            data/topics+qrels/all.qrels \
                                             ${RUN}
 done
