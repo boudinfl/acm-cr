@@ -1,0 +1,43 @@
+<top>
+<num> Number: 340982901
+<title> Declarative Experimentation in Information Retrieval using PyTerrier
+
+<desc> Description:
+Yet reproducibility is key to impactful science. [10] define reproducibility as the ability for a different team to reproduce the measurement in a different experimental setup. Therefore, focussing evaluation solely on datasets that extract key aspects of a problem using a standard dataset – for instance, evaluating LTR techniques solely on LETOR datasets [25] with common features – does not allow us to understand the wider context, such as how an approach will fare when integrated into a fully-fledged search engine’s retrieval stack. This highlights the importance of end-to-end retrieval experiments – understanding what data are needed for a given approach, and how it interacts with others components (e.g., how many documents should be re-ranked [19] for a LTR approach), reduces the uncertainties when a technique should be deployed to an operational search engine.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982902
+<title> Declarative Experimentation in Information Retrieval using PyTerrier
+
+<desc> Description:
+IR platforms have a long history, dating back to at least SMART [2]. These days, among the open source platforms, Apache Lucene is widely deployed. Implemented in Java, it provides indexing and single-search APIs, and in recent years has adopted BM25 along with LTR [7] and dynamic pruning techniques [11]. However, its ability to handle standard test collections was for many years a known limitation [8], and has been advanced by efforts such as Anserini [29]. Indeed Anserini facilitates the deployment of a number of replicable information retrieval techniques, on standard test collection, on top of the Lucene backend.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982903
+<title> Declarative Experimentation in Information Retrieval using PyTerrier
+
+<desc> Description:
+All of the discussed IR platforms mix the design of experimental retrieval activities with the implementation and optimisations required to make such activities efficient. This approach has been shown to limit the reproducibility of IR experiments. For example, [23] show that different implementations of the same BM25 weighting models in different IR platforms result in different values for the same effectiveness metric. They propose to decouple the IR experiments from the IR platform implementation by storing the inverted index in a column-oriented relational database and by implementing ranking models using SQL. [12] take a step forward and propose the adoption of an IR-specific declarative language to provide higher level abstractions in the implementation of the IR experiments based on a graph query language. 
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982904
+<title> Declarative Experimentation in Information Retrieval using PyTerrier
+
+<desc> Description:
+The most similar work to our own is that in Terrier-Spark [16, 17], where retrieval pipelines for the Terrier platform were created in Scala using Apache Spark. In that work, retrieval operation were expressed as operations on dataframes (relations). However, adoption of that framework was hindered by two factors: firstly, the use of Apache Spark, which is designed for processing massive scale datasets, and introduces significant interactive overheads making Terrier-Spark unsuitable for notebook-style agile development; secondly, the use of the Scala programming language, which is not as popular as Python.
+
+<narr> Narrative:
+
+</top>
