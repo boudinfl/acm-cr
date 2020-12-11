@@ -31,15 +31,15 @@ do
                -topicfield ${TOPICFIELD}
         fi
 
-        # if [[ ! -f "output/run.${EXP}.${TOPICFIELD}.${MODEL}+rm3.txt" ]]
-        # then
-        #    # compute model with pseudo-relevance feedback RM3
-        #    sh anserini/target/appassembler/bin/SearchCollection \
-        #       -topicreader Trec \
-        #       -index ${INDEX} \
-        #       -topics ${TOPICS} \
-        #       -output output/run.${EXP}.${TOPICFIELD}.${MODEL}+rm3.txt -${MODEL} -rm3 \
-        #       -topicfield ${TOPICFIELD}
-        # fi
+        if [[ ! -f "output/run.${EXP}.${TOPICFIELD}.${MODEL}+rm3.txt" ]]
+        then
+           # compute model with pseudo-relevance feedback RM3
+           sh anserini/target/appassembler/bin/SearchCollection \
+              -topicreader Trec \
+              -index ${INDEX} \
+              -topics ${TOPICS} \
+              -output output/run.${EXP}.${TOPICFIELD}.${MODEL}+rm3.txt -${MODEL} -rm3 \
+              -topicfield ${TOPICFIELD}
+        fi
     done
 done
