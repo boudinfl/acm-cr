@@ -1,0 +1,65 @@
+<top>
+<num> Number: 340105101
+<title> Fairness-Aware Explainable Recommendation over Knowledge Graphs
+
+<desc> Description:
+One reason for this relates to the issue of data imbalance. Some users are disinclined to make a large number of purchases, which leads to insufficient historical user–item interactions. For instance, on e-commerce platforms such as Amazon, eBay, or Taobao, economically disadvantaged groups often make fewer purchases in light of their limited income and credit opportunities [20]. Under such circumstances, when making recommendation decisions, explainable RS models will be subject to algorithmic bias. The lack of user–item interactions implies that the corresponding user preferences are barely captured, causing weak visibility of such users to the RS model. This leads to the risk of such users being treated unfairly in terms of both recommendation performance and explanation diversity.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105102
+<title> Fairness-Aware Explainable Recommendation over Knowledge Graphs
+
+<desc> Description:
+Unfortunately, it is challenging to study fairness in recommendation systems due to the lack of unifying definitions and means of quantifying unfairness. [17] claim that no model can be fair in every aspect of metrics. Previous work has explored the fairness problem in recommendation from the perspective of selection aspects [21, 33, 35], marketing bias [36], popularity bias [42], multiple stakeholders [5] in terms of consumers and providers, among others. Existing research on fairness has shown that protected groups, defined as the population of vulnerable individuals in terms of sensitive features such as gender, age, race, religion, etc., are easily treated in a discriminatory way. However, it is generally not easy to obtain access to such sensitive attributes, as users often prefer not to disclose such personal information.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105103
+<title> Fairness-Aware Explainable Recommendation over Knowledge Graphs
+
+<desc> Description:
+We are interested in solving the fairness problem on the user side specifically for knowledge graph (KG) enhanced explainable recommender systems. Since KGs preserve structured and relational knowledge, they make it easy to trace the reason for specific recommendations. KG-based approaches have thus grown substantially in popularity in explainable recommendation. Their explicit explanations take the form of reasoning paths, consisting of a sequence of relationships that start from a user and ultimately lead to a recommended item. State-of-the-art KG-based explainable RS methods [1, 37, 38, 40, 41, 44] utilize rich entity and relation information within the KG to augment the modeling of user–item interactions, so as to better understand the user preferences to make satisfactory recommendation decisions, accompanied by explainable reasoning paths.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105104
+<title> Fairness-Aware Explainable Recommendation over Knowledge Graphs
+
+<desc> Description:
+Growing interest in fairness has arisen in several research domains. Most notably, for data-driven decision-making algorithms, there are concerns about biases in data and models affecting minority groups and individuals [13]. Group fairness, also known as demographic parity, requires that the protected groups be treated equally to advantaged groups or the general population [23, 31, 35]. In contrast, individual fairness requires that similar individuals with similar attributes be treated similarly [4, 14, 27, 28]. Several prior works have sought to quantify unfairness both at the group and individual level [26]. Model bias has in fact been shown to amplify biases in the original data [2, 18, 47]. For each specific domain, there is a need to design suitable metrics to quantify fairness and develop new debiasing methods to mitigate inequity for both groups and individuals.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105105
+<title> Fairness-Aware Explainable Recommendation over Knowledge Graphs
+
+<desc> Description:
+In the field of recommendation systems, the concept of fairness has been extended to multiple stakeholders [5]. [29] defined fairness measures in recommendation and proposed a Pareto optimization framework for fair recommendation. [30] addresses the supplier fairness in two-sided marketplace platforms and proposed heuristic strategies to jointly optimize fairness and relevance. Different aspects of fairness have been explored. [3] investigated pairwise recommendation with fairness constraints. [6] addressed the polarization in personalized recommendations, formalized as a multi-armed bandit problem. As for the fairness ranking, [43] proposed a fair top-k ranking task that ensures that the proportion of protected groups in the top-k list remains above a given threshold. [35] presented a conceptual and computational framework for fairness ranking that maximizes the utility for the user while satisfying specific fairness constraints. [21] developed a fairness-aware ranking framework that improves the fairness for individuals without affecting business metrics. [39] draw on causal graphs to detect and remove both direct and indirect rank bias, and show that a casual graph approach outperforms statistical parity-based approaches in terms of the identification and mitigation of rank discrimination.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105106
+<title> Fairness-Aware Explainable Recommendation over Knowledge Graphs
+
+<desc> Description:
+Explainable recommendation [45] has been an important direction in recommender system research. Past work has considered explaining latent factor models [46], explainable deep models [19], social explainable recommendations [32], visual explanations [10], sequential explanations [11], and dynamic explanations [12]. An important line of research leverages entities, relationships, and paths in knowledge graphs to make explainable decisions. Within this field, [1] incorporated TransE-based knowledge graph representations for explainable recommendation. [38] proposed an attention-based knowledge-aware model to infer user preferences over KGs for recommendation. [41] adopted reinforcement learning for path inference in knowledge graphs. [7] improved the efficiency of KG-based recommendation based on non-sampling learning.
+
+<narr> Narrative:
+
+</top>

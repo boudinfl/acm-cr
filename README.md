@@ -95,12 +95,39 @@ paper, e.g.:
                        # try to keep contexts where at least one marker of a 
                        # series of references is linked. We only use
                        # introduction and related work sections. We remove 
-                       # explicit citation markers (e.g. He et al. [19] -> [19])
+                       # explicit citation markers (e.g. He et al. [19] -> [19]).
+                       # We also remove last paragraph sentences if they
+                       # are such as "in this paper" or "in this study".
                        
 3397271.3401032.qrels  # relevant judgments                               
 ```
 
 Actually, there are 30 papers and 169 topics.
+
+Below is the list of papers used for generating queries.
+
+```
+├── sigir-2020 (19 papers)
+    ├── 3397271.3401032.pdf
+    ├── 3397271.3401051.pdf (*)
+    ├── 3397271.3401052.pdf
+    ├── 3397271.3401057.pdf
+    ├── 3397271.3401103.pdf
+    ├── 3397271.3401106.pdf
+    ├── 3397271.3401164.pdf
+    ├── 3397271.3401188.pdf
+    ├── 3397271.3401191.pdf
+    ├── 3397271.3401198.pdf
+    ├── 3397271.3401204.pdf
+    ├── 3397271.3401207.pdf
+    ├── 3397271.3401224.pdf
+    ├── 3397271.3401266.pdf
+    ├── 3397271.3401281.pdf
+    ├── 3397271.3401322.pdf
+    ├── 3397271.3401330.pdf
+    ├── 3397271.3401333.pdf
+    ├── 3397271.3401467.pdf
+```
 
 ## Document retrieval
 
@@ -110,10 +137,10 @@ Actually, there are 30 papers and 169 topics.
 70960 entries with T+A+K
 present: 0.5356199337142871
 absent: 0.4643800662857018
-|-> c1/Reordored (i.e. all words): 0.1172396547138912
-|-> c2/Mixed (i.e. some words): 0.19282425867095065
-|-> c3/Unseen (i.e. no words): 0.15431615290087136
-|-> exp. : 0.1341835075750805
+├──> c1/Reordored (i.e. all words): 0.1172396547138912
+├──> c2/Mixed (i.e. some words): 0.19282425867095065
+├──> c3/Unseen (i.e. no words): 0.15431615290087136
+├──> exp. : 0.1341835075750805
 avg nb kps : 4.5367317609265365
 
 70956 T+A+K, 18726 T+A, 13117 T over 102510 entries
