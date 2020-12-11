@@ -107,13 +107,14 @@ Actually, there are 30 papers and 169 topics.
 Below is the list of papers used for generating queries.
 
 ```
-├── sigir-2020 (19 papers)
+├── sigir-2020 (20 papers)
     ├── 3397271.3401032.pdf
     ├── 3397271.3401051.pdf (*)
     ├── 3397271.3401052.pdf
     ├── 3397271.3401057.pdf
     ├── 3397271.3401103.pdf
     ├── 3397271.3401106.pdf
+    ├── 3397271.3401061.pdf (*)
     ├── 3397271.3401164.pdf
     ├── 3397271.3401188.pdf
     ├── 3397271.3401191.pdf

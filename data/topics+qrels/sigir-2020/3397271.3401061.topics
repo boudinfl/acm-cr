@@ -1,0 +1,87 @@
+<top>
+<num> Number: 340106101
+<title> Guided Transformer: Leveraging Multiple External Sources for Representation Learning in Conversational Search
+
+<desc> Description:
+Similarly, conversational question answering based on a set of related questions about a given passage has been explored in the natural language processing (NLP) literature [7, 40, 44]. However, the existing settings are still far from the ideal mixed-initiative scenario, in which both user and system can take any permitted action at any time to perform a natural conversation. In other words, most existing work in conversational search assumes that users always ask a query and the system only responds with an answer or a ranked list of documents.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340106102
+<title> Guided Transformer: Leveraging Multiple External Sources for Representation Learning in Conversational Search
+
+<desc> Description:
+Recent conversational information seeking platforms, such as [59], provide support for multi-turn, multi-modal, and mixed-initiative interactions. There have been recent efforts to go beyond the “user asks, system responds” paradigm by asking clarifying questions from the users, including offline evaluation of search clarification [1], clarifying question generation for open-domain search queries [61], and preference elicitation in conversational recommender systems [8, 46, 64]. Past research in the area of search clarification has shown significant promise in asking clarifying questions. However, utilizing user responses to clarifying questions to improve the search performance has been relatively unstudied.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340106103
+<title> Guided Transformer: Leveraging Multiple External Sources for Representation Learning in Conversational Search
+
+<desc> Description:
+Motivated by previous research on improving query representation by employing other information sources, such as the top retrieved documents in pseudo-relevance feedback [2, 14, 27], we propose a neural network architecture that uses multiple information sources for learning accurate representations of user-system conversations.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340106104
+<title> Guided Transformer: Leveraging Multiple External Sources for Representation Learning in Conversational Search
+
+<desc> Description:
+More recently, [42] introduced a theoretical framework and a set of potentially desirable features for a conversational information retrieval system. [50] studied real user conversations and provided suggestions for building conversational systems based on human conversations. The recent improvements in neural models has made it possible to train conversation models for different applications, such as recommendation [64], user intent prediction [41], next user query prediction [58], and response ranking [57].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340106105
+<title> Guided Transformer: Leveraging Multiple External Sources for Representation Learning in Conversational Search
+
+<desc> Description:
+Asking clarifying questions has attracted much attention in different domains and applications. To name a few, [6] studied user intents, and clarification in community question answering (CQA) websites. 
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340106106
+<title> Guided Transformer: Leveraging Multiple External Sources for Representation Learning in Conversational Search
+
+<desc> Description:
+In the realm of IR, the user study done by [24] showed that clarifying questions do not cause user dissatisfaction, and in fact, they sometimes increase the satisfaction. [10] studied the task of clarification for entity disambiguation. However, the clarification format in their work was restricted to a “did you mean A or B?” template, which makes it non-practical for many open-domain search queries. More recently, [1] introduced an offline evaluation methodology and a benchmark for studying the task of clarification in information seeking conversational systems. They have also introduced a method for selecting the next clarifying question which is used in this paper as a baseline. [61] proposed an approach based on weak supervision to generate clarifying questions for open-domain search queries. User interaction with clarifying questions has been later analyzed in [62].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340106107
+<title> Guided Transformer: Leveraging Multiple External Sources for Representation Learning in Conversational Search
+
+<desc> Description:
+A common application of clarification is in conversational recommendation systems, where the system asks about different attributes of the items to reveal the user preferences. For instance, [8] designed an interactive system for venue recommendation. [48] utilized facet-value pairs to represent a conversation history for conversational recommendation, and [64] extracted facet-value pairs from product reviews automatically, and considered them as questions and answers.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 
+<title> Guided Transformer: Leveraging Multiple External Sources for Representation Learning in Conversational Search
+
+<desc> Description:
+Improving the representations learned by neural models with the help of external resources has been explored in a wide range of tasks. [54] proposed a text matching model based on recurrent and convolution networks that has a knowledge acquisition gating function that uses a knowledge base for accurate text matching. [57] studied the use of community question answering data as external knowledge base for response ranking in information seeking conversations. They proposed a model based on convolutional neural networks on top the interaction matrix.
+
+<narr> Narrative:
+
+</top>
