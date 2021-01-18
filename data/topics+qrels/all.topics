@@ -87,6 +87,71 @@ Subjective perceptions of explanations are often evaluated qualitatively based o
 
 </top>
 <top>
+<num> Number: 340105101
+<title> Fairness-Aware Explainable Recommendation over Knowledge Graphs
+
+<desc> Description:
+One reason for this relates to the issue of data imbalance. Some users are disinclined to make a large number of purchases, which leads to insufficient historical user–item interactions. For instance, on e-commerce platforms such as Amazon, eBay, or Taobao, economically disadvantaged groups often make fewer purchases in light of their limited income and credit opportunities [20]. Under such circumstances, when making recommendation decisions, explainable RS models will be subject to algorithmic bias. The lack of user–item interactions implies that the corresponding user preferences are barely captured, causing weak visibility of such users to the RS model. This leads to the risk of such users being treated unfairly in terms of both recommendation performance and explanation diversity.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105102
+<title> Fairness-Aware Explainable Recommendation over Knowledge Graphs
+
+<desc> Description:
+Unfortunately, it is challenging to study fairness in recommendation systems due to the lack of unifying definitions and means of quantifying unfairness. [17] claim that no model can be fair in every aspect of metrics. Previous work has explored the fairness problem in recommendation from the perspective of selection aspects [21, 33, 35], marketing bias [36], popularity bias [42], multiple stakeholders [5] in terms of consumers and providers, among others. Existing research on fairness has shown that protected groups, defined as the population of vulnerable individuals in terms of sensitive features such as gender, age, race, religion, etc., are easily treated in a discriminatory way. However, it is generally not easy to obtain access to such sensitive attributes, as users often prefer not to disclose such personal information.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105103
+<title> Fairness-Aware Explainable Recommendation over Knowledge Graphs
+
+<desc> Description:
+We are interested in solving the fairness problem on the user side specifically for knowledge graph (KG) enhanced explainable recommender systems. Since KGs preserve structured and relational knowledge, they make it easy to trace the reason for specific recommendations. KG-based approaches have thus grown substantially in popularity in explainable recommendation. Their explicit explanations take the form of reasoning paths, consisting of a sequence of relationships that start from a user and ultimately lead to a recommended item. State-of-the-art KG-based explainable RS methods [1, 37, 38, 40, 41, 44] utilize rich entity and relation information within the KG to augment the modeling of user–item interactions, so as to better understand the user preferences to make satisfactory recommendation decisions, accompanied by explainable reasoning paths.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105104
+<title> Fairness-Aware Explainable Recommendation over Knowledge Graphs
+
+<desc> Description:
+Growing interest in fairness has arisen in several research domains. Most notably, for data-driven decision-making algorithms, there are concerns about biases in data and models affecting minority groups and individuals [13]. Group fairness, also known as demographic parity, requires that the protected groups be treated equally to advantaged groups or the general population [23, 31, 35]. In contrast, individual fairness requires that similar individuals with similar attributes be treated similarly [4, 14, 27, 28]. Several prior works have sought to quantify unfairness both at the group and individual level [26]. Model bias has in fact been shown to amplify biases in the original data [2, 18, 47]. For each specific domain, there is a need to design suitable metrics to quantify fairness and develop new debiasing methods to mitigate inequity for both groups and individuals.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105105
+<title> Fairness-Aware Explainable Recommendation over Knowledge Graphs
+
+<desc> Description:
+In the field of recommendation systems, the concept of fairness has been extended to multiple stakeholders [5]. [29] defined fairness measures in recommendation and proposed a Pareto optimization framework for fair recommendation. [30] addresses the supplier fairness in two-sided marketplace platforms and proposed heuristic strategies to jointly optimize fairness and relevance. Different aspects of fairness have been explored. [3] investigated pairwise recommendation with fairness constraints. [6] addressed the polarization in personalized recommendations, formalized as a multi-armed bandit problem. As for the fairness ranking, [43] proposed a fair top-k ranking task that ensures that the proportion of protected groups in the top-k list remains above a given threshold. [35] presented a conceptual and computational framework for fairness ranking that maximizes the utility for the user while satisfying specific fairness constraints. [21] developed a fairness-aware ranking framework that improves the fairness for individuals without affecting business metrics. [39] draw on causal graphs to detect and remove both direct and indirect rank bias, and show that a casual graph approach outperforms statistical parity-based approaches in terms of the identification and mitigation of rank discrimination.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105106
+<title> Fairness-Aware Explainable Recommendation over Knowledge Graphs
+
+<desc> Description:
+Explainable recommendation [45] has been an important direction in recommender system research. Past work has considered explaining latent factor models [46], explainable deep models [19], social explainable recommendations [32], visual explanations [10], sequential explanations [11], and dynamic explanations [12]. An important line of research leverages entities, relationships, and paths in knowledge graphs to make explainable decisions. Within this field, [1] incorporated TransE-based knowledge graph representations for explainable recommendation. [38] proposed an attention-based knowledge-aware model to infer user preferences over KGs for recommendation. [41] adopted reinforcement learning for path inference in knowledge graphs. [7] improved the efficiency of KG-based recommendation based on non-sampling learning.
+
+<narr> Narrative:
+
+</top>
+<top>
 <num> Number: 340105201
 <title> Query Rewriting for Voice Shopping Null Queries
 
@@ -245,6 +310,93 @@ Some information recommendation models are based on heterogeneous information ne
 
 <desc> Description:
 Based on above observation, we propose Attentional Heterogeneous Graph Convolutional Deep Knowledge Recommender (ACKRec), an end-to-end framework for knowledge concept recommendation on MOOCs platform. To capture heterogeneous complex relationships, we model the MOOCs platform data as a heterogeneous information network (HIN) [23].
+
+<narr> Narrative:
+
+</top>
+<top>
+<num> Number: 340106101
+<title> Guided Transformer: Leveraging Multiple External Sources for Representation Learning in Conversational Search
+
+<desc> Description:
+Similarly, conversational question answering based on a set of related questions about a given passage has been explored in the natural language processing (NLP) literature [7, 40, 44]. However, the existing settings are still far from the ideal mixed-initiative scenario, in which both user and system can take any permitted action at any time to perform a natural conversation. In other words, most existing work in conversational search assumes that users always ask a query and the system only responds with an answer or a ranked list of documents.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340106102
+<title> Guided Transformer: Leveraging Multiple External Sources for Representation Learning in Conversational Search
+
+<desc> Description:
+Recent conversational information seeking platforms, such as [59], provide support for multi-turn, multi-modal, and mixed-initiative interactions. There have been recent efforts to go beyond the "user asks, system responds" paradigm by asking clarifying questions from the users, including offline evaluation of search clarification [1], clarifying question generation for open-domain search queries [61], and preference elicitation in conversational recommender systems [8, 46, 64]. Past research in the area of search clarification has shown significant promise in asking clarifying questions. However, utilizing user responses to clarifying questions to improve the search performance has been relatively unstudied.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340106103
+<title> Guided Transformer: Leveraging Multiple External Sources for Representation Learning in Conversational Search
+
+<desc> Description:
+Motivated by previous research on improving query representation by employing other information sources, such as the top retrieved documents in pseudo-relevance feedback [2, 14, 27], we propose a neural network architecture that uses multiple information sources for learning accurate representations of user-system conversations.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340106104
+<title> Guided Transformer: Leveraging Multiple External Sources for Representation Learning in Conversational Search
+
+<desc> Description:
+More recently, [42] introduced a theoretical framework and a set of potentially desirable features for a conversational information retrieval system. [50] studied real user conversations and provided suggestions for building conversational systems based on human conversations. The recent improvements in neural models has made it possible to train conversation models for different applications, such as recommendation [64], user intent prediction [41], next user query prediction [58], and response ranking [57].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340106105
+<title> Guided Transformer: Leveraging Multiple External Sources for Representation Learning in Conversational Search
+
+<desc> Description:
+Asking clarifying questions has attracted much attention in different domains and applications. To name a few, [6] studied user intents, and clarification in community question answering (CQA) websites. 
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340106106
+<title> Guided Transformer: Leveraging Multiple External Sources for Representation Learning in Conversational Search
+
+<desc> Description:
+In the realm of IR, the user study done by [24] showed that clarifying questions do not cause user dissatisfaction, and in fact, they sometimes increase the satisfaction. [10] studied the task of clarification for entity disambiguation. However, the clarification format in their work was restricted to a "did you mean A or B?" template, which makes it non-practical for many open-domain search queries. More recently, [1] introduced an offline evaluation methodology and a benchmark for studying the task of clarification in information seeking conversational systems. They have also introduced a method for selecting the next clarifying question which is used in this paper as a baseline. [61] proposed an approach based on weak supervision to generate clarifying questions for open-domain search queries. User interaction with clarifying questions has been later analyzed in [62].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340106107
+<title> Guided Transformer: Leveraging Multiple External Sources for Representation Learning in Conversational Search
+
+<desc> Description:
+A common application of clarification is in conversational recommendation systems, where the system asks about different attributes of the items to reveal the user preferences. For instance, [8] designed an interactive system for venue recommendation. [48] utilized facet-value pairs to represent a conversation history for conversational recommendation, and [64] extracted facet-value pairs from product reviews automatically, and considered them as questions and answers.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340106108
+<title> Guided Transformer: Leveraging Multiple External Sources for Representation Learning in Conversational Search
+
+<desc> Description:
+Improving the representations learned by neural models with the help of external resources has been explored in a wide range of tasks. [54] proposed a text matching model based on recurrent and convolution networks that has a knowledge acquisition gating function that uses a knowledge base for accurate text matching. [57] studied the use of community question answering data as external knowledge base for response ranking in information seeking conversations. They proposed a model based on convolutional neural networks on top the interaction matrix.
 
 <narr> Narrative:
 
@@ -1390,6 +1542,38 @@ Entity search about people, products or events has received great attention and 
 
 </top>
 <top>
+<num> Number: 340981701
+<title> Analysing the Effect of Clarifying Questions on Document Ranking in Conversational Search
+
+<desc> Description:
+However, it is often the case that in such information-seeking conversations, users fail to express their information need adequately. This makes the ability of a conversational search system to support mixed-initiative interactions imperative [6, 8]. Such a system can assist users to refine their information need, i.e., by disclosing new information to them [8], or posing clarifying questions [1].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340981702
+<title> Analysing the Effect of Clarifying Questions on Document Ranking in Conversational Search
+
+<desc> Description:
+Clarifying questions trigger users’ explicit feedback in the form of an answer, and have been shown to improve user experience [1, 2, 6, 9].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340981703
+<title> Analysing the Effect of Clarifying Questions on Document Ranking in Conversational Search
+
+<desc> Description:
+In this paper, we study the effect of the user’s feedback in mixed-initiative conversations. We categorise answers w.r.t. their polarity and length. Answer polarity indicates whether the question points to a relevant direction or not, while answer length enables us to (noisily) identify the presence of additional information in the response. We conduct our analysis on the Qulac dataset [1], using a query likelihood model chosen because of its simplicity and transparency [7].
+
+<narr> Narrative:
+
+</top>
+<top>
 <num> Number: 340981901
 <title> Permutation Equivariant Document Interaction Network for Neural Learning-to-Rank
 
@@ -1428,6 +1612,93 @@ While much of the research in LTR has been devoted to the evolution of ranking l
 
 <desc> Description:
 Most of the previous work in LTR [11] focuses on designing loss functions, ranging from pointwise to pairwise to listwise ones. Gradient Boosted Decision Trees (e.g., [10]) are regarded as the state-of-the-art models for LTR on benchmark datasets. Recently, neural network based models have attracted considerable attention [8, 12].
+
+<narr> Narrative:
+
+</top>
+<top>
+<num> Number: 340982001
+<title> Taking the Counterfactual Online: Efficient and Unbiased Online Evaluation for Ranking"
+
+<desc> Description:
+Evaluation is essential for the development of search and recommendation systems [8, 14]. Before any ranking model is widely deployed it is important to first verify whether it is a true improvement over the currently-deployed model. A traditional way of evaluating relative differences between systems is through A/B testing, where part of the user population is exposed to the current system (“control") and the rest to the altered system (“treatment") during the same time period. Differences in behavior between these groups can then indicate if the alterations brought improvements, e.g. if the treatment group showed a higher Click-Through-Rate (CTR) or more revenue was made with this system [4].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982002
+<title> Taking the Counterfactual Online: Efficient and Unbiased Online Evaluation for Ranking"
+
+<desc> Description:
+Interleaving has been introduced in Information Retrieval (IR) as a more efficient alternative to A/B testing [11]. Interleaving algorithms take the rankings produced by two ranking systems, and for each query create an interleaved ranking by combining the rankings from both systems. Clicks on the interleaved rankings directly indicate relative differences. Repeating this process over a large number of queries and averaging the results, leads to an estimate of which ranker would receive the highest CTR [10]. Previous studies have found that interleaving requires fewer interactions than A/B testing, which enables them to make consistent comparisons in a much shorter timespan [4, 21].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982003
+<title> Taking the Counterfactual Online: Efficient and Unbiased Online Evaluation for Ranking"
+
+<desc> Description:
+More recently, counterfactual evaluation for rankings has been proposed by [13] to evaluate a ranking model based on clicks gathered using a different model. By correcting for the position bias introduced during logging, the counterfactual approach can unbiasedly estimate the CTR of a new model on historical data. To achieve this, counterfactual evaluation makes use of Inverse-Propensity-Scoring (IPS), where clicks are weighted inversely to the probability that a user examined them during logging [22]. A big advantage compared to interleaving and A/B testing, is that counterfactual evaluation does not require online interventions.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982004
+<title> Taking the Counterfactual Online: Efficient and Unbiased Online Evaluation for Ranking"
+
+<desc> Description:
+Users generally do not examine all items that are displayed in a ranking but only click on examined items [5]. As a result, a lower probability of examination for an item also makes it less likely to be clicked. Position bias assumes that only the rank determines the probability of examination [6].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982005
+<title> Taking the Counterfactual Online: Efficient and Unbiased Online Evaluation for Ranking"
+
+<desc> Description:
+We also assume that item-selection bias is present; this type of bias is an extreme form of position bias that results in zero examination probabilities for some items [16, 17]. This bias is unavoidable in top-k ranking settings, where only the k ∈ N>0 highest ranked items are displayed. Consequently, any item beyond rank k cannot be observed or examined by the user: ∀r ∈ N>0 (r > k → θr = 0). The distinction between item-selection bias and position bias is important because the original counterfactual evaluation method [13] is only able to correct for position bias when no item-selection bias is present [16, 17].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982006
+<title> Taking the Counterfactual Online: Efficient and Unbiased Online Evaluation for Ranking"
+
+<desc> Description:
+Each interleaving method attempts to use randomization to counter position bias, without deviating too much from the original rankings so as to maintain the user experience [11]. Team-draft interleaving (TDI) randomly selects one ranker to place their top document first, then the other ranker places their top (unplaced) document next [20]. Then it randomly decides the next two documents, and this process is repeated until all documents are placed in the interleaved ranking. Clicks on the documents are attributed to the ranker that placed them. The ranker with the most attributed clicks is inferred to be preferred by the user. Probabilistic interleaving (PI) treats each ranking as a probability distribution over documents; at each rank a distribution is randomly selected and a document is drawn from it [9]. After clicks have been received, probabilistic interleaving computes the expected number of clicks documents per ranking system to infer preferences. Optimized interleaving (OI) casts the randomization as an optimization problem, and displays rankings so that if all documents are equally relevant no preferences are found [19].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982007
+<title> Taking the Counterfactual Online: Efficient and Unbiased Online Evaluation for Ranking"
+
+<desc> Description:
+While every interleaving method attempts to deal with position bias, none is unbiased according to our definition (Section 2.2). This may be confusing because previous work on interleaving makes claims of unbiasedness [9, 10, 19]. However, they use different definitions of the term. More precisely, TDI, PI, and OI provably converge on the correct outcome if all documents are equally relevant [9, 10, 19, 20]. Moreover, if one assumes binary relevance and π1 ranks all relevant documents equal to or higher than π2, the binary outcome of PI and OI is proven to be correct in expectation [10, 19]. However, beyond the confines of these unambiguous cases, we can prove that these methods do not meet our definition of unbiasedness: for every method one can construct an example where it converges on the incorrect outcome. The rankers π1, π2 and position bias parameters θ can be chosen so that in expectation the wrong (binary) outcome is estimated; see Appendix A for a proof for each of the three interleaving methods. Thus, while more efficient than A/B testing, interleaving methods make systematic errors in certain circumstances and thus should not be considered to be unbiased w.r.t. CTR differences.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982008
+<title> Taking the Counterfactual Online: Efficient and Unbiased Online Evaluation for Ranking"
+
+<desc> Description:
+Counterfactual evaluation is based on the idea that if certain biases can be estimated well, they can also be adjusted [12, 22]. While estimating relevance is considered the core difficulty of ranking evaluation, estimating the position bias terms θ is very doable. By randomizing rankings, e.g., by swapping pairs of documents [12] or exploiting data logged during A/B testing [1], differences in CTR for the same item on different positions can be observed directly. Alternatively, using Expectation Maximization (EM) optimization [23] or a dual learning objective [2], position bias can be estimated from logged data as well. Once the bias terms θ have been estimated, logged clicks can be weighted so as to correct for the position bias during logging. Hence, counterfactual evaluation can work with historically logged data. Existing counterfactual evaluation algorithms do not dictate which rankings should be displayed during logging: they do not perform interventions and thus we do not consider them to be online methods.
 
 <narr> Narrative:
 
@@ -1503,6 +1774,104 @@ All of the discussed IR platforms mix the design of experimental retrieval activ
 
 <desc> Description:
 The most similar work to our own is that in Terrier-Spark [16, 17], where retrieval pipelines for the Terrier platform were created in Scala using Apache Spark. In that work, retrieval operation were expressed as operations on dataframes (relations). However, adoption of that framework was hindered by two factors: firstly, the use of Apache Spark, which is designed for processing massive scale datasets, and introduces significant interactive overheads making Terrier-Spark unsuitable for notebook-style agile development; secondly, the use of the Scala programming language, which is not as popular as Python.
+
+<narr> Narrative:
+
+</top>
+<top>
+<num> Number: 340983701
+<title> Efficient Test Collection Construction via Active Learning
+
+<desc> Description:
+To create a new IR test collection at minimal cost, it is valuable to identify a minimal set of documents for human relevance judging. This is typically accomplished by running a shared task campaign, such as NIST TREC, then pooling search results from many participating systems (and often interactive runs) to identify the most likely relevant documents for judging [10]. While this approach is now canonized in IR practice, organizing the community to run a shared task is complicated, slow, and requires many hours of work by organizers and participants. This hidden, real-world cost may far exceed simple judging costs, which are often the only measure of cost reported. This suggests a more complete accounting of cost ought to be considered, if not quantified, wrt. building IR test collections. Shared tasks have many other benefits, but if one’s primary goal is merely to build a new test collection, it would be useful if this could be achieved without needing to run a shared task [24].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340983702
+<title> Efficient Test Collection Construction via Active Learning
+
+<desc> Description:
+Our approach involves learning a topic-specific document classification model for each search topic. We consider two distinct applications of AL. Firstly, we apply AL to select which documents assessors should judge, and we explore two document selection strategies [6]: continuous active learning (CAL) and simple active learning (SAL). Secondly, we consider use of AL to automatically classify relevance of additional unjudged documents. This differs from traditional IR evaluation, which often ignores unjudged documents or assumes them to be non-relevant. Moreover, the ability to use any hybrid combination of human and automatic judgments in evaluation provides a flexible tradeoff space for balancing cost vs. accuracy [19]. Though others have pursued automatic or semi-automatic relevance labeling [1, 2, 9, 12, 13], prior studies do not use AL for i) selecting documents for annotations and ii) inferring relevance labels for unjudged documents simultaneously in constructing IR test collections.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340983703
+<title> Efficient Test Collection Construction via Active Learning
+
+<desc> Description:
+Because AL is supervised, an initial seed set of labeled documents is needed to bootstrap learning. We consider two distinct scenarios for how these seed judgments might be obtained: interactive search (IS) and Rank-based Document Selection (RDS). We emphasize that these represent alternative scenarios rather than competing methods. IS assumes topic assessors utilize an IS system during a careful topic creation process, as traditionally practiced in TREC. This produces seed judgments as a free by-product. RDS, on the other hand, assumes a scenario like the TREC Million Query Track [4] in which topic formation is extremely brief and assessors are not provided an IS system in which to explore the collection. In this scenario, an off-the-shelf IR system is used instead to produce a single document ranking; assessors then judge documents in this rank-order until enough seed judgments have been collected to kickstart AL.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340983704
+<title> Efficient Test Collection Construction via Active Learning
+
+<desc> Description:
+Ever-larger document collections challenge systems-based Cranfield [5] evaluation of IR systems due to needing to collect so many relevance judgments. While many methods now exist to intelligently select which documents to judge, these methods typically assume a shared task context (e.g., TREC) in which document rankings from many participating systems are available. In contrast, we want to be able to construct a new test collection without needing to run a shared task [24, 26].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340983705
+<title> Efficient Test Collection Construction via Active Learning
+
+<desc> Description:
+[1] propose labeling unjudged documents using a classifier trained on a subset of pool documents. This subset of pool documents is developed by considering documents ranked by a subset of the submitted rank systems. The trained classifier is then used to predict relevance labels of documents which are ranked by the remaining set of rank systems in the shared task. We both report results for the same 2006 Terabyte Track run, but our results are not directly comparable to theirs because they assume a traditional machine learning setup, whereas we motivate and adopt the finite-pool evaluation setting proposed in [6]. However, we effectively reproduce their method as a baseline, using logistic regression and random document selection. We show strong improvement over this baseline.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340983706
+<title> Efficient Test Collection Construction via Active Learning
+
+<desc> Description:
+While [13] use document rankings information in their own proposed method, they also reproduce [1]’s SVM method as a baseline, reporting results on the same WebTrack 2013 and 2014 collections we use in this study. However, as with Büttcher et al. [1], they do not evaluate their approach under a finite-pool scenario. Though this means that our results are not directly comparable, our same baseline configuration described above roughly reproduces their SVM approach.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340983707
+<title> Efficient Test Collection Construction via Active Learning
+
+<desc> Description:
+For AL document selection, we evaluate the same CAL and SAL methods [21] that [6] assess in the domain of e-discovery, where they focus on set-based rather than ranked retrieval. Moreover, judging cost is also measured differently in e-discovery: no document can be “screened in” automatically since all must be reviewed for privilege following discovery. Recently, [8] propose a variant of “S-CAL” [7], which rather than selecting the highest-scoring documents for relevance judgment, randomly samples some documents from those the highest-scoring documents for annotation. They report results on the collected human relevance judgments (e.g. TREC pool documents) but not hybrid judging.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340983708
+<title> Efficient Test Collection Construction via Active Learning
+
+<desc> Description:
+[2] apply [3]’s document selection method to iteratively collect relevance judgments. Based on the cluster hypothesis, their per-topic logistic regression classifier estimates the probability of relevance of an unjudged document conditional on its similarity to other judged documents in the cluster (e.g. relevant and non-relevant document clusters). A key difference with our work is that their document selection strategy relies on having run a shared task.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340983709
+<title> Efficient Test Collection Construction via Active Learning
+
+<desc> Description:
+[22] develop a framework for constructing a test collection using an iterative process between updating nuggets and annotating documents. However, because their automatic nugget extraction fails to extract nuggets from documents which are difficult to parse (e.g. TREC Web Track), the authors fall back to using document rankings from participating systems of a shared task evaluation. [17] also utilize a shared task by inducing a probability distribution from the participating systems and a probability distribution over the ranks of the documents. They then actively sample documents from the joint distribution to construct an unbiased test collection.
 
 <narr> Narrative:
 

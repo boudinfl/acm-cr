@@ -14,7 +14,7 @@ Similarly, conversational question answering based on a set of related questions
 <title> Guided Transformer: Leveraging Multiple External Sources for Representation Learning in Conversational Search
 
 <desc> Description:
-Recent conversational information seeking platforms, such as [59], provide support for multi-turn, multi-modal, and mixed-initiative interactions. There have been recent efforts to go beyond the “user asks, system responds” paradigm by asking clarifying questions from the users, including offline evaluation of search clarification [1], clarifying question generation for open-domain search queries [61], and preference elicitation in conversational recommender systems [8, 46, 64]. Past research in the area of search clarification has shown significant promise in asking clarifying questions. However, utilizing user responses to clarifying questions to improve the search performance has been relatively unstudied.
+Recent conversational information seeking platforms, such as [59], provide support for multi-turn, multi-modal, and mixed-initiative interactions. There have been recent efforts to go beyond the "user asks, system responds" paradigm by asking clarifying questions from the users, including offline evaluation of search clarification [1], clarifying question generation for open-domain search queries [61], and preference elicitation in conversational recommender systems [8, 46, 64]. Past research in the area of search clarification has shown significant promise in asking clarifying questions. However, utilizing user responses to clarifying questions to improve the search performance has been relatively unstudied.
 
 <narr> Narrative:
 
@@ -58,7 +58,7 @@ Asking clarifying questions has attracted much attention in different domains an
 <title> Guided Transformer: Leveraging Multiple External Sources for Representation Learning in Conversational Search
 
 <desc> Description:
-In the realm of IR, the user study done by [24] showed that clarifying questions do not cause user dissatisfaction, and in fact, they sometimes increase the satisfaction. [10] studied the task of clarification for entity disambiguation. However, the clarification format in their work was restricted to a “did you mean A or B?” template, which makes it non-practical for many open-domain search queries. More recently, [1] introduced an offline evaluation methodology and a benchmark for studying the task of clarification in information seeking conversational systems. They have also introduced a method for selecting the next clarifying question which is used in this paper as a baseline. [61] proposed an approach based on weak supervision to generate clarifying questions for open-domain search queries. User interaction with clarifying questions has been later analyzed in [62].
+In the realm of IR, the user study done by [24] showed that clarifying questions do not cause user dissatisfaction, and in fact, they sometimes increase the satisfaction. [10] studied the task of clarification for entity disambiguation. However, the clarification format in their work was restricted to a "did you mean A or B?" template, which makes it non-practical for many open-domain search queries. More recently, [1] introduced an offline evaluation methodology and a benchmark for studying the task of clarification in information seeking conversational systems. They have also introduced a method for selecting the next clarifying question which is used in this paper as a baseline. [61] proposed an approach based on weak supervision to generate clarifying questions for open-domain search queries. User interaction with clarifying questions has been later analyzed in [62].
 
 <narr> Narrative:
 
@@ -76,7 +76,7 @@ A common application of clarification is in conversational recommendation system
 </top>
 
 <top>
-<num> Number: 
+<num> Number: 340106108
 <title> Guided Transformer: Leveraging Multiple External Sources for Representation Learning in Conversational Search
 
 <desc> Description:
