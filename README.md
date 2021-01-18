@@ -102,7 +102,7 @@ paper, e.g.:
 3397271.3401032.qrels  # relevant judgments                               
 ```
 
-Actually, there are 30 papers and 169 topics.
+Actually, there are 33 papers and XXX topics.
 
 Below is the list of papers used for generating queries.
 
@@ -128,6 +128,22 @@ Below is the list of papers used for generating queries.
     ├── 3397271.3401330.pdf
     ├── 3397271.3401333.pdf
     ├── 3397271.3401467.pdf
+├── ictir-2020 (5 papers) 
+    ├── 3409256.3409817.pdf (*)
+    ├── 3409256.3409819.pdf
+    ├── 3409256.3409827.pdf
+    ├── 3409256.3409829.pdf
+    ├── 3409256.3409838.pdf
+├── wsdm-2020 (5 papers)
+    ├── 3336191.3371775.pdf
+    ├── 3336191.3371814.pdf
+    ├── 3336191.3371820.pdf
+    ├── 3336191.3371844.pdf
+    ├── 3336191.3371855.pdf
+├── chiir-2020 (3 papers)
+    ├── 3343413.3377957.pdf
+    ├── 3343413.3377977.pdf
+    ├── 3343413.3378011.pdf
 ```
 
 ## Document retrieval
