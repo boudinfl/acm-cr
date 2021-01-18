@@ -1,0 +1,98 @@
+<top>
+<num> Number: 340983701
+<title> Efficient Test Collection Construction via Active Learning
+
+<desc> Description:
+To create a new IR test collection at minimal cost, it is valuable to identify a minimal set of documents for human relevance judging. This is typically accomplished by running a shared task campaign, such as NIST TREC, then pooling search results from many participating systems (and often interactive runs) to identify the most likely relevant documents for judging [10]. While this approach is now canonized in IR practice, organizing the community to run a shared task is complicated, slow, and requires many hours of work by organizers and participants. This hidden, real-world cost may far exceed simple judging costs, which are often the only measure of cost reported. This suggests a more complete accounting of cost ought to be considered, if not quantified, wrt. building IR test collections. Shared tasks have many other benefits, but if one’s primary goal is merely to build a new test collection, it would be useful if this could be achieved without needing to run a shared task [24].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340983702
+<title> Efficient Test Collection Construction via Active Learning
+
+<desc> Description:
+Our approach involves learning a topic-specific document classification model for each search topic. We consider two distinct applications of AL. Firstly, we apply AL to select which documents assessors should judge, and we explore two document selection strategies [6]: continuous active learning (CAL) and simple active learning (SAL). Secondly, we consider use of AL to automatically classify relevance of additional unjudged documents. This differs from traditional IR evaluation, which often ignores unjudged documents or assumes them to be non-relevant. Moreover, the ability to use any hybrid combination of human and automatic judgments in evaluation provides a flexible tradeoff space for balancing cost vs. accuracy [19]. Though others have pursued automatic or semi-automatic relevance labeling [1, 2, 9, 12, 13], prior studies do not use AL for i) selecting documents for annotations and ii) inferring relevance labels for unjudged documents simultaneously in constructing IR test collections.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340983703
+<title> Efficient Test Collection Construction via Active Learning
+
+<desc> Description:
+Because AL is supervised, an initial seed set of labeled documents is needed to bootstrap learning. We consider two distinct scenarios for how these seed judgments might be obtained: interactive search (IS) and Rank-based Document Selection (RDS). We emphasize that these represent alternative scenarios rather than competing methods. IS assumes topic assessors utilize an IS system during a careful topic creation process, as traditionally practiced in TREC. This produces seed judgments as a free by-product. RDS, on the other hand, assumes a scenario like the TREC Million Query Track [4] in which topic formation is extremely brief and assessors are not provided an IS system in which to explore the collection. In this scenario, an off-the-shelf IR system is used instead to produce a single document ranking; assessors then judge documents in this rank-order until enough seed judgments have been collected to kickstart AL.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340983704
+<title> Efficient Test Collection Construction via Active Learning
+
+<desc> Description:
+Ever-larger document collections challenge systems-based Cranfield [5] evaluation of IR systems due to needing to collect so many relevance judgments. While many methods now exist to intelligently select which documents to judge, these methods typically assume a shared task context (e.g., TREC) in which document rankings from many participating systems are available. In contrast, we want to be able to construct a new test collection without needing to run a shared task [24, 26].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340983705
+<title> Efficient Test Collection Construction via Active Learning
+
+<desc> Description:
+[1] propose labeling unjudged documents using a classifier trained on a subset of pool documents. This subset of pool documents is developed by considering documents ranked by a subset of the submitted rank systems. The trained classifier is then used to predict relevance labels of documents which are ranked by the remaining set of rank systems in the shared task. We both report results for the same 2006 Terabyte Track run, but our results are not directly comparable to theirs because they assume a traditional machine learning setup, whereas we motivate and adopt the finite-pool evaluation setting proposed in [6]. However, we effectively reproduce their method as a baseline, using logistic regression and random document selection. We show strong improvement over this baseline.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340983706
+<title> Efficient Test Collection Construction via Active Learning
+
+<desc> Description:
+While [13] use document rankings information in their own proposed method, they also reproduce [1]’s SVM method as a baseline, reporting results on the same WebTrack 2013 and 2014 collections we use in this study. However, as with Büttcher et al. [1], they do not evaluate their approach under a finite-pool scenario. Though this means that our results are not directly comparable, our same baseline configuration described above roughly reproduces their SVM approach.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340983707
+<title> Efficient Test Collection Construction via Active Learning
+
+<desc> Description:
+For AL document selection, we evaluate the same CAL and SAL methods [21] that [6] assess in the domain of e-discovery, where they focus on set-based rather than ranked retrieval. Moreover, judging cost is also measured differently in e-discovery: no document can be “screened in” automatically since all must be reviewed for privilege following discovery. Recently, [8] propose a variant of “S-CAL” [7], which rather than selecting the highest-scoring documents for relevance judgment, randomly samples some documents from those the highest-scoring documents for annotation. They report results on the collected human relevance judgments (e.g. TREC pool documents) but not hybrid judging.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340983708
+<title> Efficient Test Collection Construction via Active Learning
+
+<desc> Description:
+[2] apply [3]’s document selection method to iteratively collect relevance judgments. Based on the cluster hypothesis, their per-topic logistic regression classifier estimates the probability of relevance of an unjudged document conditional on its similarity to other judged documents in the cluster (e.g. relevant and non-relevant document clusters). A key difference with our work is that their document selection strategy relies on having run a shared task.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340983709
+<title> Efficient Test Collection Construction via Active Learning
+
+<desc> Description:
+[22] develop a framework for constructing a test collection using an iterative process between updating nuggets and annotating documents. However, because their automatic nugget extraction fails to extract nuggets from documents which are difficult to parse (e.g. TREC Web Track), the authors fall back to using document rankings from participating systems of a shared task evaluation. [17] also utilize a shared task by inducing a probability distribution from the participating systems and a probability distribution over the ranks of the documents. They then actively sample documents from the joint distribution to construct an unbiased test collection.
+
+<narr> Narrative:
+
+</top>

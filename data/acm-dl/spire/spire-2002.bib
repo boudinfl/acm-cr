@@ -1,0 +1,396 @@
+@inproceedings{10.5555/646491.694954,
+author = {Ley, Michael},
+title = {The DBLP Computer Science Bibliography: Evolution, Research Issues, Perspectives},
+year = {2002},
+isbn = {3540441581},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {Publications are essential for scientific communication. Access to publications is provided by conventional libraries, digital libraries operated by learned societies or commercial publishers, and a huge number of web sites maintained by the scientists themselves or their institutions. Comprehensive meta-indices for this increasing number of information sources are missing for most areas of science. The DBLP Computer Science Bibliography of the University of Trier has grown from a very specialized small collection of bibliographic information to a major part of the infrastructure used by thousands of computer scientists. This short paper first reports the history of DBLP and sketches the very simple software behind the service. The most time-consuming task for the maintainers of DBLP may be viewed as a special instance of the authority control problem: how to normalize different spellings of person names. The third section of the paper discusses some details of this problem which might be an interesting research issue for the information retrieval community.},
+booktitle = {Proceedings of the 9th International Symposium on String Processing and Information Retrieval},
+pages = {1–10},
+numpages = {10},
+series = {SPIRE 2002}
+}
+
+@inproceedings{10.5555/646491.756868,
+author = {Suciu, Dan},
+title = {From Searching Text to Querying XML Streams},
+year = {2002},
+isbn = {3540441581},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {XML data is queried with XPath expressions, which are a limited form of regular expressions. New XML stream processing applications, such as content-based routing or selective dissemination of information, require thousands or millions of XPath expressions to be evaluated simultaneously on the incoming XML stream at a high, sustained rate.Con ceptually, the XPath evaluation problem is analogous to the text search problem, in which one or several regular expressions need to be matched to a given text, but the number of regular expressions here is much larger, while the "text" is much shorter, since it corresponds to the depth of the XML stream. In this paper we examine techniques that have been proposed for XML stream processing, which are variations of either a non-deterministic or a deterministic finite automata (NFA and DFA). For the latter, we describe a series or theoretical results establishing lower and upper bounds on the number of DFA states for sets of XPath expressions.},
+booktitle = {Proceedings of the 9th International Symposium on String Processing and Information Retrieval},
+pages = {11–26},
+numpages = {16},
+series = {SPIRE 2002}
+}
+
+@inproceedings{10.5555/646491.694965,
+author = {Gonnet, Gaston H.},
+title = {String Matching Problems from Bioinformatics Which Still Need Better Solutions (Extended Abstract)},
+year = {2002},
+isbn = {3540441581},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {Bioinformatics, the discipline which studies the computational problems arising from molecular biology, poses many interesting problems to the string searching community. We will describe two problems arising from Bioinformatics, their preliminary solutions, and the more general problem that they pose. We hope that this will encourage researchers to find better, general, algorithms to solve these problems.},
+booktitle = {Proceedings of the 9th International Symposium on String Processing and Information Retrieval},
+pages = {27–30},
+numpages = {4},
+series = {SPIRE 2002}
+}
+
+@inproceedings{10.5555/646491.694966,
+author = {Abouelhoda, Mohamed Ibrahim and Ohlebusch, Enno and Kurtz, Stefan},
+title = {Optimal Exact Strring Matching Based on Suffix Arrays},
+year = {2002},
+isbn = {3540441581},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {Using the suffix tree of a string  S , decision queries of the type "Is  P  a substring of  S __ __" can be answered in  O (|  P |) time and enumeration queries of the type "Where are all  z  occurrences of  P  in  S __ __" can be answered in  O (|  P |+  z ) time, totally independent of the size of  S . However, in large scale applications as genome analysis, the space requirements of the suffix tree are a severe drawback. The suffix array is a more space economical index structure. Using it and an additional table, Manber and Myers (1993) showed that decision queries and enumeration queries can be answered in  O (|  P |+log |  S |) and  O (|  P |+log |  S |+  z ) time, respectively, but no optimal time algorithms are known. In this paper, we show how to achieve the optimal  O (|  P |) and  O (|  P | +  z ) time bounds for the suffix array. Our approach is not confined to exact pattern matching. In fact, it can be used to efficiently solve all problems that are usually solved by a top-down traversal of the suffix tree. Experiments show that our method is not only of theoretical interest but also of practical relevance.},
+booktitle = {Proceedings of the 9th International Symposium on String Processing and Information Retrieval},
+pages = {31–43},
+numpages = {13},
+series = {SPIRE 2002}
+}
+
+@inproceedings{10.5555/646491.694962,
+author = {Fredriksson, Kimmo},
+title = {Faster String Matching with Super-Alphabets},
+year = {2002},
+isbn = {3540441581},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {Given a text  T [1 . . .  n ] and a pattern  P [1 . . .  m ] over some alphabet of size , finding the exact occurrences of  P  in  T  requires at least (  n  log    m /  m ) character comparisons on average, as shown in [19]. Consequently, it is believed that this lower bound implies also an (  n  log    m /  m ) lower bound for the execution time of an optimal algorithm. However, in this paper we show how to obtain an  O(n/m)  average time algorithm. This is achieved by slightly changing the model of computation, and with a modification of an existing algorithm. Our technique uses a super-alphabet for simulating suffix automaton. The space usage of the algorithm is  O (  m ). The technique can be applied to many other string matching algorithms, including dictionary matching, which is also solved in expected time  O(n/m) , and approximate matching allowing  k  edit operations (mismatches, insertions or deletions of characters). This is solved in expected time  O(nk/m)  for  k   O (  m /log    m ). The known lower bound for this problem is (  n (  k  + log    m )/  m ), given in [6]. Finally we show how to adopt a similar technique to the shift-or algorithm, extending its bit-parallelism in another direction. This gives a speed-up by a factor  s , where  s  is the number of characters processed simultaneously. Some of the algorithms are implemented, and we show that the methods work well in practice too. This is especially true for the shift-or algorithm, which in some cases works faster than predicted by the theory. The result is the fastest known algorithm for exact string matching for short patterns and small alphabets. All the methods and analyses assume the RAM model of computation, and that each symbol is coded in  b  = log  2  bits. They work for larger  b  too, but the speed-up is decreased.},
+booktitle = {Proceedings of the 9th International Symposium on String Processing and Information Retrieval},
+pages = {44–57},
+numpages = {14},
+series = {SPIRE 2002}
+}
+
+@inproceedings{10.5555/646491.694964,
+author = {Crochemore, Maxime and Tron\'{\i}cek, Zdenek},
+title = {On the Size of DASG for Multiple Texts},
+year = {2002},
+isbn = {3540441581},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {We present a left-to-right algorithm building the automaton accepting all subsequences of a given set of strings. We prove that the number of states of this automaton can be quadratic if built on at least two texts.},
+booktitle = {Proceedings of the 9th International Symposium on String Processing and Information Retrieval},
+pages = {58–64},
+numpages = {7},
+series = {SPIRE 2002}
+}
+
+@inproceedings{10.5555/646491.694961,
+author = {Dias, Zanoni and Meidanis, Joao},
+title = {Sorting by Prefix Transpositions},
+year = {2002},
+isbn = {3540441581},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {A transposition is an operation that exchanges two consecutive, adjacent blocks in a permutation. A prefix transposition is a transposition that moves the first element in the permutation. In this work we present the first results on the problem of sorting permutations with the minimum number of prefix transpositions. This problem is a variation of the transposition distance problem, related to genome rearrangements. We present approximation algorithms with performance ratios of 2 and 3. We conjecture that the maximum prefix transposition distance is  D (  n ) =  n -  n /4 and present the results of several computational tests that support this. Finally, we propose an algorithm that decides whether a given permutation can be sorted using just the number of transpositions indicated by the breakpoint lower-bound.},
+booktitle = {Proceedings of the 9th International Symposium on String Processing and Information Retrieval},
+pages = {65–76},
+numpages = {12},
+series = {SPIRE 2002}
+}
+
+@inproceedings{10.5555/646491.694960,
+author = {Arslan, Abdullah N. and Egecioglu, \"{O}mer},
+title = {Efficient Computation of Long Similar Subsequences},
+year = {2002},
+isbn = {3540441581},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {Given sequences  X  of length  n  and  Y  of length  m  with  n   m , let LAt * and NLAt * denote the maximum ordinary, and maximum length normalized scores of local alignments with length at least a given threshold value  t . The alignment length is defined as the sum of the lengths of the involved subsequences, and length normalized score of an alignment is the quotient of the ordinary score by the alignment length. We develop an algorithm which finds an alignment with ordinary score LAt *, and length (1 - 1/  r )  t  for a given  r , in time  O(rnm)  and space  O(rm) . The algorithm can be used to find an alignment with length normalized score &gt; for a given positive with the same time and space complexity and within the same approximation bounds. Thus this algorithm provides a length-approximate answer to a query such as "Do  X  and  Y  share a (sufficiently long) fragment with more than 70% of similarity__ __" We also show that our approach gives improved approximation algorithms for the normalized local alignment problem. In this case we can efficiently find an alignment with length (1 - 1/  r )  t  which has a length normalized score NLAt *.},
+booktitle = {Proceedings of the 9th International Symposium on String Processing and Information Retrieval},
+pages = {77–90},
+numpages = {14},
+keywords = {dynamic programming, ratio maximization, normalized local alignment, local alignment, approximation algorithm},
+series = {SPIRE 2002}
+}
+
+@inproceedings{10.5555/646491.694953,
+author = {Brisaboa, Nieves R. and Call\'{o}n, Carlos and L\'{o}pez, Juan-Ram\'{o}n and Places, \'{A}ngeles S. and Sanmart\'{\i}n, Goretti},
+title = {Stemming Galician Texts},
+year = {2002},
+isbn = {3540441581},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {In this paper we describe a stemming algorithm for Galician language, which supports, at the same time, the four current orthographic regulations for Galician. The algorithm has already been implemented, and we have started to use it for its improvement. But this stemming algorithm cannot be applied over documents previous to the appearance of the first Galician orthographic regulation in 1977; therefore we have adopted an exhaustive approach, consisting in defining a huge collection of wordsets for allowing systematic word comparisons, to stem documents written before that date. We also describe here a tool to build the wordsets needed in this approach.},
+booktitle = {Proceedings of the 9th International Symposium on String Processing and Information Retrieval},
+pages = {91–97},
+numpages = {7},
+keywords = {text retrieval, digital libraries, stemming},
+series = {SPIRE 2002}
+}
+
+@inproceedings{10.5555/646491.759198,
+author = {Al-Sughaiyer, Imad A. and Al-Kharashi, Ibrahim A.},
+title = {Firing Policies for an Arabic Rule-Based Stemmer},
+year = {2002},
+isbn = {3540441581},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {Processing morphology of Semitic languages requires more complicated systems. Arabic language, for example, exhibits very complex but very regular morphological structure that greatly affect its automation. Many approaches were proposed to analyze Arabic language at the morphological level. This paper studies the rule firing policies for Arabic rule-based stemmer. Proposed firing policies include the single, pair, triple and quadruple approaches. Generalization of these approaches was also investigated.},
+booktitle = {Proceedings of the 9th International Symposium on String Processing and Information Retrieval},
+pages = {98–103},
+numpages = {6},
+series = {SPIRE 2002}
+}
+
+@inproceedings{10.5555/646491.694963,
+author = {P\^{o}ssas, Bruno and Ziviani, Nivio and Meira, Wagner},
+title = {Enhancing the Set-Based Model Using Proximity Information},
+year = {2002},
+isbn = {3540441581},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {(SBM), which is an effective technique for computing term weights based on co-occurrence patterns, employing the information about the proximity among query terms in documents. The intuition that semantically related term occurrences often occur closer to each other is taken into consideration, leading to a new information retrieval model called proximity set-based model (PSBM). The novelty is that the proximity information is used as a pruning strategy to determine only related co-occurrence term patterns. This technique is time efficient and yet yields nice improvements in retrieval effectiveness. Experimental results show that PSBM improves the average precision of the answer set for all four collections evaluated. For the CFC collection, PSBM leads to a gain relative to the standard vector space model (VSM), of 23% in average precision values and 55% in average precision for the top 10 documents. PSBM is also competitive in terms of computational performance, reducing the execution time of the SBM in 21% for the CISI collection.},
+booktitle = {Proceedings of the 9th International Symposium on String Processing and Information Retrieval},
+pages = {104–116},
+numpages = {13},
+series = {SPIRE 2002}
+}
+
+@inproceedings{10.5555/646491.694969,
+author = {Baeza-Yates, Ricardo A. and Saint-Jean, Felipe and Castillo, Carlos},
+title = {Web Structure, Dynamics and Page Quality},
+year = {2002},
+isbn = {3540441581},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {This paper is aimed at the study of quantitative measures of the relation between Web structure, page recency, and quality of Web pages. Quality is studied using different link-based metrics considering their relationship with the structure of the Web and the last modification time of a page. We show that, as expected, Pagerank is biased against new pages. As a subproduct we propose a Pagerank variant that includes page recency into account and we obtain information on how recency is related with Web structure.},
+booktitle = {Proceedings of the 9th International Symposium on String Processing and Information Retrieval},
+pages = {117–130},
+numpages = {14},
+series = {SPIRE 2002}
+}
+
+@inproceedings{10.5555/646491.694959,
+author = {Pretto, Luca},
+title = {A Theoretical Analysis of Google's PageRank},
+year = {2002},
+isbn = {3540441581},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {Our work starts from the definition of an intuitive formula that can be used to order the Web pages according to their importance, showing the need of a modification of this formula on a mathematical basis. Following the thread of this argument we get to a well-founded general formula, that covers many interesting different cases, and among them that of PageRank, the algorithm used by the Google search engine, as it is currently proposed in recent works [4, 7]. Then we prove the substantial equivalence between this PageRank formula and the classic formula proposed in [3]. As an example of the versatility of our general formula we derive from it a version of PageRank based on a user personalization. Finally, we discuss the problem of the "objectivity" of classic PageRank, demonstrating that a certain degree of subjectivity persists, since the order of Web pages given by this algorithm depends on the value of a parameter.},
+booktitle = {Proceedings of the 9th International Symposium on String Processing and Information Retrieval},
+pages = {131–144},
+numpages = {14},
+keywords = {Markov chains, link-based analysis, IR and web, information retrieval (IR), ranking, pagerank},
+series = {SPIRE 2002}
+}
+
+@inproceedings{10.5555/646491.694957,
+author = {Xi, Wensi and Fox, Edward A. and Tan, Roy P. and Shu, Jiang},
+title = {Machine Learning Approach for Homepage Finding Task},
+year = {2002},
+isbn = {3540441581},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {This paper describes new machine learning approaches to predict the correct homepage in response to a user's homepage finding query. This involves two phases. In the first phase, a decision tree is generated to predict whether a URL is a homepage URL or not. The decision tree then is used to filter out non-homepages from the web pages returned by a standard vector space information retrieval system. In the second phase, a logistic regression analysis is used to combine multiple sources of evidence based on the homepages remaining from the first step to predict which homepage is most relevant to a user's query. 100 queries are used to train the logistic regression model and another 145 testing queries are used to evaluate the model derived. Our results show that about 84% of the testing queries had the correct homepage returned within the top 10 pages. This shows that our machine learning approaches are effective since without any machine learning approaches, only 59% of the testing queries had their correct answers returned within the top 10 hits.},
+booktitle = {Proceedings of the 9th International Symposium on String Processing and Information Retrieval},
+pages = {145–159},
+numpages = {15},
+series = {SPIRE 2002}
+}
+
+@inproceedings{10.5555/646491.695105,
+author = {Chauve, Cedric},
+title = {Tree Pattern Matching for Linear Static Terms},
+year = {2002},
+isbn = {3540441581},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {In this paper, we present a simple algorithm for pattern matching within a family of trees called linear terms, that have many applications in the design of programming languages, theorem proving and symbolic computation for example. Our algorithm relies on the representation of a tree by words. It has a quadratic worst-case time complexity, which is worse than the best known algorithm, but experimental results on uniformly distributed random binary terms suggest a linear expected time and interesting practical behavior.},
+booktitle = {Proceedings of the 9th International Symposium on String Processing and Information Retrieval},
+pages = {160–169},
+numpages = {10},
+series = {SPIRE 2002}
+}
+
+@inproceedings{10.5555/646491.694970,
+author = {Takeda, Masayuki and Miyamoto, Satoru and Kida, Takuya and Shinohara, Ayumi and Fukamachi, Shuichi and Shinohara, Takeshi and Arikawa, Setsuo},
+title = {Processing Text Files as Is: Pattern Matching over Compressed Texts, Multi-Byte Character Texts, and Semi-Structured Texts},
+year = {2002},
+isbn = {3540441581},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {Techniques in processing text files "as is" are presented, in which given text files are processed without modification. The compressed pattern matching problem, first defined by Amir and Benson (1992), is a good example of the "as-is" principle. Another example is string matching over multi-byte character texts, which is a significant problem common to oriental languages such as Japanese, Korean, Chinese, and Taiwanese. A text file from such languages is a mixture of single-byte characters and multi-byte characters. Naive solution would be (1) to convert a given text into a fixed length encoded one and then apply any string matching routine to it; or (2) to directly search the text file byte after byte for (the encoding of) a pattern in which an extra work is needed for synchronization to avoid false detection. Both the solutions, however, sacrifice the searching speed. Our algorithm runs on such a multi-byte character text file at the same speed as on an ordinary ASCII text file, without false detection. The technique is applicable to any prefix code such as the Huffman code and variants of Unicode. We also generalize the technique so as to handle structured texts such as XML documents. Using this technique, we can avoid false detection of keyword even if it is a substring of a tag name or of an attribute description, without any sacrifice of searching speed.},
+booktitle = {Proceedings of the 9th International Symposium on String Processing and Information Retrieval},
+pages = {170–186},
+numpages = {17},
+series = {SPIRE 2002}
+}
+
+@inproceedings{10.5555/646491.694956,
+author = {Harada, Lilian},
+title = {Pattern Matching over Multi-Attribute Data Streams},
+year = {2002},
+isbn = {3540441581},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {Recently a growing number of applications monitor the physical world by detecting some patterns and trends of interest. In this paper we present two algorithms that generalize string-matching algorithms for detecting patterns with complex predicates over data streams having multiple categorical and quantitative attributes. Implementation and evaluation of the algorithms show their efficiency when compared to the naive approach.},
+booktitle = {Proceedings of the 9th International Symposium on String Processing and Information Retrieval},
+pages = {187–193},
+numpages = {7},
+series = {SPIRE 2002}
+}
+
+@inproceedings{10.5555/646491.694967,
+author = {Gon\c{c}alves, Marcos Andr\'{e} and Mather, Paul and Wang, Jun and Zhou, Ye and Luo, Ming and Richardson, Ryan and Shen, Rao and Xu, Liang and Fox, Edward A.},
+title = {Java MARIAN: From an OPAC to a Modern Digital Library System},
+year = {2002},
+isbn = {3540441581},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {This paper describes the Java MARIAN system, its implementation, and its evolution from a C++ Online Public Access Catalog (OPAC) to a modern and complete digital library system. We focus on design, architectural, and implementation issues including: support for storage, retrieval, and automatic generation of collections of semi-structured digital objects; uniform and powerful representations based on semantic networks, digital library specific datatypes, and weighted sets; rich communities of searchers and fusion modules; and support for distributed computation, multi-lingual retrieval, and personalization. We present applications and some use statistics.},
+booktitle = {Proceedings of the 9th International Symposium on String Processing and Information Retrieval},
+pages = {194–209},
+numpages = {16},
+series = {SPIRE 2002}
+}
+
+@inproceedings{10.5555/646491.694975,
+author = {Reis, Davi de Castro and Ara\'{u}jo, Robson Braga and Silva, Altigran Soares da and Ribeiro-Neto, Berthier A.},
+title = {A Framework for Generating Attribute Extractors for Web Data Sources},
+year = {2002},
+isbn = {3540441581},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {To cope with the irregularities of typical semistructured Web data, extraction tools usually break the extraction task in two phases: an extraction phase, in which atomic attribute values are extracted from Web pages, and an assembling phase, in which these atomic values are grouped to form complex objects. As a consequence, the whole process is highly dependent on the attribute values collected in the first phase. All attribute values of interest should be properly recognized and spurious values should be discarded. Thus, attribute values extraction is an important problem. In this paper, we propose a new framework for generating attribute value extractors. The main appeal of this framework is that it can be adapted for dealing with specific types of data sources and to incorporate distinct types of heuristics for achieving good extraction performance. To demonstrate the feasibility of this proposal, we present an implementation of this framework for data-rich Web pages and show how a number of simple heuristics, some of them presented in the recent literature, can be incorporated into this framework. We also show experimental results and, in most cases, our results are at least as good as results previously presented in the literature.},
+booktitle = {Proceedings of the 9th International Symposium on String Processing and Information Retrieval},
+pages = {210–226},
+numpages = {17},
+series = {SPIRE 2002}
+}
+
+@inproceedings{10.5555/646491.694955,
+author = {Tahaghoghi, Seyed M. M. and Thom, James A. and Williams, Hugh E.},
+title = {Multiple Example Queries in Content-Based Image Retrieval},
+year = {2002},
+isbn = {3540441581},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {Content-Based Image Retrieval (cbir) is the practical class of techniques used for information retrieval from large image collections. Many CBIR systems allow users to specify their information need by providing an example image. This query-by-example paradigm can be extended to support multiple example images. In this work, we present a large-scale experiment that shows the average performance of querying with multiple examples is significantly better than single-example querying. We also investigate the effects of providing different numbers of example images, the impact of example quality, and the relative performance of functions used to combine image features. Our experiments indicate that three-example queries are more effective than other numbers of examples, and that the minimum combining function is robust for most query types.},
+booktitle = {Proceedings of the 9th International Symposium on String Processing and Information Retrieval},
+pages = {227–240},
+numpages = {14},
+series = {SPIRE 2002}
+}
+
+@inproceedings{10.5555/646491.694968,
+author = {Kazai, Gabriella and Lalmas, Mounia and R\"{o}lleke, Thomas},
+title = {Focussed Structured Document Retrieval},
+year = {2002},
+isbn = {3540441581},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {Focussed structured document retrieval aims at retrieving best entry points from where users can browse to access relevant document components in the document structure. In this paper, we report on the development, implementation and evaluation of best entry point retrieval strategies derived from user studies designed to elicit what constitutes a best entry point.},
+booktitle = {Proceedings of the 9th International Symposium on String Processing and Information Retrieval},
+pages = {241–247},
+numpages = {7},
+series = {SPIRE 2002}
+}
+
+@inproceedings{10.5555/646491.694973,
+author = {Gonz\'{a}lez-Caro, Cristina N. and Calder\'{o}n-Benavides, Maritza L. and Alc\'{a}zar, Jos\'{e} de Jes\'{u}s P\'{e}rez and Garc\'{\i}a-D\'{\i}az, Juan C. and Delgado, Joaquin},
+title = {Towards a More Comprehensive Comparison of Collaborative Filtering Algorithms},
+year = {2002},
+isbn = {3540441581},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {The basic objective of a Collaborative Filtering (CF) algorithm is to suggest items to a particular user based on his/her preferences and users with similar interests. Although, there is an apparently strong demand for CF techniques, and many algorithms have been recently proposed, very few articles comparing these techniques can be found. Our paper is oriented towards the study of a sample of algorithms to representing differents stages in the evolutive process of CF.Experiments were conducted on two datasets with different characteristics, using two protocols and three evaluation metrics for the different algorithms. The results indicate that, in general, the Online-Learning (WMA, MWM) and the Support Vector Machines algorithms have a better performance that the other algorithms, on both datasets. Considering the amount of information, the less sparse such information is, the higher the coverage and accuracy of general models tend to be; however, the behavior under sparse data is closer to what is observed in a real system if we have in mind that users usually rate an amount of records much smaller than the total available.},
+booktitle = {Proceedings of the 9th International Symposium on String Processing and Information Retrieval},
+pages = {248–253},
+numpages = {6},
+keywords = {dependency networks, online learning, aspect model, memory-based models, support vector machines, collaborative filtering},
+series = {SPIRE 2002}
+}
+
+@inproceedings{10.5555/646491.694958,
+author = {Navarro, Gonzalo and Reyes, Nora},
+title = {Fully Dynamic Spatial Approximation Trees},
+year = {2002},
+isbn = {3540441581},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {The Spatial Approximation Tree (sa-tree) is a recently proposed data structure for searching in metric spaces. It has been shown that it compares favorably against alternative data structures in spaces of high dimension or queries with low selectivity. Its main drawbacks are: costly construction time, poor performance in low dimensional spaces or queries with high selectivity, and the fact of being a static data structure, that is, once built, one cannot add or delete elements. These facts rule it out for many interesting applications.In this paper we overcome these weaknesses. We present a dynamic version of the sa-tree that handles insertions and deletions, showing experimentally that the price of adding dynamism is rather low. This is remarkable by itself since very few data structures for metric spaces are fully dynamic. In addition, we show how to obtain large improvements in construction and search time for low dimensional spaces or highly selective queries. The outcome is a much more practical data structure that can be useful in a wide range of applications.},
+booktitle = {Proceedings of the 9th International Symposium on String Processing and Information Retrieval},
+pages = {254–270},
+numpages = {17},
+series = {SPIRE 2002}
+}
+
+@inproceedings{10.5555/646491.694971,
+author = {Bartolini, Ilaria and Ciaccia, Paolo and Patella, Marco},
+title = {String Matching with Metric Trees Using an Approximate Distance},
+year = {2002},
+isbn = {3540441581},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {Searching in a large data set those strings that are more similar, according to the edit distance, to a given one is a time-consuming process. In this paper we investigate the performance of metric trees, namely the M-tree, when they are extended using a cheap approximate distance function as a filter to quickly discard irrelevant strings. Using the bag distance as an approximation of the edit distance, we show an improvement in performance up to 90% with respect to the basic case. This, along with the fact that our solution is independent on both the distance used in the pre-test and on the underlying metric index, demonstrates that metric indices are a powerful solution, not only for many modern application areas, as multimedia, data mining and pattern recognition, but also for the string matching problem.},
+booktitle = {Proceedings of the 9th International Symposium on String Processing and Information Retrieval},
+pages = {271–283},
+numpages = {13},
+series = {SPIRE 2002}
+}
+
+@inproceedings{10.5555/646491.694974,
+author = {Bustos, Benjamin and Navarro, Gonzalo},
+title = {Probabilistic Proximity Searching Algorithms Based on Compact Partitions},
+year = {2002},
+isbn = {3540441581},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {The main bottleneck of the research in metric space searching is the so-called curse of dimensionality, which makes the task of searchingsome metric spaces intrinsically difficult, whatever algorithm is used. A recent trend to break this bottleneck resorts to probabilistic algorithms, where it has been shown that one can find 99% of the elements at a fraction of the cost of the exact algorithm. These algorithms are welcome in most applications because resortingto metric space searching already involves a fuzziness in the retrieval requirements. In this paper we push further in this direction by developingp robabilistic algorithms on data structures whose exact versions are the best for high dimensions. As a result, we obtain probabilistic algorithms that are better than the previous ones. We also give new insights on the problem and propose a novel view based on time-bounded searching.},
+booktitle = {Proceedings of the 9th International Symposium on String Processing and Information Retrieval},
+pages = {284–297},
+numpages = {14},
+series = {SPIRE 2002}
+}
+
+@inproceedings{10.5555/646491.694952,
+author = {Navarro, Gonzalo and Paredes, Rodrigo and Ch\'{a}vez, Edgar},
+title = {T-Spanners as a Data Structure for Metric Space Searching},
+year = {2002},
+isbn = {3540441581},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {A t-spanner, a subgraph that approximates graph distances within a precision factor  t , is a well known concept in graph theory. In this paper we use it in a novel way, namely as a data structure for searching metric spaces. The key idea is to consider the  t -spanner as an approximation of the complete graph of distances among the objects, and use it as a compact device to simulate the large matrix of distances required by successful search algorithms like AESA [Vidal 1986]. The  t -spanner provides a time-space tradeoff where full AESA is just one extreme. We show that the resulting algorithm is competitive against current approaches, e.g., 1.5 times the time cost of AESA using only 3.21% of its space requirement, in a metric space of strings; and 1.09 times the time cost of AESA using only 3.83 % of its space requirement, in a metric space of documents. We also show that  t -spanners provide better space-time tradeoffs than classical alternatives such as pivot-based indexes. Furthermore, we show that the concept of  t -spanners has potential for large improvements.},
+booktitle = {Proceedings of the 9th International Symposium on String Processing and Information Retrieval},
+pages = {298–309},
+numpages = {12},
+series = {SPIRE 2002}
+}
+
+@inproceedings{10.5555/646491.695104,
+author = {Inenaga, Shunsuke and Shinohara, Ayumi and Takeda, Masayuki and Arikawa, Setsuo},
+title = {Compact Directed Acyclic Word Graphs for a Sliding Window},
+year = {2002},
+isbn = {3540441581},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {The suffix tree is a well-known and widely-studied data structure that is highly useful for string matching. The suffix tree of a string  w  can be constructed in  O(n)  time and space, where n denotes the length of  w . Larsson achieved an efficient algorithm to maintain a suffix tree for a sliding window. It contributes to prediction by partial matching (PPM) style statistical data compression scheme. The compact directed acyclic word graph (CDAWG) is a more space-economical data structure for indexing a string. In this paper we propose a linear-time algorithm to maintain a CDAWG for a sliding window.},
+booktitle = {Proceedings of the 9th International Symposium on String Processing and Information Retrieval},
+pages = {310–324},
+numpages = {15},
+series = {SPIRE 2002}
+}
+
+@inproceedings{10.5555/646491.694972,
+author = {Navarro, Gonzalo},
+title = {Indexing Text Using the Ziv-Lempel Trie},
+year = {2002},
+isbn = {3540441581},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {Let a text of  u  characters over an alphabet of size be compressible to  n  symbols by the LZ78 or LZW algorithm. We show that it is possible to build a data structure based on the Ziv-Lempel trie that takes 4  n  log  2   n (1+  o (1)) bits of space and reports the  R  occurrences of a pattern of length  m  in worst case time  O (  m  2 log(  m  )+(  m +  R )log  n ).},
+booktitle = {Proceedings of the 9th International Symposium on String Processing and Information Retrieval},
+pages = {325–336},
+numpages = {12},
+series = {SPIRE 2002}
+}
+
