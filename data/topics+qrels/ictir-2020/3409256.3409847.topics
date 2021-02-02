@@ -1,0 +1,32 @@
+<top>
+<num> Number: 340984701
+<title>Using Sentiment Analysis for Pseudo-Relevance Feedback in Social Book Search
+
+<desc> Description:
+Book search is a difficult Information Retrieval problem due to the vocabulary mismatch between book descriptions and user queries. Pseudo-relevance feedback (PRF), also known as blind relevance feedback, is considered as one of the most effective techniques for improving retrieval performance by query reformulation [13, 16]. As such, PRF provides a way to bridge this semantic gap. Typical PRF methods assume the top retrieved documents in the initial retrieval outcome are relevant, and terms are extracted from the pseudo relevant documents based on their term/document statistics. These are then employed in the query reformulation process. However, in the context of book search, where the goal is to rank books given a query [8], the usual application of PRF [4, 18] may not be appropriate, considering that the book’s descriptions may not adequately convey the experience and emotion attached to the story line that a reader may be looking to enjoy.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340984702
+<title>Using Sentiment Analysis for Pseudo-Relevance Feedback in Social Book Search
+
+<desc> Description:
+To alleviate these problems, a number of methods have been proposed, not for query expansion, but to reduce the subset of reviews to be presented to users or for selecting which parts of the reviews to present [3, 17]. For example, [17] used Sentiment Analysis (SA) to highlight sentences with positive or negative sentiment polarity in reviews, to reduce the information overload while reading. While [3] made use of SA to identify emotionally loaded characters and entities given their proximity to emotional terms (e.g., love, hate) for the purpose of extracting interesting aspects from user comments. Those works, and others before [19], deduced that the SA can be a key factor in the mining and summarization of reviews.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340984703
+<title>Using Sentiment Analysis for Pseudo-Relevance Feedback in Social Book Search
+
+<desc> Description:
+On the other hand, using sentiment or emotion in documents to improve the effectiveness of the system has been explored in the past in other domains, such as recommender systems, where [11, 12] used the emotion in reviews to improve the effectiveness of their recommender systems, while in this work we focus on terms’ sentiment intensity rather than general emotion. Also, in the opinion retrieval domain, [7] employed a query expansion method by adding a set of extracted opinion words (e.g., good, like) to the query, extracted from the top retrieved documents in a pseudo relevance feedback method. In their suggestion, [7] served of terms frequency and word weighting techniques, but they did not use any SA methods to classify the documents terms, and they did not go beyond the opinion words extraction to explore the extraction of informative words.
+
+<narr> Narrative:
+
+</top>
