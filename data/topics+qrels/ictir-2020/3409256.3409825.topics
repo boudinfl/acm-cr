@@ -1,0 +1,109 @@
+<top>
+<num> Number: 340982501
+<title>Cluster-Based Document Retrieval with Multiple Queries
+
+<desc> Description:
+There are two main categories of cluster-based document retrieval methods [22]. The first includes methods that rank document clusters by the estimated percentage of relevant documents they contain; then, the cluster ranking is transformed to document ranking [11, 14, 17, 20–23, 27–30, 35, 43–45]. A cluster-based document retrieval method using supervised learning was the best performing run in the 2013 TREC Web track [9].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982502
+<title>Cluster-Based Document Retrieval with Multiple Queries
+
+<desc> Description:
+One of the main motivations for pursuing the cluster ranking task is the optimal cluster phenomenon [12, 20, 28, 36, 43]: if the documents most highly ranked by an initial search are clustered, some of the clusters tend to contain a high percentage of relevant documents; the cluster with the highest percentage is referred to as the optimal cluster. Positioning the constituent documents of the optimal cluster at the top of the final result list results in much higher precision at top ranks performance than that of other commonly used document-based retrieval methods [20, 28, 43]. A case in point, for a standard TREC corpus, the average precision of the top five (P@5) that results from identifying the optimal cluster can reach 0.8 in comparison to 0.46 attained with standard language model retrieval [20].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982503
+<title>Cluster-Based Document Retrieval with Multiple Queries
+
+<desc> Description:
+The second category of cluster-based document retrieval methods includes those that enrich the document representation with information induced from the clusters [19, 22, 27, 39]; e.g., in the language modeling framework, document language models can be smoothed using cluster language models [19, 22, 27]. The motivation is to reduce potential vocabulary mismatches between queries and relevant documents by enriching a document representation with information induced from similar documents.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982504
+<title>Cluster-Based Document Retrieval with Multiple Queries
+
+<desc> Description:
+As in most prior work on ad hoc document retrieval, work on the cluster hypothesis and cluster-based document retrieval was confined to the standard setting where a single query represents an information need. However, combining multiple queries which represent the same information need can dramatically improve retrieval effectiveness [4, 5]. Recently, there has been a renewed interest in the importance of the multiple-queries retrieval setting [2, 3, 6, 7, 26, 31, 42, 47], with growing evidence to its operational feasibility and importance. The feasibility of operationalizing this idea was initially explored nearly a decade ago in the Bing search engine [38]. It was recently shown that query variations automatically selected from a query log of a commercial search engine can be, on average, as effective as human curated query variations [26].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982505
+<title>Cluster-Based Document Retrieval with Multiple Queries
+
+<desc> Description:
+Using multiple queries for retrieval. The merits of applying fusion to document lists retrieved for queries representing the same information need is now well understood [3–7, 34]; reciprocal rank fusion (RRF) [10] consistently yields state-of-the-art performance in this setting [6]. Our best performing methods outperform this fusion approach. Furthermore, some of our suggested retrieval templates apply RRF before or after cluster-based re-ranking is applied to document lists retrieved for multiple queries. We note that reciprocal rank fusion is an unsupervised fusion method. One could potentially further improve the performance of our methods that utilize fusion of document lists by using supervised fusion (e.g., [38]). We leave this exploration for future work.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982506
+<title>Cluster-Based Document Retrieval with Multiple Queries
+
+<desc> Description:
+It was recently shown that the relative prediction quality posted by various query performance predictors can significantly vary when varying the effectiveness of a query used to represent an information need [47]. In a conceptually similar vein, we show that state-of-the-art cluster-based document retrieval methods can actually be outperformed by standard bag-of-words document retrieval models if highly effective queries are used to represent information needs.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982507
+<title>Cluster-Based Document Retrieval with Multiple Queries
+
+<desc> Description:
+There was work on improving search efficiency when using multiple queries by clustering queries offline [7]. In contrast, we use document clusters created at query time.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982508
+<title>Cluster-Based Document Retrieval with Multiple Queries
+
+<desc> Description:
+Cluster-based document retrieval. Work on (i) studying the cluster hypothesis [13, 15, 17, 36, 40, 44], (ii) analyzing optimal document clusters [12, 20, 28, 36, 43], and (iii) devising cluster-based document retrieval methods (e.g., [11, 17, 19–23, 28–30, 32, 33, 35, 43–45]) was confined to the standard setting of using a single query to represent an information need. We address these tasks where multiple queries representing the same information need are available.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982509
+<title>Cluster-Based Document Retrieval with Multiple Queries
+
+<desc> Description:
+Clusters of documents in lists retrieved by applying different retrieval approaches for a single query were used to fuse the lists [18]. This fusion approach can be easily instantiated from one of the retrieval templates we present for retrieval using multiple queries. While the resultant performance is effective, we present much more effective cluster-based approaches for utilizing multiple queries.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982510
+<title>Cluster-Based Document Retrieval with Multiple Queries
+
+<desc> Description:
+Cluster-based document retrieval methods can also be used to improve search results diversification [35]. Integrating fusion of ranked lists and topic modeling was also shown to be effective in improving diversification [25]. Diversification of search results is outside the scope of this paper.
+
+<narr> Narrative:
+
+</top>

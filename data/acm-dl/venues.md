@@ -12,7 +12,7 @@ This test collection contains the documents (BibTeX reference files) from the fo
     - ECIR (02-14, #921), ESAIR (09-15, #101)
     - FAT* (19-20, #143), FIRE (12-19, #91)
     - HCIR (12-13, #9), HT (87-20, #1339)
-    - ICML (04-09, #843), ICTIR (13-20, #313), ICTS (12-16, #238), IIIX (06-14, #242), IUI (93-20, #2043)
+    - ICML (04-09, #843), ICTIR (09, 11, 13-20, #313), ICTS (12-16, #238), IIIX (06-14, #242), IUI (93-20, #2043)
     - JCDL (01-20, #2183)
     - KDD (99-20, #3966)
     - NLPIR (18-19, #43)
