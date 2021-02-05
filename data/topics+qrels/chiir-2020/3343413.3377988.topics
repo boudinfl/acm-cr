@@ -1,0 +1,21 @@
+<top>
+<num> Number: 337798801
+<title> Update Delivery Mechanisms for Prospective Information Needs: A Reproducibility Study
+
+<desc> Description:
+Previous work has explored two mechanisms for delivering updates to users: In the so-called “push” approach, an update is delivered to a user’s mobile device as a push notification, designed to attract the user’s attention with an alert [14]. In the so-called “pull” approach, an update is deposited into an inbox without interrupting the user; the setup is very much like email, where the updates are examined on the user’s own initiative. [10] compared these two approaches with data drawn from a two-year study in the context of the TREC Real-Time Summarization (RTS) Tracks [11, 12]. The study involved over 50 users who evaluated live system updates on their mobile devices in situ, i.e., as they were going about their daily lives, using a mobile app that implemented either the push- or pull-based delivery mechanism described above. In their paper, [10] noted a number of interesting findings about user attention and information consumption behavior, providing concrete guidance to system designers. However, the study was marred by a few methodological shortcomings (see Section 2), which raises questions about the veracity of their conclusions.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337798802
+<title> Update Delivery Mechanisms for Prospective Information Needs: A Reproducibility Study
+
+<desc> Description:
+The context of experiments by [10] was the Real-Time Summarization (RTS) Tracks at TREC 2016 [12] and TREC 2017 [11] (RTS16 and RTS17, for short), whose setup is shown in Figure 1. Twitter was used as the source of the live document stream, which participating systems “listened” to during a live evaluation period, sending their updates (i.e., tweets identified as relevant) to an evaluation broker. After deduplicating, the evaluation broker then delivered the updates to a cohort of users who subscribed to interest profiles (i.e., topics), received the updates, and provided relevance judgments in situ on their mobile devices, i.e., they were going about their daily business and were free to ignore or engage with the updates as they wished. This “living labs” setup [7, 13, 15, 17] attempts to faithfully mimic the real-world deployment of real-time summarization systems. These evaluations were framed as user studies (with appropriate ethics approval), where university students were recruited as paid human subjects to assess the delivered notifications.
+
+<narr> Narrative:
+
+</top>

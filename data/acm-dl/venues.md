@@ -6,7 +6,7 @@ This test collection contains the documents (BibTeX reference files) from the fo
     - ADCS (12-19, #115), AIRS (08-09, #120), AKBC (12-13, #44), AND (08-10, #48), ASONAM (09-19, #2033), AVI (94-20, #1108)
     - BooksOnline (08-12, #57)
     - CERI (16-18, #41), CHI/CHI-EA (82-20, #19446), CHIIR (16-20, #374), CIKM (93-20, #5497),
-      CIR (11, #7), CompSci (13, #8), Compute (08-17, #242), CSCW (86-19, #2726)
+      CIR (11, #7), CLEF (00-15), CompSci (13, #8), Compute (08-17, #242), CSCW (86-19, #2726)
     - DL (96-00, #244), DocEng (01-20, #971), DTMBIO (08-15, #151), 
       DLRS (16-18, #24)
     - ECIR (02-14, #921), ESAIR (09-15, #101)
@@ -21,7 +21,7 @@ This test collection contains the documents (BibTeX reference files) from the fo
     - PervasiveHealth (16, #60), PODS (82-20, #1369)
     - RecSys (07-20, #1279)
     - SAICSIT (02-19, #722), SIGDOC (82-20, #1492) SIGIR (78-20, #5251), SIGMOD (75-20, #5378), SPIRE (99-15, #497)
-    - UAI (09, 14, #170), UIST (88-19, #2076), UMAP (12-20, #728)
+    - UAI (09, 14, #170), UbiComp (01-20), UIST (88-19, #2076), UMAP (12-20, #728)
     - VLDB (00-07, #1016), PVLDB (08-20, #2717)
     - WI (03-19, #1127), WIDM (99-19, #214), WIMS (11-20, #461), WSDM (08-20, #1123), WWW (01-20, #6823)
     - YLRC (10, #7)
