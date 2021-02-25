@@ -50,6 +50,10 @@ we selected open-access (for data sharing reasons) papers from conferences and
 manually extracted the citation contexts and cited references (relevant
 documents).
 
+
+
+
+
 Papers (pdf versions) used for generating queries are in `data/topics+qrels`
 directory. Papers are grouped by venue, and three files are created for each
 paper, e.g.:
@@ -58,8 +62,7 @@ paper, e.g.:
 3397271.3401032.pdf    # paper id (last part of docid)
 
 3397271.3401032.docids # manually curated list of docid (dois) for cited
-                       # references. The mapping methogology is described
-                       # [here](data/topics+qrels/mapping-references-to-dois.md)
+                       # references.
                       
 3397271.3401032.topics # queries are natural paragraphs from papers where most
                        # citations are present in the collection. Manual
@@ -115,6 +118,7 @@ Below is the list of papers used for generating queries.
     ├── 3409256.3409847.pdf (*)
 ├── wsdm-2020 (5 papers)
     ├── 3336191.3371775.pdf
+    ├── 3336191.3371785.pdf (*n)
     ├── 3336191.3371814.pdf
     ├── 3336191.3371820.pdf
     ├── 3336191.3371844.pdf
