@@ -50,9 +50,15 @@ we selected open-access (for data sharing reasons) papers from conferences and
 manually extracted the citation contexts and cited references (relevant
 documents).
 
+Cited references are manually mapped to DOIs by following the ordered rules:
 
-
-
+```
+  1. DOI from the ACM DL
+  2. DOI from another publisher (including ACL-anthology DOIs)
+  3. arxiv/pubmed/acl-anthology url
+  4. pdf url
+  5. None
+```
 
 Papers (pdf versions) used for generating queries are in `data/topics+qrels`
 directory. Papers are grouped by venue, and three files are created for each
