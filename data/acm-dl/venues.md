@@ -40,6 +40,7 @@ This test collection contains the documents (BibTeX reference files) from the fo
       (14-20, #1237)
     - Proceedings of the ACM on Human-Computer Interaction (PACMHCI)
       (17-20, #659)
+    - ACM Transactions on Interactive Intelligent Systems (tiis) (11-20, #250)
 - Journals (non ACM)
     - User Modeling and User-Adapted Interaction (klu-user) (97-19, #362)
     - International Journal of Human-Computer Studies (ijhc) (94-20, #1872)

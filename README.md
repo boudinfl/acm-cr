@@ -5,36 +5,10 @@ citation recommendation constructed for running document retrieval experiments.
 
 ## Requirements
 
-### Install Python modules 
+### Installing required Python modules 
 
 ```
 pip install -r requirements.txt 
-```
-
-### Install anserini
-
-Here, we use the open-source information retrieval toolkit 
-[anserini](http://anserini.io/) which is built on 
-[Lucene](https://lucene.apache.org/).
-Below are the installation steps for a mac computer (tested on OSX 10.14) based
-on their [colab demo](https://colab.research.google.com/drive/1s44ylhEkXDzqNgkJSyXDYetGIxO9TWZn).
-
-
-```bash
-# install maven
-brew cask install adoptopenjdk
-brew install maven
-
-# cloning / installing anserini
-git clone https://github.com/castorini/anserini.git --recurse-submodules
-cd anserini/
-# for 10.14 issues -> changing jacoco from 0.8.2 to 0.8.3 in pom.xml to build correctly
-# for 10.13 issues -> https://github.com/castorini/anserini/issues/648
-mvn clean package appassembler:assemble
-
-# compile evaluation tools and other scripts
-cd tools/eval && tar xvfz trec_eval.9.0.4.tar.gz && cd trec_eval.9.0.4 && make && cd ../../..
-cd tools/eval/ndeval && make && cd ../../..
 ```
 
 ## Test collection
@@ -83,9 +57,9 @@ paper, e.g.:
 ```
 3397271.3401032.pdf    # paper id (last part of docid)
 
-3397271.3401032.docids # manually curated list of docid for cited references
-                       # references starting with - symbol are not linked to
-                       # documents within the collection (or not found...)
+3397271.3401032.docids # manually curated list of docid (dois) for cited
+                       # references. The mapping methogology is described
+                       # [here](data/topics+qrels/mapping-references-to-dois.md)
                       
 3397271.3401032.topics # queries are natural paragraphs from papers where most
                        # citations are present in the collection. Manual
@@ -154,6 +128,33 @@ Below is the list of papers used for generating queries.
 ```
 
 ## Document retrieval
+
+### Installing anserini
+
+Here, we use the open-source information retrieval toolkit 
+[anserini](http://anserini.io/) which is built on 
+[Lucene](https://lucene.apache.org/).
+Below are the installation steps for a mac computer (tested on OSX 10.14) based
+on their [colab demo](https://colab.research.google.com/drive/1s44ylhEkXDzqNgkJSyXDYetGIxO9TWZn).
+
+```bash
+# install maven
+brew cask install adoptopenjdk
+brew install maven
+
+# cloning / installing anserini
+git clone https://github.com/castorini/anserini.git --recurse-submodules
+cd anserini/
+# for 10.14 issues -> changing jacoco from 0.8.2 to 0.8.3 in pom.xml to build correctly
+# for 10.13 issues -> https://github.com/castorini/anserini/issues/648
+mvn clean package appassembler:assemble
+
+# compile evaluation tools and other scripts
+cd tools/eval && tar xvfz trec_eval.9.0.4.tar.gz && cd trec_eval.9.0.4 && make && cd ../../..
+cd tools/eval/ndeval && make && cd ../../..
+```
+
+### Benchmarking IR models
 
 ```
 ./src/0_create_data.sh
