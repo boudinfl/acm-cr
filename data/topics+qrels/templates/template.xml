@@ -1,0 +1,41 @@
+<doc>
+	<doi></doi>
+	<title></title>
+	<abstract></abstract>
+	<contexts>
+		<context id="01" section="introduction">
+			<s></s>
+		</context>
+		<context id="02" section="">
+			<s></s>
+		</context>
+		<context id="03" section="">
+			<s></s>
+		</context>
+		<context id="04" section="">
+			<s></s>
+		</context>
+		<context id="05" section="">
+			<s></s>
+		</context>
+		<context id="06" section="">
+			<s></s>
+		</context>
+		<context id="07" section="related work">
+			<s></s>
+		</context>
+		<context id="08" section="">
+			<s></s>
+		</context>
+		<context id="09" section="">
+			<s></s>
+		</context>
+		<context id="10" section="">
+			<s anonymised="true"></s>
+		</context>
+	</contexts>
+	<references>
+		<reference id="1"></reference>
+		<reference id="2"></reference>
+	</references>
+</doc>

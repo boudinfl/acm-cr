@@ -80,8 +80,49 @@
 			<s cites="22,34">In natural language domain, language-specific and across-language attention networks based on linguistic hierarchy [22, 34] such as words and sentences are proposed for document classification tasks.</s>
 			<s>Another form of attention in NLP is self-attention.</s>
 			<s cites="29">Researchers from Google design Transformer [29] based on multi-head self-attention in which tokens in a sentence attend to other tokens within a same sentence to learn the compound sentence semantics.</s>
-			<s cites="9">Using the strong learning power of Transformer, BERT [6], built by stacking a number of bi-directional Transformer layers, achieves state-of-the-art performance on 11 major NLP tasks.</s>
+			<s cites="6">Using the strong learning power of Transformer, BERT [6], built by stacking a number of bi-directional Transformer layers, achieves state-of-the-art performance on 11 major NLP tasks.</s>
 			<s>The success of BERT shows the outstanding feature interaction power of Transformer.</s>
 		</context>
 	</contexts>
+	<references>
+		<reference id="1">https://arxiv.org/abs/1409.0473</reference>
+		<reference id="2">https://arxiv.org/abs/1505.03014</reference>
+		<reference id="3">10.5555/3157382.3157473</reference>
+		<reference id="4">10.1145/2988450.2988454</reference>
+		<reference id="5">10.5555/3157382.3157490</reference>
+		<reference id="6">10.18653/v1/N19-1423</reference>
+		<reference id="7">https://arxiv.org/abs/1704.05194</reference>
+		<reference id="8">10.1109/DSAA.2018.00018</reference>
+		<reference id="9">10.5555/3172077.3172127</reference>
+		<reference id="10">10.1145/2827872</reference>
+		<reference id="11">10.1109/CVPR.2016.90</reference>
+		<reference id="12">10.1145/3077136.3080777</reference>
+		<reference id="13">10.1145/2648584.2648589</reference>
+		<reference id="14">10.1109/CVPR.2018.00915</reference>
+		<reference id="15">https://arxiv.org/abs/1802.04712</reference>
+		<reference id="16">10.1145/2959100.2959134</reference>
+		<reference id="17">https://arxiv.org/abs/1412.6980</reference>
+		<reference id="18">10.1145/2835776.2835781</reference>
+		<reference id="19">10.1145/3219819.3220023</reference>
+		<reference id="20">https://pubmed.ncbi.nlm.nih.gov/23920845/</reference>
+		<reference id="21">10.5555/3157096.3157129</reference>
+		<reference id="22">https://www.aclweb.org/anthology/I17-1102</reference>
+		<reference id="23">10.1109/ICDM.2016.0151</reference>
+		<reference id="24">10.1109/ICDM.2010.127</reference>
+		<reference id="25">10.1145/1242572.1242643</reference>
+		<reference id="26">10.1145/2939672.2939704</reference>
+		<reference id="27">10.1145/3357384.3357925</reference>
+		<reference id="28">10.18653/v1/W18-6449</reference>
+		<reference id="29">10.5555/3295222.3295349</reference>
+		<reference id="30">10.1145/3178876.3186175</reference>
+		<reference id="31">10.1145/3124749.3124754</reference>
+		<reference id="32">10.5555/3172077.3172324</reference>
+		<reference id="33">10.1109/CVPR.2015.7298685</reference>
+		<reference id="34">10.18653/v1/N16-1174</reference>
+		<reference id="35">10.5555/3304222.3304315</reference>
+		<reference id="36">10.1145/3178876.3185994</reference>
+		<reference id="37">10.1609/aaai.v33i01.33015941</reference>
+		<reference id="38">10.1145/3219819.3219823</reference>
+		<reference id="39">http://ceur-ws.org/Vol-1606/paper02.pdf</reference>
+	</references>
 </doc>

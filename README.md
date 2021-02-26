@@ -91,7 +91,7 @@ Below is the list of papers used for generating queries.
 
 ```
 ├── sigir-2020 (20 papers)
-    ├── 3397271.3401032.pdf
+    ├── 3397271.3401032.pdf (n)
     ├── 3397271.3401051.pdf (*)
     ├── 3397271.3401052.pdf
     ├── 3397271.3401057.pdf
