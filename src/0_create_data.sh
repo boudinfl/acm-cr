@@ -14,7 +14,8 @@ if [[ ! -f "data/docs/t+a/acm-dl.trec.gz" ]]
         python3 src/bib_to_trec.py \
             --directory data/acm-dl/ \
             --output data/docs/t+a/acm-dl.trec.gz \
-            --blacklist data/topics+qrels/blacklist.txt
+            --blacklist data/topics+qrels/blacklist.txt \
+            --collection data/topics+qrels/collection.txt
 fi
 
 # # produce T+A+K documents

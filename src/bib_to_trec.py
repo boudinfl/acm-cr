@@ -30,6 +30,11 @@ parser.add_argument('--blacklist',
                     type=str,
                     default=None)
 
+parser.add_argument('--collection',
+                    help='path to a doc_ids collection.',
+                    type=str,
+                    default=None)
+
 args = parser.parse_args()
 
 # loading keyphrases if provided
@@ -74,6 +79,7 @@ for filename in glob.iglob(args.directory+"/**", recursive=True):
 
             # dd url
             #url = "https://dl.acm.org/doi/pdf/"+key
+        #break
 
 print('{} T+A+K, {} T+A, {} T over {} entries'.format(nb_entries_with_t_a_k, nb_entries_with_t_a, nb_entries_with_t, len(collection)))
 
@@ -90,6 +96,13 @@ with gzip.open(args.output, 'wt') as o:
             kps = [k[0] for k in kps]
             o.write("<HEAD>{}</HEAD>\n".format(' // '.join(kps)))
         o.write("</DOC>\n\n")
+
+# writing doc_ids if necessary
+if args.collection:
+    with open(args.collection, "wt") as o:
+        o.write('\n'.join(collection.keys()))
+
+
 
 
 
