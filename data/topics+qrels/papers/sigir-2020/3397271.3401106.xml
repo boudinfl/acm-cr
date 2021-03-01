@@ -1,0 +1,143 @@
+<doc>
+	<doi>10.1145/3397271.3401106</doi>
+	<title>The Cortical Activity of Graded Relevance</title>
+	<abstract>Relevance is an essential concept in Information Retrieval (IR). Recent studies using brain imaging have significantly contributed towards the understanding of this concept, but only as a binary notion, i.e. a document being judged as relevant or non-relevant. While such a binary division is prevalent in IR, seminal theories have proposed relevance as a graded variable; i.e. having different degrees. In this paper, we aim to investigate the brain activity associated with relevance when it is treated as a graded concept. Twenty-five participants provided graded relevance judgements in the context of a Question Answering (Q/A) Task, during assessment with an electroencephalogram (EEG). Our findings show that significant differences in event-related potentials (ERPs) were observed in response to information segments processed in the context of high-relevance, low-relevance and no-relevance, supporting the concept of graded relevance. We speculate that differences in attentional engagement, semantic mismatch (between the question and answer) and memory processing underpin the electrophysiological responses to the graded relevance judgements. We believe our conclusions constitute an important step in unravelling the nature of graded relevance and knowledge of the electrophysiological modulation to each grade of relevance will help to improve the design and evaluation of IR systems.</abstract>
+	<contexts>
+		<context id="01" section="introduction">
+			<s cites="45,57,59,66">Relevance is a key concept in Information Science and Retrieval [45, 57, 59, 66].</s>
+			<s cites="12,45,57,11,20,46,60,44">While relevance is considered to be multidimensional [12, 45, 57], dynamic and complex [11, 20, 46, 60], there are still debates around the granularity level of relevance judgements that should be collected [44].</s>
+			<s>To answer this question, it is crucial to understand what each grade of relevance actually means.</s>
+			<s cites="40,55,2,15,48">The value of evaluating information based on graded relevance has begun to receive attention in recent years both from system [40, 55] and user [2, 15, 48] point of views.</s>
+			<s cites="29,71">This is particularly important since the granularity of relevance judgements in previous studies have been based on investigating this phenomenon indirectly, via some sort of mediator [29, 71].</s>
+			<s cites="55">This, therefore, limits the understanding of how searchers perceive different degrees of information relevance [55].</s>
+			<s>This paper aims to investigate the neural underpinnings of graded relevance directly.</s>
+		</context>
+		<context id="02" section="introduction">
+			<s cites="48,8,57">Relevance is also known to be subjective and difficult to quantify [48] since it depends on a searcher’s perception of information relating to a specific Information Need (IN) at a certain point in time [8, 57].</s>
+			<s cites="7,27,52,2">However, given the semantic gap between a searcher’s IN and their formulated queries [7, 27, 52], IR systems have employed various techniques to capture the subjective aspect of relevance [2] to improve the effectiveness of retrieved results.</s>
+			<s cites="38,24,36,47">Examples of such techniques are explicit [38], implicit (e.g. [24, 36]) and physiological [47] feedback.</s>
+			<s cites="2,15,16,22,25,28,33,37,48,65">More recently, researchers have shown the possibility of capturing the neural processes associated with relevance, using brain imaging techniques [2, 15, 16, 22, 25, 28, 33, 37, 48, 65].</s>
+			<s cites="15,16,65">These studies have either investigated relevance in the context of word associations (i.e. relevance of a word with respect to another) [15, 16, 65] without subjects experiencing any IN; or investigated relevance in the context of Information Retrieval (IR) when IN has been introduced to subjects.</s>
+			<s cites="2,19,22,24,25,28,37,48,49">In the latter scenario, relevance was investigated only as a binary notion [2, 19, 22, 24, 25, 28, 37, 48, 49] leaving the graded nature of it unexplored.</s>
+			<s>In this paper, we aim to investigate three fundamental research questions:</s>
+		</context>
+		<context id="03" section="related work">
+			<s cites="45,57,58,59">Relevance is the fundamental concept in IR [45, 57–59].</s>
+			<s cites="8,57">It plays a crucial role in the user-system interaction since it is a substantial indicator of system retrieval performance [8, 57].</s>
+			<s>Despite significant attention dedicated to examining this concept, relevance is still not fully understood, and it is a subject of many ongoing scientific debates.</s>
+			<s cites="29,71,35,40">Past research has investigated the concept of relevance at different granularity levels from both the user [29, 71] and system [35, 40] perspective.</s>
+			<s cites="34,55">Within the system side, graded relevance (in comparison to the binary one) has been shown to improve ranking functions [34, 55].</s>
+			<s cites="71,41">Within the user side, recent research supports the idea of categorical thinking [71], suggesting that users divide retrieved results into 3-5 categories based on relevance [41].</s>
+			<s>However, levels of granularity were decided based on a self-report mechanism, without clear evidence that those levels have different physical manifestations in the brain.</s>
+			<s>In this paper, we aim to provide evidence for different grades of relevance from a neuroscience perspective.</s>
+		</context>
+		<context id="04" section="related work">
+			<s>Given the importance of the user side of relevance, IR systems have been employing mechanisms and techniques to capture this phenomenon, namely explicit and implicit feedback.</s>
+			<s cites="47,67">Explicit feedback is easy to use, however, difficult to obtain due to the cognitive burden associated with it [47], as the user is required to explicitly state whether presented content is subjectively perceived as relevant or not [67].</s>
+			<s>Implicit feedback is an unobtrusive data collection method.</s>
+			<s cites="36,24,4,47">Popular techniques used to measure implicit relevance feedback are, for example, dwell time (i.e. [36]), eye-tracking and pupillometry [24], and/or the measurements of affective [4, 47] and physiological signals [47].</s>
+			<s cites="2">However, implicit feedback is often found to be noisy, which decreases its accuracy [2].</s>
+			<s>The findings of novel studies employing neuroscience have shown that brain imaging is an effective method to capture relevance judgement in-real time.</s>
+		</context>
+		<context id="05" section="related work">
+			<s>Recent research has begun to apply brain imaging methods to study aspects of the IR process from a neuroscience perspective.</s>
+			<s cites="50,51">One particular area of emphasis for this research has been to examine the IN process [50, 51].</s>
+			<s cites="50">In addition, it has been found that prediction of the IN state experienced by a user is possible using brain signals [50].</s>
+			<s cites="28,49,70,33">Apart from IN, recent studies have employed brain imaging techniques to gain a better understanding of other parts of the information seeking and retrieval process, such as query formulation [28], search [49, 70] and relevance (e.g. [33]).</s>
+		</context>
+		<context id="06" section="related work">
+			<s>Recent research using a neuroscience approach to investigate relevance might be categorised in two ways based on the context within which the relevance was measured.</s>
+			<s>The first line of brain-imaging research has position relevance within the IR task.</s>
+			<s cites="48" anonymised="true">For instance, [48] employed functional magnetic resonance imaging (fMRI), to localise differences in brain activity in cortical regions during the processing of relevant vs non-relevant images.</s>
+			<s cites="49,51">The research was able to identify regions engaged in the relevance judgement processing and the increased activation of these regions for relevant items was related to visuospatial working memory [49, 51].</s>
+		</context>
+		<context id="07" section="related work">
+			<s cites="19">Additionally, examining the neural activity underlying post-relevance judgement revealed that there were differences in the processing of non-relevant and relevant words, that persisted for approximately 260 to 320 ms for relevant words and 500 to 530ms for an irrelevant word [19].</s>
+		</context>
+		<context id="08" section="related work">
+			<s cites="25,22,37,2">Relevance has been inferred using EEG [25] or in combination with pupillometry or/and eye-tracking devices [22] within the context of the IR task, not only for textual stimuli but also for videos [37] and images [2].</s>
+			<s cites="2" anonymised="true">For instance, [2] examined the processing of relevant vs non-relevant images, finding the most significant differences to occur between 500 – 800ms.</s>
+			<s cites="37" anonymised="true">[37] explored the ERPs associated with topical relevance of video skims and classified the data based on two specific ERP components (N400 and P600), which have been shown to be indicators of relevant and non-relevant judgements.</s>
+			<s cites="28">Moreover, recent findings have shown that relevance can be predicted in real-time from EEG brain signals and eye movements while the user engages with the system and IR task [28].</s>
+		</context>
+		<context id="09" section="related work">
+			<s cites="15,16,65">Another line of research has examined relevance in the context of word associations, employing EEG in isolation, or in combination with eye gaze [15, 16, 65].</s>
+			<s>In these scenarios, participants did not experience IN, but they engaged in judging word association to the topic.</s>
+			<s cites="16">The findings of these studies have shown that brain signals differ when subjects process relevant vs. non-relevant words across time [16].</s>
+			<s cites="15" anonymised="true">Later, [15] introduced a brain-relevance paradigm enabling recommendation of information to users without any explicit user interaction, based on EEG signals alone evoked by users’ engagement with the textual content.</s>
+		</context>
+	</contexts>
+	<references>
+		<reference id="1">10.3758/s13414-012-0357-1</reference>
+		<reference id="2">10.1145/2766462.2767811</reference>
+		<reference id="3">10.1186/s12984-015-0077-6</reference>
+		<reference id="4">10.1145/1390334.1390403</reference>
+		<reference id="5">10.1111/j.1469-8986.2010.01151.x</reference>
+		<reference id="6">10.1016/j.brainres.2007.05.034</reference>
+		<reference id="7">10.1108/eb026726</reference>
+		<reference id="8">10.1002/asi.10286</reference>
+		<reference id="9">10.1038/s41598-018-37786-y</reference>
+		<reference id="10">10.1111/psyp.12001</reference>
+		<reference id="11">https://www.researchwithrutgers.com/en/publications/characteristics-of-texts-affecting-relevance-judgments</reference>
+		<reference id="12">10.1016/S0306-4573(99)00072-2</reference>
+		<reference id="13">10.1016/j.brainresrev.2007.10.001</reference>
+		<reference id="14">10.1037/a0023885</reference>
+		<reference id="15">10.1038/srep38580</reference>
+		<reference id="16">10.1145/2600428.2609594</reference>
+		<reference id="17">10.1111/j.1469-8986.1991.tb01990.x</reference>
+		<reference id="18">10.1111/desc.12751</reference>
+		<reference id="19">10.3389/fnsys.2013.00039</reference>
+		<reference id="20">10.5555/186141.186143</reference>
+		<reference id="21">10.7916/D8R21CPF</reference>
+		<reference id="22">10.1088/1741-2552/aa9999</reference>
+		<reference id="23">10.1016/S0022-1031(03)00092-1</reference>
+		<reference id="24">10.1145/2637002.2637011</reference>
+		<reference id="25">10.5555/3204593.3204595</reference>
+		<reference id="26">10.3389/fnhum.2014.00441</reference>
+		<reference id="27">10.5555/1711713.1711733</reference>
+		<reference id="28">10.1002/asi.24161</reference>
+		<reference id="29">10.1145/3020165.3020176</reference>
+		<reference id="30">None</reference>
+		<reference id="31">10.1016/0013-4694(78)90027-5</reference>
+		<reference id="32">10.1145/3331184.3331243</reference>
+		<reference id="33">10.1016/j.neuroimage.2014.12.079</reference>
+		<reference id="34">10.5555/1073691.1710500</reference>
+		<reference id="35">10.1002/asi.10137</reference>
+		<reference id="36">10.1145/1008992.1009057</reference>
+		<reference id="37">10.1002/asi.24179</reference>
+		<reference id="38">10.1145/238386.238487</reference>
+		<reference id="39">10.1016/j.brainres.2006.12.063</reference>
+		<reference id="40">10.1145/2645710.2645759</reference>
+		<reference id="41">10.1002/asi.24035</reference>
+		<reference id="42">http://library.mpib-berlin.mpg.de/toc/z2008_2218.pdf</reference>
+		<reference id="43">https://psycnet.apa.org/record/2013-01016-000</reference>
+		<reference id="44">https://www.ischool.utexas.edu/~ml/papers/mcdonnell-hcomp16.pdf</reference>
+		<reference id="45">10.5555/262192.262203</reference>
+		<reference id="46">10.1016/S0953-5438(98)00012-5</reference>
+		<reference id="47">10.1145/2484028.2484074</reference>
+		<reference id="48">10.1007/978-3-642-36973-5_2</reference>
+		<reference id="49">10.1145/3178876.3186080</reference>
+		<reference id="50">10.1145/3308558.3313671</reference>
+		<reference id="51">10.1145/2911451.2911534</reference>
+		<reference id="52">https://cyberleninka.org/article/n/1119148.pdf</reference>
+		<reference id="53">10.1016/j.clinph.2007.04.019</reference>
+		<reference id="54">10.1080/17470919.2016.1195772</reference>
+		<reference id="55">10.1145/1835449.1835550</reference>
+		<reference id="56">10.1016/0013-4694(78)90010-X</reference>
+		<reference id="57">10.5555/1315930.1315946</reference>
+		<reference id="58">10.2200/S00723ED1V01Y201607ICR050</reference>
+		<reference id="59">https://eric.ed.gov/?id=ED304158</reference>
+		<reference id="60">10.1016/0306-4573(90)90050-C</reference>
+		<reference id="61">10.1111/1469-8986.3960851</reference>
+		<reference id="62">10.1016/0013-4694(77)90146-8</reference>
+		<reference id="63">10.1016/j.visres.2008.01.005</reference>
+		<reference id="64">10.1111/j.1469-8986.1986.tb00622.x</reference>
+		<reference id="65">10.1088/1741-2552/aa7590</reference>
+		<reference id="66">10.1016/j.ipm.2017.02.010</reference>
+		<reference id="67">10.5555/645319.757469</reference>
+		<reference id="68">10.1371/journal.pone.0104701</reference>
+		<reference id="69">10.1038/s41598-019-45880-y</reference>
+		<reference id="70">10.1002/col.22260</reference>
+		<reference id="71">10.1002/pra2.2015.145052010067</reference>
+	</references>
+</doc>

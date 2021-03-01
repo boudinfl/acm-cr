@@ -1,0 +1,164 @@
+<doc>
+	<doi>10.1145/3397271.3401061</doi>
+	<title>Guided Transformer: Leveraging Multiple External Sources for Representation Learning in Conversational Search</title>
+	<abstract>Asking clarifying questions in response to ambiguous or faceted queries has been recognized as a useful technique for various information retrieval systems, especially conversational search systems with limited bandwidth interfaces. Analyzing and generating clarifying questions have been studied recently but the accurate utilization of user responses to clarifying questions has been relatively less explored. In this paper, we enrich the representations learned by Transformer networks using a novel attention mechanism from external information sources that weights each term in the conversation. We evaluate this Guided Transformer model in a conversational search scenario that includes clarifying questions. In our experiments, we use two separate external sources, including the top retrieved documents and a set of different possible clarifying questions for the query. We implement the proposed representation learning model for two downstream tasks in conversational search; document retrieval and next clarifying question selection. Our experiments use a public dataset for search clarification and demonstrate significant improvements compared to competitive baselines.</abstract>
+	<contexts>
+		<context id="01" section="introduction">
+			<s>Conversational search has recently attracted much attention as an emerging information retrieval (IR) field.</s>
+			<s>The ultimate goal of conversational search systems is to address user information needs through multi-turn natural language conversations.</s><s>This goal is partially addressed in previous work with several simplifying assumptions.</s>
+			<s cites="16">For example, the TREC Conversational Assistance Track (CAsT) in 2019 has focused on multi-turn conversational search, in which users submit multiple related search queries [16].</s>
+			<s cites="7,40,44">Similarly, conversational question answering based on a set of related questions about a given passage has been explored in the natural language processing (NLP) literature [7, 40, 44].</s>
+			<s>However, the existing settings are still far from the ideal mixed-initiative scenario, in which both user and system can take any permitted action at any time to perform a natural conversation.</s>
+			<s>In other words, most existing work in conversational search assumes that users always ask a query and the system only responds with an answer or a ranked list of documents.</s>
+		</context>
+		<context id="02" section="introduction">
+			<s cites="59">Recent conversational information seeking platforms, such as Macaw [59], provide support for multi-turn, multi-modal, and mixed-initiative interactions.</s>
+			<s cites="1,61,8,46,64">There have been recent efforts to go beyond the “user asks, system responds” paradigm by asking clarifying questions from the users, including offline evaluation of search clarification [1], clarifying question generation for open-domain search queries [61], and preference elicitation in conversational recommender systems [8, 46, 64].</s>
+			<s>Past research in the area of search clarification has shown significant promise in asking clarifying questions.</s>
+			<s>However, utilizing user responses to clarifying questions to improve the search performance has been relatively unstudied.</s>
+			<s>In this paper, we propose a model that learns an accurate representation for a given user-system conversation.</s>
+			<s>We focus on the conversations in which the user submits a query, and due to uncertainty about the query intent or the search quality, the system asks one or more clarifying questions to reveal the actual information need of the user.</s>
+			<s>This is one of the many necessary steps that should be taken to achieve an ideal mixed-initiative conversational search system.</s>
+		</context>
+		<context id="03" section="introduction">
+			<s cites="2,14,27">Motivated by previous research on improving query representation by employing other information sources, such as the top retrieved documents in pseudo-relevance feedback [2, 14, 27], we propose a neural network architecture that uses multiple information sources for learning accurate representations of user-system conversations.</s>
+			<s cites="51">We extend the Transformer architecture [51] by proposing a novel attention mechanism.</s>
+			<s>In fact, the sequence transformation in Transformer networks are guided by multiple external information sources in order to learn more accurate representations.</s>
+			<s>Therefore, we call our network architecture Guided Transformer or GT.</s>
+			<s>We train an end to end network based on the proposed architecture for two downstream target tasks: document retrieval and next clarifying question selection.</s>
+			<s>In the first target task, the model takes a user-system conversation and scores documents based on their relevance to the user information need.</s>
+			<s>On the other hand, the second task focuses on selecting the next clarifying question that would lead to higher search quality.</s>
+			<s>For each target task, we also introduce an auxiliary task and train the model using a multi-task loss function.</s>
+			<s>The auxiliary task is identifying the actual query intent description for a given user-system conversation.</s>
+			<s cites="18">For text representation, our model takes advantage of BERT [18], a state-of-the-art text representation model based on the Transformer architecture, modified by adding a “task embedding” vector to the BERT input to adjust the model for the multi-task setting.</s>
+		</context>
+		<context id="04" section="introduction">
+			<s>In our experiments, we use two sets of information sources, the top retrieval documents (similar to pseudo-relevance feedback) and the pool of different clarifying questions for the submitted search query.</s>
+			<s>The rational is that these sources may contain some information that helps the system better represent the user information needs.</s>
+			<s cites="1" anonymised="true">We evaluate our models using the public Qulac dataset and follow the offline evaluation methodology recently proposed by [1].</s>
+			<s> ur experiments demonstrate that the proposed model achieves over 29% relative improvement in terms of MRR compared to competitive baselines, including state-of-the-art pseudo-relevance feedback models and BERT, for the document retrieval task.</s>
+			<s>We similarly observe statistically significant improvements in the next clarifying question selection task compared to strong baselines, including learning to rank models that incorporate both hand-crafted and neural features, including BERT scores.</s>
+		</context>
+		<context id="05" section="related work">
+			<s cites="11,15,33">Although conversational search has become an emerging topic in the IR community in recent years, it has roots in early work on interactive information retrieval, such as [11, 15, 33].</s>
+			<s cites="11" anonymised="true">For instance, [11] extracted how users can have an effective interaction with a merit information seeking system.</s>
+			<s cites="15" anonymised="true">Later on, [15] introduced I3R, the first IR model with a user modeling component for interactive IR tasks.</s>
+			<s cites="11,52">Conversational system research in the form of natural language interaction started in the form of human-human interactions [11] or human-system interactions with rule-based models [52].</s>
+			<s cites="3,22">Some early work also focus on spoken conversations in a specific domain, such as travel [3, 22].</s>
+		</context>
+		<context id="06" section="related work">
+			<s cites="42" anonymised="true">More recently, [42] introduced a theoretical framework and a set of potentially desirable features for a conversational information retrieval system.</s>
+			<s cites="50" anonymised="true">[50] studied real user conversations and provided suggestions for building conversational systems based on human conversations.</s>
+			<s cites="64,41,58,57">The recent improvements in neural models has made it possible to train conversation models for different applications, such as recommendation [64], user intent prediction [41], next user query prediction [58], and response ranking [57].</s>
+		</context>
+		<context id="07" section="related work">
+			<s cites="44">There is also a line of research in the NLP community with a focus on conversational question answering [44].</s>
+			<s>The task is to answer a question from a passage given a conversation history.</s>
+			<s>In this paper, we focus on the conversations in which the system ask a clarifying question from the user, which is fundamentally different from the conversational QA literature.</s>
+		</context>
+		<context id="08" section="related work">
+			<s>Asking clarifying questions has attracted much attention in different domains and applications.</s>
+			<s cites="6" anonymised="true">To name a few, [6] studied user intents, and clarification in community question answering (CQA) websites.</s>
+			<s cites="49" anonymised="true">[49] also focused on detecting ambiguous CQA posts, which need further follow-up and clarification.</s>
+			<s>There is other line of research related to machine reading comprehension (MRC) task, that given a passage, generating questions which point out missing information in the passage.</s>
+			<s cites="43" anonymised="true">[43] proposed a reinforcement learning solution for clarifying question generation in a closed-domain setting.</s>
+			<s>We highlight that most of the techniques in this area assume that a passage is given, and the model should point out the missing information.</s>
+			<s>Hence, it is completely different form clarifying the user information needs in IR.</s>
+			<s cites="5,17,29,31,47">Clarification has also studied in dialog systems and chat-bots [5, 17, 29], computer vision [31], and speech recognition [47].</s>
+			<s>However, since non of the above-mentioned systems are information seeking, their challenges are fundamentally different from challenges that the IR community faces in this area.</s>
+		</context>
+		<context id="09" section="related work">
+			<s cites="24" anonymised="true">In the realm of IR, the user study done by [24] showed that clarifying questions do not cause user dissatisfaction, and in fact, they sometimes increase the satisfaction.</s>
+			<s cites="10" anonymised="true">[10] studied the task of clarification for entity disambiguation.</s>
+			<s>However, the clarification format in their work was restricted to a “did you mean A or B?” template, which makes it non-practical for many open-domain search queries.</s>
+			<s cites="1" anonymised="true">More recently, [1] introduced an offline evaluation methodology and a benchmark for studying the task of clarification in information seeking conversational systems.</s>
+			<s>They have also introduced a method for selecting the next clarifying question which is used in this paper as a baseline.</s>
+			<s cites="61" anonymised="true">[61] proposed an approach based on weak supervision to generate clarifying questions for open-domain search queries.</s>
+			<s cites="62">User interaction with clarifying questions has been later analyzed in [62].</s>
+		</context>
+		<context id="10" section="related work">
+			<s>A common application of clarification is in conversational recommendation systems, where the system asks about different attributes of the items to reveal the user preferences.</s>
+			<s cites="8" anonymised="true">For instance, [8] designed an interactive system for venue recommendation.</s>
+			<s cites="48,64" anonymised="true">[48] utilized facet-value pairs to represent a conversation history for conversational recommendation, and [64] extracted facet-value pairs from product reviews automatically, and considered them as questions and answers.</s>
+			<s>In this work, we focus on conversational search with open-domain queries which is different from preference elicitation in recommendation, however, the proposed solution can be potentially used for the preference elicitation tasks as well.</s>
+		</context>
+		<context id="11" section="related work">
+			<s>Improving the representations learned by neural models with the help of external resources has been explored in a wide range of tasks.</s>
+			<s cites="54" anonymised="true">[54] proposed a text matching model based on recurrent and convolution networks that has a knowledge acquisition gating function that uses a knowledge base for accurate text matching.</s>
+			<s cites="57" anonymised="true">[57] studied the use of community question answering data as external knowledge base for response ranking in information seeking conversations.</s>
+			<s>They proposed a model based on convolutional neural networks on top the interaction matrix.</s>
+			<s cites="55" anonymised="true">More recently, [55] exploited knowledge bases to improve LSTM based networks for machine reading comprehension tasks.</s>
+			<s>Our work is different from prior work in multiple dimensions.</s>
+			<s>From the neural network architecture, we extend Transformer by proposing a novel architecture for learning attention weights from external information sources.</s>
+			<s>In addition, we do not use external knowledge bases in our experiments.</s>
+			<s cites="2,14,27,60">For example, we use the top retrieved documents as one information source, which is similar to the pseudo-relevance feedback (PRF) methods [2, 14, 27, 60].</s>
+			<s>We showed that our method significantly outperforms state-of-the-art PRF methods.</s>
+		</context>
+	</contexts>
+	<references>
+		<reference id="1">10.1145/3331184.3331265</reference>
+		<reference id="2">10.1145/322017.322021</reference>
+		<reference id="3">10.1109/IVTTA.1994.341543</reference>
+		<reference id="4">https://arxiv.org/abs/1607.06450</reference>
+		<reference id="5">10.1017/S1351324905003682</reference>
+		<reference id="6">10.1145/3020165.3022149</reference>
+		<reference id="7">10.18653/v1/D18-1241</reference>
+		<reference id="8">10.1145/2939672.2939746</reference>
+		<reference id="9">https://trec.nist.gov/pubs/trec18/papers/WEB09.OVERVIEW.pdf</reference>
+		<reference id="10">http://ceur-ws.org/Vol-1556/paper5.pdf</reference>
+		<reference id="11">10.1016/0957-4174(95)00011-W</reference>
+		<reference id="12">10.1007/s10791-011-9162-z</reference>
+		<reference id="13">10.5555/1516224</reference>
+		<reference id="14">10.5555/106765.106784</reference>
+		<reference id="15">10.5555/35053.35054</reference>
+		<reference id="16">https://trec.nist.gov/pubs/trec28/papers/OVERVIEW.CAsT.pdf</reference>
+		<reference id="17">https://www.aclweb.org/anthology/N03-1007.pdf</reference>
+		<reference id="18">10.18653/v1/N19-1423</reference>
+		<reference id="19">10.1145/2983323.2983769</reference>
+		<reference id="20">10.1145/3341981.3344249</reference>
+		<reference id="21">https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf</reference>
+		<reference id="22">https://www.aclweb.org/anthology/H90-1021.pdf</reference>
+		<reference id="23">10.1145/582415.582418</reference>
+		<reference id="24">10.1145/3209978.3210160</reference>
+		<reference id="25">https://arxiv.org/abs/1412.6980</reference>
+		<reference id="26">10.1145/383952.383970</reference>
+		<reference id="27">10.1145/383952.383972</reference>
+		<reference id="28">https://arxiv.org/abs/1703.03130</reference>
+		<reference id="29">https://www.aclweb.org/anthology/U04-1014.pdf</reference>
+		<reference id="30">10.1145/1076034.1076115</reference>
+		<reference id="31">10.18653/v1/P16-1170</reference>
+		<reference id="32">https://arxiv.org/abs/1901.04085</reference>
+		<reference id="33">10.1108/eb026631</reference>
+		<reference id="34">https://arxiv.org/abs/1905.01758</reference>
+		<reference id="35">10.18653/v1/D16-1244</reference>
+		<reference id="36">https://arxiv.org/abs/1705.04304</reference>
+		<reference id="37">10.1145/3025171.3025222</reference>
+		<reference id="38">10.5555/1928328.1928355</reference>
+		<reference id="39">10.1145/290941.291008</reference>
+		<reference id="40">10.1145/3357384.3357905</reference>
+		<reference id="41">10.1145/3295750.3298924</reference>
+		<reference id="42">10.1145/3020165.3020183</reference>
+		<reference id="43">10.18653/v1/N19-1013</reference>
+		<reference id="44">10.1162/tacl_a_00266</reference>
+		<reference id="45">10.5555/867582</reference>
+		<reference id="46">10.1145/3240323.3240352</reference>
+		<reference id="47">http://doc.gold.ac.uk/aisb50/AISB50-S21/AISB50-S21-Stoyanchev-paper.pdf</reference>
+		<reference id="48">10.1145/3209978.3210002</reference>
+		<reference id="49">10.1007/978-3-030-15712-8_18</reference>
+		<reference id="50">10.1145/3176349.3176387</reference>
+		<reference id="51">https://proceedings.neurips.cc/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf</reference>
+		<reference id="52">10.3115/1073012.1073078</reference>
+		<reference id="53">10.1145/1390334.1390374</reference>
+		<reference id="54">https://arxiv.org/abs/1611.04684</reference>
+		<reference id="55">10.18653/v1/P17-1132</reference>
+		<reference id="56">10.1145/2983323.2983818</reference>
+		<reference id="57">10.1145/3209978.3210011</reference>
+		<reference id="58">https://arxiv.org/abs/1707.05409</reference>
+		<reference id="59">10.1145/3397271.3401415</reference>
+		<reference id="60">10.1145/2970398.2970405</reference>
+		<reference id="61">10.1145/3366423.3380126</reference>
+		<reference id="62">10.1145/3397271.3401160</reference>
+		<reference id="63">10.1145/383952.384019</reference>
+		<reference id="64">10.1145/3269206.3271776</reference>
+	</references>
+</doc>

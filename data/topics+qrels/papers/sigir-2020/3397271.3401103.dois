@@ -1,11 +1,11 @@
--[1]	URL
--[2]	URL
+-[1]	https://web.archive.org/web/20130702063520/https://www.google.com/competition/howgooglesearchworks.html
+-[2]	https://datausa.io/profle/soc/252050/#demographics
 [3]	10.1145/2009916.2009965	SIGIR
 -[4]	10.1007/978-3-540-73279-2_66	UAHCI
 -[5]	10.1109/INNOVATIONS.2008.4781673
 -[6]	10.1002/dys.318
--[7]	URL
--[8]	URL
+-[7]	https://dyslexiaida.org/dyslexia-basics/
+-[8]	https://dyslexiaida.org/testing-and-evaluation/
 -[9]	10.5555/1274531.1274545	ASWC
 -[10]	10.1080/00207450903139671
 -[11]	http://urn.nb.no/URN:NBN:no-56151
@@ -24,27 +24,27 @@
 [24]	10.1145/1840784.1840812	IIIX
 [25]	10.1145/3209978.3210072	SIGIR
 -[26]	10.1080/87565641.2010.494748
--[27]	N/A
+-[27]	http://downtowndubuque.org/wp-content/uploads/2017/01/Social-Media-Update-2016.pdf
 -[28]	10.1177/154193120605000909
 -[29]	10.1002/dys.389
--[30]	N/A
+-[30]	https://dyslexiaida.org/the-myths-and-truths-of-dyslexia/
 -[31]	10.1111/j.1471-3802.2002.00163.x
 [32]	10.1145/1526709.1526817	WWW
 [33]	10.1145/2808194.2809465	ICTIR
--[34]	https://hdl.handle.net/10642/6880
+-[34]	https://pubmed.ncbi.nlm.nih.gov/30371444/
 [35]	10.1145/3290605.3300754	CHI
 [36]	10.5555/1364846.1364849	jasist
 -[37]	10.1108/00220411011038421
 [38]	10.1145/2362724.2362734	IIIX
 [39]	10.1145/3020165.3022134	CHIIR
--[40]	URL
+-[40]	https://searchengineland.com/googleinstant-complete-users-guide-50136
 [41]	10.1145/3290605.3300738	CHI
 [42]	10.1145/2441776.2441910	CSCW
 [43]	10.1145/3173574.3173609	CHI
 [44]	10.1145/1294211.1294215	UIST
--[45]	URL
--[46]	URL
--[47]	URL
+-[45]	https://www.nngroup.com/articles/fshaped-pattern-reading-web-content-discovered/
+-[46]	https://www.nngroup.com/articles/exhaustivereview-eyetracking/
+-[47]	https://www.nngroup.com/articles/text-scanning-patterns-eyetracking/
 -[48]	10.1007/978-3-642-40498-6_15	INTERACT
 -[49]	10.5555/3021319.3021333	PervasiveHealth
 [50]	10.1145/1978942.1979127	CHI
@@ -52,5 +52,5 @@
 -[52]	N/A
 [53]	10.1145/1277741.1277770	SIGIR
 [54]	10.1145/1277741.1277787	SIGIR
--[55]	10.2200/S00174ED1V01Y200901ICR003	BOOK
+-[55]	10.5555/1521589	BOOK
 [56]	10.1145/2362724.2362768	IIIX
