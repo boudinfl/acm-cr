@@ -1,0 +1,78 @@
+<doc>
+	<doi>10.1145/3397271.3401266</doi>
+	<title>Reranking for Efficient Transformer-based Answer Selection</title>
+	<abstract>IR-based Question Answering (QA) systems typically use a sentence selector to extract the answer from retrieved documents. Recent studies have shown that powerful neural models based on the Transformer can provide an accurate solution to Answer Sentence Selection (AS2). Unfortunately, their computation cost prevents their use in real-world applications. In this paper, we show that standard and efficient neural rerankers can be used to reduce the amount of sentence candidates fed to Transformer models without hurting Accuracy, thus improving efficiency up to four times. This is an important finding as the internal representation of shallower neural models is dramatically different from the one used by a Transformer model, e.g., word vs. contextual embeddings.</abstract>
+	<contexts>
+		<context id="01" section="introduction">
+			<s>QA research has received a renewed attention in recent years thanks to advent of virtual assistants in industrial sectors.</s>
+			<s>For example, Alexa, Google Home, and Siri provide general information inquiry services.</s>
+			<s>One key task for QA, is the Answer Sentence Selection (AS2), which has been widely studied by the TREC challenges.</s>
+			<s>AS2, given a question and a set of answer sentence candidates, consists in selecting sentences (e.g., retrieved by a search engine) that correctly answer the question.</s>
+			<s cites="8,11">Neural models have significantly contributed with new techniques, e.g., [8, 11] to AS2.</s>
+			<s cites="13,14,5,10,3">More recently, neural language models, e.g., ELMO [13], GPT [14], BERT [5], RoBERTa [10], XLNet [3] have led to major advancements in NLP.</s>
+			<s>These methods capture dependencies between words and their compounds by pre-training neural networks on large amounts of data.</s>
+			<s>Unfortunately, the Transformer-based architectures use a huge number of parameters (e.g., 340 million for BERT Large).</s>
+			<s>This poses important challenges for their deployment in production: first, the latency of the approach highly increases with the number of candidates.</s>
+			<s>For instance, to target the required Recall, it might be necessary to classify of hundreds of candidates, which can take several seconds even when using powerful GPUs.</s>
+			<s>Secondly, although the classification of candidates can be scaled horizontally, the number of GPUs required to fulfill a target transaction-per-second will prohibitively increase the operational cost.</s>
+			<s cites="18">Finally, their high energy consumption is an environmental threat, as pointed out by [18] and the NeurIPS workshop, Tackling Climate Change with ML.</s>
+		</context>
+		<context id="02" section="introduction">
+			<s>In this paper, we study and propose solutions to improve the efficiency and cost of modern QA systems based on search engines and Transformer models.</s>
+			<s>Though we mainly focus on AS2, the proposed solution is general, and can be applied to other QA paradigms, including machine reading tasks.</s>
+			<s cites="19">Our main idea follows the successful cascade approach for ad-hoc document retrieval [19], which considers fast but less accurate rerankers together with more accurate but slower models.</s>
+			<s cites="22">In particular, we use (i) simple models, e.g., Jaccard similarity, as well as light neural models such as Compare-Aggregate [22], for reranking answer sentence candidates; and (ii) BERT models as our final AS2 step.</s>
+		</context>
+		<context id="03" section="introduction">
+			<s>To carry out our experiments, we created three different AS2 datasets, all including a large number of answer sentence candidates.</s>
+			<s cites="8,6">Two of them are built using different samples of the anonymized questions from Alexa Information Traffic, while the third, ASNQ [8], is a sample from the Google Natural Question dataset [6], adapted for the AS2 task, which we further extended.</s>
+			<s>We tested the combinations of fast rerankers, Jaccard similarity, Rel-CNN1 and CA with an accurate BERT selector, and compared them with the upper bound, obtained with the expensive approach of classifying all candidates with the BERT model.</s>
+			<s>The key finding of our paper is to show that the inference cost of Transformer models, e.g., BERT, can be reduced by selecting only a promising candidate subset to be processed, still preserving the original Accuracy.</s>
+			<s>That is, the candidates selected by shallow neural rerankers are compatible with those selected by Transformer models.</s>
+			<s>This enables the design of accurate, fast and cost-effective QA systems, based on sequential rerankers.</s>
+		</context>
+		<context id="04" section="related work">
+			<s>Neural models for AS2 typically apply a series of non-linear transformations to the input question and answer, represented as compositions of word or character embeddings and then measure the similarity between the obtained representations.</s>
+			<s cites="16">For example, the Rel-CNN [16] has two separate embedding layers for the question and answer, and relational embedding, which aims at connecting them.</s>
+			<s cites="5">Recent work has shown that Transformer-based models, e.g., BERT [5], can highly improve inference.</s>
+			<s ciets="23" anonymised="true">[23] applied it to Ad Hoc Document Retrieval, obtaining significant improvement.</s>
+			<s cites="8" anonymised="true">[8] fine-tuned BERT for AS2, achieving the state of the art.</s>
+			<s>However, BERT’s high computational cost prevents its use in most real-word applications.</s>
+			<s cites="15">Some solutions rely on leveraging knowledge distillation in the pre-training step, e.g., [15].</s>
+			<s cites="19">In contrast, we propose an alternative (and compatible with the initiatives above) approach following previous work in document retrieval, e.g., the use of sequential rerankers [19].</s>
+			<s cites="21" anonymised="true">[21] focused on quickly identifying a set of good candidate documents to be passed to the second and further rerankers of the cascade.</s>
+			<s cites="4" anonymised="true">[4] proposed two stage approaches using a limited set of textual features and a final model trained using a larger set of query- and document-dependent features.</s>
+			<s cites="7" anonymised="true">[7] presented a new general framework for learning an end-to-end cascade of rankers using backpropagation.</s>
+			<s cites="1" anonymised="true">[1] studied effectiveness/efficiency trade-offs with three candidate selection approaches.</s>
+			<s>All the methods above are in line with our study, but they target very different settings: document retrieval, linear models or just basic neural models.</s>
+			<s>In contrast, the main contribution of our paper is to show that simple and efficient neural sentence rerankers are compatible with expensive Transformer models, enabling their efficient use.</s>
+		</context>
+	</contexts>
+	<references>
+		<reference id="1">10.1145/2484028.2484132</reference>
+		<reference id="2">10.18653/v1/2020.coling-main.457</reference>
+		<reference id="3">10.18653/v1/P19-1285</reference>
+		<reference id="4">10.1007/978-3-642-36973-5_36</reference>
+		<reference id="5">10.18653/v1/N19-1423</reference>
+		<reference id="6">10.1162/tacl_a_00276</reference>
+		<reference id="7">10.1145/3289600.3290986</reference>
+		<reference id="8">10.1609/aaai.v34i05.6282</reference>
+		<reference id="9">https://arxiv.org/abs/1412.6980</reference>
+		<reference id="10">https://arxiv.org/abs/1907.11692</reference>
+		<reference id="11">http://arxiv.org/abs/1901.04085</reference>
+		<reference id="12">https://www.aclweb.org/anthology/D14-1162.pdf</reference>
+		<reference id="13">10.18653/v1/N18-1202</reference>
+		<reference id="14">http://www.persagen.com/files/misc/radford2019language.pdf</reference>
+		<reference id="15">https://arxiv.org/abs/1910.01108</reference>
+		<reference id="16">10.1145/2766462.2767738</reference>
+		<reference id="17">10.18653/v1/2020.acl-main.504</reference>
+		<reference id="18">10.18653/v1/P19-1355</reference>
+		<reference id="19">10.1145/2009916.2009934</reference>
+		<reference id="20">https://www.aclweb.org/anthology/D07-1003.pdf</reference>
+		<reference id="21">10.1145/2911451.2911515</reference>
+		<reference id="22">https://arxiv.org/abs/1611.01747</reference>
+		<reference id="23">https://arxiv.org/abs/1903.10972</reference>
+		<reference id="24">https://www.aclweb.org/anthology/D15-1237.pdf</reference>
+		<reference id="25">10.1145/3357384.3358148</reference>
+	</references>
+</doc>

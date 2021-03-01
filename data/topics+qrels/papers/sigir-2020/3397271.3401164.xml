@@ -1,0 +1,147 @@
+<doc>
+	<doi>10.1145/3397271.3401164</doi>
+	<title>Web-to-Voice Transfer for Product Recommendation on Voice</title>
+	<abstract>While product recommendation algorithms on the Web are well-supported by a vast amount of interaction data, the same is not true on Voice. A promising approach to mitigate the issue is transfer learning, i.e., transferring the knowledge of customers' shopping behaviors learned from their shopping activities on the Web to Voice. Such a Web-to-Voice transfer is challenging due to customers' distinct shopping behaviors on Voice: customers are inclined to purchase more low-consideration products and are more likely to purchase certain products repeatedly. This paper presents TransV, a novel Web-to-Voice neural transfer network that allows for effective transfer of customers' shopping patterns from the Web to Voice, while taking into account customers' distinct purchase patterns on Voice. Our method extends the state-of-the-art self-attention neural architecture with a multi-level tri-factorization neural component, which allows to explicitly capture the similarity and dissimilarity of customers' shopping patterns on the Web and Voice. To model repeated purchases, TransV adopts a recency-based copy mechanism that considers the impact of the recency of historical purchases on customers' behavior of repeated purchases. Extensive validation on multiple real-world datasets, including two cross-platform datasets from Amazon.com and Amazon Alexa, shows that our method is able to improve voice-based recommendation substantially by 26.8% as compared with non-transfer learning methods.</abstract>
+	<contexts>
+		<context id="01" section="introduction">
+			<s cites="43">In the last few years, there has been an explosion of interest in voice-based technology across industry, with an estimated 144.3 million shipments of voice-enabled devices last year [43].</s>
+			<s>An important use case for voice-enabled devices is voice shopping, which has become an increasingly important shopping scenario.</s>
+			<s cites="9">A recent survey shows that up to 43% of voice-enabled device owners use their device to shop and by 2022, voice is expected to be a $40 billion channel for shopping [9].</s>
+		</context>
+		<context id="02" section="introduction">
+			<s>A fundamental task in voice shopping is product recommendation, where the goal is to recommend relevant products to customers by inferring their preferences.</s>
+			<s cites="7,8,11,23,25,44,45,40">While a growing body of research has addressed the voice-based recommendation problem from the dialogue perspective, i.e., improving the effectiveness of question-answering between the customer and system [7, 8, 11, 23, 25, 44, 45], relatively little work has been focused on addressing the specific challenges arising in recommendation on Voice [40].</s>
+		</context>
+		<context id="03" section="introduction">
+			<s cites="45">Due to the unique characteristics of voice interfaces (e.g., narrow information channel), customers tend to explore fewer products and choose fewer long-tail products, as compared to Web-based channels [45].</s>
+			<s>Consequently, products purchased through Voice are much more limited in terms of both quantity and diversity.</s>
+			<s>Due to the fact that voice interfaces are new and not yet widely adopted, customers on Voice do not have a long history as compared with Web.</s>
+			<s>These problems pose a bigger-than-ever data sparsity challenge that impedes effective recommendation.</s>
+			<s>To mitigate the data sparsity issue, a promising approach is transfer learning: a customer is likely to share similar shopping behaviors on the Web and Voice in terms of favored product types and purchase patterns; by transferring the shared shopping patterns from Web, the system can readily generate recommendations for customers with limited historical purchases on Voice, or even those new to Voice.</s>
+		</context>
+		<context id="04" section="introduction">
+			<s cites="19">Despite its obvious potential, transfer learning from Web to Voice is non-trivial due to customers’ distinct shopping behaviors on Voice [19].</s>
+			<s>For example, customers are more inclined to purchase low-consideration products (e.g., paper towel and toothpaste) than high-consideration ones (e.g., computer monitors) on Voice.</s>
+			<s>This is in part due to the recency of Voice as a shopping medium that customers are not used to making complex shopping decisions by voice, in part due to the lack of technology for supporting effective interactions.</s>
+			<s>On the other hand, the convenience of voice interactions triggers a strong tendency of repeated purchases in voice shopping: many products are purchased by the same customers over and over, especially those consumables that need to be purchased on a regular basis.</s>
+			<s cites="5,10,42">We note that repeated purchase behaviors have also been observed on the Web, which is mainly driven by customers’ loyalty to certain brands [5, 10, 42].</s>
+		</context>
+		<context id="05" section="introduction">
+			<s cites="28,29,33,14,21,26">In the recommendation literature, transfer learning has been implemented by extending recommendation models, e.g., factorization models [28, 29, 33] or neural networks [14, 21, 26], with shared user1 representations for cross-domain recommendation tasks.</s>
+			<s>While being different in the underlying recommendation models (see Section 2 for a detailed discussion), both classes of methods are designed for transferring user representations with less emphasis on transferring the interaction patterns, which has to be carefully considered in our Web-to-Voice transfer context.</s>
+			<s cites="18">More recent work [18] attempts to address the problem by modeling the transfer of the purchase patterns from one domain to another using a linear transformation.</s>
+			<s>However, it fails to capture the relationships of interaction patterns across domains, such as similarity and dissimilarity, which are essential for Web to Voice transfer.</s>
+		</context>
+		<context id="06" section="introduction">
+			<s>This paper introduces TransV, a novel neural network-based recommendation method for transferring customers’ shopping behaviors from Web to Voice while considering the uniqueness of voice shopping.</s>
+			<s>TransV is designed to learn shared customer and product representations across both channels and to carefully transfer the purchase patterns from Web to Voice by modeling their relationships explicitly.</s>
+			<s cites="41,49">Specifically, our method is built on the state-of-the-art self-attention neural architecture [41, 49] to learn customer and product representations.</s>
+			<s>To enable effective transfer of customers’ purchase patterns from Web to Voice, TransV adopts a multi-level tri-factorization approach that models web and voice purchase patterns with both shared and separated neural parts.</s>
+			<s>By doing so, TransV distinguishes channel-specific purchase patterns from channel-independent ones.</s>
+			<s cites="16,36">To account for customers’ repeated purchase behaviors that are prevalent in voice shopping, TransV adopts a recency-biased copy mechanism, which leverages the copy mechanism [16, 36] and extends it by considering the impact of the recency of historical purchases on repeated purchases.</s>
+		</context>
+		<context id="07" section="related work">
+			<s>With the rapid increase of personal assistants, a considerable amount of literature has grown up around conversational recommendation.</s>
+			<s cites="35,47">The focal point of research efforts has been enabling the system to effectively and efficiently infer users’ intents and satisfy their information needs [35, 47].</s>
+			<s cites="11,23,25,7,45,8,44">Due to the complexity of the problem, it has been studied by several research communities including natural language processing [11, 23, 25], human-computer interaction [7, 45], and information retrieval (including recommender systems) [8, 44].</s>
+			<s>Existing work mainly takes a dialogue perspective with the goal of improving the question-answering process, i.e., asking the most relevant questions to collect user feedback.</s>
+		</context>
+		<context id="08" section="related work">
+			<s>From the recommendation perspective, most existing work assumes a cold-start setting that ignores long-term preferences of users.</s>
+			<s cites="47,39" anonymised="true">For example, [47] studies the effect of in-session aspect-based questions for product recommendation using memory networks [39].</s>
+			<s cites="25,37" anonymised="true">[25] introduce a neural dialogue model that classifies the sentiment of a user with respect to movies discussed in the conversation session, and based on that, it generates movie recommendations with a pre-trained autoencoder recommender [37].</s>
+			<s cites="40" anonymised="true">A recent paper by [40] shows that the integration of users’ past purchasing behaviors boosts the effectiveness of voice-based recommendation.</s>
+			<s>Their work, however, concentrates on methods for integrating recommendation techniques into the dialogue system.</s>
+			<s>Our work takes a step back and aims at bridging the conventional recommendation techniques with the recommendation task on Voice, with a specific focus on Web-to-Voice transfer which is of key importance for successful voice shopping in practice.</s>
+		</context>
+		<context id="09" section="related work">
+			<s cites="6,24">Transfer learning has been a popular approach for tackling the data sparsity problem by transferring the knowledge (e.g., user preferences) in a source domain to the task in the target domain [6, 24].</s>
+			<s cites="48">In recommendation, transfer learning is generally implemented through multi-task learning [48], i.e., joint model training for recommendation in source and target domains, with a specific focus on transferring user and item representations, or interaction patterns across the domains.</s>
+		</context>
+		<context id="10" section="related work">
+			<s cites="28,29,33">Early work focuses on adapting matrix factorization techniques for transfer learning [28, 29, 33].</s>
+			<s cites="28,38" anonymised="true">[28] introduce a model based on collective matrix factorization [38], where user latent factors are shared across different domains.</s>
+			<s>The observed interactions in the source domain help to train better latent factors, thus transferring the knowledge to the target domain.</s>
+			<s cites="32,33" anonymised="true">[32, 33] propose to model the interaction patterns in different domains as independent parameter matrices.</s>
+			<s>Factorization models, however, only learn latent factors and parameter matrices in a linear fashion, which are oversimplified in capturing the complex user-item interaction patterns.</s>
+			<s>More importantly, these methods fail to capture the relationship between user interactions in different domains.</s>
+		</context>
+		<context id="11" section="related work">
+			<s cites="46">Neural network-based methods are more capable of learning non-linear latent representations for users and items and potentially also their interactions (see a recent survey [46]).</s>
+			<s cites="14" anonymised="true">Specific to neural transfer learning for cross-domain recommendation, [14] introduce a multi-view deep learning method that learns shared user representations from user-item interactions in different domains.</s>
+			<s cites="26" anonymised="true">[26] propose to incorporate content information into the multi-view neural network.</s>
+			<s cites="21" anonymised="true">[21] go further in this direction and formulate cross-domain recommendation as extreme multi-class classification, where only content features are used for adapting a classifier trained in the source domain to the target domain.</s>
+			<s>These methods focus on learning better representations for users and items, while emphasizing less learning their interaction patterns, which is important for voice shopping.</s>
+		</context>
+		<context id="12" section="related work">
+			<s cites="18,30">A recent paper [18], perhaps the most closely related work to ours, models the transfer of interactions across multiple domains as a linear transformation using cross-stitch networks [30].</s>
+			<s cites="12,31">In the context of Web-to-Voice transfer, since the same products appear in both Web and Voice, we adopt a tri-factorization approach [12, 31] that fixes the product representations across channels, and extend the approach into a multi-level scheme, which allows to capture channel-independent and channel-specific interaction patterns.</s>
+		</context>
+		<context id="13" section="related work">
+			<s cites="20,34">Due to the importance for business profitability, repeated purchases are an important customer behavior studied in marketing as a signal of brand loyalty [20, 34].</s>
+			<s cites="1">In Web-based information systems, repeated item consumption has been shown to be most affected by the recency and quality of the item, with recency being more critical [1].</s>
+			<s cites="4" anonymised="true">[4] study such a behavior in more detail and reveals the increasing inter-arrival gaps of repeated item consumption that eventually lead to abandonment.</s>
+			<s cites="5" anonymised="true">In online shopping, [5] study repeated purchases for consumable products, e.g., toothpaste and diapers, and propose a prediction model that helps increase the product click-through rate.</s>
+			<s>Our work extends the study to voice shopping and the model to collaborative filtering that recommends both repeated and novel products.</s>
+		</context>
+		<context id="14" section="related work">
+			<s>Repeated purchases have only been considered in recommender system literature recently.</s>
+			<s cites="42" anonymised="true">[42] introduce a recommendation algorithm, adaLoyal, a personalized grocery recommender.</s>
+			<s>In adaLoyal, the repeated purchase is leveraged in a post-processing procedure to adapt the prediction of purchase probability over an item using the customer’ historical purchases of the item.</s>
+			<s>The adaptation is implemented through a posterior calculation that accounts for both probabilities of general and repeated purchases.</s>
+			<s cites="36" anonymised="true">[36] propose a unified neural network model that jointly learns repeated and novel consumption for session-based recommendation.</s>
+			<s>Our method is different in that we consider the general sequential recommendation scenario and further model the impact of recency of historical purchases for voice-based recommendation.</s>
+		</context>
+	</contexts>
+	<references>
+		<reference id="1">10.1145/2566486.2568018</reference>
+		<reference id="2">https://arxiv.org/abs/1607.06450</reference>
+		<reference id="3">10.1109/ICASSP.2013.6639349</reference>
+		<reference id="4">10.1145/2872427.2883024</reference>
+		<reference id="5">10.1145/3219819.3219891</reference>
+		<reference id="6">10.5555/3104322.3104344</reference>
+		<reference id="7">10.1145/3219819.3219894</reference>
+		<reference id="8">10.1145/2939672.2939746</reference>
+		<reference id="9">https://markets.businessinsider.com/news/stocks/voice-shopping-set-to-jump-to-40-billion-by-2022-rising-from-2-billion-today-1017434300</reference>
+		<reference id="10">10.1016/j.jbusres.2014.06.006</reference>
+		<reference id="11">10.18653/v1/P17-1045</reference>
+		<reference id="12">10.1145/1150402.1150420</reference>
+		<reference id="13">10.5555/1953048.2021068</reference>
+		<reference id="14">10.1145/2736277.2741667</reference>
+		<reference id="15">10.1109/ASRU.2013.6707742</reference>
+		<reference id="16">10.18653/v1/P16-1154</reference>
+		<reference id="17">https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf</reference>
+		<reference id="18">10.1145/3269206.3271684</reference>
+		<reference id="19">http://glare2018.dei.unipd.it/paper/glare2018-paper5.pdf</reference>
+		<reference id="20">10.2307/3149402</reference>
+		<reference id="21">10.1007/978-3-030-15719-7_3</reference>
+		<reference id="22">10.1109/ICDM.2018.00035</reference>
+		<reference id="23">https://arxiv.org/abs/1712.07229</reference>
+		<reference id="24">10.1145/1553374.1553454</reference>
+		<reference id="25">10.5555/3327546.3327641</reference>
+		<reference id="26">10.1145/3041021.3054207</reference>
+		<reference id="27">https://arxiv.org/abs/1703.03130</reference>
+		<reference id="28">10.1145/1871437.1871643</reference>
+		<reference id="29">10.5555/2964060.2964113</reference>
+		<reference id="30">https://openaccess.thecvf.com/content_cvpr_2016/papers/Misra_Cross-Stitch_Networks_for_CVPR_2016_paper.pdf</reference>
+		<reference id="31">10.5555/3104482.3104584</reference>
+		<reference id="32">10.5555/2283696.2283784</reference>
+		<reference id="33">10.5555/2898607.2898644</reference>
+		<reference id="34">10.1108/10610420310463117</reference>
+		<reference id="35">10.1145/3020165.3020183</reference>
+		<reference id="36">10.1609/aaai.v33i01.33014806</reference>
+		<reference id="37">10.1145/2740908.2742726</reference>
+		<reference id="38">10.1145/1401890.1401969</reference>
+		<reference id="39">10.5555/2969442.2969512</reference>
+		<reference id="40">10.1145/3209978.3210002</reference>
+		<reference id="41">10.5555/3295222.3295349</reference>
+		<reference id="42">10.1145/3269206.3271786</reference>
+		<reference id="43">https://iotbusinessnews.com/2019/03/29/60131-double-digit-growth-expected-in-the-smart-home-market-says-idc/</reference>
+		<reference id="44">10.1145/3209978.3210011</reference>
+		<reference id="45">10.1145/3240323.3240389</reference>
+		<reference id="46">10.1145/3285029</reference>
+		<reference id="47">10.1145/3269206.3271776</reference>
+		<reference id="48">https://arxiv.org/abs/1707.08114</reference>
+		<reference id="49">https://ojs.aaai.org/index.php/AAAI/article/view/11618/11477</reference>
+	</references>
+</doc>

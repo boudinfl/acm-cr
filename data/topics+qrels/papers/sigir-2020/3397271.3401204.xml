@@ -1,0 +1,47 @@
+<doc>
+	<doi>10.1145/3397271.3401204</doi>
+	<title>Context-Aware Term Weighting For First Stage Passage Retrieval</title>
+	<abstract>Term frequency is a common method for identifying the importance of a term in a document. But term frequency ignores how a term interacts with its text context, which is key to estimating document-specific term weights. This paper proposes a Deep Contextualized Term Weighting framework (DeepCT) that maps the contextualized term representations from BERT to into context-aware term weights for passage retrieval. The new, deep term weights can be stored in an ordinary inverted index for efficient retrieval. Experiments on two datasets demonstrate that DeepCT greatly improves the accuracy of first-stage passage retrieval algorithms.</abstract>
+	<contexts>
+		<context id="01" section="introduction">
+			<s cites="3">This paper seeks to improve term importance estimation in first-stage retrieval models by using deep language models like BERT [3] to capture a term’s contextual features.</s>
+			<s>We present the Deep Contextualized Term Weighting framework (DeepCT).</s>
+			<s>DeepCT learns a contextualized term representation model based on BERT, and a mapping function from representations to term weights.</s>
+			<s>The transformer encoder of BERT allows DeepCT to capture semantic and syntactic features from a term’s linguistic context, helping DeepCT to identify semantically important terms from the text.</s>
+			<s>DeepCT generates deep, context-aware document-specific term weights that can replace the standard tf.</s>
+		</context>
+		<context id="02" section="related work">
+			<s>Most first-stage retrieval models such as BM25 and query likelihood use term frequencies (tf) to term importance in a document.</s>
+			<s cites="6">A popular alternative to tf are graph-based methods, e.g., TextRank [6].</s>
+			<s cites="5">A few recent work investigated using word embeddings [5] for document term weighting, but most of them only learn a global idf -like term weight because the word embeddings are context-independent.</s>
+			<s>Our work aims to learn tf-like term weights that are context-specific.</s>
+		</context>
+		<context id="03" section="related work">
+			<s cites="1,2,10">Most neural ranking models are cost-prohibitive to be used in the first stage [1, 2, 10].</s>
+			<s>Recent research addresses this efficiency problem in two ways.</s>
+			<s cites="13">One way is to learn latent embedding representations of queries and documents [13].</s>
+			<s cites="14">However, fix-dimension representations introduce the specificity vs. exhaustiveness trade-off [14].</s>
+			<s>Another approach modifies the bag-of-words document representations using neural network.</s>
+			<s cites="8" anonymised="true">[8] uses neural rankers to generate term-document scores, but it is time-consuming when applied at a large-scale.</s>
+			<s cites="11,12" anonymised="true">[11] proposed to generate queries from documents using neural machine translation and index queries as document expansion terms [11, 12].</s>
+			<s cites="11,12">Our work are orthogonal to [11, 12] – their approaches add terms to documents, while our method weights existing terms; future work may consider combining the two approaches.</s>
+		</context>
+	</contexts>
+	<references>
+		<reference id="1">10.1145/3331184.3331303</reference>
+		<reference id="2">10.1145/3159652.3159659</reference>
+		<reference id="3">10.18653/v1/N19-1423</reference>
+		<reference id="4">https://trec.nist.gov/pubs/trec27/papers/Overview-CAR.pdf</reference>
+		<reference id="5">10.1145/2983323.2983769</reference>
+		<reference id="6">https://www.aclweb.org/anthology/W04-3252.pdf</reference>
+		<reference id="7">https://arxiv.org/abs/1903.07666</reference>
+		<reference id="8">https://arxiv.org/abs/1907.03693</reference>
+		<reference id="9">https://arxiv.org/abs/1611.09268</reference>
+		<reference id="10">https://arxiv.org/abs/1901.04085</reference>
+		<reference id="11">https://arxiv.org/abs/1904.08375</reference>
+		<reference id="12">https://cs.uwaterloo.ca/~jimmylin/publications/Nogueira_Lin_2019_docTTTTTquery-v2.pdf</reference>
+		<reference id="13">10.1016/j.ijar.2008.11.006</reference>
+		<reference id="14">10.5555/576628</reference>
+		<reference id="15">10.1145/3077136.3080809</reference>
+	</references>
+</doc>

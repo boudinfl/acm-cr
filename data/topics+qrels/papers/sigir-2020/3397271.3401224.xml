@@ -1,0 +1,62 @@
+<doc>
+	<doi>10.1145/3397271.3401224</doi>
+	<title>Local Self-Attention over Long Text for Efficient Document Retrieval</title>
+	<abstract>Neural networks, particularly Transformer-based architectures, have achieved significant performance improvements on several retrieval benchmarks. When the items being retrieved are documents, the time and memory cost of employing Transformers over a full sequence of document terms can be prohibitive. A popular strategy involves considering only the first n terms of the document. This can, however, result in a biased system that under retrieves longer documents. In this work, we propose a local self-attention which considers a moving window over the document terms and for each term attends only to other terms in the same window. This local attention incurs a fraction of the compute and memory cost of attention over the whole document. The windowed approach also leads to more compact packing of padded documents in minibatches resulting in additional savings. We also employ a learned saturation function and a two-staged pooling strategy to identify relevant regions of the document. The Transformer-Kernel pooling model with these changes can efficiently elicit relevance information from documents with thousands of tokens. We benchmark our proposed modifications on the document ranking task from the TREC 2019 Deep Learning track and observe significant improvements in retrieval quality as well as increased retrieval of longer documents at moderate increase in compute and memory costs.</abstract>
+	<contexts>
+		<context id="01" section="introduction">
+			<s cites="9,17">Deep neural networks have yielded dramatic improvements in several information retrieval (IR) tasks [9, 17].</s>
+			<s cites="22,18,24,11">Some of the improvements can be attributed to Transformer-based architectures [22], such as in BERT-based ranking models [18, 24] and the Transformer-Kernel pooling (TK) model [11].</s>
+			<s>These Transformer-based architectures employ self-attention to learn contextual embeddings of text for matching.</s>
+			<s cites="15">Unfortunately, the time and memory complexity of applying self-attention over a sequence of length L is O(L2) [15].</s>
+			<s>When the goal is to retrieve documents, the cost of applying attention over whole documents can be prohibitive.</s>
+		</context>
+		<context id="02" section="related work">
+			<s cites="9,10,17">Neural models have shown successful results in a number of IR tasks [9, 10, 17].</s>
+			<s cites="23" anonymised="true">[23] proposed a kernel pooling approach (KNRM) based on a bag-of-words representation of words.</s>
+			<s cites="5" anonymised="true">This was further extended by [5] to incorporate n-gram representations using convolutional architecture.</s>
+			<s cites="8,14">Several others [8, 14] have highlighted important considerations for designing neural ranking models for documents that are distinct from dealing with passages and other short text.</s>
+			<s cites="26" anonymised="true">[26] have emphasized on efficiency in neural ranking models and introduced neural models for retrieving documents from a large corpus.</s>
+			<s cites="7,11,18,19,24">More recently, Transformer [7] based architectures have been employed to learn contextual representations which have led to bigger improvements [11, 18, 19, 24].</s>
+			<s cites="24" anonymised="true">[24] apply passage-level BERT-based relevance estimators to rank documents.</s>
+			<s cites="16" anonymised="true">[16] use pretrained contextual embeddings, without fine-tuning, in downstream ranking models.</s>
+		</context>
+		<context id="03" section="related work">
+			<s cites="3,21">Classically, assessing relevance of documents based on relevant parts has been studied in many forms [3, 21] and this study continues that exploration in the context of neural models.</s>
+			<s cites="16,24">Unlike [16, 24], our proposed model is trained in a fully-supervised setting and only requires query-document relevance labels for training.</s>
+		</context>
+		<context id="04" section="related work">
+			<s cites="1" anonymised="true">[1] train a Transformer on the language modeling task by splitting long text into multiple segments.</s>
+			<s cites="6" anonymised="true">[6] extend that idea by incorporating a recurrence mechanism over the segments.</s>
+			<s cites="15" anonymised="true">More recently, [15] have proposed several techniques, including locality-sensitive hashing for self–attention, to scale the Transformer to longer text.</s>
+			<s>These techniques are orthogonal to the ideas presented in this paper and can be combined for additional efficiency gains.</s>
+		</context>
+	</contexts>
+	<references>
+		<reference id="1">10.1609/aaai.v33i01.33013159</reference>
+		<reference id="2">https://arxiv.org/abs/1611.09268</reference>
+		<reference id="3">10.5555/1793274.1793297</reference>
+		<reference id="4">https://arxiv.org/abs/2003.07820</reference>
+		<reference id="5">10.1145/3159652.3159659</reference>
+		<reference id="6">10.18653/v1/P19-1285</reference>
+		<reference id="7">10.18653/v1/N19-1423</reference>
+		<reference id="8">10.1145/3209978.3209980</reference>
+		<reference id="9">10.1016/j.ipm.2019.102067</reference>
+		<reference id="10">10.1145/3331184.3331344</reference>
+		<reference id="11">https://arxiv.org/abs/2002.01854</reference>
+		<reference id="12">10.18653/v1/D17-1110</reference>
+		<reference id="13">10.1145/3159652.3159689</reference>
+		<reference id="14">10.1145/3308558.3313707</reference>
+		<reference id="15">https://arxiv.org/abs/2001.04451</reference>
+		<reference id="16">10.1145/3331184.3331317</reference>
+		<reference id="17">10.1561/1500000061</reference>
+		<reference id="18">https://arxiv.org/abs/1901.04085</reference>
+		<reference id="19">https://arxiv.org/abs/1905.01758</reference>
+		<reference id="20">10.5555/3016100.3016292</reference>
+		<reference id="21">10.1145/160688.160693</reference>
+		<reference id="22">http://papers.nips.cc/paper/7181-attention-is-all-you-need</reference>
+		<reference id="23">10.1145/3077136.3080809</reference>
+		<reference id="24">https://trec.nist.gov/pubs/trec28/papers/IDST.DL.pdf</reference>
+		<reference id="25">10.18653/v1/D19-1352</reference>
+		<reference id="26">10.1145/3269206.3271800</reference>
+	</references>
+</doc>

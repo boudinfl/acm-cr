@@ -1,0 +1,83 @@
+<doc>
+	<doi>10.1145/3397271.3401188</doi>
+	<title>Choppy: Cut Transformer for Ranked List Truncation</title>
+	<abstract>Work in information retrieval has traditionally focused on ranking and relevance: given a query, return some number of results ordered by relevance to the user. However, the problem of determining how many results to return, i.e. how to optimally truncate the ranked result list, has received less attention despite being of critical importance in a range of applications. Such truncation is a balancing act between the overall relevance, or usefulness of the results, with the user cost of processing more results. In this work, we propose Choppy, an assumption-free model based on the widely successful Transformer architecture, to the ranked list truncation problem. Needing nothing more than the relevance scores of the results, the model uses a powerful multi-head attention mechanism to directly optimize any user-defined IR metric. We show Choppy improves upon recent state-of-the-art methods.</abstract>
+	<contexts>
+		<context id="01" section="introduction">
+			<s cites="1,9">While much of the work in information retrieval has been centered around ranking, there is growing interest in methods for ranked list truncation - the problem of determining the appropriate cutoff 𝑘 of candidate results [1, 9].</s>
+			<s cites="14,3,16">This problem has garnered attention in fields like legal search [14] and sponsored search [3, 16], where there could be a monetary cost for users looking into an irrelevant tail of documents or where showing too many irrelevant ads could result in ad blindness.</s>
+			<s cites="9">The fundamental importance of this problem has led to development of methods that are automatically able to learn 𝑘 in a data-driven fashion [9].</s>
+			<s>The focus of this paper is to design more effective models for accurate and dynamic truncation of ranked lists.</s>
+		</context>
+		<context id="02" section="introduction">
+			<s cites="9">The present state-of-the-art for this task is BiCut [9], a recurrent-based neural model that formulates the problem as a sequential decision process over the list.</s>
+			<s cites="8">BiCut trains a bidirectional LSTM [8] model with a predefined loss that serves as a proxy to the user-defined target evaluation metric.</s>
+			<s>At every position in the ranked list, BiCut makes a binary decision conditioned on both forward and backward context: to continue to the next position, or to end the output list.</s>
+		</context>
+		<context id="03" section="introduction">
+			<s cites="1">While BiCut outperforms non-neural methods [1], we argue it has several drawbacks.</s>
+			<s>Firstly, the model is trained with teacher-forcing, i.e. with ground truth context, but it is deployed auto-regressively at test time, where it is conditioned on its own pre-dictions.</s>
+			<s cites="12">Thus, the model suffers from a train / test distribution mismatch, often referred to as exposure bias [12], resulting in poor model generalization.</s>
+			<s>Secondly, the loss function used does not capture the mutual exclusivity among the candidate cut positions.</s>
+			<s>In other words, the loss does not capture the condition that the list can only be cut in at most one position.</s>
+			<s>Furthermore, the proposed training loss is unaligned with the user-defined evaluation metric.</s>
+			<s>Last but not least, BiCut employs BiLSTMs which are not only slow and non-parallelizable, but also do not take into account global long-range dependencies.</s>
+		</context>
+		<context id="04" section="introduction">
+			<s>This paper proposes Choppy, a new method that not only ameliorates the limitations of the BiCut model but also achieves state-of-the-art performance on the ranked list truncation task.</s>
+			<s>Our method comprises two core technical contributions.</s>
+			<s cites="15">The first is a Transformer model [15] that is able to capture long-range dyadic interactions between relevance scores.</s>
+			<s>To the best of our knowledge, this is the first successful application of self-attentive models on scalar ranking scores.</s>
+			<s>The second technical contribution is the development of a loss function that optimizes the expected metric value over all candidate cut positions.</s>
+			<s>Overall, Choppy not only improves the predictive performance on this task but also improves the model inference speed by > 3 times.</s>
+		</context>
+		<context id="05" section="related work">
+			<s>Across the rich history of information retrieval research, there has been extensive work focused on modeling score distributions of IR systems.</s>
+			<s cites="1,10">Early work in this area primarily focused on fitting parametric probability distributions to score distributions [1, 10].</s>
+			<s>This is often achieved by making the assumption that the overall distribution can be expressed as a mixture of a relevant and a non-relevant distribution.</s>
+			<s>The expectation-maximization (EM) algorithm is often adopted to learn the parameters.</s>
+		</context>
+		<context id="06" section="related work">
+			<s>There has been considerable recent interest in adopting machine learning based models to optimize and improve the ranked list truncation problem.</s>
+			<s cites="17">For instance, cascade-style IR systems [17] seek to achieve a balance between efficiency and effectiveness.</s>
+			<s cites="5">Notably, [5] investigates a number of machine learning approaches for learning dynamic cutoffs within cascade-style ranking systems.</s>
+			<s cites="9">Another recent study investigated how to leverage bidirectional Long Short-Term Memory (LSTM) models to identify the best position to truncate a given list [9].</s>
+			<s>This model, BiCut, can be considered the present state-of-the-art approach.</s>
+		</context>
+		<context id="07" section="related work">
+			<s cites="4">Our work is closely related to the task of query performance prediction [4].</s>
+			<s>In this task, the objective is to automatically determine the effectiveness of a given query.</s>
+			<s>This could be leveraged to determine the optimal set of results to the user for any given measure.</s>
+			<s cites="7,4,19,18">Methods for query performance prediction include pre-retrieval-based approaches [7], relevance-based approaches [4, 19], and neural approaches [18].</s>
+		</context>
+		<context id="08" section="related work">
+			<s>A system that determines the best number of results to display to users has the potential to benefit a wide number of applications.</s>
+			<s>For example, in sponsored search, displaying too many irrelevant ads to users may cause frustration, resulting in so-called query blindness.</s>
+			<s cites="3">This motivated research that investigated whether any ads should be displayed at all [3].</s>
+			<s cites="16">It is also easy to see that a similar and related problem formulation is to determine how many ads should be displayed to the users [16].</s>
+			<s cites="14">Moreover, determining the optimal number of ranked results is also important in a number of other IR applications such as legal e-discovery [14], where there is an significant financial or labor cost associated with reviewing results.</s>
+			<s cites="13,11">Finally, the ability to calibrate scores across queries and different corpora has also been studied in the context of federated search tasks [13] such as meta-search [11].</s>
+		</context>
+	</contexts>
+	<references>
+		<reference id="1">10.1145/1571941.1572031</reference>
+		<reference id="2">https://arxiv.org/abs/1607.06450</reference>
+		<reference id="3">10.1145/1458082.1458216</reference>
+		<reference id="4">10.1145/564376.564429</reference>
+		<reference id="5">10.1145/3015022.3015026</reference>
+		<reference id="6">10.1145/2983323.2983769</reference>
+		<reference id="7">10.1145/1458082.1458311</reference>
+		<reference id="8">10.1162/neco.1997.9.8.1735</reference>
+		<reference id="9">10.1145/383952.384005</reference>
+		<reference id="10">10.1145/383952.384005</reference>
+		<reference id="11">10.1145/502585.502657</reference>
+		<reference id="12">https://arxiv.org/abs/1511.06732</reference>
+		<reference id="13">10.1561/1500000010</reference>
+		<reference id="14">https://trec.nist.gov/pubs/trec16/papers/LEGAL.OVERVIEW16.pdf</reference>
+		<reference id="15">10.5555/3295222.3295349</reference>
+		<reference id="16">10.5555/2022850.2022892</reference>
+		<reference id="17">10.1145/2009916.2009934</reference>
+		<reference id="18">10.1145/3209978.3210041</reference>
+		<reference id="19">10.1145/1277741.1277835</reference>
+	</references>
+</doc>
