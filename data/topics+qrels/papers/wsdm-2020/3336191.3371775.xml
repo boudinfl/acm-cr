@@ -1,0 +1,119 @@
+<doc>
+	<doi>10.1145/3336191.3371775</doi>
+	<title>Separate and Attend in Personal Email Search</title>
+	<abstract>In personal email search, user queries often impose different requirements on different aspects of the retrieved emails. For example, the query "my recent flight to the US" requires emails to be ranked based on both textual contents and recency of the email documents, while other queries such as "medical history" do not impose any constraints on the recency of the email. Recent deep learning-to-rank models for personal email search often directly concatenate dense numerical features (e.g., document age) with embedded sparse features (e.g., n-gram embeddings). In this paper, we first show with a set of experiments on synthetic datasets that direct concatenation of dense and sparse features does not lead to the optimal search performance of deep neural ranking models. To effectively incorporate both sparse and dense email features into personal email search ranking, we propose a novel neural model, SepAttn. SepAttn first builds two separate neural models to learn from sparse and dense features respectively, and then applies an attention mechanism at the prediction level to derive the final prediction from these two models. We conduct a comprehensive set of experiments on a large-scale email search dataset, and demonstrate that our SepAttn model consistently improves the search quality over the baseline models.</abstract>
+	<contexts>
+		<context id="01" section="introduction">
+			<s>Email has long been an important means of daily communication.</s>
+			<s>Personal email search, which helps users to quickly retrieve the emails they are looking for from their own corpora, has been an intriguing research topic in information retrieval (IR) for years.</s>
+			<s cites="8,10,12,23,9,11">Email search is formulated as a learning-to-rank problem, which has been tackled with different learning models, such as boosted trees [8], SVM-based linear models [10, 12, 23], and shallow neural networks [9, 11].</s>
+		</context>
+		<context id="02" section="introduction">
+			<s>Recently, deep neural networks (DNNs) have shown great success in learning-to-rank tasks.</s>
+			<s cites="19,39,45,51">They significantly improve the performance of search engines in the presence of large-scale query logs in both web search [19] and email settings [39, 45, 51].</s>
+			<s cites="33,6">The advantages of DNNs over traditional models are mainly two-fold: (1) DNNs have strong power to learn embedded representations from sparse features, including words [33] and characters [6].</s>
+			<s>This allows effective and accurate matching of textual features between queries and documents.</s>
+			<s cites="21">(2) DNNs are proved to have universal approximation capability [21] and thus are able to capture high-order interactions between query and document features.</s>
+		</context>
+		<context id="03" section="introduction">
+			<s>In the personal email search scenario, user queries impose different requirements on different aspects of email documents to be retrieved.</s>
+			<s>For example, the query “my recent flight to the US” requires the email search system to focus on both the textual contents and the recency of email documents, while queries such as “medical history” expect emails to be retrieved regardless of the recency.</s>
+			<s>In email search models, different properties of email documents are reflected by different types of features, including dense numerical ones (e.g., document age) and sparse categorical ones (e.g., n-grams).</s>
+			<s>However, there have been few efforts that study how to effectively exploit both dense and sparse features in the learning-to-rank setting, probably because a natural approach exists—simply concatenating dense features with embedded sparse features and feeding them into the DNNs.</s>
+			<s cites="15,38,39,45">Indeed, many previous deep neural email search models use direct concatenation of dense features with embedded sparse features [15, 38, 39, 45].</s>
+		</context>
+		<context id="04" section="related work">
+			<s>Learning-to-rank refers to building ranking models with machine learning algorithms.</s>
+			<s cites="8,10,12,23,9,11">In early years, learning-to-rank has been studied with different models, such as boosted trees [8], SVM-based linear models [10, 12, 23] and shallow neural networks [9, 11].</s>
+			<s cites="7,15,36,38">Recent years have witnessed great success of applying DNNs to learning-to-rank, such as [7, 15, 36, 38].</s>
+			<s cites="34" anonymised="true">For a complete literature review on neural ranking models for information retrieval, please refer to a survey by [34].</s>
+		</context>
+		<context id="05" section="related work">
+			<s>There have been several studies in the IR community focusing on the task of email search.</s>
+			<s cites="40,41,14,31,35">The Enterprise tracks of TREC 2005 [40] and TREC 2006 [41] provide public datasets containing email data and summarize some early explorations [14, 31, 35].</s>
+			<s>A typical trade-off in email search system is to balance the importance of content-based relevance and other features, e.g. freshness.</s>
+			<s cites="12" anonymised="true">[12] proposed an email search framework with a learning-to-rank re-ranking module that combines freshness with relevance signals of emails as well as other features such as user actions.</s>
+			<s cites="13" anonymised="true">Alternatively, [13] studied to present users with both the relevance-ranked results as well as the time-ranked results in two separate lists for better user experience.</s>
+			<s>A number of studies specifically focus on improving the content-based relevance signals in email search.</s>
+			<s cites="27" anonymised="true">[27] explored several methods to expand the usually short and sparse queries by finding more related terms to improve the relevance results.</s>
+			<s cites="29" anonymised="true">[29] studied a more specific synonym expansion problem to improve email search performance.</s>
+		</context>
+		<context id="06" section="related work">
+			<s>User interaction data such as clicks is another important signal for learning-to-rank models in email search.</s>
+			<s cites="4" anonymised="true">[4] leveraged user interactions by attribute parameterization.</s>
+			<s cites="48" anonymised="true">[48] mitigated the position bias in click data for better training of the model.</s>
+			<s cites="51" anonymised="true">In addition, [51] showed that contexts such as search request time and location of users were helpful for email search quality.</s>
+		</context>
+		<context id="07" section="related work">
+			<s>There are also studies on understanding and leveraging query intent information in email search.</s>
+			<s cites="2" anonymised="true">[2] conducted a thorough survey of search intent by analyzing user logs of email search.</s>
+			<s cites="39" anonymised="true">[39] categorized email search queries into different clusters before adding the query cluster information to improve email ranking.</s>
+		</context>
+		<context id="08" section="related work">
+			<s>Recently, neural attention mechanisms have demonstrated enormous power on sequence modeling.</s>
+			<s>They derived the optimal sequence representation by learning to focus on the important tokens in the sequence and down-weighting unimportant ones for downstream tasks.</s>
+			<s cites="3" anonymised="true">The attention mechanism was first proposed by [3] in machine translation, where attention was used on top of RNN encoders for input-output alignment.</s>
+			<s cites="49,50,20,26,43">Later, the attention mechanism has been adapted to a wide range of compelling sequence modeling tasks, including image caption generation [49], text classification [50] and natural language question answering [20, 26, 43].</s>
+		</context>
+		<context id="09" section="related work">
+			<s>The above studies employ attention mechanism in conjunction with RNN or CNN models.</s>
+			<s cites="46" anonymised="true">[46] proposed the Transformer, which used self-attention along with positional encoding.</s>
+			<s cites="16" anonymised="true">Later, [16] proposed a deep bidirectional Transformer structure, BERT, which becomes one of the state-of-the-art pre-trained language models benefiting many downstream tasks with fine-tuning.</s>
+			<s cites="30" anonymised="true">The attention mechanism has also been generalized to attend to a group of structurally adjacent items instead of single ones, as studied by [30].</s>
+		</context>
+	</contexts>
+	<references>
+		<reference id="1">10.5555/3026877.3026899</reference>
+		<reference id="2">10.1145/3038912.3052615</reference>
+		<reference id="3">https://arxiv.org/abs/1409.0473</reference>
+		<reference id="4">10.1145/3018661.3018712</reference>
+		<reference id="5">10.1145/279943.279962</reference>
+		<reference id="6">10.1162/tacl_a_00051</reference>
+		<reference id="7">10.1145/2872427.2883033</reference>
+		<reference id="8">https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/MSR-TR-2010-82.pdf</reference>
+		<reference id="9">10.1145/1102351.1102363</reference>
+		<reference id="10">10.1145/1148170.1148205</reference>
+		<reference id="11">10.1145/1273496.1273513</reference>
+		<reference id="12">10.1145/2806416.2806471</reference>
+		<reference id="13">10.1145/3038912.3052659</reference>
+		<reference id="14">http://research.microsoft.com/users/nickcr/pubs/craswell_trec05.pdf</reference>
+		<reference id="15">10.1145/3077136.3080832</reference>
+		<reference id="16">10.18653/v1/N19-1423</reference>
+		<reference id="17">10.5555/1953048.2021068</reference>
+		<reference id="18">https://www.jstor.org/stable/2699986</reference>
+		<reference id="19">10.1145/2983323.2983769</reference>
+		<reference id="20">10.5555/2969239.2969428</reference>
+		<reference id="21">10.1016/0893-6080(91)90009-T</reference>
+		<reference id="22">10.1145/582415.582418</reference>
+		<reference id="23">10.1145/775047.775067</reference>
+		<reference id="24">10.1145/1150402.1150429</reference>
+		<reference id="25">https://arxiv.org/abs/1412.6980</reference>
+		<reference id="26">10.5555/3045390.3045536</reference>
+		<reference id="27">10.1145/3077136.3080660</reference>
+		<reference id="28">10.1038/nature14539</reference>
+		<reference id="29">10.1145/3331184.3331250</reference>
+		<reference id="30">http://proceedings.mlr.press/v97/li19e/li19e.pdf</reference>
+		<reference id="31">10.1145/1148170.1148312</reference>
+		<reference id="32">https://arxiv.org/abs/1911.01196</reference>
+		<reference id="33">10.5555/2999792.2999959</reference>
+		<reference id="34">https://arxiv.org/abs/1705.01509</reference>
+		<reference id="35">http://www.cs.cmu.edu/~pto/papers/TREC14_LM_KI_EMAIL.pdf</reference>
+		<reference id="36">10.1145/3132847.3132914</reference>
+		<reference id="37">10.1145/3292500.3330677</reference>
+		<reference id="38">10.1145/2766462.2767738</reference>
+		<reference id="39">10.1145/3269206.3272019</reference>
+		<reference id="40">https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=150642</reference>
+		<reference id="41">https://trec.nist.gov/pubs/trec15/papers/ENT06.OVERVIEW.pdf</reference>
+		<reference id="42">https://ojs.aaai.org/index.php/AAAI/article/view/11935/11794</reference>
+		<reference id="43">10.5555/2969442.2969512</reference>
+		<reference id="44">10.1142/S0218488502001648</reference>
+		<reference id="45">10.1145/3331184.3331204</reference>
+		<reference id="46">10.5555/3295222.3295349</reference>
+		<reference id="47">10.1145/2911451.2911537</reference>
+		<reference id="48">10.1145/3159652.3159732</reference>
+		<reference id="49">10.5555/3045118.3045336</reference>
+		<reference id="50">10.18653/v1/N16-1174</reference>
+		<reference id="51">10.1145/3038912.3052648</reference>
+		<reference id="52">None</reference>
+	</references>
+</doc>

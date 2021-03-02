@@ -1,8 +1,13 @@
--[1-6] URL
+-[1]	https://catalog.ldc.upenn.edu/LDC2011T07
+-[2]	https://www.gdeltproject.org
+-[3]	https://catalog.ldc.upenn.edu/LDC2008T19
+-[4]	https://www.wikipedia.org
+-[5]	https://www.wikidata.org
+-[6]	https://github.com/lemire/JavaFastPFOR
 [7]	10.14778/1453856.1453960	PVLDB-08
 -[8]	10.1007/978-3-319-38851-9_1	SEA-16
 -[9]	10.1016/j.tcs.2012.03.029	Theoretical Computer Science
--[10]	book
+-[10]	10.5555/500824
 -[11]	10.5555/643002.643006	Nordic Journal of Computing
 [12]	10.1145/1877766.1877767	TOIS
 [13]	10.14778/1920841.1921046	PVLDB-10
@@ -10,7 +15,7 @@
 [15]	10.1145/3269206.3271745	CIKM
 [16]	10.1145/3289600.3290618	WSDM
 [17]	10.1145/1142473.1142504	SIGMOD
--[18]	https://www.aclweb.org/anthology/P14-5010
+-[18]	https://www.aclweb.org/anthology/P14-5010.pdf
 [19]	10.1145/2063576.2063587	CIKM
 -[20]	10.1109/DASC.2009.65	DASC
 -[21]	10.1007/978-3-319-11749-2_13	WISE-14

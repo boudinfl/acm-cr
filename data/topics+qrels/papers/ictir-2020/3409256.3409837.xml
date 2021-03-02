@@ -1,0 +1,116 @@
+<doc>
+	<doi>10.1145/3409256.3409837</doi>
+	<title>Efficient Test Collection Construction via Active Learning</title>
+	<abstract>To create a new IR test collection at low cost, it is valuable to carefully select which documents merit human relevance judgments. Shared task campaigns such as NIST TREC pool document rankings from many participating systems (and often interactive runs as well) in order to identify the most likely relevant documents for human judging. However, if one's primary goal is merely to build a test collection, it would be useful to be able to do so without needing to run an entire shared task. Toward this end, we investigate multiple active learning strategies which, without reliance on system rankings: 1) select which documents human assessors should judge; and 2) automatically classify the relevance of additional unjudged documents. To assess our approach, we report experiments on five TREC collections with varying scarcity of relevant documents. We report labeling accuracy achieved, as well as rank correlation when evaluating participant systems based upon these labels vs. full pool judgments. Results show the effectiveness of our approach, and we further analyze how varying relevance scarcity across collections impacts our findings. To support reproducibility and follow-on work, we have shared our code online.</abstract>
+	<contexts>
+		<context id="01" section="introduction">
+			<s cites="23">Test collections provide the foundation for Cranfield-based evaluation of information retrieval (IR) systems [23].</s>
+			<s>Unfortunately, it has become increasingly expensive to manually judge so many documents as collection sizes have grown.</s>
+			<s>On the other hand, failing to collect sufficient relevance judgments can compromise evaluation reliability.</s>
+			<s cites="11">Even commercial search engines, despite their query logs, still rely on large teams of human assessors [11].</s>
+			<s>Consequently, there is great interest in developing more scalable yet reliable IR evaluation methodology.</s>
+		</context>
+		<context id="02" section="introduction">
+			<s>To create a new IR test collection at minimal cost, it is valuable to identify a minimal set of documents for human relevance judging.</s>
+			<s cites="10">This is typically accomplished by running a shared task campaign, such as NIST TREC, then pooling search results from many participating systems (and often interactive runs) to identify the most likely relevant documents for judging [10].</s>
+			<s>While this approach is now canonized in IR practice, organizing the community to run a shared task is complicated, slow, and requires many hours of work by organizers and participants.</s>
+			<s>This hidden, real-world cost may far exceed simple judging costs, which are often the only measure of cost reported.</s>
+			<s>This suggests a more complete accounting of cost ought to be considered, if not quantified, wrt. building IR test collections.</s>
+			<s cites="24">Shared tasks have many other benefits, but if one’s primary goal is merely to build a new test collection, it would be useful if this could be achieved without needing to run a shared task [24].</s>
+		</context>
+		<context id="03" section="introduction">
+			<s>In this paper, we investigate the following research question: how feasible is it to build a new test collection without a shared task, and how can one best accomplish this?</s>
+			<s cites="25">To this end, we explore active learning (AL) [25] methods to support test collection construction without reliance on shared task document rankings.</s>
+			<s>Rather than develop novel active learning algorithms, our focus in this work is the novel combination of active learning methods and inferred assessments for building test collections without running a shared task.</s>
+			<s>To the best of our knowledge, this has not previously been pursued in the literature.</s>
+		</context>
+		<context id="04" section="introduction">
+			<s>Our approach involves learning a topic-specific document classification model for each search topic.</s>
+			<s>We consider two distinct applications of AL.</s>
+			<s cites="6">Firstly, we apply AL to select which documents assessors should judge, and we explore two document selection strategies [6]: continuous active learning (CAL) and simple active learning (SAL).</s>
+			<s>Secondly, we consider use of AL to automatically classify relevance of additional unjudged documents.</s>
+			<s>This differs from traditional IR evaluation, which often ignores unjudged documents or assumes them to be non-relevant.</s>
+			<s cites="19">Moreover, the ability to use any hybrid combination of human and automatic judgments in evaluation provides a flexible tradeoff space for balancing cost vs. accuracy [19].</s>
+			<s cites="1,2,9,12,13">Though others have pursued automatic or semi-automatic relevance labeling [1, 2, 9, 12, 13], prior studies do not use AL for i) selecting documents for annotations and ii) inferring relevance labels for unjudged documents simultaneously in constructing IR test collections.</s>
+		</context>
+		<context id="05" section="introduction">
+			<s>Because AL is supervised, an initial seed set of labeled documents is needed to bootstrap learning.</s>
+			<s>We consider two distinct scenarios for how these seed judgments might be obtained: interactive search (IS) and Rank-based Document Selection (RDS).</s>
+			<s>We emphasize that these represent alternative scenarios rather than competing methods.</s>
+			<s>IS assumes topic assessors utilize an IS system during a careful topic creation process, as traditionally practiced in TREC.</s>
+			<s>This produces seed judgments as a free by-product.</s>
+			<s cites="4">RDS, on the other hand, assumes a scenario like the TREC Million Query Track [4] in which topic formation is extremely brief and assessors are not provided an IS system in which to explore the collection.</s>
+			<s>In this scenario, an off-the-shelf IR system is used instead to produce a single document ranking; assessors then judge documents in this rank-order until enough seed judgments have been collected to kickstart AL.</s>
+		</context>
+		<context id="06" section="related work">
+			<s cites="5">Ever-larger document collections challenge systems-based Cranfield [5] evaluation of IR systems due to needing to collect so many relevance judgments.</s>
+			<s>While many methods now exist to intelligently select which documents to judge, these methods typically assume a shared task context (e.g., TREC) in which document rankings from many participating systems are available.</s>
+			<s cites="24,26">In contrast, we want to be able to construct a new test collection without needing to run a shared task [24, 26].</s>
+		</context>
+		<context id="07" section="related work">
+			<s cites="1" anonymised="true">[1] propose labeling unjudged documents using a classifier trained on a subset of pool documents.</s>
+			<s>This subset of pool documents is developed by considering documents ranked by a subset of the submitted rank systems.</s>
+			<s>The trained classifier is then used to predict relevance labels of documents which are ranked by the remaining set of rank systems in the shared task.</s>
+			<s cites="6">We both report results for the same 2006 Terabyte Track run, but our results are not directly comparable to theirs because they assume a traditional machine learning setup, whereas we motivate and adopt the finite-pool evaluation setting proposed in [6].</s>
+			<s>However, we effectively reproduce their method as a baseline, using logistic regression and random document selection.</s>
+			<s>We show strong improvement over this baseline.</s>
+		</context>
+		<context id="08" section="related work">
+			<s cites="13,1" anonymised="true">While [13] use document rankings information in their own proposed method, they also reproduce [1]’s SVM method as a baseline, reporting results on the same WebTrack 2013 and 2014 collections we use in this study.</s>
+			<s cites="1" anonymised="true">However, as with [1], they do not evaluate their approach under a finite-pool scenario.</s>
+			<s>Though this means that our results are not directly comparable, our same baseline configuration described above roughly reproduces their SVM approach.</s>
+		</context>
+		<context id="09" section="related work">
+			<s cites="21,6">For AL document selection, we evaluate the same CAL and SAL methods [21] that [6] assess in the domain of e-discovery, where they focus on set-based rather than ranked retrieval.</s>
+			<s>Moreover, judging cost is also measured differently in e-discovery: no document can be “screened in” automatically since all must be reviewed for privilege following discovery.</s>
+			<s cites="8,7" anonymised="true">Recently, [8] propose a variant of “S-CAL” [7], which rather than selecting the highest-scoring documents for relevance judgment, randomly samples some documents from those the highest-scoring documents for annotation.</s>
+			<s>They report results on the collected human relevance judgments (e.g. TREC pool documents) but not hybrid judging.</s>
+		</context>
+		<context id="10" section="related work">
+			<s cites="2,3" anonymised="true">[2] apply [3]’s document selection method to iteratively collect relevance judgments.</s>
+			<s>Based on the cluster hypothesis, their per-topic logistic regression classifier estimates the probability of relevance of an unjudged document conditional on its similarity to other judged documents in the cluster (e.g. relevant and non-relevant document clusters).</s>
+			<s>A key difference with our work is that their document selection strategy relies on having run a shared task.</s>
+		</context>
+		<context id="11" section="related work">
+			<s cites="19,15" anonymised="true">Similarly, [19] investigate AL-based relevance judging in the domain of systematic-review in medicine, which bears much in common with e-discovery [15].</s>
+			<s>As above, AL is used to reduce labeling costs, but without intent to construct a test collection or evaluate IR systems based on automatic labels.</s>
+			<s>They also adopt a finite-pool evaluation setting, but unlike us, they use both trusted judges and crowds in combination for human judging.</s>
+		</context>
+		<context id="12" section="related work">
+			<s cites="22" anonymised="true">[22] develop a framework for constructing a test collection using an iterative process between updating nuggets and annotating documents.</s>
+			<s>However, because their automatic nugget extraction fails to extract nuggets from documents which are difficult to parse (e.g. TREC Web Track), the authors fall back to using document rankings from participating systems of a shared task evaluation.</s>
+			<s cites="17" anonymised="true">[17] also utilize a shared task by inducing a probability distribution from the participating systems and a probability distribution over the ranks of the documents.</s>
+			<s>They then actively sample documents from the joint distribution to construct an unbiased test collection.</s>
+		</context>
+	</contexts>
+	<references>
+		<reference id="1">10.1145/1277741.1277755</reference>
+		<reference id="2">10.1145/1321440.1321564</reference>
+		<reference id="3">10.1145/1148170.1148219</reference>
+		<reference id="4">10.1007/978-3-642-00958-7_27</reference>
+		<reference id="5">10.1108/eb050097</reference>
+		<reference id="6">10.1145/2600428.2609601</reference>
+		<reference id="7">10.1145/2983323.2983776</reference>
+		<reference id="8">10.1145/3209978.3210119</reference>
+		<reference id="9">https://www.semanticscholar.org/paper/Spam-Corpus-Creation-for-TREC-Cormack-Lynam/7cf22fc9f7bf4864e2170f0ac3ff3edc9dd7ed9c?p2df</reference>
+		<reference id="10">10.1145/290941.291009</reference>
+		<reference id="11">www.google.com/insidesearch/</reference>
+		<reference id="12">https://trec.nist.gov/pubs/trec25/papers/Overview-TR.pdf</reference>
+		<reference id="13">10.1007/978-3-319-23826-5_14</reference>
+		<reference id="14">10.2307/2332226</reference>
+		<reference id="15">https://www.ischool.utexas.edu/~ml/papers/lease-medir16.pdf</reference>
+		<reference id="16">10.5555/188490.188495</reference>
+		<reference id="17">10.1145/3132847.3133015</reference>
+		<reference id="18">https://www.aclweb.org/anthology/P11-1015.pdf</reference>
+		<reference id="19">https://ojs.aaai.org/index.php/HCOMP/article/view/13225</reference>
+		<reference id="20">10.1145/1008992.1009002</reference>
+		<reference id="21">10.1145/3308558.3313675</reference>
+		<reference id="22">10.1145/2396761.2396783</reference>
+		<reference id="23">10.1561/1500000009</reference>
+		<reference id="24">10.1145/1008992.1009001</reference>
+		<reference id="25">10.5555/3019233</reference>
+		<reference id="26">10.1145/2484028.2484190</reference>
+		<reference id="27">10.1016/S0306-4573(00)00010-8</reference>
+		<reference id="28">10.1145/1183614.1183633</reference>
+	</references>
+</doc>

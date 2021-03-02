@@ -1,0 +1,45 @@
+<doc>
+	<doi>10.1145/3409256.3409838</doi>
+	<title>Understanding BERT Rankers Under Distillation</title>
+	<abstract>Deep language models, such as BERT pre-trained on large corpora, have given a huge performance boost to state-of-the-art information retrieval ranking systems. Knowledge embedded in such models allows them to pick up complex matching signals between passages and queries. However, the high computation cost during inference limits their deployment in real-world search scenarios. In this paper, we study if and how the knowledge for search within BERT can be transferred to a smaller ranker through distillation. Our experiments demonstrate that it is crucial to use a proper distillation procedure, which produces up to nine times speedup while preserving the state-of-the-art performance.</abstract>
+	<contexts>
+		<context id="01" section="introduction">
+			<s cites="3">Deep language models, such as BERT [3] learned from large-scale corpora, have pushed the state-of-the-art of search ranking to a new level.</s>
+			<s cites="1">All top-performing teams in the TREC 2019 Deep Learning track used fine-tuned BERT for the final re-ranking stage [1].</s>
+			<s>Ranking with BERT is effective, but requires computation through multiple transformer layers, which is computationally complex.</s>
+			<s>We seek a faster model that preserves BERT-based ranking accuracy.</s>
+		</context>
+		<context id="02" section="introduction">
+			<s cites="5,9,10">Recent studies suggest that transformer models are over-parameterized and can be effectively compressed into smaller, faster transformer models through the process of distillation [5, 9, 10].</s>
+			<s>It is an open question how such distillation affects ranking accuracy.</s>
+		</context>
+		<context id="03" section="related work">
+			<s cites="3">Deep pre-trained language models (LM) are large neural networks trained on surrounding text signals from large text corpora [3].</s>
+			<s>These models can then be fine-tuned over other target tasks.</s>
+			<s cites="3,2,7">Notably, deep LMs such as BERT [3] have achieved state-of-the-art performance in several natural language tasks, including text search [2, 7].</s>
+			<s>In general, BERT rankers are trained by fine-tuning BERT over search logs, using query and passage as the two input sentences and making relevance prediction conditioned on the output sentence/word representations.</s>
+			<s>Using hundreds of millions of parameters, BERT learns rich language patterns that are useful for ranking.</s>
+			<s cites="8">However, the high complexity makes it computationally expensive to run BERT rankers at a large scale [8].</s>
+		</context>
+		<context id="04" section="related work">
+			<s cites="4" anonymised="true">To compress a large neural network, [4] propose distillation.</s>
+			<s>They use the large network as a teacher to train a small network (student) by minimizing the distance between the two models’ output prediction probability distributions.</s>
+			<s cites="5,10">Recently, a family of distillation algorithms have been proposed for distilling large teacher transformers to small student transformers [5, 10].</s>
+			<s cites="4,11" anonymised="true">Compared to [4], they also minimize the distance between student and teacher self attention distributions in the intermediate layers [11].</s>
+			<s>To the best of our knowledge, there is no prior work studying distilling BERT for search ranking.</s>
+		</context>
+	</contexts>
+	<references>
+		<reference id="1">https://trec.nist.gov/pubs/trec28/papers/OVERVIEW.DL.pdf</reference>
+		<reference id="2">10.1145/3331184.3331303</reference>
+		<reference id="3">10.18653/v1/N19-1423</reference>
+		<reference id="4">https://arxiv.org/abs/1503.02531</reference>
+		<reference id="5">10.18653/v1/2020.findings-emnlp.372</reference>
+		<reference id="6">https://arxiv.org/abs/1611.09268</reference>
+		<reference id="7">https://arxiv.org/abs/1901.04085</reference>
+		<reference id="8">https://arxiv.org/abs/1904.08375</reference>
+		<reference id="9">https://arxiv.org/abs/1910.01108</reference>
+		<reference id="10">10.18653/v1/D19-1441</reference>
+		<reference id="11">10.5555/3295222.3295349</reference>
+	</references>
+</doc>
