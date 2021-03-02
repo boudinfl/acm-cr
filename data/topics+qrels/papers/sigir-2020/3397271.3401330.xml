@@ -1,0 +1,41 @@
+<doc>
+	<doi>10.1145/3397271.3401330</doi>
+	<title>Sentiment-guided Sequential Recommendation</title>
+	<abstract>The existing sequential recommendation methods focus on modeling the temporal relationships of user behaviors and are good at using additional item information to improve performance. However, these methods rarely consider the influences of users' sequential subjective sentiments on their behaviors---and sometimes the temporal changes in human sentiment patterns plays a decisive role in users' final preferences. To investigate the influence of temporal sentiments on user preferences, we propose generating preferences by guiding user behavior through sequential sentiments. Specifically, we design a dual-channel fusion mechanism. The main channel consists of sentiment-guided attention to match and guide sequential user behavior, and the secondary channel consists of sparse sentiment attention to assist in preference generation. In the experiments, we demonstrate the effectiveness of these two sentiment modeling mechanisms through ablation studies. Our approach outperforms current state-of-the-art sequential recommendation methods that incorporate sentiment factors.</abstract>
+	<contexts>
+		<context id="01" section="introduction">
+			<s>In modern recommender systems such as Amazon and YouTube, users generate large amounts of sequential behavior and related information.</s>
+			<s>Therefore, processing a large number of sequential behaviors is not only required to meet the actual scenario but also presents a new challenge to the traditional recommendation techniques.</s>
+			<s cites="9">Fortunately, research on sequential recommendations that specifically model sequential behavior has yielded many fruitful results [9].</s>
+		</context>
+		<context id="02" section="introduction">
+			<s cites="2">As an initial attempt at applying deep learning to sequential recommendation, GRU4Rec [2] concatenates the behavior sequences of different users in a reasonable manner, thereby solving the difficult problem of uniformly modeling user behavior sequences of different lengths.</s>
+			<s cites="7">This method illustrates the important role of recurrent neural networks (RNNs) [7] in sequential recommendation.</s>
+			<s cites="3,12,5,11">Taking this research as a starting point, subsequent advanced approaches, such as memory-based RNNs [3, 12] and self-attention-based RNNs [5, 11], have taken sequential recommendation technology to a new level.</s>
+			<s cites="3,11">These advanced technologies not only complete the modeling of pure behavior (item) sequences but also fully characterize additional information such as knowledge [3] and features [11] related to items to improve the sequence prediction performance.</s>
+			<s cites="8">Some recent models based on the self-attention mechanism [8] perform particularly well in sequential recommendation.</s>
+			<s cites="5,11">For example, SASRec [5] effectively captures users’ long-term preferences from both sparse and dense data sets, and in FDSA [11], two separated self-attention blocks (one for item sequences and one for features) were designed that achieved remarkable predictive effects.</s>
+		</context>
+		<context id="03" section="introduction">
+			<s>Despite their enhanced performances, most existing methods consider only the objective information of sequential items; they rarely consider the subjective influence of human sentiments on sequential recommendation.</s>
+			<s>Specifically, there is a potential correlation between the temporal changes in a user’s sentiments and that user’s sequential behavior.</s>
+			<s cites="4,10">However, most of the existing models based on sentiment factors [4, 10] focus only on non-sequential recommendations.</s>
+			<s>In other words, they ignore the influence of the temporal sentiment change pattern on the sequence of user behavior; however, this temporal influence sometimes plays a decisive role in generating the final preference.</s>
+			<s>For example, under the influence of continuous positive sentiments, a user may review a series of purchased items positively; in contrast, under the influence of continuous negative sentiments, the same user is more likely to consume some items that can usher in a good mood.</s>
+		</context>
+	</contexts>
+	<references>
+		<reference id="1">https://arxiv.org/abs/1904.10509</reference>
+		<reference id="2">https://arxiv.org/abs/1511.06939</reference>
+		<reference id="3">10.1145/3209978.3210017</reference>
+		<reference id="4">10.1145/3209978.3210111</reference>
+		<reference id="5">10.1109/ICDM.2018.00035</reference>
+		<reference id="6">https://www.aclweb.org/anthology/P14-5010.pdf</reference>
+		<reference id="7">10.1145/2988450.2988452</reference>
+		<reference id="8">10.5555/3295222.3295349</reference>
+		<reference id="9">https://www.ijcai.org/Proceedings/2019/0883.pdf</reference>
+		<reference id="10">10.1016/j.neunet.2018.12.011</reference>
+		<reference id="11">https://www.ijcai.org/Proceedings/2019/0600.pdf</reference>
+		<reference id="12">10.1109/ACCESS.2020.2991093</reference>
+	</references>
+</doc>
