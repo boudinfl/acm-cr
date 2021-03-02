@@ -1,0 +1,61 @@
+<doc>
+	<doi>10.1145/3409256.3409819</doi>
+	<title>Permutation Equivariant Document Interaction Network for Neural Learning to Rank</title>
+	<abstract>How to leverage cross-document interactions to improve ranking performance is an important topic in information retrieval research. The recent developments in deep learning show strength in modeling complex relationships across sequences and sets. It thus motivates us to study how to leverage cross-document interactions for learning-to-rank in the deep learning framework. In this paper, we formally define the permutation equivariance requirement for a scoring function that captures cross-document interactions. We then propose a self-attention based document interaction network that extends any univariate scoring function with contextual features capturing cross-document interactions. We show that it satisfies the permutation equivariance requirement, and can generate scores for document sets of varying sizes. Our proposed methods can automatically learn to capture document interactions without any auxiliary information, and can scale across large document sets. We conduct experiments on four ranking datasets: the public benchmarks WEB30K and Istella, as well as Gmail search and Google Drive Quick Access datasets. Experimental results show that our proposed methods lead to significant quality improvements over state-of-the-art neural ranking models, and are competitive with state-of-the-art gradient boosted decision tree (GBDT) based models on the WEB30K dataset.
+</abstract>
+	<contexts>
+		<context id="01" section="introduction">
+			<s cites="11">While much of the research in LTR has been devoted to the evolution of ranking loss functions [11], the nature of the learned scoring function has largely remained the same: a univariate scoring function that computes a relevance score for a document in isolation.</s>
+			<s>How to capture cross-document interactions is a promising but less well-studied research topic in LTR.</s>
+			<s>Naturally, when cross-document interactions are considered in a model, the score of each individual document is influenced by other documents that are scored together.</s>
+			<s>A desired property for such a model is being permutation equivariant, that is, the score of each document should not be affected by the order of the input documents, and shuffling the input documents produces an identical shuffle on the output scores.</s>
+		</context>
+		<context id="02" section="introduction">
+			<s cites="4,14,15">Recently, neural network based approaches have proven effective for LTR applications [4, 14, 15].</s>
+			<s>In this context, we formally define the permutation equivariance requirement for a scoring function that models cross-document interactions.</s>
+			<s cites="17">We propose a novel self-attentive Document Interaction Network (attn-DIN) that extends any univariate scoring function to combine query-document features with contextual cross-document features generated from a self-attention mechanism [17], and show that it not only satisfies the permutation equivariance requirement, but also applies to the ranking setting where queries may have varying number of documents.</s>
+			<s>We conduct our experiments on four ranking datasets: benchmarks WEB30K and Istella, a Gmail search dataset, and a Google Drive Quick Access dataset.</s>
+			<s>The first three are in a search setting, and the last one is in a recommendation setting.</s>
+			<s>On all of them, our proposed method significantly improves over neural network baselines.</s>
+		</context>
+		<context id="03" section="related work">
+			<s cites="11">Most of the previous work in LTR [11] focuses on designing loss functions, ranging from pointwise to pairwise to listwise ones.</s>
+			<s cites="10">Gradient Boosted Decision Trees (e.g., [10]) are regarded as the state-of-the-art models for LTR on benchmark datasets.</s>
+			<s cites="8,12">Recently, neural network based models have attracted considerable attention [8, 12].</s>
+		</context>
+		<context id="04" section="related work">
+			<s>There are two settings for modeling cross-document interactions: re-ranking and full ranking.</s>
+			<s>In the former setting, a base ranking is provided and the documents are reordered using the ranker.</s>
+			<s cites="1">For example, [1] applies sequence modeling on the top k documents of the base ranking and then uses the final state vector to enrich each document for the re-ranking scoring.</s>
+			<s>In the latter setting, we do not have a base ranking but start with a set of documents.</s>
+			<s cites="6,2" anonymised="true">For example, RankProb [6] takes a pair of documents as input and uses a DNN to produce a preference score for the input documents, while [2] propose a groupwise scoring function to model document interactions, sampling a subset of all permutations of each group and thus not guaranteeing permutation equivariance.</s>
+		</context>
+		<context id="05" section="related work">
+			<s>Using attention mechanisms for ranking has been explored by several works.</s>
+			<s cites="16,18,17" anonymised="true">[16] and [18] use RNN-based approaches, whereas this paper uses Transformer self-attention [17].</s>
+			<s cites="18">AttRN [18] also uses an attention mechanism to capture listwise interactions, but the final ranking is generated by selecting documents one by one sequentially, making it sensitive to the input document order, and hence not applicable to full set ranking.</s>
+			<s cites="13">SetRank [13] is a recent approach that uses attention for cross-document interactions, and is subsumed by our method.</s>
+		</context>
+	</contexts>
+	<references>
+		<reference id="1">10.1145/3209978.3209985</reference>
+		<reference id="2">10.1145/3341981.3344218</reference>
+		<reference id="3">10.1145/3336191.3371844</reference>
+		<reference id="4">10.1145/3331184.3331347</reference>
+		<reference id="5">10.1145/1102351.1102363</reference>
+		<reference id="6">10.1145/3077136.3080832</reference>
+		<reference id="7">10.5555/1953048.2021068</reference>
+		<reference id="8">10.1016/j.ipm.2019.102067</reference>
+		<reference id="9">10.1145/582415.582418</reference>
+		<reference id="10">10.5555/3294996.3295074</reference>
+		<reference id="11">10.1561/1500000016</reference>
+		<reference id="12">10.1145/3038912.3052579</reference>
+		<reference id="13">10.5555/3016100.3016292</reference>
+		<reference id="14">10.1145/3397271.3401104</reference>
+		<reference id="15">10.1145/3292500.3330677</reference>
+		<reference id="16">https://www.aclweb.org/anthology/C16-1163.pdf</reference>
+		<reference id="17">10.5555/3295222.3295349</reference>
+		<reference id="18">https://arxiv.org/abs/1702.06106</reference>
+		<reference id="19">10.1145/3397271.3401333</reference>
+	</references>
+</doc>
