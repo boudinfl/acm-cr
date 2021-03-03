@@ -125,7 +125,7 @@ Below is the list of papers used for generating queries.
 ├── wsdm-2020 (6 papers)
     ├── 3336191.3371775.pdf (x)
     ├── 3336191.3371785.pdf (x*)
-    ├── 3336191.3371814.pdf
+    ├── 3336191.3371814.pdf (a)
     ├── 3336191.3371820.pdf
     ├── 3336191.3371844.pdf
     ├── 3336191.3371855.pdf

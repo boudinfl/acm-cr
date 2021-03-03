@@ -1,0 +1,66 @@
+<doc>
+	<doi></doi>
+	<title></title>
+	<abstract></abstract>
+	<contexts>
+		<context id="01" section="introduction">
+			<s>Learning-to-rank is one of the most classical research topics in information retrieval, and researchers have put tremendous efforts into modeling ranking behaviors.</s>
+			<s>In training, existing ranking models learn a scoring function from query-document features and multi-level ratings/labels, e.g., 0, 1, 2.</s>
+			<s>During inference, the learned scoring function is used to obtain prediction scores for ordering documents.</s>
+			<s>There are two major challenges for learning-to-rank.</s>
+			<s>The first challenge is that there can be a mismatch between ratings and the correct ranking orders in training.</s>
+			<s>Although it is straightforward to infer partial ranking orders from ratings and prediction scores, it is not easy to design loss functions modeling the order of ratings and the order of prediction scores.</s>
+			<s>Many prediction scores indicate the same ranking, i.e., the order of documents.</s>
+			<s>This implies that a model does not necessarily have to match ratings, opening opportunities and ambiguities.</s>
+			<s>Moreover, the top ranking positions are more important.</s>
+			<s>The second challenge is that raw features may not be representative enough for learning a reasonable scoring function.</s>
+			<s cites="24,10,1,3,5,18,38">Existing ranking models tackle the two challenges by: (1) designing loss functions or reward functions to map prediction scores with correct ranking orders in training, and (2) tuning loss functions with evaluation metrics such as NDCG [24], or ERR [10], and (3) calculating prediction scores using richer features such as a local ranking context [1, 3, 5, 18, 38].</s>
+		</context>
+		<context id="02" section="introduction">
+			<s>Depending on how prediction scores in training are compared with ratings, there are three types of loss functions: pointwise, pairwise, and listwise.</s>
+			<s cites="31">Pointwise learning maps the prediction scores of individual documents with their exact ratings [31], which is not necessary for obtaining correct orders.</s>
+			<s cites="7,8,14,20,28,43,44,46,50">Pairwise learning [7, 8, 14, 20, 28, 43, 44, 46, 50] naturally compares pairs of documents to minimize the number of inversions.</s>
+			<s cites="20,14,7,28">Earlier pairwise models such as RankSVM [20], RankBoost [14], RankNet [7], and Ordinal Regression [28] may overly update weights for different pairs as they treat all pairs with equal importance.</s>
+			<s>For instance, suppose the correct order is (a -> b -> c -> d).</s>
+			<s>When a pairwise model catches an inversion (c -> b) in a predicted order (a -> c -> b -> d), it tries to update weights to increase the score of b and decrease the score of c.</s>
+			<s>However, if the score of b becomes too high – higher than a – this causes another inversion (b, a).</s>
+			<s cites="8,22,43,46,8">LambdaMart [8, 22, 43] and NDCG-LOSS++ [46] largely limit this issue by assigning different weights for different pairs when calculating their gradients [8].</s>
+			<s cites="11,26,35">Their best models rely on using gradient boosting regression trees [11, 26, 35], which are effective but very sensitive to hyper-parameters.</s>
+			<s cites="9,17,25,27,34,36,45,48,40,32" anonymised="true">Listwise learning [9, 17, 25, 27, 34, 36, 45, 48] tries to learn the best document permutation based on permutation probabilities proposed by [40] and [32].</s>
+			<s>The classical Plackett-Luce model has a constraint that the permutation probabilities are targeted for unique ratings.</s>
+			<s>For instance, maximizing the likelihood of choosing a document from a set of documents that have the same rating can confuse a model.</s>
+			<s>Since the number of unique rating levels is typically much smaller than the number of candidate documents per query, there can be a large number of ties.</s>
+			<s cites="48">Also, in order to calculate the joint probability of a ranking sequence, the number of steps a Plackett-Luce model, such as ListMLE [48], needs to go through is bound by the number of candidate documents per query.</s>
+			<s>Therefore, obtaining one permutation can be computationally inefficient.</s>
+			<s>Furthermore, top documents are more important, but each step of a Plackett-Luce model is equally important along the entire sequence.</s>
+			<s cites="45,27,6">Variants such as SoftRank [45], p-ListMLE [27], and ApproxNDCG [6] use NDCG or ranking positions to tune their loss functions.</s>
+			<s>Nevertheless, when the number of documents in a permutation is large, gradients can vanish or explode very fast as the product of their permutation probabilities is close to 0.</s>
+			<s cites="2,16,31,1,13,30,33,37,47,49">Highlights from research studies in recent years for scoring functions include ensemble scoring functions [2, 16, 31], ranking refinement [1], and reinforcement learning [13, 30, 33, 37, 47, 49].</s>
+			<s>Despite being effective, training efficiency is still their common bottleneck, which limits their usage in real-world applications.</s>
+		</context>
+		<context id="03" section="related work">
+			<s cites="9">ListNet Since learning the complete n! permutations is intractable, ListNet [9] generally minimizes the cross-entropy of top-one probabilities of prediction scores and ratings using a softmax function.</s>
+			<s>Given a set of n documents for a specific query D = {di}i , their ratings Y = {yi}i , and a global scoring function f, the loss function for ListNet using top-one probabilities is.</s>
+		</context>
+		<context id="04" section="related work">
+			<s>A correct ranking sequence satisfies the property that for any two documents di and dj, if the rating of di is higher than the rating dj, di is ranked before dj in the ordered sequence.</s>
+			<s cites="23">Since there can be ties in ratings, a sampling method of selecting a correct sequence is generally used [23].</s>
+			<s>A ListMLE model does not have the crossentropy issue but can suffer from sampling n! correct orders when all documents have the same rating.</s>
+			<s>More importantly, when n is large the likelihoods at the top positions become very small, which leads to imbalance gradient updates for documents ranked at different positions.</s>
+		</context>
+		<context id="05" section="related work">
+			<s>The Vanilla RNN model takes a sequence of feature vectors X = (xt)t as input, where xt indicates the feature vector of the document at step t, and computes the hidden output ht at each step.</s>
+			<s>We use ht = rnn(xt,ht−1,W) in this paper to represent an RNN function, where W is a set of trainable weight matrices.</s>
+			<s>Although RNNs can learn the conditional/hidden transitions, it is intractable to apply an RNN to the complete order of documents for a query because of the following two reasons.</s>
+			<s>(1) Some documents have the same rating due to ties.</s>
+			<s>(2) Training a long sequence can be time and memory consuming.</s>
+			<s cites="21,12">It still easily suffers gradient vanishing even if it utilizes more advanced RNN models such as a Long Short-term Memory network (LSTM) [21] or a Gated Recurrent Unit network (GRU) [12].</s>
+			<s cites="1">A common practice of applying RNNs in learning-to-rank is by refining the top positions of a ranked list using two training phases [1].</s>
+			<s>The novelty of our RNN-based model is that we apply RNN and pooling functions to multiple documents at each step.</s>
+		</context>
+	</contexts>
+	<references>
+		<reference id="1"></reference>
+		<reference id="2"></reference>
+	</references>
+</doc>
