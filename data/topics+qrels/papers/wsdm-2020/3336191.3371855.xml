@@ -1,0 +1,52 @@
+<doc>
+	<doi></doi>
+	<title></title>
+	<abstract></abstract>
+	<contexts>
+		<context id="01" section="introduction">
+			<s>By connecting users to relevant products across the vast range available on e-commerce platforms, modern recommender systems are already ubiquitous and critical on both sides of the market, i.e., consumers and product sellers.</s>
+			<s cites="13,17,20,25">Among recommendation algorithms used in practice, many fall under the umbrella of collaborative filtering [13, 17, 20, 25], which collect and generalize users’ preference patterns from logged consumer-product interactions (e.g. purchases, ratings).</s>
+			<s>These feedback interactions can be biased by multiple factors, potentially surfacing unfair (or irrelevant) recommendations to users or items underrepresented in the input data.</s>
+			<s cites="26,29,3,6">Such phenomena have already raised some attention from the recommender system community: a handful of types of algorithmic biases have been addressed, including selection bias [26], popularity bias [29], and several fairness-aware recommendation algorithms have been proposed [3, 6].</s>
+			<s>In this paper, we focus on a relatively underexplored factor—marketing bias—in consumer-product interaction data, and study how recommendation algorithms respond to its effect.</s>
+		</context>
+		<context id="02" section="introduction">
+			<s cites="5,11,12">We are particularly interested in the human factors, such as the profile of the human model in a product image, reflected in a product’s marketing strategies, which (as indicated in previous marketing studies) could possibly affect consumers’ interactions and satisfaction [5, 11, 12].</s>
+			<s cites="12">A common hypothesis (known as ‘selfcongruence’) is that a consumer may tend to buy a product because its public impression (in our case a product image), among other alternatives, is consistent with one’s self-perceptions (user identity) [12].</s>
+			<s>Based on this assumption, the selection of human models for a product (as shown in Figure 1, a product can be represented by models with different body shapes or different genders) could influence a consumer’s behavior.</s>
+			<s>For example, a female user may be less likely to interact with an armband product which is presumably gender-neutral but marketed exclusively via ‘male’ images.</s>
+			<s>As with many other types of bias, this could lead to underrepresentation of some niche market segments in the input data for a recommender system.</s>
+			<s>Note if undesired patterns are propagated into recommendation results (e.g. even fewer male-represented products are recommended to the potential female users), utility from both sides of the marketplace could be harmed.</s>
+			<s>That is, product retailers may lose potential consumers while users may be struggling to find relevant products.</s>
+			<s>As a consequence, serious ethical and social concerns could be raised as well.</s>
+		</context>
+		<context id="03" section="related work">
+			<s cites="5,11,12">This work is partially motivated by the well-known ‘self-congruity’ theory in marketing research, which is defined as the match between the product/brand image and the consumer’s true identity and the perception about oneself [5, 11, 12].</s>
+			<s cites="18,21,27,28">Many previous marketing studies focus on assessing this theory by quantifying and validating it through statistical analysis on a small amount purchase transaction data or the feedback in questionnaires [18, 21, 27, 28].</s>
+			<s cites="10">Following self-congruity theory, products can be advertised in a way to match their target consumers’ images thus establishing product stereotypes [10].</s>
+			<s>Our work is distinguished with these studies from a more computational perspective, by identifying and studying the potential marketing bias for recommender systems on large-scale e-commerce interaction datasets.</s>
+		</context>
+		<context id="04" section="related work">
+			<s cites="14,7,31">Our analysis is related to previous work which examines particular types of biases in real-world interactions and their effects in recommendation algorithms, including the popularity effect and catalog coverage [14], the bias regarding the book author gender for book recommenders [7], and the herding effect in product ratings [31].</s>
+		</context>
+		<context id="05" section="related work">
+			<s>Another closely related line of work includes developing evaluation metrics and algorithms to address fairness issues in recommendations.</s>
+			<s cites="15,26">‘Unbiased’ recommender systems with missing-not-at-random training data are developed by considering the propensity of each item [15, 26].</s>
+			<s cites="32">A fairness-aware tensor-based algorithm is proposed to address the absolute statistical parity (i.e., items are expected to be presented at the same rate across groups) [32].</s>
+			<s cites="6,30,3">Several fairness metrics and their corresponding algorithms are proposed for both pointwise prediction frameworks [6, 30] and pairwise ranking frameworks [3].</s>
+			<s cites="6,15,26,1,3,30">Methodologically, these algorithms can be summarized as reweighting schemes where underrepresented samples are upweighted [6, 15, 26] or schemes where additional fairness terms are added to regularize the model [1, 3, 30].</s>
+		</context>
+		<context id="06" section="related work">
+			<s>Note that most of the above studies focus on bias and fairness on one side of the market only (i.e., either user or producer).</s>
+			<s>Our concern about marketing bias is that it could affect fairness for both consumers and product providers.</s>
+			<s>Without global market fairness in mind, the imbalance of the consumer-product segment distribution could be exacerbated through the deployment of recommendation algorithms.</s>
+			<s cites="3" anonymised="true">Multi-sided fairness is addressed by [3] by considering C(onsumer)-fairness and P(rovider)-fairness.</s>
+			<s cites="22">Trade-off between accuracy and fairness in two-sided marketplaces is further explored and a counterfactual framework is proposed to evaluate different recommendation policies without extensive A/B tests [22].</s>
+			<s>However the CP-fairness condition where fairness is protected for both sides at the same time still remains an open question.</s>
+		</context>
+	</contexts>
+	<references>
+		<reference id="1"></reference>
+		<reference id="2"></reference>
+	</references>
+</doc>
