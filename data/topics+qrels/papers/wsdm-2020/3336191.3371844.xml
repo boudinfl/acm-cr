@@ -1,0 +1,52 @@
+<doc>
+	<doi></doi>
+	<title></title>
+	<abstract></abstract>
+	<contexts>
+		<context id="01" section="related work">
+			<s cites="4,5,7,20,21,25,40">Learning-to-rank algorithms generally address the ranking problem using a score-and-sort approach [4, 5, 7, 20, 21, 25, 40].</s>
+			<s>The goal is to learn a scoring function to compute relevance scores which, in turn, induce a ranking.</s>
+			<s>In its most general form, the domain of learning-to-rank functions is a set rather than a single item.</s>
+			<s cites="1,10,33">However, virtually all learning-to-rank methods with a few exceptions [1, 10, 33] simplify the problem further by learning a univariate function that produces a relevance score for a document independently of other documents in the input set.</s>
+		</context>
+		<context id="02" section="related work">
+			<s cites="20,4">It is true then that learning-to-rank can be formulated as classification or regression—in fact, many early learning-to-rank methods such as RankSVM [20] or RankNet [4] take a very similar approach.</s>
+			<s cites="13,4,5,20">These algorithms reduce the ranking problem to one of correctly predicting relevance scores by optimizing a “pointwise” loss [13] or correctly classifying ordered pairs of documents by optimizing a “pairwise” loss [4, 5, 20].</s>
+			<s>These simplified reformulations of learning-to-rank are, however, misaligned with the ranking utilities.</s>
+		</context>
+		<context id="03" section="related work">
+			<s cites="19,9">Ranking utilities such as Normalized Discounted Cumulative Gain [19] or Expected Reciprocal Rank [9] work with permutations (i.e., ranked lists) which are discrete structures.</s>
+			<s>As a result, ranking utilities, as a function of a set of input documents, are flat almost everywhere and discontinuous at some finite set of points.</s>
+		</context>
+		<context id="04" section="related work">
+			<s>The non-smoothness of ranking utilities pose a challenge that the learning-to-rank community has sought to study.</s>
+			<s cites="29,41,7,32,36,38,40">The literature offers a range of methods from direct optimization of metrics using coordinate ascent over parameters of linear models [29], to optimizing an exponential upper-bound of ranking metrics using boosted weak learners [41], to optimizing a differentiable surrogate loss function [7, 32, 36, 38, 40].</s>
+			<s cites="6,12,39">Other methods, such as LambdaRank [6] and its gradient boosted regression tree-based [12] variant LambdaMART [39], assume the existence of an unknown loss function whose gradients are however designed based on some heuristic.</s>
+			<s>The list of so-called “listwise” algorithms goes on but the individual methods fall into one of the above categories.</s>
+		</context>
+		<context id="05" section="related work">
+			<s>Despite these differences, existing listwise learning-to-rank algorithms agree on one element: scores computed by the learned scoring function are deterministically mapped to a ranked list by way of a sort operation.</s>
+			<s cites="36">One exception is SoftRank [36].</s>
+			<s cites="36" anonymised="true">[36] consider a score to be the mean of a Gaussian distribution.</s>
+			<s>With scores being smooth in this way, they go on to estimate position distributions and ultimately define a smoothed version of ranking metrics.</s>
+			<s>We note that while our work bears some superficial resemblance with SoftRank, our approach is fundamentally different: SoftRank considers each score to itself be a Gaussian distribution—an arbitrary choice—whereas in this work, we take a set of scores to define a distribution from which a permutation may be sampled.</s>
+			<s>Furthermore, our method is efficient while in SoftRank, estimating position distributions given score distributions requires an inefficient construction.</s>
+		</context>
+		<context id="06" section="related work">
+			<s cites="16">Another work that uses additive noise is YetiRank [16].</s>
+			<s>In particular, YetiRank perturbs relevance scores by a noise sampled from the Logistic distribution, and uses the perturbed scores to weight document pairs.</s>
+			<s>YetiRank is different from our work in the following ways: (a) while the authors demonstrated that additive noise results in an improved model, the use of Logistic distribution was not justified, whereas in this work we mathematically motivate the use of the Gumbel distribution; and (b) YetiRank uses noise to identify and re-weight document pairs, whereas our methodology could be used to sample from the space of permutations, thereby presenting a more general, ranking-appropriate framework.</s>
+		</context>
+		<context id="07" section="related work">
+			<s cites="38">Finally, another related work is the LambdaLoss framework [38].</s>
+			<s cites="38" anonymised="true">[38] propose a probabilistic framework to model ranking loss functions and show that existing ranking losses are instances of LambdaLoss.</s>
+			<s>One term in LambdaLoss captures the probability of a permutation given a set of scores , p(π|f(x)).</s>
+			<s cites="38" anonymised="true">In their work, however, [38] use a degenerate distribution where this probability is 1 for a permutation (deterministically) obtained by sorting scores in decreasing order.</s>
+			<s>Our proposed stochastic framework allows one to construct a non-degenerate distribution over permutations, from which a permutation may be sampled directly and efficiently.</s>
+		</context>
+	</contexts>
+	<references>
+		<reference id="1"></reference>
+		<reference id="2"></reference>
+	</references>
+</doc>
