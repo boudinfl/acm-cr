@@ -1,0 +1,78 @@
+<doc>
+	<doi></doi>
+	<title></title>
+	<abstract></abstract>
+	<contexts>
+		<context id="01" section="introduction">
+			<s>Modern search engines usually have multiple processing stages in their systems.</s>
+			<s>A typical flow has a retrieval stage followed with a ranking stage, where the retrieval stage selects N documents and passes them to the ranking stage.</s>
+			<s>The ranking stage often employs a machine learning model based on query, document, and user features.</s>
+			<s>In this work, we present a parameter tuning approach which can be used for either stage.</s>
+			<s cites="3,8">This approach is especially impactful for the retrieval stage – while a large amount of work focuses on optimizing the parameters of the ranking stage, relatively little work [3, 8] covers parameter tuning at the retrieval stage.</s>
+		</context>
+		<context id="02" section="introduction">
+			<s cites="26">Whereas retrieval work in the literature primarily studies approaches such as BM25 [26], search engines in industry have an entirely different set of challenges.</s>
+			<s>Commercial web search engines have been developed for decades by many engineers.</s>
+			<s>The various search system components quickly become complicated and typically have numerous parameters to be tuned.</s>
+			<s cites="7,13">As [7, 13] note that even small variations in parameters of information retrieval systems lead to large variations in retrieval effectiveness, it motivates thoroughly tuning parameters.</s>
+			<s>Another motivation for this work comes from infrastructure reuse in commercial settings, which leads to the same retrieval system being used for multiple applications and not tuned optimally for each one.</s>
+		</context>
+		<context id="03" section="introduction">
+			<s cites="22,17">Given that an industrial search system can be very complex, a natural and common approach for parameter tuning is to treat the entire system as a black box and run A/B experiments with either some sort of parameter sweep (e.g. grid search, coordinate ascent) [22] or black-box optimization [17] over various parameters in a guess-and-check manner.</s>
+			<s>The drawback to this is that 1) the user experience can be degraded due to exposure to poor quality results, 2) separate online experiments are required for each test set of parameters, and 3) the tuning process can take months.</s>
+		</context>
+		<context id="04" section="introduction">
+			<s cites="21">Offline tuning using a validation set is another option [21].</s>
+			<s>For instance, as the retrieval component of a search system usually works with query strings and document contents directly, offline tuning in this setting involves collecting raw queries and historical click data and simulating how retrieval effectiveness changes when utilizing different parameters.</s>
+			<s cites="2,5,12,28">However, in the personal search setting [2, 5, 12, 28], where both queries and documents are private, building a representative validation set is a challenge, as it involves either relying upon donated data (which can be limited and biased) or utilizing a validation set that only contains partial information (where any sensitive raw data is not logged).</s>
+			<s>In this paper, we introduce a methodology for utilizing a partial validation set to do parameter tuning for the personal search setting.</s>
+		</context>
+		<context id="05" section="introduction">
+			<s>Compounding the problem of performing parameter tuning with only a partial validation set is the complexity and uncertainty of the underlying retrieval system.</s>
+			<s>As mentioned above, retrieval and ranking components in commercial systems can become quite complicated, especially over the years as new features continue to be added.</s>
+			<s cites="24">Because of this, the inner workings of certain components of the search system can be treated as unknown or hidden, and can effectively be thought of as a grey-box system [24] (as opposed to a white-box system where the internals are completely known and a black-box system where nothing is known).</s>
+			<s>With a partial validation set and uncertainty about the system, it becomes difficult to simulate offline how the results would have been ordered if different parameters had been chosen.</s>
+			<s>The more uncertainty there is about the system, the fewer approaches there are for performing parameter tuning.</s>
+		</context>
+		<context id="06" section="related work">
+			<s cites="7,13,27">[7, 13] discuss the importance of parameter tuning, and [27] gives more insight into the difficulty of parameter management.</s>
+			<s>Since new features are often added to search systems to improve the performance of retrieval functions, these features often increase the number of parameters which makes it more challenging to find optimal parameter values.</s>
+		</context>
+		<context id="07" section="related work">
+			<s>The majority of work regarding parameter tuning is for blackbox systems, where no knowledge of the internal implementation is known.</s>
+			<s>For these approaches, given an unknown function f, we are allowed to evaluate f(x) for any value x ∈ X in an effort to maximize (or minimize) f(x).</s>
+			<s cites="11,17,19">Typical approaches include Bayesian optimization [11, 17] as well as hybrid methods using random search alongside multi-armed bandit techniques [19].</s>
+			<s cites="17">In particular, [17] discusses how Bayesian optimization can be used for optimizing retrieval systems.</s>
+			<s>These approaches generally assume some prior belief over f and draw samples to get a posterior that better approximates f.</s>
+			<s cites="15">Other Bayesian optimization work consists of that of [15], which remarks on the importance of determining the impactfulness of different hyperparameters in order to reduce the exploration needed and speed up the optimization process.</s>
+			<s>Bayesian optimization techniques differ from our work as our work assumes some (though incomplete) knowledge about the function f is known.</s>
+		</context>
+		<context id="08" section="related work">
+			<s cites="4,16,20">There has been significant recent work in how parameter tuning can be done better by leveraging knowledge of the internal implementation [4, 16, 20].</s>
+			<s>If we have full knowledge of the internals of a search system, we would have a white-box system.</s>
+			<s cites="24">If we have partial knowledge, then we would consider it a grey-box system [24].</s>
+		</context>
+		<context id="09" section="related work">
+			<s cites="16">For white-box parameter tuning, [16] investigate tuning the parameters of existing programs.</s>
+			<s>They assume full knowledge of program stages is available and provide a library where the user can have flexible access to internal program states in order to specify how tuning can be done (e.g. what range of values should be explored and how many samples to generate).</s>
+			<s>Their approach leverages independence between computation stages to reduce the search space of parameters.</s>
+			<s>They demonstrate that their approach beats general black box tuning.</s>
+			<s cites="1">In the field of automated algorithm design, [1] show that using a white box approach and exploiting internal knowledge of algorithm evaluation functions allows for faster optimization.</s>
+		</context>
+		<context id="10" section="related work">
+			<s cites="20">For grey-box systems, [20] uses system-level monitoring information in conjunction with standard hill climbing algorithms to significantly improve MapReduce application performance.</s>
+			<s cites="4">[4] demonstrate benefits of using automated parameter tuning in optimizing big-data streaming applications.</s>
+			<s>In their work, they transform their multi-objective optimization function into a single-objective optimization problem and show that their rule-based approach of incorporating prior knowledge for parameter selection allows them to converge significantly faster than standard hill-climbing algorithms used for typical black box problems.</s>
+			<s>In our work, we demonstrate how to leverage partial knowledge of the system to improve parameter tuning efforts.</s>
+		</context>
+		<context id="11" section="related work">
+			<s>Offline evaluation is critical for production search systems to sanity check any new experiments and prevent system behavior that may be detrimental to the users’ experience.</s>
+			<s cites="14">[14] use previously collected click data in order to perform interleaved comparison methods between various rankers and find that it can be less expensive than running live interleaving experiments.</s>
+			<s cites="18">[18] provides a method of doing offline evaluation of different contextual bandit based article recommendations, where a primary motivation is to not hurt user experience by exposing potentially poor-quality algorithms.</s>
+		</context>
+	</contexts>
+	<references>
+		<reference id="1"></reference>
+		<reference id="2"></reference>
+	</references>
+</doc>
