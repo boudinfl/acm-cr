@@ -33,6 +33,7 @@ with open(args.collection, "rt") as f:
 
 topics = []
 qrels = []
+nb_papers = 0
 
 for filename in glob.iglob(args.input+"/**", recursive=True):
     if os.path.isfile(filename) and filename.endswith(".xml"):
@@ -45,6 +46,7 @@ for filename in glob.iglob(args.input+"/**", recursive=True):
         abstract = root.find('abstract').text
 
         print('processing {}'.format(doi))
+        nb_papers += 1
 
         citations = {}
         references = root.find('references')
@@ -79,7 +81,7 @@ with open(args.output+".topics", "wt") as o:
 with open(args.output+".qrels", "wt") as o:
     o.write("\n".join(qrels))
 
-print('overall: {} queries and {} qrels'.format(len(topics), len(qrels)))
+print('overall: {} queries and {} qrels from {} papers'.format(len(topics), len(qrels), nb_papers))
 
         
 

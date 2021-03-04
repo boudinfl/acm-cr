@@ -1,0 +1,91 @@
+<doc>
+	<doi>10.1145/3343413.3377968</doi>
+	<title>Harnessing Evolution of Multi-Turn Conversations for Effective Answer Retrieval</title>
+	<abstract>With the improvements in speech recognition and voice generation technologies over the last years, a lot of companies have sought to develop conversation understanding systems that run on mobile phones or smart home devices through natural language interfaces. Conversational assistants, such as Google Assistant and Microsoft Cortana, can help users to complete various types of tasks. This requires an accurate understanding of the user's information need as the conversation evolves into multiple turns. Finding relevant context in a conversation's history is challenging because of the complexity of natural language and the evolution of a user's information need. In this work, we present an extensive analysis of language, relevance, dependency of user utterances in a multi-turn information-seeking conversation. To this aim, we have annotated relevant utterances in the conversations released by the TREC CaST 2019 track. The annotation labels determine which of the previous utterances in a conversation can be used to improve the current one. Furthermore, we propose a neural utterance relevance model based on BERT fine-tuning, outperforming competitive baselines. We study and compare the performance of multiple retrieval models, utilizing different strategies to incorporate the user's context. The experimental results on both classification and retrieval tasks show that our proposed approach can effectively identify and incorporate the conversation context. We show that processing the current utterance using the predicted relevant utterance leads to a 38% relative improvement in terms of nDCG@20. Finally, to foster research in this area, we have released the dataset of the annotations.</abstract>
+	<contexts>
+		<context id="01" section="introduction">
+			<s>Recent emergence of intelligent assistants, such as Google Assistant and Microsoft Cortana have led to an increasing interest in research on conversational systems.</s>
+			<s>Conversational assistants can help users complete various types of tasks.</s>
+			<s>The tasks can range from as simple as setting an alarm to more complex cases like health advice.</s>
+			<s cites="35,34">Conversational assistants have been employed for information seeking [35] and recommendation [34] among other information systems applications.</s>
+			<s cites="1,2">Moreover, such systems can be used as home assistants, e.g., Alexa and Google Home; or be integrated in a smartphone [1, 2] or wearable devices, e.g., Apple Siri.</s>
+			<s>Several Information Retrieval (IR) tasks have been investigated in a conversational setting.</s>
+			<s cites="40,11,19,21,3">Some examples include response ranking [40], item recommendation [11], evaluation [19, 21], and asking clarifying questions for users intent disambiguation [3].</s>
+		</context>
+		<context id="02" section="introduction">
+			<s>Although much work has been devoted towards studying single-turn conversations, several new challenges, that a multi-turn dialogue based conversational system poses, remain to be explored.</s>
+			<s cites="30">Multiple turns in a conversation can be used to understand the user information need more effectively [30].</s>
+			<s>For instance, while searching for a new smartphone, user and machine could discuss various features and options in multiple turns.</s>
+			<s>In order to facilitate research on multi-turn information seeking conversations, TREC introduced the Conversational Assistance Track (CAsT) in 2019.</s>
+			<s>The track contains 80 conversations on different topics, each of which consists of 8-12 turns (or utterances).</s>
+			<s cites="10,16">Much work has been done on multi-turn conversational question answering [10, 16].</s>
+			<s>However, not much is known about how users interact with a machine in a multi-turn conversation and how their utterances can help the system to understand their information needs.</s>
+			<s>Moreover, various aspects of multi-turn conversations are yet to be investigated, such as the way a user’s information need and intent evolves as the conversation develops.</s>
+		</context>
+		<context id="03" section="related work">
+			<s>Conversational search has been a long standing research problem in the IR community.</s>
+			<s>However, with the recent advances in automatic voice recognition and the proliferation of Intelligent Personal Assistants such as Siri, Alexa, Google Assitant, and Cortana on personal devices, the area of Conversational search has received renewed attention in the past few years.</s>
+			<s cites="27" anonymised="true">One of the earliest attempts towards conversational mode in IR can be traced back to the work of [27] who proposed the introduction of dialogue for searching documents.</s>
+			<s cites="23" anonymised="true">[23] later proposed a system for retrieving airline information and ticket reservation using speech.</s>
+			<s cites="9" anonymised="true">Another IR system directed towards medical health professionals within a conversational setting was put forward by [9] in 1985 for searching documents related to Gastroenterology.</s>
+			<s cites="12" anonymised="true">However, it was the work by [12] on I3R, an expert interface communicating with the user in a search session, which laid the foundation for conversational IR.</s>
+			<s cites="7" anonymised="true">A few years later [7] characterized information-seeking strategies for conversational IR, offering users choices in a search session based on case-based reasoning.</s>
+			<s>Since then, the problem of conversational systems has been studied by researchers from both the fields of IR and Natural Language Processing (NLP) with varied interests.</s>
+			<s cites="11,34,6,25,31,22">Conversational Agents have forayed their applications in various domains ranging from conversational recommender systems [11, 34], human memory augmentation [6], e-Health systems [25], personality recognition [31] to museum tour guidance [22].</s>
+			<s cites="17" anonymised="true">[17] provides a systematic review on neural approaches to conversational AI developed in the last few years.</s>
+			<s cites="24,38,39,20,41">Recently, rule-based conversational IR system [24, 38, 39] have given way to learning based approaches [20] and even more recent methods based on deep learning [41].</s>
+			<s cites="33">Among the several facets of conversational IR systems, one research direction is focused on analyzing user-behavior and interaction with voice-only systems [33].</s>
+			<s cites="30" anonymised="true">Along the same line, [30] proposed a theoretical framework for conversational search highlighting the need for multi-turn interactions with users for narrowing down their specific information needs.</s>
+			<s cites="35" anonymised="true">[35] studied conversations of real users to determine the frequently-used interactions and inform a conversational search system design.</s>
+			<s>A close line of research deals with identifying user-intent while searching for information.</s>
+			<s cites="30,3,8">Much work has been done in this direction, some of which include query suggestion to clarify users’ intent in a traditional IR setting [30], asking clarifying questions from users to understand users’ intent and redirect the search [3], clarifying user-intent by eliminating non-relevant items through negative user feedback in a conversational search [8].</s>
+			<s cites="5" anonymised="true">On the other end of the spectrum, [5] posited that while understanding user intent and actions is important, little work has been addressed towards understanding the action taken by a conversational agent in the same context.</s>
+			<s>They thus provided a framework for understanding the human-computer interaction from an agent’s point of view.</s>
+			<s cites="37" anonymised="true">[37] listed the important factors to consider while designing a conversational assistant.</s>
+			<s>One of their key findings was that it is essential to maintain the conversational context which is one of the focal points of our paper.</s>
+		</context>
+	</contexts>
+	<references>
+		<reference id="1">10.1145/3269206.3271679</reference>
+		<reference id="2">10.1145/3209978.3210039</reference>
+		<reference id="3">10.1145/3331184.3331265</reference>
+		<reference id="4">10.1145/582415.582416</reference>
+		<reference id="5">https://strathprints.strath.ac.uk/64619/1/Azzopardi_etal_2018_Conceptualizing_agent_human_interactions_during_the_conversational_search_process.pdf</reference>
+		<reference id="6">10.1145/3176349.3176399</reference>
+		<reference id="7">10.1016/0957-4174(95)00011-W</reference>
+		<reference id="8">10.1145/3357384.3357939</reference>
+		<reference id="9">10.1016/S0020-7373(85)80039-0</reference>
+		<reference id="10">10.18653/v1/D18-1241</reference>
+		<reference id="11">10.1145/2939672.2939746</reference>
+		<reference id="12">10.5555/35053.35054</reference>
+		<reference id="13">https://arxiv.org/pdf/2003.13624.pdf</reference>
+		<reference id="14">10.18653/v1/N19-1423</reference>
+		<reference id="15">https://trec.nist.gov/pubs/trec27/papers/Overview-CAR.pdf</reference>
+		<reference id="16">10.1145/3209978.3210183</reference>
+		<reference id="17">10.1145/3209978.3210183</reference>
+		<reference id="18">10.18653/v1/W18-2501</reference>
+		<reference id="19">10.1145/3269206.3271802</reference>
+		<reference id="20">10.3115/v1/N15-1086</reference>
+		<reference id="21">10.1145/2736277.2741669</reference>
+		<reference id="22">10.1007/11550617_28</reference>
+		<reference id="23">10.1002/j.1538-7305.1980.tb02997.x</reference>
+		<reference id="24">10.5220/0003736703120317</reference>
+		<reference id="25">10.1007/978-3-319-47665-0_45</reference>
+		<reference id="26">http://ceur-ws.org/Vol-1773/CoCoNIPS_2016_paper9.pdf</reference>
+		<reference id="27">10.1108/eb026631</reference>
+		<reference id="28">10.3115/v1/D14-1162</reference>
+		<reference id="29">10.1145/290941.291008</reference>
+		<reference id="30">10.1145/3020165.3020183</reference>
+		<reference id="31">10.1145/3350546.3352516</reference>
+		<reference id="32">https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.32.9922&amp;rep=rep1&amp;type=pdf</reference>
+		<reference id="33">10.1002/asi.23831</reference>
+		<reference id="34">10.1145/3209978.3210002</reference>
+		<reference id="35">10.1145/3176349.3176387</reference>
+		<reference id="36">10.5555/3295222.3295349</reference>
+		<reference id="37">10.1145/3027063.3053175</reference>
+		<reference id="38">10.3115/1073012.1073078</reference>
+		<reference id="39">https://www.aclweb.org/anthology/W13-4000.pdf</reference>
+		<reference id="40">10.1145/3077136.3080843</reference>
+		<reference id="41">10.1145/3269206.3271776</reference>
+	</references>
+</doc>
