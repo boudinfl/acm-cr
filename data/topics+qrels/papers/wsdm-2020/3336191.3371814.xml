@@ -1,7 +1,7 @@
 <doc>
-	<doi></doi>
-	<title></title>
-	<abstract></abstract>
+	<doi>10.1145/3336191.3371814</doi>
+	<title>Listwise Learning to Rank by Exploring Unique Ratings</title>
+	<abstract>In this paper, we propose new listwise learning-to-rank models that mitigate the shortcomings of existing ones. Existing listwise learning-to-rank models are generally derived from the classical Plackett-Luce model, which has three major limitations. (1) Its permutation probabilities overlook ties, i.e., a situation when more than one document has the same rating with respect to a query. This can lead to imprecise permutation probabilities and inefficient training because of selecting documents one by one. (2) It does not favor documents having high relevance. (3) It has a loose assumption that sampling documents at different steps is independent. To overcome the first two limitations, we model ranking as selecting documents from a candidate set based on unique rating levels in decreasing order. The number of steps in training is determined by the number of unique rating levels. More specifically, in each step, we apply multiple multi-class classification tasks to a document candidate set and choose all documents that have the highest rating from the document set. This is in contrast to taking one document step by step in the classical Plackett-Luce model. Afterward, we remove all of the selected documents from the document set and repeat until the remaining documents all have the lowest rating. We propose a new loss function and associated four models for the entire sequence of weighted classification tasks by assigning high weights to the selected documents with high ratings for optimizing Normalized Discounted Cumulative Gain (NDCG). To overcome the final limitation, we further propose a novel and efficient way of refining prediction scores by combining an adapted Vanilla Recurrent Neural Network (RNN) model with pooling given selected documents at previous steps. We encode all of the documents already selected by an RNN model. In a single step, we rank all of the documents with the same ratings using the last cell of the RNN multiple times. We have implemented our models using three settings: neural networks, neural networks with gradient boosting, and regression trees with gradient boosting. We have conducted experiments on four public datasets. The experiments demonstrate that the models notably outperform state-of-the-art learning-to-rank models.</abstract>
 	<contexts>
 		<context id="01" section="introduction">
 			<s>Learning-to-rank is one of the most classical research topics in information retrieval, and researchers have put tremendous efforts into modeling ranking behaviors.</s>
@@ -60,7 +60,55 @@
 		</context>
 	</contexts>
 	<references>
-		<reference id="1"></reference>
-		<reference id="2"></reference>
+		<reference id="1">10.1145/3209978.3209985</reference>
+		<reference id="2">10.1145/3341981.3344218</reference>
+		<reference id="3">10.1109/IJCNN.2018.8489646</reference>
+		<reference id="4">https://arxiv.org/abs/1606.06959</reference>
+		<reference id="5">https://arxiv.org/abs/1810.02019</reference>
+		<reference id="6">10.1145/3331184.3331347</reference>
+		<reference id="7">10.1145/1102351.1102363</reference>
+		<reference id="8">https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/MSR-TR-2010-82.pdf</reference>
+		<reference id="9">10.1145/1273496.1273513</reference>
+		<reference id="10">10.1145/1645953.1646033</reference>
+		<reference id="11">10.1145/2939672.2939785</reference>
+		<reference id="12">https://arxiv.org/abs/1412.3555</reference>
+		<reference id="13">10.1145/3209978.3209979</reference>
+		<reference id="14">10.5555/945365.964285</reference>
+		<reference id="15">https://www.jstor.org/stable/2699986</reference>
+		<reference id="16">10.1145/3289600.3290986</reference>
+		<reference id="17">10.1145/1553374.1553423</reference>
+		<reference id="18">10.1016/j.ipm.2019.102067</reference>
+		<reference id="19">10.1145/3292500.3330658</reference>
+		<reference id="20">https://ieeexplore.ieee.org/abstract/document/6274980</reference>
+		<reference id="21">10.1162/neco.1997.9.8.1735</reference>
+		<reference id="22">10.1145/3308558.3313447</reference>
+		<reference id="23">https://arxiv.org/abs/1707.07493</reference>
+		<reference id="24">10.1145/582415.582418</reference>
+		<reference id="25">https://arxiv.org/abs/1803.01682</reference>
+		<reference id="26">10.5555/3294996.3295074</reference>
+		<reference id="27">10.5555/3020751.3020798</reference>
+		<reference id="28">10.5555/2976456.2976565</reference>
+		<reference id="29">10.1145/3292500.3330676</reference>
+		<reference id="30">10.1007/978-3-319-91458-9_11</reference>
+		<reference id="31">10.1561/1500000016</reference>
+		<reference id="32">https://psycnet.apa.org/record/1960-03588-000</reference>
+		<reference id="33">http://infosense.cs.georgetown.edu/publication/jiyun_phd_dissertation.pdf</reference>
+		<reference id="34">10.18653/v1/D15-1079</reference>
+		<reference id="35">10.5555/3157096.3157239</reference>
+		<reference id="36">10.1145/2396761.2398681</reference>
+		<reference id="37">10.1145/3209978.3209992</reference>
+		<reference id="38">10.1145/3132847.3132914</reference>
+		<reference id="39">10.1145/3292500.3330677</reference>
+		<reference id="40">10.2307/2346567</reference>
+		<reference id="41">https://arxiv.org/abs/1306.2597</reference>
+		<reference id="42">10.1007/s10791-009-9123-y</reference>
+		<reference id="43">10.5555/2976456.2976481</reference>
+		<reference id="44">https://storage.googleapis.com/pub-tools-public-publication-data/pdf/35662.pdf</reference>
+		<reference id="45">10.1145/1341531.1341544</reference>
+		<reference id="46">10.1145/3269206.3271784</reference>
+		<reference id="47">10.1145/3077136.3080685</reference>
+		<reference id="48">10.1145/1390156.1390306</reference>
+		<reference id="49">10.1145/3234944.3234977</reference>
+		<reference id="50">10.1145/1390334.1390382</reference>
 	</references>
 </doc>

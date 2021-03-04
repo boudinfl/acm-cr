@@ -1,7 +1,7 @@
 <doc>
-	<doi></doi>
-	<title></title>
-	<abstract></abstract>
+	<doi>10.1145/3336191.3371820</doi>
+	<title>Parameter Tuning in Personal Search Systems</title>
+	<abstract>Retrieval effectiveness in information retrieval systems is heavily dependent on how various parameters are tuned. One option to find these parameters is to run multiple online experiments and using a parameter sweep approach in order to optimize the search system. There are multiple downsides of this approach, mainly that it may lead to a poor experience for users. Another option is to do offline evaluation, which can act as a safeguard against potential quality issues. Offline evaluation requires a validation set of data that can be benchmarked against different parameter settings. However, for search over personal corpora, e.g. email and file search, it is impractical and often impossible to get a complete representative validation set, due to the inability to save raw queries and document information. In this work, we show how to do offline parameter tuning with only a partial validation set. In addition, we demonstrate how to do parameter tuning in the cases when we have complete knowledge of the internal implementation of the search system (white-box tuning), as well as the case where we have only partial knowledge (grey-box tuning). This has allowed us to do offline parameter tuning in a privacy-sensitive manner.</abstract>
 	<contexts>
 		<context id="01" section="introduction">
 			<s>Modern search engines usually have multiple processing stages in their systems.</s>
@@ -72,7 +72,33 @@
 		</context>
 	</contexts>
 	<references>
-		<reference id="1"></reference>
-		<reference id="2"></reference>
+		<reference id="1">10.5555/3060621.3060699</reference>
+		<reference id="2">10.1145/3038912.3052615</reference>
+		<reference id="3">10.1145/2484028.2484132</reference>
+		<reference id="4">10.1145/3127479.3127492</reference>
+		<reference id="5">10.1145/2806416.2806471</reference>
+		<reference id="6">10.1023/A:1012450327387</reference>
+		<reference id="7">10.5555/1516224</reference>
+		<reference id="8">10.1007/978-3-642-36973-5_36</reference>
+		<reference id="9">10.5555/2635956</reference>
+		<reference id="10">10.5555/2627435.2750368</reference>
+		<reference id="11">10.1145/3097983.3098043</reference>
+		<reference id="12">10.1145/3308558.3313706</reference>
+		<reference id="13">10.1145/956863.956867</reference>
+		<reference id="14">10.1145/2396761.2398516</reference>
+		<reference id="15">10.5555/3044805.3044891</reference>
+		<reference id="16">10.5555/3314872.3314889</reference>
+		<reference id="17">10.1145/3159652.3159665</reference>
+		<reference id="18">10.1145/1935826.1935878</reference>
+		<reference id="19">10.5555/3122009.3242042</reference>
+		<reference id="20">10.1145/2600212.2600229</reference>
+		<reference id="21">10.1561/1500000016</reference>
+		<reference id="22">10.1007/s10791-006-9019-z</reference>
+		<reference id="23">10.5555/2380985</reference>
+		<reference id="24">10.5555/1051270</reference>
+		<reference id="25">10.5555/1863696.1863763</reference>
+		<reference id="26">10.1561/1500000019</reference>
+		<reference id="27">10.1145/1183614.1183698</reference>
+		<reference id="28">10.1145/3038912.3052648</reference>
 	</references>
 </doc>

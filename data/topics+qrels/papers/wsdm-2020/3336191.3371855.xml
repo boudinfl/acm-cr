@@ -1,7 +1,7 @@
 <doc>
-	<doi></doi>
-	<title></title>
-	<abstract></abstract>
+	<doi>10.1145/3336191.3371855</doi>
+	<title>Addressing Marketing Bias in Product Recommendations</title>
+	<abstract>Modern collaborative filtering algorithms seek to provide personalized product recommendations by uncovering patterns in consumer-product interactions. However, these interactions can be biased by how the product is marketed, for example due to the selection of a particular human model in a product image. These correlations may result in the underrepresentation of particular niche markets in the interaction data; for example, a female user who would potentially like motorcycle products may be less likely to interact with them if they are promoted using stereotypically 'male' images. In this paper, we first investigate this correlation between users' interaction feedback and products' marketing images on two real-world e-commerce datasets. We further examine the response of several standard collaborative filtering algorithms to the distribution of consumer-product market segments in the input interaction data, revealing that marketing strategy can be a source of bias for modern recommender systems. In order to protect recommendation performance on underrepresented market segments, we develop a framework to address this potential marketing bias. Quantitative results demonstrate that the proposed approach significantly improves the recommendation fairness across different market segments, with a negligible loss (or better) recommendation accuracy.</abstract>
 	<contexts>
 		<context id="01" section="introduction">
 			<s>By connecting users to relevant products across the vast range available on e-commerce platforms, modern recommender systems are already ubiquitous and critical on both sides of the market, i.e., consumers and product sellers.</s>
@@ -46,7 +46,37 @@
 		</context>
 	</contexts>
 	<references>
-		<reference id="1"></reference>
-		<reference id="2"></reference>
+		<reference id="1">10.1145/3109859.3109912</reference>
+		<reference id="2">None</reference>
+		<reference id="3">10.1145/3292500.3330745</reference>
+		<reference id="4">10.1145/3306618.3314234</reference>
+		<reference id="5">https://www.jstor.org/stable/2351957</reference>
+		<reference id="6">http://proceedings.mlr.press/v81/burke18a/burke18a.pdf</reference>
+		<reference id="7">10.1145/3240323.3240373</reference>
+		<reference id="8">None</reference>
+		<reference id="9">10.5555/3020847.3020882</reference>
+		<reference id="10">10.1080/02650487.2016.1203556</reference>
+		<reference id="11">10.1177/002224296703100405</reference>
+		<reference id="12">10.1177/002224376800500107</reference>
+		<reference id="13">10.1145/3130348.3130372</reference>
+		<reference id="14">10.1007/s11257-015-9165-3</reference>
+		<reference id="15">10.1145/3018661.3018699</reference>
+		<reference id="16">https://cyberleninka.org/article/n/834508.pdf</reference>
+		<reference id="17">10.1109/MC.2009.263</reference>
+		<reference id="18">10.1016/j.jbusres.2006.06.001</reference>
+		<reference id="19">https://www.jstor.org/stable/2236703</reference>
+		<reference id="20">10.1109/MIC.2003.1167344</reference>
+		<reference id="21">10.1016/0167-4870(88)90029-3</reference>
+		<reference id="22">10.1145/3269206.3272027</reference>
+		<reference id="23">10.1145/3240323.3240398</reference>
+		<reference id="24">10.18653/v1/D19-1018</reference>
+		<reference id="25">10.1145/371920.372071</reference>
+		<reference id="26">10.5555/3045390.3045567</reference>
+		<reference id="27">10.1086/208924</reference>
+		<reference id="28">10.1177/0092070397253004</reference>
+		<reference id="29">10.1145/3240323.3240355</reference>
+		<reference id="30">10.5555/3294996.3295052</reference>
+		<reference id="31">10.1145/3109859.3109885</reference>
+		<reference id="32">10.1145/3269206.3271795</reference>
 	</references>
 </doc>

@@ -1,7 +1,7 @@
 <doc>
-	<doi></doi>
-	<title></title>
-	<abstract></abstract>
+	<doi>10.1145/3336191.3371844</doi>
+	<title>A Stochastic Treatment of Learning to Rank Scoring Functions</title>
+	<abstract>Learning to Rank, a central problem in information retrieval, is a class of machine learning algorithms that formulate ranking as an optimization task. The objective is to learn a function that produces an ordering of a set of documents in such a way that the utility of the entire ordered list is maximized. Learning-to-rank methods do so by learning a function that computes a score for each document in the set. A ranked list is then compiled by sorting documents according to their scores. While such a deterministic mapping of scores to permutations makes sense during inference where stability of ranked lists is required, we argue that its greedy nature during training leads to less robust models. This is particularly problematic when the loss function under optimization---in agreement with ranking metrics---largely penalizes incorrect rankings and does not take into account the distribution of raw scores. In this work, we present a stochastic framework where, instead of a deterministic derivation of permutations from raw scores, permutations are sampled from a distribution defined by raw scores. Our proposed sampling method is differentiable and works well with gradient descent optimizers. We analytically study our proposed method and demonstrate when and why it leads to model robustness. We also show empirically, through experiments on publicly available learning-to-rank datasets, that the application of our proposed method to a class of ranking loss functions leads to significant model quality improvements.</abstract>
 	<contexts>
 		<context id="01" section="related work">
 			<s cites="4,5,7,20,21,25,40">Learning-to-rank algorithms generally address the ranking problem using a score-and-sort approach [4, 5, 7, 20, 21, 25, 40].</s>
@@ -46,7 +46,46 @@
 		</context>
 	</contexts>
 	<references>
-		<reference id="1"></reference>
-		<reference id="2"></reference>
+		<reference id="1">10.1145/3341981.3344218</reference>
+		<reference id="2">10.1145/3341981.3344221</reference>
+		<reference id="3">10.1145/3331184.3331347</reference>
+		<reference id="4">10.1145/1102351.1102363</reference>
+		<reference id="5">https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/MSR-TR-2010-82.pdf</reference>
+		<reference id="6">10.5555/2976456.2976481</reference>
+		<reference id="7">10.1145/1273496.1273513</reference>
+		<reference id="8">10.5555/3045754.3045756</reference>
+		<reference id="9">10.1145/1645953.1646033</reference>
+		<reference id="10">10.1145/3077136.3080832</reference>
+		<reference id="11">10.5555/1953048.2021068</reference>
+		<reference id="12">https://www.jstor.org/stable/pdf/2699986.pdf</reference>
+		<reference id="13">10.5555/188490.188560</reference>
+		<reference id="14">10.5555/3042817.3043084</reference>
+		<reference id="15">10.5555/3045390.3045712</reference>
+		<reference id="16">10.5555/3045754.3045761</reference>
+		<reference id="17">https://arxiv.org/abs/1207.0580</reference>
+		<reference id="18">http://proceedings.mlr.press/v37/ioffe15.pdf</reference>
+		<reference id="19">10.1145/582415.582418</reference>
+		<reference id="20">10.1145/1150402.1150429</reference>
+		<reference id="21">10.1145/3018661.3018699</reference>
+		<reference id="22">10.5555/3294996.3295074</reference>
+		<reference id="23">https://arxiv.org/abs/1412.6980</reference>
+		<reference id="24">10.1145/3065386</reference>
+		<reference id="25">10.1561/1500000016</reference>
+		<reference id="26">https://psycnet.apa.org/record/1960-03588-000</reference>
+		<reference id="27">https://arxiv.org/abs/1611.00712</reference>
+		<reference id="28">10.5555/2969033.2969171</reference>
+		<reference id="29">https://people.cs.umass.edu/~mccallum/papers/direct-metzler05.pdf</reference>
+		<reference id="30">10.1145/3292500.3330677</reference>
+		<reference id="31">https://arxiv.org/abs/1306.2597</reference>
+		<reference id="32">10.1007/s10791-009-9124-x</reference>
+		<reference id="33">10.5555/2981780.2981940</reference>
+		<reference id="34">10.5555/1051451</reference>
+		<reference id="35">10.1016/j.ijar.2008.11.006</reference>
+		<reference id="36">10.1145/1341531.1341544</reference>
+		<reference id="37">10.1145/1390156.1390294</reference>
+		<reference id="38">10.1145/3269206.3271784</reference>
+		<reference id="39">10.1007/s10791-009-9112-1</reference>
+		<reference id="40">10.1145/1390156.1390306</reference>
+		<reference id="41">10.1145/1277741.1277809</reference>
 	</references>
 </doc>
