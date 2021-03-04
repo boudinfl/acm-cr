@@ -1,0 +1,97 @@
+<doc>
+	<doi>10.1145/3336191.3371822</doi>
+	<title>User Recommendation in Content Curation Platforms</title>
+	<abstract>We propose a personalized user recommendation framework for content curation platforms that models preferences for both users and the items they engage with simultaneously. In this way, user preferences for specific item types (e.g., fantasy novels) can be balanced with user specialties (e.g., reviewing novels with strong female protagonists). In particular, the proposed model has three unique characteristics: (i) it simultaneously learns both user-item and user-user preferences through a multi-aspect autoencoder model; (ii) it fuses the latent representations of user preferences on users and items to construct shared factors through an adversarial framework; and (iii) it incorporates an attention layer to produce weighted aggregations of different latent representations, leading to improved personalized recommendation of users and items. Through experiments against state-of-the-art models, we find the proposed framework leads to a 18.43% (Goodreads) and 6.14% (Spotify) improvement in top-k user recommendation.</abstract>
+	<contexts>
+		<context id="01" section="introduction">
+			<s>Content curation platforms are powered by users who surface interesting content – via reviews, pins, boards, ratings and other actions.</s>
+			<s>For example, Pinterest users curate and comment on links or images to form thematic “boards” on various topics like Recipes and Fashion.</s>
+			<s>Similarly, Goodreads provides a platform for users to curate interesting books via tagging, ratings, and reviews.</s>
+			<s>And music streaming services like Spotify allow users to create and share playlists containing combinations of individual tracks.</s>
+			<s cites="11,21">Unlike content creators in social media who generate new digital artifacts such as tweets, blog posts, or photos, users in curation platforms, who we refer to as curators, collect and organize existing content, while often providing additional insights via comments, reviews, or ratings [11, 21].</s>
+			<s>In this way, these curators can provide a human-powered overlay that can link seemingly un-related items (e.g., a collection of books that are thematically related though from different genres).</s>
+		</context>
+		<context id="02" section="introduction">
+			<s>By connecting to curators, users can discover new items, new collections, and new connections among items built via human (rather than algorithmic) power.</s>
+			<s>For example, as illustrated in Figure 1, a Spotify user can follow other users and thus keep track of their listening activities (like songs, albums, and playlists).</s>
+			<s>In Goodreads, users will see updates including new bookshelves, ratings and text reviews from those whom they follow.</s>
+			<s cites="37,16,24">Indeed, around 50% of Spotify’s 100 million users listen to human-curated playlists [37] and researchers have shown how the power of human curation can serve as a significant component of modern recommender systems to connect users to items [16, 24].</s>
+		</context>
+		<context id="03" section="introduction">
+			<s>But how can we recommend interesting curators to follow?</s>
+			<s cites="2,3,9,35,38,8,12,26,29">This challenge of user recommendation in content curation platforms is vitally important and yet most existing methods that rely on traditional item-level recommendation [2, 3, 9, 35, 38] or on expert-finding approaches [8, 12, 26, 29] may not capture the important relationships among both curators and the items they curate.</s>
+			<s>Users in curation platforms are complex amalgamations of the specific items they interact with (e.g., sci-fi books), their style of curation (e.g., reflecting personal interests), and the complex interactions between items and the curated lists themselves.</s>
+			<s>For example, a specific item type like a fantasy novel may be curated by someone with an interest in novels with strong female protagonists, while the same novel may be curated by someone else with an interest in space warfare.</s>
+			<s cites="10,32,14,30,8,12,26,29">Compared to previous works on friend recommendation [10, 32], topical user recommendation (e.g., finding other users interested in fashion) [14, 30], and expert finding [8, 12, 26, 29], there is a research gap in curator recommendation that carefully balances user preferences for specific item types and preferences for different curator specialties.</s>
+		</context>
+		<context id="04" section="related work">
+			<s>Recently there have been efforts to study curation platforms.</s>
+			<s cites="5,25">In [5, 25], the authors recommend user-generated lists based on the occurrences of items among lists and interactions of users on items.</s>
+			<s cites="18,44">Work in [18, 44] focuses on “board” recommendation in Pinterest.</s>
+			<s>However, there is a gap in our understanding of finding interesting users to follow.</s>
+			<s cites="10,32">The connections between users and curators are amalgamations of curated contents, individual items and personal style, which pose new challenges compared to traditional friend recommendation in social networks [10, 32].</s>
+			<s cites="14,30,45,46,8,12,26,29">Somewhat similar to our notion of curator is research on finding expertise to improve search and recommendation, including topical user recommendation [14, 30, 45, 46] and expert finding [8, 12, 26, 29].</s>
+			<s cites="46">For example, UserRec [46] models users’ similarity based on the tag-graph and topic distributions, with which it can help in connecting users sharing similar interest.</s>
+			<s cites="43" anonymised="true">[43] propose to improve friend recommendation by capturing the relationships among users, their friends and interest with tensor factorization.</s>
+			<s>However, these and related methods usually rely on users’ explicit (topical) tags on experts, or the semantics of tags and content created by users, which are not always available in content curation platforms.</s>
+			<s>In contrast, we focus on curation decisions of these users to model users and the items they curate simultaneously.</s>
+		</context>
+		<context id="05" section="related work">
+			<s cites="6,2,5,19,27,34,40">CuRe jointly learns user preferences on curators and items akin to multitask learning [6], which has been widely adopted in different recommendation scenarios [2, 5, 19, 27, 34, 40].</s>
+			<s>By sharing feature representations across different tasks, it enables the recommender system to fully leverage hidden signals from the sparse data through regularization.</s>
+			<s cites="19" anonymised="true">[19] set item correlation prediction and next interaction prediction as supplementary tasks, to improve the performance of sequential item recommendation.</s>
+			<s cites="2">In GRU-MTL [2], they train the recurrent model with two tasks – tag prediction and text recommendation, to ultimately improve the text recommendation.</s>
+			<s cites="27,40">Similarly, in [27, 40], they combine personalized item recommendation with opinionated text content modeling together to achieve better results in the recommendation.</s>
+			<s cites="34">Enhanced with transferring knowledge between different social media sites, Crossfire [34] generates recommendations of friends and items at the same time.</s>
+			<s>In contrast, our proposed approach combines user recommendation in curation platforms with the supplementary task of item recommendation to better model user preferences.</s>
+		</context>
+	</contexts>
+	<references>
+		<reference id="1">10.18653/v1/P16-1177</reference>
+		<reference id="2">10.1145/2959100.2959180</reference>
+		<reference id="3">10.1145/1873951.1874005</reference>
+		<reference id="4">10.1145/3209978.3209998</reference>
+		<reference id="5">10.1145/3077136.3080779</reference>
+		<reference id="6">10.1023/A:1007379606734</reference>
+		<reference id="7">10.1145/3077136.3080797</reference>
+		<reference id="8">10.1145/2600428.2609580</reference>
+		<reference id="9">10.5555/3172077.3172400</reference>
+		<reference id="10">10.1109/ICDM.2012.140</reference>
+		<reference id="11">https://ojs.aaai.org/index.php/ICWSM/article/view/14287/14136</reference>
+		<reference id="12">10.1145/2959100.2959151</reference>
+		<reference id="13">10.1145/2939672.2939754</reference>
+		<reference id="14">10.1145/1864708.1864746</reference>
+		<reference id="15">10.1145/3209978.3209981</reference>
+		<reference id="16">10.1145/3357384.3358030</reference>
+		<reference id="17">10.1109/icdm.2008.22</reference>
+		<reference id="18">http://ceur-ws.org/Vol-997/umap2013_lbr_2.pdf</reference>
+		<reference id="19">10.1145/3269206.3271792</reference>
+		<reference id="20">10.1145/3270323.3270329</reference>
+		<reference id="21">10.1109/INTECH.2012.6457799</reference>
+		<reference id="22">10.1145/3178876.3186150</reference>
+		<reference id="23">10.18653/v1/P17-1001</reference>
+		<reference id="24">10.1145/2872518.2889350</reference>
+		<reference id="25">10.1145/2645710.2645750</reference>
+		<reference id="26">10.1145/2792838.2800189</reference>
+		<reference id="27">10.1145/3240323.3240365</reference>
+		<reference id="28">https://arxiv.org/abs/1511.05644</reference>
+		<reference id="29">10.1145/358916.358994</reference>
+		<reference id="30">10.1145/1963192.1963244</reference>
+		<reference id="31">10.5555/1795114.1795167</reference>
+		<reference id="32">10.1016/j.infsof.2013.12.003</reference>
+		<reference id="33">10.1145/2740908.2742726</reference>
+		<reference id="34">10.1145/3159652.3159692</reference>
+		<reference id="35">10.1016/j.ipm.2014.09.002</reference>
+		<reference id="36">10.1002/asi.23733</reference>
+		<reference id="37">https://www.buzzfeed.com/reggieugwu/the-unsung-heroes-of-the-music-streaming-boom</reference>
+		<reference id="38">10.1145/2959100.2959160</reference>
+		<reference id="39">10.5555/1756006.1953039</reference>
+		<reference id="40">10.1145/3209978.3210010</reference>
+		<reference id="41">10.1145/2835776.2835837</reference>
+		<reference id="42">10.5555/3172077.3172324</reference>
+		<reference id="43">10.1109/ICASSP.2012.6288758</reference>
+		<reference id="44">10.1145/2733373.2806375</reference>
+		<reference id="45">10.1145/2736277.2741656</reference>
+		<reference id="46">10.5555/2898607.2898844</reference>
+	</references>
+</doc>

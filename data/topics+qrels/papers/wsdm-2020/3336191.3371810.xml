@@ -1,0 +1,76 @@
+<doc>
+	<doi>10.1145/3336191.3371810</doi>
+	<title>Improving the Estimation of Tail Ratings in Recommender System with Multi-Latent Representations</title>
+	<abstract>The importance of the distribution of ratings on recommender systems (RS) is well-recognized. And yet, recommendation approaches based on latent factor models and recently introduced neural variants (e.g., NCF) optimize for the head of these distributions, potentially leading to large estimation errors for tail ratings. These errors in tail ratings that are far from the mean predicted rating fall out of a uni-modal assumption underlying these popular models, as we show in this paper. We propose to improve the estimation of tail ratings by extending traditional single latent representations (e.g., an item is represented by a single latent vector) with new multi-latent representations for better modeling these tail ratings. We show how to incorporate these multi-latent representations in an end-to-end neural prediction model that is designed to better reflect the underlying ratings distributions of items. Through experiments over six datasets, we find the proposed model leads to a significant improvement in RMSE versus a suite of benchmark methods. We also find that the predictions for the most polarized items are improved by more than 15%.</abstract>
+	<contexts>
+		<context id="01" section="introduction">
+			<s cites="1,2,15,36,3,14,20,22,25,39">While the importance of the distribution of ratings on RS has been long recognized, e.g., [1, 2, 15, 36], many popular methods based on latent factor models and recently introduced neural variants [3, 14, 20, 22, 25, 39] optimize for the head of these distributions, potentially leading to large estimation errors for tail ratings.</s>
+			<s>As we will show in Section 3, these tail estimation errors are common across multiple domains and datasets, leading to large over-estimations of the ratings of items with very low ratings, and large under-estimations of the ratings of items with very high ratings.</s>
+			<s>For example, Figure 1(c) shows large RMSE prediction errors for these tail ratings when using two popular latent factor models.</s>
+			<s>These errors can lead to bad recommendations, degrade trust in the recommender, and for controversial items, potentially expose users to items they are diametrically opposed to.</s>
+		</context>
+		<context id="02" section="related work">
+			<s>In terms of dealing with tail ratings, there have been a few complementary works.</s>
+			<s cites="1">For example, Gediminas et al. investigated the impact of rating characteristics like rating density, rating frequency distribution, and value distribution, on the accuracy of popular collaborative filtering techniques [1].</s>
+			<s cites="15" anonymised="true">[15] observed that product ratings tend to fit a ‘J-shaped’ distribution since users provide reviews are more likely to “brag or moan” compared to all purchasers.</s>
+			<s>As an extreme case of the ‘J-shaped’ distribution is the ‘U-shape’ of controversial items with many extreme ratings on both sides of the distribution.</s>
+			<s cites="36" anonymised="true">[36] formalized the concept of controversial items in recommendation systems and then compared the performance of several trust-enhanced techniques for personalized recommendations for controversial items with polarized ratings (bi-modal distribution) versus other items.</s>
+			<s>Similar to our observations, they showed that predicting ratings for controversial items is much worse than for other items.</s>
+			<s cites="2,11,27,30,35" anonymised="true">[2] surveyed state-of-the-art research on the polarization, finding that many trust-based RS attempts to improve recommendation for controversial items by defining a trusted network for each user, e.g., [11, 27, 30, 35].</s>
+			<s cites="4" anonymised="true">Recently, [4] proposed a focused learning model to improve the recommendation quality for a specified subset of items, through hyper-parameter optimization and a customized matrix factorization objective.</s>
+		</context>
+		<context id="03" section="related work">
+			<s cites="6,19,14,3,21,23,33,39">Latent factor model is one of the cornerstones of RS, critical for traditional approaches [6, 19] as well as recent neural variants like NCF [14] and others [3, 14, 21, 23, 33, 39].</s>
+			<s cites="5,26,29,8,31,32">Furthermore, these latent factor models have been adapted in a number of directions, including location-aware recommendation systems [5, 26, 29], aspect-aware latent factor models [8], and bioinspired approaches [31, 32], among many others.</s>
+			<s>As we will demonstrate in the following section, latent factor models typically depend on an assumption of a single latent representation.</s>
+			<s>That is, every item and user has only a single latent representation.</s>
+			<s>We refer to such approaches as Single Latent Representation (SLR)-based methods.</s>
+		</context>
+		<context id="04" section="related work">
+			<s cites="14">More recently, neural variants like Neural Collaborative Filtering (NCF) have been proposed to combine deep learning architectures with traditional matrix factorization [14].</s>
+			<s>In particular, NCF is structured with two sub-models: Generalized Matrix Factorization (GMF) and a Multi-Layer Perceptron.</s>
+			<s>The GMF submodel corresponds to a neural version of MF, and so also relies on a single latent vector for representing a user’s preference or an item’s characteristics.</s>
+		</context>
+	</contexts>
+	<references>
+		<reference id="1">10.1145/2151163.2151166</reference>
+		<reference id="2">10.18297/etd/2693</reference>
+		<reference id="3">10.1109/MLSP.2016.7738886</reference>
+		<reference id="4">10.1145/3038912.3052713</reference>
+		<reference id="5">10.1109/IMSAA.2008.4753931</reference>
+		<reference id="6">10.1016/j.knosys.2013.03.012</reference>
+		<reference id="7">10.1145/3219819.3219963</reference>
+		<reference id="8">10.1145/3178876.3186145</reference>
+		<reference id="9">10.1145/3018661.3018703</reference>
+		<reference id="10">10.1109/ICDM.2005.14</reference>
+		<reference id="11">10.1007/11755593_8</reference>
+		<reference id="12">10.1145/2827872</reference>
+		<reference id="13">10.1145/2872427.2883037</reference>
+		<reference id="14">10.1145/3038912.3052569</reference>
+		<reference id="15">10.1145/1562764.1562800</reference>
+		<reference id="16">10.1037/0022-3514.50.6.1141</reference>
+		<reference id="17">10.1145/582415.582418</reference>
+		<reference id="18">https://arxiv.org/abs/1412.6980</reference>
+		<reference id="19">10.1145/1401890.1401944</reference>
+		<reference id="20">10.1109/MC.2009.263</reference>
+		<reference id="21">10.1145/3269206.3269264</reference>
+		<reference id="22">10.5555/3008751.3008829</reference>
+		<reference id="23">10.5555/647458.728234</reference>
+		<reference id="24">10.1137/1.9781611972757.43</reference>
+		<reference id="25">10.1109/TNNLS.2015.2415257</reference>
+		<reference id="26">10.1109/WI-IAT.2009.259</reference>
+		<reference id="27">10.1145/1297231.1297235</reference>
+		<reference id="28">10.5555/3192424.3192523</reference>
+		<reference id="29">10.1007/978-3-642-10436-7_8</reference>
+		<reference id="30">10.1145/1040830.1040870</reference>
+		<reference id="31">10.1109/FGCN.2008.48</reference>
+		<reference id="32">10.1016/S0957-4174(03)00067-8</reference>
+		<reference id="33">10.1145/2740908.2742726</reference>
+		<reference id="34">10.5555/2999325.2999383</reference>
+		<reference id="35">10.1016/j.fss.2008.11.014</reference>
+		<reference id="36">https://ojs.aaai.org/index.php/ICWSM/article/view/13986/13835</reference>
+		<reference id="37">10.1145/3289600.3291024</reference>
+		<reference id="38">10.1145/2647868.2654915</reference>
+		<reference id="39">10.5555/3045390.3045472</reference>
+	</references>
+</doc>
