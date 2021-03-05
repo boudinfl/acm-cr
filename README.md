@@ -96,6 +96,31 @@ following xml format:
 </doc>
 ```
 
+## Some statistics
+
+```
+python3 src/cc_stats.py --input data/topics+qrels/papers/ \
+                        --collection data/topics+qrels/collection.txt
+
+avg number of cited documents: 31.82 [8 - 71]
+avg number of cited documents in collection: 15.50 [1 - 37]
+avg coverage of collection: 0.4982 [0.0909 - 0.8333]
+```
+
+- number of citation contexts (s): 835
+- number of 1+/all citation contexts (s): 548
+
+|     0 |    1+ |   All |
+| -----:| -----:| -----:|
+| 34.37:| 21.08:| 44.55:|
+
+- number of citation contexts (p): 341
+- number of 1+/all citation contexts (p): 268
+
+|     0 |    1+ |   All |
+| -----:| -----:| -----:|
+| 21.41:| 53.67:| 24.93:|
+
 ## Document retrieval
 
 ### Installing anserini
