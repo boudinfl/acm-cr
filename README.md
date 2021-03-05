@@ -46,105 +46,24 @@ Statistics of the test collection:
 ### Queries
 
 Following the methodology proposed in [[1]](https://doi.org/10.1145/3132847.3133085), 
-we selected open-access (for data sharing reasons) papers from conferences and 
-manually extracted the citation contexts and cited references (relevant
+we selected open-access (on ACM or Arxiv) (for data sharing reasons) papers from 
+conferences and manually extracted the citation contexts and cited references (relevant
 documents).
 
-Cited references are manually mapped to DOIs by following the ordered rules:
-
-```
-  1. DOI from the ACM DL
-  2. DOI from another publisher (including ACL-anthology DOIs)
-  3. arxiv/pubmed/acl-anthology url
-  4. pdf url
-  5. None
-```
-
-Papers (pdf versions) used for generating queries are in `data/topics+qrels`
+Papers (pdf versions) used for generating queries are in the `data/topics+qrels`
 directory. Papers are grouped by venue, and three files are created for each
 paper, e.g.:
 
 ```
-3397271.3401032.pdf    # paper id (last part of docid)
+3397271.3401032.pdf   # pdf of the paper (id is last part of docid)
 
-3397271.3401032.docids # manually curated list of docid (dois) for cited
-                       # references.
-                      
-3397271.3401032.topics # queries are natural paragraphs from papers where most
-                       # citations are present in the collection. Manual
-                       # removing can be applied to remove parts (whole
-                       # sentences) that are not coherent (e.g. containing
-                       # unlinked citations) or to split very long queries. We
-                       # try to keep contexts where at least one marker of a 
-                       # series of references is linked. We only use
-                       # introduction and related work sections. We remove 
-                       # explicit citation markers (e.g. He et al. [19] -> [19]).
-                       # We also remove last paragraph sentences if they
-                       # are such as "in this paper" or "in this study".
-                       
-3397271.3401032.qrels  # relevant judgments                               
+3397271.3401032.dois  # manually curated list of dois for cited references
+
+3397271.3401032.xml   # citation contexts paird with cited references.       
 ```
 
-Actually, there are 50 papers and 268 topics.
-
-Below is the list of papers used for generating queries.
-
-```
-├── sigir-2020 (20 papers)
-    ├── 3397271.3401032.pdf (x)
-    ├── 3397271.3401051.pdf (x*)
-    ├── 3397271.3401052.pdf (x)
-    ├── 3397271.3401057.pdf (x)
-    ├── 3397271.3401103.pdf (x)
-    ├── 3397271.3401106.pdf (x)
-    ├── 3397271.3401061.pdf (x*)
-    ├── 3397271.3401164.pdf (x)
-    ├── 3397271.3401188.pdf (x)
-    ├── 3397271.3401191.pdf (x)
-    ├── 3397271.3401198.pdf (x)
-    ├── 3397271.3401204.pdf (x)
-    ├── 3397271.3401207.pdf (x)
-    ├── 3397271.3401224.pdf (x)
-    ├── 3397271.3401266.pdf (x)
-    ├── 3397271.3401281.pdf (x)
-    ├── 3397271.3401322.pdf (x)
-    ├── 3397271.3401330.pdf (x)
-    ├── 3397271.3401333.pdf (x)
-    ├── 3397271.3401467.pdf (x)
-├── ictir-2020 (10 papers) 
-    ├── 3409256.3409817.pdf (x*)
-    ├── 3409256.3409819.pdf (x)
-    ├── 3409256.3409820.pdf (x*)
-    ├── 3409256.3409825.pdf (x*)
-    ├── 3409256.3409827.pdf (x)
-    ├── 3409256.3409829.pdf (x)
-    ├── 3409256.3409830.pdf (x*)
-    ├── 3409256.3409837.pdf (x*)
-    ├── 3409256.3409838.pdf (x)
-    ├── 3409256.3409847.pdf (x*)
-├── wsdm-2020 (10 papers)
-    ├── 3336191.3371770.pdf (x*)
-    ├── 3336191.3371775.pdf (x)
-    ├── 3336191.3371776.pdf (x*)
-    ├── 3336191.3371785.pdf (x*)
-    ├── 3336191.3371810.pdf (x*)
-    ├── 3336191.3371814.pdf (x)
-    ├── 3336191.3371820.pdf (x)
-    ├── 3336191.3371822.pdf (x*)
-    ├── 3336191.3371844.pdf (x)
-    ├── 3336191.3371855.pdf (x)
-├── chiir-2020 (10 papers)
-    ├── 3343413.3377957.pdf (x)
-    ├── 3343413.3377960.pdf (x*)
-    ├── 3343413.3377968.pdf (x*)
-    ├── 3343413.3377977.pdf (x)
-    ├── 3343413.3377985.pdf (x*)
-    ├── 3343413.3377988.pdf (x*)
-    ├── 3343413.3378004.pdf (x*)
-    ├── 3343413.3378009.pdf (x*)
-    ├── 3343413.3378010.pdf (x*)
-    ├── 3343413.3378011.pdf (x)
-```
+Actually, there are 50 papers (list of selected papers is in 
+[`data/topics+qrels/papers/list.md`](data/topics+qrels/papers/list.md).
 
 ## Document retrieval
 
