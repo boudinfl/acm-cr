@@ -43,27 +43,58 @@ Statistics of the test collection:
 | -----------:| ----------:| ----:| ----:| ----:| ----:| ----:| ----:|
 |      102510 |      70956 | 53.6 | 11.7 | 19.3 | 15.4 | 13.4 |  4.5 |
 
-### Queries
+### Queries (citation contexts)
 
 Following the methodology proposed in [[1]](https://doi.org/10.1145/3132847.3133085), 
 we selected open-access (on ACM or Arxiv) (for data sharing reasons) papers from 
 conferences and manually extracted the citation contexts and cited references (relevant
 documents).
 
-Papers (pdf versions) used for generating queries are in the `data/topics+qrels`
-directory. Papers are grouped by venue, and three files are created for each
-paper, e.g.:
+Papers used for generating queries are in the `data/topics+qrels`
+directory. They are grouped by venue (e.g. sigir-2020), and each of
+them is represented by three separate files, e.g. for paper with
+doi `10.1145/3397271.3401032`:
 
 ```
-3397271.3401032.pdf   # pdf of the paper (id is last part of docid)
+3397271.3401032.pdf   # pdf of the paper
 
 3397271.3401032.dois  # manually curated list of dois for cited references
+                      # the following rules are used for mapping dois :
+                      #   1. DOI from the ACM DL
+                      #   2. DOI from another publisher (including ACL-anthology DOIs)
+                      #   3. arxiv/pubmed/acl-anthology url
+                      #   4. pdf url
+                      #   5. None
 
-3397271.3401032.xml   # citation contexts paird with cited references.       
+3397271.3401032.xml   # manually extracted citation contexts
 ```
 
 Actually, there are 50 papers (list of selected papers is in 
-[`data/topics+qrels/papers/list.md`](data/topics+qrels/papers/list.md).
+[`data/topics+qrels/papers/list.md`](data/topics+qrels/papers/list.md) and
+their manually extracted and curated citation contexts are in the
+following xml format:
+
+```xml
+<doc>
+  <doi>10.1145/3397271.3401032</doi>
+  <title>Measuring Recommendation [...]</title>
+  <abstract>Explanations have a large effect on [...]</abstract>
+  <contexts>
+  <contexts>
+    <context id="01" section="introduction">
+      <s>Recommendations are part of everyday life.</s>
+      <s>Be they made by a person, or by [...]</s>
+      <s cites="13,14,23,28">Explanations are known to strongly impact how the recipient of a recommendation responds [13, 14, 23, 28], yet the effect is still not well understood.</s>
+    </context>
+    [...]
+  </contexts>
+  <references>
+    <reference id="1">10.1145/3173574.3174156</reference>
+    <reference id="2">10.1145/3331184.3331211</reference>
+    [...]
+  </references>
+</doc>
+```
 
 ## Document retrieval
 
