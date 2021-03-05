@@ -112,14 +112,14 @@ avg coverage of collection: 0.4982 [0.0909 - 0.8333]
 
 |     0 |    1+ |   All |
 | -----:| -----:| -----:|
-| 34.37:| 21.08:| 44.55:|
+| 34.37 | 21.08 | 44.55 |
 
 - number of citation contexts (p): 341
 - number of 1+/all citation contexts (p): 268
 
 |     0 |    1+ |   All |
 | -----:| -----:| -----:|
-| 21.41:| 53.67:| 24.93:|
+| 21.41 | 53.67 | 24.93 |
 
 ## Document retrieval
 
