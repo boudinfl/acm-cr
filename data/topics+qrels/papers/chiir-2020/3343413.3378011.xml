@@ -1,0 +1,108 @@
+<doc>
+	<doi>10.1145/3343413.3378011</doi>
+	<title>Personalized Entity Search by Sparse and Scrutable User Profiles</title>
+	<abstract>Prior work on personalizing web search results has focused on considering query-and-click logs to capture users' individual interests. For product search, extensive user histories about purchases and ratings have been exploited. However, for general entity search, such as for books on specific topics or travel destinations with certain features, personalization is largely underexplored. In this paper, we address personalization of book search, as an exemplary case of entity search, by exploiting sparse user profiles obtained through online questionnaires. We devise and compare a variety of re-ranking methods based on language models or neural learning. Our experiments show that even very sparse information about individuals can enhance the effectiveness of the search results.</abstract>
+	<contexts>
+		<context id="01" section="introduction">
+			<s cites="34,36">Personalization to improve web search result ranking has been a long-standing theme in information retrieval [34, 36].</s>
+			<s>With the increasing availability of individual users’ online traces and derived traits, personalization is again gaining importance for chatbots, recommender systems, product search, and more.</s>
+			<s cites="5">[5] has formulated a vision and research agenda for constructing and leveraging personal knowledge graphs (PKG’s) in such settings.</s>
+			<s>In this paper, we investigate the role of PKG’s for topical entity search, with the challenging case that the only per-user knowledge is a sparse profile obtained from a short questionnaire.</s>
+			<s>In contrast to the “data-hungry” approaches of prior works, we focus on this “minimal PKG” case to strengthen the user’s ability to understand and control her user profile, similar to what major search engines offer for controlling the personalization of ads (e.g., adssettings.google.com).</s>
+			<s>Note that our case is more ambitious, though: minimal-PKG profiles aim to capture the bare necessities, whereas ads controls often comprise a hundred or more tags for the same user.</s>
+			<s>The fewer traits the profile contains and the more explicit they are (as opposed to learned latent models), the more scrutable and actionable the personalization model becomes from a user perspective.</s>
+		</context>
+		<context id="02" section="introduction">
+			<s cites="30,34">The most important line of exploiting user information for general web search is based on query-and-click logs (e.g., [30, 34]).</s>
+			<s cites="29">This helps in interpreting user interests and intents for ambiguous queries as well as for identifying salient pages for popular queries, and for suggestions for query auto-completion (e.g., [29]).</s>
+			<s cites="8">In all this, cues about the user’s location and daytime are a major asset, too (e.g., [8]).</s>
+		</context>
+		<context id="03" section="introduction">
+			<s cites="17,26,31">Recommender systems have incorporated personalization as well, for ads, products and other contents (e.g., [17, 26, 31]).</s>
+			<s>Here, structured data is leveraged, most notably, purchases or ratings of products, likes of news, YouYube videos, Instagram photos, etc.</s>
+			<s cites="6,25,38">This field has recently paid attention to scrutable recommendations that are comprehensible by end-users and pinpoint the specific data that explains how the recommended item was computed [6, 25, 38].</s>
+			<s>However, these approaches are at least as “data-hungry” as the search engines, and require extensive user-specific data.</s>
+		</context>
+		<context id="04" section="introduction">
+			<s cites="4,7">Entity search about people, products or events has received great attention and has been incorporated into major search engines (see, e.g., [4, 7] and further references there).</s>
+			<s>This methodology leverages large knowledge graphs to infer the focus of the query and/or return crisp entities as answers.</s>
+			<s cites="13,2">However, except for special cases such as music recommendation [13] and consumer product search [2], there is hardly any work on personalized entity search with individual user traits.</s>
+		</context>
+		<context id="05" section="related work">
+			<s cites="16,1,14,22,12,24,29">Prior works covered two major dimensions [16]: 1. Creating user models from explicit signals like queries, clicks, likes, social links, etc. [1] or/and rich contents like email histories or desktop data [14, 22]. 2. Leveraging this background knowledge for answer ranking, query expansion, and auto-completion suggestion [12, 24, 29].</s>
+		</context>
+		<context id="06" section="related work">
+			<s cites="34">On the first dimension, [34] pioneered the analysis of user interests and activities reflected in query, click and mail histories, and possibly even other online contents written or read by a user.</s>
+			<s cites="28">[28] focused on short-term context, like browser sessions, to infer the user’s interest and personalize interactive search.</s>
+			<s>Numerous followup works addressed the analysis and usage of query-and-click logs and browsing sessions.</s>
+			<s cites="1,15,33">To learn from this kind of expressive but highly noisy data, [1] introduced predictive models with learning-to-rank features, whereas [15] and [33] explored the use of similarity signals from taxonomies and ontologies.</s>
+			<s cites="37">[37] learned models of user interests for proactive “zero-query” search.</s>
+			<s cites="8">[8] studied the important role of user location.</s>
+		</context>
+		<context id="07" section="related work">
+			<s>On the second dimension, prior works explored personalization for ranking as well as query expansion and query suggestions.</s>
+			<s cites="32">For personalized ranking, [32] developed methods for incorporating user-specific priors into language models.</s>
+			<s cites="8,10">The interplay of a user’s long-term behavior and short-term context for personalized ranking has been investigated in [8, 10].</s>
+			<s cites="35,9">[35] and [9] addressed the issue of selective personalization: when to incorporate user profiles.</s>
+		</context>
+		<context id="08" section="related work">
+			<s>Another line of research addresses query expansion for personalization.</s>
+			<s cites="11,39">[11, 39] utilize folksonomy data, like user-provided tags in social bookmarking communities, as a source for expanding a user’s queries.</s>
+			<s cites="22">[22] personalizes email search via word embeddings learned from email histories.</s>
+			<s cites="14">[14] proposes methods for harnessing a user’s desktop files (incl. email).</s>
+			<s>The viability of all these methods relies on the availability of large collections of user data.</s>
+		</context>
+		<context id="09" section="related work">
+			<s cites="12,29">The same assumption holds for prior work on query auto-completion [12, 29], perhaps the most successful line of personalization in major search engines.</s>
+			<s>The underlying user data ranges from long-term query-and-click histories to browser histories to email contents, in addition to location and daytime as short-term context.</s>
+		</context>
+		<context id="10" section="related work">
+			<s>For entity search, to the best of our knowledge, prior work on personalization is scarce.</s>
+			<s cites="21">CLEF had a series of competitions on book recommendations [21], but this relied on posts, tags, reviews and ratings by many users in the LibraryThing community and the Amazonshop.</s>
+			<s cites="3">The closest to our work is [3] on personalized product search.</s>
+			<s>It is based on learning embeddings for users and items in the same semantic space, by leveraging user-written reviews on item pages.</s>
+			<s>However, such rich data about individual users is not easily available for general entity search.</s>
+		</context>
+	</contexts>
+	<references>
+		<reference id="1">10.1145/1148170.1148175</reference>
+		<reference id="2">10.1145/3077136.3080813</reference>
+		<reference id="3">10.1145/3077136.3080813</reference>
+		<reference id="4">10.5555/3303904</reference>
+		<reference id="5">10.1145/3341981.3344241</reference>
+		<reference id="6">10.1145/3331184.3331211</reference>
+		<reference id="7">10.1561/1500000032</reference>
+		<reference id="8">10.1145/2009916.2009938</reference>
+		<reference id="9">10.1145/2808194.2809464</reference>
+		<reference id="10">10.1145/2348283.2348312</reference>
+		<reference id="11">10.1145/2508037.2508041</reference>
+		<reference id="12">10.1145/2911451.2914686</reference>
+		<reference id="13">http://sigir.org/afirm2019/slides/16.%20Friday%20-%20Music%20Recommendation%20at%20Spotify%20-%20Ben%20Carterette.pdf</reference>
+		<reference id="14">10.1145/1277741.1277746</reference>
+		<reference id="15">10.1145/1076034.1076067</reference>
+		<reference id="16">10.1145/2983323.2983769</reference>
+		<reference id="17">10.1145/2843948</reference>
+		<reference id="18">10.1145/2983323.2983769</reference>
+		<reference id="19">https://www.aclweb.org/anthology/D11-1072.pdf</reference>
+		<reference id="20">10.1145/3159652.3159689</reference>
+		<reference id="21">10.1007/978-3-319-44564-9_29</reference>
+		<reference id="22">10.1145/3077136.3080660</reference>
+		<reference id="23">10.1145/2983323.2983876</reference>
+		<reference id="24">10.1145/1935826.1935840</reference>
+		<reference id="25">10.1145/3298689.3347000</reference>
+		<reference id="26">10.1007/978-1-4899-7637-6_1</reference>
+		<reference id="27">10.1145/1277741.1277756</reference>
+		<reference id="28">10.1145/1099554.1099747</reference>
+		<reference id="29">10.1145/2484028.2484076</reference>
+		<reference id="30">10.1561/1500000013</reference>
+		<reference id="31">10.1109/MIC.2017.72</reference>
+		<reference id="32">10.1145/2124295.2124348</reference>
+		<reference id="33">10.1007/s11257-008-9056-y</reference>
+		<reference id="34">10.1145/1076034.1076111</reference>
+		<reference id="35">10.1145/1390334.1390364</reference>
+		<reference id="36">10.5555/1804422</reference>
+		<reference id="37">10.1007/978-3-319-30671-1_13</reference>
+		<reference id="38">10.1561/1500000066</reference>
+		<reference id="39">10.1109/TKDE.2017.2668419</reference>
+	</references>
+</doc>

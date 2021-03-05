@@ -1,0 +1,43 @@
+<doc>
+	<doi>10.1145/3343413.3377985</doi>
+	<title>A Tool for Conducting User Studies on Mobile Devices</title>
+	<abstract>With the ever-growing interest in the area of mobile information retrieval and the ongoing fast development of mobile devices and, as a consequence, mobile apps, an active research area lies in studying users' behavior and search queries users submit on mobile devices. However, many researchers require to develop an app that collects useful information from users while they search on their phones or participate in a user study. In this paper, we aim to address this need by providing a comprehensive Android app, called Omicron, which can be used to collect mobile query logs and perform user studies on mobile devices. Omicron, at its current version, can collect users' mobile queries, relevant documents, sensor data as well as user activity and interaction data in various study settings. Furthermore, we designed Omicron in such a way that it is conveniently extendable to conduct more specific studies and collect other types of sensor data. Finally, we provide a tool to monitor the participants and their data both during and after the collection process.</abstract>
+	<contexts>
+		<context id="01" section="introduction">
+			<s>With the technological advances in developing mobile devices, we witnessed an evolution of mobile devices as well as the ways people access information through these devices.</s>
+			<s cites="8">Research on mobile information retrieval (mobile IR) is aimed at “enabling users to carry out, using a mobile device, all the classical IR operations that they were used to carry out on a desktop” [8].</s>
+			<s>The evolution of mobile devices as well as their applications (a.k.a. apps) not only enables users to carry out the “classical IR” tasks on their mobile devices, but also identifies new methods of interaction and information access.</s>
+		</context>
+		<context id="02" section="introduction">
+			<s cites="11" anonymised="true">Research on mobile IR started as early as 2006 when [11] studied query logs of Google mobile search.</s>
+			<s>Since then, there has been growing interest in studying this area both in industry and academia.</s>
+			<s cites="12,6">Early studies mainly focused on understanding users information needs on mobile devices [12] and exploring conventional Web-based IR approaches on these devices [6].</s>
+			<s>More recently, along with advances in technology, researchers have explored various aspects of mobile IR.</s>
+			<s cites="15" anonymised="true">For instance, [15] studied and found significant differences in search patterns done using iPhone, iPad, and desktop.</s>
+			<s cites="7" anonymised="true">[7] conducted a comparative study on mobile spoken and written queries showing that spoken queries are longer and closer to natural language.</s>
+			<s cites="14" anonymised="true">[14] conducted a diary study in which they found that contextual features such as activity and time influence 72% of mobile information needs.</s>
+			<s cites="5" anonymised="true">[5] studied user interactions concerning mobile apps and mobile search, finding that users’ interactions with apps have an impact on search.</s>
+			<s cites="9" anonymised="true">[9] found that fragmented attention of users while searching on-the-go, affects their search objective and performance perception.</s>
+			<s cites="1" anonymised="true">Also, [1] confirmed the findings of this study by studying people’s behavior while searching in different contexts through a field study.</s>
+			<s cites="3">More recently, researchers indicated the need for a universal mobile search framework and found that commercial mobile search engines such as Google and Bing are not the preferred means of information access for the majority of users’ information needs [3].</s>
+			<s>As it is obvious, above-mentioned studies either had access to commercial search logs or developed a specific app for their study.</s>
+		</context>
+	</contexts>
+	<references>
+		<reference id="1">10.1145/3295750.3298923</reference>
+		<reference id="2">10.1145/3269206.3271679</reference>
+		<reference id="3">10.1145/3209978.3210039</reference>
+		<reference id="4">10.1145/3331184.3331265</reference>
+		<reference id="5">10.1145/2702123.2702486</reference>
+		<reference id="6">10.1145/1409240.1409243</reference>
+		<reference id="7">10.5555/1133031.1133036</reference>
+		<reference id="8">10.5555/3152586</reference>
+		<reference id="9">10.1145/3077136.3080770</reference>
+		<reference id="10">10.1145/1868914.1869002</reference>
+		<reference id="11">10.1145/1124772.1124877</reference>
+		<reference id="12">10.1145/1377999.1378046</reference>
+		<reference id="13">10.1007/978-3-642-12654-3_13</reference>
+		<reference id="14">10.1145/1357054.1357125</reference>
+		<reference id="15">10.1145/2488388.2488493</reference>
+	</references>
+</doc>

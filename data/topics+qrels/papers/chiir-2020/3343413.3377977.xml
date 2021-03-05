@@ -1,0 +1,120 @@
+<doc>
+	<doi>10.1145/3343413.3377977</doi>
+	<title>Effects of Past Interactions on User Experience with Recommended Documents</title>
+	<abstract>Recommender systems are commonly used in entertainment, news, e-commerce, and social media. Document recommendation is a new and under-explored application area, in which both re-finding and discovery of documents need to be supported. In this paper we provide an initial exploration of users' experience with recommended documents, with a focus on how prior interactions influence recognition and interest. Through a field study of more than 100 users, we investigate the effects of past interactions with recommended documents on users' recognition of, prior intent to open, and interest in the documents. We examined different presentations of interaction history, and the recency and richness of prior interaction. We found that presentation only influenced recognition time. Our findings also indicate that people are more likely to recognize documents they had accessed recently and to do so more quickly. Similarly, documents that people had interacted with more deeply were also more frequently and quickly recognized. However, people were more interested in older documents or those with which they had less involved interactions. This finding suggests that in addition to helping users quickly access documents they intend to re-find, document recommendation can add value in helping users discover other documents. Our results offer implications for designing document recommendation systems that help users fulfil different needs.</abstract>
+	<contexts>
+		<context id="01" section="introduction">
+			<s cites="6,7,25">Recommender systems have been well integrated into many aspects of our lives [6, 7, 25].</s>
+			<s cites="11,16,20,23,33">In many domains such as e-commerce, entertainment, news feeds, hiring platforms, and social networks, these systems are primarily used to help users discover new items that might be of interest to them [11, 16, 20, 23, 33].</s>
+			<s cites="26">Document recommendation however, is a unique domain in that its chief concern is to facilitate re-finding of user’s items [26].</s>
+		</context>
+		<context id="02" section="introduction">
+			<s cites="15,26">In comparison with other recommendation domains, document recommendation has been less examined with only few studies in this area focusing on improving the accuracy of the recommender algorithm behind the scenes [15, 26].</s>
+			<s>While the algorithm is an important aspect of the system, knowing about the effects of other aspects, for instance, presentation, explanations, and users’ interaction with the recommended items on user experience helps with designing more effective recommender systems.</s>
+		</context>
+		<context id="03" section="introduction">
+			<s>In this work, we focus on user’s experience with recommended documents.</s>
+			<s>Because individuals and their collaborators are likely to have had previous interactions with the document, the extent to which they recognize the recommended documents or how useful they find the documents may depend on these past interactions.</s>
+			<s cites="2,13">Inspired by previous work in personal information management and refinding [2, 13], our study seeks to investigate the effects of three important dimensions of users’ past interactions with documents recommended to them on their recognition of, prior intent to open, and interest in the documents.</s>
+			<s>The three dimensions are: recency of access, richness of prior interaction, and the presentation of interactions in document summaries.</s>
+		</context>
+		<context id="04" section="related work">
+			<s cites="18">Personal information management (PIM) seeks to understand and support the activities people perform to acquire, organize, maintain, retrieve, and use personal information [18].</s>
+			<s>Personal information can come in many forms including documents, web pages, email messages, notes, etc.</s>
+			<s>People use personal information to complete tasks and fulfil different roles.</s>
+			<s cites="18" anonymised="true">[18] outlines six ways in which information can be personal: Owned by, about, directed toward, sent by, experienced by, or relevant to “me”.</s>
+		</context>
+		<context id="05" section="related work">
+			<s>Several studies have looked into characterizing and supporting personal information management strategies.</s>
+			<s>One line of research focuses on studying the role of search in personal information management.</s>
+			<s cites="12" anonymised="true">For example, [12] argue that search systems can alleviate the need to organize personal information by helping us find it no matter where we encountered it, what we remember about it, and even if we forget it exists.</s>
+			<s cites="4" anonymised="true">[4] study whether improvements in search have changed this fundamental aspect of PIM.</s>
+			<s>They also offer theoretical explanations for differences between PIM and Internet retrieval, and suggest alternative design directions for PIM systems.</s>
+			<s cites="22">A detailed survey of research on information seeking, information needs, and user behavior is presented in [22].</s>
+		</context>
+		<context id="06" section="related work">
+			<s>Another thread of work focuses on personal information management in more specific domains.</s>
+			<s>One domain that has received significant attention is email.</s>
+			<s cites="31" anonymised="true">For example, [31] focus on understanding activities and workflows surrounding how people use email.</s>
+			<s cites="24" anonymised="true">[24] study email use in the context of everyday work practices.</s>
+			<s>They examine how users interlace email with their day-to-day, ongoing work processes.</s>
+			<s>Other studies focus on documents.</s>
+			<s cites="5">Folder navigation to retrieve documents is studied in detail in [5].</s>
+			<s>They argue that people dedicate considerable time to creating systematic structures to facilitate such retrieval.</s>
+			<s>They also use a predictive model to formulate the effect of folder depth and folder size on retrieval time.</s>
+			<s cites="5">An empirical study to compare two methods of organizing documents – placing them into folders or tagging them with labels – is described in [5].</s>
+			<s>Study results point to the importance of designing tools that combine strengths of folders and labels while avoiding their weaknesses.</s>
+		</context>
+		<context id="07" section="related work">
+			<s>Another body of work investigates how people recall and refind previously seen information.</s>
+			<s cites="10,27,29">Research has shown that a significant portion of an individual’s web accesses tends to be revisits [10, 27, 29].</s>
+			<s cites="17" anonymised="true">[17] study how people retain web information they have found for future use.</s>
+			<s cites="28" anonymised="true">In a user study on search, [28] reports that what makes a search result memorable is the rank and whether it was clicked on.</s>
+		</context>
+		<context id="08" section="related work">
+			<s>In addition to studying refinding in the context of Web search, researchers have studied re-finding of personal information, especially with an emphasis on email.</s>
+			<s cites="14" anonymised="true">[14] show that, with the increase of email messages over time, users tend to rely on search for refinding emails as opposed to using human-generated folders and tags.</s>
+			<s cites="13" anonymised="true">[13] describe the design of a system that facilitates information re-use.</s>
+			<s>The system provides a unified index of information that a person has seen, regardless of whether it was seen as email, web page, document, etc. and uses rich contextual cues in the search interface.</s>
+			<s>They found that that email was the most commonly retrieved source of personal information (e.g. files, web history, emails, etc.).</s>
+			<s cites="1,21">More recently, researchers have also studied re-visitation patterns [1] and refinding strategies [21] employed by users to go back to previously seen email messages.</s>
+		</context>
+		<context id="09" section="related work">
+			<s>Other studies have been concerned with finding presentations that help with better recognition.</s>
+			<s cites="9" anonymised="true">[9] design thumbnails that show a person’s interaction with webpages for instance, by marking pages they have visited close together in time and those they have frequently accessed.</s>
+			<s cites="30" anonymised="true">In another work, [30] examine how different representations of web pages affect refinding and finding new information that the user has never seen before.</s>
+			<s>They find for example, that thumbnails help with refinding, but only when the page’s thumbnail has been seen before.</s>
+		</context>
+		<context id="10" section="related work">
+			<s cites="11,19,32,35,25,34,16,23">Personalized recommendations are increasingly employed in a variety of areas, most commonly in entertainment to for instance recommend music or videos [11, 19, 32, 35], product recommendation in online shopping platforms [25, 34], and social media platforms [16, 23].</s>
+			<s>Document recommendation, on the other hand, has not received as much attention.</s>
+			<s cites="15" anonymised="true">[15] studied document recommendation in the context of social tagging.</s>
+			<s>They argue that annotating documents with freely chosen keywords (tags) can provide meaningful collaborative semantic data which can potentially be exploited by recommender systems.</s>
+			<s cites="26">In more recent work, a document recommendation system to provide quick access to documents on the Google Drive platform was described in [26].</s>
+			<s>The system aims to surface the most relevant documents when a user visits the home screen.</s>
+			<s>The paper reports significant productivity gains, in terms of time to locate documents, compared to other approaches that rely on search or browsing.</s>
+		</context>
+		<context id="11" section="related work">
+			<s>Although document recommendation is not a heavily studied area, it can benefit from several insights in studying recommendations in other domains.</s>
+			<s>For example, several papers have attempted to model repeated consumption behavior and its impact on recommender systems.</s>
+			<s cites="2,8,3">Several important aspects such as item popularity, recency of access [2], user reconsumption patterns [8] and interconsumption frequency [3] were highlighted.</s>
+		</context>
+	</contexts>
+	<references>
+		<reference id="1">10.1145/3176349.3176398</reference>
+		<reference id="2">10.1145/2566486.2568018</reference>
+		<reference id="3">10.1145/2872427.2883024</reference>
+		<reference id="4">10.1145/1402256.1402259</reference>
+		<reference id="5">10.5555/1890706.1890712</reference>
+		<reference id="6">10.1007/978-3-642-04584-4_6</reference>
+		<reference id="7">https://arxiv.org/abs/cs/0703042</reference>
+		<reference id="8">10.5555/2887007.2887011</reference>
+		<reference id="9">http://grouplab.cpsc.ucalgary.ca/grouplab/uploads/Publications/Publications/1999-WebView.Ozchi.pdf</reference>
+		<reference id="10">10.1006/ijhc.2001.0459</reference>
+		<reference id="11">10.1145/2959100.2959190</reference>
+		<reference id="12">10.1145/1107458.1107492</reference>
+		<reference id="13">10.1145/860435.860451</reference>
+		<reference id="14">10.1145/2661829.2662018</reference>
+		<reference id="15">10.1145/1772690.1772731</reference>
+		<reference id="16">10.1145/1639714.1639725</reference>
+		<reference id="17">10.1002/meet.1450390143</reference>
+		<reference id="18">10.5555/2155696</reference>
+		<reference id="19">10.1016/j.ijhcs.2017.02.005</reference>
+		<reference id="20">10.1145/1719970.1719976</reference>
+		<reference id="21">10.1145/3308558.3313450 </reference>
+		<reference id="22">http://ir.library.ui.edu.ng/bitstream/123456789/3508/1/%5BDonald_O._Case%5D_Looking_for_Information%2C_Second_Ed.pdf</reference>
+		<reference id="23">10.1109/TKDE.2013.168</reference>
+		<reference id="24">10.1145/1180875.1180942</reference>
+		<reference id="25">10.1109/MIC.2017.72</reference>
+		<reference id="26">10.1145/3097983.3098048</reference>
+		<reference id="27">10.1006/ijhc.1997.0125</reference>
+		<reference id="28">10.1145/1402256.1402258</reference>
+		<reference id="29">10.1145/1277741.1277770</reference>
+		<reference id="30">10.1145/1518701.1519008	</reference>
+		<reference id="31">https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/tr-2001-88.doc</reference>
+		<reference id="32">10.1145/3176349.3176885</reference>
+		<reference id="33">10.1109/ICSSSM.2007.4280214</reference>
+		<reference id="34">10.5555/2017327.2017335</reference>
+		<reference id="35">10.5555/3061053.3061171</reference>
+	</references>
+</doc>

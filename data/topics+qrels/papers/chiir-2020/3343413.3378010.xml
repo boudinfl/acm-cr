@@ -1,0 +1,54 @@
+<doc>
+	<doi>10.1145/3343413.3378010</doi>
+	<title>The Role of Word-Eye-Fixations for Query Term Prediction</title>
+	<abstract>Throughout the search process, the user's gaze on inspected SERPs and websites can reveal his or her search interests. Gaze behavior can be captured with eye tracking and described with word-eye-fixations. Word-eye-fixations contain the user's accumulated gaze fixation duration on each individual word of a web page. In this work, we analyze the role of word-eye-fixations for predicting query terms. We investigate the relationship between a range of in-session features, in particular, gaze data, with the query terms and train models for predicting query terms. We use a dataset of 50 search sessions obtained through a lab study in the social sciences domain. Using established machine learning models, we can predict query terms with comparably high accuracy, even with only little training data. Feature analysis shows that the categories Fixation, Query Relevance and Session Topic contain the most effective features for our task.</abstract>
+	<contexts>
+		<context id="01" section="introduction">
+			<s>User’s gaze behavior throughout a search session has been used in Information Retrieval (IR) as a source of implicit user and relevance feedback.</s>
+			<s cites="1,5,14,13">It has been applied to understand the user interest [1], knowledge level [5], a viewed document’s relevance [14] or the overall task type [13].</s>
+			<s cites="4">Resulting insights from gaze behavior has been used, for example, for re-ranking results or query expansion [4].</s>
+		</context>
+		<context id="02" section="introduction">
+			<s>However, the examination of users’ gaze behavior on the textual level has been a hard and costly task so far, as standard eye tracking software only captures x,y-coordinates.</s>
+			<s>The mapping from eye coordinates to actual text has to be done for each experiment from scratch.</s>
+			<s cites="7">With the open source software Reading Protocol [7] it is possible to automatically process all eye fixations on individual words of viewed web pages in a search session resulting in precise data about word-eye-fixations (duration, frequency, and timestamps).</s>
+		</context>
+		<context id="03" section="related work">
+			<s>In the following, we report on some works in the field of IR, which analyze reading behavior at the levels of paragraph, text and queries.</s>
+			<s cites="14" anonymised="true">[14] studied the user’s gaze behavior while reading a list of titles from scientific articles.</s>
+			<s>Gaze data in combination with trained Hidden Markov Model (HMM) could be used to predict the relevance for new document titles.</s>
+			<s cites="2" anonymised="true">[2] did a study on reading behavior on search engine result pages.</s>
+			<s>They found that fixations were longer on relevant topically related surrogates of the SERP.</s>
+			<s cites="3" anonymised="true">On the paragraph level, [3] found that relevant passages in a text have a higher number of fixations and regressions.</s>
+			<s cites="4" anonymised="true">[4] used eye-gazed features, e.g. eye movements, fixations, and saccades to find relevant paragraphs.</s>
+			<s cites="1" anonymised="true">[1] trained a SVM classifier based on eye-gaze features on short topical documents from Wikipedia which the user has marked as relevant or not.</s>
+			<s>They could then automatically construct queries from eye movements where no learning data is available.</s>
+			<s cites="9" anonymised="true">Lately, [9] introduce a model for predicting document relevance in literature search with signals from EEG and eye-tracking.</s>
+			<s>These neurophysiological features were calibrated by showing topics form the corpus and let the users select relevant keywords to the topic.</s>
+		</context>
+		<context id="04" section="related work">
+			<s cites="8" anonymised="true">[8] found that for domain-specific search a large part of used query terms has been seen before in the search session.</s>
+			<s cites="6" anonymised="true">[6] found that terms acquired in web search queries are fixated longer than non-query terms.</s>
+			<s>They also show that there is a semantic relationship between reformulation terms and eye-fixated terms.</s>
+			<s>In this paper, we extend their work by predicting future query terms using features such as Session Topic, Lexical, Term Context, and Browsing in addition to eye-fixation and semantic proximity features.</s>
+		</context>
+	</contexts>
+	<references>
+		<reference id="1">10.1007/s11257-009-9066-4</reference>
+		<reference id="2">10.5555/1920331.1920437</reference>
+		<reference id="3">https://www.microsoft.com/en-us/research/wp-content/uploads/2017/01/BrooksIA2006.pdf</reference>
+		<reference id="4">10.1145/1390334.1390401</reference>
+		<reference id="5">10.1016/j.ipm.2012.08.004</reference>
+		<reference id="6">10.1145/2766462.2767703</reference>
+		<reference id="7">10.1145/3295750.3298921</reference>
+		<reference id="8">10.1007/978-3-319-56608-5_2</reference>
+		<reference id="9">10.1002/asi.24161</reference>
+		<reference id="10">10.1145/3295750.3298950</reference>
+		<reference id="11">https://ieeexplore.ieee.org/abstract/document/6287675</reference>
+		<reference id="12">10.5555/645527.657297</reference>
+		<reference id="13">10.1145/1816123.1816134</reference>
+		<reference id="14">10.1145/1076034.1076062</reference>
+		<reference id="15">10.5555/1625855.1625914</reference>
+		<reference id="16">10.1016/j.jbi.2016.08.026</reference>
+	</references>
+</doc>
