@@ -1,0 +1,53 @@
+<doc>
+	<doi>10.1145/3409256.3409827</doi>
+	<title>Optimizing Hyper-Phrase Queries</title>
+	<abstract>A hyper-phrase query (HPQ) consists of a sequence of phrase sets. Such queries naturally arise when attempting to spot knowledge graph (KG) facts or sets of KG facts in large document collections to establish their provenance. Our approach addresses this challenge by proposing query operators to detect text regions in documents that correspond to the HPQ as combinations of n-grams and skip-grams. The optimization lies in identifying the most cost-efficient order of query operators that can be executed to identify the text regions containing the HPQ. We show the efficiency of our optimizations on spotting facts from Wikidata in document collections amounting to more than thirty million documents.</abstract>
+	<contexts>
+		<context id="01" section="related work">
+			<s>Variable length pattern matching is an allied area with respect to our problem setting.</s>
+			<s cites="8,20">Prior works [8, 20] have studied how in-memory data structures can help in the design of efficient matching algorithms.</s>
+			<s cites="8,20">For instance, [20] considered matching-lookup table while [8] considered a wavelet tree as an in-memory index to speed up the matching process.</s>
+			<s>Our work in contrast, leverages large-scale inverted indexes that are part of modern IR systems to efficiently execute a more difficult problem.</s>
+			<s>A straight-forward approach to spotting evidences for KG facts is to index document collections annotated with named entities linked to KGs.</s>
+			<s>However, using such an approach we can not spot facts for out-of-KG entities or their emerging relations.</s>
+			<s cites="15,16">A recent work on spotting KG facts uses regular expression based operators at word-level [15, 16].</s>
+			<s>However, their approach disregards any optimization for efficient execution of hyper-phrase queries.</s>
+			<s cites="13,19">[13, 19] propose a system that retrieves witness documents given a KG fact as a query.</s>
+			<s>However, a limitation of their system is that documents need to be processed apriori and linked to KG facts for their retrieval.</s>
+			<s>Put another way, out-of-KG facts or entities can not be processed with their system.</s>
+			<s>Our approach solves this issue by relying on a data model that can represent n-grams, skip-grams, and sentence boundaries.</s>
+			<s>Relying on our data model, we can then retrieve text regions as evidences for KG facts.</s>
+			<s cites="17">[17] investigate how to model query execution plans with respect to recall of relevant documents and the query’s execution time.</s>
+			<s>Their approach contrasts between two models: inverted index based approach versus scanning the entire document collection.</s>
+			<s cites="7">[7] describes an algorithm that identifies a relevant set of documents for named entities by finding a token-set-cover for various surface forms of the named entity and computing a join of the retrieved documents.</s>
+			<s cites="21,23">[21, 23] describe approaches to query phrases using combinations of inverted, phrase, nextword, and direct indexes.</s>
+			<s>Our work in contrast explores ways to compute an optimal plan of hyper-phrase query execution using dictionaries and indexes over n-grams and skip-grams.</s>
+		</context>
+	</contexts>
+	<references>
+		<reference id="1">https://catalog.ldc.upenn.edu/LDC2011T07</reference>
+		<reference id="2">https://www.gdeltproject.org</reference>
+		<reference id="3">https://catalog.ldc.upenn.edu/LDC2008T19</reference>
+		<reference id="4">https://www.wikipedia.org</reference>
+		<reference id="5">https://www.wikidata.org</reference>
+		<reference id="6">https://github.com/lemire/JavaFastPFOR</reference>
+		<reference id="7">10.14778/1453856.1453960</reference>
+		<reference id="8">10.1007/978-3-319-38851-9_1</reference>
+		<reference id="9">10.1016/j.tcs.2012.03.029</reference>
+		<reference id="10">10.5555/500824</reference>
+		<reference id="11">10.5555/643002.643006</reference>
+		<reference id="12">10.1145/1877766.1877767</reference>
+		<reference id="13">10.14778/1920841.1921046</reference>
+		<reference id="14">10.1007/s10791-008-9054-z</reference>
+		<reference id="15">10.1145/3269206.3271745</reference>
+		<reference id="16">10.1145/3289600.3290618</reference>
+		<reference id="17">10.1145/1142473.1142504</reference>
+		<reference id="18">https://www.aclweb.org/anthology/P14-5010.pdf</reference>
+		<reference id="19">10.1145/2063576.2063587</reference>
+		<reference id="20">10.1109/DASC.2009.65</reference>
+		<reference id="21">10.1007/978-3-319-11749-2_13</reference>
+		<reference id="22">10.1145/582095.582099</reference>
+		<reference id="23">10.1145/1028099.1028102</reference>
+		<reference id="24">10.1109/ICDE.2006.150</reference>
+	</references>
+</doc>

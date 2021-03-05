@@ -5,36 +5,10 @@ citation recommendation constructed for running document retrieval experiments.
 
 ## Requirements
 
-### Install Python modules 
+### Installing required Python modules 
 
 ```
 pip install -r requirements.txt 
-```
-
-### Install anserini
-
-Here, we use the open-source information retrieval toolkit 
-[anserini](http://anserini.io/) which is built on 
-[Lucene](https://lucene.apache.org/).
-Below are the installation steps for a mac computer (tested on OSX 10.14) based
-on their [colab demo](https://colab.research.google.com/drive/1s44ylhEkXDzqNgkJSyXDYetGIxO9TWZn).
-
-
-```bash
-# install maven
-brew cask install adoptopenjdk
-brew install maven
-
-# cloning / installing anserini
-git clone https://github.com/castorini/anserini.git --recurse-submodules
-cd anserini/
-# for 10.14 issues -> changing jacoco from 0.8.2 to 0.8.3 in pom.xml to build correctly
-# for 10.13 issues -> https://github.com/castorini/anserini/issues/648
-mvn clean package appassembler:assemble
-
-# compile evaluation tools and other scripts
-cd tools/eval && tar xvfz trec_eval.9.0.4.tar.gz && cd trec_eval.9.0.4 && make && cd ../../..
-cd tools/eval/ndeval && make && cd ../../..
 ```
 
 ## Test collection
@@ -69,40 +43,112 @@ Statistics of the test collection:
 | -----------:| ----------:| ----:| ----:| ----:| ----:| ----:| ----:|
 |      102510 |      70956 | 53.6 | 11.7 | 19.3 | 15.4 | 13.4 |  4.5 |
 
-### Queries
+### Queries (citation contexts)
 
 Following the methodology proposed in [[1]](https://doi.org/10.1145/3132847.3133085), 
-we selected open-access (for data sharing reasons) papers from conferences and 
-manually extracted the citation contexts and cited references (relevant
+we selected open-access (on ACM or Arxiv) (for data sharing reasons) papers from 
+conferences and manually extracted the citation contexts and cited references (relevant
 documents).
 
-Papers (pdf versions) used for generating queries are in `data/topics+qrels`
-directory. Papers are grouped by venue, and three files are created for each
-paper, e.g.:
+Papers used for generating queries are in the `data/topics+qrels`
+directory. They are grouped by venue (e.g. sigir-2020), and each of
+them is represented by three separate files, e.g. for paper with
+doi `10.1145/3397271.3401032`:
 
 ```
-3397271.3401032.pdf    # paper id (last part of docid)
+3397271.3401032.pdf   # pdf of the paper
 
-3397271.3401032.docids # manually curated list of docid for cited references
-                       # references starting with - symbol are not linked to
-                       # documents within the collection (or not found...)
-                      
-3397271.3401032.topics # queries are natural paragraphs from papers where most
-                       # citations are present in the collection. Manual
-                       # removing can be applied to remove parts (whole
-                       # sentences) that are not coherent (e.g. containing
-                       # unlinked citations) or to split very long queries. We
-                       # try to keep contexts where at least one marker of a 
-                       # series of references is linked. We only use
-                       # introduction and related work sections. We remove 
-                       # explicit citation markers (e.g. He et al. [19] -> [19])
-                       
-3397271.3401032.qrels  # relevant judgments                               
+3397271.3401032.dois  # manually curated list of dois for cited references
+                      # the following rules are used for mapping dois :
+                      #   1. DOI from the ACM DL
+                      #   2. DOI from another publisher (including ACL-anthology DOIs)
+                      #   3. arxiv/pubmed/acl-anthology url
+                      #   4. pdf url
+                      #   5. None
+
+3397271.3401032.xml   # manually extracted citation contexts
 ```
 
-Actually, there are 30 papers and 169 topics.
+Actually, there are 50 papers (list of selected papers is in 
+[`data/topics+qrels/papers/list.md`](data/topics+qrels/papers/list.md) and
+their manually extracted and curated citation contexts are in the
+following xml format:
+
+```xml
+<doc>
+  <doi>10.1145/3397271.3401032</doi>
+  <title>Measuring Recommendation [...]</title>
+  <abstract>Explanations have a large effect on [...]</abstract>
+  <contexts>
+  <contexts>
+    <context id="01" section="introduction">
+      <s>Recommendations are part of everyday life.</s>
+      <s>Be they made by a person, or by [...]</s>
+      <s cites="13,14,23,28">Explanations are known to strongly impact how the recipient of a recommendation responds [13, 14, 23, 28], yet the effect is still not well understood.</s>
+    </context>
+    [...]
+  </contexts>
+  <references>
+    <reference id="1">10.1145/3173574.3174156</reference>
+    <reference id="2">10.1145/3331184.3331211</reference>
+    [...]
+  </references>
+</doc>
+```
+
+## Some statistics
+
+```
+python3 src/cc_stats.py --input data/topics+qrels/papers/ \
+                        --collection data/topics+qrels/collection.txt
+
+avg number of cited documents: 31.82 [8 - 71]
+avg number of cited documents in collection: 15.50 [1 - 37]
+avg coverage of collection: 0.4982 [0.0909 - 0.8333]
+```
+
+- number of citation contexts (s): 835
+- number of 1+/all citation contexts (s): 548
+
+|     0 |    1+ |   All |
+| -----:| -----:| -----:|
+| 34.37 | 21.08 | 44.55 |
+
+- number of citation contexts (p): 341
+- number of 1+/all citation contexts (p): 268
+
+|     0 |    1+ |   All |
+| -----:| -----:| -----:|
+| 21.41 | 53.67 | 24.93 |
 
 ## Document retrieval
+
+### Installing anserini
+
+Here, we use the open-source information retrieval toolkit 
+[anserini](http://anserini.io/) which is built on 
+[Lucene](https://lucene.apache.org/).
+Below are the installation steps for a mac computer (tested on OSX 10.14) based
+on their [colab demo](https://colab.research.google.com/drive/1s44ylhEkXDzqNgkJSyXDYetGIxO9TWZn).
+
+```bash
+# install maven
+brew cask install adoptopenjdk
+brew install maven
+
+# cloning / installing anserini
+git clone https://github.com/castorini/anserini.git --recurse-submodules
+cd anserini/
+# for 10.14 issues -> changing jacoco from 0.8.2 to 0.8.3 in pom.xml to build correctly
+# for 10.13 issues -> https://github.com/castorini/anserini/issues/648
+mvn clean package appassembler:assemble
+
+# compile evaluation tools and other scripts
+cd tools/eval && tar xvfz trec_eval.9.0.4.tar.gz && cd trec_eval.9.0.4 && make && cd ../../..
+cd tools/eval/ndeval && make && cd ../../..
+```
+
+### Benchmarking IR models
 
 ```
 ./src/0_create_data.sh
@@ -110,10 +156,10 @@ Actually, there are 30 papers and 169 topics.
 70960 entries with T+A+K
 present: 0.5356199337142871
 absent: 0.4643800662857018
-|-> c1/Reordored (i.e. all words): 0.1172396547138912
-|-> c2/Mixed (i.e. some words): 0.19282425867095065
-|-> c3/Unseen (i.e. no words): 0.15431615290087136
-|-> exp. : 0.1341835075750805
+├──> c1/Reordored (i.e. all words): 0.1172396547138912
+├──> c2/Mixed (i.e. some words): 0.19282425867095065
+├──> c3/Unseen (i.e. no words): 0.15431615290087136
+├──> exp. : 0.1341835075750805
 avg nb kps : 4.5367317609265365
 
 70956 T+A+K, 18726 T+A, 13117 T over 102510 entries

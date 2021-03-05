@@ -1,0 +1,114 @@
+<doc>
+	<doi>10.1145/3336191.3371814</doi>
+	<title>Listwise Learning to Rank by Exploring Unique Ratings</title>
+	<abstract>In this paper, we propose new listwise learning-to-rank models that mitigate the shortcomings of existing ones. Existing listwise learning-to-rank models are generally derived from the classical Plackett-Luce model, which has three major limitations. (1) Its permutation probabilities overlook ties, i.e., a situation when more than one document has the same rating with respect to a query. This can lead to imprecise permutation probabilities and inefficient training because of selecting documents one by one. (2) It does not favor documents having high relevance. (3) It has a loose assumption that sampling documents at different steps is independent. To overcome the first two limitations, we model ranking as selecting documents from a candidate set based on unique rating levels in decreasing order. The number of steps in training is determined by the number of unique rating levels. More specifically, in each step, we apply multiple multi-class classification tasks to a document candidate set and choose all documents that have the highest rating from the document set. This is in contrast to taking one document step by step in the classical Plackett-Luce model. Afterward, we remove all of the selected documents from the document set and repeat until the remaining documents all have the lowest rating. We propose a new loss function and associated four models for the entire sequence of weighted classification tasks by assigning high weights to the selected documents with high ratings for optimizing Normalized Discounted Cumulative Gain (NDCG). To overcome the final limitation, we further propose a novel and efficient way of refining prediction scores by combining an adapted Vanilla Recurrent Neural Network (RNN) model with pooling given selected documents at previous steps. We encode all of the documents already selected by an RNN model. In a single step, we rank all of the documents with the same ratings using the last cell of the RNN multiple times. We have implemented our models using three settings: neural networks, neural networks with gradient boosting, and regression trees with gradient boosting. We have conducted experiments on four public datasets. The experiments demonstrate that the models notably outperform state-of-the-art learning-to-rank models.</abstract>
+	<contexts>
+		<context id="01" section="introduction">
+			<s>Learning-to-rank is one of the most classical research topics in information retrieval, and researchers have put tremendous efforts into modeling ranking behaviors.</s>
+			<s>In training, existing ranking models learn a scoring function from query-document features and multi-level ratings/labels, e.g., 0, 1, 2.</s>
+			<s>During inference, the learned scoring function is used to obtain prediction scores for ordering documents.</s>
+			<s>There are two major challenges for learning-to-rank.</s>
+			<s>The first challenge is that there can be a mismatch between ratings and the correct ranking orders in training.</s>
+			<s>Although it is straightforward to infer partial ranking orders from ratings and prediction scores, it is not easy to design loss functions modeling the order of ratings and the order of prediction scores.</s>
+			<s>Many prediction scores indicate the same ranking, i.e., the order of documents.</s>
+			<s>This implies that a model does not necessarily have to match ratings, opening opportunities and ambiguities.</s>
+			<s>Moreover, the top ranking positions are more important.</s>
+			<s>The second challenge is that raw features may not be representative enough for learning a reasonable scoring function.</s>
+			<s cites="24,10,1,3,5,18,38">Existing ranking models tackle the two challenges by: (1) designing loss functions or reward functions to map prediction scores with correct ranking orders in training, and (2) tuning loss functions with evaluation metrics such as NDCG [24], or ERR [10], and (3) calculating prediction scores using richer features such as a local ranking context [1, 3, 5, 18, 38].</s>
+		</context>
+		<context id="02" section="introduction">
+			<s>Depending on how prediction scores in training are compared with ratings, there are three types of loss functions: pointwise, pairwise, and listwise.</s>
+			<s cites="31">Pointwise learning maps the prediction scores of individual documents with their exact ratings [31], which is not necessary for obtaining correct orders.</s>
+			<s cites="7,8,14,20,28,43,44,46,50">Pairwise learning [7, 8, 14, 20, 28, 43, 44, 46, 50] naturally compares pairs of documents to minimize the number of inversions.</s>
+			<s cites="20,14,7,28">Earlier pairwise models such as RankSVM [20], RankBoost [14], RankNet [7], and Ordinal Regression [28] may overly update weights for different pairs as they treat all pairs with equal importance.</s>
+			<s>For instance, suppose the correct order is (a -> b -> c -> d).</s>
+			<s>When a pairwise model catches an inversion (c -> b) in a predicted order (a -> c -> b -> d), it tries to update weights to increase the score of b and decrease the score of c.</s>
+			<s>However, if the score of b becomes too high – higher than a – this causes another inversion (b, a).</s>
+			<s cites="8,22,43,46,8">LambdaMart [8, 22, 43] and NDCG-LOSS++ [46] largely limit this issue by assigning different weights for different pairs when calculating their gradients [8].</s>
+			<s cites="11,26,35">Their best models rely on using gradient boosting regression trees [11, 26, 35], which are effective but very sensitive to hyper-parameters.</s>
+			<s cites="9,17,25,27,34,36,45,48,40,32" anonymised="true">Listwise learning [9, 17, 25, 27, 34, 36, 45, 48] tries to learn the best document permutation based on permutation probabilities proposed by [40] and [32].</s>
+			<s>The classical Plackett-Luce model has a constraint that the permutation probabilities are targeted for unique ratings.</s>
+			<s>For instance, maximizing the likelihood of choosing a document from a set of documents that have the same rating can confuse a model.</s>
+			<s>Since the number of unique rating levels is typically much smaller than the number of candidate documents per query, there can be a large number of ties.</s>
+			<s cites="48">Also, in order to calculate the joint probability of a ranking sequence, the number of steps a Plackett-Luce model, such as ListMLE [48], needs to go through is bound by the number of candidate documents per query.</s>
+			<s>Therefore, obtaining one permutation can be computationally inefficient.</s>
+			<s>Furthermore, top documents are more important, but each step of a Plackett-Luce model is equally important along the entire sequence.</s>
+			<s cites="45,27,6">Variants such as SoftRank [45], p-ListMLE [27], and ApproxNDCG [6] use NDCG or ranking positions to tune their loss functions.</s>
+			<s>Nevertheless, when the number of documents in a permutation is large, gradients can vanish or explode very fast as the product of their permutation probabilities is close to 0.</s>
+			<s cites="2,16,31,1,13,30,33,37,47,49">Highlights from research studies in recent years for scoring functions include ensemble scoring functions [2, 16, 31], ranking refinement [1], and reinforcement learning [13, 30, 33, 37, 47, 49].</s>
+			<s>Despite being effective, training efficiency is still their common bottleneck, which limits their usage in real-world applications.</s>
+		</context>
+		<context id="03" section="related work">
+			<s cites="9">ListNet Since learning the complete n! permutations is intractable, ListNet [9] generally minimizes the cross-entropy of top-one probabilities of prediction scores and ratings using a softmax function.</s>
+			<s>Given a set of n documents for a specific query D = {di}i , their ratings Y = {yi}i , and a global scoring function f, the loss function for ListNet using top-one probabilities is.</s>
+		</context>
+		<context id="04" section="related work">
+			<s>A correct ranking sequence satisfies the property that for any two documents di and dj, if the rating of di is higher than the rating dj, di is ranked before dj in the ordered sequence.</s>
+			<s cites="23">Since there can be ties in ratings, a sampling method of selecting a correct sequence is generally used [23].</s>
+			<s>A ListMLE model does not have the crossentropy issue but can suffer from sampling n! correct orders when all documents have the same rating.</s>
+			<s>More importantly, when n is large the likelihoods at the top positions become very small, which leads to imbalance gradient updates for documents ranked at different positions.</s>
+		</context>
+		<context id="05" section="related work">
+			<s>The Vanilla RNN model takes a sequence of feature vectors X = (xt)t as input, where xt indicates the feature vector of the document at step t, and computes the hidden output ht at each step.</s>
+			<s>We use ht = rnn(xt,ht−1,W) in this paper to represent an RNN function, where W is a set of trainable weight matrices.</s>
+			<s>Although RNNs can learn the conditional/hidden transitions, it is intractable to apply an RNN to the complete order of documents for a query because of the following two reasons.</s>
+			<s>(1) Some documents have the same rating due to ties.</s>
+			<s>(2) Training a long sequence can be time and memory consuming.</s>
+			<s cites="21,12">It still easily suffers gradient vanishing even if it utilizes more advanced RNN models such as a Long Short-term Memory network (LSTM) [21] or a Gated Recurrent Unit network (GRU) [12].</s>
+			<s cites="1">A common practice of applying RNNs in learning-to-rank is by refining the top positions of a ranked list using two training phases [1].</s>
+			<s>The novelty of our RNN-based model is that we apply RNN and pooling functions to multiple documents at each step.</s>
+		</context>
+	</contexts>
+	<references>
+		<reference id="1">10.1145/3209978.3209985</reference>
+		<reference id="2">10.1145/3341981.3344218</reference>
+		<reference id="3">10.1109/IJCNN.2018.8489646</reference>
+		<reference id="4">https://arxiv.org/abs/1606.06959</reference>
+		<reference id="5">https://arxiv.org/abs/1810.02019</reference>
+		<reference id="6">10.1145/3331184.3331347</reference>
+		<reference id="7">10.1145/1102351.1102363</reference>
+		<reference id="8">https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/MSR-TR-2010-82.pdf</reference>
+		<reference id="9">10.1145/1273496.1273513</reference>
+		<reference id="10">10.1145/1645953.1646033</reference>
+		<reference id="11">10.1145/2939672.2939785</reference>
+		<reference id="12">https://arxiv.org/abs/1412.3555</reference>
+		<reference id="13">10.1145/3209978.3209979</reference>
+		<reference id="14">10.5555/945365.964285</reference>
+		<reference id="15">https://www.jstor.org/stable/2699986</reference>
+		<reference id="16">10.1145/3289600.3290986</reference>
+		<reference id="17">10.1145/1553374.1553423</reference>
+		<reference id="18">10.1016/j.ipm.2019.102067</reference>
+		<reference id="19">10.1145/3292500.3330658</reference>
+		<reference id="20">https://ieeexplore.ieee.org/abstract/document/6274980</reference>
+		<reference id="21">10.1162/neco.1997.9.8.1735</reference>
+		<reference id="22">10.1145/3308558.3313447</reference>
+		<reference id="23">https://arxiv.org/abs/1707.07493</reference>
+		<reference id="24">10.1145/582415.582418</reference>
+		<reference id="25">https://arxiv.org/abs/1803.01682</reference>
+		<reference id="26">10.5555/3294996.3295074</reference>
+		<reference id="27">10.5555/3020751.3020798</reference>
+		<reference id="28">10.5555/2976456.2976565</reference>
+		<reference id="29">10.1145/3292500.3330676</reference>
+		<reference id="30">10.1007/978-3-319-91458-9_11</reference>
+		<reference id="31">10.1561/1500000016</reference>
+		<reference id="32">https://psycnet.apa.org/record/1960-03588-000</reference>
+		<reference id="33">http://infosense.cs.georgetown.edu/publication/jiyun_phd_dissertation.pdf</reference>
+		<reference id="34">10.18653/v1/D15-1079</reference>
+		<reference id="35">10.5555/3157096.3157239</reference>
+		<reference id="36">10.1145/2396761.2398681</reference>
+		<reference id="37">10.1145/3209978.3209992</reference>
+		<reference id="38">10.1145/3132847.3132914</reference>
+		<reference id="39">10.1145/3292500.3330677</reference>
+		<reference id="40">10.2307/2346567</reference>
+		<reference id="41">https://arxiv.org/abs/1306.2597</reference>
+		<reference id="42">10.1007/s10791-009-9123-y</reference>
+		<reference id="43">10.5555/2976456.2976481</reference>
+		<reference id="44">https://storage.googleapis.com/pub-tools-public-publication-data/pdf/35662.pdf</reference>
+		<reference id="45">10.1145/1341531.1341544</reference>
+		<reference id="46">10.1145/3269206.3271784</reference>
+		<reference id="47">10.1145/3077136.3080685</reference>
+		<reference id="48">10.1145/1390156.1390306</reference>
+		<reference id="49">10.1145/3234944.3234977</reference>
+		<reference id="50">10.1145/1390334.1390382</reference>
+	</references>
+</doc>

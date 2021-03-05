@@ -1,0 +1,89 @@
+<doc>
+	<doi>10.1145/3397271.3401322</doi>
+	<title>A Study of Neural Matching Models for Cross-lingual IR</title>
+	<abstract>In this study, we investigate interaction-based neural matching models for ad-hoc cross-lingual information retrieval (CLIR) using cross-lingual word embeddings (CLWEs). With experiments conducted on the CLEF collection over four language pairs, we evaluate and provide insight into different neural model architectures, different ways to represent query-document interactions and word-pair similarity distributions in CLIR. This study paves the way for learning an end-to-end CLIR system using CLWEs.</abstract>
+	<contexts>
+		<context id="01" section="introduction">
+			<s>CLIR is the task of retrieving documents in target language Lt with queries written in source language Ls.</s>
+			<s cites="4,6,14,1,2,8,5,10,15">The increasing popularity of projection-based weakly-supervised [4, 6, 14] and unsupervised [1, 2] cross-lingual word embeddings has spurred unsupervised frameworks [8] for CLIR, while in the realm of monolingual IR, interaction-based neural matching models [5, 10, 15] that utilize semantics contained in word embeddings have been the dominant force.</s>
+			<s>This study fills the gap of utilizing CLWEs in neural IR models for CLIR.</s>
+		</context>
+		<context id="02" section="introduction">
+			<s>Traditional CLIR approaches translate either document or query using off-the-shelf SMT system such that query and document are in the same language.</s>
+			<s cites="12,13,3">A number of researchers [12, 13] later investigated utilizing translation table to build a probabilistic structured query [3] in the target language.</s>
+			<s cites="8" anonymised="true">Recently, [8] showed that CLWEs are good translation resources by experimenting with a CLIR method (dubbed TbT-QT) that translates each query term in the source language to the nearest target language term in the CLWE space.</s>
+			<s>CLWEs are obtained by aligning two separately trained embeddings for two languages in the same latent space, where a term in Ls is proximate to its synonyms in Ls and its translations in Lt, and vice versa.</s>
+			<s cites="11">TbT-QT takes only the top-1 translation of a query term and uses the query likelihood model [11] for retrieval.</s>
+			<s>The overall retrieval performance can be damaged by vocabulary mismatch magnified with translation error.</s>
+			<s>Using closeness measurement between query and document terms in the shared CLWE space as matching signal for relevance can alleviate the problem, but this area has not been extensively studied.</s>
+		</context>
+		<context id="03" section="introduction">
+			<s cites="15">Representation learning: models in which interaction features are built with differentiable operations (e.g., kernel pooling [15]) allow customizing word embeddings via end-to-end learning from large-scale training data.</s>
+		</context>
+		<context id="04" section="introduction">
+			<s cites="15">Although representation learning is capable of further improving overall retrieval performance [15], it was shown in the same study that updating word embeddings requires large-scale training data to work well (more than 100k search sessions in their case).</s>
+			<s>In CLIR, however, datasets usually have fewer than 200 queries per available language pair and can only support training neural models with smaller capacity.</s>
+			<s>Therefore, we focus on the pattern learning aspect of neural models.</s>
+		</context>
+		<context id="05" section="related work">
+			<s cites="8" anonymised="true">Two unsupervised CLIR approaches using CLWEs are proposed by [8].</s>
+			<s>BWE-Agg ranks documents with respect to a query using the cosine similarity of query and document embeddings, obtained by aggregating the CLWEs of their constituent terms.</s>
+			<s>The simpler version, namely BWE-Agg-Add, takes the average embeddings of all terms for queries and documents, while the more advanced version BWE-Agg-IDF builds document embeddings by weighting terms with their inverse document frequencies.</s>
+			<s>TbT-QT, as described in §1, first translates each query term to its nearest cross-lingual neighbor term and then adopts query-likelihood in mono-lingual setting.</s>
+			<s>These two approaches represent different perspectives towards CLIR using CLWEs.</s>
+			<s>BWE-Agg builds query and document representations out of CLWEs but completely neglects exact matching signals, which play important roles in IR.</s>
+			<s>Also, although query and document terms are weighted based on IDF, using only one representation for a long document can fail to emphasize the section of a document that is truly relevant to the query.</s>
+			<s>TbT-QT only uses CLWEs as query translation resources and adopts exact matching in a mono-lingual setting, so its performance is heavily dependent on the translation accuracy (precision@1) of CLWEs.</s>
+			<s>Analytically, an interaction-based neural matching model that starts with word level query-document interactions and considers both exact and similar matching can make up for the shortcomings of the above two methods.</s>
+		</context>
+		<context id="06" section="related work">
+			<s cites="9,10,5,15">For interaction-based matching models, we select three representative models (MatchPyramid [9, 10], DRMM [5] and KNRM [15]) from the literature for analysis and experiments.</s>
+		</context>
+		<context id="07" section="related work">
+			<s cites="9,10">The MatchPyramid [9, 10] (MP for short) is one of the earliest models that starts with capturing word-level matching patterns for retrieval.</s>
+			<s>It casts the ad-hoc retrieval task as a series of image recognition problems, where the “image” is the matching matrix of a query-document pair (q,d), and each “pixel” is the interaction value of a query term qi and a document term dj.</s>
+			<s>Typical interaction functions are cosine similarity, dot product, Gaussian kernel, and indicator function (for exact match).</s>
+			<s>The intuition behind hierarchical convolutions and pooling is to model phrase, sentence and even paragraph level matching patterns.</s>
+		</context>
+		<context id="08" section="related work">
+			<s cites="5">The DRMM [5] model uses a matching histogram to capture the interactions of a query term with the whole document.</s>
+			<s>The valid interval of cosine similarity (i.e., [−1, 1]) is discretized into a fixed number of bins such that a matching histogram is essentially a fixed-length integer vector.</s>
+			<s>Features from different histograms are weighted based on attention calculated on query terms.</s>
+			<s>DRMM is not position-preserving, as the authors claim that relevance matching is not related to term order.</s>
+		</context>
+		<context id="09" section="related work">
+			<s cites="15">The KNRM [15] model takes matrix representation for query-document interaction (similar to MP), but “categorizes” interactions into different levels of cosine similarities (similar to DRMM), using Gaussian kernels with different mean value μ.</s>
+			<s>The distinct advantage of KNRM over DRMM is that the former allows gradient to pass through Gaussian kernels, and therefore supports end-to-end learning of embeddings.</s>
+		</context>
+		<context id="10" section="related work">
+			<s cites="5,10,15">According to results reported in respective studies [5, 10, 15], the relative performance of three models for mono-lingual IR should be KNRM > DRMM > MP, even when embedding learning is turned off with KNRM.</s>
+			<s>Tweaking a neural model for support of CLIR is trivial: instead of considering interaction value as two terms’ similarity in a mono-lingual embedded space, we consider the proximity of their representations in the shared cross-lingual embedded space.</s>
+			<s>However, there are several matters to consider while making the transition:</s>
+		</context>
+		<context id="11" section="related work">
+			<s cites="8">Query translation based CLIR methods (e.g., TbT-QT [8]) first translate queries fromLs to Lt, then use mono-lingual retrieval in Lt.</s>
+			<s>Apart from the inherent vocabulary mismatch problem within Lt, the translation error from Ls to Lt has to be also counted.</s>
+			<s>Looking at the example in Table 1, TbT-QT would look for occurrence of “telefónicos” in the collection, and documents containing only the correct translation (“teléfono”) would be overlooked.</s>
+			<s>Interaction-based neural matching models alleviate this issue by giving partial credit to suboptimal nearest neighbors, which in many cases are the correct translations.</s>
+			<s>To demonstrate the necessity of directly using cross-lingual word embedding similarity as interaction for neural models, we conduct comparative experiments where queries are first translated term-by-term like TbT-QT using CLWEs, then used for retrieval in mono-lingual setting.</s>
+			<s>Such models are referred to as {MP,DRMM,K-NRM}-TbT-QT, respectively.</s>
+		</context>
+	</contexts>
+	<references>
+		<reference id="1">10.18653/v1/D18-1399</reference>
+		<reference id="2">https://arxiv.org/abs/1710.04087</reference>
+		<reference id="3">10.1145/860435.860497</reference>
+		<reference id="4">10.18653/v1/P19-1070</reference>
+		<reference id="5">10.1145/2983323.2983769</reference>
+		<reference id="6">10.18653/v1/D18-1330</reference>
+		<reference id="7">https://arxiv.org/abs/1412.6980</reference>
+		<reference id="8">10.1145/3209978.3210157</reference>
+		<reference id="9">https://arxiv.org/abs/1606.04648</reference>
+		<reference id="10">10.5555/3016100.3016292</reference>
+		<reference id="11">10.1145/290941.291008</reference>
+		<reference id="12">10.1145/2484028.2484137</reference>
+		<reference id="13">10.1145/2644807</reference>
+		<reference id="14">10.3115/v1/N15-1104</reference>
+		<reference id="15">10.1145/3077136.3080809</reference>
+	</references>
+</doc>

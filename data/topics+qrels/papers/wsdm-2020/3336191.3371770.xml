@@ -1,0 +1,120 @@
+<doc>
+	<doi>10.1145/3336191.3371770</doi>
+	<title>JNET: Learning User Representations via Joint Network Embedding and Topic Embedding</title>
+	<abstract>User representation learning is vital to capture diverse user preferences, while it is also challenging as user intents are latent and scattered among complex and different modalities of user-generated data, thus, not directly measurable. Inspired by the concept of user schema in social psychology, we take a new perspective to perform user representation learning by constructing a shared latent space to capture the dependency among different modalities of user-generated data. Both users and topics are embedded to the same space to encode users' social connections and text content, to facilitate joint modeling of different modalities, via a probabilistic generative framework. We evaluated the proposed solution on large collections of Yelp reviews and StackOverflow discussion posts, with their associated network structures. The proposed model outperformed several state-of-the-art topic modeling based user models with better predictive power in unseen documents, and state-of-the-art network embedding based user models with improved link prediction quality in unseen nodes. The learnt user representations are also proved to be useful in content recommendation, e.g., expert finding in StackOverflow.</abstract>
+	<contexts>
+		<context id="01" section="introduction">
+			<s cites="11,22,31,39,40">Inferring user intent from recorded user behavior data has been studied extensively for user modeling [11, 22, 31, 39, 40].</s>
+			<s cites="9,17">Essentially, user modeling builds up conceptual representations of users, which help automated systems to better capture users’ needs and enhance user experience in such systems [9, 17].</s>
+			<s cites="15,16,8,12,27">The rapid development of social media enables users to participate in online activities and create vast amount of observational data, such as social interactions [15, 16] and opinionated text content [8, 12, 27], which in turn provides informative signs about user intents and enables more accurate user representation learning.</s>
+			<s cites="18,29,23,38,5,20,31,42">Extensive efforts have proved the value of user representation learning in various real-world applications, such as latent factor models for collaborative filtering [18, 29], topic models for content modeling [23, 38], network embedding models for social link prediction [5, 20], and many more [31, 42].</s>
+		</context>
+		<context id="02" section="introduction">
+			<s>User representation learning is challenging, and it can never be a straightforward application of existing statistical learning algorithms on user-generated data.</s>
+			<s cites="24">First, user-generated data is noisy, incomplete, highly unstructured, and tied with social interactions [34], which imposes serious challenges in modeling such data.</s>
+			<s cites="10,20,32">For example, in an environment where users are connected, e.g., social network, user-generated data is potentially related, which directly breaks the popularly imposed independent and identically distributed assumptions in most learning solutions [10, 20, 32].</s>
+			<s>Second, users often participate in various online activities simultaneously, which creates instrumental contextual signals across different modalities.</s>
+			<s cites="19">Although oftentimes scattered and sparse, such multi-modal observations reflect users’ underlying intents as a whole and call for a holistic modeling approach [19].</s>
+			<s>Ad-hoc data-driven solutions inevitably isolate the dependency and hence fail to create a comprehensive representation of users.</s>
+			<s cites="5,28,4,23,38">For example, users’ social interactions [5, 28] and their generated text data [4, 23, 38] have been extensively studied for user representation learning, but they are largely modeled in isolation.</s>
+			<s>Third, consequently, a unified user representation learning solution is preferred to serve different applications, by taking advantage of data-rich applications to help those data-poor applications.</s>
+		</context>
+		<context id="03" section="introduction">
+			<s cites="12,43">Even among a few attempts for joint modeling of different types of user-generated data [12, 43], explicit modeling of dependency among multiple behavior modalities is still missing.</s>
+			<s cites="43" anonymised="true">For example, [43] incorporated user-generated text content into network representation learning via joint matrix factorization.</s>
+			<s>In their solution, content modeling is only used as a regularization for network modeling; and thus the learnt model is not in a position to predict unseen text content.</s>
+			<s cites="12" anonymised="true">[12] paired the task of sentiment classification with that of social network modeling, and represented each user as a mixture over the instances of these paired tasks.</s>
+			<s>Though text and network are jointly considered, they are only correlated by sharing the same mixing component, without explicitly modeling of the mutual influence between them.</s>
+		</context>
+		<context id="04" section="introduction">
+			<s cites="37">In social psychology and cognitive science, the concept of user schema defines the knowledge structure a person holds which organizes categories of information and the relationships among such categories [37].</s>
+			<s>Putting it into the scenario of user modeling, we naturally interpret the knowledge structure as user representation described by the collection of associated data, such as the set of textual reviews and behavioral logs associated with individual users.</s>
+			<s cites="2">The interrelation existing among multiple types of data further motivates us to perform user modeling in a joint manner while the concept of distributed representation learning [2], i.e., embedding, provides us one possible solution.</s>
+			<s>By constructing a shared latent space, we can embed different modalities of user-generated data in the same low-dimensional space, where the structural dependency among them can be realized by the proximity among different embeddings.</s>
+			<s>The space should be constructed in such a way: 1) the properties of each modality of user-generated data is preserved; 2) the closeness among different modalities of user-generated data can be characterized by the similarity measured in the latent space.</s>
+			<s>For example, connected users in a social network should be closer to each other in this latent space; and by mapping other types of user behavior data into this same space, e.g., text data or behavioral logs, users should be surrounded by their own generated data.</s>
+		</context>
+		<context id="05" section="introduction">
+			<s>To realize this new perspective of user representation learning, we exploit two most widely available and representative forms of user-generated data, i.e., text content and social interactions.</s>
+			<s>We develop a probabilistic generative model to integrate user modeling with content and network embedding.</s>
+			<s cites="4,38">Due to the unstructured nature of text, we appeal to statistical topic models to model user-generated text content [4, 38], with a goal to capture the underlying semantics.</s>
+			<s cites="4">We define a topic as a probability distribution over a fixed vocabulary [4].</s>
+			<s>We embed both users and topics to the same low-dimensional space to capture of their mutual dependency.</s>
+			<s>On one hand, a user’s affinity to a topic is characterized by his/her proximity to the topic’s embedding in this latent space, which is utilized to generate each text document of the user.</s>
+			<s>On the other hand, the affinity between users is directly modeled by the proximity between users’ embeddings, which are utilized to generate the corresponding social network connections.</s>
+			<s>In this latent space, the two modalities of user-generated data are correlated explicitly, indicated by the user’s topical preferences.</s>
+			<s>The user representation is obtained by posterior inference of those embedding vectors over a set of training data, via variational Bayesian.</s>
+			<s>To reflect the nature of our proposed user representation learning method, we name the solution Joint Network Embedding and Topic Embedding, or JNET for short.</s>
+		</context>
+		<context id="06" section="related work">
+			<s>When performing user representation learning in an isolated way, much attention has been paid on exploring user-user interactions to learn users’ distributed representations, which are essential for better understanding users’ interactive preferences in social network analysis.</s>
+			<s cites="25,13,28,35">Inspired from word embedding techniques [25], random walk models are exploited to generate random paths over a network to learn dense, continuous and low-dimensional representations of users [13, 28, 35].</s>
+			<s cites="26,41">Matrix factorization technique is also commonly used to learn user embeddings [26, 41], as learning a low-rank space for an adjacency matrix representing the network naturally fits the need of learning low-rank user/node embeddings.</s>
+			<s cites="36" anonymised="true">For instance, [36] factorize an input network’s modularity matrix and use discriminative training to extract representative dimensions for learning user representation.</s>
+		</context>
+		<context id="07" section="related work">
+			<s>In parallel, the user-generated text data is utilized to understand users’ emphasis on specific entities or aspects.</s>
+			<s cites="4,14">Topic models [4, 14] serve as a building block for statistical modeling of text data.</s>
+			<s cites="30">Typical solutions model individual users as a bag of topics [30], which govern the generation of associated text documents.</s>
+			<s cites="38" anonymised="true">[38] combine topic modeling with collaborative filtering to estimate topical user representations with additional observations from user-item ratings.</s>
+			<s cites="39" anonymised="true">[39] use topic modeling to estimate users’ detailed aspect-level preferences from their opinionated review content.</s>
+			<s cites="21" anonymised="true">[21] learn users’ personalized topical compositions to differentiate user’s subjectivity from item’s intrinsic property in the review documents.</s>
+			<s cites="23" anonymised="true">[23] uncover the implicit preferences of each user as well as the properties of each product by mapping users and items into a shared topic space.</s>
+			<s cites="7,33">Some recent works use deep neural networks to obtain user embedding from their generated text data [7, 33].</s>
+		</context>
+		<context id="08" section="related work">
+			<s>Although most previous works studied social networks and user-generated text content in isolation, little attention has been paid in combining the two sources for better user modeling.</s>
+			<s cites="24">Earlier work [24] regularizes a statistical topic model with a harmonic regularizer defined on the network structure.</s>
+			<s cites="43">[43] incorporate text features of users into network representation learning via joint matrix factorization.</s>
+			<s cites="12" anonymised="true">[12] pair tasks of opinionated content modeling and network structure modeling in a group-wise fashion, and model each user as a mixture over the tasks.</s>
+			<s>Though both text and network are utilized for user modeling in the aforementioned works, explicit modeling of dependence among different modalities is still missing.</s>
+			<s cites="1" anonymised="true">[1] explore the dependency among documents and network but on a per-community basis instead of a per-user basis.</s>
+			<s>Our work proposes a holistic view to model users’ social preferences and topical interests jointly, thus to provide a more general understanding of user intents from multiple perspectives.</s>
+		</context>
+	</contexts>
+	<references>
+		<reference id="1">10.1007/978-3-319-23528-8_18</reference>
+		<reference id="2">10.1109/TPAMI.2013.50</reference>
+		<reference id="3">10.5555/2976248.2976267</reference>
+		<reference id="4">10.5555/2980539.2980618</reference>
+		<reference id="5">10.1145/2556195.2556216</reference>
+		<reference id="6">http://proceedings.mlr.press/v5/chang09a/chang09a.pdf</reference>
+		<reference id="7">10.18653/v1/D16-1171</reference>
+		<reference id="8">10.1002/sam.11223</reference>
+		<reference id="9">10.1023/A:1011145532042</reference>
+		<reference id="10">10.18653/v1/P16-1081</reference>
+		<reference id="11">10.1145/3038912.3052693</reference>
+		<reference id="12">10.1145/3219819.3220120</reference>
+		<reference id="13">10.1145/2939672.2939754</reference>
+		<reference id="14">10.5555/2073796.2073829</reference>
+		<reference id="15">https://pubmed.ncbi.nlm.nih.gov/11690115/</reference>
+		<reference id="16">10.1145/956750.956769</reference>
+		<reference id="17">10.1023/A:1011187500863</reference>
+		<reference id="18">10.1109/MC.2009.263</reference>
+		<reference id="19">https://psycnet.apa.org/record/1946-00480-000</reference>
+		<reference id="20">10.1145/956863.956972</reference>
+		<reference id="21">10.1145/3289600.3291022</reference>
+		<reference id="22">10.1145/1719970.1719976</reference>
+		<reference id="23">10.1145/2507157.2507163</reference>
+		<reference id="24">10.1145/1367497.1367512</reference>
+		<reference id="25">https://arxiv.org/abs/1301.3781</reference>
+		<reference id="26">10.1145/2939672.2939751</reference>
+		<reference id="27">http://www.lrec-conf.org/proceedings/lrec2010/pdf/385_Paper.pdf</reference>
+		<reference id="28">10.1145/2623330.2623732</reference>
+		<reference id="29">10.1109/ICDM.2010.127</reference>
+		<reference id="30">10.5555/1036843.1036902</reference>
+		<reference id="31">10.1145/1099554.1099747</reference>
+		<reference id="32">10.1145/2020408.2020614</reference>
+		<reference id="33">10.3115/v1/P15-1098</reference>
+		<reference id="34">10.1145/2641190.2641195</reference>
+		<reference id="35">10.1145/2736277.2741093</reference>
+		<reference id="36">10.1145/1557019.1557109</reference>
+		<reference id="37">10.1037/1076-898X.9.2.101</reference>
+		<reference id="38">10.1145/2020408.2020480</reference>
+		<reference id="39">10.1145/2020408.2020505</reference>
+		<reference id="40">10.1145/2556195.2556262</reference>
+		<reference id="41">10.5555/3298239.3298270</reference>
+		<reference id="42">10.1145/2488388.2488511</reference>
+		<reference id="43">10.5555/2832415.2832542</reference>
+	</references>
+</doc>

@@ -1,0 +1,79 @@
+<doc>
+	<doi>10.1145/3409256.3409830</doi>
+	<title>Towards Memorable Information Retrieval</title>
+	<abstract>Information overload is a problem many of us can relate to nowadays. The deluge of user generated content on the Internet, and the easy accessibility to a vast amount of data compounds the problem of remembering and retaining information that is consumed. To make information consumed more memorable, strategies such as note-taking have been found to be effective by augmenting human memory under specific conditions. This is based on the rationale that humans tend to recall information better if they have produced the information themselves. Previous works in online education have shown that conversational systems can improve learning effects. Although memorization is an important part of learning, the effect of conversation on human memorability remains unexplored. We aim to address this knowledge gap through an experimental study, by investigating human memorability in a classical information retrieval setup. We explore the impact of note-taking affordances and conversational interfaces on the memorability of information consumed by users. Our results show that traditional web search and note-taking have positive effects on knowledge gain, while the search engine with a conversational interface has the potential to augment long-term memorability. This work highlights the benefits of using note-taking and conversational interfaces to aid human memorability. Our findings have important implications on building information retrieval systems that cater to optimizing memorability of information consumed.</abstract>
+	<contexts>
+		<context id="01" section="introduction">
+			<s cites="26">To improve human memorability, researchers in the field of experimental psychology have studied the “generation effect” [26].</s>
+			<s>By comparing memory for words, experiments revealed that humans could better recall information if they produced it themselves rather than if they received it.</s>
+			<s cites="7,27">Based on the generation effect, prior studies have shown that note-taking, a simple way to re-produce received information, can improve human memorability, particularly for text-based learning and comprehension [7, 27].</s>
+			<s>However, the effects of note-taking in a classic information retrieval setup remain unexplored.</s>
+		</context>
+		<context id="02" section="introduction">
+			<s cites="13,16,28">Prior studies in online learning have revealed that conversational systems can significantly improve learning outcomes [13, 16, 28].</s>
+			<s cites="4,15">As the goal of learning is to develop a deep understanding of some information, memorization is an important element [4, 15].</s>
+			<s>Although conversation can produce unique context linked with information, the effect of conversational systems on human memorability needs further exploration.</s>
+			<s cites="22">A recent study has investigated the role of text-based conversational interfaces in online information finding tasks [22].</s>
+			<s>Authors demonstrated that a conversational interface could better engage online users.</s>
+			<s>However, the question of whether improved user engagement through conversational interfaces leads to better memorability of information remains unanswered.</s>
+		</context>
+		<context id="03" section="related work">
+			<s>Different theories for augmenting human memory have been studied in the field of psychology.</s>
+			<s cites="18,20" anonymised="true">The memory consolidation theory proposed by [18, 20] explained the processes to make information memory.</s>
+			<s cites="1">The Atkinson-Shiffrin memory model shows that the long-term memory can be consolidated by repeatedly rehearsing short-term memory [1].</s>
+			<s cites="6">To study how the ‘remembering information’ relates to one’s self, previous work has revealed that the memory could be enhanced if it relates to one’s self-concept or an episode from one’s life [6].</s>
+			<s cites="26">A prior study in experimental psychology has shown evidence of the existence of the “generation effect” [26].</s>
+			<s>Authors conducted experiments at the word-level to show that people could remember information better if the information was produced by themselves.</s>
+			<s>A simple and direct application of the generation effect is the use of note-taking.</s>
+			<s cites="7,10,19,27">Previous studies have shown that note-taking can improve human memorability in different scenarios [7, 10, 19, 27].</s>
+			<s cites="14" anonymised="true">[14] examined the use of internal and external memory aids in experiments with 489 undergraduates.</s>
+			<s cites="14">It was found that at least one external aid, i.e. taking notes, can effectively facilitate remembering [14].</s>
+			<s>Based on the findings of prior works, in this study we investigate how an external aid such as note-taking can affect the long-term memorability of users in informational search.</s>
+		</context>
+		<context id="04" section="related work">
+			<s>Augmenting human memory has also been studied from an information systems standpoint.</s>
+			<s cites="9,23">Many previous studies have used context as a key aspect to improve human memorability [9, 23].</s>
+			<s cites="23">The ‘Remembrance Agent’ is an automatic system which uses the role of context in memory to augment human memory, by listing documents related to the user’s current context [23].</s>
+			<s cites="5" anonymised="true">[5] have performed experiments to find the attributes (e.g. file name, time, title, location, size, etc.) that help memorability for a document search tool.</s>
+			<s cites="8,29,24">Previous works have also shown that many strategies, such as time-aware contextualization [8, 29], and optimizing recollection by generating analogies [24], have a positive effect on human memorability.</s>
+			<s cites="25">Furthermore, a recent study built an application named ReflectiveDiary’, to investigate how self-generated daily summaries can improve memorability [25].</s>
+			<s cites="3">Predictive methods have also been proposed to consolidate human memory in the workplace environment [3].</s>
+			<s cites="4,15">Since memorization is an essential element of the learning process [4, 15], we also examined relevant literature in online learning.</s>
+			<s cites="13,16,28,22">Across multiple studies, conversational systems were found to be useful in facilitating learning effects [13, 16, 28] and in effectively improving user engagement in information retrieval tasks [22].</s>
+			<s>These previous works with regard to aiding memorability or improving learning effects in information systems are not directly applicable in the current information retrieval ecosystems.</s>
+			<s>Inspired by these prior works, we propose novel search interfaces and design experiments to study human memorability in information retrieval.</s>
+		</context>
+	</contexts>
+	<references>
+		<reference id="1">10.1016/S0079-7421(08)60422-3</reference>
+		<reference id="2">10.1016/S0022-5371(75)80045-4</reference>
+		<reference id="3">10.1145/3176349.3176399</reference>
+		<reference id="4">https://files.eric.ed.gov/fulltext/ED308201.pdf</reference>
+		<reference id="5">10.1145/1216295.1216319</reference>
+		<reference id="6">10.1016/0092-6566(79)90005-9</reference>
+		<reference id="7">10.1037/a0030367</reference>
+		<reference id="8">10.1145/2600428.2609526</reference>
+		<reference id="9">10.1145/2063576.2063799</reference>
+		<reference id="10">https://psycnet.apa.org/buy/1986-15738-001</reference>
+		<reference id="11">10.1145/3176349.3176381</reference>
+		<reference id="12">http://teachpsych.com/Resources/Documents/otrp/syllabi/AMGA19cog.pdf</reference>
+		<reference id="13">https://www.learntechlib.org/p/20691/</reference>
+		<reference id="14">https://pdfs.semanticscholar.org/5bbc/17282a2b448383d0098e54c037e2412aad74.pdf</reference>
+		<reference id="15">10.1007/BF00128436</reference>
+		<reference id="16">10.1016/j.compedu.2011.11.001</reference>
+		<reference id="17">10.1145/3320435.3320439</reference>
+		<reference id="18">10.1126/science.287.5451.248</reference>
+		<reference id="19">10.1037/0021-9010.87.2.293</reference>
+		<reference id="20">https://www.jstor.org/stable/2247976</reference>
+		<reference id="21">10.1371/journal.pone.0120644</reference>
+		<reference id="22">10.1145/3313831.3376403</reference>
+		<reference id="23">https://www.aaai.org/Papers/Symposia/Spring/1996/SS-96-02/SS96-02-022.pdf</reference>
+		<reference id="24">10.1145/3173574.3174122</reference>
+		<reference id="25">10.1145/3282894.3282907</reference>
+		<reference id="26">10.1037/0278-7393.4.6.592</reference>
+		<reference id="27">10.1006/ceps.1998.0980</reference>
+		<reference id="28">10.1109/HSI.2017.8005002</reference>
+		<reference id="29">10.1145/2684822.2685315</reference>
+		<reference id="30">10.1145/3209978.3210064</reference>
+	</references>
+</doc>

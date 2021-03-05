@@ -1,0 +1,103 @@
+<doc>
+	<doi>10.1145/3409256.3409820</doi>
+	<title>Taking the Counterfactual Online: Efficient and Unbiased Online Evaluation for Ranking</title>
+	<abstract>Counterfactual evaluation can estimate Click-Through-Rate (CTR) differences between ranking systems based on historical interaction data, while mitigating the effect of position bias and item-selection bias. We introduce the novel Logging-Policy Optimization Algorithm (LogOpt), which optimizes the policy for logging data so that the counterfactual estimate has minimal variance. As minimizing variance leads to faster convergence, LogOpt increases the data-efficiency of counterfactual estimation. LogOpt turns the counterfactual approach - which is indifferent to the logging policy - into an online approach, where the algorithm decides what rankings to display. We prove that, as an online evaluation method, LogOpt is unbiased w.r.t. position and item-selection bias, unlike existing interleaving methods. Furthermore, we perform large-scale experiments by simulating comparisons between thousands of rankers. Our results show that while interleaving methods make systematic errors, LogOpt is as efficient as interleaving without being biased.</abstract>
+	<contexts>
+		<context id="01" section="introduction">
+			<s cites="8,14">Evaluation is essential for the development of search and recommendation systems [8, 14].</s>
+			<s>Before any ranking model is widely deployed it is important to first verify whether it is a true improvement over the currently-deployed model.</s>
+			<s>A traditional way of evaluating relative differences between systems is through A/B testing, where part of the user population is exposed to the current system (“control") and the rest to the altered system (“treatment") during the same time period.</s>
+			<s cites="4">Differences in behavior between these groups can then indicate if the alterations brought improvements, e.g. if the treatment group showed a higher Click-Through-Rate (CTR) or more revenue was made with this system [4].</s>
+		</context>
+		<context id="02" section="introduction">
+			<s cites="11">Interleaving has been introduced in Information Retrieval (IR) as a more efficient alternative to A/B testing [11].</s>
+			<s>Interleaving algorithms take the rankings produced by two ranking systems, and for each query create an interleaved ranking by combining the rankings from both systems.</s>
+			<s>Clicks on the interleaved rankings directly indicate relative differences.</s>
+			<s cites="10">Repeating this process over a large number of queries and averaging the results, leads to an estimate of which ranker would receive the highest CTR [10].</s>
+			<s cites="4,21">Previous studies have found that interleaving requires fewer interactions than A/B testing, which enables them to make consistent comparisons in a much shorter timespan [4, 21].</s>
+		</context>
+		<context id="03" section="introduction">
+			<s cites="13" anonymised="true">More recently, counterfactual evaluation for rankings has been proposed by [13] to evaluate a ranking model based on clicks gathered using a different model.</s>
+			<s>By correcting for the position bias introduced during logging, the counterfactual approach can unbiasedly estimate the CTR of a new model on historical data.</s>
+			<s cites="22">To achieve this, counterfactual evaluation makes use of Inverse-Propensity-Scoring (IPS), where clicks are weighted inversely to the probability that a user examined them during logging [22].</s>
+			<s>A big advantage compared to interleaving and A/B testing, is that counterfactual evaluation does not require online interventions.</s>
+		</context>
+		<context id="04" section="related work">
+			<s cites="14">A/B testing is a well established form of online evaluation to compare a system A with a system B [14].</s>
+			<s>Users are randomly split into two groups and during the same time period each group is exposed to only one of the systems.</s>
+			<s>In expectation, the only factor that differs between the groups is the exposure to the different systems.</s>
+			<s>Therefore, by comparing the behavior of each user group, the relative effect each system has can be evaluated.</s>
+		</context>
+		<context id="05" section="related work">
+			<s cites="11">Interleaving methods were introduced specifically for evaluation in ranking, as a more efficient alternative to A/B testing [11].</s>
+			<s>After a query is issued, they take the rankings of two competing ranking systems and combine them into a single interleaved ranking.</s>
+			<s>Any clicks on the interleaved ranking can be interpreted as a preference signal between either ranking system.</s>
+			<s>Thus, unlike A/B testing, interleaving does not estimate the CTR of individual systems but a relative preference; the idea is that this allows it to be more efficient than A/B testing.</s>
+		</context>
+		<context id="06" section="related work">
+			<s cites="11">Each interleaving method attempts to use randomization to counter position bias, without deviating too much from the original rankings so as to maintain the user experience [11].</s>
+			<s cites="20">Team-draft interleaving (TDI) randomly selects one ranker to place their top document first, then the other ranker places their top (unplaced) document next [20].</s>
+			<s>Then it randomly decides the next two documents, and this process is repeated until all documents are placed in the interleaved ranking.</s>
+			<s>Clicks on the documents are attributed to the ranker that placed them.</s>
+			<s>The ranker with the most attributed clicks is inferred to be preferred by the user.</s>
+			<s cites="9">Probabilistic interleaving (PI) treats each ranking as a probability distribution over documents; at each rank a distribution is randomly selected and a document is drawn from it [9].</s>
+			<s>After clicks have been received, probabilistic interleaving computes the expected number of clicks documents per ranking system to infer preferences.</s>
+			<s cites="19">Optimized interleaving (OI) casts the randomization as an optimization problem, and displays rankings so that if all documents are equally relevant no preferences are found [19].</s>
+		</context>
+		<context id="07" section="related work">
+			<s>While every interleaving method attempts to deal with position bias, none is unbiased according to our definition (Section 2.2).</s>
+			<s cites="9,10,19">This may be confusing because previous work on interleaving makes claims of unbiasedness [9, 10, 19].</s>
+			<s>However, they use different definitions of the term.</s>
+			<s cites="9,10,19,20">More precisely, TDI, PI, and OI provably converge on the correct outcome if all documents are equally relevant [9, 10, 19, 20].</s>
+			<s cites="10,19">Moreover, if one assumes binary relevance and π1 ranks all relevant documents equal to or higher than π2, the binary outcome of PI and OI is proven to be correct in expectation [10, 19].</s>
+			<s>However, beyond the confines of these unambiguous cases, we can prove that these methods do not meet our definition of unbiasedness: for every method one can construct an example where it converges on the incorrect outcome.</s>
+			<s>The rankers π1, π2 and position bias parameters θ can be chosen so that in expectation the wrong (binary) outcome is estimated; see Appendix A for a proof for each of the three interleaving methods.</s>
+			<s>Thus, while more efficient than A/B testing, interleaving methods make systematic errors in certain circumstances and thus should not be considered to be unbiased w.r.t. CTR differences.</s>
+		</context>
+		<context id="08" section="related work">
+			<s cites="12,22">Counterfactual evaluation is based on the idea that if certain biases can be estimated well, they can also be adjusted [12, 22].</s>
+			<s>While estimating relevance is considered the core difficulty of ranking evaluation, estimating the position bias terms θ is very doable.</s>
+			<s cites="12,1">By randomizing rankings, e.g., by swapping pairs of documents [12] or exploiting data logged during A/B testing [1], differences in CTR for the same item on different positions can be observed directly.</s>
+			<s cites="23,2">Alternatively, using Expectation Maximization (EM) optimization [23] or a dual learning objective [2], position bias can be estimated from logged data as well.</s>
+			<s>Once the bias terms θ have been estimated, logged clicks can be weighted so as to correct for the position bias during logging.</s>
+			<s>Hence, counterfactual evaluation can work with historically logged data.</s>
+			<s>Existing counterfactual evaluation algorithms do not dictate which rankings should be displayed during logging: they do not perform interventions and thus we do not consider them to be online methods.</s>
+		</context>
+		<context id="09" section="related work">
+			<s>Counterfactual evaluation assumes that the position bias θ and the logging policy π0 are known, in order to correct for both position bias and item-selection bias.</s>
+			<s>Clicks are gathered with π0 which decides which rankings are displayed to the user.</s>
+			<s cites="16" anonymised="true">We follow [16] and use as propensity scores the probability of observance in expectation over the displayed rankings:</s>
+		</context>
+		<context id="10" section="related work">
+			<s cites="12,22">Besides Requirement 15 the existing counterfactual method [12, 22] is completely indifferent to π0 and hence we do not consider it to be an online method.</s>
+			<s>In the next section, we will introduce an algorithm for choosing and updating π0 during logging to minimize the variance of the estimator.</s>
+			<s>By doing so we turn counterfactual evaluation into an online method.</s>
+		</context>
+	</contexts>
+	<references>
+		<reference id="1">10.1145/3289600.3291017</reference>
+		<reference id="2">10.1145/3209978.3209986</reference>
+		<reference id="3">10.5555/3045754.3045756</reference>
+		<reference id="4">10.1145/2094072.2094078</reference>
+		<reference id="5">10.2200/S00654ED1V01Y201507ICR043</reference>
+		<reference id="6">10.1145/1341531.1341545</reference>
+		<reference id="7">10.1145/3331184.3331238</reference>
+		<reference id="8">10.1561/1500000051</reference>
+		<reference id="9">10.1145/2063576.2063618</reference>
+		<reference id="10">10.1145/2536736.2536737</reference>
+		<reference id="11">http://www.cs.cornell.edu/~tj/publications/joachims_02b.pdf</reference>
+		<reference id="12">10.1145/1076034.1076063</reference>
+		<reference id="13">10.1145/3018661.3018699</reference>
+		<reference id="14">10.1007/978-1-4899-7502-7891-1</reference>
+		<reference id="15">10.1145/3366423.3380130</reference>
+		<reference id="16">10.1145/3397271.3401102</reference>
+		<reference id="17">10.1145/3366423.3380255</reference>
+		<reference id="18">https://arxiv.org/abs/1306.2597</reference>
+		<reference id="19">10.1145/2433396.2433429</reference>
+		<reference id="20">10.1145/1458082.1458092</reference>
+		<reference id="21">10.1145/2766462.2767695</reference>
+		<reference id="22">10.1145/2911451.2911537</reference>
+		<reference id="23">10.1145/3159652.3159732</reference>
+		<reference id="24">10.1145/3269206.3271784</reference>
+	</references>
+</doc>

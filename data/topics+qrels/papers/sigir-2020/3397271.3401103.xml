@@ -1,0 +1,134 @@
+<doc>
+	<doi>10.1145/3397271.3401103</doi>
+	<title>An Eye Tracking Study of Web Search by People With and Without Dyslexia</title>
+	<abstract>Web search is a key digital literacy skill that can be particularly challenging for people with dyslexia, a common learning disability that affects reading and spelling skills in about 15% of the English-speaking population. In this paper, we collected and analyzed eye-tracking, search log, and self-report data from 27 participants (14 with dyslexia) to confirm that searchers with dyslexia struggle with all stages of the search process and have markedly different gaze patterns and search behavior that reflect the strategies used and challenges faced. Based on these findings, we discuss design implications to improve the cognitive accessibility of web search.</abstract>
+	<contexts>
+		<context id="01" section="introduction">
+			<s cites="7,30">Dyslexia is a cognitive diference that impacts about 15% of English speakers [7] (incidence rates vary by language [30]).</s>
+			<s>People with dyslexia tend to experience challenges in tasks involving reading, writing, spelling, and memory, despite having normal intelligence.</s>
+			<s cites="35">These challenges often manifest in a slower reading rate and lower reading comprehension [35].</s>
+			<s cites="7">However, because dyslexia is a spectrum disorder, diferent people may experience diferent subsets and degrees of symptoms [7].</s>
+		</context>
+		<context id="02" section="introduction">
+			<s>Relatively little is known about how dyslexia impacts web search, but several recent studies have begun to shed some light on this topic.</s>
+			<s cites="4,19,35,37,43">Interviews with people with dyslexia suggest that search engine use -including query formulation, search result triage and information extraction from target webpages- is particularly challenging for this population [4, 19, 35, 37, 43].</s>
+			<s cites="25">Online experiments comparing search behaviors of people with and without dyslexia have identifed some features of webpages, such as average line length and the ratio of images to text, that impact page readability for people with dyslexia [25].</s>
+		</context>
+		<context id="03" section="introduction">
+			<s>To address these research questions, we conducted an eye tracking study with 27 participants (14 with dyslexia, 13 control).</s>
+			<s>Each participant completed 6 informational search tasks using a modern, English-language, interactive search engine.</s>
+			<s>Our analysis of eye tracking data, together with participants’ self-reports about their experiences, extend fndings from prior studies and contribute new insight into the diferences in search behavior between people with and without dyslexia.</s>
+			<s cites="37,43">Our fndings validate prior self-report findings that Searchers with Dyslexia (SWD) struggle with all stages of the search process: query formulation, search results triage, and information extraction [37, 43].</s>
+			<s>Adding to prior work, we find SWD visually attend to pages in a markedly diferent fxation pattern than searchers without dyslexia (for e.g. see Figure 1).</s>
+			<s>We conclude the paper by discussing the design implications of our fndings to improve cognitive accessibility of search for people with dyslexia.</s>
+		</context>
+		<context id="04" section="related work">
+			<s cites="16,55">Researchers in information retrieval and HCI have extensively studied user interaction with web search systems, particularly for complex informational [16] or exploratory [55] search tasks.</s>
+			<s cites="3,43">Such tasks typically comprise three stages [3, 43]: query formulation (i.e., generating and refining search keywords), search results triage (i.e., determining which parts of the search engine results page - the SERP - are most relevant to the task at hand, and which link to open), and information extraction (i.e., gathering and making sense of the sought-after content).</s>
+			<s>In this study, we gather data about this complete query-triage-extraction search pipeline for searchers with and without dyslexia.</s>
+		</context>
+		<context id="05" section="related work">
+			<s cites="32,53,54,42,43,3,25,44">Researchers have employed a variety of methods to study web search, including analyzing search engine and web browser logs (e.g., [32, 53, 54]), gathering self-report data from surveys, interviews, or diary studies of end-users (e.g., [42, 43]), and recruiting participants to perform controlled search tasks (e.g., [3, 25, 44]).</s>
+			<s>As with any methodology, there are trade-offs: logs can provide in-situ data for a large set of users, but lack qualitative depth; self-report data may have gaps or inconsistencies with actual observed behavior; controlled, in-lab task performance may difer from natural search behavior in unanticipated ways, etc.</s>
+			<s cites="22,23,36,52">Several researchers have begun to use eye tracking to understand which aspects of the SERP users attend to [22, 23, 36, 52].</s>
+			<s>Eye tracking allows us to log and track the amount of attention paid to specifc parts of the pages and interactions at a granular level of space and time.</s>
+			<s cites="45,46">For example, eye tracking studies have revealed that searchers usually fxate on SERPs and webpages in an F-shape pattern [45, 46].</s>
+			<s cites="24,17">These studies have also shown that searchers distribute their visual attention diferently across organic and ad results on a SERP [24], and that one can determine a webpage’s most salient parts by looking at the amount of visual attention paid to its diferent elements [17].</s>
+			<s>This paper builds on prior eye-tracking studies to understand how diferent searchers attend to diferent elements of SERPs and webpages.</s>
+			<s>We complement our eye tracking data with participants’ comments immediately after searching to gain qualitative insight into the meaning of the eye tracking results.</s>
+		</context>
+		<context id="06" section="related work">
+			<s>Query Formulation: Since spelling and query formulation are closely related, this stage of search has been reported to be challenging for those with dyslexia.</s>
+			<s cites="43" anonymised="true">From their interview study, [43] reported SWD have trouble spelling words at the phonetic level.</s>
+			<s>They also found SWD report a heavy reliance on voice input and on autocomplete when forming queries.</s>
+			<s cites="13" anonymised="true">In 2015, [13] compared search logs of 21 students with and 21 without dyslexia who had formulated Norwegian queries for a Norwegian academic library system with no query-formulation aids.</s>
+			<s>They found that SWD took longer to search, possibly because of spelling errors in their queries.</s>
+			<s>Consequently, they also issued more queries overall.</s>
+			<s cites="19" anonymised="true">In their 2016 qualitative study, [19] confrmed these fndings for English queries in a system without any query formulation aids.</s>
+			<s>They reported that SWD found choosing keywords, spelling, and forming/refning complex queries using Boolean search strategies of AND and OR operators to be more challenging than a control group.</s>
+			<s cites="14" anonymised="true">However, in 2016, [14] found that when SWD used Google, a modern interactive search engine with query formulation aids, for formulating Norwegian queries, there were no diferences in query formulation behavior.</s>
+			<s>This suggests query formulation aids could help those with dyslexia.</s>
+			<s>Through our eye-tracking study, we validate these self-report results for a modern interactive English-language search engine with query-formulation aids.</s>
+		</context>
+		<context id="07" section="related work">
+			<s cites="37" anonymised="true">Search Results Triage: In 2010, [37] conducted a search log analysis of people with dyslexia interacting with an information retrieval interface (Okapi), and found SWD read fewer documents on average, had fewer search interactions, and took more time to complete searching.</s>
+			<s>Concluding their article, they state the need for a more granular approach to understand search behavior diferences between searchers with and without dyslexia than search log analysis.</s>
+		</context>
+		<context id="08" section="related work">
+			<s cites="10,38">Furthermore, prior work suggests a strong correlation between dyslexia and lower phonological working memory (i.e., the ability to hold words in short-term memory) [10, 38].</s>
+			<s>Work done to investigate the efects of working memory on search results triage echoes MacFarlane et al.’s findings.</s>
+			<s cites="18">In 2019, a search log study of participants with low and high working memory found that those with lower working memory take more time to frst click on the SERP, open fewer links, and take more time between events [18].</s>
+		</context>
+		<context id="09" section="related work">
+			<s cites="4" anonymised="true">Information Extraction: In 2007, [4] interview study observing searchers with dyslexia navigate multiple pages within a website found navigational trails (such as site maps, back and forward buttons) and menus helped SWD locate where they were within a site.</s>
+			<s cites="5" anonymised="true">Similarly, in 2008, an eye tracking study by [5], observed 7 participants (2 with dyslexia and 5 controls) navigate webpages within 6 websites to extract information.</s>
+			<s>They found SWD took longer to complete the tasks, had more fxations on the page, looked at the page for longer, and their scan paths were markedly diferent than the control group.</s>
+			<s cites="39">A follow-up analysis reported SWD changed scan direction more on the webpage than the control group [39].</s>
+			<s cites="4">They suggest this is an indication of short term memory problems and adds to prior research on backtracking [4].</s>
+			<s>However, the small number of participants (2 SWD) makes it hard to extrapolate definitive quantitative diferences from these results.</s>
+		</context>
+		<context id="10" section="">
+			<s cites="25" anonymised="true">In 2018 [25] found SWD’s relevance ratings of webpages were highly correlated with their readability scores.</s>
+			<s>They identifed several visual and textual features such as line length, number of headings, and ratio of images to text, that impact SWDs’ readability and relevance judgements of webpages.</s>
+			<s cites="35" anonymised="true">In 2019, [35] found using the "Reader View" mode in Firefox web browser, which simplifes a page’s visual structure, improved reading speed for SWD without reducing comprehension.</s>
+		</context>
+	</contexts>
+	<references>
+		<reference id="1">https://web.archive.org/web/20130702063520/https://www.google.com/competition/howgooglesearchworks.html</reference>
+		<reference id="2">https://datausa.io/profle/soc/252050/#demographics</reference>
+		<reference id="3">10.1145/2009916.2009965</reference>
+		<reference id="4">10.1007/978-3-540-73279-2_66</reference>
+		<reference id="5">10.1109/INNOVATIONS.2008.4781673</reference>
+		<reference id="6">10.1002/dys.318</reference>
+		<reference id="7">https://dyslexiaida.org/dyslexia-basics/</reference>
+		<reference id="8">https://dyslexiaida.org/testing-and-evaluation/</reference>
+		<reference id="9">10.5555/1274531.1274545</reference>
+		<reference id="10">10.1080/00207450903139671</reference>
+		<reference id="11">http://urn.nb.no/URN:NBN:no-56151</reference>
+		<reference id="12">10.1007/978-3-319-20684-4_59</reference>
+		<reference id="13">http://hdl.handle.net/10642/3126</reference>
+		<reference id="14">10.1002/asi.23572</reference>
+		<reference id="15">10.1145/2642918.2647357</reference>
+		<reference id="16">10.1145/792550.792552</reference>
+		<reference id="17">10.1145/1518701.1518705</reference>
+		<reference id="18">10.1145/3295750.3298948</reference>
+		<reference id="19">10.29173/lirg714</reference>
+		<reference id="20">10.1145/2009916.2010128</reference>
+		<reference id="21">10.1145/2063576.2063639</reference>
+		<reference id="22">10.1145/1240624.1240690</reference>
+		<reference id="23">10.1007/978-3-642-21602-2_36</reference>
+		<reference id="24">10.1145/1840784.1840812</reference>
+		<reference id="25">10.1145/3209978.3210072</reference>
+		<reference id="26">10.1080/87565641.2010.494748</reference>
+		<reference id="27">http://downtowndubuque.org/wp-content/uploads/2017/01/Social-Media-Update-2016.pdf</reference>
+		<reference id="28">10.1177/154193120605000909</reference>
+		<reference id="29">10.1002/dys.389</reference>
+		<reference id="30">https://dyslexiaida.org/the-myths-and-truths-of-dyslexia/</reference>
+		<reference id="31">10.1111/j.1471-3802.2002.00163.x</reference>
+		<reference id="32">10.1145/1526709.1526817</reference>
+		<reference id="33">10.1145/2808194.2809465</reference>
+		<reference id="34">https://pubmed.ncbi.nlm.nih.gov/30371444/</reference>
+		<reference id="35">10.1145/3290605.3300754</reference>
+		<reference id="36">10.5555/1364846.1364849</reference>
+		<reference id="37">10.1108/00220411011038421</reference>
+		<reference id="38">10.1145/2362724.2362734</reference>
+		<reference id="39">10.1145/3020165.3022134</reference>
+		<reference id="40">https://searchengineland.com/googleinstant-complete-users-guide-50136</reference>
+		<reference id="41">10.1145/3290605.3300738</reference>
+		<reference id="42">10.1145/2441776.2441910</reference>
+		<reference id="43">10.1145/3173574.3173609</reference>
+		<reference id="44">10.1145/1294211.1294215</reference>
+		<reference id="45">https://www.nngroup.com/articles/fshaped-pattern-reading-web-content-discovered/</reference>
+		<reference id="46">https://www.nngroup.com/articles/exhaustivereview-eyetracking/</reference>
+		<reference id="47">https://www.nngroup.com/articles/text-scanning-patterns-eyetracking/</reference>
+		<reference id="48">10.1007/978-3-642-40498-6_15</reference>
+		<reference id="49">10.5555/3021319.3021333</reference>
+		<reference id="50">10.1145/1978942.1979127</reference>
+		<reference id="51">10.1145/2484028.2484075</reference>
+		<reference id="52">None</reference>
+		<reference id="53">10.1145/1277741.1277770</reference>
+		<reference id="54">10.1145/1277741.1277787</reference>
+		<reference id="55">10.5555/1521589</reference>
+		<reference id="56">10.1145/2362724.2362768</reference>
+	</references>
+</doc>

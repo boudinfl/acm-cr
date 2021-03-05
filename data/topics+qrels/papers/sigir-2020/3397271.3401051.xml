@@ -1,0 +1,120 @@
+<doc>
+	<doi>10.1145/3397271.3401051</doi>
+	<title>Fairness-Aware Explainable Recommendation over Knowledge Graphs</title>
+	<abstract>There has been growing attention on fairness considerations recently, especially in the context of intelligent decision making systems. For example, explainable recommendation systems may suffer from both explanation bias and performance disparity. We show that inactive users may be more susceptible to receiving unsatisfactory recommendations due to their insufficient training data, and that their recommendations may be biased by the training records of active users due to the nature of collaborative filtering, which leads to unfair treatment by the system. In this paper, we analyze different groups of users according to their level of activity, and find that bias exists in recommendation performance between different groups. Empirically, we find that such performance gap is caused by the disparity of data distribution, specifically the knowledge graph path distribution in this work. We propose a fairness constrained approach via heuristic re-ranking to mitigate this unfairness problem in the context of explainable recommendation over knowledge graphs. We experiment on several real-world datasets with state-of-the-art knowledge graph-based explainable recommendation algorithms. The promising results show that our algorithm is not only able to provide high-quality explainable recommendations, but also reduces the recommendation unfairness in several aspects.</abstract>
+	<contexts>
+		<context id="01" section="introduction">
+			<s cites="45">Compared with traditional recommendation systems (RS), explainable recommendation is capable of not only providing high-quality recommendation results but also offering personalized and intuitive explanations [45], which are important for e-commerce and social media platforms.</s>
+			<s>However, current explainable recommendation models leave two major concerns in terms of fairness.</s>
+			<s>First, the model discriminates unfairly among the users in terms of recommendation performance.</s>
+			<s>And second, the model may further discriminate between users in terms of explanation diversity.</s>
+			<s>In this paper, we consider the fairness issues of both performance imbalance and explanation diversity in explainable recommendation, which arises from the fact that there may be groups of users who are less noticeable on a platform, e.g., due to inactivity, making them less visible to the learning algorithms.</s>
+		</context>
+		<context id="02" section="introduction">
+			<s>One reason for this relates to the issue of data imbalance.</s>
+			<s>Some users are disinclined to make a large number of purchases, which leads to insufficient historical user–item interactions.</s>
+			<s cites="20">For instance, on e-commerce platforms such as Amazon, eBay, or Taobao, economically disadvantaged groups often make fewer purchases in light of their limited income and credit opportunities [20].</s>
+			<s>Under such circumstances, when making recommendation decisions, explainable RS models will be subject to algorithmic bias.</s>
+			<s>The lack of user–item interactions implies that the corresponding user preferences are barely captured, causing weak visibility of such users to the RS model.</s>
+			<s>This leads to the risk of such users being treated unfairly in terms of both recommendation performance and explanation diversity.</s>
+			<s>In this paper, we aim at alleviating such algorithmic bias and improving the fairness of explainable recommendations.</s>
+		</context>
+		<context id="03" section="introduction">
+			<s>Unfortunately, it is challenging to study fairness in recommendation systems due to the lack of unifying definitions and means of quantifying unfairness.</s>
+			<s cites="17" anonymised="true">[17] claim that no model can be fair in every aspect of metrics.</s>
+			<s cites="21,33,3,36,42,5">Previous work has explored the fairness problem in recommendation from the perspective of selection aspects [21, 33, 35], marketing bias [36], popularity bias [42], multiple stakeholders [5] in terms of consumers and providers, among others.</s>
+			<s>Existing research on fairness has shown that protected groups, defined as the population of vulnerable individuals in terms of sensitive features such as gender, age, race, religion, etc., are easily treated in a discriminatory way.</s>
+			<s>However, it is generally not easy to obtain access to such sensitive attributes, as users often prefer not to disclose such personal information.</s>
+			<s>In this study, we instead consider a directly observable property, the visibility of the user to the explainable RS model, which relates to a user’s level of activity on the platform, and may directly entail subpar treatment by the recommendation engine.</s>
+		</context>
+		<context id="04" section="introduction">
+			<s>We are interested in solving the fairness problem on the user side specifically for knowledge graph (KG) enhanced explainable recommender systems.</s>
+			<s>Since KGs preserve structured and relational knowledge, they make it easy to trace the reason for specific recommendations.</s>
+			<s>KG-based approaches have thus grown substantially in popularity in explainable recommendation.</s>
+			<s>Their explicit explanations take the form of reasoning paths, consisting of a sequence of relationships that start from a user and ultimately lead to a recommended item.</s>
+			<s cites="1,37,38,40,41,44">State-of-the-art KG-based explainable RS methods [1, 37, 38, 40, 41, 44] utilize rich entity and relation information within the KG to augment the modeling of user–item interactions, so as to better understand the user preferences to make satisfactory recommendation decisions, accompanied by explainable reasoning paths.</s>
+			<s>However, due to the fundamental nature of collaborative filtering, current KG-based explainable recommendation methods heavily rely on users’ collective historical interactions for model learning, so the recommendations and corresponding explanations tend to be more consistent with the dominating historical user interactions.</s>
+			<s>Because of this, current RS methods tend to neglect the user–item interactions of less visible, inactive users, since they are easily overwhelmed by more visible, active users.</s>
+		</context>
+		<context id="05" section="related work">
+			<s>Growing interest in fairness has arisen in several research domains.</s>
+			<s cites="13">Most notably, for data-driven decision-making algorithms, there are concerns about biases in data and models affecting minority groups and individuals [13].</s>
+			<s cites="23,31,35">Group fairness, also known as demographic parity, requires that the protected groups be treated equally to advantaged groups or the general population [23, 31, 35].</s>
+			<s cites="4,14,27,28">In contrast, individual fairness requires that similar individuals with similar attributes be treated similarly [4, 14, 27, 28].</s>
+			<s cites="26">Several prior works have sought to quantify unfairness both at the group and individual level [26].</s>
+			<s cites="2,18,47">Model bias has in fact been shown to amplify biases in the original data [2, 18, 47].</s>
+			<s>For each specific domain, there is a need to design suitable metrics to quantify fairness and develop new debiasing methods to mitigate inequity for both groups and individuals.</s>
+		</context>
+		<context id="06" section="related work">
+			<s cites="5">In the field of recommendation systems, the concept of fairness has been extended to multiple stakeholders [5].</s>
+			<s cites="29" anonymised="true">[29] defined fairness measures in recommendation and proposed a Pareto optimization framework for fair recommendation.</s>
+			<s cites="30" anonymised="true">[30] addresses the supplier fairness in two-sided marketplace platforms and proposed heuristic strategies to jointly optimize fairness and relevance.</s>
+			<s>Different aspects of fairness have been explored.</s>
+			<s cites="3" anonymised="true">[3] investigated pairwise recommendation with fairness constraints.</s>
+			<s cites="6" anonymised="true">[6] addressed the polarization in personalized recommendations, formalized as a multi-armed bandit problem.</s>
+			<s cites="43" anonymised="true">As for the fairness ranking, [43] proposed a fair top-k ranking task that ensures that the proportion of protected groups in the top-k list remains above a given threshold.</s>
+			<s cites="35" anonymised="true">[35] presented a conceptual and computational framework for fairness ranking that maximizes the utility for the user while satisfying specific fairness constraints.</s>
+			<s cites="21" anonymised="true">[21] developed a fairness-aware ranking framework that improves the fairness for individuals without affecting business metrics.</s>
+			<s cites="39" anonymised="true">[39] draw on causal graphs to detect and remove both direct and indirect rank bias, and show that a casual graph approach outperforms statistical parity-based approaches in terms of the identification and mitigation of rank discrimination.</s>
+			<s>In our work, we are particular interested in the disparity of user visibility to modern ranking algorithms in recommendation systems.</s>
+		</context>
+		<context id="07" section="related work">
+			<s cites="45">Explainable recommendation [45] has been an important direction in recommender system research.</s>
+			<s cites="46,19,32,10,11,12">Past work has considered explaining latent factor models [46], explainable deep models [19], social explainable recommendations [32], visual explanations [10], sequential explanations [11], and dynamic explanations [12].</s>
+			<s>An important line of research leverages entities, relationships, and paths in knowledge graphs to make explainable decisions.</s>
+			<s cites="1" anonymised="true">Within this field, [1] incorporated TransE-based knowledge graph representations for explainable recommendation.</s>
+			<s cites="38" anonymised="true">[38] proposed an attention-based knowledge-aware model to infer user preferences over KGs for recommendation.</s><s cites="41" anonymised="true">[41] adopted reinforcement learning for path inference in knowledge graphs.</s>
+			<s cites="7" anonymised="true">[7] improved the efficiency of KG-based recommendation based on non-sampling learning.</s>
+			<s>However, none of these works considered model bias, which may lead to both recommendations and explanations that fail to satisfy basic principles of fairness.</s>
+		</context>
+	</contexts>
+	<references>
+		<reference id="1">10.3390/a11090137</reference>
+		<reference id="2">10.2139/ssrn.2477899</reference>
+		<reference id="3">10.1145/3292500.3330745</reference>
+		<reference id="4">10.1145/3209978.3210063</reference>
+		<reference id="5">https://arxiv.org/abs/1707.00093</reference>
+		<reference id="6">10.1145/3287560.3287601</reference>
+		<reference id="7">10.1145/3397271.3401040</reference>
+		<reference id="8">https://arxiv.org/abs/1809.04684</reference>
+		<reference id="9">10.1145/3287560.3287594</reference>
+		<reference id="10">10.1145/3331184.3331254</reference>
+		<reference id="11">10.1145/3159652.3159668</reference>
+		<reference id="12">10.1609/aaai.v33i01.330153</reference>
+		<reference id="13">10.1145/3097983.3098095</reference>
+		<reference id="14">10.1145/2090236.2090255</reference>
+		<reference id="15">https://www.fatml.org/media/documents/group_fairness_under_composition.pdf</reference>
+		<reference id="16">http://proceedings.mlr.press/v81/ekstrand18b/ekstrand18b.pdf</reference>
+		<reference id="17">https://arxiv.org/abs/1809.09030</reference>
+		<reference id="18">10.1145/2783258.2783311</reference>
+		<reference id="19">10.1609/aaai.v33i01.33013622</reference>
+		<reference id="20">10.1145/3397271.3401056</reference>
+		<reference id="21">10.1145/3292500.3330691</reference>
+		<reference id="22">10.2307/2223319</reference>
+		<reference id="23">10.5555/3157382.3157469</reference>
+		<reference id="24">10.1145/2872427.2883037</reference>
+		<reference id="25">10.1145/3219819.3219965</reference>
+		<reference id="26">https://arxiv.org/abs/1609.05807</reference>
+		<reference id="27">10.5555/3294996.3295162</reference>
+		<reference id="28">10.1109/ICDE.2019.00121</reference>
+		<reference id="29">10.1145/3109859.3109887</reference>
+		<reference id="30">10.1145/3269206.3272027</reference>
+		<reference id="31">10.1145/1401890.1401959</reference>
+		<reference id="32">10.1145/3018661.3018686</reference>
+		<reference id="33">10.5555/3045390.3045567</reference>
+		<reference id="34">10.1038/163688a0</reference>
+		<reference id="35">10.1145/3219819.3220088</reference>
+		<reference id="36">10.1145/3336191.3371855</reference>
+		<reference id="37">10.1145/3269206.3271739</reference>
+		<reference id="38">10.1145/3292500.3330989</reference>
+		<reference id="39">10.1145/3219819.3220087</reference>
+		<reference id="40">https://arxiv.org/abs/2007.13207</reference>
+		<reference id="41">10.1145/3331184.3331203</reference>
+		<reference id="42">10.1145/3240323.3240355</reference>
+		<reference id="43">10.1145/3132847.3132938</reference>
+		<reference id="44">10.5555/3060832.3061039</reference>
+		<reference id="45">10.1561/1500000066</reference>
+		<reference id="46">10.1145/2600428.2609579</reference>
+		<reference id="47">10.18653/v1/D17-1323</reference>
+	</references>
+</doc>

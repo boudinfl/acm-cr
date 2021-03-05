@@ -1,0 +1,82 @@
+<doc>
+	<doi>10.1145/3343413.3378009</doi>
+	<title>Quantifying the Effects of Prosody Modulation on User Engagement and Satisfaction in Conversational Systems</title>
+	<abstract>As voice-based assistants such as Alexa, Siri, and Google Assistant become ubiquitous, users increasingly expect to maintain natural and informative conversations with such systems. However, for an open-domain conversational system to be coherent and engaging, it must be able to maintain the user's interest for extended periods, without sounding "boring" or "annoying". In this paper, we investigate one natural approach to this problem of modulating response prosody, i.e., changing the pitch and cadence of the response to indicate delight, sadness or other common emotions, as well as using pre-recorded interjections. Intuitively, this approach should improve the naturalness of the conversation, but attempts to quantify the effects of prosodic modulation on user satisfaction and engagement remain challenging. To accomplish this, we report results obtained from a large-scale empirical study that measures the effects of prosodic modulation on user behavior and engagement across multiple conversation domains, both immediately aftereach turn, and at the overall conversation level. Our results indicate that the prosody modulation significantly increases both immediate and overall user satisfaction. However, since the effects vary across different domains, we verify that prosody modulations do not substitute for coherent, informative content of the responses. Together, our results provide useful tools and insights for improving the naturalness of responses in conversational systems.</abstract>
+	<contexts>
+		<context id="01" section="introduction">
+			<s>With the proliferation of voice-based assistants such as Alexa, Siri, and Google Assistant, there has been a resurgence of research into building truly intelligent conversational assistants that can maintain a long, natural conversation with users.</s>
+			<s cites="16,21">One important direction was a recent series of Amazon Alexa Prize Challenges, providing a competition platform and monetary incentives to spur development [16, 21] in conversational AI.</s>
+			<s cites="19,10">Many practical applications of conversational systems have been proposed (e.g., for companionship to improve mental well-being [19], and for therapy [10]).</s>
+			<s>While much room for improvement remains in the current implementations of the conversational AI systems, the potential for intelligent, empathetic and broad-coverage conversational systems is widely recognized.</s>
+		</context>
+		<context id="02" section="introduction">
+			<s>However, for open-domain conversational system to be engaging and intelligent, it must keep the user’s interest for extended periods, without sounding “boring” or “annoying”, which unfortunately is the case for current voice-based assistants.</s>
+			<s cites="25">In this paper, we investigate one natural approach to handle “boring” responses, which is to modulate response prosody via commonly available Speech Synthesis Markup Language (SSML) [25].</s>
+			<s>For our experiments, we replaced common phrases (i.e. filter words or interjections) with prerecorded Speechcons from Alexa Skills Kit APIs.</s>
+			<s>In some cases, the pitch and rate of these Speechcons are additioanlly tuned to convey excitement, hesitation and emphasis, allowing the agent to deliver a variety of empathetic responses to users.</s>
+			<s>The example conversation provided in Figure 1 shows how our system utilized prerecorded Speechcons such as “Allright” or “Aw Man” to improve naturalness in conversations.</s>
+		</context>
+		<context id="03" section="related work">
+			<s>Recently, conversational systems research has experienced dramatic progress.</s>
+			<s cites="12">For example, automatic speech recognition (ASR) has been revolutionized by neural models [12].</s>
+			<s cites="2,11,18,31">Similarly for dialogue management, both rule-based [2, 11] and end-to-end [18, 31] systems were studied extensively.</s>
+			<s cites="4,9">To maintain a flexible and scalable structure, several architectures have been proposed [4, 9] as well.</s>
+		</context>
+		<context id="04" section="related work">
+			<s cites="28,29,30">As these systems became more sophisticated, many work proposed new ideas to automate the evaluation process by predicting conversational user satisfaction, as defined in [28–30].</s>
+			<s cites="17,22,13,14">For instance, there have been successful attempts to predict satisfaction once conversations (sessions) are completed, using traditional methods [17, 22] and neural-based models [13, 14].</s>
+			<s cites="5">Lastly, one recent work [5] proposed a unified neural framework to predict offline (session-level) and online (turn-level) satisfaction simultaneously.</s>
+		</context>
+		<context id="05" section="related work">
+			<s cites="8">Speech synthesis is an active research field that studies the artificial production of human speech [8].</s>
+			<s>Speech synthesizers, also known as text-to-speech (TTS) synthesizers, are placed at the final phase of modern dialogue systems to transform textual output into a natural voice output.</s>
+			<s>In conversation-related speech strategies, several work focused on analyzing the impact of interjections and filter words such as “Um”, “Uh” and “Wow” to user behaviors.</s>
+			<s cites="20,26">For instance, [20, 26] reported the change in eye gaze behavior when conversations start with these filter words.</s>
+			<s cites="24">Another study [24] showed that speech models trained on positive exclamations achieved higher satisfaction from listening tests.</s>
+			<s cites="3,4,9,15">Based on these empirical findings, recent dialogue systems [3, 4, 9, 15] incorporated liveliness by adjusting the prosodies of interjections and filter words using SSML.</s>
+		</context>
+		<context id="06" section="related work">
+			<s>However, studies to evaluate the impact of prosody modifications to user satisfaction have been limited.</s>
+			<s cites="6">One recent study [6] measured the effectiveness of prosody modification using crowdsourced workers and showed that while comprehensiveness (i.e. informative, correctness) improved, naturalness (i.e. interruption) decreased.</s>
+			<s>However, this evaluation was measured only on each information-seeking turn and the authors highlighted the need for future study in a more realistic conversation.</s>
+			<s cites="7" anonymised="true">[7] addressed this limitation and showed modifying both filter words and interjections achieved the highest user ratings when evaluated on large-scale open-domain conversations.</s>
+			<s>However, since user ratings convey an overall impression, quantifying the immediate effects of prosody modification within each conversation remains unexplored.</s>
+		</context>
+		<context id="07" section="related work">
+			<s cites="5">Thus, our work extends the ideas here by first train a state of the art immediate- and offline- satisfaction prediction model [5] and quantify both immediate and longer-term effects on user satisfaction and engagement using our proposed metrics, which are described later.</s>
+		</context>
+	</contexts>
+	<references>
+		<reference id="1">http://dex-microsites-prod.s3.amazonaws.com/alexaprize/2018/papers/Iris.pdf</reference>
+		<reference id="2">https://www.isca-speech.org/archive/archive_papers/eurospeech_2003/e03_0597.pdf</reference>
+		<reference id="3">https://arxiv.org/abs/1907.10658</reference>
+		<reference id="4">http://dex-microsites-prod.s3.amazonaws.com/alexaprize/2018/papers/Gunrock.pdf</reference>
+		<reference id="5">10.1145/3357384.3358047</reference>
+		<reference id="6">10.1007/978-3-030-28577-7_12</reference>
+		<reference id="7">10.18653/v1/W19-5935</reference>
+		<reference id="8">https://www.academia.edu/download/3436726/Dutoit.pdf</reference>
+		<reference id="9">http://alexaprize.s3.amazonaws.com/2017/technical-article/soundingboard.pdf</reference>
+		<reference id="10">10.2196/mental.7785</reference>
+		<reference id="11">10.1109/ICSLP.1996.607458</reference>
+		<reference id="12">10.1109/ICASSP.2013.6638947</reference>
+		<reference id="13">10.18653/v1/P19-1358</reference>
+		<reference id="14">10.1145/3269206.3271802</reference>
+		<reference id="15">http://alexaprize.s3.amazonaws.com/2017/technical-article/wisemacaw.pdf</reference>
+		<reference id="16">https://assets.amazon.science/3c/5c/b65e49ba436d9d5147f95b38e817/advancing-the-state-of-the-art-in-open-domain-dialog-systems-through-the-alexa-prize.pdf</reference>
+		<reference id="17">10.1145/2911451.2911521</reference>
+		<reference id="18">10.1609/aaai.v33i01.33016794</reference>
+		<reference id="19">10.2196/10148</reference>
+		<reference id="20">10.1007/978-3-642-04380-2_50</reference>
+		<reference id="21">http://alexaprize.s3.amazonaws.com/2017/technical-article/alexaprize.pdf</reference>
+		<reference id="22">10.18653/v1/N18-1163</reference>
+		<reference id="23">http://proceedings.mlr.press/v80/skerry-ryan18a/skerry-ryan18a.pdf</reference>
+		<reference id="24">https://www.isca-speech.org/archive/ssw7/papers/ssw7_179.pdf</reference>
+		<reference id="25">10.1016/S0167-6393(96)00068-4</reference>
+		<reference id="26">10.3758/BF03194926</reference>
+		<reference id="27">https://pubmed.ncbi.nlm.nih.gov/15883903/</reference>
+		<reference id="28">10.3115/976909.979652</reference>
+		<reference id="29">10.3115/1073012.1073078</reference>
+		<reference id="30">10.1287/isre.1050.0042</reference>
+		<reference id="31">10.1109/ICASSP.2017.7953246</reference>
+	</references>
+</doc>

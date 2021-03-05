@@ -1,0 +1,89 @@
+<doc>
+	<doi>10.1145/3343413.3377957</doi>
+	<title>Enabling Predictive Number Entry and Editing on Touchscreen-Based Mobile Devices</title>
+	<abstract>We propose a method for accommodating predictive number entry and editing on mobile devices via the suggestion bar of a virtual keyboard. We developed a simple predictive system to demonstrate the benefit of this method. It utilizes text-based querying and regular expression to suggest the most probable next numeric actions in the suggestion bar along with word suggestions. We evaluated this method in two user studies. The first explored number entry and the second explored editing. Results revealed that the proposed method significantly increases number entry and editing speed and accuracy. It reduces the number of actions needed per task. It also significantly reduces the time and effort needed to fix errors. Subjective analysis revealed that almost all participants found the method faster, more reliable, and easier to use than the conventional method, thus wanted to keep using it on their mobile devices.</abstract>
+	<contexts>
+		<context id="01" section="introduction">
+			<s cites="3">Although the acquirement, input, and editing of numeric values (represented either by digits or text) are important parts of mobile text entry [3], these have not been well explored in the literature.</s>
+			<s>This negligence is evident in the suggestion bars of virtual keyboards.</s>
+			<s cites="7,21,25">Nowadays, almost all virtual keyboards come with suggestion bars that present the most probable next words and seldom phrases using linguistic models [7, 21, 25].</s>
+			<s>However, none of these models provide the support for numeric values, thus the suggestion bars remain “blank” when these values are being entered or edited.</s>
+		</context>
+		<context id="02" section="introduction">
+			<s>The findings of an informal survey and user feedback from our previous studies revealed that mobile users desire an effective and user friendly method for interacting with numbers since they often work with numeric values on mobile devices.</s>
+			<s>This includes entering an entirely new value (e.g., the date and time of a meeting), editing or converting an existing value (e.g., changing an amount from Euro to US Dollar), and performing arithmetic operations to a value (e.g., figuring out how to split a bill with friends before using a mobile payment app).</s>
+			<s>Most users resolve to third-party apps for editing and conversion, such as calculators, unit converters, and Web browsers. For instance, users tend to use a native or a Web app to find a time for a virtual meeting that is appropriate for all international attendees.</s>
+			<s>Incriminating and decrementing numeric values also require the assistance of third-party apps since increasing and decreasing different units, such as time, currency, or length and weight, are fundamentally different from one another.</s>
+			<s cites="1">This process is not only time-consuming and tedious but also distracts the user from the task at hand by forcing her to switch between different apps [1].</s>
+			<s>To mitigate this, we developed a simple predictive system that uses text-based querying and regular expression to identify numeric values to suggest the most likely next actions in the suggestion bar (Figure 1).</s>
+			<s>However, the main contribution of this work is not the predictive system, but the demonstration that providing support for numeric values in the suggestion bar can radically simplify the task of entering and editing numbers on mobile devices.</s>
+			<s>Figure 2 illustrates the architecture of the proposed system.</s>
+		</context>
+		<context id="03" section="introduction">
+			<s>The proposed predictive system suggests numeric values based on the context of a textual conversation.</s>
+			<s cites="20">For this, the system uses a pre-trained DeepQA model [20] to process natural language with deep learning, then suggests relevant numeric values retrieved from a database or the Internet. Below are some examples.</s>
+		</context>
+		<context id="04" section="related work">
+			<s>Some have proposed novel keypad layouts to facilitate number entry on various devices.</s>
+			<s cites="11" anonymised="true">[11] designed a gesture-based method for number entry on touchscreens.</s>
+			<s>In a user study, this approach yielded a promising entry speed and accuracy.</s>
+			<s cites="8" anonymised="true">[8] proposed a method for automatically adjusting the layout and position of a virtual keypad based on how the user is holding a mobile device.</s>
+			<s>A study revealed that this approach increases entry speed by 42% compared to a manually adjustable keypad.</s>
+			<s cites="22" anonymised="true">[22] investigated the effects of different key sizes and spacing on touch characteristics in number entry tasks.</s>
+			<s>They found out that touch force, impulse, and dwell time are significantly affected by key size.</s>
+			<s cites="23" anonymised="true">In a similar study, [23] found out that both key size and layout affect input performance in terms of speed, accuracy, and task completion rate.</s>
+			<s cites="9" anonymised="true">[9], in contrast, studied the effects of age on the usability of number entry with both virtual and physical keypads.</s>
+			<s>They recruited adults aged 23–33 years and older adults aged 65–76 years.</s>
+			<s>Results revealed that tactile feedback increases input accuracy of the virtual keypad, and both adults and older adults prefer the virtual keypad than the physical one.</s>
+		</context>
+		<context id="05" section="related work">
+			<s>Some have proposed novel keypad interactions to increase the security of conventional mobile user authentication approaches.</s>
+			<s cites="4" anonymised="true">[4] designed a keypad that enables the user to actively select digits and directional gestures as her passwords.</s>
+			<s cites="19" anonymised="true">[19] designed a force-based keypad that uses pressure as a binary input with two variances of the pattern-lock approach.</s>
+			<s cites="2" anonymised="true">[2] developed a different force-based keypad that uses three levels of pressure input as an extra security measure to the popular digit-lock approach.</s>
+		</context>
+		<context id="06" section="related work">
+			<s cites="28">Several recent works have focused on number entry on medical equipment since the existing approaches are not optimized for common data entry tasks in hospitals [28].</s>
+			<s cites="18" anonymised="true">However, [18] pointed out that these works explore only keypads and do not account for factors such as the range of values and the real-estate available on the equipment for keypads.</s>
+			<s>Most of these works tend to show that input method significantly affects number entry speed and accuracy.</s>
+			<s cites="17" anonymised="true">In another work, [17] reported that typically there are two types of number entry methods available for medical devices: serial (such as a keypad) and incremental (which uses knobs or keys to increment/decrement numeric values).</s>
+			<s>They reported that incremental methods lead to more accurate input than serial methods.</s>
+			<s cites="27,29" anonymised="true">In a follow-up work, [27] proposed thirteen different codes for classifying errors, and using checksums to detect these errors [29].</s>
+			<s cites="26" anonymised="true">In a separate work, [26] designed a novel layout to make the entry of the most frequently entered numbers easier on infusion pumps.</s>
+			<s>For this, they collected data from infusion pumps programmed on the ward.</s>
+			<s>They evaluated the method with three existing interfaces.</s>
+			<s>Results revealed that it reduces the total number of keystrokes needed to complete a task.</s>
+		</context>
+	</contexts>
+	<references>
+		<reference id="1">10.1145/2071536.2071539</reference>
+		<reference id="2">10.4108/icst.mobiquitous.2014.257919</reference>
+		<reference id="3">10.5555/2619648.2619657</reference>
+		<reference id="4">10.1145/2493190.2494435</reference>
+		<reference id="5">10.1109/TIC-STH.2009.5444533</reference>
+		<reference id="6">10.1145/1753326.1753329</reference>
+		<reference id="7">10.1145/2984511.2984584</reference>
+		<reference id="8">10.1145/2470654.2481422</reference>
+		<reference id="9">10.1016/j.ergon.2009.08.001</reference>
+		<reference id="10">10.1177/1476750309335209</reference>
+		<reference id="11">10.1145/503376.503382</reference>
+		<reference id="12">https://arxiv.org/abs/1702.05659</reference>
+		<reference id="13">https://www.brightedge.com/blog/google-quick-answers/</reference>
+		<reference id="14">https://arxiv.org/abs/1506.00019</reference>
+		<reference id="15">10.3115/v1/P15-1002</reference>
+		<reference id="16">10.1145/765891.765971</reference>
+		<reference id="17">10.1007/978-3-642-23768-3_15</reference>
+		<reference id="18">10.1007/978-3-642-40483-2_26</reference>
+		<reference id="19">http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.71.5026</reference>
+		<reference id="20">https://github.com/Conchylicultor/DeepQA</reference>
+		<reference id="21">10.1145/2858036.2858305</reference>
+		<reference id="22">10.1177/0018720811433831</reference>
+		<reference id="23">http://www.iaeng.org/publication/IMECS2013/IMECS2013_pp1006-1009.pdf</reference>
+		<reference id="24">https://arxiv.org/abs/1506.05869</reference>
+		<reference id="25">10.1145/2556288.2557412</reference>
+		<reference id="26">10.1177/1541931213571148</reference>
+		<reference id="27">10.5555/2305316.2305352</reference>
+		<reference id="28">10.1177/0018720812471988</reference>
+		<reference id="29">10.1145/2470654.2481332</reference>
+	</references>
+</doc>

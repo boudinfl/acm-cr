@@ -1,0 +1,105 @@
+<doc>
+	<doi>10.1145/3397271.3401057</doi>
+	<title>Attentional Graph Convolutional Networks for Knowledge Concept Recommendation in MOOCs in a Heterogeneous View</title>
+	<abstract>Massive open online courses (MOOCs) are becoming a modish way for education, which provides a large-scale and open-access learning opportunity for students to grasp the knowledge. To attract students' interest, the recommendation system is applied by MOOCs providers to recommend courses to students. However, as a course usually consists of a number of video lectures, with each one covering some specific knowledge concepts, directly recommending courses overlook students' interest to some specific knowledge concepts. To fill this gap, in this paper, we study the problem of knowledge concept recommendation. We propose an end-to-end graph neural network based approach calledAttentional Heterogeneous Graph Convolutional Deep Knowledge Recommender (ACKRec) for knowledge concept recommendation in MOOCs. Like other recommendation problems, it suffers from sparsity issue. To address this issue, we leverage both content information and context information to learn the representation of entities via graph convolution network. In addition to students and knowledge concepts, we consider other types of entities (e.g., courses, videos, teachers) and construct a heterogeneous information network (HIN) to capture the corresponding fruitful semantic relationships among different types of entities and incorporate them into the representation learning process. Specifically, we use meta-path on the HIN to guide the propagation of students' preferences. With the help of these meta-paths, the students' preference distribution with respect to a candidate knowledge concept can be captured. Furthermore, we propose an attention mechanism to adaptively fuse the context information from different meta-paths, in order to capture the different interests of different students. To learn the parameters of the proposed model, we propose to utilize extended matrix factorization (MF). A series of experiments are conducted, demonstrating the effectiveness of ACKRec across multiple popular metrics compared with state-of-the-art baseline methods. The promising results show that the proposed ACKRec is able to effectively recommend knowledge concepts to students pursuing online learning in MOOCs.</abstract>
+	<contexts>
+		<context id="01" section="introduction">
+			<s>In recent years, massive open online courses (MOOCs) are gradually becoming a mode of alternative education worldwide.</s>
+			<s>For example, Coursera, edX, and Udacity, the three pioneering MOOC platforms, offer millions of user accesses to numerous courses from internationally renowned universities.</s>
+			<s cites="20">In China, millions of users study in XuetangX, which is one of the largest MOOC platforms [20], where thousands of courses are offered on various subjects.</s>
+			<s>Although the number of students in MOOCs is continuously growing, there are still some straits with MOOCs.</s>
+			<s cites="34">A challenging problem for MOOCs is how to attract students to study continuously and efficiently on the platforms, where the overall course completion rate is lower than 5% [34].</s>
+			<s>Therefore, it requires better understanding and capturing of student interests.</s>
+		</context>
+		<context id="02" section="introduction">
+			<s cites="13,35,20,34">To understand and capture student interests on MOOCs platforms, multiple efforts have been done, including course recommendation [13, 35], behavior prediction [20], user intentions understanding [34], etc.</s>
+			<s>Among these efforts, recommendation system is applied by MOOCs provider to recommend courses to students.</s>
+			<s>However, a course usually consists of a number of video lectures with each one covering some specific knowledge concepts.</s>
+			<s>Direct course recommendation overlooks students’ interest to specific knowledge concept, e.g., computer vision courses taught by different instructors may be quite different in a microscopic view (cover different sets of knowledge concepts): someone instructor may only cover geometry based methods while other one may only cover deep learning based methods, and thus recommending the computer vision course only covering geometry based methods to the student interested in the deep learning based methods will not be a good match.</s>
+			<s>Therefore, it requires to study students’ online learning interests from a microscopic view and conduct knowledge concept recommendation.</s>
+		</context>
+		<context id="03" section="introduction">
+			<s>Traditional recommendation strategy, such as collaborative filtering (CF), which considers user (students) historical interactions and makes recommendations based on potential common preferences from users with similar interests, has achieved great success.</s>
+			<s>However, CF based methods suffer from the sparsity of user-item (student-knowledge concept) relationships, which limits the recommendation performance.</s>
+			<s cites="11,27,33,25">To overcome this problem, a number of efforts have been done by leveraging side information, such as social networks [11], user/item attributes [27], images [33], contexts [25], etc.</s>
+			<s>In a MOOCs platform, we observe that in addition to the user and knowledge concept, there exist multiple types of entities (video, course, teacher) and multiple types of relationships between pair of different entities.</s>
+			<s>Table 1 shows the statistics of the real-world XuetangX data collected between January 1st, 2018 and March 31st, 2018.</s>
+			<s>This data consists of 9,986 users, 43,405 videos, 7,020 courses, 5,038 teachers, 1,029 knowledge concepts, and corresponding multiple types of relationships.</s>
+			<s>As shown in Figure 1, the “course: V_9e77179” includes the “knowledge concept: c++”, the “student: 207256” is taking the “course: CaltechX”, the “video: V_1a9aa686” is related to the “knowledge concept: binary tree”, and the “course: CaltechX” is taught by the “teacher: Smith”.</s>
+			<s>Further more, taking users’ behavior history into consideration, we can discover additional relationships.</s>
+			<s>For example, the “user: 207256” clicked the “knowledge concept: c++”, “knowledge concept: binary tree”, and “knowledge concept: depth-first search”.</s>
+			<s>Accounting for above multiple types of relationships, we can get much more fruitful facts and interactions between the user and knowledge concepts.</s>
+			<s>If we merely depend on the basic structures, it is difficult to find the significant interaction between “knowledge concept: depth-first search” and “knowledge concept: time complexity”, which belong to different courses but are clicked by one user.</s>
+			<s>As shown in Figure 1, different knowledge concepts contain different context.</s>
+			<s>Only utilizing single type of interaction may overlook the significant relations between user and knowledge concept.</s>
+			<s>For example, “knowledge concept: c++” and “knowledge concept: binary tree” have dissimilar semantics even though they are included in the same video.</s>
+			<s>These heterogeneous relationships provide rich side information and can benefit the recommendation system in three folds: (1) semantic relatedness among knowledge concepts can be introduced and help to identify the latent interaction; (2) a user’s interests can be reasonably extended and the diversity of recommended knowledge concepts can be increased; and (3) a user’s interest can be interpreted by tracking a user’s historical records along these relationships.</s>
+			<s>Thus, it requires to incorporate these heterogeneous relationships into the representation learning of the entities.</s>
+		</context>
+		<context id="04" section="introduction">
+			<s>Based on above observation, we propose Attentional Heterogeneous Graph Convolutional Deep Knowledge Recommender (ACKRec), an end-to-end framework for knowledge concept recommendation on MOOCs platform.</s>
+			<s cites="23">To capture heterogeneous complex relationships, we model the MOOCs platform data as a heterogeneous information network (HIN) [23].</s>
+			<s>Then, we propose an attention-based graph convolutional networks (GCNs) to learn the representation of different entities.</s>
+			<s>Traditional GCNs can only capture the homogeneous relationships among homogeneous entities, which overlooks the rich information among heterogeneous relationships.</s>
+			<s cites="25">To address this issue, we use meta-paths [25] as the guidance to capture the heterogeneous context information in a HIN via GCN.</s>
+			<s>In this way, the heterogeneous relationships are utilized in a more natural and intuitive way.</s>
+			<s>Moreover, considering that different students may have different interests, we further propose an attention mechanism to adaptively leverage context in multiple meta-paths.</s>
+			<s>In the end, we propose to optimize the parameters of proposed model via an extended matrix factorization and obtain the final recommendation list.</s>
+		</context>
+		<context id="05" section="related work">
+			<s cites="5,6">Graphs play a crucial role in modern machine learning [5, 6].</s>
+			<s cites="1,4,15,26,30,31,36">Recently, graph neural networks [1, 4, 15, 26, 30, 31, 36] have become recurrent topics in machine learning, and both have broad applicability.</s>
+			<s>However, in the real world, the graphs are usually heterogeneous.</s>
+			<s>There are a few attempts heterogeneous information network setting.</s>
+			<s cites="28" anonymised="true">[28] proposed DeepHGNN, an attentional heterogeneous graph neural network model to learn from the heterogeneous program behavior graph to guide the reidentification process.</s>
+			<s cites="29" anonymised="true">[29] presented HAGNN, a Hierarchical Attentional Graph Neural Encoder and used it for program behavior graph analysis.</s>
+			<s cites="17">Additionally, the GEM [17] model, a heterogeneous graph neural network approach for detecting malicious accounts at Alipay, has been presented.</s>
+			<s>Unlike these approaches, our proposed model utilizes attentional graph convolutional networks for the representations of users and knowledge concepts in heterogeneous information networks.</s>
+		</context>
+		<context id="06" section="related work">
+			<s>Some information recommendation models are based on heterogeneous information networks.</s>
+			<s cites="19">[19] proposed Heaters, a graph-based model, to solve the general recommendation problem in heterogeneous networks.</s>
+			<s cites="32" anonymised="true">[32] proposed to use meta-paths based latent features to represent the connectivity between users and items along with different types of paths.</s>
+			<s cites="10,23,24" anonymised="true">Additionally, Follow previous work, [10, 23, 24] proposed to use meta-path concept to mode the heterogeneous information in HIN.</s>
+			<s>Different from previous methods, this study focuses on capture the representations of different types of entities on the heterogeneous information network and fuses themselves content feature of different types of entities and the structure features of entities in MOOCs data together for the recommendation task of the knowledge concept.</s>
+		</context>
+	</contexts>
+	<references>
+		<reference id="1">https://arxiv.org/abs/1801.10247</reference>
+		<reference id="2">10.1145/3018661.3018735</reference>
+		<reference id="3">10.1145/3097983.3098036</reference>
+		<reference id="4">10.1109/TSP.2018.2887403</reference>
+		<reference id="5">10.1109/IJCNN.2005.1555942</reference>
+		<reference id="6">http://arxiv.org/abs/1709.05584</reference>
+		<reference id="7">10.1109/TKDE.2018.2831682</reference>
+		<reference id="8">10.1145/3038912.3052569</reference>
+		<reference id="9">https://arxiv.org/abs/1511.06939</reference>
+		<reference id="10">10.1145/3219819.3219965</reference>
+		<reference id="11">10.1145/1864708.1864736</reference>
+		<reference id="12">10.1145/3130348.3130374</reference>
+		<reference id="13">10.1145/3106426.3106478</reference>
+		<reference id="14">10.1145/2487575.2487589</reference>
+		<reference id="15">https://arxiv.org/abs/1609.02907</reference>
+		<reference id="16">10.1145/3132847.3132926</reference>
+		<reference id="17">10.1145/3269206.3272010</reference>
+		<reference id="18">https://arxiv.org/abs/1301.3781</reference>
+		<reference id="19">10.1109/TKDE.2016.2601091</reference>
+		<reference id="20">10.1145/2835776.2835842</reference>
+		<reference id="21">10.1145/2168752.2168771</reference>
+		<reference id="22">10.5555/1795114.1795167</reference>
+		<reference id="23">10.1109/TKDE.2018.2833443</reference>
+		<reference id="24">10.1145/2806416.2806528</reference>
+		<reference id="25">10.1145/3041659</reference>
+		<reference id="26">https://arxiv.org/abs/1801.03226</reference>
+		<reference id="27">10.1145/3159652.3159666</reference>
+		<reference id="28">10.1137/1.9781611975673.78</reference>
+		<reference id="29">https://www.ijcai.org/Proceedings/2019/0522.pdf</reference>
+		<reference id="30">10.1609/aaai.v33i01.3301346</reference>
+		<reference id="31">10.1145/3219819.3219890</reference>
+		<reference id="32">10.1145/2556195.2556259</reference>
+		<reference id="33">10.1145/2939672.2939673</reference>
+		<reference id="34">10.1145/3041021.3055364</reference>
+		<reference id="35">10.1609/aaai.v33i01.3301435</reference>
+		<reference id="36">https://arxiv.org/abs/1812.08434</reference>
+	</references>
+</doc>

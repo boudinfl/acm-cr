@@ -1,0 +1,160 @@
+<doc>
+	<doi>10.1145/3397271.3401052</doi>
+	<title>Query Rewriting for Voice Shopping Null Queries</title>
+	<abstract>Voice shopping using natural language introduces new challenges related to customer queries, like handling mispronounced, misexpressed, and misunderstood queries. Voice null queries, which result in no offers, have negative impact on customers shopping experience. Query rewriting (QR) attempts to automatically replace null queries with alternatives that lead to relevant results. We present a new approach for pre-retrieval QR of voice shopping null queries. Our proposed QR framework first generates alternative queries using a search index-based approach that targets different potential failures in voice queries. Then, a machine-learning component ranks these alternatives, and the original query is amended by the selected alternative. We provide an experimental evaluation of our approach based on data logs of a commercial voice assistant and an e-commerce website, demonstrating that it outperforms several baselines by more than 22%. Our evaluation also highlights an interesting phenomenon, showing that web shopping null queries are considerably different, and apparently easier to fix, than voice queries. This further substantiates the use of specialized mechanisms for the voice domain. We believe that our proposed framework, mapping tail queries to head queries, is of independent interest since it can be extended and applied to other domains.</abstract>
+	<contexts>
+		<context id="01" section="introduction">
+			<s>In the past few years, speech has emerged has a natural mean for communicating information need to various search engines via voice assistants such as Amazon Alexa, Apple Siri, and Google Assistant.</s>
+			<s>Among various experiences, voice assistants enable customers to search and shop for products in an intuitive way using natural language.</s>
+			<s>Providing a free-form shopping experience is a challenging task.</s>
+			<s>This is especially true because the voice interface lacks assisting mechanisms, such as query completion and refinement, that can help customers easily express their need and iterate on it.</s>
+			<s>As a consequence, a non-negligible portion of all voice shopping queries are null queries, that is, queries that result with no offers.</s>
+			<s cites="40,41,42">Such interactions clearly have negative impact on customers shopping experience [40–42].</s>
+			<s>Query rewriting (QR) attempts to seamlessly replace null queries with alternatives that lead to relevant offers for the customer intent, and by that, help customers progress on their shopping journey.</s>
+		</context>
+		<context id="02" section="introduction">
+			<s>The voice interface introduces technical and architectural challenges that are either unique or more emphasized compared to textual interfaces (e.g., web search).</s>
+			<s>For example, the voice interface lacks assisting mechanisms that are common in the web, resulting in more shopping queries that contain erroneous attributes such as product brand, quantity, and others;</s>
+			<s cites="27,30,36">While automatic speech recognition (ASR) and natural language understanding (NLU) techniques have made considerable progress in recent years (see, e.g., [27, 30, 36]), they still have failures that exhibit different patterns (e.g., phonetic) than common textual errors;</s>
+			<s>Finally, customers fail in formulating a coherent spoken query in real-time, resulting in new types of speech imperfection errors such as stammered or miss-pronounced words. All these motivate the application of specialized mechanisms for the voice domain.</s>
+		</context>
+		<context id="03" section="introduction">
+			<s>We introduce a pre-retrieval QR approach designed to handle voice shopping null queries, as illustrated in Figure 1.</s>
+			<s cites="11">In a pre-retrieval approach [11], QR happens without knowledge about the offers that return for the original query or any of the generated alternatives.</s>
+			<s>This approach is more efficient than post-retrieval methods, inducing less overhead to the search system.</s>
+			<s>Upon receiving a transcribed query q, our QR framework applies a two step process of alternative queries generation and alternative queries ranking.</s>
+			<s cites="20">As voice-user interface introduces a strong presentation bias towards the top-ranked offer [20], in most cases, only a single offer is communicated back to the customer.</s>
+			<s>Therefore, practically, it is sufficient to identify a single “hero” alternative query to amend the customer query.</s>
+			<s>The top-ranked alternative is passed along with the original query to a controller, which ensures the quality of the selected alternative.</s>
+			<s>Specifically, the controller implements quality safeguards that prevent replacing the original query with an alternative query that is likely to retrieve irrelevant results to the intent of the original query.</s>
+			<s>Then, the original query q is sent along with the selected alternative query r∗ for retrieving offers from the e-commerce search engine.</s>
+			<s>If q turns to be a null query with no offers, the customer is presented with the offers retrieved for r∗.</s>
+		</context>
+		<context id="04" section="introduction">
+			<s>Our alternative queries generation component is based on identifying web and voice shopping queries that frequently lead to positive events (e.g., purchases), and indexing them in a search engine.</s>
+			<s>Those positive queries are indexed using various analyzers that target different potential failures in voice shopping (e.g., analyzers based on textual, n-grams, and phonetic similarities).</s>
+			<s>Given a query, one can retrieve multiple alternatives from the index in hope that one of them can amend it, without the need to isolate the exact error.</s>
+			<s>Conceptually, the core of our generation approach is by mapping tail (low frequency) queries to alternative head (high frequency) queries.</s>
+			<s cites="23">The main motivation for this approach comes from the fact that head queries are known to exhibit much better performance than tail queries, due to richer historical behavioral features [23].</s>
+			<s>In fact, the distinction is even more extreme in voice due to the aforementioned strong presentation bias.</s>
+			<s cites="20" anonymised="true">In addition, [20] recently observed that products purchased through voice are much more limited in terms of diversity, namely, products purchased on a regular basis such as groceries, and not niche long-tail products.</s>
+			<s>This provides another motivation for our approach as positive head queries correspond well with commonly and regularly purchased products.</s>
+		</context>
+		<context id="05" section="introduction">
+			<s>The alternative queries ranking component then ranks the alternatives that are more probable to fix the original query.</s>
+			<s>This machine learning-based component utilizes multiple features (like textual and semantic similarities between the originating query and the alternatives, behavioral features, and more) to make its decisions.</s>
+			<s>While our alternative queries generation component aims to improve the recall, the alternative queries ranking component is in charge of tuning the precision.</s>
+			<s cites="41">For instance, in an e-commerce rewriting scenario, it is essential for the alternative queries to retrieve offers that capture the same intent as the originating query [41].</s>
+			<s>Rewriting that leads to offers that do not respect the desired product type are clearly poor.</s>
+			<s>Our ranking approach considers features that help preserve the original customer’s intent (like, extracting the product type from queries), and by that, provides quality guarantees on the alternatives.</s>
+		</context>
+		<context id="06" section="">
+			<s>We provide an experimental evaluation for both voice and web null queries based on data logs of a commercial voice assistant and an e-commerce website.</s>
+			<s>Our evaluation demonstrates that our voice query rewriting (VQR) approach outperforms several baselines by large margins.</s>
+			<s>For instance, we show that VQR improves over the effectiveness of a simple textual similarity retrieval-based QR system by roughly 22% on voice data, and a term-dropping QR system by roughly 46% on web data.</s>
+			<s>Although our focus is on voice QR, the improvements observed on web data, reaffirms the utility of our approach.</s>
+			<s>In fact, we believe that our proposed framework is generic enough to be successfully applied in other domains beyond e-commerce.</s>
+			<s>One notable highlight from our evaluation is that a term-dropping QR approach applied to a random set of web null queries attains much better performance than when it is employed to a random set of voice null queries (by roughly 56%).</s>
+			<s>This indicates that web e-commerce null queries are considerably different than voice null queries, and apparently easier to fix.</s>
+			<s>This observation adds to previous line of research identifying differentiating factors between the voice and web domains.</s>
+			<s cites="15,17,22,20">For example, it was observed that voice queries are closer to natural language than text queries in general search [15], voice reformulations are distinguishable from textual reformulations [17, 22], and that shopping categories and behavioral patterns defer between voice and web e-commerce search [20].</s>
+			<s>In summary, we make the following key contributions:</s>
+		</context>
+		<context id="07" section="related work">
+			<s cites="3">Query rewriting has long been an important research area in information retrieval [3].</s>
+			<s>Extensive analysis has been done for handling and rewriting of queries in web search.</s>
+			<s>The notion of query refinement, expansion, suggestion, substitution, and reformulation are sometime overloaded and have been commonly used synonymously with query rewriting.</s>
+			<s cites="34">Most of the previous methods are not particularly suitable for e-commerce queries, which are shorter and more sensitive to context [34], let alone voice e-commerce queries.</s>
+			<s cites="13">Focusing on tail low-frequency e-commerce queries highlights additional unique challenges and opportunities, especially around finding and ranking good query alternatives [13].</s>
+			<s cites="15,17,22,20,21">Using voice as a new medium for search also reveals differences from traditional search in both web [15, 17, 22] and e-commerce [20, 21].</s>
+			<s>In this work, we concentrate on studying voice e-commerce null (tail) queries.</s>
+		</context>
+		<context id="08" section="related work">
+			<s>One notable research direction in QR, which is also applicable for e-commerce, focuses on increasing the recall.</s>
+			<s>This direction is especially important for null queries that yield no results.</s>
+			<s cites="4,24,28,46,47,7,16,25">Alternative queries are generated by dropping [4, 24, 28, 46, 47] or substituting [7, 16, 25] tokens from the original query.</s>
+			<s cites="25" anonymised="true">For example, [25] proposed generating query alternatives by using a large set of ordered query pairs obtained from consecutive queries in web-search sessions.</s>
+			<s>Then, various alternatives are generated by breaking a given query into segments and either dropping or generating substitutions for each of them separately.</s>
+			<s cites="41" anonymised="true">For dealing with null e-commerce queries, [41] suggested a post-retrieval approach for dropping terms from a given query that restricts the search results to the same taxonomy of results returned in the past for the original query.</s>
+			<s cites="43" anonymised="true">[43] suggested generating sub-queries by dropping unimportant terms based on their part-of-speech (POS) tag and additional features.</s>
+			<s>Our results hint that term-dropping methods for e-commerce null queries do not adjust well to the voice domain.</s>
+			<s cites="6,7,16">Other ideas for substitution-based solutions, using the query-flow graph [6], were also proposed [7, 16].</s>
+			<s cites="16">However, finding good recommendations for tail e-commerce queries based on session co-occurrence turns to be difficult [16].</s>
+			<s cites="8" anonymised="true">For addressing also the long tail of the query distribution, [8] conceptually extend the query-flow graph with term nodes in addition to query nodes.</s>
+			<s cites="9" anonymised="true">[9] generate an inverted index of “successful” queries, i.e., ending query of a session with a click on its search result, and recommends queries retrieved from that index.</s>
+			<s>Our approach has similarities with the later in using an index of successful queries, and extends the use of inverted index to include phonetic, sub-words, and semantic similarities upon retrieval.</s>
+		</context>
+		<context id="09" section="related work">
+			<s>Recently, several attempts were made to apply deep learning to various query rewriting tasks.</s>
+			<s cites="14" anonymised="true">[14] proposed to use embedding techniques to expand a query via a k-nearest neighbor search.</s>
+			<s cites="19" anonymised="true">[19] proposed a framework that learns to rewrite queries by unsupervised candidate generation and supervised candidate ranking.</s>
+			<s>For unsupervised candidate generation, they presented a a sequence-to-sequence LSTM model, but also incorporated several existing QR systems suggestions.</s>
+			<s>Their scoring function required training over a large web click data.</s>
+			<s cites="44" anonymised="true">[44] applied a similar technique based on post-retrieval method for e-commerce web search.</s>
+			<s>The applicability of these techniques to voice queries is still unclear, especially in light of the data sparsity challenges that still exist as voice interfaces are not yet widely adopted.</s>
+			<s cites="39">Indeed, users do not tend to switch between voice and text when reformulating queries [39].</s>
+			<s cites="22" anonymised="true">[22] showed that reformulation patterns of voice queries are different from those in conventional textual searches using both lexical and phonetic changes.</s>
+			<s cites="17" anonymised="17">[17] developed classifiers for distinguishing reformulation of voice query pairs from textual query pairs.</s>
+			<s>They extended text-based approaches with voice signals such as phonetic similarity.</s>
+			<s>This hints regarding the importance of phonetic representations in voice query rewriting.</s>
+			<s>Our alternative queries generation approach does not require prior training and adjusts to the voice medium characteristics, considering its phonetic representation.</s>
+		</context>
+		<context id="10" section="related work">
+			<s>One related direction in QR focuses on improving its precision by narrowing down a search query.</s>
+			<s>In this case, the goal is to refine the query such that the refined alternative retrieves a more relevant subset of results.</s>
+			<s cites="2,31,3,10,29,33,45">Approaches towards this task include learning rewritings based on past users’ query refinements [2, 31, 32] and applying pseudo-relevance feedback techniques [10, 29, 33, 45].</s>
+			<s cites="12,35">Those latter techniques commonly employ post-retrieval methods and iteratively query the search engine for newly added terms [12, 35].</s>
+			<s>In general, this direction is not suitable for handling null queries since the main problem with those queries is recall rather than precision.</s>
+			<s>Those query refinement and rewriting techniques are mostly applicable to head queries.</s>
+		</context>
+	</contexts>
+	<references>
+		<reference id="1">https://www.elastic.co/what-is/elasticsearch</reference>
+		<reference id="2">https://www.isca-speech.org/archive/archive_papers/interspeech_2012/i12_2462.pdf</reference>
+		<reference id="3">10.5555/553876</reference>
+		<reference id="4">10.1145/1390334.1390419</reference>
+		<reference id="5">10.1162/tacl_a_00051</reference>
+		<reference id="6">10.1145/1458082.1458163</reference>
+		<reference id="7">10.1145/1507509.1507518</reference>
+		<reference id="8">10.1145/2348283.2348332</reference>
+		<reference id="9">10.1016/j.ipm.2011.07.005</reference>
+		<reference id="10">10.1145/1390334.1390377</reference>
+		<reference id="11">10.5555/1855038</reference>
+		<reference id="12">10.1007/978-3-319-30671-1_38</reference>
+		<reference id="13">10.1145/1718487.1718513</reference>
+		<reference id="14">10.1145/2766462.2767709</reference>
+		<reference id="15">10.1145/2911451.2911525</reference>
+		<reference id="16">10.1145/1935826.1935927</reference>
+		<reference id="17">10.1145/2806416.2806491</reference>
+		<reference id="18">10.1007/978-3-540-30213-1_5</reference>
+		<reference id="19">10.1145/2983323.2983835</reference>
+		<reference id="20">http://glare2018.dei.unipd.it/paper/glare2018-paper5.pdf</reference>
+		<reference id="21">http://glare2018.dei.unipd.it/paper/glare2018-paper4.pdf</reference>
+		<reference id="22">10.1145/2484028.2484092</reference>
+		<reference id="23">10.1145/775047.775067</reference>
+		<reference id="24">10.1145/860435.860538</reference>
+		<reference id="25">10.1145/1135777.1135835</reference>
+		<reference id="26">https://www.aclweb.org/anthology/E17-2068.pdf</reference>
+		<reference id="27">10.1109/ASRU46091.2019.9003750</reference>
+		<reference id="28">10.1145/1571941.1572038</reference>
+		<reference id="29">10.1145/3130348.3130376</reference>
+		<reference id="30">10.21437/Interspeech.2019-1819</reference>
+		<reference id="31">10.1145/3038912.3052593</reference>
+		<reference id="32">10.1145/3357384.3358151</reference>
+		<reference id="33">10.1145/1277741.1277796</reference>
+		<reference id="34">10.5555/1763653.1763660</reference>
+		<reference id="35">10.18653/v1/D17-1061</reference>
+		<reference id="36">10.21437/Interspeech.2019-2680</reference>
+		<reference id="37">https://scinapse.io/papers/152126889</reference>
+		<reference id="38">10.1561/1500000019</reference>
+		<reference id="39">10.1145/2600428.2609497</reference>
+		<reference id="40">10.1145/2009916.2009930</reference>
+		<reference id="41">10.1145/2187980.2187989</reference>
+		<reference id="42">10.1145/3159652.3159714</reference>
+		<reference id="43">http://ceur-ws.org/Vol-2311/paper_8.pdf</reference>
+		<reference id="44">10.1145/3289600.3291039</reference>
+		<reference id="45">10.1145/3130348.3130364</reference>
+		<reference id="46">10.1145/1871437.1871572</reference>
+		<reference id="47">10.1145/1871437.1871474</reference>
+	</references>
+</doc>

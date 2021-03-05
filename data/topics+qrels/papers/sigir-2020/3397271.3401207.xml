@@ -1,0 +1,26 @@
+<doc>
+	<doi>10.1145/3397271.3401207</doi>
+	<title>Retrieving Potential Causes from a Query Event</title>
+	<abstract>Different to traditional IR, which retrieves a set of topically relevant documents given a user query, we investigate causal retrieval, which involves retrieving a set of documents that describe a set of potential causes leading to an effect specified in the query. We argue that the nature of causal relevance should be different to that of traditional topical relevance. This is because although the causally relevant documents would have partial term overlap with the ones that are topically relevant for a query, yet it is expected that a majority of these documents would use a different set of terms to describe a number of causes possibly leading to their effects. To address this, we propose a feedback model to estimate a distribution of terms which are relatively infrequent but associated with high weights in the topically relevant distribution, leading to potential causal relevance. Our experiments demonstrate that such a feedback model turns out to be substantially more effective than traditional IR models and a number of other causality heuristic baselines.</abstract>
+	<contexts>
+		<context id="01" section="related work">
+			<s cites="3,4,5,12,1">A number of existing approaches extract cause-effect patterns using lexical, syntactic, and more recently, semantic relations [3–5, 12], primarily taken from headlines or single sentences (refer to [1] for a survey).</s>
+			<s cites="7,2">The cause-effect pattern approach was extended in [7], where a set of patterns are initially used to create a network of causes and effects, and then a relational embedding method (similar to TransE [2]) is used to jointly embed causes and effects.</s>
+			<s cites="9,10">Causal IR works in the reverse direction, where a query describes a cause (e.g., current situation or proposed action) and the results provide a list of possible effects was studied in [9, 10].</s>
+		</context>
+	</contexts>
+	<references>
+		<reference id="1">https://arxiv.org/abs/1605.07895</reference>
+		<reference id="2">10.5555/2999792.2999923</reference>
+		<reference id="3">10.1007/978-3-540-30211-7_7</reference>
+		<reference id="4">http://www.lrec-conf.org/proceedings/lrec2008/pdf/87_paper.pdf</reference>
+		<reference id="5">https://www.aclweb.org/anthology/P14-1093.pdf</reference>
+		<reference id="6">10.1007/978-3-642-40087-2_1</reference>
+		<reference id="7">10.1145/3018661.3018707</reference>
+		<reference id="8">https://scholarworks.umass.edu/cgi/viewcontent.cgi?article=1185</reference>
+		<reference id="9">10.1145/3209978.3210215</reference>
+		<reference id="10">http://ceur-ws.org/Vol-2167/paper3.pdf</reference>
+		<reference id="11">10.1145/3130348.3130376</reference>
+		<reference id="12">10.1145/2187836.2187958</reference>
+	</references>
+</doc>

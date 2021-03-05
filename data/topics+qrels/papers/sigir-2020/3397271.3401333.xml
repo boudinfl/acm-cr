@@ -1,0 +1,71 @@
+<doc>
+	<doi>10.1145/3397271.3401333</doi>
+	<title>Feature Transformation for Neural Ranking Models</title>
+	<abstract>Although neural network models enjoy tremendous advantages in handling image and text data, tree-based models still remain competitive for learning-to-rank tasks with numerical data. A major strength of tree-based ranking models is the insensitivity to different feature scales, while neural ranking models may suffer from features with varying scales or skewed distributions. Feature transformation or normalization is a simple technique which preprocesses input features to mitigate their potential adverse impact on neural models. However, due to lack of studies, it is unclear to what extent feature transformation can benefit neural ranking models. In this paper, we aim to answer this question by providing empirical evidence for learning-to-rank tasks. First, we present a list of commonly used feature transformation techniques and perform a comparative study on multiple learning-to-rank data sets. Then we propose a mixture feature transformation mechanism which can automatically derive a mixture of basic feature transformation functions to achieve the optimal performance. Our experiments show that applying feature transformation can substantially improve the performance of neural ranking models compared to directly using the raw features. In addition, the proposed mixture transformation method can further improve the performance of the ranking model without any additional human effort.</abstract>
+	<contexts>
+		<context id="01" section="introduction">
+			<s>Many machine learning models cannot easily handle features with drastically skewed distributions or extreme scales.</s>
+			<s>Unfortunately, commonly used features often have these patterns.</s>
+			<s>Particularly in web-related applications such as search and recommendation tasks, data items are often represented by features with a peculiar statistical nature.</s>
+			<s>For example, click counts can be in the scale of billions for some items while other items only have a dozen clicks.</s>
+			<s>Using these numbers directly as input features can result in less optimal models and introduce numerical instability during training.</s>
+			<s cites="13">Therefore, feature normalization or transformation is an essential step to improve the effectiveness of many machine learning models [13].</s>
+		</context>
+		<context id="02" section="introduction">
+			<s cites="6,11,17">In the learning-to-rank setting, tree-based models [6, 11, 17] have been extensively studied in the past and remain competitive on public data sets which primarily consist of numerical features.</s>
+			<s>The tree-based model architecture is generally immune to the adverse impact of directly using raw features.</s>
+			<s cites="1,5">Recently, neural network based deep learning models attract lots of attention for learning-to-rank tasks [1, 5].</s>
+			<s>However, few of them investigate the impact of feature transformation.</s>
+			<s cites="14">A possible reason is that neural ranking models are regarded as universal function approximators [14], which leads to the misconception that the optimal ranking function can be automatically learned by current algorithms without feature transformation.</s>
+			<s>Therefore, it is still unclear whether feature transformation is important for neural ranking models.</s>
+		</context>
+		<context id="03" section="introduction">
+			<s cites="2,19,24">While there are surveys providing empirical comparison of multiple feature transformation techniques in other domains [2, 19, 24], to the best of our knowledge there is no systematic comparison of feature transformation techniques for neural ranking models.</s>
+			<s>Moreover, the optimal transformation could vary by feature due to different statistical nature.</s>
+			<s>Possible solutions are either to manually specify feature transformation technique for each feature based on expert knowledge or to perform tedious empirical comparison for every single feature.</s>
+			<s>Both practices require significant time and effort and become intractable when the number of features is large.</s>
+		</context>
+		<context id="04" section="related work">
+			<s cites="12,13">Feature scaling, normalization and transformation is one of the most fundamental data preprocessing techniques in machine learning [12, 13].</s>
+			<s cites="24,19,2">There are surveys comparing different feature transformation techniques in various applications, such as disease detection [24], stock market prediction [19] and video classification [2].</s>
+		</context>
+		<context id="05" section="related work">
+			<s>In information retrieval, feature transformation is also a common practice.</s>
+			<s cites="8,23">For example, the YAHOO Learning to Rank Challenge data set [8] applies cumulative distribution-based transformation on all features; the LETOR [23] data set also applies query-level min-max scaling on each feature.</s>
+			<s>In traditional information retrieval, feature transformation has been extensively studied on both term frequency and inverse document frequency (e.g., BM25).</s>
+			<s>However, such a study is still missing for neural ranking models.</s>
+		</context>
+		<context id="06" section="related work">
+			<s>Automatically learning to perform feature transformation is a relatively novel topic.</s>
+			<s cites="3,7">There are only a few studies with similar objectives [3, 7].</s>
+			<s>Their methods focus on a family of functions such as linear or logistic ones and are not studied for ranking models.</s>
+			<s>In contrast, our methods focus on neural ranking models and work with different forms of transformation functions.</s>
+		</context>
+	</contexts>
+	<references>
+		<reference id="1">10.1145/3209978.3209985</reference>
+		<reference id="2">10.1088/1757-899X/226/1/012082</reference>
+		<reference id="3">10.1016/j.knosys.2017.05.010</reference>
+		<reference id="4">10.1145/3336191.3371844</reference>
+		<reference id="5">10.1145/3331184.3331347</reference>
+		<reference id="6">https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/MSR-TR-2010-82.pdf</reference>
+		<reference id="7">10.1186/s12859-016-1236-x</reference>
+		<reference id="8">10.5555/3045754.3045756</reference>
+		<reference id="9">10.1145/2987380</reference>
+		<reference id="10">10.5555/1953048.2021068</reference>
+		<reference id="11">https://www.jstor.org/stable/2699986</reference>
+		<reference id="12">10.1186/s41044-016-0014-0</reference>
+		<reference id="13">10.5555/1972541</reference>
+		<reference id="14">0.1016/0893-6080(89)90020-8</reference>
+		<reference id="15">http://proceedings.mlr.press/v37/ioffe15.pdf</reference>
+		<reference id="16">10.1145/582415.582418</reference>
+		<reference id="17">http://papers.nips.cc/paper/6907-lightgbm-a-highly-efficient-gradient-boosting-decision</reference>
+		<reference id="18">10.5555/3104322.3104425</reference>
+		<reference id="19">10.1007/978-981-10-2777-2_7</reference>
+		<reference id="20">10.1145/3292500.3330677</reference>
+		<reference id="21">https://arxiv.org/abs/1306.2597</reference>
+		<reference id="22">10.1007/s10791-009-9124-x</reference>
+		<reference id="23">10.1007/s10791-009-9123-y</reference>
+		<reference id="24">10.5120/20443-2793</reference>
+	</references>
+</doc>

@@ -1,0 +1,89 @@
+<doc>
+	<doi>10.1145/3409256.3409829</doi>
+	<title>Declarative Experimentation in Information Retrieval using PyTerrier</title>
+	<abstract>The advent of deep machine learning platforms such as Tensorflow and Pytorch, developed in expressive high-level languages such as Python, have allowed more expressive representations of deep neural network architectures. We argue that such a powerful formalism is missing in information retrieval (IR), and propose a framework called PyTerrier that allows advanced retrieval pipelines to be expressed, and evaluated, in a declarative manner close to their conceptual design. Like the aforementioned frameworks that compile deep learning experiments into primitive GPU operations, our framework targets IR platforms as backends in order to execute and evaluate retrieval pipelines. Further, we can automatically optimise the retrieval pipelines to increase their efficiency to suite a particular IR platform backend. Our experiments, conducted on TREC Robust and ClueWeb09 test collections, demonstrate the efficiency benefits of these optimisations for retrieval pipelines involving both the Anserini and Terrier IR platforms.</abstract>
+	<contexts>
+		<context id="01" section="introduction">
+			<s cites="9">On the other hand, machine learning has experienced even greater growth, with applications to many areas of science, driven by the availability of good datasets [9], as well as platforms that allow easy development and application of machine learned models.</s>
+			<s>In recent years, there has been a focus on the development and application of deep learning frameworks written in high-level languages, including Lua (Torch), but particularly Python (Tensorflow and Pytorch).</s>
+			<s>Using such expressive high-level languages allow complex deep neural network architectures with various matrix operations to be expressed using familiar programming paradigms, for instance, adding matrices using a + operator, or adding several hidden layers using a for loop to add objects to a list.</s>
+		</context>
+		<context id="02" section="introduction">
+			<s>Yet reproducibility is key to impactful science.</s>
+			<s cites="10" anonymised="true">[10] define reproducibility as the ability for a different team to reproduce the measurement in a different experimental setup.</s>
+			<s cites="25">Therefore, focussing evaluation solely on datasets that extract key aspects of a problem using a standard dataset – for instance, evaluating LTR techniques solely on LETOR datasets [25] with common features – does not allow us to understand the wider context, such as how an approach will fare when integrated into a fully-fledged search engine’s retrieval stack.</s>
+			<s cites="19">This highlights the importance of end-to-end retrieval experiments – understanding what data are needed for a given approach, and how it interacts with others components (e.g., how many documents should be re-ranked [19] for a LTR approach), reduces the uncertainties when a technique should be deployed to an operational search engine.</s>
+		</context>
+		<context id="03" section="related work">
+			<s cites="2">IR platforms have a long history, dating back to at least SMART [2].</s>
+			<s cites="7,11">These days, among the open source platforms, Apache Lucene is widely deployed. Implemented in Java, it provides indexing and single-search APIs, and in recent years has adopted BM25 along with LTR [7] and dynamic pruning techniques [11].</s>
+			<s cites="8,29">However, its ability to handle standard test collections was for many years a known limitation [8], and has been advanced by efforts such as Anserini [29].</s>
+			<s>Indeed Anserini facilitates the deployment of a number of replicable information retrieval techniques, on standard test collection, on top of the Lucene backend.</s>
+		</context>
+		<context id="04" section="related work">
+			<s cites="4,18,21">Among the other commonly used academic platform are Lemur/Indri (implemented in C) – along the closely related Galago (implemented in Java) [4] – as well as Terrier (implemented in Java) [18] and PISA [21] (implemented in C++).</s>
+			<s> We note that while Python “bindings” exist for various platforms, including Indri, Galago and Anserini, there are no serious contenders for IR platforms written natively in Python.</s>
+			<s>We believe there are several reasons for this, including the challenge of indexing and retrieving from corpora that contains 1-10 million documents, as well as the more recent maturity of Python. Indri and its modern replacement Galago also have rich (domain-specific) query languages that allow the expression of complex retrieval operations.</s>
+		</context>
+		<context id="05" section="related work">
+			<s>All of the discussed IR platforms mix the design of experimental retrieval activities with the implementation and optimisations required to make such activities efficient.</s>
+			<s>This approach has been shown to limit the reproducibility of IR experiments.</s>
+			<s cites="23" anonymised="true">For example, [23] show that different implementations of the same BM25 weighting models in different IR platforms result in different values for the same effectiveness metric.</s>
+			<s>They propose to decouple the IR experiments from the IR platform implementation by storing the inverted index in a column-oriented relational database and by implementing ranking models using SQL.</s>
+			<s cites="12" anonymised="true">[12] take a step forward and propose the adoption of an IR-specific declarative language to provide higher level abstractions in the implementation of the IR experiments based on a graph query language.</s>
+			<s>In contrast to this and the Indri/Galago domain-specific query language, we propose a declarative framework to express basic retrieval operations and their composition using queries and documents as inputs and outputs.</s>
+			<s>It is built upon Python, which is expressive, readily accessible and allows integration with other modern Python toolkits such as those for deep learning.</s>
+			<s>Together, this allows for rapid prototyping and improved reproducibility in IR.</s>
+			<s>We then show how the elements of the proposed declarative language can be compiled into a DAG representation, which can be efficiently implemented on specific IR platforms.</s>
+		</context>
+		<context id="06" section="related work">
+			<s cites="30">To allow the efficient application of data processing and machine learning at scale, Apache Spark overcame some of the disadvantages of the store-then-compute MapReduce programming paradigm; Apache Spark, which has bindings in Java, Scala and Python, allows structured data processing operations to be vastly parallelised across a cluster of machines [30].</s>
+			<s>As a functional language, expressions in Apache Spark, even in Python, are compiled into an execution plan, which is then distributed to different compute machines.</s>
+			<s>We are inspired by this notion of an execution plan.</s>
+		</context>
+		<context id="07" section="related work">
+			<s cites="9">In recent times, Tensorflow [9] and PyTorch have been the dominant frameworks for neural machine learning.</s>
+			<s>Both are based on primitive operations (add, multiple, concatenate) on tensors, which are expressed in Python by overloading the math operators in the language for the tensor objects; higher level tensor operations such as recurrent units, attention etc., can be achieved using higher level objects.</s>
+			<s>Thus a domain-specific programming environment is created in Python.</s>
+			<s>The object graph instantiated by the tensor objects and operators creates a dataflow DAG, which can be compiled into GPU operations for efficient computation.</s>
+		</context>
+		<context id="08" section="related work">
+			<s cites="16,17">The most similar work to our own is that in Terrier-Spark [16, 17], where retrieval pipelines for the Terrier platform were created in Scala using Apache Spark.</s>
+			<s>In that work, retrieval operation were expressed as operations on dataframes (relations).</s>
+			<s>However, adoption of that framework was hindered by two factors: firstly, the use of Apache Spark, which is designed for processing massive scale datasets, and introduces significant interactive overheads making Terrier-Spark unsuitable for notebook-style agile development; secondly, the use of the Scala programming language, which is not as popular as Python.</s>
+			<s>In this paper, we extend the notion of retrieval operations on dataframes, but instead, operate on Python, and create a domain-specific programming environment where complex retrieval pipelines can be formulated as operations on Python objects.</s>
+		</context>
+	</contexts>
+	<references>
+		<reference id="1">10.1007/s10791-012-9217-9</reference>
+		<reference id="2">10.5555/866085</reference>
+		<reference id="3">https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/MSR-TR-2010-82.pdf</reference>
+		<reference id="4">http://www.cs.otago.ac.nz/homepages/andrew/involvement/2012-SIGIR-OSIR.pdf</reference>
+		<reference id="5">10.1145/3341981.3344243</reference>
+		<reference id="6">10.1145/2939672.2939785</reference>
+		<reference id="7">https://lucene.apache.org/solr/guide/6_6/learning-to-rank.html</reference>
+		<reference id="8">10.1145/3053408.3053421</reference>
+		<reference id="9">10.5555/3026877.3026899</reference>
+		<reference id="10">10.1145/3274784.3274786</reference>
+		<reference id="11">10.1007/978-3-030-45442-5_3</reference>
+		<reference id="12">http://ceur-ws.org/Vol-2409/position03.pdf</reference>
+		<reference id="13">https://joss.theoj.org/papers/10.21105/joss.00670.pdf</reference>
+		<reference id="14">10.1561/1500000016</reference>
+		<reference id="15">10.1145/3331184.3331317</reference>
+		<reference id="16">10.1145/3209978.3210174</reference>
+		<reference id="17">https://eprints.gla.ac.uk/165871/1/165871.pdf</reference>
+		<reference id="18">http://www.dcs.gla.ac.uk/~richardm/papers/macdonald12terrier.pdf</reference>
+		<reference id="19">10.1007/s10791-012-9209-9</reference>
+		<reference id="20">10.1145/2493175.2493176</reference>
+		<reference id="21">http://engineering.nyu.edu/~suel/papers/pisa-ossirc19.pdf</reference>
+		<reference id="22">10.1145/1076034.1076115</reference>
+		<reference id="23">10.1145/2600428.2609460</reference>
+		<reference id="24">10.1145/1277741.1277851</reference>
+		<reference id="25">https://arxiv.org/abs/1306.2597</reference>
+		<reference id="26">10.5555/6204</reference>
+		<reference id="27">10.1561/1500000057</reference>
+		<reference id="28">10.1145/3209978.3210065</reference>
+		<reference id="29">10.1145/3077136.3080721</reference>
+		<reference id="30">10.5555/1863103.1863113</reference>
+	</references>
+</doc>

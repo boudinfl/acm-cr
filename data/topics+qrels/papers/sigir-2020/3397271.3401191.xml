@@ -1,0 +1,62 @@
+<doc>
+	<doi>10.1145/3397271.3401191</doi>
+	<title>Hier-SPCNet: A Legal Statute Hierarchy-based Heterogeneous Network for Computing Legal Case Document Similarity</title>
+	<abstract>Computing similarity between two legal case documents is a challenging task, for which text-based and network-based measures have been proposed in literature. All prior network-based similarity methods considered a precedent citation network among case documents only (PCNet). However, this approach misses an important source of legal knowledge - the hierarchy of legal statutes that are applicable in a given legal jurisdiction (e.g., country). We propose to augment the PCNet with the hierarchy of legal statutes, to form a heterogeneous network Hier-SPCNet. Experiments over a set of Indian Supreme Court case documents show that Hier-SPCNet enables significantly better document similarity estimation, as compared to existing approaches using PCNet. We also show that the proposed network-based method can complement text-based measures for better estimation of legal document similarity.</abstract>
+	<contexts>
+		<context id="01" section="introduction">
+			<s cites="3,4,6,8">A key step for developing these legal IR systems is to estimate the similarity between two legal case documents, which is challenging because legal documents are long, complicated and unstructured [3, 4, 6, 8].</s>
+			<s>Also, there is no well defined notion of legal similarity – two legal case documents are considered similar if legal experts judge them to be similar.</s>
+			<s>In this work, we focus on the challenge of automating this similarity computation.</s>
+		</context>
+		<context id="02" section="introduction">
+			<s cites="5">Although there exists several supervised methods for general document similarity (e.g., for measuring similarity of news articles [5]), having such supervised methods for legal document similarity is not practical.</s>
+			<s>This is because training such supervised models need a gold standard containing thousands of similar document pairs.</s>
+			<s>Since legal document similarity can be verified only by legal experts, developing such a gold standard is prohibitively expensive.</s>
+			<s cites="3,4,6,8">Existing methodologies for finding similar legal documents are hence unsupervised [3, 4, 6, 8].</s>
+		</context>
+		<context id="03" section="introduction">
+			<s cites="3,8,6,4">The existing methods for computing legal document similarity and can be broadly classified into network-based methods that rely on citation to prior case documents [3, 8], and text-based methods that rely on the textual content of the documents [6], and hybrid [4].</s>
+		</context>
+		<context id="04" section="introduction">
+			<s>In this paper, we focus on network-based approaches.</s>
+			<s cites="4">All existing network-based methods (including the hybrid ones [4]) rely on a precedent citation network (PCNet) that capture citations from one case document to prior-case documents (see Section 2).</s>
+			<s>However, PCNet misses an important source of legal information that is inherent in the statutes of a particular jurisdiction (e.g., country).</s>
+			<s>Based on what we understand from discussions with Law practitioners in India (faculty members from the Rajiv Gandhi School of Intellectual Property Law, India), statutes represent the written laws and are hence a valuable source of legal knowledge, that can be used in several tasks including estimating similarity between legal documents.</s>
+			<s>Hence, in this work, we augment PCNet to construct a heterogeneous network Hier-SPCNet (Hierarchical Statute and Precedent Citation Network – see Figure 1) that encompasses the structure of the statutes as well as citation information present in them.</s>
+		</context>
+		<context id="05" section="introduction">
+			<s cites="1">To estimate the similarity between legal documents, we propose to apply the graph embedding algorithm Metapath2vec [1] on the heterogeneous Hier-SPCNet.</s>
+			<s>Our method relies on the key idea that if two documents cite a common statute/precedent or if two documents cite different statutes/precedents that are themselves structurally similar in the network, then the two documents may be discussing similar legal issues, which is a strong signal for estimating document similarity.</s>
+			<s>We evaluate our approach on a set of 100 document pairs comprising of case judgments from the Supreme Court of India, whose similarities have been annotated by legal experts.</s>
+			<s>Results show that our proposed method achieves significant improvement over prior methods that use the PCNet alone.</s>
+		</context>
+		<context id="06" section="introduction">
+			<s cites="6">We also compare our proposed network-based method with a state-of-the-art text-based method for computing legal document similarity using document embeddings [6].</s>
+			<s>We observe that the proposed network-based method can give complimentary insights compared to what is given by the text-similarity method. Combining the two is a promising way of estimating legal document similarity from multiple aspects.</s>
+		</context>
+		<context id="07" section="introduction">
+			<s>To our knowledge, this is the first work that proposes a network to capture all domain information inherent in both statutes and precedents (the two main pillars of a Common Law system) and shows its utility in capturing the similarity of two legal documents.</s>
+			<s cites="7">Also note that, though we have focused on Indian legal documents, our method can be extended to any jurisdiction that defines statutes/codes in their judicial system (e.g., France [7]).</s>
+		</context>
+		<context id="08" section="related work">
+			<s cites="3">Bibliographic Coupling [3]: It is defined as the Jaccard similarity index between the sets of precedent citations (out-citations) from the two documents whose similarity is to be inferred.</s>
+		</context>
+		<context id="09" section="related work">
+			<s cites="3">Co-citation [3]: Similar to bibliographic coupling, but it is defined on the sets of in-citations from the two documents.</s>
+		</context>
+		<context id="10" section="">
+			<s cites="8">Dispersion [8]: This measure measures to what extent the out-neighbours (out-citation documents) of the two documents are themselves similar, i.e., occurs in the same community/cluster.</s>
+			<s>We use the NetworkX implementation for this measure.</s>
+		</context>
+	</contexts>
+	<references>
+		<reference id="1">10.1145/3097983.3098036</reference>
+		<reference id="2">10.1145/2939672.2939754</reference>
+		<reference id="3">10.1145/1980422.1980439</reference>
+		<reference id="4">10.1007/978-3-642-37134-9_9</reference>
+		<reference id="5">10.18653/v1/P19-1632</reference>
+		<reference id="6">10.1145/3140107.3140119</reference>
+		<reference id="7">10.1145/1568234.1568271</reference>
+		<reference id="8">10.1145/2740908.2744717</reference>
+	</references>
+</doc>

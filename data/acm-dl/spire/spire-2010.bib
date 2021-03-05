@@ -1,0 +1,618 @@
+@inproceedings{10.5555/1928328.1928330,
+author = {Najork, Marc},
+title = {Querying the Web Graph},
+year = {2010},
+isbn = {3642163203},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {This paper focuses on using hyperlinks in the ranking of web search results. We give a brief overview of the vast body of work in the area; we provide a quantitative comparison of the different features; we sketch how link-based ranking features can be implemented in large-scale search engines; and we identify promising avenues for future research.},
+booktitle = {Proceedings of the 17th International Conference on String Processing and Information Retrieval},
+pages = {1–12},
+numpages = {12},
+keywords = {link analysis, HITS, pagerank, SALSA, ranking, web graph},
+location = {Los Cabos, Mexico},
+series = {SPIRE'10}
+}
+
+@inproceedings{10.5555/1928328.1928331,
+author = {Broccolo, Daniele and Frieder, Ophir and Nardini, Franco Maria and Perego, Raffaele and Silvestri, Fabrizio},
+title = {Incremental Algorithms for Effective and Efficient Query Recommendation},
+year = {2010},
+isbn = {3642163203},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {Query recommender systems give users hints on possible interesting queries relative to their information needs. Most query recommenders are based on static knowledge models built on the basis of past user behaviors recorded in query logs. These models should be periodically updated, or rebuilt from scratch, to keep up with the possible variations in the interests of users. We study query recommender algorithms that generate suggestions on the basis of models that are updated continuously, each time a new query is submitted. We extend two state-of-the-art query recommendation algorithms and evaluate the effects of continuous model updates on their effectiveness and efficiency. Tests conducted on an actual query log show that contrasting model aging by continuously updating the recommendation model is a viable and effective solution.},
+booktitle = {Proceedings of the 17th International Conference on String Processing and Information Retrieval},
+pages = {13–24},
+numpages = {12},
+location = {Los Cabos, Mexico},
+series = {SPIRE'10}
+}
+
+@inproceedings{10.5555/1928328.1928332,
+author = {Bachrach, Yoram and Herbrich, Ralf},
+title = {Fingerprinting Ratings for Collaborative Filtering: Theoretical and Empirical Analysis},
+year = {2010},
+isbn = {3642163203},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {We consider fingerprinting methods for collaborative filtering (CF) systems. In general, CF systems show their real strength when supplied with enormous data sets. Earlier work already suggests sketching techniques to handle massive amounts of information, but most prior analysis has so far been limited to non-ranking application scenarios and has focused mainly on a theoretical analysis. We demonstrate how to use fingerprinting methods to compute a family of rank correlation coefficients. Our methods allow identifying users who have similar rankings over a certain set of items, a problem that lies at the heart of CF applications. We show that our method allows approximating rank correlations with high accuracy and confidence. We examine the suggested methods empirically through a recommender system for the Netflix dataset, showing that the required fingerprint sizes are even smaller than the theoretical analysis suggests. We also explore the of use standard hash functions rather than min-wise independent hashes and the relation between the quality of the final recommendations and the fingerprint size.},
+booktitle = {Proceedings of the 17th International Conference on String Processing and Information Retrieval},
+pages = {25–36},
+numpages = {12},
+location = {Los Cabos, Mexico},
+series = {SPIRE'10}
+}
+
+@inproceedings{10.5555/1928328.1928333,
+author = {Nardini, Franco Maria and Silvestri, Fabrizio and Vahabi, Hossein and Vahabi, Pedram and Frieder, Ophir},
+title = {On Tag Spell Checking},
+year = {2010},
+isbn = {3642163203},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {Exploiting the cumulative behavior of users is a common technique used to improve many popular online services. We build a tag spell checker using a graph-based model. In particular, we present a novel technique based on the graph of tags associated with objects made available by online sites such as Flickr and YouTube. We show the effectiveness of our approach on the basis of an experimentation done on real-world data. We show a precision of up to 93% with a recall (i.e., the number of errors detected) of up to 100%.},
+booktitle = {Proceedings of the 17th International Conference on String Processing and Information Retrieval},
+pages = {37–42},
+numpages = {6},
+location = {Los Cabos, Mexico},
+series = {SPIRE'10}
+}
+
+@inproceedings{10.5555/1928328.1928335,
+author = {Arroyuelo, Diego and Gonz\'{a}lez, Sen\'{e}n and Oyarz\'{u}n, Mauricio},
+title = {Compressed Self-Indices Supporting Conjunctive Queries on Document Collections},
+year = {2010},
+isbn = {3642163203},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {We prove that a document collection, represented as a unique sequence T of n terms over a vocabulary Σ, can be represented in nH0(T) + o(n)(H0(T) + 1) bits of space, such that a conjunctive query t1 ∧ ... ∧ tk can be answered in O(kδ log log |Σ|) adaptive time, where δ is the instance difficulty of the query, as defined by Barbay and Kenyon in their SODA'02 paper, and H0(T) is the empirical entropy of order 0 of T. As a comparison, using an inverted index plus the adaptive intersection algorithm by Barbay and Kenyon takes O(kδ log nM/δ), where nM is the length of the shortest and longest occurrence lists, respectively, among those of the query terms. Thus, we can replace an inverted index by a more space-efficient in-memory encoding, outperforming the query performance of inverted indices when the ratio nM/δ is ω(log |Σ|).},
+booktitle = {Proceedings of the 17th International Conference on String Processing and Information Retrieval},
+pages = {43–54},
+numpages = {12},
+location = {Los Cabos, Mexico},
+series = {SPIRE'10}
+}
+
+@inproceedings{10.5555/1928328.1928336,
+author = {Hon, Wing-Kai and Shah, Rahul and Thankachan, Sharma V. and Vitter, Jeffrey Scott},
+title = {String Retrieval for Multi-Pattern Queries},
+year = {2010},
+isbn = {3642163203},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {Given a collection D of string documents {d1, d2, ..., d|D|} of total length n, which may be preprocessed, a fundamental task is to retrieve the most relevant documents for a given query. The query consists of a set of m patterns {P1, P2, ..., Pm}. To measure the relevance of a document with respect to the query patterns, we may define a score, such as the number of occurrences of these patterns in the document, or the proximity of the given patterns within the document. To control the size of the output, we may also specify a threshold (or a parameter K), so that our task is to report all the documents which match the query with score more than threshold (or respectively, the K documents with the highest scores).When the documents are strings (without word boundaries), the traditional inverted-index-based solutions may not be applicable. The single pattern retrieval case has been well-solved by [14,9]. When it comes to two or more patterns, the only non-trivial solution for proximity search and common document listing was given by [14], which took \~{O}(n3/2) space. In this paper, we give the first linear space (and partly succinct) data structures, which can answer multi-pattern queries in O(Σ|Pi|) + \~{O} (t1/mn1-1/m) time, where t is the number of output occurrences. In the particular case of two patterns, we achieve the bound of O(|P1|+|P2|+√nt log2 n). We also show space-time trade-offs for our data structures. Our approach is based on a novel data structure called the weight-balanced wavelet tree, which may be of independent interest.},
+booktitle = {Proceedings of the 17th International Conference on String Processing and Information Retrieval},
+pages = {55–66},
+numpages = {12},
+location = {Los Cabos, Mexico},
+series = {SPIRE'10}
+}
+
+@inproceedings{10.5555/1928328.1928337,
+author = {Gagie, Travis and Navarro, Gonzalo and Puglisi, Simon J.},
+title = {Colored Range Queries and Document Retrieval},
+year = {2010},
+isbn = {3642163203},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {Colored range queries are a well-studied topic in computational geometry and database research that, in the past decade, have found exciting applications in information retrieval. In this paper we give improved time and space bounds for three important one-dimensional colored range queries -- colored range listing, colored range top-k queries and colored range counting -- and, thus, new bounds for various document retrieval problems on general collections of sequences. Specifically, we first describe a framework including almost all recent results on colored range listing and document listing, which suggests new combinations of data structures for these problems. For example, we give the fastest compressed data structures for colored range listing and document listing, and an efficient data structure for document listing whose size is bounded in terms of the high-order entropies of the library of documents. We then show how (approximate) colored top-k queries can be reduced to (approximate) range-mode queries on subsequences, yielding the first efficient data structure for this problem. Finally, we show how a modified wavelet tree can support colored range counting in logarithmic time and space that is succinct whenever the number of colors is superpolylogarithmic in the length of the sequence.},
+booktitle = {Proceedings of the 17th International Conference on String Processing and Information Retrieval},
+pages = {67–81},
+numpages = {15},
+location = {Los Cabos, Mexico},
+series = {SPIRE'10}
+}
+
+@inproceedings{10.5555/1928328.1928338,
+author = {Claude, Francisco and Munro, J. Ian and Nicholson, Patrick K.},
+title = {Range Queries over Untangled Chains},
+year = {2010},
+isbn = {3642163203},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {We present a practical implementation of the first adaptive data structure for orthogonal range queries in 2D [Arroyuelo et al., ISAAC 2009]. The structure is static, requires only linear space for its representation, and can even be made implicit. The running time for a query is O(lg k lg n+min(k,m) lg n+m), where k is the number of noncrossing monotonic chains in which we can partition the set of points, and m is the size of the output. The space consumption of our implementation is 2n + o(n) words. The experimental results show that this structure is competitive with the state of the art. We also present an alternative construction algorithm for our structure, which in practice outperforms the original proposal by orders of magnitude.},
+booktitle = {Proceedings of the 17th International Conference on String Processing and Information Retrieval},
+pages = {82–93},
+numpages = {12},
+location = {Los Cabos, Mexico},
+series = {SPIRE'10}
+}
+
+@inproceedings{10.5555/1928328.1928340,
+author = {Russo, Lu\'{\i}s M. S.},
+title = {Multiplication Algorithms for Monge Matrices},
+year = {2010},
+isbn = {3642163203},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {In this paper we study algorithms for the max-plus product of Monge matrices. These algorithms use the underlying regularities of the matrices to be faster than the general multiplication algorithm, hence saving time. A nonnaive solution is to iterate the SMAWK algorithm. For specific classes there are more efficient algorithms. We present a new multiplication algorithm (MMT), that is efficient for general Monge matrices and also for specific classes. The theoretical and empirical analysis shows that MMT operates in near optimal space and time. Hence we give further insight into an open problem proposed by Landau. The resulting algorithms are relevant for bio-informatics, namely because Monge matrices occur in string alignment problems.},
+booktitle = {Proceedings of the 17th International Conference on String Processing and Information Retrieval},
+pages = {94–105},
+numpages = {12},
+location = {Los Cabos, Mexico},
+series = {SPIRE'10}
+}
+
+@inproceedings{10.5555/1928328.1928341,
+author = {Boucher, Christina and Wilkie, Kathleen},
+title = {Why Large CLOSEST STRING Instances Are Easy to Solve in Practice},
+year = {2010},
+isbn = {3642163203},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {We initiate the study of the smoothed complexity of the CLOSEST STRING problem by proposing a semi-random model of Hamming distance. We restrict interest to the optimization version of the CLOSEST STRING problem and give a randomized algorithm, we refer to as CSP-Greedy, that computes the closest string on smoothed instances up to a constant factor approximation in time O(l3), where l is the string length. Using smoothed analysis, We prove CSP-Greedy achieves a ((1 + εe/2n))l -approximation guarantee, where ε &gt; 0 is any small value and n is the number of strings. These approximation and runtime guarantees demonstrate that CLOSEST STRING instances with a relatively large number of input strings are efficiently solved in practice. We also give experimental results demonstrating that CSP-greedy runs extremely efficiently on instances with a large number of strings. This counterintuitive fact that "large" CLOSEST STRING instances are easier and more efficient to solve gives new insight into this well-investigated problem.},
+booktitle = {Proceedings of the 17th International Conference on String Processing and Information Retrieval},
+pages = {106–117},
+numpages = {12},
+location = {Los Cabos, Mexico},
+series = {SPIRE'10}
+}
+
+@inproceedings{10.5555/1928328.1928342,
+author = {Amir, Amihood and Apostolico, Alberto and Landau, Gad M. and Shalom, Oren Sar},
+title = {A PTAS for the Square Tiling Problem},
+year = {2010},
+isbn = {3642163203},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {The Square Tiling Problem was recently introduced as equivalent to the problem of reconstructing an image from patches and a possible general-purpose indexing tool. Unfortunately, the Square Tiling Problem was shown to be NP-hard. A 1/2-approximation is known.We show that if the tile alphabet is fixed and finite, there is a Polynomial Time Approximation Scheme (PTAS) for the Square Tiling Problem with approximation ratio of (1 - ε/2 log n) for any given ε ≤ 1.},
+booktitle = {Proceedings of the 17th International Conference on String Processing and Information Retrieval},
+pages = {118–126},
+numpages = {9},
+location = {Los Cabos, Mexico},
+series = {SPIRE'10}
+}
+
+@inproceedings{10.5555/1928328.1928343,
+author = {Boucher, Christina and Omar, Mohamed},
+title = {On the Hardness of Counting and Sampling Center Strings},
+year = {2010},
+isbn = {3642163203},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {Given a set S of n strings, each of length l, and a non-negative value d, we define a center string as a string of length l that has Hamming distance at most d from each string in S. The #CLOSEST STRING problem aims to determine the number of unique center strings for a given set of strings S and input parameters n, l, and d. We show #CLOSEST STRING is impossible to solve exactly or even approximately in polynomial time, and that restricting #CLOSEST STRING so that any one of the parameters n, l, or d is fixed leads to an FPRAS. We show equivalent results for the problem of efficiently sampling center strings uniformly at random.},
+booktitle = {Proceedings of the 17th International Conference on String Processing and Information Retrieval},
+pages = {127–134},
+numpages = {8},
+location = {Los Cabos, Mexico},
+series = {SPIRE'10}
+}
+
+@inproceedings{10.5555/1928328.1928345,
+author = {Tomohiro, I. and Inenaga, Shunsuke and Bannai, Hideo and Takeda, Masayuki},
+title = {Counting and Verifying Maximal Palindromes},
+year = {2010},
+isbn = {3642163203},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {A palindrome is a symmetric string that reads the same forward and backward. Let Pals(w) denote the set of maximal palindromes of a string w in which each palindrome is represented by a pair (c, r), where c is the center and r is the radius of the palindrome. We say that two strings w and z are pal-distinct if Pals(w) ≠ Pals(z). Firstly, we describe the number of pal-distinct strings, and show that we can enumerate all pal-distinct strings in time linear in the output size, for alphabets of size at most 3. These results follow from a close relationship between maximal palindromes and parameterized matching. Secondly, we present a linear time algorithm which finds a string w such that Pals(w) is identical to a given set of maximal palindromes.},
+booktitle = {Proceedings of the 17th International Conference on String Processing and Information Retrieval},
+pages = {135–146},
+numpages = {12},
+location = {Los Cabos, Mexico},
+series = {SPIRE'10}
+}
+
+@inproceedings{10.5555/1928328.1928346,
+author = {Peterlongo, Pierre and Schnel, Nicolas and Pisanti, Nadia and Sagot, Marie-France and Lacroix, Vincent},
+title = {Identifying SNPs without a Reference Genome by Comparing Raw Reads},
+year = {2010},
+isbn = {3642163203},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {Next generation sequencing (NGS) technologies are being applied to many fields of biology, notably to survey the polymorphism across individuals of a species. However, while single nucleotide polymorphisms (SNPs) are almost routinely identified in model organisms, the detection of SNPs in non model species remains very challenging due to the fact that almost all methods rely on the use of a reference genome. We address here the problem of identifying SNPs without a reference genome. For this, we propose an approach which compares two sets of raw reads. We show that a SNP corresponds to a recognisable pattern in the de Bruijn graph built from the reads, and we propose algorithms to identify these patterns, that we call mouths. We outline the potential of our method on real data. The method is tailored to short reads (typically Illumina), and works well even when the coverage is low where it reports few but highly confident SNPs. Our program, called kisSnp, can be downloaded here: http://alcovna.genouest.org/kissnp/.},
+booktitle = {Proceedings of the 17th International Conference on String Processing and Information Retrieval},
+pages = {147–158},
+numpages = {12},
+location = {Los Cabos, Mexico},
+series = {SPIRE'10}
+}
+
+@inproceedings{10.5555/1928328.1928347,
+author = {Belazzougui, Djamal and Boldi, Paolo and Vigna, Sebastiano},
+title = {Dynamic Z-Fast Tries},
+year = {2010},
+isbn = {3642163203},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {We describe a dynamic version of the z-fast trie, a new data structure inspired by the research started by the van Emde Boas trees [12] and followed by the development of y-fast tries [13]. The dynamic z-fast trie is a very simple, uniform data structure: given a set S of n variable-length strings, it is formed by a standard compacted trie on S (with two additional pointers per node), endowed with a dictionary of size n - 1. With this simple setup, the dynamic z-fast trie provides predecessors/ successors in time O(log max{|x|, |x+|, |x-|}) (x± is the successor/ predecessor of x in S) for strings of length linear in the machineword size w. Prefix queries are answered in time O(log |x| + k), and range queries in time O(log max{|x|, |y|, |x-|, |y+|} + k), where k is the number of elements in the output and x (and y) represent the input of the prefix (range) queries. Updates are performed within the same bounds in expectation (or with high probability using an appropriate dictionary). We then show a simple modification that makes it possible to handle strings of length up to 2w; in this case, predecessor/successor queries and updates are supported in O(|x|/w+log max{|x|, |x+|, |x-|}) time, (and O(|x|/B+log max{|x|, |x+|, |x-|}) I/Os in the cache-oblivious model) with high probability. The space occupied by a dynamic z-fast trie, beside that necessary to store S, is just of 12n pointers, n integers and, in the "long string" case, O(n) signatures of O(w) bits each.},
+booktitle = {Proceedings of the 17th International Conference on String Processing and Information Retrieval},
+pages = {159–172},
+numpages = {14},
+location = {Los Cabos, Mexico},
+series = {SPIRE'10}
+}
+
+@inproceedings{10.5555/1928328.1928348,
+author = {Karch, Daniel and Luxen, Dennis and Sanders, Peter},
+title = {Improved Fast Similarity Search in Dictionaries},
+year = {2010},
+isbn = {3642163203},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {We engineer an algorithm to solve the approximate dictionary matching problem. Given a list of words W, maximum distance d fixed at preprocessing time and a query word q, we would like to retrieve all words from W that can be transformed into q with d or less edit operations. We present data structures that support fault tolerant queries by generating an index. On top of that, we present a generalization of the method that eases memory consumption and preprocessing time significantly. At the same time, running times of queries are virtually unaffected. We are able to match in lists of hundreds of thousands of words and beyond within microseconds for reasonable distances.},
+booktitle = {Proceedings of the 17th International Conference on String Processing and Information Retrieval},
+pages = {173–178},
+numpages = {6},
+location = {Los Cabos, Mexico},
+series = {SPIRE'10}
+}
+
+@inproceedings{10.5555/1928328.1928350,
+author = {Uemura, Takashi and Yoshida, Satoshi and Kida, Takuya and Asai, Tatsuya and Okamoto, Seishi},
+title = {Training Parse Trees for Efficient VF Coding},
+year = {2010},
+isbn = {3642163203},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {We address the problem of improving variable-length-to-fixed-length codes (VF codes), which have favourable properties for fast compressed pattern matching but moderate compression ratios. Compression ratio of VF codes depends on the parse tree that is used as a dictionary. We propose a method that trains a parse tree by scanning an input text repeatedly, and we show experimentally that it improves the compression ratio of VF codes rapidly to the level of state-of-the-art compression methods.},
+booktitle = {Proceedings of the 17th International Conference on String Processing and Information Retrieval},
+pages = {179–184},
+numpages = {6},
+location = {Los Cabos, Mexico},
+series = {SPIRE'10}
+}
+
+@inproceedings{10.5555/1928328.1928351,
+author = {Nakamura, Atsuyoshi and Saito, Tomoya and Takigawa, Ichigaku and Mamitsuka, Hiroshi and Kudo, Mineichi},
+title = {Algorithms for Finding a Minimum Repetition Representation of a String},
+year = {2010},
+isbn = {3642163203},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {A string with many repetitions can be written compactly by replacing h-fold contiguous repetitions of substring r with (r)h. We refer to such a compact representation as a repetition representation string or RRS, by which a set of disjoint or nested tandem arrays can be compacted. In this paper, we study the problem of finding a minimum RRS or MRRS, where the size of an RRS is defined to be the sum of its component letter sizes and the sizes needed to describe the repetitions (undefined)h which are defined as wR(h) using a repetition weight function wR. We develop two dynamic programming algorithms to solve the problem. One is CMR that works for any repetition weight function, and the other is CMR-C that is faster but can be applied only when the repetition weight function is constant. CMR-C is an O(w(n + z))-time algorithm using O(n + z) space for a given string with length n, where w and z are the number of distinct primitive tandem repeats and the number of their occurrences, respectively. Since w = O(n) and z = O(n log n) in the worst case, CMR-C is an O(n2 log n)-time O(n log n)-space algorithm, which is faster than CMR by ((log n)/n)-factor.},
+booktitle = {Proceedings of the 17th International Conference on String Processing and Information Retrieval},
+pages = {185–190},
+numpages = {6},
+keywords = {string algorithm, tandem repeat},
+location = {Los Cabos, Mexico},
+series = {SPIRE'10}
+}
+
+@inproceedings{10.5555/1928328.1928352,
+author = {Hon, Wing-Kai and Ku, Tsung-Han and Shah, Rahul and Thankachan, Sharma V. and Vitter, Jeffrey Scott},
+title = {Faster Compressed Dictionary Matching},
+year = {2010},
+isbn = {3642163203},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {Given a set D of d patterns, the dictionary matching problem is to index D such that for any query text T, we can locate the occurrences of any pattern within T efficiently. When D contains a total of n characters drawn from an alphabet of size σ, Hon et al. (2008) gave an nHk(D) + o(n log σ)-bit index which supports a query in O(|T|(logε n + log d)+occ) time, where ε &gt; 0 and Hk(D) denotes the kth order entropy of D. Very recently, Belazzougui (2010) proposed an elegant scheme, which takes n log σ + O(n) bits of index space and supports a query in optimal O(|T|+occ) time. In this paper, we provide connections between Belazzougui's index and the XBW compression of Ferragina et al. (2005), and show that Belazzougui's index can be slightly modified to be stored in nHk(D)+O(n) bits, while query time remains optimal; this improves the compressed index by Hon et al. (2008) in both space and time.},
+booktitle = {Proceedings of the 17th International Conference on String Processing and Information Retrieval},
+pages = {191–200},
+numpages = {10},
+location = {Los Cabos, Mexico},
+series = {SPIRE'10}
+}
+
+@inproceedings{10.5555/1928328.1928353,
+author = {Kuruppu, Shanika and Puglisi, Simon J. and Zobel, Justin},
+title = {Relative Lempel-Ziv Compression of Genomes for Large-Scale Storage and Retrieval},
+year = {2010},
+isbn = {3642163203},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {Self-indexes - data structures that simultaneously provide fast search of and access to compressed text - are promising for genomic data but in their usual form are not able to exploit the high level of replication present in a collection of related genomes. Our 'RLZ' approach is to store a self-index for a base sequence and then compress every other sequence as an LZ77 encoding relative to the base. For a collection of r sequences totaling N bases, with a total of s point mutations from a base sequence of length n, this representation requires just nHk(T) + s log n + s log N/s + O(s) bits. At the cost of negligible extra space, access to l consecutive symbols requires O(l + log n) time. Our experiments show that, for example, RLZ can represent individual human genomes in around 0.1 bits per base while supporting rapid access and using relatively little memory.},
+booktitle = {Proceedings of the 17th International Conference on String Processing and Information Retrieval},
+pages = {201–206},
+numpages = {6},
+location = {Los Cabos, Mexico},
+series = {SPIRE'10}
+}
+
+@inproceedings{10.5555/1928328.1928355,
+author = {P\'{e}rez-Iglesias, Joaqu\'{\i}n and Araujo, Lourdes},
+title = {Standard Deviation as a Query Hardness Estimator},
+year = {2010},
+isbn = {3642163203},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {In this paper a new Query Performance Prediction method is introduced. This method is based on the hypothesis that different score distributions appear for 'hard' and 'easy' queries. Following we propose a set of measures which try to capture the differences between both types of distributions, focusing on the dispersion degree among the scores. We have applied some variants of the classic standard deviation and have studied methods to find out the most suitable size of the ranking list for these measures. Finally, we present the results obtained performing the experiments on two different data-sets.},
+booktitle = {Proceedings of the 17th International Conference on String Processing and Information Retrieval},
+pages = {207–212},
+numpages = {6},
+location = {Los Cabos, Mexico},
+series = {SPIRE'10}
+}
+
+@inproceedings{10.5555/1928328.1928356,
+author = {Dupret, Georges and Zilleruelo-Ramos, Ricardo and Fujita, Sumio},
+title = {Using Related Queries to Improve Web Search Results Ranking},
+year = {2010},
+isbn = {3642163203},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {There are numerous queries for which search engine results are not satisfactory. For instance, the user may submit an ambiguous or miss-spelled query; or there might be a mismatch between query and document vocabulary, or even character set in some languages. Different automatic methods for query rewriting / refinement have been proposed in the literature, but little work has been done on how to combine the results of these rewrites to find relevant documents. In this paper, we review some techniques efficient enough to be computed online and we discuss their respective assumptions. We also propose and discuss a new model that is theoretically more appealing while still computationally very efficient. Our experiments show that all methods manage to improve the ranking of a leading commercial search engine.},
+booktitle = {Proceedings of the 17th International Conference on String Processing and Information Retrieval},
+pages = {213–224},
+numpages = {12},
+location = {Los Cabos, Mexico},
+series = {SPIRE'10}
+}
+
+@inproceedings{10.5555/1928328.1928357,
+author = {P\'{e}rez-Iglesias, Joaqu\'{\i}n and Araujo, Lourdes},
+title = {Evaluation of Query Performance Prediction Methods by Range},
+year = {2010},
+isbn = {3642163203},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {During the last years a great number of Query Performance Prediction methods have been proposed. However, this explosion of prediction method proposals have not been paralleled by an in-depth study of suitable methods to evaluate these estimations. In this paper we analyse the current approaches to evaluate Query Performance Prediction methods, highlighting some limitations they present. We also propose a novel method for evaluating predictors focused on revealing the different performance they have for queries of distinct degree of difficulty. This goal can be achieved by transforming the prediction performance evaluation problem into a classification task, assuming that each topic belongs to a unique type based on their retrieval performance. We compare the different evaluation approaches showing that the proposed evaluation exhibits a more accurate performance, making explicit the differences between predictors for different types of queries.},
+booktitle = {Proceedings of the 17th International Conference on String Processing and Information Retrieval},
+pages = {225–236},
+numpages = {12},
+keywords = {evaluation, query performance prediction, information retrieval},
+location = {Los Cabos, Mexico},
+series = {SPIRE'10}
+}
+
+@inproceedings{10.5555/1928328.1928358,
+author = {Francisco, Alexandre P. and Baeza-Yates, Ricardo and Oliveira, Arlindo L.},
+title = {Mining Large Query Induced Graphs towards a Hierarchical Query Folksonomy},
+year = {2010},
+isbn = {3642163203},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {The human interaction through the web generates both implicit and explicit knowledge. An example of an implicit contribution is searching, as people contribute with their knowledge by clicking on retrieved documents. Thus, an important and interesting challenge is to extract semantic relations among queries and their terms from query logs. In this paper we present and discuss results on mining large query log induced graphs, and how they contribute to query classification and to understand user intent and interest. Our approach consists on efficiently obtaining a hierarchical clustering for such graphs and, then, a hierarchical query folksonomy. Results obtained with real data provide interesting insights on semantic relations among queries and are compared with conventional taxonomies, namely the ODP categorization.},
+booktitle = {Proceedings of the 17th International Conference on String Processing and Information Retrieval},
+pages = {237–242},
+numpages = {6},
+location = {Los Cabos, Mexico},
+series = {SPIRE'10}
+}
+
+@inproceedings{10.5555/1928328.1928360,
+author = {Farhana, Effat and Ferdous, Jannatul and Moosa, Tanaeem and Rahman, M. Sohel},
+title = {Finite Automata Based Algorithms for the Generalized Constrained Longest Common Subsequence Problems},
+year = {2010},
+isbn = {3642163203},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {The Longest Common Subsequence (LCS) problem is a classic and well-studied problem in computer science. Given strings S1, S2 and P, the generalized constrained longest common subsequence problem (GC-LCS) for S1 and S2 with respect to P is to find a longest common subsequence of S1 and S2, which contains (excludes) P as a subsequence (substring). We present finite automata based algorithms with time complexity O(r(n+m)+(n+m) log(n+m)) for a fixed sized alphabet, where r, n and m are the lengths of P, S1 and S2 respectively.},
+booktitle = {Proceedings of the 17th International Conference on String Processing and Information Retrieval},
+pages = {243–249},
+numpages = {7},
+location = {Los Cabos, Mexico},
+series = {SPIRE'10}
+}
+
+@inproceedings{10.5555/1928328.1928361,
+author = {Gotthilf, Zvi and Hermelin, Danny and Landau, Gad M. and Lewenstein, Moshe},
+title = {Restricted LCS},
+year = {2010},
+isbn = {3642163203},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {The Longest Common Subsequence (LCS) of two or more strings is a fundamental well-studied problem which has a wide range of applications throughout computational sciences. When the common subsequence must contain one or more constraint strings as subsequences, the problem becomes the Constrained LCS (CLCS) problem. In this paper we consider the Restricted LCS (RLCS) problem, where our goal is finding a longest common subsequence between two or more strings that does not contain a given set of restriction strings as subsequences. First we show that in case of two input strings and an arbitrary number of restriction strings the RLCS problem is NP-hard. Afterwards, we present a dynamic programming solution for RLCS and we show that this algorithm implies that RLCS is in FPT when parameterized by the total length of the restriction strings. In the last part of this paper we present two approximation algorithms for the hard variants of the problem.},
+booktitle = {Proceedings of the 17th International Conference on String Processing and Information Retrieval},
+pages = {250–257},
+numpages = {8},
+location = {Los Cabos, Mexico},
+series = {SPIRE'10}
+}
+
+@inproceedings{10.5555/1928328.1928362,
+author = {Crochemore, Maxime and Iliopoulos, Costas and Kubica, Marcin and Radoszewski, Jakub and Rytter, Wojciech and Wale\'{n}, Tomasz},
+title = {Extracting Powers and Periods in a String from Its Runs Structure},
+year = {2010},
+isbn = {3642163203},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {A breakthrough in the field of text algorithms was the discovery of the fact that the maximal number of runs in a string of length n is O(n) and that they can all be computed in O(n) time. We study some applications of this result. New simpler O(n) time algorithms are presented for a few classical string problems: computing all distinct kth string powers for a given k, in particular squares for k = 2, and finding all local periods in a given string of length n. Additionally, we present an efficient algorithm for testing primitivity of factors of a string and computing their primitive roots. Applications of runs, despite their importance, are underrepresented in existing literature (approximately one page in the paper of Kolpakov &amp; Kucherov, 1999). In this paper we attempt to fill in this gap. We use Lyndon words and introduce the Lyndon structure of runs as a useful tool when computing powers. In problems related to periods we use some versions of the Manhattan skyline problem.},
+booktitle = {Proceedings of the 17th International Conference on String Processing and Information Retrieval},
+pages = {258–269},
+numpages = {12},
+keywords = {local period, square, run in a string},
+location = {Los Cabos, Mexico},
+series = {SPIRE'10}
+}
+
+@inproceedings{10.5555/1928328.1928363,
+author = {Gotthilf, Zvi and Lewenstein, Moshe and Popa, Alexandru},
+title = {On Shortest Common Superstring and Swap Permutations},
+year = {2010},
+isbn = {3642163203},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {The Shortest Common Superstring (SCS) is a well studied problem, having a wide range of applications. In this paper we consider two problems closely related to it. First we define the Swapped Restricted Superstring(SRS) problem, where we are given a set S of n strings, s1, s2, . . . , sn, and a text T = t1t2 . . . tm, and our goal is to find a swap permutation π : {1, . . . ,m} → {1, . . . , m} to maximize the number of strings in S that are substrings of tπ(1)tπ(2) . . . tπ(m). We then show that the SRS problem is NP-Complete. Afterwards, we consider a similar variant denoted SRSR, where our goal is to find a swap permutation π : {1, . . . , m} → {1, . . . , m} to maximize the total number of times that the strings of S appear in tπ(1)tπ(2) . . . tπ(m) (we can count the same string si as a substring of tπ(1)tπ(2) . . . tπ(m) more than once). For this problem, we present a polynomial time exact algorithm.},
+booktitle = {Proceedings of the 17th International Conference on String Processing and Information Retrieval},
+pages = {270–278},
+numpages = {9},
+location = {Los Cabos, Mexico},
+series = {SPIRE'10}
+}
+
+@inproceedings{10.5555/1928328.1928365,
+author = {Brand\~{a}o, Wladmir C. and Moura, Edleno S. and Silva, Altigran S. and Ziviani, Nivio},
+title = {A Self-Supervised Approach for Extraction of Attribute-Value Pairs from Wikipedia Articles},
+year = {2010},
+isbn = {3642163203},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {Wikipedia is the largest encyclopedia on the web and has been widely used as a reliable source of information. Researchers have been extracting entities, relationships and attribute-value pairs from Wikipedia and using them in information retrieval tasks. In this paper we present a self-supervised approach for autonomously extract attribute-value pairs from Wikipedia articles. We apply our method to the Wikipedia automatic infobox generation problem and outperformed a method presented in the literature by 21.92% in precision, 26.86% in recall and 24.29% in F1.},
+booktitle = {Proceedings of the 17th International Conference on String Processing and Information Retrieval},
+pages = {279–289},
+numpages = {11},
+location = {Los Cabos, Mexico},
+series = {SPIRE'10}
+}
+
+@inproceedings{10.5555/1928328.1928366,
+author = {Alonso, Omar and Gertz, Michael and Baeza-Yates, Ricardo},
+title = {Temporal Analysis of Document Collections: Framework and Applications},
+year = {2010},
+isbn = {3642163203},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {As the amount of generated information increases so rapidly in the digital world, the concept of time as a dimension along which information can be organized and explored becomes more and more important. In this paper, we present a temporal document analysis framework for document collections in support of diverse information retrieval and seeking tasks. Our analysis is not based on document creation and/or modification timestamps but on extracting time from the content itself. We also briefly sketch some scenarios and experiments for analyzing documents from a temporal perspective.},
+booktitle = {Proceedings of the 17th International Conference on String Processing and Information Retrieval},
+pages = {290–296},
+numpages = {7},
+location = {Los Cabos, Mexico},
+series = {SPIRE'10}
+}
+
+@inproceedings{10.5555/1928328.1928367,
+author = {Jimenez, Sergio and Gonzalez, Fabio and Gelbukh, Alexander},
+title = {Text Comparison Using Soft Cardinality},
+year = {2010},
+isbn = {3642163203},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {The classical set theory provides a method for comparing objects using cardinality and intersection, in combination with well-known resemblance coefficients such as Dice, Jaccard, and cosine. However, set operations are intrinsically crisp: they do not take into account similarities between elements. We propose a new general-purpose method for comparison of objects using a soft cardinality function that show that the soft cardinality method is superior via an auxiliary affinity (similarity) measure. Our experiments with 12 text matching datasets suggest that the soft cardinality method is superior to known approximate string comparison methods in text comparison task.},
+booktitle = {Proceedings of the 17th International Conference on String Processing and Information Retrieval},
+pages = {297–302},
+numpages = {6},
+location = {Los Cabos, Mexico},
+series = {SPIRE'10}
+}
+
+@inproceedings{10.5555/1928328.1928368,
+author = {Bravo-Marquez, Felipe and L'Huillier, Gaston and R\'{\i}os, Sebasti\'{a}n A. and Vel\'{a}squez, Juan D.},
+title = {Hypergeometric Language Model and Zipf-like Scoring Function for Web Document Similarity Retrieval},
+year = {2010},
+isbn = {3642163203},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {The retrieval of similar documents in the Web from a given document is different in many aspects from information retrieval based on queries generated by regular search engine users. In this work, a new method is proposed for Web similarity document retrieval based on generative language models and meta search engines. Probabilistic language models are used as a random query generator for the given document. Queries are submitted to a customizable set of Web search engines. Once all results obtained are gathered, its evaluation is determined by a proposed scoring function based on the Zipf law. Results obtained showed that the proposed methodology for query generation and scoring procedure solves the problem with acceptable levels of precision.},
+booktitle = {Proceedings of the 17th International Conference on String Processing and Information Retrieval},
+pages = {303–308},
+numpages = {6},
+location = {Los Cabos, Mexico},
+series = {SPIRE'10}
+}
+
+@inproceedings{10.5555/1928328.1928370,
+author = {Navarro, Gonzalo and Puglisi, Simon J.},
+title = {Dual-Sorted Inverted Lists},
+year = {2010},
+isbn = {3642163203},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {Several IR tasks rely, to achieve high efficiency, on a single pervasive data structure called the inverted index. This is a mapping from the terms in a text collection to the documents where they appear, plus some supplementary data. Different orderings in the list of documents associated to a term, and different supplementary data, fit widely different IR tasks. Index designers have to choose the right order for one such task, rendering the index difficult to use for others.In this paper we introduce a general technique, based on wavelet trees, to maintain a single data structure that offers the combined functionality of two independent orderings for an inverted index, with competitive efficiency and within the space of one compressed inverted index. We show in particular that the technique allows combining an ordering by decreasing term frequency (useful for ranked document retrieval) with an ordering by increasing document identifier (useful for phrase and Boolean queries). We show that we can support not only the primitives required by the different search paradigms (e.g., in order to implement any intersection algorithm on top of our data structure), but also that the data structure offers novel ways of carrying out many operations of interest, including space-free treatment of stemming and hierarchical documents.},
+booktitle = {Proceedings of the 17th International Conference on String Processing and Information Retrieval},
+pages = {309–321},
+numpages = {13},
+location = {Los Cabos, Mexico},
+series = {SPIRE'10}
+}
+
+@inproceedings{10.5555/1928328.1928371,
+author = {Ohlebusch, Enno and Fischer, Johannes and Gog, Simon},
+title = {CST++},
+year = {2010},
+isbn = {3642163203},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {Let A be an array of n elements taken from a totally ordered set. We present a data structure of size 3n + o(n) bits that allows us to answer the following queries on A in constant time, without accessing A: (1) given indices i &lt; j, find the position of the minimum in A[i..j], (2) given index i, find the first index to the left of i where A is strictly smaller than at i, and (3) same as (2), but to the right of the query index. Based on this, we present a new compressed suffix tree (CST) with O(1)- navigation that is smaller than previous CSTs. Our data structure also provides a new (practical) approach to compress the LCP-array.},
+booktitle = {Proceedings of the 17th International Conference on String Processing and Information Retrieval},
+pages = {322–333},
+numpages = {12},
+location = {Los Cabos, Mexico},
+series = {SPIRE'10}
+}
+
+@inproceedings{10.5555/1928328.1928372,
+author = {He, Meng and Munro, J. Ian},
+title = {Succinct Representations of Dynamic Strings},
+year = {2010},
+isbn = {3642163203},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {The rank and select operations over a string of length n from an alphabet of size σ have been used widely in the design of succinct data structures. In many applications, the string itself must be maintained dynamically, allowing characters of the string to be inserted and deleted. Under the word RAM model with word size w = Ω(lg n), we design a succinct representation of dynamic strings using nH0+o(n)undefinedlg σ+O(w) bits to support rank, select, insert and delete in O( lg n/lg lg n ( lg σ/lg lg n +1)) time. When the alphabet size is small, i.e. when σ = O(polylog(n)), including the case in which the string is a bit vector, these operations are supported in O( lg n/lg lg n ) time. Our data structures are more efficient than previous results on the same problem, and we have applied them to improve results on the design and construction of space-efficient text indexes.},
+booktitle = {Proceedings of the 17th International Conference on String Processing and Information Retrieval},
+pages = {334–346},
+numpages = {13},
+location = {Los Cabos, Mexico},
+series = {SPIRE'10}
+}
+
+@inproceedings{10.5555/1928328.1928373,
+author = {Ohlebusch, Enno and Gog, Simon and K\"{u}gell, Adrian},
+title = {Computing Matching Statistics and Maximal Exact Matches on Compressed Full-Text Indexes},
+year = {2010},
+isbn = {3642163203},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {Exact string matching is a problem that computer programmers face on a regular basis, and full-text indexes like the suffix tree or the suffix array provide fast string search over large texts. In the last decade, research on compressed indexes has flourished because the main problem in large-scale applications is the space consumption of the index. Nowadays, the most successful compressed indexes are able to obtain almost optimal space and search time simultaneously. It is known that a myriad of sequence analysis and comparison problems can be solved efficiently with established data structures like the suffix tree or the suffix array, but algorithms on compressed indexes that solve these problem are still lacking at present. Here, we show that matching statistics and maximal exact matches between two strings S1 and S2 can be computed efficiently by matching S2 backwards against a compressed index of S1.},
+booktitle = {Proceedings of the 17th International Conference on String Processing and Information Retrieval},
+pages = {347–358},
+numpages = {12},
+location = {Los Cabos, Mexico},
+series = {SPIRE'10}
+}
+
+@inproceedings{10.5555/1928328.1928374,
+author = {Crochemore, Maxime and Tischler, German},
+title = {The Gapped Suffix Array: A New Index Structure for Fast Approximate Matching},
+year = {2010},
+isbn = {3642163203},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {Approximate searching using an index is an important application in many fields. In this paper we introduce a new data structure called the gapped suffix array for approximate searching in the Hamming distance model. Building on the well known filtration approach for approximate searching, the use of the gapped suffix array can improve search speed by avoiding the merging of position lists.},
+booktitle = {Proceedings of the 17th International Conference on String Processing and Information Retrieval},
+pages = {359–364},
+numpages = {6},
+location = {Los Cabos, Mexico},
+series = {SPIRE'10}
+}
+
+@inproceedings{10.5555/1928328.1928376,
+author = {Apostolico, Alberto and Erd\"{o}s, P\'{e}ter L. and J\"{u}ttner, Alp\'{a}r},
+title = {Parameterized Searching with Mismatches for Run-Length Encoded Strings},
+year = {2010},
+isbn = {3642163203},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+booktitle = {Proceedings of the 17th International Conference on String Processing and Information Retrieval},
+pages = {365–371},
+numpages = {7},
+location = {Los Cabos, Mexico},
+series = {SPIRE'10}
+}
+
+@inproceedings{10.5555/1928328.1928377,
+author = {Kaneta, Yusaku and Minato, Shin-Ichi and Arimura, Hiroki},
+title = {Fast Bit-Parallel Matching for Network and Regular Expressions},
+year = {2010},
+isbn = {3642163203},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {In this paper, we extend the SHIFT-AND approach by Baeza-Yates and Gonnet (CACM 35(10), 1992) to the matching problem for network expressions, which are regular expressions without Kleene-closure and useful in applications such as bioinformatics and event stream processing. Following the study of Navarro (RECOMB, 2001) on the extended string matching, we introduce new operations called Scatter, Gather, and Propagate to efficiently compute ɛ-moves of the Thompson NFA using the Extended SHIFT-AND approach with integer addition. By using these operations and a property called the bi-monotonicity of the Thompson NFA, we present an efficient algorithm for the network expression matching that runs in O(ndm/w) time using O(dm) preprocessing and O(dm/w) space, where m and d are the length and the depth of a given network expression, n is the length of an input text, and w is the word length of the underlying computer. Furthermore, we show a modified matching algorithm for the class of regular expressions that runs in O(ndm log(m)/w) time.},
+booktitle = {Proceedings of the 17th International Conference on String Processing and Information Retrieval},
+pages = {372–384},
+numpages = {13},
+location = {Los Cabos, Mexico},
+series = {SPIRE'10}
+}
+
+@inproceedings{10.5555/1928328.1928378,
+author = {Bille, Philip and Li G\o{}rtz, Inge and Vildh\o{}j, Hjalte Wedel and Wind, David Kofoed},
+title = {String Matching with Variable Length Gaps},
+year = {2010},
+isbn = {3642163203},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {We consider string matching with variable length gaps. Given a string T and a pattern P consisting of strings separated by variable length gaps (arbitrary strings of length in a specified range), the problem is to find all ending positions of substrings in T that match P. This problem is a basic primitive in computational biology applications. Let m and n be the lengths of P and T, respectively, and let k be the number of strings in P. We present a new algorithm achieving time O((n+m) log k+α) and space O(m+A), where A is the sum of the lower bounds of the lengths of the gaps in P and α is the total number of occurrences of the strings in P within T. Compared to the previous results this bound essentially achieves the best known time and space complexities simultaneously. Consequently, our algorithm obtains the best known bounds for almost all combinations of m, n, k, A, and α. Our algorithm is surprisingly simple and straightforward to implement.},
+booktitle = {Proceedings of the 17th International Conference on String Processing and Information Retrieval},
+pages = {385–394},
+numpages = {10},
+location = {Los Cabos, Mexico},
+series = {SPIRE'10}
+}
+
+@inproceedings{10.5555/1928328.1928379,
+author = {Amir, Amihood and Eisenberg, Estrella and Keller, Orgad and Levy, Avivit and Porat, Ely},
+title = {Approximate String Matching with Stuck Address Bits},
+year = {2010},
+isbn = {3642163203},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+abstract = {A string S ∈ Σm can be viewed as a set of pairs {(si, i) | si ∈ S, i ∈ {0, . . . , m - 1}}. We follow the recent work on pattern matching with address errors and consider approximate pattern matching problems arising from the setting where errors are introduced to the location component (i), rather than the more traditional setting, where errors are introduced to the content itself (si). Specifically, we continue the work on string matching in the presence of address bit errors. In this paper, we consider the case where bits of i may be stuck, either in a consistent or transient manner. We formally define the corresponding approximate pattern matching problems, and provide efficient algorithms for their resolution.},
+booktitle = {Proceedings of the 17th International Conference on String Processing and Information Retrieval},
+pages = {395–405},
+numpages = {11},
+location = {Los Cabos, Mexico},
+series = {SPIRE'10}
+}
+

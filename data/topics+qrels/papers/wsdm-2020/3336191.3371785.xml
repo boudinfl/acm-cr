@@ -1,0 +1,128 @@
+<doc>
+	<doi>10.1145/3336191.3371785</doi>
+	<title>Interpretable Click-Through Rate Prediction through Hierarchical Attention</title>
+	<abstract>Click-through rate (CTR) prediction is a critical task in online advertising and marketing. For this problem, existing approaches, with shallow or deep architectures, have three major drawbacks. First, they typically lack persuasive rationales to explain the outcomes of the models. Unexplainable predictions and recommendations may be difficult to validate and thus unreliable and untrustworthy. In many applications, inappropriate suggestions may even bring severe consequences. Second, existing approaches have poor efficiency in analyzing high-order feature interactions. Third, the polysemy of feature interactions in different semantic subspaces is largely ignored. In this paper, we propose InterHAt that employs a Transformer with multi-head self-attention for feature learning. On top of that, hierarchical attention layers are utilized for predicting CTR while simultaneously providing interpretable insights of the prediction results. InterHAt captures high-order feature interactions by an efficient attentional aggregation strategy with low computational complexity. Extensive experiments on four public real datasets and one synthetic dataset demonstrate the effectiveness and efficiency of InterHAt.</abstract>
+	<contexts>
+		<context id="01" section="introduction">
+			<s>Click-through rate (CTR) is defined as the probability of a user clicking through a particular recommended item or an advertisement on a web page.</s>
+			<s cites="7,12,13,16,25,25,30,37,38">It plays a significant role in recommender systems, such as online advertising, since it directly affects the revenue of advertising agencies [7, 12, 13, 16, 25, 25, 30, 37, 38].</s>
+			<s>Consequently, CTR prediction, which attempts to accurately estimate the CTR given information describing a user-item scenario, is critical for achieving precise recommendations and increasing good revenue for enterprises.</s>
+		</context>
+		<context id="02" section="introduction">
+			<s>The development of deep learning provides a new machine learning paradigm that utilizes deeper neural network structure to capture more complex information from the training data.</s>
+			<s>Therefore, the architectural and computational complexity of existing CTR prediction models has been ever increasing in order to learn the joint effect of multiple features, i.e., high-order features (a.k.a. cross features), and attain better prediction accuracy.</s>
+			<s cites="4,31">Specifically, a k-th order feature (k ∈ N) refers to a latent variable that is a k-th degree polynomial of the raw features [4, 31].</s>
+			<s>Deep neural networks provide strong capability to capture rich high-order information due to the large number of layers and units.</s>
+			<s cites="9,19">For example, DeepFM [9] and xDeepFM [19] learn high-order features by multi-layer feedforward neural networks (FNN) and multi-block compressed interaction networks (CIN).</s>
+		</context>
+		<context id="03" section="introduction">
+			<s>However, the ever-growing model complexity has two drawbacks: impaired interpretability and poor efficiency.</s>
+			<s>For interpretability, the prediction-making processes are hard to be reasonably explained since the weights and activations of the neural network layers are usually deemed unexplainable.</s>
+			<s cites="4">For example, the wide component of Wide&amp;Deep [4] applies cross-product transformations to feature embeddings but fails to quantify and justify its effectiveness to the actual click-through rate prediction performance.</s>
+			<s>The lack of persuasive rationales for the predictions of the models casts shadow on their reliability and security.</s>
+			<s cites="20,39">In many applications, e.g., medication recommendation [20] and financial services [39], untrustworthy and unreliable advertisements can mislead users to click through the statistically popular but actually useless or even harmful links which can result in serious consequences such as economic or health losses.</s>
+		</context>
+		<context id="04" section="introduction">
+			<s>The second defect of existing approaches is the poor efficiency since the high-order interaction feature generation by deep neural networks involves extremely heavy matrix computations in deep neural networks (DNN).</s>
+			<s cites="19">For example, the compressed interaction network (CIN) in xDeepFM [19] computes the (k + 1)-th order feature matrix by an outer product layer and a fully-connected layer which entails a cubic complexity to the embedding dimension.</s>
+			<s>The deep component in Wide&amp;Deep has a number of fully-connected layers each of which involves a quadratic number of multiplications.</s>
+		</context>
+		<context id="05" section="introduction">
+			<s>To address the above issues, in this paper, we propose an Interpretable CTR prediction model with Hierarchical Attention (InterHAt) that efficiently learns salient features of different orders as interpretative insights and accurately predicts CTR simultaneously in an end-to-end fashion.</s>
+			<s>Specifically, InterHAt explicitly quantifies the impacts of feature interactions of arbitrary orders by a novel hierarchical attention mechanism, aggregates the important feature interactions for efficiency purposes, and explains the recommendation decision according to the learned feature salience.</s>
+			<s cites="34" anonymised="true">Different from the hierarchical attention network by [34] that studies the linguistic hierarchy (word and sentence), InterHAt uses the hierarchical attention on feature orders, and the high-order features are generated based on the lower ones.</s>
+		</context>
+		<context id="06" section="introduction">
+			<s cites="29">To accommodate the polysemy of feature interactions in different semantic subspaces, InterHAt leverages a Transformer [29] with multi-head self-attention to comprehensively study different possible feature-wise interactions.</s>
+			<s cites="6,28">Transformer has been popularly employed in natural language processing tasks such as sentiment analysis, natural language inference [6], and machine translation [28].</s>
+			<s>The multiple attention heads can capture the manifold mutual effects of words that jointly compose the semantics of text from different latent subspaces.</s>
+			<s>We utilize this great property of Transformer to detect the complex polysemy of feature interactions and learn a polysemy-augmented feature list which serves as the input of hierarchical attention layers.</s>
+			<s cite="29" anonymised="true">Note that despite the strong capability of Transformer in feature learning, the model efficiency is retained according to [29].</s>
+		</context>
+		<context id="07" section="related work">
+			<s cites="4,7,12,18,19,23,24,26,30,31,32,36,37,38">CTR prediction has drawn great attention from both academia and industry [4, 7, 12, 18, 19, 23, 24, 26, 30–32, 36–38] due to its significant impact on online advertisements.</s>
+			<s cites="27">The advancement of CTR prediction algorithms essentially shows a trend towards deeper model architectures since they are more powerful in feature interaction learning [27].</s>
+		</context>
+		<context id="08" section="related work">
+			<s cites="24">Factorization Machine (FM) [24] assigns a d-dimensional trainable continuous-valued representation to each distinct feature, learns the representations of distinct features, and makes predictions by a linear aggregation of first- and second-order features.</s>
+			<s cites="3">Although FM can be generalized to high-order cases, it suffers from computational cost of exponential complexity [3] and low model capability of shallow architecture.</s>
+			<s cites="16">Field-aware Factorization Machine (FFM) [16] assumes that features may have dissimilar semantics under distinct fields and extends the idea of FM by making the feature representation field-specific.</s>
+			<s>Although it achieves better CTR result than FM, the parameter size and complexity are also increased and overfitting is easier to happen.</s>
+			<s cites="32">Attentional Factorization Machine (AFM) [32] extends FM with an “attention net” that improves not only the performance but also interpretability.</s>
+			<s>The authors argue that the feature salience provided by the attention network greatly enhance the transparency of FM.</s>
+			<s>That said, AFM can only learn up to the second-order attention-based salience due to the inherit architectural limit of FM.</s>
+		</context>
+		<context id="09" section="related work">
+			<s cites="4">Wide&amp;Deep [4] consists of a wide and a deep component, which are essentially a generalized linear model and a multi-layer perceptron (MLP), respectively.</s>
+			<s>The CTR prediction is made by a weighted combination of the outcomes of the two components.</s>
+			<s>Note that the deep component, i.e., the MLP, ruins the possibility of explaining the prediction because the layer-wise transformations are conducted on unit level instead of feature level and individual unit level values can not carry concrete and complete semantic information of features.</s>
+			<s cites="31">Deep&amp;Cross Network (DCN) [31] slightly differs from Wide&amp;Deep in that DCN replaces the linear model with a cross-product transformation to integrate high-order information with non-linear deep features.</s>
+			<s cites="9">DeepFM [9] improves these two models by replacing the polynomial production with an FM component.</s>
+			<s>The deep MLP component captures the high-order feature interaction and the FM analyzes the second-order feature interaction.</s>
+			<s cites="19">xDeepFM [19] claims that MLP parameters are actually arbitrarily modeling the “implicit” feature interactions.</s>
+			<s>The authors hence introduce compressed interaction network (CIN) to model the “explicit” features alongside the implicit ones.</s>
+			<s cites="38,37">Recent works from industry practice include DIN [38] and DIEN [37] that respectively model the static and dynamic shopping interest of users.</s>
+			<s>Both work heavily rely on deep feed-forward networks which are typically unexplainable.</s>
+		</context>
+		<context id="10" section="related work">
+			<s>Attention mechanism learns a function that weighs over intermediate features and manipulates the information that are visible to other modules of the machine learning algorithm.</s>
+			<s cites="1">It is originally proposed for the neural machine translation (NMT) [1] for which it assigns greater weights to closely correlated words between the source language and the destination language so that important words are attended to in the translation.</s>
+		</context>
+		<context id="11" section="related work">
+			<s cites="8,32,35,5,33,14,21">Due to its capability to pinpoint and amplify salient features that greatly affect the predictions [8], attention mechanism is regarded as a reasonable and reliable way to explain the decision-making procedure in many tasks such as recommender systems [32, 35], health care systems [5], computer vision [33], visual question answering (VQA) [14, 21], etc.</s>
+		</context>
+		<context id="12" section="related work">
+			<s cites="5">For example, RETAIN [5] studies Electric Health Records (EHR) of patients with a two-layer attention network that identifies and explains influential hospital visits and significant clinical diagnoses associated with the visits.</s>
+			<s cites="14">Co-attention mechanism [14] in VQA proposes question-guided visual attention and visual-guided question attention on word level, phrase level, and question level.</s>
+			<s>Three levels of information are combined to predict the answer with improved performance while retaining the explainability of the outcomes.</s>
+		</context>
+		<context id="13" section="related work">
+			<s cites="22,34">In natural language domain, language-specific and across-language attention networks based on linguistic hierarchy [22, 34] such as words and sentences are proposed for document classification tasks.</s>
+			<s>Another form of attention in NLP is self-attention.</s>
+			<s cites="29">Researchers from Google design Transformer [29] based on multi-head self-attention in which tokens in a sentence attend to other tokens within a same sentence to learn the compound sentence semantics.</s>
+			<s cites="6">Using the strong learning power of Transformer, BERT [6], built by stacking a number of bi-directional Transformer layers, achieves state-of-the-art performance on 11 major NLP tasks.</s>
+			<s>The success of BERT shows the outstanding feature interaction power of Transformer.</s>
+		</context>
+	</contexts>
+	<references>
+		<reference id="1">https://arxiv.org/abs/1409.0473</reference>
+		<reference id="2">https://arxiv.org/abs/1505.03014</reference>
+		<reference id="3">10.5555/3157382.3157473</reference>
+		<reference id="4">10.1145/2988450.2988454</reference>
+		<reference id="5">10.5555/3157382.3157490</reference>
+		<reference id="6">10.18653/v1/N19-1423</reference>
+		<reference id="7">https://arxiv.org/abs/1704.05194</reference>
+		<reference id="8">10.1109/DSAA.2018.00018</reference>
+		<reference id="9">10.5555/3172077.3172127</reference>
+		<reference id="10">10.1145/2827872</reference>
+		<reference id="11">10.1109/CVPR.2016.90</reference>
+		<reference id="12">10.1145/3077136.3080777</reference>
+		<reference id="13">10.1145/2648584.2648589</reference>
+		<reference id="14">10.1109/CVPR.2018.00915</reference>
+		<reference id="15">https://arxiv.org/abs/1802.04712</reference>
+		<reference id="16">10.1145/2959100.2959134</reference>
+		<reference id="17">https://arxiv.org/abs/1412.6980</reference>
+		<reference id="18">10.1145/2835776.2835781</reference>
+		<reference id="19">10.1145/3219819.3220023</reference>
+		<reference id="20">https://pubmed.ncbi.nlm.nih.gov/23920845/</reference>
+		<reference id="21">10.5555/3157096.3157129</reference>
+		<reference id="22">https://www.aclweb.org/anthology/I17-1102</reference>
+		<reference id="23">10.1109/ICDM.2016.0151</reference>
+		<reference id="24">10.1109/ICDM.2010.127</reference>
+		<reference id="25">10.1145/1242572.1242643</reference>
+		<reference id="26">10.1145/2939672.2939704</reference>
+		<reference id="27">10.1145/3357384.3357925</reference>
+		<reference id="28">10.18653/v1/W18-6449</reference>
+		<reference id="29">10.5555/3295222.3295349</reference>
+		<reference id="30">10.1145/3178876.3186175</reference>
+		<reference id="31">10.1145/3124749.3124754</reference>
+		<reference id="32">10.5555/3172077.3172324</reference>
+		<reference id="33">10.1109/CVPR.2015.7298685</reference>
+		<reference id="34">10.18653/v1/N16-1174</reference>
+		<reference id="35">10.5555/3304222.3304315</reference>
+		<reference id="36">10.1145/3178876.3185994</reference>
+		<reference id="37">10.1609/aaai.v33i01.33015941</reference>
+		<reference id="38">10.1145/3219819.3219823</reference>
+		<reference id="39">http://ceur-ws.org/Vol-1606/paper02.pdf</reference>
+	</references>
+</doc>

@@ -1,0 +1,56 @@
+<doc>
+	<doi>10.1145/3343413.3378004</doi>
+	<title>Estimating Error and Bias in Offline Evaluation Results</title>
+	<abstract>Offline evaluations of recommender systems attempt to estimate users' satisfaction with recommendations using static data from prior user interactions. These evaluations provide researchers and developers with first approximations of the likely performance of a new system and help weed out bad ideas before presenting them to users. However, offline evaluation cannot accurately assess novel, relevant recommendations, because the most novel items were previously unknown to the user, so they are missing from the historical data and cannot be judged as relevant. We present a simulation study to estimate the error that such missing data causes in commonly-used evaluation metrics in order to assess its prevalence and impact. We find that missing data in the rating or observation process causes the evaluation protocol to systematically mis-estimate metric values, and in some cases erroneously determine that a popularity-based recommender outperforms even a perfect personalized recommender. Substantial breakthroughs in recommendation quality, therefore, will be difficult to assess with existing offline techniques.</abstract>
+	<contexts>
+		<context id="01" section="introduction">
+			<s cites="3,6,7,10">The existence of this problem (and related problems with missing data in recommender evaluation) is well-documented [3, 6, 7, 10].</s>
+			<s>However, we do not yet understand the impact of this missing data: how frequently, and by how much, does it lead recommender system evaluations astray?</s>
+		</context>
+		<context id="02" section="related work">
+			<s>Several existing techniques attempt to measure and/or correct problems with offline evaluation.</s>
+			<s>One approach is to change the experimental protocol.</s>
+			<s cites="2,3" anonymised="true">[2] proposed data splitting and analysis strategies to address popularity bias; these methods affect absolute metric values, but not necessarily the relative performance of algorithms [3].</s>
+			<s cites="5,10">Using random subsets of the item space as candidates for recommendation may reduce the impact of unknown relevant items [7], but it relies on unrealistically strong assumptions and likely exacerbates popularity bias [10].</s>
+		</context>
+		<context id="03" section="related work">
+			<s>Another approach is to seek metrics that admit statistically unbiased estimators with observable data.</s>
+			<s cites="19,17">If ratings for relevant items are missing at random, recall [19] and unnormalized DCG [17] are unbiased.</s>
+			<s>But these results limit choice of metrics and depend on assumptions unlikely to hold in actual use, as relevance is not the only influence on users’ choice of items to consume or rate.</s>
+		</context>
+		<context id="04" section="related work">
+			<s cites="5,11,20">Counterfactual evaluation [5, 11, 20] uses causal inference techniques — often inverse propensity scoring — to estimate how users would have responded to a different recommender algorithm.</s>
+			<s>However, it is difficult to apply to commonly-used data sets and does not yield insight into the reliability of existing evaluations.</s>
+			<s>It also cannot address the fundamental problem that concerns us in this work: if the user was never exposed to an item under the logging policy, the historical log data contains no information on its relevance.</s>
+			<s>Such items are precisely where a recommender system can produce the most benefit in many discovery-oriented applications.</s>
+		</context>
+		<context id="05" section="related work">
+			<s>Simulation is a promising technique for studying evaluation procedures.</s>
+			<s>Simulations can produce complete ground truth and corresponding observations in a controlled manner, subject to assumptions about the structure of the data generation process.</s>
+			<s cites="6" anonymised="true">[6] used probabilistic models to better understand the impact of popularity bias, finding relationships between popularity bias and structural assumptions about the underlying data and inversions in the relative performance of collaborative filtering algorithms between complete and observable data in some cases.</s>
+		</context>
+	</contexts>
+	<references>
+		<reference id="1">http://ceur-ws.org/Vol-2431/paper6.pdf</reference>
+		<reference id="2">http://ir.ii.uam.es/~alejandro/thesis/00%20Preface.pdf</reference>
+		<reference id="3">10.1145/2043932.2043996</reference>
+		<reference id="4">10.5555/944919.944937</reference>
+		<reference id="5">10.5555/2567709.2567766</reference>
+		<reference id="6">10.1145/3209978.3210014</reference>
+		<reference id="7">10.1145/1864708.1864721</reference>
+		<reference id="8">10.1145/3340531.3412778</reference>
+		<reference id="9">https://arxiv.org/abs/1902.01348</reference>
+		<reference id="10">https://aaai.org/ocs/index.php/FLAIRS/FLAIRS17/paper/view/15534</reference>
+		<reference id="11">10.1145/3159652.3159687</reference>
+		<reference id="12">10.5555/1953048.2021039</reference>
+		<reference id="13">10.1145/2827872</reference>
+		<reference id="14">10.1145/2872427.2883037</reference>
+		<reference id="15">10.5281/zenodo.1207017</reference>
+		<reference id="16">https://books.google.com/books?id=05LwShwkhFYC</reference>
+		<reference id="17">10.1145/2792838.2799671</reference>
+		<reference id="18">10.1145/3077136.3080724</reference>
+		<reference id="19">10.1145/1835804.1835895</reference>
+		<reference id="20">10.5555/2789272.2886805</reference>
+		<reference id="21">10.5555/2984093.2984299</reference>
+	</references>
+</doc>

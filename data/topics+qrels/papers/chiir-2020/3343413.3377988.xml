@@ -1,0 +1,71 @@
+<doc>
+	<doi>10.1145/3343413.3377988</doi>
+	<title>Update Delivery Mechanisms for Prospective Information Needs: A Reproducibility Study</title>
+	<abstract>Real-time summarization systems monitor continuous streams of documents with the goal of delivering relevant, novel, and timely updates to users. These updates can either be sent to users' mobile devices as push notifications or be silently deposited in an inbox to be consumed - the important difference is whether the user is interrupted by the delivery. Previously, a two-year study examining user attention under these different mechanisms revealed interesting findings about users' information consumption behavior, but the conclusions were marred by a few methodological shortcomings. We present a reproducibility study that follows the same design as the original evaluation, but corrects its flaws. We find that most conclusions from the original study are confirmed, although there are some surprising differences as well. Overall, the magnitude of the observed effects are not as strong as in the original study.</abstract>
+	<contexts>
+		<context id="01" section="introduction">
+			<s>Our work focuses on a class of real-time summarization systems that monitors continuous streams of documents with respect to users’ prospective information needs and delivers updates that are relevant in real time.</s>
+			<s cites="1,8">Although similar in spirit to the “standard” document filtering task [1, 8], there are a few key differences: “summarization” means that the user does not want all topically-relevant documents, only novel ones.</s>
+			<s>Furthermore, the system is given flexibility in when to deliver an update: for example, it can deliver a document created an hour ago, using the elapsed time to accumulate evidence about its value.</s>
+			<s>Thus, relevance in this context is operationalized as on-topic, non-redundant, and timely.</s>
+		</context>
+		<context id="02" section="introduction">
+			<s cites="14">Previous work has explored two mechanisms for delivering updates to users: In the so-called “push” approach, an update is delivered to a user’s mobile device as a push notification, designed to attract the user’s attention with an alert [14].</s>
+			<s>In the so-called “pull” approach, an update is deposited into an inbox without interrupting the user; the setup is very much like email, where the updates are examined on the user’s own initiative.</s>
+			<s cites="10,11,12" anonymised="true">[10] compared these two approaches with data drawn from a two-year study in the context of the TREC Real-Time Summarization (RTS) Tracks [11, 12].</s>
+			<s>The study involved over 50 users who evaluated live system updates on their mobile devices in situ, i.e., as they were going about their daily lives, using a mobile app that implemented either the push- or pull-based delivery mechanism described above.</s>
+			<s cites="10" anonymised="true">In their paper, [10] noted a number of interesting findings about user attention and information consumption behavior, providing concrete guidance to system designers.</s>
+			<s>However, the study was marred by a few methodological shortcomings (see Section 2), which raises questions about the veracity of their conclusions.</s>
+		</context>
+		<context id="03" section="introduction">
+			<s cites="10" anonymised="true">This paper describes a reproducibility study following the same basic design as [10], but correcting for the methodological shortcomings.</s>
+			<s>Overall, our results largely confirm the findings of the original study, although we note some surprising differences as well.</s>
+			<s>Although our evaluation provides evidence supporting the veracity of the original conclusions, we also observed that the magnitude of the effects are not as strong as in the original study.</s>
+		</context>
+		<context id="04" section="related work">
+			<s cites="10,12,11" anonymised="true">The context of experiments by [10] was the Real-Time Summarization (RTS) Tracks at TREC 2016 [12] and TREC 2017 [11] (RTS16 and RTS17, for short), whose setup is shown in Figure 1.</s>
+			<s>Twitter was used as the source of the live document stream, which participating systems “listened” to during a live evaluation period, sending their updates (i.e., tweets identified as relevant) to an evaluation broker.</s>
+			<s>After deduplicating, the evaluation broker then delivered the updates to a cohort of users who subscribed to interest profiles (i.e., topics), received the updates, and provided relevance judgments in situ on their mobile devices, i.e., they were going about their daily business and were free to ignore or engage with the updates as they wished.</s>
+			<s cites="7,13,15,17">This “living labs” setup [7, 13, 15, 17] attempts to faithfully mimic the real-world deployment of real-time summarization systems.</s>
+			<s>These evaluations were framed as user studies (with appropriate ethics approval), where university students were recruited as paid human subjects to assess the delivered notifications.</s>
+		</context>
+		<context id="05" section="related work">
+			<s>Ideally, in order to examine the impact of the delivery mechanism on information consumption behavior, the delivery mechanism should be the only interface manipulation, with all other variables controlled for.</s>
+			<s>However, due to the realities of organizing large-scale evaluations at TREC, this ideal was not achieved.</s>
+			<s cites="12">In 2016, updates were delivered to the users’ mobile devices via a custom app, where each update was accompanied by a push notification [12].</s>
+			<s cites="11">In 2017, updates were delivered to the users’ mobile devices via a completely redesigned mobile web app, but each update was silently deposited into users’ inboxes and not accompanied by alerts [11].</s>
+			<s cites="10" anonymised="true">Thus, [10] analyzed push vs. pull differences across two evaluations, where delivery differences were conflated with interface changes.</s>
+			<s>There were other methodological flaws as well:</s>
+		</context>
+		<context id="06" section="related work">
+			<s cites="16">For the RTS Track in TREC 2018 [16], the organizers followed the same basic study design as in RTS16 and RTS17, but attempted to correct the methodological flaws.</s>
+			<s>In this respect, these efforts can be viewed as a reproducibility study.</s>
+			<s>The three issues in the bulleted list above were addressed by virtue of studying both mechanisms in a single TREC evaluation.</s>
+			<s>The only remaining issue was to isolate the push and pull mechanisms as the only experimental manipulation.</s>
+			<s>This required rebuilding the update delivery infrastructure: After careful initial study, we decided to use the Telegram messaging platform.</s>
+			<s>Specifically, mobile assessors installed the Telegram messaging app on their mobile devices and updates were delivered via a Telegram bot we built called the RTS_bot.</s>
+			<s>The assessors were asked to subscribe to the bot.</s>
+			<s>Updates from participating systems, along with the associated interest profile (i.e., the statement of information need), were delivered as messages in the Telegram app from our bot.</s>
+			<s>Assessors provided judgments by clicking on buttons indicating that the tweet was relevant, not relevant, or redundant, which triggered corresponding API invocations that recorded the decision in a backend database.</s>
+		</context>
+	</contexts>
+	<references>
+		<reference id="1">10.5555/772260</reference>
+		<reference id="2">10.1145/2888422.2888439</reference>
+		<reference id="3">http://ceur-ws.org/Vol-2409/invited01.pdf</reference>
+		<reference id="4">10.1145/3020206</reference>
+		<reference id="5">10.1145/2964797.2964808</reference>
+		<reference id="6">10.1145/3274784.3274786</reference>
+		<reference id="7">10.1145/3239570</reference>
+		<reference id="8">https://trec.nist.gov/pubs/trec4/papers/lewis.ps.gz</reference>
+		<reference id="9">10.1007/978-3-319-30671-1_30</reference>
+		<reference id="10">10.1145/3209978.3210018</reference>
+		<reference id="11">https://cs.uwaterloo.ca/~jimmylin/publications/Lin_etal_TREC2017.pdf</reference>
+		<reference id="12">https://cs.uwaterloo.ca/~jimmylin/publications/Lin_etal_TREC2016.pdf</reference>
+		<reference id="13">10.1145/2971648.2971747</reference>
+		<reference id="14">10.1145/2858036.2858566</reference>
+		<reference id="15">10.1007/978-3-319-24027-5_47</reference>
+		<reference id="16">https://cs.uwaterloo.ca/~jimmylin/publications/Sequiera_etal_TREC2018.pdf</reference>
+		<reference id="17">10.1145/3077136.3080644</reference>
+	</references>
+</doc>
