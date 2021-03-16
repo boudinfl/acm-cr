@@ -1,0 +1,1648 @@
+@inproceedings{10.5555/3041838.3041955,
+author = {Zinkevich, Martin},
+title = {Online Convex Programming and Generalized Infinitesimal Gradient Ascent},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {Convex programming involves a convex set F ⊆ Rn and a convex cost function c : F → R. The goal of convex programming is to find a point in F which minimizes c. In online convex programming, the convex set is known in advance, but in each step of some repeated optimization problem, one must select a point in F before seeing the cost function for that step. This can be used to model factory production, farm production, and many other industrial optimization problems where one is unaware of the value of the items produced until they have already been constructed. We introduce an algorithm for this domain. We also apply this algorithm to repeated games, and show that it is really a generalization of infinitesimal gradient ascent, and the results here imply that generalized infinitesimal gradient ascent (GIGA) is universally consistent.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {928–935},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041954,
+author = {Zhu, Xingquan and Wu, Xindong and Chen, Qijun},
+title = {Eliminating Class Noise in Large Datasets},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {This paper presents a new approach for identifying and eliminating mislabeled instances in large or distributed datasets. We first partition a dataset into subsets, each of which is small enough to be processed by an induction algorithm at one time. We construct good rules from each subset, and use the good rules to evaluate the whole dataset. For a given instance Ik, two error count variables are used to count the number of times it has been identified as noise by all subsets. The instance with higher error values will have a higher probability of being a mislabeled example. Two threshold schemes, majority and non-objection, are used to identify the noise. Experimental results and comparative studies from real-world datasets are reported to evaluate the effectiveness and efficiency of the proposed approach.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {920–927},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041953,
+author = {Zhu, Xiaojin and Ghahramani, Zoubin and Lafferty, John},
+title = {Semi-Supervised Learning Using Gaussian Fields and Harmonic Functions},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {An approach to semi-supervised learning is proposed that is based on a Gaussian random field model. Labeled and unlabeled data are represented as vertices in a weighted graph, with edge weights encoding the similarity between instances. The learning problem is then formulated in terms of a Gaussian random field on this graph, where the mean of the field is characterized in terms of harmonic functions, and is efficiently obtained using matrix methods or belief propagation. The resulting learning algorithms have intimate connections with random walks, electric networks, and spectral graph theory. We discuss methods to incorporate class priors and the predictions of classifiers obtained by supervised learning. We also propose a method of parameter learning by entropy minimization, and show the algorithm's ability to perform feature selection. Promising experimental results are presented for synthetic data, digit classification, and text classification tasks.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {912–919},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041952,
+author = {Zhang, Tong and Yu, Bin},
+title = {On the Convergence of Boosting Procedures},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {A boosting algorithm seeks to minimize empirically a loss function in a greedy fashion. The resulted estimator takes an additive function form and is built iteratively by applying a base estimator (or learner) to updated samples depending on the previous iterations. This paper studies convergence of boosting when it is carried out over the linear span of a family of basis functions. For general loss functions, we prove the convergence of boosting's greedy optimization to the infinimum of the loss function over the linear span. As a side product, these results reveal the importance of restricting the greedy search step sizes, as known in practice through the works of Friedman and others.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {904–911},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041951,
+author = {Zhang, Yi and Xu, Wei and Callan, Jamie},
+title = {Exploration and Exploitation in Adaptive Filtering Based on Bayesian Active Learning},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {In the task of adaptive information filtering, a system receives a stream of documents but delivers only those that match a person's information need. As the system filters it also refines its knowledge about the user's information needs based on relevance feedback from the user. Delivering a document thus has two effects: i) it satisfies the user's information need immediately, and ii) it helps the system better satisfy the user in the future by improving its model of the user's information need. The traditional approach to adaptive information filtering fails to recognize and model this second effect.This paper proposes utility divergence as the measure of model quality. Unlike the model quality measures used in most active learning methods, utility divergence is represented on the same scale as the filtering system's target utility function. Thus it is meaningful to combine the expected immediate utility with the model quality, and to quantitatively manage the trade-off between exploitation and exploration. The proposed algorithm is implemented for setting the filtering system's dissemination threshold, a major problem for adaptive filtering systems. Experiments with TREC-9 and TREC-10 filtering data demonstrate that the proposed method is effective.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {896–903},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041950,
+author = {Zhang, Jian and Jin, Rong and Yang, Yiming and Hauptmann, Alex G.},
+title = {Modified Logistic Regression: An Approximation to SVM and Its Applications in Large-Scale Text Categorization},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {Logistic Regression (LR) has been widely used in statistics for many years, and has received extensive study in machine learning community recently due to its close relations to Support Vector Machines (SVM) and AdaBoost. In this paper, we use a modified version of LR to approximate the optimization of SVM by a sequence of unconstrained optimization problems. We prove that our approximation will converge to SVM, and propose an iterative algorithm called "MLR-CG" which uses Conjugate Gradient as its inner loop. Multiclass version "MMLR-CG" is also obtained after simple modifications. We compare the MLR-CG with SVMlight over different text categorization collections, and show that our algorithm is much more efficient than SVMlight when the number of training examples is very large. Results of the multiclass version MMLR-CG is also reported.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {888–895},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041949,
+author = {Zhang, Jun and Honavar, Vasant},
+title = {Learning Decision Tree Classifiers from Attribute Value Taxonomies and Partially Specified Data},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {We consider the problem of learning to classify partially specified instances i.e., instances that are described in terms of attribute values at different levels of precision, using user-supplied attribute value taxonomies (AVT). We formalize the problem of learning from AVT and data and present an AVT-guided decision tree learning algorithm (AVT-DTL) to learn classification rules at multiple levels of abstraction. The proposed approach generalizes existing techniques for dealing with missing values to handle instances with partially missing values. We present experimental results that demonstrate that AVT-DTL is able to effectively learn robust high accuracy classifiers from partially specified examples. Our experiments also demonstrate that the use of AVT-DTL outperforms standard decision tree algorithm (C4.5 and its variants) when applied to data with missing attribute values; and produces substantially more compact decision trees than those obtained by standard approach.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {880–887},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041948,
+author = {Zhang, Zhihua},
+title = {Learning Metrics via Discriminant Kernels and Multidimensional Scaling: Toward Expected Euclidean Representation},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {Distance-based methods in machine learning and pattern recognition have to rely on a metric distance between points in the input space. Instead of specifying a metric a priori, we seek to learn the metric from data via kernel methods and multidimensional scaling (MDS) techniques. Under the classification setting, we define discriminant kernels on the joint space of input and output spaces and present a specific family of discriminant kernels. This family of discriminant kernels is attractive because the induced metrics are Euclidean and Fisher separable, and MDS techniques can be used to find the low-dimensional Euclidean representations (also called feature vectors) of the induced metrics. Since the feature vectors incorporate information from both input points and their corresponding labels and they enjoy Fisher separability, they are appropriate to be used in distance-based classifiers.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {872–879},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041947,
+author = {Zha, Hongyuan and Zhang, Zhenyue},
+title = {Isometric Embedding and Continuum ISOMAP},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {Recently, the Isomap algorithm has been proposed for learning a nonlinear manifold from a set of unorganized high-dimensional data points. It is based on extending the classical multidimensional scaling method for dimension reduction. In this paper, we present a continuous version of Isomap which we call continuum isomap and show that manifold learning in the continuous framework is reduced to an eigenvalue problem of an integral operator. We also show that the continuum isomap can perfectly recover the underlying natural parametrization if the nonlinear manifold can be isometrically embedded onto an Euclidean space. Several numerical examples are given to illustrate the algorithm.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {864–871},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041946,
+author = {Yu, Lei and Liu, Huan},
+title = {Feature Selection for High-Dimensional Data: A Fast Correlation-Based Filter Solution},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {Feature selection, as a preprocessing step to machine learning, is effective in reducing dimensionality, removing irrelevant data, increasing learning accuracy, and improving result comprehensibility. However, the recent increase of dimensionality of data poses a severe challenge to many existing feature selection methods with respect to efficiency and effectiveness. In this work, we introduce a novel concept, predominant correlation, and propose a fast filter method which can identify relevant features as well as redundancy among relevant features without pairwise correlation analysis. The efficiency and effectiveness of our method is demonstrated through extensive comparisons with other methods using real-world data of high dimensionality},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {856–863},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041945,
+author = {Yan, Lian and Dodier, Robert and Mozer, Michael C. and Wolniewicz, Richard},
+title = {Optimizing Classifier Performance via an Approximation to the Wilcoxon-Mann-Whitney Statistic},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {When the goal is to achieve the best correct classification rate, cross entropy and mean squared error are typical cost functions used to optimize classifier performance. However, for many real-world classification problems, the ROC curve is a more meaningful performance measure. We demonstrate that minimizing cross entropy or mean squared error does not necessarily maximize the area under the ROC curve (AUC). We then consider alternative objective functions for training a classifier to maximize the AUC directly. We propose an objective function that is an approximation to the Wilcoxon-Mann-Whitney statistic, which is equivalent to the AUC. The proposed objective function is differentiable, so gradient-based methods can be used to train the classifier. We apply the new objective function to real-world customer behavior prediction problems for a wireless service provider and a cable service provider, and achieve reliable improvements in the ROC curve.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {848–855},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041944,
+author = {Yamada, Yuu and Suzuki, Einoshin and Yokoi, Hideto and Takabayashi, Katsuhiko},
+title = {Decision-Tree Induction from Time-Series Data Based on a Standard-Example Split Test},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {This paper proposes a novel decision tree for a data set with time-series attributes. Our time-series tree has a value (i.e. a time sequence) of a time-series attribute in its internal node, and splits examples based on dissimilarity between a pair of time sequences. Our method selects, for a split test, a time sequence which exists in data by exhaustive search based on class and shape information. Experimental results confirm that our induction method constructs comprehensive and accurate decision trees. Moreover, a medical application shows that our time-series tree is promising for knowledge discovery.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {840–847},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041943,
+author = {Yamada, Takeshi and Saito, Kazumi and Ueda, Naonori},
+title = {Cross-Entropy Directed Embedding of Network Data},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {We present a novel approach to embedding data represented by a network into a low-dimensional Euclidean space. Unlike existing methods, the proposed method attempts to minimize an energy function based on the cross-entropy between desirable and embedded node configurations without directly utilizing pairwise distances between nodes. We also propose a natural criterion to effectively evaluate an embedded network layout in terms of how well node connectivities are preserved. Experimental results show that the proposed method provides better layouts than those produced by some of the well-known embedding methods in terms of the proposed criterion. We believe that our method produces a natural embedding of a large-scale network suitable for analyzing by manual browsing in a two- or three-dimensional Euclidean space.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {832–839},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041942,
+author = {Wu, Xiaoyun and Srihari, Rohini},
+title = {New ν-Support Vector Machines and Their Sequential Minimal Optimization},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {Although the ν-Support Vector Machine, ν-SVM, (Sch\"{o}lkopf et al., 2000) has the advantage of using a single parameter ν to control both the number of support vectors and the fraction of margin errors, there are two issues that prevent it from being used in many real world applications. First, unlike the C-SVM that allows asymmetric misclassification cost, ν-SVM uses a symmetric misclassification cost. While lower error rate is promoted by this symmetric misclassification cost, it is not always the preferred measure in many applications. Second, the additional constraint from ν-SVM makes its training more difficult. Sequential Minimal Optimization (SMO) algorithms that are very easy to implement and scalable to very large problems do not exist in a good form for ν-SVM. In this paper, we proposed two new ν-SVM formulations. These formulations introduce means to control the misclassification cost ratio between false positives and false negative, while preserving the intuitive parameter ν. We also propose a SMO algorithm for the ν-SVM classification problem. Experiments show that our new ν-SVM formulation is effective in incorporating asymmetric misclassification cost, and the SMO algorithm for ν-SVM is comparable in speed to that for C-SVM.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {824–831},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041941,
+author = {Wu, Gang and Chang, Edward Y.},
+title = {Adaptive Feature-Space Conformal Transformation for Imbalanced-Data Learning},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {When the training instances of the target class are heavily outnumbered by non-target training instances, SVMs can be ineffective in determining the class boundary. To remedy this problem, we propose an adaptive conformal transformation (ACT) algorithm. ACT considers feature-space distance and the class-imbalance ratio when it performs conformal transformation on a kernel function. Experimental results on UCI and real-world datasets show ACT to be effective in improving class prediction accuracy},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {816–823},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041940,
+author = {Wong, Weng-Keen and Moore, Andrew and Cooper, Gregory and Wagner, Michael},
+title = {Bayesian Network Anomaly Pattern Detection for Disease Outbreaks},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {Early disease outbreak detection systems typically monitor health care data for irregularities by comparing the distribution of recent data against a baseline distribution. Determining the baseline is difficult due to the presence of different trends in health care data, such as trends caused by the day of week and by seasonal variations in temperature and weather. Creating the baseline distribution without taking these trends into account can lead to unacceptably high false positive counts and slow detection times. This paper replaces the baseline method of (Wong et al., 2002) with a Bayesian network which produces the baseline distribution by taking the joint distribution of the data and conditioning on attributes that are responsible for the trends. We show that our algorithm, called WSARE 3.0, is able to detect outbreaks in simulated data with almost the earliest possible detection time while keeping a low false positive count. We also include the results of running WSARE 3.0 on real Emergency Department data},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {808–815},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041939,
+author = {Winner, Elly and Veloso, Manuela},
+title = {DISTILL: Learning Domain-Specific Planners by Example},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {An interesting alternative to domain-independent planning is to provide example plans to demonstrate how to solve problems in a particular domain and to use that information to learn domain-specific planners. Others have used example plans for case-based planning, but the retrieval and adaptation mechanisms for the inevitably large case libraries raise efficiency issues of concern. In this paper, we introduce dsPlanners, or automatically generated domain-specific planners. We present the DISTILL algorithm for learning dsPlanners automatically from example plans. DISTILL converts a plan into a dsPlanner and then merges it with previously learned dsPlanners. Our results show that the dsPlanners automatically learned by DISTILL compactly represent its domain-specific planning experience. Furthermore, the dsPlanners situationally generalize the given example plans, thus allowing them to efficiently solve problems that have not previously been encountered. Finally, we present the DISTILL procedure to automatically acquire one-step loops from example plans, which permits experience acquired from small problems to be applied to solving arbitrarily large ones.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {800–807},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041938,
+author = {Wiewiora, Eric and Cottrell, Garrison and Elkan, Charles},
+title = {Principled Methods for Advising Reinforcement Learning Agents},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {An important issue in reinforcement learning is how to incorporate expert knowledge in a principled manner, especially as we scale up to real-world tasks. In this paper, we present a method for incorporating arbitrary advice into the reward structure of a reinforcement learning agent without altering the optimal policy. This method extends the potential-based shaping method proposed by Ng et al. (1999) to the case of shaping functions based on both states and actions. This allows for much more specific information to guide the agent - which action to choose - without requiring the agent to discover this from the rewards on states alone. We develop two qualitatively different methods for converting a potential function into advice for the agent. We also provide theoretical and experimental justifications for choosing between these advice-giving algorithms based on the properties of the potential function.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {792–799},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041937,
+author = {Wang, Shaojun and Schuurmans, Dale and Peng, Fuchun and Zhao, Yunxin},
+title = {Learning Mixture Models with the Latent Maximum Entropy Principle},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {We present a new approach to estimating mixture models based on a new inference principle we have proposed: the latent maximum entropy principle (LME). LME is different both from Jaynes' maximum entropy principle and from standard maximum likelihood estimation. We demonstrate the LME principle by deriving new algorithms for mixture model estimation, and show how robust new variants of the EM algorithm can be developed. Our experiments show that estimation based on LME generally yields better results than maximum likelihood estimation, particularly when inferring latent variable models from small amounts of data.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {784–791},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041936,
+author = {Wang, Xin and Dietterich, Thomas G.},
+title = {Model-Based Policy Gradient Reinforcement Learning},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {Policy gradient methods based on REINFORCE are model-free in the sense that they estimate the gradient using only online experiences executing the current stochastic policy. This is extremely wasteful of training data as well as being computationally inefficient. This paper presents a new model-based policy gradient algorithm that uses training experiences much more efficiently. Our approach constructs a series of incomplete models of the MDP, and then applies these models to compute the policy gradient in closed form. The paper describes an algorithm that alternates between pruning (to remove irrelevant parts of the incomplete MDP model), exploration (to gather training data in the relevant parts of the state space), and gradient ascent search. We show experimental results on several benchmark problems including resource-constrained scheduling. The overall feasibility of this approach depends on whether a sufficiently informative partial model can fit into available memory.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {776–783},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041935,
+author = {Vovk, Vladimir and Nouretdinov, Ilia and Gammerman, Alex},
+title = {Testing Exchangeability On-Line},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {The majority of theoretical work in machine learning is done under the assumption of exchangeability: essentially, it is assumed that the examples are generated from the same probability distribution independently. This paper is concerned with the problem of testing the exchangeability assumption in the on-line mode: examples are observed one by one and the goal is to monitor on-line the strength of evidence against the hypothesis of exchangeability. We introduce the notion of exchangeability martingales, which are online procedures for detecting deviations from exchangeability; in essence, they are betting schemes that never risk bankruptcy and are fair under the hypothesis of exchangeability. Some specific exchangeability martingales are constructed using Transductive Confidence Machine. We report experimental results showing their performance on the USPS benchmark data set of hand-written digits (known to be somewhat heterogeneous); one of them multiplies the initial capital by more than 1018; this means that the hypothesis of exchangeability is rejected at the significance level 10-18.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {768–775},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041934,
+author = {Vishwanathan, S. V. N. and Smola, Alexander J. and Murty, M. Narasimha},
+title = {SimpleSVM},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {We present a fast iterative support vector training algorithm for a large variety of different formulations. It works by incrementally changing a candidate support vector set using a greedy approach, until the supporting hyperplane is found within a finite number of iterations.It is derived from a simple active set method which sweeps through the set of Lagrange multipliers and keeps optimality in the unconstrained variables, while discarding large amounts of bound-constrained variables. The hard-margin version can be viewed as a simple (yet computationally crucial) modification of the incremental SVM training algorithms of Cauwenberghs and Poggio.Experimental results for various settings are reported. In all cases our algorithm is considerably faster than competing methods such as Sequential Minimal Optimization or the Nearest Point Algorithm.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {760–767},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041933,
+author = {Valentini, Giorgio and Dietterich, Thomas G.},
+title = {Low Bias Bagged Support Vector Machines},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {Theoretical and experimental analyses of bagging indicate that it is primarily a variance reduction technique. This suggests that bagging should be applied to learning algorithms tuned to minimize bias, even at the cost of some increase in variance. We test this idea with Support Vector Machines (SVMs) by employing out-of-bag estimates of bias and variance to tune the SVMs. Experiments indicate that bagging of low-bias SVMs (the "lobag" algorithm) never hurts generalization performance and often improves it compared with well-tuned single SVMs and to bags of individually well-tuned SVMs.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {752–759},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041932,
+author = {Taskar, Ben and Wong, Ming Fai and Koller, Daphne},
+title = {Learning on the Test Data: Leveraging "Unseen" Features},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {This paper addresses the problem of classification in situations where the data distribution is not homogeneous: Data instances might come from different locations or times, and therefore are sampled from related but different distributions. In particular, features may appear in some parts of the data that are rarely or never seen in others. In most situations with nonhomogeneous data, the training data is not representative of the distribution under which the classifier must operate. We propose a method, based on probabilistic graphical models, for utilizing unseen features during classification. Our method introduces, for each such unseen feature, a continuous hidden variable describing its influence on the class -- whether it tends to be associated with some label. We then use probabilistic inference over the test data to infer a distribution over the value of this hidden variable. Intuitively, we "learn" the role of this unseen feature from the test set, generalizing from those instances whose label we are fairly sure about. Our overall probabilistic model is learned from the training data. In particular, we also learn models for characterizing the role of unseen features; these models use "meta-features" of those features, such as words in the neighborhood of an unseen feature, to infer its role. We present results for this framework on the task of classifying news articles and web pages, showing significant improvements over models that do not use unseen features.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {744–751},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041931,
+author = {Strens, Malcolm J. A.},
+title = {Evolutionary MCMC Sampling and Optimization in Discrete Spaces},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {The links between genetic algorithms and population-based Markov Chain Monte Carlo (MCMC) methods are explored. Genetic algorithms (GAs) are well-known for their capability to optimize functions of discrete-valued variables, but the MCMC interpretation allows GA variants to be used for sampling discrete spaces (e.g. in Bayesian inference for machine learning). The GA crossover and mutation operators are modified to provide valid MCMC samples, and a new "exclusive-or" operator is introduced as an alternative way to recombine population members. This is shown to improve sampling performance in a medical diagnostic problem domain. The sampler can also be used within simulated annealing to provide a global optimizer that is similar to a GA in structure but has known convergence properties.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {736–743},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041930,
+author = {Stimpson, Jeffrey L. and Goodrich, Michael A.},
+title = {Learning to Cooperate in a Social Dilemma: A Satisficing Approach to Bargaining},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {Learning in many multi-agent settings is inherently repeated play. This calls into question the naive application of single play Nash equilibria in multi-agent learning and suggests, instead, the application of give-and-take principles of bargaining. We modify and analyze a satisficing algorithm based on (Karandikar et al., 1998) that is compatible with the bargaining perspective. This algorithm is a form of relaxation search that converges to a satisficing equilibrium without knowledge of game payoffs or other agents' actions. We then develop an M action, N player social dilemma that encodes the key elements of the Prisoner's Dilemma. This game is instructive because it characterizes social dilemmas with more than two agents and more than two choices. We show how several different multi-agent learning algorithms behave in this social dilemma, and demonstrate that the satisficing algorithm converges, with high probability, to a Pareto efficient solution in self play and to the single play Nash equilibrium against selfish agents. Finally, we present theoretical results that characterize the behavior of the algorithm.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {728–735},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041929,
+author = {Srebro, Nathan and Jaakkola, Tommi},
+title = {Weighted Low-Rank Approximations},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {We study the common problem of approximating a target matrix with a matrix of lower rank. We provide a simple and efficient (EM) algorithm for solving weighted low-rank approximation problems, which, unlike their unweighted version, do not admit a closed-form solution in general. We analyze, in addition, the nature of locally optimal solutions that arise in this context, demonstrate the utility of accommodating the weights in reconstructing the underlying low-rank representation, and extend the formulation to non-Gaussian noise models such as logistic models. Finally, we apply the methods developed to a collaborative filtering task.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {720–727},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041928,
+author = {Singh, Satinder and Littman, Michael L. and Jong, Nicholas K. and Pardoe, David and Stone, Peter},
+title = {Learning Predictive State Representations},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {We introduce the first algorithm for learning predictive state representations (PSRs), which are a way of representing the state of a controlled dynamical system. The state representation in a PSR is a vector of predictions of tests, where tests are sequences of actions and observations said to be true if and only if all the observations occur given that all the actions are taken. The problem of finding a good PSR. one that is a sufficient statistic for the dynamical system--can be divided into two parts: 1) discovery of a good set of tests, and 2) learning to make accurate predictions for those tests. In this paper, we present detailed empirical results using a gradient-based algorithm for addressing the second problem. Our results demonstrate several sample systems in which the algorithm learns to make correct predictions and several situations in which the algorithm is less successful. Our analysis reveals challenges that will need to be addressed in future PSR learning algorithms.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {712–719},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041927,
+author = {Si, Luo and Jin, Rong},
+title = {Flexible Mixture Model for Collaborative Filtering},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {This paper presents a flexible mixture model (FMM) for collaborative filtering. FMM extends existing partitioning/clustering algorithms for collaborative filtering by clustering both users and items together simultaneously without assuming that each user and item should only belong to a single cluster. Furthermore, with the introduction of 'preference' nodes, the proposed framework is able to explicitly model how users rate items, which can vary dramatically, even among the users with similar tastes on items. Empirical study over two datasets of movie ratings has shown that our new algorithm outperforms five other collaborative filtering algorithms substantially.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {704–711},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041926,
+author = {Shih, Lawrence and Rennie, Jason D. M. and Chang, Yu-Han and Karger, David R.},
+title = {Text Bundling: Statistics-Based Data Reduction},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {As text corpora become larger, tradeoffs between speed and accuracy become critical: slow but accurate methods may not complete in a practical amount of time. In order to make the training data a manageable size, a data reduction technique may be necessary. Subsampling, for example, speeds up a classifier by randomly removing training points. In this paper, we describe an alternate method for reducing the number of training points by combining training points such that important statistical information is retained. Our algorithm keeps the same statistics that fast, linear-time text algorithms like Rocchio and Naive Bayes use. We provide empirical results that show our data reduction technique compares favorably to three other data reduction techniques on four standard text corpora.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {696–703},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041925,
+author = {Sebban, Marc and Janodet, Jean-Christophe},
+title = {On State Merging in Grammatical Inference: A Statistical Approach for Dealing with Noisy Data},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {In front of modern databases, noise tolerance has become today one of the most studied topics in machine learning. Many algorithms have been suggested for dealing with noisy data in the case of numerical instances, either by filtering them during a preprocess, or by treating them during the induction. However, this research subject remains widely open when one learns from unbounded symbolic sequences, which is the aim in grammatical inference. In this paper, we propose a statistical approach for dealing with noisy data during the inference of automata, by the state merging algorithm RPNI. Our approach is based on a proportion comparison test, which relaxes the merging rule of RPNI without endangering the generalization error. Beyond this relevant framework, we provide some useful theoretical properties about the behavior of our new version of RPNI, called RPNI*. Finally, we describe a large comparative study on several datasets.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {688–695},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041924,
+author = {Schoknecht, Ralf and Merke, Artur},
+title = {TD(0) Converges Provably Faster than the Residual Gradient Algorithm},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {In Reinforcement Learning (RL) there has been some experimental evidence that the residual gradient algorithm converges slower than the TD(0) algorithm. In this paper, we use the concept of asymptotic convergence rate to prove that under certain conditions the synchronous off-policy TD(0) algorithm converges faster than the synchronous off-policy residual gradient algorithm if the value function is represented in tabular form. This is the first theoretical result comparing the convergence behaviour of two RL algorithms. We also show that as soon as linear function approximation is involved no general statement concerning the superiority of one of the algorithms can be made.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {680–687},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041923,
+author = {Salakhutdinov, Ruslan and Roweis, Sam and Ghahramani, Zoubin},
+title = {Optimization with EM and Expectation-Conjugate-Gradient},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {We show a close relationship between the Expectation - Maximization (EM) algorithm and direct optimization algorithms such as gradient-based methods for parameter learning. We identify analytic conditions under which EM exhibits Newton-like behavior, and conditions under which it possesses poor, first-order convergence. Based on this analysis, we propose two novel algorithms for maximum likelihood estimation of latent variable models, and report empirical results showing that, as predicted by theory, the proposed new algorithms can substantially outperform standard EM in terms of speed of convergence in certain cases.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {672–679},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041922,
+author = {Salakhutdinov, Ruslan and Roweis, Sam},
+title = {Adaptive Overrelaxed Bound Optimization Methods},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {We study a class of overrelaxed bound optimization algorithms, and their relationship to standard bound optimizers, such as Expectation-Maximization, Iterative Scaling, CCCP and Non-Negative Matrix Factorization. We provide a theoretical analysis of the convergence properties of these optimizers and identify analytic conditions under which they are expected to outperform the standard versions. Based on this analysis, we propose a novel, simple adaptive overrelaxed scheme for practical optimization and report empirical results on several synthetic and real-world data sets showing that these new adaptive methods exhibit superior performance (in certain cases by several times speedup) compared to their traditional counterparts. Our extensions are simple to implement, apply to a wide variety of algorithms, almost always give a substantial speedup, and do not require any theoretical analysis of the underlying algorithm.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {664–671},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041921,
+author = {Russell, Stuart and Zimdars, Andrew L.},
+title = {Q-Decomposition for Reinforcement Learning Agents},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {The paper explores a very simple agent design method called Q-decomposition, wherein a complex agent is built from simpler subagents. Each subagent has its own reward function and runs its own reinforcement learning process. It supplies to a central arbitrator the Q-values (according to its own reward function) for each possible action. The arbitrator selects an action maximizing the sum of Q-values from all the subagents. This approach has advantages over designs in which subagents recommend actions. It also has the property that if each subagent runs the Sarsa reinforcement learning algorithm to learn its local Q-function, then a globally optimal policy is achieved. (On the other hand, local Q-learning leads to globally suboptimal behavior.) In some cases, this form of agent decomposition allows the local Q-functions to be expressed by much-reduced state and action spaces. These results are illustrated in two domains that require effective coordination of behaviors.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {656–663},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041920,
+author = {R\"{u}ckert, Ulrich and Kramer, Stefan},
+title = {Stochastic Local Search in K-Term DNF Learning},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {A novel native stochastic local search algorithm for solving k-term DNF problems is presented. It is evaluated on hard k-term DNF problems that lie on the phase transition and compared to the performance of GSAT and WalkSAT type algorithms on SAT encodings of k-term DNF problems. We also evaluate state-of-the-art separate and conquer algorithms on these problems. Finally, we demonstrate the practical relevance of our algorithm on a chess endgame database.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {648–655},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041919,
+author = {Rosipal, Roman and Trejo, Leonard J. and Matthews, Bryan},
+title = {Kernel PLS-SVC for Linear and Nonlinear Classification},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {A new method for classification is proposed. This is based on kernel orthonormalized partial least squares (PLS) dimensionality reduction of the original data space followed by a support vector classifier. Unlike principal component analysis (PCA), which has previously served as a dimension reduction step for discrimination problems, orthonormalized PLS is closely related to Fisher's approach to linear discrimination or equivalently to canonical correlation analysis. For this reason orthonormalized PLS is preferable to PCA for discrimination. Good behavior of the proposed method is demonstrated on 13 different benchmark data sets and on the real world problem of classifying finger movement periods from non-movement periods based on electroencephalograms.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {640–647},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041918,
+author = {Rivest, Fran\c{c}ois and Precup, Doina},
+title = {Combining TD-Learning with Cascade-Correlation Networks},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {Using neural networks to represent value functions in reinforcement learning algorithms often involves a lot of work in hand-crafting the network structure, and tuning the learning parameters. In this paper, we explore the potential of using constructive neural networks in reinforcement learning. Constructive neural network methods are appealing because they can build the network structure based on the data that needs to be represented. To our knowledge, such algorithms have not been used in reinforcement learning. A major issue is that constructive algorithms often work in batch mode, while many reinforcement learning algorithms work on-line. We use a cache to accumulate data, then use a variant of cascade correlation to update the value function. Preliminary results on the game of Tic-Tac-Toe show the potential of this new algorithm, compared to using static feed-forward neural networks trained with backpropagation.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {632–639},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041917,
+author = {Richardson, Matthew and Domingos, Pedro},
+title = {Learning with Knowledge from Multiple Experts},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {The use of domain knowledge in a learner can greatly improve the models it produces. However, high-quality expert knowledge is very difficult to obtain. Traditionally, researchers have assumed that knowledge comes from a single self-consistent source. A little-explored but often more feasible alternative is to use multiple weaker sources. In this paper we take a step in this direction by developing a method for learning the structure of a Bayesian network from multiple experts. Data is then used to refine the structure and estimate parameters. A simple analysis shows that even relatively few noisy experts can produce high-quality knowledge when combined. Experiments with real and simulated experts in a variety of domains show the benefits of this approach.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {624–631},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041916,
+author = {Rennie, Jason D. M. and Shih, Lawrence and Teevan, Jaime and Karger, David R.},
+title = {Tackling the Poor Assumptions of Naive Bayes Text Classifiers},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {Naive Bayes is often used as a baseline in text classification because it is fast and easy to implement. Its severe assumptions make such efficiency possible but also adversely affect the quality of its results. In this paper we propose simple, heuristic solutions to some of the problems with Naive Bayes classifiers, addressing both systemic issues as well as problems that arise because text is not actually generated according to a multinomial model. We find that our simple corrections result in a fast algorithm that is competitive with state-of-the-art text classification algorithms such as the Support Vector Machine.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {616–623},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041915,
+author = {Ravindran, Balaraman and Barto, Andrew G.},
+title = {Relativized Options: Choosing the Right Transformation},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {Relativized options combine model minimization methods and a hierarchical reinforcement learning framework to derive compact reduced representations of a related family of tasks. Relativized options are defined without an absolute frame of reference, and an option's policy is transformed suitably based on the circumstances under which the option is invoked. In earlier work we addressed the issue of learning the option policy online. In this article we develop an algorithm for choosing, from among a set of candidate transformations, the right transformation for each member of the family of tasks.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {608–615},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041914,
+author = {Porter, Reid and Eads, Damian and Hush, Don and Theiler, James},
+title = {Weighted Order Statistic Classifiers with Large Rank-Order Margin},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {We investigate how stack filter function classes like weighted order statistics can be applied to classification problems. This leads to a new design criteria for linear classifiers when inputs are binary-valued and weights are positive. We present a rank-based measure of margin that is directly optimized as a standard linear program and investigate its relationship to regularization. Our approach can robustly combine large numbers of base hypothesis and has similar performance to other types of regularization.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {600–607},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041913,
+author = {Perkins, Simon and Theiler, James},
+title = {Online Feature Selection Using Grafting},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {In the standard feature selection problem, we are given a fixed set of candidate features for use in a learning problem, and must select a subset that will be used to train a model that is "as good as possible" according to some criterion. In this paper, we present an interesting and useful variant, the online feature selection problem, in which, instead of all features being available from the start, features arrive one at a time. The learner's task is to select a subset of features and return a corresponding model at each time step which is as good as possible given the features seen so far. We argue that existing feature selection methods do not perform well in this scenario, and describe a promising alternative method, based on a stagewise gradient descent technique which we call grafting.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {592–599},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041912,
+author = {Pavlov, Dmitry and Popescul, Alexandrin and Pennock, David M. and Ungar, Lyle H.},
+title = {Mixtures of Conditional Maximum Entropy Models},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {Driven by successes in several application areas, maximumen tropy modeling has recently gained considerable popularity. We generalize the standard maximum entropy formulation of classification problems to better handle the case where complex data distributions arise from a mixture of simpler underlying (latent) distributions. We develop a theoretical framework for characterizing data as a mixture of maximum entropy models. We formulate a maximum-likelihood interpretation of the mixture model learning, and derive a generalized EM algorithm to solve the corresponding optimization problem. We present empirical results for a number of data sets showing that modeling the data as a mixture of latent maximumen tropy models gives significant improvement over the standard, single component, maximum entropy approach.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {584–591},
+numpages = {8},
+keywords = {maximum entropy, classification, latent structure, mixture model},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041911,
+author = {Onta\~{n}\'{o}n, Santiago and Plaza, Enric},
+title = {Justification-Based Multiagent Learning},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {Committees of classifiers with learning capabilities have good performance in a variety of domains. We focus on committees of agents with learning capabilities where no agent is omniscient but has a local, limited, individual view of data. In this framework, a major issue is how to integrate the individual results in an overall result--usually a voting mechanism is used. We propose a setting where agents can express a symbolic justification of their individual results. Justifications can then be examined by other agents and accepted or found wanting. We propose a specific interaction protocol that supports revision of justifications created by different agents. Finally, the opinions of individual agents are aggregated into a global outcome using a weighted voting scheme.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {576–583},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041910,
+author = {Ong, Cheng Soon and Smola, Alexander J.},
+title = {Machine Learning Using Hyperkernels},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {We expand on the problem of learning a kernel via a RKHS on the space of kernels itself. The resulting optimization problem is shown to have a semidefinite programming solution. We demonstrate that it is possible to learn the kernel for various formulations of machine learning problems. Specifically, we provide mathematical programming formulations and experimental results for the C-SVM, ν-SVM and Lagrangian SVM for classification on UCI data, and novelty detection.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {568–575},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041909,
+author = {Munos, R\'{e}mi},
+title = {Error Bounds for Approximate Policy Iteration},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {In Dynamic Programming, convergence of algorithms such as Value Iteration or Policy Iteration results -in discounted problems- from a contraction property of the back-up operator, guaranteeing convergence to its fixed-point. When approximation is considered, known results in Approximate Policy Iteration provide bounds on the closeness to optimality of the approximate value function obtained by successive policy improvement steps as a function of the maximum norm of value determination errors during policy evaluation steps. Unfortunately, such results have limited practical range since most function approximators (such as linear regression) select the best fit in a given class of parameterized functions by minimizing some (weighted) quadratic norm.In this paper, we provide error bounds for Approximate Policy Iteration using quadratic norms, and illustrate those results in the case of feature-based linear function approximation.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {560–567},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041908,
+author = {Moore, Andrew and Wong, Weng-Keen},
+title = {Optimal Reinsertion: A New Search Operator for Accelerated and More Accurate Bayesian Network Structure Learning},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {We show how a conceptually simple search operator called Optimal Reinsertion can be applied to learning Bayesian Network structure from data. On each step we pick a node called the target. We delete all arcs entering or exiting the target. We then find, subject to some constraints, the globally optimal combination of in-arcs and out-arcs with which to reinsert it. The heart of the paper is a new algorithm called ORSearch which allows each optimal reinsertion step to be computed efficiently on large datasets. Our empirical results compare Optimal Reinsertion against a highly tuned implementation of multirestart hill climbing. The results typically show one to two orders of magnitude speed-up on a variety of datasets. They usually show better final results, both in terms of BDEU score and in modeling of future data drawn from the same distribution.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {552–559},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041907,
+author = {Mesterharm, Chris},
+title = {Using Linear-Threshold Algorithms to Combine Multi-Class Sub-Experts},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {We present a new type of multi-class learning algorithm called a linear-max algorithm. Linear-max algorithms learn with a special type of attribute called a sub-expert. A sub-expert is a vector attribute that has a value for each output class. The goal of the multi-class algorithm is to learn a linear function combining the sub-experts and to use this linear function to make correct class predictions. The main contribution of this work is to prove that, in the on-line mistake-bounded model of learning, a multi-class sub-expert learning algorithm has the same mistake bounds as a related two class linear-threshold algorithm. We apply these techniques to three linear-threshold algorithms: Perceptron, Winnow, and Romma. We show these algorithms give good performance on artificial and real datasets.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {544–551},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041906,
+author = {McMahan, H. Brendan and Gordon, Geoffrey J. and Blum, Avrim},
+title = {Planning in the Presence of Cost Functions Controlled by an Adversary},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {We investigate methods for planning in a Markov Decision Process where the cost function is chosen by an adversary after we fix our policy. As a running example, we consider a robot path planning problem where costs are influenced by sensors that an adversary places in the environment. We formulate the problem as a zero-sum matrix game where rows correspond to deterministic policies for the planning player and columns correspond to cost vectors the adversary can select. For a fixed cost vector, fast algorithms (such as value iteration) are available for solving MDPs. We develop efficient algorithms for matrix games where such best response oracles exist. We show that for our path planning problem these algorithms are at least an order of magnitude faster than direct solution of the linear programming formulation.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {536–543},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041905,
+author = {McGovern, Amy and Jensen, David},
+title = {Identifying Predictive Structures in Relational Data Using Multiple Instance Learning},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {This paper introduces an approach for identifying predictive structures in relational data using the multiple-instance framework. By a predictive structure, we mean a structure that can explain a given labeling of the data and can predict labels of unseen data. Multiple-instance learning has previously only been applied to flat, or propositional, data and we present a modification to the framework that allows multiple-instance techniques to be used on relational data. We present experimental results using a relational modification of the diverse density method (Maron, 1998; Maron &amp; Lozano-P\'{e}rez, 1998) and of a method based on the chi-squared statistic (McGovern &amp; Jensen, 2003). We demonstrate that multiple-instance learning can be used to identify predictive structures on both a small illustrative data set and the Internet Movie Database. We compare the classification results to a k-nearest neighbor approach.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {528–535},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041904,
+author = {Marchand, Mario and Shah, Mohak and Shawe-Taylor, John and Sokolova, Marina},
+title = {The Set Covering Machine with Data-Dependent Half-Spaces},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {We examine the set covering machine when it uses data-dependent half-spaces for its set of features and bound its generalization error in terms of the number of training errors and the number of half-spaces it achieves on the training data. We show that it provides a favorable alternative to data-dependent balls on some natural data sets. Compared to the support vector machine, the set covering machine with data-dependent half-spaces produces substantially sparser classifiers with comparable (and sometimes better) generalization. Furthermore, we show that our bound on the generalization error provides an effective guide for model selection.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {520–527},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041903,
+author = {Mannor, Shie and Rubinstein, Reuven and Gat, Yohai},
+title = {The Cross Entropy Method for Fast Policy Search},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {We present a learning framework for Markovian decision processes that is based on optimization in the policy space. Instead of using relatively slow gradient-based optimization algorithms, we use the fast Cross Entropy method. The suggested framework is described for several reward criteria and its effectiveness is demonstrated for a grid world navigation task and for an inventory control problem.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {512–519},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041902,
+author = {Mamitsuka, Hiroshi},
+title = {Hierarchical Latent Knowledge Analysis for Co-Occurrence Data},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {Two-mode and co-occurrence data have been frequently seen in the real world. We address the issue of predicting unknown cooccurrence events from known events. For this issue, we propose a new method that naturally combines observable co-occurrence events with their existing latent knowledge by using tlierarchical latent variables. This method builds a space-efficient hierarchical latent variable model and estimates the probability parameters of the model with an EM algorithm. In this paper, we focus on a data set of protein-protein interactions, a typical co-occurrence data set, and apply our method to the problem of predicting unknown protein-protein interactions, an important research issue in current computational biology. Using a real data set of protein-protein interactions and latent knowledge, we tested the performance of our method, comparing it with other recent machine learning approaches, including support vector machines. Our experimental results show that our method clearly outperforms the predictive performance obtained by other approaches. The results indicate that both our idea of using existing knowledge as a latent variable and our methodology implementing it are effective for drastically improving the predictive performance of existing unsupervised learning approaches for co-occurrence data.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {504–511},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041901,
+author = {Lu, Qing and Getoor, Lise},
+title = {Link-Based Classification},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {A key challenge for machine learning is tackling the problem of mining richly structured data sets, where the objects are linked in some way due to either an explicit or implicit relationship that exists between the objects. Links among the objects demonstrate certain patterns, which can be helpful for many machine learning tasks and are usually hard to capture with traditional statistical models. Recently there has been a surge of interest in this area, fueled largely by interest in web and hypertext mining, but also by interest in mining social networks, bibliographic citation data, epidemiological data and other domains best described using a linked or graph structure. In this paper we propose a framework for modeling link distributions, a link-based model that supports discriminative models describing both the link distributions and the attributes of linked objects. We use a structured logistic regression model, capturing both content and links. We systematically evaluate several variants of our link-based model on a range of data sets including both web and citation collections. In all cases, the use of the link distribution improves classification accuracy.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {496–503},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041900,
+author = {Liu, Tao and Liu, Shengping and Chen, Zheng and Ma, Wei-Ying},
+title = {An Evaluation on Feature Selection for Text Clustering},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {Feature selection methods have been successfully applied to text categorization but seldom applied to text clustering due to the unavailability of class label information. In this paper, we first give empirical evidence that feature selection methods can improve the efficiency and performance of text clustering algorithm. Then we propose a new feature selection method called "Term Contribution (TC)" and perform a comparative study on a variety of feature selection methods for text clustering, including Document Frequency (DF), Term Strength (TS), Entropy-based (En), Information Gain (IG) and χ2 statistic (CHI). Finally, we propose an "Iterative Feature Selection (IF)" method that addresses the unavailability of label problem by utilizing effective supervised feature selection method to iteratively select features and perform clustering. Detailed experimental results on Web Directory data are provided in the paper.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {488–495},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041899,
+author = {Ling, Charles X. and Yan, Robert J.},
+title = {Decision Tree with Better Ranking},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {AUC (Area Under the Curve) of ROC (Receiver Operating Characteristics) has been recently used as a measure for ranking performance of learning algorithms. In this paper, we present a novel probability estimation algorithm that improves the AUC value of decision trees. Instead of estimating the probability at the single leaf where the example falls into, our method averages probability estimates from all leaves of the tree. The contribution of each leaf is determined by the deviation in attribute values from the root to the leaf. We design empirical experiments to verify that our new algorithm outperforms C4.5 and its recent improvement C4.4 in AUC. Even though C4.4 with bagging outperforms our method in AUC, our method produces a single tree with interpretable results.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {480–487},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041898,
+author = {Li, Fan and Yang, Yiming},
+title = {A Loss Function Analysis for Classification Methods in Text Categorization},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {This paper presents a formal analysis of popular text classification methods, focusing on their loss functions whose minimization is essential to the optimization of those methods, and whose decomposition into the training-set loss and the model complexity enables cross-method comparisons on a common basis from an optimization point of view. Those methods include Support Vector Machines, Linear Regression, Logistic Regression, Neural Network, Naive Bayes, K-Nearest Neighbor, Rocchio-style and Multi-class Prototype classifiers. Theoretical analysis (including our new derivations) is provided for each method, along with evaluation results for all the methods on the Reuters-21578 benchmark corpus. Using linear regression, neural networks and logistic regression methods as examples, we show that properly tuning the balance between the training-set loss and the complexity penalty would have a significant impact to the performance of a classifier. In linear regression, in particular, the tuning of the complexity penalty yielded a result (measured using macro-averaged F1) that outperformed all text categorization methods ever evaluated on that benchmark corpus, including Support Vector Machines.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {472–479},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041897,
+author = {Li, Cong and Wen, Ji-Rong and Li, Hang},
+title = {Text Classification Using Stochastic Keyword Generation},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {This paper considers improving the performance of text classification, when summaries of the texts, as well as the texts themselves, are available during learning. Summaries can be more accurately classified than texts, so the question is how to effectively use the summaries in learning. This paper proposes a new method for addressing the problem, using a technique referred to as 'stochastic keyword generation' (SKG). In the proposed method, the SKG model is trained using the texts and their associated summaries. In classification, a text is first mapped, with SKG, into a vector of probability values, each of which corresponds to a keyword. Text classification is then conducted on the mapped vector. This method has been applied to email classification for an automated help desk. Experimental results indicate that the proposed method based on SKG significantly outperforms other methods.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {464–471},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041896,
+author = {Leskovec, Jurij and Shawe-Taylor, John},
+title = {Linear Programming Boosting for Uneven Datasets},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {The paper extends the notion of linear programming boosting to handle uneven datasets. Extensive experiments with text classification problem compare the performance of a number of different boosting strategies, concentrating on the problems posed by uneven datasets.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {456–463},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041895,
+author = {Lee, Wee Sun and Liu, Bing},
+title = {Learning with Positive and Unlabeled Examples Using Weighted Logistic Regression},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {The problem of learning with positive and unlabeled examples arises frequently in retrieval applications. We transform the problem into a problem of learning with noise by labeling all unlabeled examples as negative and use a linear function to learn from the noisy examples. To learn a linear function with noise, we perform logistic regression after weighting the examples to handle noise rates of greater than a half. With appropriate regularization, the cost function of the logistic regression problem is convex, allowing the problem to be solved efficiently. We also propose a performance measure that can be estimated from positive and unlabeled examples for evaluating retrieval performance. The measure, which is proportional to the product of precision and recall, can be used with a validation set to select regularization parameters for logistic regression. Experiments on a text classification corpus show that the methods proposed are effective.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {448–455},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041894,
+author = {Laud, Adam and DeJong, Gerald},
+title = {The Influence of Reward on the Speed of Reinforcement Learning: An Analysis of Shaping},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {Shaping can be an effective method for improving the learning rate in reinforcement systems. Previously, shaping has been heuristically motivated and implemented. We provide a formal structure with which to interpret the improvement afforded by shaping rewards. Central to our model is the idea of a reward horizon, which focuses exploration on an MDP's critical region, a subset of states with the property that any policy that performs well on the critical region also performs well on the MDP. We provide a simple algorithm and prove that its learning time is polynomial in the size of the critical region and, crucially, independent of the size of the MDP. This identifies low reward horizons with easy-to-learn MDPs. Shaping rewards, which encode our prior knowledge about the relative merits of decisions, can be seen as artificially reducing the MDP's natural reward horizon. We demonstrate empirically the effects of using shaping to reduce the reward horizon.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {440–447},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041893,
+author = {Langley, Pat and George, Dileep and Bay, Stephen and Saito, Kazumi},
+title = {Robust Induction of Process Models from Time-Series Data},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {In this paper, we revisit the problem of inducing a process model from time-series data. We illustrate this task with a realistic ecosystem model, review an initial method for its induction, then identify three challenges that require extension of this method. These include dealing with unobservable variables, finding numeric conditions on processes, and preventing the creation of models that overfit the training data. We describe responses to these challenges and present experimental evidence that they have the desired effects. After this, we show that this extended approach to inductive process modeling can explain and predict time-series data from batteries on the International Space Station. In closing, we discuss related work and consider directions for future research.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {432–439},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041892,
+author = {Lagoudakis, Michail G. and Parr, Ronald},
+title = {Reinforcement Learning as Classification: Leveraging Modern Classifiers},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {The basic tools of machine learning appear in the inner loop of most reinforcement learning algorithms, typically in the form of Monte Carlo methods or function approximation techniques. To a large extent, however, current reinforcement learning algorithms draw upon machine learning techniques that are at least ten years old and, with a few exceptions, very little has been done to exploit recent advances in classification learning for the purposes of reinforcement learning. We use a variant of approximate policy iteration based on rollouts that allows us to use a pure classification learner, such as a support vector machine (SVM), in the inner loop of the algorithm. We argue that the use of SVMs, particularly in combination with the kernel trick, can make it easier to apply reinforcement learning as an "out-of-the-box" technique, without extensive feature engineering. Our approach opens the door to modern classification methods, but does not preclude the use of classical methods. We present experimental results in the pendulum balancing and bicycle riding domains using both SVMs and neural networks for classifiers.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {424–431},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041891,
+author = {Lachiche, Nicolas and Flach, Peter},
+title = {Improving Accuracy and Cost of Two-Class and Multi-Class Probabilistic Classifiers Using ROC Curves},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {The probability estimates of a naive Bayes classifier are inaccurate if some of its underlying independence assumptions are violated. The decision criterion for using these estimates for classification therefore has to be learned from the data. This paper proposes the use of ROC curves for this purpose. For two classes, the algorithm is a simple adaptation of the algorithm for tracing a ROC curve by sorting the instances according to their predicted probability of being positive. As there is no obvious way to upgrade this algorithm to the multi-class case, we propose a hillclimbing approach which adjusts the weights for each class in a pre-defined order. Experiments on a wide range of datasets show the proposed method leads to significant improvements over the naive Bayes classifier's accuracy. Finally, we discuss an method to find the global optimum, and show how its computational complexity would make it untractable.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {416–423},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041890,
+author = {Kwok, James T. and Tsang, Ivor W.},
+title = {The Pre-Image Problem in Kernel Methods},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {In this paper, we address the problem of finding the pre-image of a feature vector in the feature space induced by a kernel. This is of central importance in some kernel applications, such as on using kernel principal component analysis (PCA) for image denoising. Unlike the traditional method in (Mika et al., 1998) which relies on nonlinear optimization, our proposed method directly finds the location of the pre-image based on distance constraints in the feature space. It is non-iterative, involves only linear algebra and does not suffer from numerical instability or local minimum problems. Performance of this method is evaluated on performing kernel PCA and kernel clustering on the USPS data set.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {408–415},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041889,
+author = {Kwok, James T. and Tsang, Ivor W.},
+title = {Learning with Idealized Kernels},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {The kernel function plays a central role in kernel methods. Existing methods typically fix the functional form of the kernel in advance and then only adapt the associated kernel parameters based on empirical data. In this paper, we consider the problem of adapting the kernel so that it becomes more similar to the so-called ideal kernel. We formulate this as a distance metric learning problem that searches for a suitable linear transform (feature weighting) in the kernel-induced feature space. This formulation is applicable even when the training set can only provide examples of similar and dissimilar pairs, but not explicit class label information. Computationally, this leads to a local-optima-free quadratic programming problem, with the number of variables independent of the number of features. Performance of this method is evaluated on classification and clustering tasks on both toy and real-world data sets.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {400–407},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041888,
+author = {Kubica, Jeremy and Moore, Andrew and Cohn, David and Schneider, Jeff},
+title = {Finding Underlying Connections: A Fast Graph-Based Method for Link Analysis and Collaboration Queries},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {Many techniques in the social sciences and graph theory deal with the problem of examining and analyzing patterns found in the underlying structure and associations of a group of entities. However, much of this work assumes that this underlying structure is known or can easily be inferred from data, which may often be an unrealistic assumption for many real-world problems. Below we consider the problem of learning and querying a graph-based model of this underlying structure. The model is learned from noisy observations linking sets of entities. We explicitly allow different types of links (representing different types of relations) and temporal information indicating when a link was observed. We quantitatively compare this representation and learning method against other algorithms on the task of predicting future links and new "friendships" in a variety of real world data sets.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {392–399},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041887,
+author = {Krishnapuram, Raghu and Chitrapura, Krishna P. and Joshi, Sachindra},
+title = {Classification of Text Documents Based on Minimum System Entropy},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {In this paper, we describe a new approach to classification of text documents based on the minimization of system entropy, i.e., the overall uncertainty associated with the joint distribution of words and labels in the collection. The classification algorithm assigns a class label to a new document in such a way that its insertion into the system results in the maximum decrease (or least increase) system entropy. We provide insights into the minimum system entropy criterion, and establish connections to traditional naive Bayes approaches. Experimental results indicate that the algorithm performs well in terms of classification accuracy. It is less sensitive to feature selection and more scalable when compared with SVM.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {384–391},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041886,
+author = {Krawiec, Krzysztof and Bhanu, Bir},
+title = {Visual Learning by Evolutionary Feature Synthesis},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {In this paper, we present a novel method for learning complex concepts/hypotheses directly from raw training data. The task addressed here concerns data-driven synthesis of recognition procedures for real-world object recognition task. The method uses linear genetic programming to encode potential solutions expressed in terms of elementary operations, and handles the complexity of the learning task by applying cooperative coevolution to decompose the problem automatically. The training consists in coevolving feature extraction procedures, each being a sequence of elementary image processing and feature extraction operations. Extensive experimental results show that the approach attains competitive performance for 3-D object recognition in real synthetic aperture radar (SAR) imagery.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {376–383},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041885,
+author = {Kotnik, Clifford and Kalita, Jugal},
+title = {The Significance of Temporal-Difference Learning in Self-Play Training TD-Rummy versus EVO-Rummy},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {Reinforcement learning has been used for training game playing agents. The value function for a complex game must be approximated with a continuous function because the number of states becomes too large to enumerate. Temporal-difference learning with self-play is one method successfully used to derive the value approximation function. Co-evolution of the value function is also claimed to yield good results. This paper reports on a direct comparison between an agent trained to play gin rummy using temporal difference learning, and the same agent trained with co-evolution. Co-evolution produced superior results.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {369–375},
+numpages = {7},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041884,
+author = {Kondor, Risi and Jebara, Tony},
+title = {A Kernel between Sets of Vectors},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {In various application domains, including image recognition, it is natural to represent each example as a set of vectors. With a base kernel we can implicitly map these vectors to a Hilbert space and fit a Gaussian distribution to the whole set using Kernel PCA. We define our kernel between examples as Bhattacharyya's measure of affinity between such Gaussians. The resulting kernel is computable in closed form and enjoys many favorable properties, including graceful behavior under transformations, potentially justifying the vector set representation even in cases when more conventional representations also exist.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {361–368},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041883,
+author = {Klautau, Aldebaro and Jevtic, Nikola and Orlitsky, Alon},
+title = {Discriminative Gaussian Mixture Models: A Comparison with Kernel Classifiers},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {We show that a classifier based on Gaussian mixture models (GMM) can be trained discriminatively to improve accuracy. We describe a training procedure based on the extended Baum-Welch algorithm used in speech recognition. We also compare the accuracy and degree of sparsity of the new discriminative GMM classifier with those of generative GMM classifiers, and of kernel classifiers, such as support vector machines (SVM) and relevance vector machines (RVM).},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {353–360},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041882,
+author = {Kirshner, Sergey and Parise, Sridevi and Smyth, Padhraic},
+title = {Unsupervised Learning with Permuted Data},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {We consider the problem of unsupervised learning from a matrix of data vectors where in each row the observed values are randomly permuted in an unknown fashion. Such problems arise naturally in areas such as computer vision and text modeling where measurements need not be in correspondence with the correct features. We provide a general theoretical characterization of the difficulty of "unscrambling" the values of the rows for such problems and relate the optimal error rate to the well-known concept of the Bayes classification error rate. For known parametric distributions we derive closed-form expressions for the optimal error rate that provide insight into what makes this problem difficult in practice. Finally, we show how the Expectation-Maximization procedure can be used to simultaneously estimate both a probabilistic model for the features as well as a distribution over the correspondence of the row values.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {345–352},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041881,
+author = {Kennedy, William G. and De Jong, Kenneth A.},
+title = {Characteristics of Long-Term Learning in Soar and Its Application to the Utility Problem},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {Much of the work in machine learning has focused on demonstrating the efficacy of learning techniques using training and testing phases. On-line learning over the long term places different demands on symbolic machine learning techniques and raises a different set of questions for symbolic learning than for empirical learning. We have instrumented Soar to collect data and characterize the long-term learning behavior of Soar and demonstrate an effective approach to the utility problem. In this paper we describe our approach and provide results.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {337–344},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041880,
+author = {Kaski, Samuel and Peltonen, Jaakko},
+title = {Informative Discriminant Analysis},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {We introduce a probabilistic model that generalizes classical linear discriminant analysis and gives an interpretation for the components as informative or relevant components of data. The components maximize the predictability of class distribution which is asymptotically equivalent to (i) maximizing mutual information with the classes, and (ii) finding principal components in the so-called learning or Fisher metrics. The Fisher metric measures only distances that are relevant to the classes, that is, distances that cause changes in the class distribution. The components have applications in data exploration, visualization, and dimensionality reduction. In empirical experiments the method outperformed a Renyi entropy-based alternative and linear discriminant analysis.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {329–336},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041879,
+author = {Kashima, Hisashi and Tsuda, Koji and Inokuchi, Akihiro},
+title = {Marginalized Kernels between Labeled Graphs},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {A new kernel function between two labeled graphs is presented. Feature vectors are defined as the counts of label paths produced by random walks on graphs. The kernel computation finally boils down to obtaining the stationary state of a discrete-time linear system, thus is efficiently performed by solving simultaneous linear equations. Our kernel is based on an infinite dimensional feature space, so it is fundamentally different from other string or tree kernels based on dynamic programming. We will present promising empirical results in classification of chemical compounds.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {321–328},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041878,
+author = {Kalousis, Alexandros and Hilario, Melanie},
+title = {Representational Issues in Meta-Learning},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {To address the problem of algorithm selection for the classification task, we equip a relational case base with new similarity measures that are able to cope with multirelational representations. The proposed approach builds on notions from clustering and is closely related to ideas developed in similarity-based relational learning. The results provide evidence that the relational representation coupled with the appropriate similarity measure can improve performance. The ideas presented are pertinent not only for meta-learning representational issues, but for all domains with similar representation requirements.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {313–320},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041877,
+author = {Kakade, Sham and Kearns, Michael and Langford, John},
+title = {Exploration in Metric State Spaces},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {We present metric-E3, a provably near-optimal algorithm for reinforcement learning in Markov decision processes in which there is a natural metric on the state space that allows the construction of accurate local models. The algorithm is a generalization of the E3 algorithm of Kearns and Singh, and assumes a black box for approximate planning. Unlike the original E3, metric-E 3 finds a near optimal policy in an amount of time that does not directly depend on the size of the state space, but instead depends on the covering number of the state space. Informally, the covering number is the number of neighborhoods required for accurate local modeling.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {306–312},
+numpages = {7},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041876,
+author = {Johnson, Judy and Tsioutsiouliklis, Kostas and Giles, C. Lee},
+title = {Evolving Strategies for Focused Web Crawling},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {The rapid growth of the World Wide Web has created many challenges for both general purpose crawling, search engines and web directories, making it difficult to find, index, and classify web pages based on a topic. Topic driven crawlers can complement search engines because they pre-classify the pages retrieved by the crawl. To implement such a focused crawler, a strategy for ordering the crawl frontier is required. Such a strategy can only use information gleaned from previously crawled pages to estimate the relevance of a newly observed URL. Because the best strategy for ranking URLsin the crawl frontier is not immediately apparent, we discover strategies by evolving them using a genetic algorithm. Strategies are learned by evaluating the results of crawls simulated using a database generated by a previous, more general crawl. We conclude that a rank function that combines analysis of text and link structure yields effective strategies. The evolved strategies perform better than the commonly used Best First strategy.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {298–305},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041875,
+author = {Joachims, Thorsten},
+title = {Transductive Learning via Spectral Graph Partitioning},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {We present a new method for transductive learning, which can be seen as a transductive version of the k nearest-neighbor classifier. Unlike for many other transductive learning methods, the training problem has a meaningful relaxation that can be solved globally optimally using spectral methods. We propose an algorithm that robustly achieves good generalization performance and that can be trained efficiently. A key advantage of the algorithm is that it does not require additional heuristics to avoid unbalanced splits. Furthermore, we show a connection to transductive Support Vector Machines, and that an effective Co-Training algorithm arises as a special case.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {290–297},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041874,
+author = {Jin, Rong and Yan, Rong and Zhang, Jian and Hauptmann, Alex G.},
+title = {A Faster Iterative Scaling Algorithm for Conditional Exponential Model},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {Conditional exponential model has been one of the widely used conditional models in machine learning field and improved iterative scaling (IIS) has been one of the major algorithms for finding the optimal parameters for the conditional exponential model. In this paper, we proposed a faster iterative algorithm named FIS that is able to find the optimal parameters faster than the IIS algorithm. The theoretical analysis shows that the proposed algorithm yields a tighter bound than the traditional IIS algorithm. Empirical studies on the text classification over three different datasets showed that the new iterative scaling algorithm converges substantially faster than both the IIS algorithm and the conjugate gradient algorithm (CG). Furthermore, we examine the quality of the optimal parameters found by each learning algorithm in the case of incomplete training. Experiments have shown that, when only a limited amount of computation is allowed (e.g. no convergence is achieved), the new algorithm FIS is able to obtain lower testing errors than both the IIS method and the CG method.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {282–289},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041873,
+author = {Jensen, David and Neville, Jennifer and Hay, Michael},
+title = {Avoiding Bias When Aggregating Relational Data with Degree Disparity},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {A common characteristic of relational data sets --degree disparity--can lead relational learning algorithms to discover misleading correlations. Degree disparity occurs when the frequency of a relation is correlated with the values of the target variable. In such cases, aggregation functions used by many relational learning algorithms will result in misleading correlations and added complexity in models. We examine this problem through a combination of simulations and experiments. We show how two novel hypothesis testing procedures can adjust for the effects of using aggregation functions in the presence of degree disparity.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {274–281},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041872,
+author = {Jaeger, Manfred},
+title = {Probabilistic Classifiers and the Concepts They Recognize},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {We investigate algebraic, logical, and geometric properties of concepts recognized by various classes of probabilistic classifiers. For this we introduce a natural hierarchy of probabilistic classifiers, the lowest level of which comprises the naive Bayesian classifiers. We show that the expressivity of classifiers on the different levels in the hierarchy is characterized algebraically by separability with polynomials of different degrees. A consequence of this result is that every linearly separable concept can be recognized by a naive Bayesian classifier. We contrast this result with negative results about the naive Bayesian classifier previously reported in the literature, and point out that these results only pertain to specific learning scenarios for naive Bayesian classifiers. We also present some logical and geometric characterizations of linearly separable concepts, thus providing additional intuitive insight into what concepts are recognizable by naive Bayesian classifiers.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {266–273},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041871,
+author = {Isaac, Andrew and Sammut, Claude},
+title = {Goal-Directed Learning to Fly},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {Learning to fly an aircraft is a complex task that requires the development of control skills and goal achievement strategies. This paper presents a behavioural cloning system that learns to successfully fly manoeuvres, in turbulence, of a realistic aircraft simulation. A hierarchical decomposition of the problem is employed where goal settings and the control skill to achieve them are learnt. The benefit of this goal-directed approach is demonstrated in the reuse of the learnt manoeuvres to a flight path that includes novel manoeuvres. The system is based on an error minimisation technique that benefits from the use of model tree learners. The model trees provide a compact and comprehensible representation of the underlying control skill and goal structure. The performance of the system was improved by compensating for human reaction times and goal anticipation. We conclude that our system addresses current limitations of behavioural cloning by producing robust, reusable and readable clones.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {258–265},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041870,
+author = {Harrington, Edward F.},
+title = {Online Ranking/Collaborative Filtering Using the Perceptron Algorithm},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {In this paper we present a simple to implement truly online large margin version of the Perceptron ranking (PRank) algorithm, called the OAP-BPM (Online Aggregate Prank-Bayes Point Machine) algorithm, which finds a rule that correctly ranks a given training sequence of instance and target rank pairs. PRank maintains a weight vector and a set of thresholds to define a ranking rule that maps each instance to its respective rank. The OAP-BPM algorithm is an extension of this algorithm by approximating the Bayes point, thus giving a good generalization performance. The Bayes point is approximated by averaging the weights and thresholds associated with several PRank algorithms run in parallel. In order to ensure diversity amongst the solutions of the PRank algorithms we randomly subsample the stream of incoming training examples. We also introduce two new online versions of Bagging and the voted Perceptron using the same randomization trick as OAP-BPM, hence are referred to as OAP with extension -Bagg and -VP respectively. A rank learning experiment was conducted on a synthetic data set and collaborative filtering experiments on a number of real world data sets were conducted, showing that OAP-BPM has a better performance compared to PRank and a pure online regression algorithm, albeit with a higher computational cost, though is not too prohibitive.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {250–257},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041869,
+author = {Greenwald, Amy and Hall, Keith},
+title = {Correlated-Q Learning},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {This paper introduces Correlated-Q (CE-Q) learning, a multiagent Q-learning algorithm based on the correlated equilibrium (CE) solution concept. CE-Q generalizes both Nash-Q  and Friend-and-Foe-Q: in general-sum games, the set of correlated equilibria contains the set of Nash equilibria; in constant-sum games, the set of correlated equilibria contains the set of minimax equilibria. This paper describes experiments with four variants of CE-Q, demonstrating empirical convergence to equilibrium policies on a testbed of general-sum Markov games.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {242–249},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041868,
+author = {Graepel, Thore},
+title = {Solving Noisy Linear Operator Equations by Gaussian Processes: Application to Ordinary and Partial Differential Equations},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {We formulate the problem of solving stochastic linear operator equations in a Bayesian Ganssian process (GP) framework. The solution is obtained in the spirit of a collocation method based on noisy evaluations of the target function at randomly drawn or deliberately chosen points. Prior knowledge about the solution is encoded by the covariance kernel of the GP. As in GP regression, analytical expressions for the mean and variance of the estimated target function are obtained, from which the solution of the operator equation follows by a manipulation of the kernel. Linear initial and boundary value constraints can be enforced by embedding the non-parametric model in a form that automatically satisfies the boundary conditions. The method is illustrated on a noisy linear first-order ordinary differential equation with initial condition and on a noisy second-order partial differential equation with Dirichlet boundary conditions.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {234–241},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041867,
+author = {Ghavamzadeh, Mohammad and Mahadevan, Sridhar},
+title = {Hierarchical Policy Gradient Algorithms},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {Hierarchical reinforcement learning is a general framework which attempts to accelerate policy learning in large domains. On the other hand, policy gradient reinforcement learning (PGRL) methods have received recent attention as a means to solve problems with continuous state spaces. However, they suffer from slow convergence. In this paper, we combine these two approaches and propose a family of hierarchical policy gradient algorithms for problems with continuous state and/or action spaces. We also introduce a class of hierarchical hybrid algorithms, in which a group of subtasks, usually at the higher-levels of the hierarchy, are formulated as value function-based RL (VFRL) problems and the others as PGRL problems. We demonstrate the performance of our proposed algorithms using a simple taxi-fuel problem and a complex continuous state and action ship steering domain.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {226–233},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041866,
+author = {Geibel, Peter and Wysotzki, Fritz},
+title = {Perceptron Based Learning with Example Dependent and Noisy Costs},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {Learning algorithms from the fields of artificial neural networks and machine learning, typically, do not take any costs into account or allow only costs depending on the classes of the examples that are used for learning. As an extension of class dependent costs, we consider costs that are example, i.e. feature and class dependent. We derive a cost-sensitive perceptron learning rule for nonseparable classes, that can be extended to multi-modal classes (DIPOL). We also derive aa approach for including example dependent costs into an arbitrary cost-insensitive learning algorithm by sampling according to modified probability distributions.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {218–225},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041865,
+author = {Garg, Ashutosh and Roth, Dan},
+title = {Margin Distribution and Learning Algorithms},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {Recent theoretical results have shown that improved bounds on generalization error of classifiers can be obtained by explicitly taking the observed margin distribution of the training data into account. Currently, algorithms used in practice do not make use of the margin distribution and are driven by optimization with respect to the points that are closest to the hyperplane.This paper enhances earlier theoretical results and derives a practical data-dependent complexity measure for learning. The new complexity measure is a function of the observed margin distribution of the data, and can be used, as we show, as a model selection criterion. We then present the Margin Distribution Optimization (MDO) learning algorithm, that directly optimizes this complexity measure. Empirical evaluation of MDO demonstrates that it consistently outperforms SVM.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {210–217},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041864,
+author = {F\"{u}rnkranz, Johannes and Flach, Peter A.},
+title = {An Analysis of Rule Evaluation Metrics},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {In this paper we analyze the most popular evaluation metrics for separate-and-conquer rule learning algorithms. Our results show that all commonly used heuristics, including accuracy, weighted relative accuracy, entropy, Gini index and information gain, are equivalent to one of two fundamental prototypes: precision, which tries to optimize the area under the ROC curve for unknown costs, and a cost-weighted difference between covered positive and negative examples, which tries to find the optimal point under known or assumed costs. We also show that a straightforward generalization of the m-estimate trades off these two prototypes.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {202–209},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041863,
+author = {Flach, Peter A.},
+title = {The Geometry of ROC Space: Understanding Machine Learning Metrics through ROC Isometrics},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {Many different metrics are used in machine learning and data mining to build and evaluate models. However, there is no general theory of machine learning metrics, that could answer questions such as: When we simultaneously want to optimise two criteria, how can or should they be traded off? Some metrics are inherently independent of class and misclassification cost distributions, while other are not -- can this be made more precise? This paper provides a derivation of ROC space from first principles through 3D ROC space and the skew ratio, and redefines metrics in these dimensions. The paper demonstrates that the graphical depiction of machine learning metrics by means of ROC isometrics gives many useful insights into the characteristics of these metrics, and provides a foundation on which a theory of machine learning metrics can be built.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {194–201},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041862,
+author = {Fern, Xiaoli Zhang and Brodley, Carla E.},
+title = {Random Projection for High Dimensional Data Clustering: A Cluster Ensemble Approach},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {We investigate how random projection can best be used for clustering high dimensional data. Random projection has been shown to have promising theoretical properties. In practice, however, we find that it results in highly unstable clustering performance. Our solution is to use random projection in a cluster ensemble approach. Empirical results show that the proposed approach achieves better and more robust clustering performance compared to not only single runs of random projection/clustering but also clustering with PCA, a traditional data reduction method for high dimensional data. To gain insights into the performance improvement obtained by our ensemble method, we analyze and identify the influence of the quality and the diversity of the individual clustering solutions on the final ensemble performance.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {186–193},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041861,
+author = {Fern, Xiaoli Zhang and Brodley, Carla E.},
+title = {Boosting Lazy Decision Trees},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {This paper explores the problem of how to construct lazy decision tree ensembles. We present and empirically evaluate a relevance-based boosting-style algorithm that builds a lazy decision tree ensemble customized for each test instance. From the experimental results, we conclude that our boosting-style algorithm significantly improves the performance of the base learner. An empirical comparison to boosted regular decision trees shows that ensembles of lazy decision trees achieve comparable accuracy and better comprehensibility. We also introduce a novel distance-based pruning strategy for the lazy decision tree algorithm to address the problem of over-fitting. Our experiments show that the pruning strategy improves the accuracy and comprehensibility of both single lazy decision trees and boosted ensembles.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {178–185},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041860,
+author = {Fan, James and Lau, Raymond and Milkkulainen, Risto},
+title = {Utilizing Domain Knowledge in Neuroevolution},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {We propose a method called Rule-based ESP (RESP) for utilizing prior knowledge evolving Artificial Neural Networks (ANNs). First, KBANN-likete chniques are used to transform a set of rules into an ANN, then the ANN is trained using the Enforced Subpopulations (ESP) neuroevolution method. Empirical results in the Prey Capture domain show that RESP can reach higher level of performance than ESP. The results also suggest that incremental learning is not necessary with RESP, and it is often easier to design a set of rules than an incremental evolution scheme. In addition, an experiment with some of the rules deleted suggests that RESP is robust even with an incomplete knowledge base. RESP therefore provides a robust methodology for scaling up neuroevolution to harder tasks by utilizing existing knowledge about the domain.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {170–177},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041859,
+author = {Even-Dar, Eyal and Mannor, Shie and Mansour, Yishay},
+title = {Action Elimination and Stopping Conditions for Reinforcement Learning},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {We consider incorporating action elimination procedures in reinforcement learning algorithms. We suggest a framework that is based on learning an upper and a lower estimates of the value function or the Q-function and eliminating actions that are not optimal. We provide a model-based and a model-free variants of the elimination method. We further derive stopping conditions that guarantee that the learned policy is approximately optimal with high probability. Simulations demonstrate a considerable speedup and added robustness.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {162–169},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041858,
+author = {Engel, Yaakov and Mannor, Shie and Meir, Ron},
+title = {Bayes Meets Bellman: The Gaussian Process Approach to Temporal Difference Learning},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {We present a novel Bayesian approach to the problem of value function estimation in continuous state spaces. We define a probabilistic generative model for the value function by imposing a Gaussian prior over value functions and assuming a Gaussian noise model. Due to the Gaussian nature of the random processes involved, the posterior distribution of the value function is also Gaussian and is therefore described entirely by its mean and covariance. We derive exact expressions for the posterior process moments, and utilizing an efficient sequential sparsification method, we describe an on-line algorithm for learning them. We demonstrate the operation of the algorithm on a 2-dimensional continuous spatial navigation domain.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {154–161},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041857,
+author = {Elkan, Charles},
+title = {Using the Triangle Inequality to Accelerate K-Means},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {The k-means algorithm is by far the most widely used method for discovering clusters in data. We show how to accelerate it dramatically, while still always computing exactly the same result as the standard algorithm. The accelerated algorithm avoids unnecessary distance calculations by applying the triangle inequality in two different ways, and by keeping track of lower and upper bounds for distances between points and centers. Experiments show that the new algorithm is effective for datasets with up to 1000 dimensions, and becomes more and more effective as the number k of clusters increases. For k ≥ 20 it is many times faster than the best previously known accelerated k-means method.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {147–153},
+numpages = {7},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041856,
+author = {Duff, Michael},
+title = {Diffusion Approximation for Bayesian Markov Chains},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {Given a Markov chain with uncertain transition probabilities modelled in a Bayesian way, we investigate a technique for analytically approximating the mean transition frequency counts over a finite horizon. Conventional techniques for addressing this problem either require the enumeration of a set of generalized process "hyperstates" whose cardinality grows exponentially with the terminal horizon, or axe limited to the two-state case and expressed in terms of hypergeometric series. Our approach makes use of a diffusion approximation technique for modelling the evolution of information state components of the hyperstate process. Interest in this problem stems from a consideration of the policy evaluation step of policy iteration algorithms applied to Markov decision processes with uncertain transition probabilities.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {139–147},
+numpages = {9},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041855,
+author = {Duff, Michael},
+title = {Design for an Optimal Probe},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {Given a Markov decision process (MDP) with expressed prior uncertainties in the process transition probabilities, we consider the problem of computing a policy that optimizes expected total (finite-horizon) reward. Implicitly, such a policy would effectively resolve the "exploration-versus-exploitation tradeoff" faced, for example, by an agent that seeks to optimize total reinforcement obtained over the entire duration of its interaction with an uncertain world. A Bayesian formulation leads to an associated MDP defined over a set of generalized process "hyperstates" whose cardinality grows exponentiaily with the planning horizon. Here we retain the full Bayesian framework, but sidestep intractability by applying techniques from reinforcement learning theory. We apply our resulting actor-critic algorithm to a problem of "optimal probing," in which the task is to identify unknown transition probabilities of an MDP using online experience.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {131–138},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041854,
+author = {Driessens, Kurt and Ramon, Jan},
+title = {Relational Instance Based Regression for Relational Reinforcement Learning},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {Relational reinforcement learning (RRL) is a Q-learning technique which uses first order regression techniques to generalize the Q-function. Both the relational setting and the Q-learning context introduce a number of difficulties which must be dealt with. In this paper we investigate a few different methods that do incremental relational instance based regression and can be used for RRL. This leads us to different approaches which limit both memory consumption and processing times. We implemented a number of these approaches and experimentally evaluated and compared them to each other and an existing RRL algorithm. These experiments show relational instance based regression to work well and to add robustness to RRL.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {123–130},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041853,
+author = {DeCoste, Dennis and Mazzonl, Dominic},
+title = {Fast Query-Optimized Kernel Machine Classification via Incremental Approximate Nearest Support Vectors},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {Support vector machines (and other kernel machines) offer robust modern machine learning methods for nonlinear classification. However, relative to other alternatives (such as linear methods, decision trees and neural networks), they can be orders of magnitude slower at query-time. Unlike existing methods that attempt to speedup querytime, such as reduced set compression (e.g. (Burges, 1996)) and anytime bounding (e.g. (DeCoste, 2002), we propose a new and efficient approach based on treating the kernel machine classifier as a special form of k nearest-neighbor. Our approach improves upon a traditional k-NN by determining at query-time a good k for each query, based on pre-query analysis guided by the original robust kernel machine. We demonstrate effectiveness on high-dimensional benchmark MNIST data, observing a greater than 100- fold reduction in the number of SVs required per query (amortized over all 45 pairwise MNIST digit classifiers), with no extra test errors (in fact, it happens to make 4 fewer).},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {115–122},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041852,
+author = {Cumby, Chad and Roth, Dan},
+title = {On Kernel Methods for Relational Learning},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {Kernel methods have gained a great deal of popularity in the machine learning community as a method to learn indirectly in high-dimensional feature spaces. Those interested in relational learning have recently begun to cast learning from structured and relational data in terms of kernel operations.We describe a general family of kernel functions built up from a description language of limited expressivity and use it to study the benefits and drawbacks of kernel learning in relational domains. Learning with kernels in this family directly models learning over an expanded feature space constructed using the same description language. This allows us to examine issues of time complexity in terms of learning with these and other relational kernels, and how these relate to generalization ability. The tradeoffs between using kernels in a very high dimensional implicit space versus a restricted feature space, is highlighted through two experiments, in bioinformatics and in natural language processing.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {107–114},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041851,
+author = {Cozman, Fabio Gagliardi and Cohen, Ira and Cirelo, Marcelo Cesar},
+title = {Semi-Supervised Learning of Mixture Models},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {This paper analyzes the performance of semi-supervised learning of mixture models. We show that unlabeled data can lead to an increase in classification error even in situations where additional labeled data would decrease classification error. We present a mathematical analysis of this "degradation" phenomenon and show that it is due to the fact that bias may be adversely affected by unlabeled data. We discuss the impact of these theoretical results to practical situations.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {99–106},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041850,
+author = {Conitzer, Vincent and Sandholm, Tuomas},
+title = {BL-WoLF: A Framework for Loss-Bounded Learnability in Zero-Sum Games},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {We present BL-WoLF, a framework for learnability in repeated zero-sum games where the cost of learning is measured by the losses the learning agent accrues (rather than the number of rounds). The game is adversarially chosen from some family that the learner knows. The opponent knows the game and the learner's learning strategy. The learner tries to either not accrue losses, or to quickly learn about the game so as to avoid future losses (this is consistent with the Win or Learn Fast (WoLF) principle; BL stands for "bounded loss"). Our framework allows for both probabilistic and approximate learning. The resultant notion of BL-WoLF-learnability can be applied to any class of games, and allows us to measure the inherent disadvantage to a player that does not know which game in the class it is in.We present guaranteed BL-WoLF-learnability results for families of games with deterministic payoffs and families of games with stochastic payoffs. We demonstrate that these families are guaranteed approximately BL-WoLF-learnable with lower cost. We then demonstrate families of games (both stochastic and deterministic) that are not guaranteed BL-WoLF-learnable. We show that those families, nevertheless, are BL-WoLF-learnable . To prove these results, we use a key lemma which we derive.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {91–98},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041849,
+author = {Conitzer, Vincent and Sandholm, Tuomas},
+title = {AWESOME: A General Multiagent Learning Algorithm That Converges in Self-Play and Learns a Best Response against Stationary Opponents},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {A satisfactory multiagent learning algorithm should, at a minimum, learn to play optimally against stationary opponents and converge to a Nash equilibrium in self-play. The algorithm that has come closest, WoLF-IGA, has been proven to have these two properties in 2-player 2-action repeated games-- assuming that the opponent's (mixed) strategy is observable. In this paper we present AWESOME, the first algorithm that is guaranteed to have these two properties in all repeated (finite) games. It requires only that the other players' actual actions (not their strategies) can be observed at each step. It also learns to play optimally against opponents that eventually become stationary. The basic idea behind AWESOME (Adapt When Everybody is Stationary, Otherwise Move to Equilibrium) is to try to adapt to the others' strategies when they appear stationary, but otherwise to retreat to a precomputed equilibrium strategy. The techniques used to prove the properties of AWESOME are fundamentally different from those used for previous algorithms, and may help in analyzing other multiagent learning algorithms also.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {83–90},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041848,
+author = {Cerquides, Jes\'{u}s and De M\'{a}ntaras, Ramon L\'{o}pez},
+title = {Tractable Bayesian Learning of Tree Augmented Naive Bayes Models},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {Bayesian classifiers such as Naive Bayes or Tree Augmented Naive Bayes (TAN) have shown excellent performance given their simplicity and heavy underlying independence assumptions. In this paper we introduce a classifier taking as basis the TAN model and taking into account uncertainty in model selection. To do this we introduce decomposable distributions over TANs and show that they allow the expression resulting from the Bayesian model averaging of TAN models to be integrated into closed form. With this result we construct a classifier with a shorter learning time and a longer classification time than TAN. Empirical results show that the classifier is, most of the cases, more accurate than TAN and approximates better the class probabilities.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {75–82},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041847,
+author = {Brown, Gavin and Wyatt, Jeremy},
+title = {The Use of the Ambiguity Decomposition in Neural Network Ensemble Learning Methods},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {We analyze the formal grounding behind Negative Correlation (NC) Learning, an ensemble learning technique developed in the evolutionary computation literature. We show that by removing an assumption made in the original work, NC can be seen to be exploiting the well-known Ambiguity decomposition of the ensemble error, grounding it in a statistics framework around the bias-variance decomposition. We use this grounding to find bounds for the parameters, and provide insights into the behaviour of the optimal parameter values. These observations allow us understand how NC relates to other algorithms, identifying a group of papers spread over the last decade that have all exploited the Ambiguity decomposition for machine learning problems. When taking into account our new understanding of the algorithm, significant reductions in error rates were observed in empirical tests.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {67–74},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041846,
+author = {Brinker, Klaus},
+title = {Incorporating Diversity in Active Learning with Support Vector Machines},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {In many real world applications, active selection of training examples can significantly reduce the number of labelled training examples to learn a classification function. Different strategies in the field of support vector machines have been proposed that iteratively select a single new example from a set of unlabelled examples, query the corresponding class label and then perform retraining of the current classifier. However, to reduce computational time for training, it might be necessary to select batches of new training examples instead of single examples. Strategies for single examples can be extended straightforwardly to select batches by choosing the h &gt; 1 examples that get the highest values for the individual selection criterion. We present a new approach that is especially designed to construct batches and incorporates a diversity measure. It has low computational requirements making it feasible for large scale problems with several thousands of examples. Experimental results indicate that this approach provides a faster method to attain a level of generalization accuracy in terms of the number of labelled examples.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {59–66},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041845,
+author = {Bouckaert, Remco R.},
+title = {Choosing between Two Learning Algorithms Based on Calibrated Tests},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {Designing a hypothesis test to determine the best of two machine learning algorithms with only a small data set available is not a simple task. Many popular tests suffer from low power (5\texttimes{}2 cv [2]), or high Type I error (Weka's 10\texttimes{}10 cross validation [11]). Furthermore, many tests show a low level of replicability, so that tests performed by different scientists with the same pair of algorithms, the same data sets and the same hypothesis test still may present different results. We show that 5\texttimes{}2 cv, resampling and 10 fold cv suffer from low replicability.The main complication is due to the need to use the data multiple times. As a consequence, independence assumptions for most hypothesis tests are violated. In this paper, we pose the case that reuse of the same data causes the effective degrees of freedom to be much lower than theoretically expected. We show how to calibrate the effective degrees of freedom empirically for various tests. Some tests are not calibratable, indicating another flaw in the design. However the ones that are calibratable all show very similar behavior. Moreover, the Type I error of those tests is on the mark for a wide range of circumstances, while they show a power and replicability that is a considerably higher than currently popular hypothesis tests.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {51–58},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041844,
+author = {Bi, Jinbo and Bennett, Kristin P.},
+title = {Regression Error Characteristic Curves},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {Receiver Operating Characteristic (ROC) curves provide a powerful tool for visualizing and comparing classification results. Regression Error Characteristic (REC) curves generalize ROC curves to regression. REC curves plot the error tolerance on the x-axis versus the percentage of points predicted within the tolerance on the y-axis. The resulting curve estimates the cumulative distribution function of the error. The REC curve visually presents commonly-used statistics. The area-over-the-curve (AOC) is a biased estimate of the expected error. The R2 value can be estimated using the ratio of the AOC for a given model to the AOC for the null model. Users can quickly assess the relative merits of many regression functions by examining the relative position of their REC curves. The shape of the curve reveals additional information that can be used to guide modeling.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {43–50},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041843,
+author = {Bi, Jinbo},
+title = {Multi-Objective Programming in SVMs},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {We propose a general framework for support vector machines (SVM) based on the principle of multi-objective optimization. The learning of SVMs is formulated as a multi-objective program by setting two competing goals to minimize the empirical risk and minimize the model capacity. Distinct approaches to solving the MOP introduce various SVM formulations. The proposed framework enables a more effective minimization of the VC bound on the generalization risk. We develop a feature selection approach based on the MOP framework and demonstrate its effectiveness on hand-written digit data.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {35–42},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041842,
+author = {Berardi, Margherita and Ceci, Michelangelo and Esposito, Floriana and Malerba, Donato},
+title = {Learning Logic Programs for Layout Analysis Correction},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {Layout analysis is the process of extracting a hierarchical structure describing the layout of a page. In the system WISDOM++, the layout analysis is performed in two steps: firstly, the global analysis determines possible areas containing paragraphs, sections, columns, figures and tables, and secondly, the local analysis groups together blocks that possibly fall within the same area. The result of the local analysis process strongly depends on the quality of the results of the first step. We investigate the possibility of supporting the user during the correction of the results of the global analysis. This is done by automatically generating training examples of action selections from the sequence of user actions, and then by learning action selection rules for layout correction. Rules are expressed as a logic program whose induction demands the careful application of ILP techniques. Experimental results on a set of multi-page documents shed evidence on the difficulty of the learning task tackled and pose new problems in learning control rules for adaptive interfaces.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {27–34},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041841,
+author = {Baram, Yoram and El-Yaniv, Ran and Luz, Kobi},
+title = {Online Choice of Active Learning Algorithms},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {This paper is concerned with the question of how to online combine an ensemble of active learners so as to expedite the learning progress during a pool-based active learning session. We develop a powerful active learning master algorithm, based a known competitive algorithm for the multi-armed bandit problem and a novel semi-supervised performance evaluation statistic. Taking an ensemble containing two of the best known active learning algorithms and a new algorithm, the resulting new active learning master algorithm is empirically shown to consistently perform almost as well as and sometimes outperform the best algorithm in the ensemble on a range of classification problems.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {19–26},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041840,
+author = {Bar-Hillel, Aharon and Hertz, Tomer and Shental, Noam and Weinshall, Daphna},
+title = {Learning Distance Functions Using Equivalence Relations},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {We address the problem of learning distance metrics using side-information in the form of groups of "similar" points. We propose to use the RCA algorithm, which is a simple and efficient algorithm for learning a full ranked Mahalanobis metric (Shental et al., 2002). We first show that RCA obtains the solution to an interesting optimization problem, founded on an information theoretic basis. If the Mahalanobis matrix is allowed to be singular, we show that Fisher's linear discriminant followed by RCA is the optimal dimensionality reduction algorithm under the same criterion. We then show how this optimization problem is related to the criterion optimized by another recent algorithm for metric learning (Xing et al., 2002), which uses the same kind of side information. We empirically demonstrate that learning a distance metric using the RCA algorithm significantly improves clustering performance, similarly to the alternative algorithm. Since the RCA algorithm is much more efficient and cost effective than the alternative, as it only uses closed form expressions of the data, it seems like a preferable choice for the learning of full rank Mahalanobis distances.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {11–18},
+numpages = {8},
+keywords = {clustering, semi-supervised learning, learning from partial knowledge, feature selection},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@inproceedings{10.5555/3041838.3041839,
+author = {Altun, Yasemin and Tsochantaridis, Ioannis and Hofmann, Thomas},
+title = {Hidden Markov Support Vector Machines},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+abstract = {This paper presents a novel discriminative learning technique for label sequences based on a combination of the two most successful learning algorithms, Support Vector Machines and Hidden Markov Models which we call Hidden Markov Support Vector Machine. The proposed architecture handles dependencies between neighboring labels using Viterbi decoding. In contrast to standard HMM training, the learning procedure is discriminative and is based on a maximum/soft margin criterion. Compared to previous methods like Conditional Random Fields, Maximum Entropy Markov Models and label sequence boosting, HM-SVMs have a number of advantages. Most notably, it is possible to learn non-linear discriminant functions via kernel functions. At the same time, HM-SVMs share the key advantages with other discriminative methods, in particular the capability to deal with overlapping features. We report experimental evaluations on two tasks, named entity recognition and part-of-speech tagging, that demonstrate the competitiveness of the proposed approach.},
+booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+pages = {3–10},
+numpages = {8},
+location = {Washington, DC, USA},
+series = {ICML'03}
+}
+
+@proceedings{10.5555/3041838,
+title = {ICML'03: Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+year = {2003},
+isbn = {1577351894},
+publisher = {AAAI Press},
+location = {Washington, DC, USA}
+}
+

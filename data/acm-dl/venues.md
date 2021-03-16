@@ -3,7 +3,7 @@
 This test collection contains the documents (BibTeX reference files) from the following venues (years, #nb of docs):
 
 - Conferences:
-    - ADCS (12-19, #115), AIRS (08-09, #120), AKBC (12-13, #44), AND (08-10, #48), ASONAM (09-19, #2033), AVI (94-20, #1108)
+    - ADCS (12-19, #115), AIRS (08-09, #120), AIES (18-20), AKBC (12-13, #44), AND (08-10, #48), ASONAM (09-19, #2033), AVI (94-20, #1108)
     - BooksOnline (08-12, #57)
     - CERI (16-18, #41), CHI/CHI-EA (82-20, #19446), CHIIR (16-20, #374), CIKM (93-20, #5497),
       CIR (11, #7), CLEF (00-15), CompSci (13, #8), Compute (08-17, #242), CSCW (86-19, #2726)
@@ -12,7 +12,7 @@ This test collection contains the documents (BibTeX reference files) from the fo
     - ECIR (02-14, #921), ESAIR (09-15, #101)
     - FAT* (19-20, #143), FIRE (12-19, #91)
     - HCIR (12-13, #9), HT (87-20, #1339)
-    - ICML (04-09, #843), ICTIR (09, 11, 13-20, #313), ICTS (12-16, #238), IIIX (06-14, #242), IUI (93-20, #2043)
+    - ICML (00-17), ICTIR (09, 11, 13-20, #313), ICTS (12-16, #238), IIIX (06-14, #242), IUI (93-20, #2043)
     - JCDL (01-20, #2183)
     - KDD (99-20, #3966)
     - NLPIR (18-19, #43)
@@ -58,4 +58,10 @@ This test collection contains the documents (BibTeX reference files) from the fo
 ```
 cat *.bib > big.bib
 bibtool -- 'print.deleted.entries = off' -d big.bib -o big-nodup.bib
+```
+
+## Scrapping bibtex from acm dl
+
+```
+https://dl.acm.org/action/doSearch?LimitedContentGroupKey=10.5555%2F3042817&expand=all&pageSize=500&startPage=0&sortBy=Ppub_asc
 ```
