@@ -15,7 +15,7 @@ pip install -r requirements.txt
 
 ### Documents 
 
-Documents are BibTeX reference files of papers about IR-related topics collected from the [ACM Digital Library](https://dl.acm.org/). We use the SIGs IR, KDD, CHI, WEB and MOD sponsored conferences and journals as filter. BibTeX files are grouped by year (e.g. 'sigir/sigir-1999' contains all citations from SIGIR-1999). Details about the venues are presented in ['data/acm-dl/venues.md'](data/acm-dl/venues.md). An example of document is given below:
+Documents are BibTeX reference files of papers about IR-related topics collected from the [ACM Digital Library](https://dl.acm.org/). We use the SIGs IR, KDD, CHI, WEB and MOD sponsored conferences and journals as filter. BibTeX files are grouped by year (e.g. 'sigir/sigir-1999' contains all citations from SIGIR-1999). Details about the venues are presented in ['data/acm-dl/venues.md'](venues). An example of document is given below:
 
 ```bibtex
 @inproceedings{10.1145/3383583.3398517,
@@ -103,16 +103,16 @@ python3 src/cc_stats.py --input data/topics+qrels/papers/ \
                         --collection data/topics+qrels/collection.txt
 
 avg number of cited documents: 31.82 [8 - 71]
-avg number of cited documents in collection: 15.50 [1 - 37]
-avg coverage of collection: 0.4982 [0.0909 - 0.8333]
+avg number of cited documents in collection: 15.62 [1 - 37]
+avg coverage of collection: 0.5011 [0.0909 - 0.8333]
 ```
 
 - number of citation contexts (s): 835
-- number of 1+/all citation contexts (s): 548
+- number of 1+/all citation contexts (s): 550
 
 |     0 |    1+ |   All |
 | -----:| -----:| -----:|
-| 34.37 | 21.08 | 44.55 |
+| 34.13 | 21.20 | 44.67 |
 
 - number of citation contexts (p): 341
 - number of 1+/all citation contexts (p): 268
@@ -153,16 +153,16 @@ cd tools/eval/ndeval && make && cd ../../..
 ```
 ./src/0_create_data.sh
 
-70960 entries with T+A+K
-present: 0.5356199337142871
-absent: 0.4643800662857018
-├──> c1/Reordored (i.e. all words): 0.1172396547138912
-├──> c2/Mixed (i.e. some words): 0.19282425867095065
-├──> c3/Unseen (i.e. no words): 0.15431615290087136
-├──> exp. : 0.1341835075750805
-avg nb kps : 4.5367317609265365
+75369 entries with T+A+K
+present: 0.5341884786642571
+absent: 0.46581152133573894
+|-> c1/Reordored (i.e. all words): 0.11652164544805718
+|-> c2/Mixed (i.e. some words): 0.19352479545861326
+|-> c3/Unseen (i.e. no words): 0.15576508042908255
+|-> exp. : 0.1349176087261396
+avg nb kps : 4.537906424525423
 
-70956 T+A+K, 18726 T+A, 13117 T over 102510 entries
+75333 T+A+K, 20043 T+A, 13313 T over 108400 entries
 
 ./src/1_create_indexes.sh
 ./src/2_retrieve.sh

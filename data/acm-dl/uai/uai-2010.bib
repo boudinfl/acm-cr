@@ -1,0 +1,1321 @@
+@inproceedings{10.5555/3023549.3023550,
+author = {Adams, Ryan Prescott and Dahl, George E. and Murray, Iain},
+title = {Incorporating Side Information in Probabilistic Matrix Factorization with Gaussian Processes},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {Probabilistic matrix factorization (PMF) is a powerful method for modeling data associated with pairwise relationships, finding use in collaborative filtering, computational biology, and document analysis, among other areas. In many domains, there are additional covariates that can assist in prediction. For example, when modeling movie ratings, we might know when the rating occurred, where the user lives, or what actors appear in the movie. It is difficult, however, to incorporate this side information into the PMF model. We propose a framework for incorporating side information by coupling together multiple PMF problems via Gaussian process priors. We replace scalar latent features with functions that vary over the covariate space. The GP priors on these functions require them to vary smoothly and share information. We apply this new method to predict the scores of professional basketball games, where side information about the venue and date of the game are relevant for the outcome.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {1–9},
+numpages = {9},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023551,
+author = {Agovic, Amrudin and Banerjee, Arindam},
+title = {Gaussian Process Topic Models},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {We introduce Gaussian Process Topic Models (GPTMs), a new family of topic models which can leverage a kernel among documents while extracting correlated topics. GPTMs can be considered a systematic generalization of the Correlated Topic Models (CTMs) using ideas from Gaussian Process (GP) based embedding. Since GPTMs work with both a topic covariance matrix and a document kernel matrix, learning GPTMs involves a novel component—solving a suitable Sylvester equation capturing both topic and document dependencies. The efficacy of GPTMs is demonstrated with experiments evaluating the quality of both topic modeling and embedding.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {10–19},
+numpages = {10},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023552,
+author = {Ahmed, Amr and Xing, Eric P.},
+title = {Timeline: A Dynamic Hierarchical Dirichlet Process Model for Recovering Birth/Death and Evolution of Topics in Text Stream},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {Topic models have proven to be a useful tool for discovering latent structures in document collections. However, most document collections often come as temporal streams and thus several aspects of the latent structure such as the number of topics, the topics' distribution and popularity are time-evolving. Several models exist that model the evolution of some but not all of the above aspects. In this paper we introduce infinite dynamic topic models, iDTM, that can accommodate the evolution of all the aforementioned aspects. Our model assumes that documents are organized into epochs, where the documents within each epoch are exchangeable but the order between the documents is maintained across epochs. iDTM allows for unbounded number of topics: topics can die or be born at any epoch, and the representation of each topic can evolve according to a Markovian dynamics. We use iDTM to analyze the birth and evolution of topics in the NIPS community and evaluated the efficacy of our model on both simulated and real datasets with favorable outcome.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {20–29},
+numpages = {10},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023553,
+author = {Arora, Nimar S. and Braz, Rodrigo de Salvo and Sudderth, Erik B. and Russell, Stuart},
+title = {Gibbs Sampling in Open-Universe Stochastic Languages},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {Languages for open-universe probabilistic models (OUPMs) can represent situations with an unknown number of objects and identity uncertainty. While such cases arise in a wide range of important real-world applications, existing general purpose inference methods for OUPMs are far less efficient than those available for more restricted languages and model classes. This paper goes some way to remedying this deficit by introducing, and proving correct, a generalization of Gibbs sampling to partial worlds with possibly varying model structure. Our approach draws on and extends previous generic OUPM inference methods, as well as auxiliary variable samplers for nonparametric mixture models. It has been implemented for BLOG, a well-known OUPM language. Combined with compile-time optimizations, the resulting algorithm yields very substantial speedups over existing methods on several test cases, and substantially improves the practicality of OUPM languages generally.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {30–39},
+numpages = {10},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023554,
+author = {Ayachi, Raouia and Amor, Nahla Ben and Benferhat, Salem and Haenni, Rolf},
+title = {Compiling Possibilistic Networks: Alternative Approaches to Possibilistic Inference},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {Qualitative possibilistic networks, also known as min-based possibilistic networks, are important tools for handling uncertain information in the possibility theory framework. Despite their importance, only the junction tree adaptation has been proposed for exact reasoning with such networks. This paper explores alternative algorithms using compilation techniques. We first propose possibilistic adaptations of standard compilation-based probabilistic methods. Then, we develop a new, purely possibilistic, method based on the transformation of the initial network into a possibilistic base. A comparative study shows that this latter performs better than the possibilistic adaptations of probabilistic methods. This result is also confirmed by experimental results.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {40–47},
+numpages = {8},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023555,
+author = {Bauters, Kim and Schockaert, Steven and De Cock, Martine and Vermeir, Dirk},
+title = {Possibilistic Answer Set Programming Revisited},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {Possibilistic answer set programming (PASP) extends answer set programming (ASP) by attaching to each rule a degree of certainty. While such an extension is important from an application point of view, existing semantics are not well-motivated, and do not always yield intuitive results. To develop a more suitable semantics, we first introduce a characterization of answer sets of classical ASP programs in terms of possibilistic logic where an ASP program specifies a set of constraints on possibility distributions. This characterization is then naturally generalized to define answer sets of PASP programs. We furthermore provide a syntactic counterpart, leading to a possibilistic generalization of the well-known Gelfond-Lifschitz reduct, and we show how our framework can readily be implemented using standard ASP solvers.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {48–55},
+numpages = {8},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023556,
+author = {Bhattacharjya, Debarun and Shachter, Ross D.},
+title = {Three New Sensitivity Analysis Methods for Influence Diagrams},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {Performing sensitivity analysis for influence diagrams using the decision circuit framework is particularly convenient, since the partial derivatives with respect to every parameter are readily available [Bhattacharjya and Shachter, 2007; 2008]. In this paper we present three non-linear sensitivity analysis methods that utilize this partial derivative information and therefore do not require re-evaluating the decision situation multiple times. Specifically, we show how to efficiently compare strategies in decision situations, perform sensitivity to risk aversion and compute the value of perfect hedging [Seyller, 2008].},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {56–64},
+numpages = {9},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023557,
+author = {Blundell, Charles and Teh, Yee Whye and Heller, Katherine A.},
+title = {Bayesian Rose Trees},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {Hierarchical structure is ubiquitous in data across many domains. There are many hierarchical clustering methods, frequently used by domain experts, which strive to discover this structure. However, most of these methods limit discoverable hierarchies to those with binary branching structure. This limitation, while computationally convenient, is often undesirable. In this paper we explore a Bayesian hierarchical clustering algorithm that can produce trees with arbitrary branching structure at each node, known as rose trees. We interpret these trees as mixtures over partitions of a data set, and use a computationally efficient, greedy agglomerative algorithm to find the rose trees which have high marginal likelihood given the data. Lastly, we perform experiments which demonstrate that rose trees are better models of data than the typical binary trees returned by other hierarchical clustering algorithms.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {65–72},
+numpages = {8},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023558,
+author = {Br\"{o}cheler, Matthias and Mihalkova, Lilyana and Getoor, Lise},
+title = {Probabilistic Similarity Logic},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {Many machine learning applications require the ability to learn from and reason about noisy multi-relational data. To address this, several effective representations have been developed that provide both a language for expressing the structural regularities of a domain, and principled support for probabilistic inference. In addition to these two aspects, however, many applications also involve a third aspect-the need to reason about similarities-which has not been directly supported in existing frameworks. This paper introduces probabilistic similarity logic (PSL), a general-purpose framework for joint reasoning about similarity in relational domains that incorporates probabilistic reasoning about similarities and relational structure in a principled way. PSL can integrate any existing domain-specific similarity measures and also supports reasoning about similarities between sets of entities. We provide efficient inference and learning techniques for PSL and demonstrate its effectiveness both in common relational tasks and in settings that require reasoning about similarity.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {73–82},
+numpages = {10},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023559,
+author = {Brunskill, Emma and Russell, Stuart},
+title = {RAPID: A Reachable Anytime Planner for Imprecisely-Sensed Domains},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {Despite the intractability of generic optimal partially observable Markov decision process planning, there exist important problems that have highly structured models. Previous researchers have used this insight to construct more efficient algorithms for factored domains, and for domains with topological structure in the flat state dynamics model. In our work, motivated by findings from the education community relevant to automated tutoring, we consider problems that exhibit a form of topological structure in the factored dynamics model. Our Reachable Anytime Planner for Imprecisely-sensed Domains (RAPID) leverages this structure to efficiently compute a good initial envelope of reachable states under the optimal MDP policy in time linear in the number of state variables. RAPID performs partially-observable planning over the limited envelope of states, and slowly expands the state space considered as time allows. RAPID performs well on a large tutoring-inspired problem simulation with 122 state variables, corresponding to a flat state space of over 1030 states.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {83–92},
+numpages = {10},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023560,
+author = {Carlin, Alan S. and Schurr, Nathan and Marecki, Janusz},
+title = {ALARMS: Alerting and Reasoning Management System for next Generation Aircraft Hazards},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {The Next Generation Air Transportation System will introduce new, advanced sensor technologies into the cockpit. With the introduction of such systems, the responsibilities of the pilot are expected to dramatically increase. In the ALARMS (ALerting And Reasoning Management System) project for NASA, we focus on a key challenge of this environment, the quick and efficient handling of aircraft sensor alerts. It is infeasible to alert the pilot on the state of all subsystems at all times. Furthermore, there is uncertainty as to the true hazard state despite the evidence of the alerts, and there is uncertainty as to the effect and duration of actions taken to address these alerts.This paper reports on the first steps in the construction of an application designed to handle Next Generation alerts. In ALARMS, we have identified 60 different aircraft subsystems and 20 different underlying hazards. In this paper, we show how a Bayesian network can be used to derive the state of the underlying hazards, based on the sensor input. Then, we propose a framework whereby an automated system can plan to address these hazards in cooperation with the pilot, using a Time-Dependent Markov Process (TMDP). Different hazards and pilot states will call for different alerting automation plans. We demonstrate this emerging application of Bayesian networks and TMDPs to cockpit automation, for a use case where a small number of hazards are present, and analyze the resulting alerting automation policies.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {93–100},
+numpages = {8},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023561,
+author = {Chaudhuri, Kamalika and Freund, Yoav and Hsu, Daniel},
+title = {An Online Learning-Based Framework for Tracking},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {We study the tracking problem, namely, estimating the hidden state of an object over time, from unreliable and noisy measurements. The standard framework for the tracking problem is the generative framework, which is the basis of solutions such as the Bayesian algorithm and its approximation, the particle filters. However, these solutions can be very sensitive to model mismatches. In this paper, motivated by online learning, we introduce a new framework for tracking. We provide an efficient tracking algorithm for this framework. We provide experimental results comparing our algorithm to the Bayesian algorithm on simulated data. Our experiments show that when there are slight model mismatches, our algorithm outperforms the Bayesian algorithm.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {101–108},
+numpages = {8},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023562,
+author = {Chen, Yutian and Welling, Max and Smola, Alex},
+title = {Super-Samples from Kernel Herding},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {We extend the herding algorithm to continuous spaces by using the kernel trick. The resulting "kernel herding" algorithm is an infinite memory deterministic process that learns to approximate a PDF with a collection of samples. We show that kernel herding decreases the error of expectations of functions in the Hilbert space at a rate O(1/T) which is much faster than the usual O(1/T) for iid random samples. We illustrate kernel herding by approximating Bayesian predictive distributions.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {109–116},
+numpages = {8},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023563,
+author = {Chernov, Alexey and Vovk, Vladimir},
+title = {Prediction with Advice of Unknown Number of Experts},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {In the framework of prediction with expert advice, we consider a recently introduced kind of regret bounds: the bounds that depend on the effective instead of nominal number of experts. In contrast to the Normal-Hedge bound, which mainly depends on the effective number of experts but also weakly depends on the nominal one, we obtain a bound that does not contain the nominal number of experts at all. We use the defensive forecasting method and introduce an application of defensive forecasting to multi-valued supermartingales.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {117–125},
+numpages = {9},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023564,
+author = {Choi, Jaesik and Amir, Eyal and Hill, David J.},
+title = {Lifted Inference for Relational Continuous Models},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {Relational Continuous Models (RCMs) represent joint probability densities over attributes of objects, when the attributes have continuous domains. With relational representations, they can model joint probability distributions over large numbers of variables compactly in a natural way. This paper presents a new exact lifted inference algorithm for RCMs, thus it scales up to large models of real world applications. The algorithm applies to Relational Pairwise Models which are (relational) products of potentials of arity 2. Our algorithm is unique in two ways. First, it substantially improves the efficiency of lifted inference with variables of continuous domains. When a relational model has Gaussian potentials, it takes only linear-time compared to cubic time of previous methods. Second, it is the first exact inference algorithm which handles RCMs in a lifted way. The algorithm is illustrated over an example from econometrics. Experimental results show that our algorithm outperforms both a ground-level inference algorithm and an algorithm built with previously-known lifted methods.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {126–134},
+numpages = {9},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023565,
+author = {Corona, Gabriel and Charpillet, Fran\c{c}ois},
+title = {Distribution over Beliefs for Memory Bounded Dec-POMDP Planning},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {We propose a new point-based method for approximate planning in Dec-POMDP which outperforms the state-of-the-art approaches in terms of solution quality. It uses a heuristic estimation of the prior probability of beliefs to choose a bounded number of policy trees: this choice is formulated as a combinatorial optimisation problem minimising the error induced by pruning.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {135–142},
+numpages = {8},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023566,
+author = {Daniu\v{s}is, Povilas and Janzing, Dominik and Mooij, Joris and Zscheischler, Jakob and Steudel, Bastian and Zhang, Kun and Sch\"{o}lkopf, Bernhard},
+title = {Inferring Deterministic Causal Relations},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {We consider two variables that are related to each other by an invertible function. While it has previously been shown that the dependence structure of the noise can provide hints to determine which of the two variables is the cause, we presently show that even in the deterministic (noise-free) case, there are asymmetries that can be exploited for causal inference. Our method is based on the idea that if the function and the probability density of the cause are chosen independently, then the distribution of the effect will, in a certain sense, depend on the function. We provide a theoretical analysis of this method, showing that it also works in the low noise regime, and link it to information geometry. We report strong empirical results on various real-world data sets from different domains.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {143–150},
+numpages = {8},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023567,
+author = {Elidan, Gal},
+title = {Inference-Less Density Estimation Using Copula Bayesian Networks},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {We consider learning continuous probabilistic graphical models in the face of missing data. For non-Gaussian models, learning the parameters and structure of such models depends on our ability to perform efficient inference, and can be prohibitive even for relatively modest domains. Recently, we introduced the Copula Bayesian Network (CBN) density model - a flexible framework that captures complex high-dimensional dependency structures while offering direct control over the univariate marginals, leading to improved generalization. In this work we show that the CBN model also offers significant computational advantages when training data is partially observed. Concretely, we leverage on the specialized form of the model to derive a computationally amenable learning objective that is a lower bound on the log-likelihood function. Importantly, our energy-like bound circumvents the need for costly inference of an auxiliary distribution, thus facilitating practical learning of high-dimensional densities. We demonstrate the effectiveness of our approach for learning the structure and parameters of a CBN model for two real-life continuous domains.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {151–159},
+numpages = {9},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023568,
+author = {Erez, Tom and Smart, William D.},
+title = {A Scalable Method for Solving High-Dimensional Continuous POMDPs Using Local Approximation},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {Partially-Observable Markov Decision Processes (POMDPs) are typically solved by finding an approximate global solution to a corresponding belief-MDP. In this paper, we offer a new planning algorithm for POMDPs with continuous state, action and observation spaces. Since such domains have an inherent notion of locality, we can find an approximate solution using local optimization methods. We parameterize the belief distribution as a Gaussian mixture, and use the Extended Kalman Filter (EKF) to approximate the belief update. Since the EKF is a first-order filter, we can marginalize over the observations analytically. By using feedback control and state estimation during policy execution, we recover a behavior that is effectively conditioned on incoming observations despite the unconditioned planning. Local optimization provides no guarantees of global optimality, but it allows us to tackle domains that are at least an order of magnitude larger than the current state-of-the-art. We demonstrate the scalability of our algorithm by considering a simulated hand-eye coordination domain with 16 continuous state dimensions and 6 continuous action dimensions.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {160–167},
+numpages = {8},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023569,
+author = {Ermon, Stefano and Conrad, Jon and Gomes, Carla and Selman, Bart},
+title = {Playing Games against Nature: Optimal Policies for Renewable Resource Allocation},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {In this paper we introduce a class of Markov decision processes that arise as a natural model for many renewable resource allocation problems. Upon extending results from the inventory control literature, we prove that they admit a closed form solution and we show how to exploit this structure to speed up its computation.We consider the application of the proposed framework to several problems arising in very different domains, and as part of the ongoing effort in the emerging field of Computational Sustainability we discuss in detail its application to the Northern Pacific Halibut marine fishery. Our approach is applied to a model based on real world data, obtaining a policy with a guaranteed lower bound on the utility function that is structurally very different from the one currently employed.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {168–176},
+numpages = {9},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023570,
+author = {Evans, Robin J. and Richardson, Thomas S.},
+title = {Maximum Likelihood Fitting of Acyclic Directed Mixed Graphs to Binary Data},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {Acyclic directed mixed graphs, also known as semi-Markov models represent the conditional independence structure induced on an observed margin by a DAG model with latent variables. In this paper we present the first method for fitting these models to binary data using maximum likelihood estimation.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {177–184},
+numpages = {8},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023571,
+author = {Gao, Xi Alice and Pfeffer, Avi},
+title = {Learning Game Representations from Data Using Rationality Constraints},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {While game theory is widely used to model strategic interactions, a natural question is where do the game representations come from? One answer is to learn the representations from data. If one wants to learn both the payoffs and the players' strategies, a naive approach is to learn them both directly from the data. This approach ignores the fact the players might be playing reasonably good strategies, so there is a connection between the strategies and the data. The main contribution of this paper is to make this connection while learning. We formulate the learning problem as a weighted constraint satisfaction problem, including constraints both for the fit of the payoffs and strategies to the data and the fit of the strategies to the payoffs. We use quantal response equilibrium as our notion of rationality for quantifying the latter fit. Our results show that incorporating rationality constraints can improve learning when the amount of data is limited.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {185–192},
+numpages = {8},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023572,
+author = {Garc\'{\i}a-Puente, Luis D. and Spielvogel, Sarah and Sullivant, Seth},
+title = {Identifying Causal Effects with Computer Algebra},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {The long-standing identification problem for causal effects in graphical models has many partial results but lacks a systematic study. We show how computer algebra can be used to either prove that a causal effect can be identified, generically identified, or show that the effect is not generically identifiable. We report on the results of our computations for linear structural equation models, where we determine precisely which causal effects are generically identifiable for all graphs on three and four vertices.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {193–200},
+numpages = {8},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023573,
+author = {Glaubius, Robert and Tidwell, Terry and Gill, Christopher and Smart, William D.},
+title = {Real-Time Scheduling via Reinforcement Learning},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {Cyber-physical systems, such as mobile robots, must respond adaptively to dynamic operating conditions. Effective operation of these systems requires that sensing and actuation tasks are performed in a timely manner. Additionally, execution of mission specific tasks such as imaging a room must be balanced against the need to perform more general tasks such as obstacle avoidance. This problem has been addressed by maintaining relative utilization of shared resources among tasks near a user-specified target level. Producing optimal scheduling strategies requires complete prior knowledge of task behavior, which is unlikely to be available in practice. Instead, suitable scheduling strategies must be learned online through interaction with the system. We consider the sample complexity of reinforcement learning in this domain, and demonstrate that while the problem state space is countably infinite, we may leverage the problem's structure to guarantee efficient learning.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {201–209},
+numpages = {9},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023574,
+author = {Gogate, Vibhav and Domingos, Pedro},
+title = {Formula-Based Probabilistic Inference},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {Computing the probability of a formula given the probabilities or weights associated with other formulas is a natural extension of logical inference to the probabilistic setting. Surprisingly, this problem has received little attention in the literature to date, particularly considering that it includes many standard inference problems as special cases. In this paper, we propose two algorithms for this problem: formula decomposition and conditioning, which is an exact method, and formula importance sampling, which is an approximate method. The latter is, to our knowledge, the first application of model counting to approximate probabilistic inference. Unlike conventional variable-based algorithms, our algorithms work in the dual realm of logical formulas. Theoretically, we show that our algorithms can greatly improve efficiency by exploiting the structural information in the formulas. Empirically, we show that they are indeed quite powerful, often achieving substantial performance gains over state-of-the-art schemes.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {210–219},
+numpages = {10},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023575,
+author = {Gupta, Mithun Das and Huang, Thomas S.},
+title = {Regularized Maximum Likelihood for Intrinsic Dimension Estimation},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {We propose a new method for estimating the intrinsic dimension of a dataset by applying the principle of regularized maximum likelihood to the distances between close neighbors. We propose a regularization scheme which is motivated by divergence minimization principles. We derive the estimator by a Poisson process approximation, argue about its convergence properties and apply it to a number of simulated and real datasets. We also show it has the best overall performance compared with two other intrinsic dimension estimators.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {220–227},
+numpages = {8},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023576,
+author = {Halpern, Joseph Y. and Rong, Nan and Saxena, Ashutosh},
+title = {MDPs with Unawareness},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {Markov decision processes (MDPs) are widely used for modeling decision-making problems in robotics, automated control, and economics. Traditional MDPs assume that the decision maker (DM) knows all states and actions. However, this may not be true in many situations of interest. We define a new framework, MDPs with unawareness (MDPUs) to deal with the possibilities that a DM may not be aware of all possible actions. We provide a complete characterization of when a DM can learn to play near-optimally in an MDPU, and give an algorithm that learns to play near-optimally when it is possible to do so, as efficiently as possible. In particular, we characterize when a near-optimal solution can be found in polynomial time.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {228–235},
+numpages = {8},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023577,
+author = {Hamze, Firas and de Freitas, Nando},
+title = {Intracluster Moves for Constrained Discrete-Space MCMC},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {This paper addresses the problem of sampling from binary distributions with constraints. In particular, it proposes an MCMC method to draw samples from a distribution of the set of all states at a specified distance from some reference state. For example, when the reference state is the vector of zeros, the algorithm can draw samples from a binary distribution with a constraint on the number of active variables, say the number of 1's. We motivate the need for this algorithm with examples from statistical physics and probabilistic inference. Unlike previous algorithms proposed to sample from binary distributions with these constraints, the new algorithm allows for large moves in state space and tends to propose them such that they are energetically favourable. The algorithm is demonstrated on three Boltzmann machines of varying difficulty: A ferromagnetic Ising model (with positive potentials), a restricted Boltzmann machine with learned Gabor-like filters as potentials, and a challenging three-dimensional spin-glass (with positive and negative potentials).},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {236–243},
+numpages = {8},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023578,
+author = {Huang, Kaizhu and Jin, Rong and Xu, Zenglin and Liu, Cheng-Lin},
+title = {Robust Metric Learning by Smooth Optimization},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {Most existing distance metric learning methods assume perfect side information that is usually given in pairwise or triplet constraints. Instead, in many real-world applications, the constraints are derived from side information, such as users' implicit feedbacks and citations among articles. As a result, these constraints are usually noisy and contain many mistakes. In this work, we aim to learn a distance metric from noisy constraints by robust optimization in a worst-case scenario, to which we refer as robust metric learning. We formulate the learning task initially as a combinatorial optimization problem, and show that it can be elegantly transformed to a convex programming problem. We present an efficient learning algorithm based on smooth optimization [7]. It has a worst-case convergence rate of O(1/√ε) for smooth optimization problems, where ε is the desired error of the approximate solution. Finally, our empirical study with UCI data sets demonstrate the effectiveness of the proposed method in comparison to state-of-the-art methods.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {244–251},
+numpages = {8},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023579,
+author = {Johnson, Matthew J. and Willsky, Alan S.},
+title = {The Hierarchical Dirichlet Process Hidden Semi-Markov Model},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {There is much interest in the Hierarchical Dirichlet Process Hidden Markov Model (HDP-HMM) as a natural Bayesian nonparametric extension of the traditional HMM. However, in many settings the HDP-HMM's strict Markovian constraints are undesirable, particularly if we wish to learn or encode non-geometric state durations. We can extend the HDP-HMM to capture such structure by drawing upon explicit-duration semi-Markovianity, which has been developed in the parametric setting to allow construction of highly interpretable models that admit natural prior information on state durations.In this paper we introduce the explicit-duration HDP-HSMM and develop posterior sampling algorithms for efficient inference in both the direct-assignment and weak-limit approximation settings. We demonstrate the utility of the model and our inference methods on synthetic data as well as experiments on a speaker diarization problem and an example of learning the patterns in Morse code.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {252–259},
+numpages = {8},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023580,
+author = {Kapicioglu, Berk and Schapire, Robert E. and Wikelski, Martin and Broderick, Tamara},
+title = {Combining Spatial and Telemetric Features for Learning Animal Movement Models},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {We introduce a new graphical model for tracking radio-tagged animals and learning their movement patterns. The model provides a principled way to combine radio telemetry data with an arbitrary set of user-defined, spatial features. We describe an efficient stochastic gradient algorithm for fitting model parameters to data and demonstrate its effectiveness via asymptotic analysis and synthetic experiments. We also apply our model to real datasets, and show that it outperforms the most popular radio telemetry software package used in ecology. We conclude that integration of different data sources under a single statistical framework, coupled with appropriate parameter and state estimation procedures, produces both accurate location estimates and an interpretable statistical model of animal movement.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {260–267},
+numpages = {8},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023581,
+author = {Kask, Kalev and Gelfand, Andrew E.},
+title = {BEEM: Bucket Elimination with External Memory},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {A major limitation of exact inference algorithms for probabilistic graphical models is their extensive memory usage, which often puts real-world problems out of their reach. In this paper we show how we can extend inference algorithms, particularly Bucket Elimination, a special case of cluster (join) tree decomposition, to utilize disk memory. We provide the underlying ideas and show promising empirical results of exactly solving large problems not solvable before.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {268–276},
+numpages = {9},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023582,
+author = {Kelly, Kevin T. and Mayo-Wilson, Conor},
+title = {Causal Conclusions That Flip Repeatedly and Their Justification},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {Over the past two decades, several consistent procedures have been designed to infer causal conclusions from observational data. We prove that if the true causal network might be an arbitrary, linear Gaussian network or a discrete Bayes network, then every unambiguous causal conclusion produced by a consistent method from non-experimental data is subject to reversal as the sample size increases any finite number of times. That result, called the causal flipping theorem, extends prior results to the effect that causal discovery cannot be reliable on a given sample size. We argue that since repeated flipping of causal conclusions is unavoidable in principle for consistent methods, the best possible discovery methods are consistent methods that retract their earlier conclusions no more than necessary. A series of simulations of various methods across a wide range of sample sizes illustrates concretely both the theorem and the principle of comparing methods in terms of retractions.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {277–285},
+numpages = {9},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023583,
+author = {Klami, Arto and Virtanen, Seppo and Kaski, Samuel},
+title = {Bayesian Exponential Family Projections for Coupled Data Sources},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {Exponential family extensions of principal component analysis (EPCA) have received a considerable amount of attention in recent years, demonstrating the growing need for basic modeling tools that do not assume the squared loss or Gaussian distribution. We extend the EPCA model toolbox by presenting the first exponential family multi-view learning methods of the partial least squares and canonical correlation analysis, based on a unified representation of EPCA as matrix factorization of the natural parameters of exponential family. The models are based on a new family of priors that are generally usable for all such factorizations. We also introduce new inference strategies, and demonstrate how the methods outperform earlier ones when the Gaussianity assumption does not hold.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {286–293},
+numpages = {8},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023584,
+author = {Kumar, Akshat and Zilberstein, Shlomo},
+title = {Anytime Planning for Decentralized POMDPs Using Expectation Maximization},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {Decentralized POMDPs provide an expressive framework for multi-agent sequential decision making. While finite-horizon DEC-POMDPs have enjoyed significant success, progress remains slow for the infinite-horizon case mainly due to the inherent complexity of optimizing stochastic controllers representing agent policies. We present a promising new class of algorithms for the infinite-horizon case, which recasts the optimization problem as inference in a mixture of DBNs. An attractive feature of this approach is the straightforward adoption of existing inference techniques in DBNs for solving DEC-POMDPs and supporting richer representations such as factored or continuous states and actions. We also derive the Expectation Maximization (EM) algorithm to optimize the joint policy represented as DBNs. Experiments on benchmark domains show that EM compares favorably against the state-of-the-art solvers.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {294–301},
+numpages = {8},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023585,
+author = {Li, Ping},
+title = {Robust Logitboost and Adaptive Base Class (ABC) Logitboost},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {Logitboost is an influential boosting algorithm for classification. In this paper, we develop robust logitboost to provide an explicit formulation of tree-split criterion for building weak learners (regression trees) for logitboost. This formulation leads to a numerically stable implementation of logitboost. We then propose abc-logitboost for multi-class classification, by combining robust logitboost with the prior work of abc-boost. Previously, abc-boost was implemented as abc-mart using the mart algorithm.Our extensive experiments on multi-class classification compare four algorithms: mart, abc-mart, (robust) logitboost, and abc-logitboost, and demonstrate the superiority of abc-logitboost. Comparisons with other learning methods including SVM and deep learning are also available through prior publications.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {302–311},
+numpages = {10},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023586,
+author = {Li, Ping and Mahoney, Michael W. and She, Yiyuan},
+title = {Approximating Higher-Order Distances Using Random Projections},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {We provide a simple method and relevant theoretical analysis for efficiently estimating higher-order lp distances. While the analysis mainly focuses on l4, our methodology extends naturally to p = 6,8,10..., (i.e., when p is even).Distance-based methods are popular in machine learning. In large-scale applications, storing, computing, and retrieving the distances can be both space and time prohibitive. Efficient algorithms exist for estimating lp distances if 0 &lt; p ≤ 2. The task for p &gt; 2 is known to be difficult. Our work partially fills this gap.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {312–321},
+numpages = {10},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023587,
+author = {Li, Yijing and Shenoy, Prakash P.},
+title = {Solving Hybrid Influence Diagrams with Deterministic Variables},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {We describe a framework and an algorithm for solving hybrid influence diagrams with discrete, continuous, and deterministic chance variables, and discrete and continuous decision variables. A continuous chance variable in an influence diagram is said to be deterministic if its conditional distributions have zero variances. The solution algorithm is an extension of Shenoy's fusion algorithm for discrete influence diagrams. We describe an extended Shenoy-Shafer architecture for propagation of discrete, continuous, and utility potentials in hybrid influence diagrams that include deterministic chance variables. The algorithm and framework are illustrated by solving two small examples.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {322–331},
+numpages = {10},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023588,
+author = {Liu, Qiang and Ihler, Alexander},
+title = {Negative Tree Reweighted Belief Propagation},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {We introduce a new class of lower bounds on the log partition function of a Markov random field which makes use of a reversed Jensen's inequality. In particular, our method approximates the intractable distribution using a linear combination of spanning trees with negative weights. This technique is a lower-bound counterpart to the tree-reweighted belief propagation algorithm, which uses a convex combination of spanning trees with positive weights to provide corresponding upper bounds. We develop algorithms to optimize and tighten the lower bounds over the non-convex set of valid parameter values. Our algorithm generalizes mean field approaches (including naive and structured mean field approximations), which it includes as a limiting case.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {332–339},
+numpages = {8},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023589,
+author = {Low, Yucheng and Gonzalez, Joseph and Kyrola, Aapo and Bickson, Danny and Guestrin, Carlos and Hellerstein, Joseph},
+title = {GraphLab: A New Framework for Parallel Machine Learning},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {Designing and implementing efficient, provably correct parallel machine learning (ML) algorithms is challenging. Existing high-level parallel abstractions like MapReduce are insufficiently expressive while low-level tools like MPI and Pthreads leave ML experts repeatedly solving the same design challenges. By targeting common patterns in ML, we developed GraphLab, which improves upon abstractions like MapReduce by compactly expressing asynchronous iterative algorithms with sparse computational dependencies while ensuring data consistency and achieving a high degree of parallel performance. We demonstrate the expressiveness of the GraphLab framework by designing and implementing parallel versions of belief propagation, Gibbs sampling, Co-EM, Lasso and Compressed Sensing. We show that using GraphLab we can achieve excellent parallel performance on large scale real-world problems.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {340–349},
+numpages = {10},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023590,
+author = {Mao, Qi and Tsang, Ivor W.},
+title = {Parameter-Free Spectral Kernel Learning},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {Due to the growing ubiquity of unlabeled data, learning with unlabeled data is attracting increasing attention in machine learning. In this paper, we propose a novel semi-supervised kernel learning method which can seamlessly combine manifold structure of unlabeled data and Regularized Least-Squares (RLS) to learn a new kernel. Interestingly, the new kernel matrix can be obtained analytically with the use of spectral decomposition of graph Laplacian matrix. Hence, the proposed algorithm does not require any numerical optimization solvers. Moreover, by maximizing kernel target alignment on labeled data, we can also learn model parameters automatically with a closed-form solution. For a given graph Laplacian matrix, our proposed method does not need to tune any model parameter including the tradeoff parameter in RLS and the balance parameter for unlabeled data. Extensive experiments on ten benchmark datasets show that our proposed two-stage parameter-free spectral kernel learning algorithm can obtain comparable performance with fine-tuned manifold regularization methods in transductive setting, and outperform multiple kernel learning in supervised setting.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {350–357},
+numpages = {8},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023591,
+author = {Meil\u{a}, Marina and Chen, Harr},
+title = {Dirichlet Process Mixtures of Generalized Mallows Models},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {We present a Dirichlet process mixture model over discrete incomplete rankings and study two Gibbs sampling inference techniques for estimating posterior clusterings. The first approach uses a slice sampling subcomponent for estimating cluster parameters. The second approach marginalizes out several cluster parameters by taking advantage of approximations to the conditional posteriors. We empirically demonstrate (1) the effectiveness of this approximation for improving convergence, (2) the benefits of the Dirichlet process model over alternative clustering techniques for ranked data, and (3) the applicability of the approach to exploring large real-world ranking datasets.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {358–367},
+numpages = {10},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023592,
+author = {Morimura, Tetsuro and Sugiyama, Masashi and Kashima, Hisashi and Hachiya, Hirotaka and Tanaka, Toshiyuki},
+title = {Parametric Return Density Estimation for Reinforcement Learning},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {Most conventional Reinforcement Learning (RL) algorithms aim to optimize decision-making rules in terms of the expected returns. However, especially for risk management purposes, other risk-sensitive criteria such as the value-at-risk or the expected shortfall are sometimes preferred in real applications. Here, we describe a parametric method for estimating density of the returns, which allows us to handle various criteria in a unified manner. We first extend the Bellman equation for the conditional expected return to cover a conditional probability density of the returns. Then we derive an extension of the TD-learning algorithm for estimating the return densities in an unknown environment. As test instances, several parametric density estimation algorithms are presented for the Gaussian, Laplace, and skewed Laplace distributions. We show that these algorithms lead to risk-sensitive as well as robust RL paradigms through numerical experiments.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {368–375},
+numpages = {8},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023593,
+author = {de Cote, Enrique Munoz and Chapman, Archie C. and Sykulski, Adam M. and Jennings, Nicholas R.},
+title = {Automated Planning in Repeated Adversarial Games},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {Game theory's prescriptive power typically relies on full rationality and/or self-play interactions. In contrast, this work sets aside these fundamental premises and focuses instead on heterogeneous autonomous interactions between two or more agents. Specifically, we introduce a new and concise representation for repeated adversarial (constant-sum) games that highlight the necessary features that enable an automated planing agent to reason about how to score above the game's Nash equilibrium, when facing heterogeneous adversaries. To this end, we present TeamUP, a model-based RL algorithm designed for learning and planning such an abstraction. In essence, it is somewhat similar to R-MAX with a cleverly engineered reward shaping that treats exploration as an adversarial optimization problem. In practice, it attempts to find an ally with which to tacitly collude (in more than two-player games) and then collaborates on a joint plan of actions that can consistently score a high utility in adversarial repeated games.We use the inaugural Lemonade Stand Game Tournament1 to demonstrate the effectiveness of our approach, and find that TeamUP is the best performing agent, demoting the Tournament's actual winning strategy into second place. In our experimental analysis, we show hat our strategy successfully and consistently builds collaborations with many different heterogeneous (and sometimes very sophisticated) adversaries.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {376–383},
+numpages = {8},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023594,
+author = {Niepert, Mathias},
+title = {A Delayed Column Generation Strategy for Exact <i>k</i>-Bounded MAP Inference in Markov Logic Networks},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {The paper introduces k-bounded MAP inference, a parameterization of MAP inference in Markov logic networks. k-Bounded MAP states are MAP states with at most k active ground atoms of hidden (non-evidence) predicates. We present a novel delayed column generation algorithm and provide empirical evidence that the algorithm efficiently computes k-bounded MAP states for meaningful real-world graph matching problems. The underlying idea is that, instead of solving one large optimization problem, it is often more efficient to tackle several small ones.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {384–391},
+numpages = {8},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023595,
+author = {Omar, Farheen and Sinn, Mathieu and Truszkowski, Jakub and Poupart, Pascal and Tung, James and Caine, Allan},
+title = {Comparative Analysis of Probabilistic Models for Activity Recognition with an Instrumented Walker},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {Rollating walkers are popular mobility aids used by older adults to improve balance control. There is a need to automatically recognize the activities performed by walker users to better understand activity patterns, mobility issues and the context in which falls are more likely to happen. We design and compare several techniques to recognize walker related activities. A comprehensive evaluation with control subjects and walker users from a retirement community is presented.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {392–400},
+numpages = {9},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023596,
+author = {Ordyniak, Sebastian and Szeider, Stefan},
+title = {Algorithms and Complexity Results for Exact Bayesian Structure Learning},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {Bayesian structure learning is the NP-hard problem of discovering a Bayesian network that optimally represents a given set of training data. In this paper we study the computational worst-case complexity of exact Bayesian structure learning under graph theoretic restrictions on the super-structure. The super-structure (a concept introduced by Perrier, Imoto, and Miyano, JMLR 2008) is an undirected graph that contains as subgraphs the skeletons of solution networks. Our results apply to several variants of score-based Bayesian structure learning where the score of a network decomposes into local scores of its nodes.Results: We show that exact Bayesian structure learning can be carried out in non-uniform polynomial time if the super-structure has bounded treewidth and in linear time if in addition the super-structure has bounded maximum degree. We complement this with a number of hardness results. We show that both restrictions (treewidth and degree) are essential and cannot be dropped without loosing uniform polynomial time tractability (subject to a complexity-theoretic assumption). Furthermore, we show that the restrictions remain essential if we do not search for a globally optimal network but we aim to improve a given network by means of at most k arc additions, arc deletions, or arc reversals (k-neighborhood local search).},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {401–408},
+numpages = {8},
+keywords = {parameterized complexity, bayesian structure learning, treewidth, fixed-parameter tractability, super-structure},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023597,
+author = {Ottosen, Thorsten J. and Jensen, Finn V.},
+title = {The Cost of Troubleshooting Cost Clusters with inside Information},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {Decision theoretical troubleshooting is about minimizing the expected cost of solving a certain problem like repairing a complicated man-made device. In this paper we consider situations where you have to take apart some of the device to get access to certain clusters and actions. Specifically, we investigate troubleshooting with independent actions in a tree of clusters where actions inside a cluster cannot be performed before the cluster is opened. The problem is non-trivial because there is a cost associated with opening and closing a cluster. Troubleshooting with independent actions and no clusters can be solved in O(n · lg n) time (n being the number of actions) by the well-known "P-over-C" algorithm due to Kadane and Simon, but an efficient and optimal algorithm for a tree cluster model has not yet been found. In this paper we describe a "bottom-up P-over-C" O(n · lg n) time algorithm and show that it is optimal when the clusters do not need to be closed to test whether the actions solved the problem.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {409–416},
+numpages = {8},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023598,
+author = {Pearl, Judea},
+title = {On a Class of Bias-Amplifying Variables That Endanger Effect Estimates},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {This note deals with a class of variables that, if conditioned on, tends to amplify confounding bias in the analysis of causal effects. This class, independently discovered by Bhattacharya and Vogt (2007) and Wooldridge (2009), includes instrumental variables and variables that have greater influence on treatment selection than on the outcome. We offer a simple derivation and an intuitive explanation of this phenomenon and then extend the analysis to non linear models. We show that:1. the bias-amplifying potential of instrumental variables extends over to nonlinear models, though not as sweepingly as in linear models;2. in non-linear models, conditioning on instrumental variables may introduce new bias where none existed before;3. in both linear and non-linear models, instrumental variables have no effect on selection-induced bias.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {417–424},
+numpages = {8},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023599,
+author = {Pearl, Judea},
+title = {On Measurement Bias in Causal Inference},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {This paper addresses the problem of measurement errors in causal inference and highlights several algebraic and graphical methods for eliminating systematic bias induced by such errors. In particulars, the paper discusses the control of partially observable confounders in parametric and non parametric models and the computational problem of obtaining bias-free effect estimates in such models.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {425–432},
+numpages = {8},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023600,
+author = {Pearl, Judea and Paz, Azaria},
+title = {Confounding Equivalence in Causal Inference},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {The paper provides a simple test for deciding, from a given causal diagram, whether two sets of variables have the same bias-reducing potential under adjustment. The test requires that one of the following two conditions holds: either (1) both sets are admissible (i.e., satisfy the back-door criterion) or (2) the Markov boundaries surrounding the manipulated variable(s) are identical in both sets. Applications to covariate selection and model testing are discussed.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {433–441},
+numpages = {9},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023601,
+author = {Pihlaja, Miika and Gutmann, Michael and Hyv\"{a}rinen, Aapo},
+title = {A Family of Computationally Efficient and Simple Estimators for Unnormalized Statistical Models},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {We introduce a new family of estimators for unnormalized statistical models. Our family of estimators is parameterized by two nonlinear functions and uses a single sample from an auxiliary distribution, generalizing Maximum Likelihood Monte Carlo estimation of Geyer and Thompson (1992). The family is such that we can estimate the partition function like any other parameter in the model. The estimation is done by optimizing an algebraically simple, well defined objective function, which allows for the use of dedicated optimization methods. We establish consistency of the estimator family and give an expression for the asymptotic covariance matrix, which enables us to further analyze the influence of the nonlinearities and the auxiliary density on estimation performance. Some estimators in our family are particularly stable for a wide range of auxiliary densities. Interestingly, a specific choice of the nonlinearity establishes a connection between density estimation and classification by nonlinear logistic regression. Finally, the optimal amount of auxiliary samples relative to the given amount of the data is considered from the perspective of computational efficiency.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {442–449},
+numpages = {8},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023602,
+author = {Qi, Yuan Alan and Abdel-Gawad, Ahmed H. and Minka, Thomas P.},
+title = {Sparse-Posterior Gaussian Processes for General Likelihoods},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {Gaussian processes (GPs) provide a probabilistic nonparametric representation of functions in regression, classification, and other problems. Unfortunately, exact learning with GPs is intractable for large datasets. A variety of approximate GP methods have been proposed that essentially map the large dataset into a small set of basis points. Among them, two state-of-the-art methods are sparse pseudo-input Gaussian process (SPGP) (Snelson and Ghahramani, 2006) and variable-sigma GP (VSGP) Walder et al. (2008), which generalizes SPGP and allows each basis point to have its own length scale. However, VSGP was only derived for regression. In this paper, we propose a new sparse GP framework that uses expectation propagation to directly approximate general GP likelihoods using a sparse and smooth basis. It includes both SPGP and VSGP for regression as special cases. Plus as an EP algorithm, it inherits the ability to process data online. As a particular choice of approximating family, we blur each basis point with a Gaussian distribution that has a full covariance matrix representing the data distribution around that basis point; as a result, we can summarize local data manifold information with a small set of basis points. Our experiments demonstrate that this framework outperforms previous GP classification methods on benchmark datasets in terms of minimizing divergence to the non-sparse GP solution as well as lower misclassification rate.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {450–457},
+numpages = {8},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023603,
+author = {Qi, Guilin and Du, Jianfeng and Liu, Weiru and Bell, David},
+title = {Merging Knowledge Bases in Possibilistic Logic by Lexicographic Aggregation},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {Belief merging is an important but difficult problem in Artificial Intelligence, especially when sources of information are pervaded with uncertainty. Many merging operators have been proposed to deal with this problem in possibilistic logic, a weighted logic which is powerful for handling inconsistency and dealing with uncertainty. They often result in a possibilistic knowledge base which is a set of weighted formulas. Although possibilistic logic is inconsistency tolerant, it suffers from the well-known "drowning effect". Therefore, we may still want to obtain a consistent possibilistic knowledge base as the result of merging. In such a case, we argue that it is not always necessary to keep weighted information after merging. In this paper, we define a merging operator that maps a set of possibilistic knowledge bases and a formula representing the integrity constraints to a classical knowledge base by using lexicographic ordering. We show that it satisfies nine postulates that generalize basic postulates for propositional merging given in [11]. These postulates capture the principle of minimal change in some sense. We then provide an algorithm for generating the resulting knowledge base of our merging operator. Finally, we discuss the compatibility of our merging operator with propositional merging and establish the advantage of our merging operator over existing semantic merging operators in the propositional case.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {458–465},
+numpages = {8},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023604,
+author = {Quaeghebeur, Erik},
+title = {Characterizing the Set of Coherent Lower Previsions with a Finite Number of Constraints or Vertices},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {The standard coherence criterion for lower previsions is expressed using an infinite number of linear constraints. For lower previsions that are essentially defined on some finite set of gambles on a finite possibility space, we present a reformulation of this criterion that only uses a finite number of constraints. Any such lower prevision is coherent if it lies within the convex polytope defined by these constraints. The vertices of this polytope are the extreme coherent lower previsions for the given set of gambles. Our reformulation makes it possible to compute them. We show how this is done and illustrate the procedure and its results.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {466–473},
+numpages = {8},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023605,
+author = {Ramanujan, Raghuram and Sabharwal, Ashish and Selman, Bart},
+title = {Understanding Sampling Style Adversarial Search Methods},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {UCT has recently emerged as an exciting new adversarial reasoning technique based on cleverly balancing exploration and exploitation in a Monte-Carlo sampling setting. It has been particularly successful in the game of Go but the reasons for its success are not well understood and attempts to replicate its success in other domains such as Chess have failed. We provide an in-depth analysis of the potential of UCT in domain-independent settings, in cases where heuristic values are available, and the effect of enhancing random playouts to more informed playouts between two weak minimax players. To provide further insights, we develop synthetic game tree instances and discuss interesting properties of UCT, both empirically and analytically.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {474–483},
+numpages = {10},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023606,
+author = {Ramati, Michael and Shahar, Yuval},
+title = {Irregular-Time Bayesian Networks},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {In many fields observations are performed irregularly along time, due to either measurement limitations or lack of a constant immanent rate. While discrete-time Markov models (as Dynamic Bayesian Networks) introduce either inefficient computation or an information loss to reasoning about such processes, continuous-time Markov models assume either a discrete state space (as Continuous-Time Bayesian Networks), or a flat continuous state space (as stochastic differential equations). To address these problems, we present a new modeling class called Irregular-Time Bayesian Networks (ITBNs), generalizing Dynamic Bayesian Networks, allowing substantially more compact representations, and increasing the expressivity of the temporal dynamics. In addition, a globally optimal solution is guaranteed when learning temporal systems, provided that they are fully observed at the same irregularly spaced time-points, and a semiparametric subclass of ITBNs is introduced to allow further adaptation to the irregular nature of the available data.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {484–491},
+numpages = {8},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023607,
+author = {Riedel, Sebastian and Smith, David A. and McCallum, Andrew},
+title = {Inference by Minimizing Size, Divergence, or Their Sum},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {We speed up marginal inference by ignoring factors that do not significantly contribute to overall accuracy. In order to pick a suitable subset of factors to ignore, we propose three schemes: minimizing the number of model factors under a bound on the KL divergence between pruned and full models; minimizing the KL divergence under a bound on factor count; and minimizing the weighted sum of KL divergence and factor count. All three problems are solved using an approximation of the KL divergence than can be calculated in terms of marginals computed on a simple seed graph. Applied to synthetic image denoising and to three different types of NLP parsing models, this technique performs marginal inference up to 11 times faster than loopy BP, with graph sizes reduced up to 98%—at comparable error in marginals and parsing accuracy. We also show that minimizing the weighted sum of divergence and size is substantially faster than minimizing either of the other objectives based on the approximation to divergence presented here.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {492–499},
+numpages = {8},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023608,
+author = {Ruozzi, Nicholas and Tatikonda, Sekhar},
+title = {Convergent and Correct Message Passing Schemes for Optimization Problems over Graphical Models},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {The max-product algorithm, which attempts to compute the most probable assignment (MAP) of a given probability distribution, has recently found applications in quadratic minimization and combinatorial optimization. Unfortunately, the max-product algorithm is not guaranteed to converge and, even if it does, is not guaranteed to produce the MAP assignment. In this work, we provide a simple derivation of a new family of message passing algorithms by "splitting" the factors of our graphical model. We prove that, for any objective function that attains its maximum value over its domain, this new family of message passing algorithms always contains a message passing scheme that guarantees correctness upon convergence to a unique estimate. Finally, we adopt an asynchronous message passing schedule and prove that, under mild assumptions, such a schedule guarantees the convergence of our algorithm.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {500},
+numpages = {1},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023609,
+author = {Russell, Chris and Ladick\'{y}, L'ubor and Kohli, Pushmeet and Torr, Philip H. S.},
+title = {Exact and Approximate Inference in Associative Hierarchical Networks Using Graph Cuts},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {Markov Networks are widely used through out computer vision and machine learning. An important subclass are the Associative Markov Networks which are used in a wide variety of applications. For these networks a good approximate minimum cost solution can be found efficiently using graph cut based move making algorithms such as alpha-expansion. Recently a related model has been proposed, the associative hierarchical network, which provides a natural generalisation of the Associative Markov Network for higher order cliques (i.e. clique size greater than two). This method provides a good model for object class segmentation problem in computer vision.Within this paper we briefly describe the associative hierarchical network and provide a computationally efficient method for approximate inference based on graph cuts. Our method performs well for networks containing hundreds of thousand of variables, and higher order potentials are defined over cliques containing tens of thousands of variables. Due to the size of these problems standard linear programming techniques are inapplicable. We show that our method has a bound of 4 for the solution of general associative hierarchical network with arbitrary clique size noting that few results on bounds exist for the solution of labelling of Markov Networks with higher order cliques.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {501–508},
+numpages = {8},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023610,
+author = {Shachter, Ross D. and Bhattacharjya, Debarun},
+title = {Dynamic Programming in Influence Diagrams with Decision Circuits},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {Decision circuits perform efficient evaluation of influence diagrams, building on the advances in arithmetic circuits for belief network inference [Darwiche, 2003; Bhattacharjya and Shachter, 2007]. We show how even more compact decision circuits can be constructed for dynamic programming in influence diagrams with separable value functions and conditionally independent subproblems. Once a decision circuit has been constructed based on the diagram's "global" graphical structure, it can be compiled to exploit "local" structure for efficient evaluation and sensitivity analysis.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {509–516},
+numpages = {8},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023611,
+author = {Sheldon, Daniel and Dilkina, Bistra and Elmachtoub, Adam N. and Finseth, Ryan and Sabharwal, Ashish and Conrad, Jon and Gomes, Carla and Shmoys, David and Allen, William and Amundsen, Ole and Vaughan, William},
+title = {Maximizing the Spread of Cascades Using Network Design},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {We introduce a new optimization framework to maximize the expected spread of cascades in networks. Our model allows a rich set of actions that directly manipulate cascade dynamics by adding nodes or edges to the network. Our motivating application is one in spatial conservation planning, where cade models the dispersal of wild animals through a fragmented landscape. We propose a mixed integer programming (MIP) formulation that combines elements from network design and stochastic optimization. Our approach results in solutions with stochastic optimality guarantees and points to conservation strategies that are fundamentally different from naive approaches.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {517–526},
+numpages = {10},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023612,
+author = {Shpitser, Ilya and VanderWeele, Tyler and Robins, James M.},
+title = {On the Validity of Covariate Adjustment for Estimating Causal Effects},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {Identifying effects of actions (treatments) on outcome variables from observational data and causal assumptions is a fundamental problem in causal inference. This identification is made difficult by the presence of con-founders which can be related to both treatment and outcome variables. Confounders are often handled, both in theory and in practice, by adjusting for covariates, in other words considering outcomes conditioned on treatment and covariate values, weighed by probability of observing those covariate values. In this paper, we give a complete graphical criterion for covariate adjustment, which we term the adjustment criterion, and derive some interesting corollaries of the completeness of this criterion.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {527–536},
+numpages = {10},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023613,
+author = {Silva, Ricardo and Gramacy, Robert B.},
+title = {Gaussian Process Structural Equation Models with Latent Variables},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {In a variety of disciplines such as social sciences, psychology, medicine and economics, the recorded data are considered to be noisy measurements of latent variables connected by some causal structure. This corresponds to a family of graphical models known as the structural equation model with latent variables. While linear non-Gaussian variants have been well-studied, inference in nonparametric structural equation models is still underdeveloped. We introduce a sparse Gaussian process parameterization that defines a non-linear structure connecting latent variables, unlike common formulations of Gaussian process latent variable models. The sparse parameterization is given a full Bayesian treatment without compromising Markov chain Monte Carlo efficiency. We compare the stability of the sampling procedure and the predictive ability of the model against the current practice.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {537–545},
+numpages = {9},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023614,
+author = {Simma, Aleksandr and Jordan, Michael I.},
+title = {Modeling Events with Cascades of Poisson Processes},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {We present a probabilistic model of events in continuous time in which each event triggers a Poisson process of successor events. The ensemble of observed events is thereby modeled as a superposition of Poisson processes. Efficient inference is feasible under this model with an EM algorithm. Moreover, the EM algorithm can be implemented as a distributed algorithm, permitting the model to be applied to very large datasets. We apply these techniques to the modeling of Twitter messages and the revision history of Wikipedia.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {546–555},
+numpages = {10},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023615,
+author = {Singh, Ajit P. and Gordon, Geoffrey J.},
+title = {A Bayesian Matrix Factorization Model for Relational Data},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {Relational learning can be used to augment one data source with other correlated sources of information, to improve predictive accuracy. We frame a large class of relational learning problems as matrix factorization problems, and propose a hierarchical Bayesian model. Training our Bayesian model using random-walk Metropolis-Hastings is impractically slow, and so we develop a block Metropolis-Hastings sampler which uses the gradient and Hessian of the likelihood to dynamically tune the proposal. We demonstrate that a predictive model of brain response to stimuli can be improved by augmenting it with side information about the stimuli.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {556–563},
+numpages = {8},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023616,
+author = {Sorg, Jonathan and Singh, Satinder and Lewis, Richard L.},
+title = {Variance-Based Rewards for Approximate Bayesian Reinforcement Learning},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {The explore-exploit dilemma is one of the central challenges in Reinforcement Learning (RL). Bayesian RL solves the dilemma by providing the agent with information in the form of a prior distribution over environments; however, full Bayesian planning is intractable. Planning with the mean MDP is a common myopic approximation of Bayesian planning. We derive a novel reward bonus that is a function of the posterior distribution over environments, which, when added to the reward in planning with the mean MDP, results in an agent which explores efficiently and effectively. Although our method is similar to existing methods when given an uninformative or unstructured prior, unlike existing methods, our method can exploit structured priors. We prove that our method results in a polynomial sample complexity and empirically demonstrate its advantages in a structured exploration task.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {564–571},
+numpages = {8},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023617,
+author = {Talwalkar, Ameet and Rostamizadeh, Afshin},
+title = {Matrix Coherence and the Nystr\"{o}m Method},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {The Nystr\"{o}m method is an efficient technique used to speed up large-scale learning applications by generating low-rank approximations. Crucial to the performance of this technique is the assumption that a matrix can be well approximated by working exclusively with a subset of its columns. In this work we relate this assumption to the concept of matrix coherence, connecting coherence to the performance of the Nystr\"{o}m method. Making use of related work in the compressed sensing and the matrix completion literature, we derive novel coherence-based bounds for the Nystr\"{o}m method in the low-rank setting. We then present empirical results that corroborate these theoretical bounds. Finally, we present more general empirical results for the full-rank setting that convincingly demonstrate the ability of matrix coherence to measure the degree to which information can be extracted from a subset of columns.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {572–579},
+numpages = {8},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023618,
+author = {Tesauro, Gerald and Rajan, V T and Segal, Richard},
+title = {Bayesian Inference in Monte-Carlo Tree Search},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {Monte-Carlo Tree Search (MCTS) methods are drawing great interest after yielding breakthrough results in computer Go. This paper proposes a Bayesian approach to MCTS that is inspired by distribution-free approaches such as UCT [13], yet significantly differs in important respects. The Bayesian framework allows potentially much more accurate (Bayes-optimal) estimation of node values and node uncertainties from a limited number of simulation trials. We further propose propagating inference in the tree via fast analytic Gaussian approximation methods: this can make the overhead of Bayesian inference manageable in domains such as Go, while preserving high accuracy of expected-value estimates. We find substantial empirical outperformance of UCT in an idealized bandit-tree test environment, where we can obtain valuable insights by comparing with known ground truth. Additionally we rigorously prove on-policy and off-policy convergence of the proposed methods.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {580–588},
+numpages = {9},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023619,
+author = {Tian, Jin and He, Ru and Ram, Lavanya},
+title = {Bayesian Model Averaging Using the <i>k</i>-Best Bayesian Network Structures},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {We study the problem of learning Bayesian network structures from data. We develop an algorithm for finding the k-best Bayesian network structures. We propose to compute the posterior probabilities of hypotheses of interest by Bayesian model averaging over the k-best Bayesian networks. We present empirical results on structural discovery over several real and synthetic data sets and show that the method outperforms the model selection method and the state-of-the-art MCMC methods.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {589–597},
+numpages = {9},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023620,
+author = {Ueno, Maomi},
+title = {Learning Networks Determined by the Ratio of Prior and Data},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {Recent reports have described that the equivalent sample size (ESS) in a Dirichlet prior plays an important role in learning Bayesian networks. This paper provides an asymptotic analysis of the marginal likelihood score for a Bayesian network. Results show that the ratio of the ESS and sample size determine the penalty of adding arcs in learning Bayesian networks. The number of arcs increases monotonically as the ESS increases; the number of arcs monotonically decreases as the ESS decreases. Furthermore, the marginal likelihood score provides a unified expression of various score metrics by changing prior knowledge.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {598–605},
+numpages = {8},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023621,
+author = {Valko, Michal and Kveton, Branislav and Huang, Ling and Ting, Daniel},
+title = {Online Semi-Supervised Learning on Quantized Graphs},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {In this paper, we tackle the problem of online semi-supervised learning (SSL). When data arrive in a stream, the dual problems of computation and data storage arise for any SSL method. We propose a fast approximate online SSL algorithm that solves for the harmonic solution on an approximate graph. We show, both empirically and theoretically, that good behavior can be achieved by collapsing nearby points into a set of local "representative points" that minimize distortion. Moreover, we regularize the harmonic solution to achieve better stability properties. We apply our algorithm to face recognition and optical character recognition applications to show that we can take advantage of the manifold structure to outperform the previous methods. Unlike previous heuristic approaches, we show that our method yields provable performance bounds.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {606–614},
+numpages = {9},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023622,
+author = {van den Broek, Bart and Wiegerinck, Wim and Kappen, Bert},
+title = {Risk Sensitive Path Integral Control},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {Recently path integral methods have been developed for stochastic optimal control for a wide class of models with non-linear dynamics in continuous space-time. Path integral methods find the control that minimizes the expected cost-to-go. In this paper we show that under the same assumptions, path integral methods generalize directly to risk sensitive stochastic optimal control. Here the method minimizes in expectation an exponentially weighted cost-to-go. Depending on the exponential weight, risk seeking or risk averse behaviour is obtained. We demonstrate the approach on risk sensitive stochastic optimal control problems beyond the linear-quadratic case, showing the intricate interaction of multi-modal control with risk sensitivity.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {615–622},
+numpages = {8},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023623,
+author = {Vanhatalo, Jarno and Vehtari, Aki},
+title = {Speeding up the Binary Gaussian Process Classification},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {Gaussian processes (GP) are attractive building blocks for many probabilistic models. Their drawbacks, however, are the rapidly increasing inference time and memory requirement alongside increasing data. The problem can be alleviated with compactly supported (CS) covariance functions, which produce sparse covariance matrices that are fast in computations and cheap to store. CS functions have previously been used in GP regression but here the focus is in a classification problem. This brings new challenges since the posterior inference has to be done approximately. We utilize the expectation propagation algorithm and show how its standard implementation has to be modified to obtain computational benefits from the sparse co-variance matrices. We study four CS covariance functions and show that they may lead to substantial speed up in the inference time compared to globally supported functions.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {623–631},
+numpages = {9},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023624,
+author = {Voevodski, Konstantin and Balcan, Maria-Florina and R\"{o}glin, Heiko and Teng, Shang-Hua and Xia, Yu},
+title = {Efficient Clustering with Limited Distance Information},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {Given a point set S and an unknown metric d on S, we study the problem of efficiently partitioning S into k clusters while querying few distances between the points. In our model we assume that we have access to one versus all queries that given a point s ∈ S return the distances between s and all other points. We show that given a natural assumption about the structure of the instance, we can efficiently find an accurate clustering using only O(k) distance queries. We use our algorithm to cluster proteins by sequence similarity. This setting nicely fits our model because we can use a fast sequence database search program to query a sequence against an entire dataset. We conduct an empirical study that shows that even though we query a small fraction of the distances between the points, we produce clusterings that are close to a desired clustering given by manual classification.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {632–640},
+numpages = {9},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023625,
+author = {Voortman, Mark and Dash, Denver and Druzdzel, Marek J.},
+title = {Learning Why Things Change: The Difference-Based Causality Learner},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {In this paper, we present the Difference-Based Causality Learner (DBCL), an algorithm for learning a class of discrete-time dynamic models that represents all causation across time by means of difference equations driving change in a system. We motivate this representation with real-world mechanical systems and prove DBCL's correctness for learning structure from time series data, an endeavour that is complicated by the existence of latent derivatives that have to be detected. We also prove that, under common assumptions for causal discovery, DBCL will identify the presence or absence of feedback loops, making the model more useful for predicting the effects of manipulating variables when the system is in equilibrium. We argue analytically and show empirically the advantages of DBCL over vector autoregression (VAR) and Granger causality models as well as modified forms of Bayesian and constraint-based structure discovery algorithms. Finally, we show that our algorithm can discover causal directions of alpha rhythms in human brains from EEG data.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {641–650},
+numpages = {10},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023626,
+author = {Werner, Tom\'{a}\v{s}},
+title = {Primal View on Belief Propagation},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {It is known that fixed points of loopy belief propagation (BP) correspond to stationary points of the Bethe variational problem, where we minimize the Bethe free energy subject to normalization and marginalization constraints. Unfortunately, this does not entirely explain BP because BP is a dual rather than primal algorithm to solve the Bethe variational problem - beliefs are infeasible before convergence. Thus, we have no better understanding of BP than as an algorithm to seek for a common zero of a system of non-linear functions, not explicitly related to each other. In this theoretical paper, we show that these functions are in fact explicitly related - they are the partial derivatives of a single function of reparameterizations. That means, BP seeks for a stationary point of a single function, without any constraints. This function has a very natural form: it is a linear combination of local log-partition functions, exactly as the Bethe entropy is the same linear combination of local entropies.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {651–657},
+numpages = {7},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023627,
+author = {Witkowski, Jens},
+title = {Truthful Feedback for Sanctioning Reputation Mechanisms},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {For product rating environments, similar to that of Amazon Reviews, it has been shown that the truthful elicitation of feedback is possible through mechanisms which pay buyer reports contingent on the reports of other buyers. We study whether similar mechanisms can be designed for reputation mechanisms at online auction sites where the buyers' experiences are partially determined by a strategic seller. We show that this is impossible for the basic setting. However, introducing a small prior belief that the seller is a cooperative commitment player leads to a payment scheme with a truthful perfect Bayesian equilibrium.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {658–665},
+numpages = {8},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023628,
+author = {Wu, Feng and Zilberstein, Shlomo and Chen, Xiaoping},
+title = {Rollout Sampling Policy Iteration for Decentralized POMDPs},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {We present decentralized rollout sampling policy iteration (DecRSPI) — a new algorithm for multi-agent decision problems formalized as DEC-POMDPs. DecRSPI is designed to improve scalability and tackle problems that lack an explicit model. The algorithm uses Monte-Carlo methods to generate a sample of reachable belief states. Then it computes a joint policy for each belief state based on the rollout estimations. A new policy representation allows us to represent solutions compactly. The key benefits of the algorithm are its linear time complexity over the number of agents, its bounded memory usage and good solution quality. It can solve larger problems that are intractable for existing planning algorithms. Experimental results confirm the effectiveness and scalability of the approach.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {666–673},
+numpages = {8},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023629,
+author = {Yan, Yan and Rosales, R\'{o}mer and Fung, Glenn and Dy, Jennifer},
+title = {Modeling Multiple Annotator Expertise in the Semi-Supervised Learning Scenario},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {Learning algorithms normally assume that there is at most one annotation or label per data point. However, in some scenarios, such as medical diagnosis and on-line collaboration, multiple annotations may be available. In either case, obtaining labels for data points can be expensive and time-consuming (in some circumstances ground-truth may not exist). Semi-supervised learning approaches have shown that utilizing the unlabeled data is often beneficial in these cases. This paper presents a probabilistic semi-supervised model and algorithm that allows for learning from both unlabeled and labeled data in the presence of multiple annotators. We assume that it is known what annotator labeled which data points. The proposed approach produces annotator models that allow us to provide (1) estimates of the true label and (2) annotator variable expertise for both labeled and unlabeled data. We provide numerical comparisons under various scenarios and with respect to standard semi-supervised learning. Experiments showed that the presented approach provides clear advantages over multi-annotator methods that do not use the unlabeled data and over methods that do not use multi-labeler information.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {674–682},
+numpages = {9},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023630,
+author = {Yang, Shuang Hong and Bian, Jiang and Zha, Hongyuan},
+title = {Hybrid Generative/Discriminative Learning for Automatic Image Annotation},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {Automatic image annotation (AIA) raises tremendous challenges to machine learning as it requires modeling of data that are both ambiguous in input and output, e.g., images containing multiple objects and labeled with multiple semantic tags. Even more challenging is that the number of candidate tags is usually huge (as large as the vocabulary size) yet each image is only related to a few of them. This paper presents a hybrid generative-discriminative classifier to simultaneously address the extreme data-ambiguity and overfitting-vulnerability issues in tasks such as AIA. Particularly: (1) an Exponential-Multinomial Mixture (EMM) model is established to capture both the input and output ambiguity and in the meanwhile to encourage prediction sparsity; and (2) the prediction ability of the EMM model is explicitly maximized through discriminative learning that integrates variational inference of graphical models and the pairwise formulation of ordinal regression. Experiments show that our approach achieves both superior annotation performance and better tag scalability.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {683–690},
+numpages = {8},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023631,
+author = {Yuan, Changhe and Wu, Xiaojian and Hansen, Eric A.},
+title = {Solving Multistage Influence Diagrams Using Branch-and-Bound Search},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {A branch-and-bound approach to solving influence diagrams has been previously proposed in the literature, but appears to have never been implemented and evaluated - apparently due to the difficulties of computing effective bounds for the branch-and-bound search. In this paper, we describe how to efficiently compute effective bounds, and we develop a practical implementation of depth-first branch-and-bound search for influence diagram evaluation that outperforms existing methods for solving influence diagrams with multiple stages.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {691–700},
+numpages = {10},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023632,
+author = {Zhang, Bai and Wang, Yue},
+title = {Learning Structural Changes of Gaussian Graphical Models in Controlled Experiments},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {Graphical models are widely used in scientific and engineering research to represent conditional independence structures between random variables. In many controlled experiments, environmental changes or external stimuli can often alter the conditional dependence between the random variables, and potentially produce significant structural changes in the corresponding graphical models. Therefore, it is of great importance to be able to detect such structural changes from data, so as to gain novel insights into where and how the structural changes take place and help the system adapt to the new environment. Here we report an effective learning strategy to extract structural changes in Gaussian graphical model using ℓ1-regularization based convex optimization. We discuss the properties of the problem formulation and introduce an efficient implementation by the block coordinate descent algorithm. We demonstrate the principle of the approach on a numerical simulation experiment, and we then apply the algorithm to the modeling of gene regulatory networks under different conditions and obtain promising yet biologically plausible results.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {701–708},
+numpages = {8},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023633,
+author = {Zhang, Kun and Hyv\"{a}rinen, Aapo},
+title = {Source Separation and Higher-Order Causal Analysis of MEG and EEG},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {Separation of the sources and analysis of their connectivity have been an important topic in EEG/MEG analysis. To solve this problem in an automatic manner, we propose a two-layer model, in which the sources are conditionally uncorrelated from each other, but not independent; the dependence is caused by the causality in their time-varying variances (envelopes). The model is identified in two steps. We first propose a new source separation technique which takes into account the autocorrelations (which may be time-varying) and time-varying variances of the sources. The causality in the envelopes is then discovered by exploiting a special kind of multivariate GARCH (generalized autoregressive conditional heteroscedasticity) model. The resulting causal diagram gives the effective connectivity between the separated sources; in our experimental results on MEG data, sources with similar functions are grouped together, with negative influences between groups, and the groups are connected via some interesting sources.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {709–716},
+numpages = {8},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023634,
+author = {Zhang, Kun and Sch\"{o}lkopf, Bernhard and Janzing, Dominik},
+title = {Invariant Gaussian Process Latent Variable Models and Application in Causal Discovery},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {In nonlinear latent variable models or dynamic models, if we consider the latent variables as confounders (common causes), the noise dependencies imply further relations between the observed variables. Such models are then closely related to causal discovery in the presence of nonlinear confounders, which is a challenging problem. However, generally in such models the observation noise is assumed to be independent across data dimensions, and consequently the noise dependencies are ignored. In this paper we focus on the Gaussian process latent variable model (GPLVM), from which we develop an extended model called invariant GPLVM (IG-PLVM), which can adapt to arbitrary noise covariances. With the Gaussian process prior put on a particular transformation of the latent nonlinear functions, instead of the original ones, the algorithm for IGPLVM involves almost the same computational loads as that for the original GPLVM. Besides its potential application in causal discovery, IGPLVM has the advantage that its estimated latent nonlinear manifold is invariant to any nonsingular linear transformation of the data. Experimental results on both synthetic and real-world data show its encouraging performance in nonlinear manifold learning and causal discovery.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {717–724},
+numpages = {8},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023635,
+author = {Zhang, Yu and Cao, Bin and Yeung, Dit-Yan},
+title = {Multi-Domain Collaborative Filtering},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {Collaborative filtering is an effective recommendation approach in which the preference of a user on an item is predicted based on the preferences of other users with similar interests. A big challenge in using collaborative filtering methods is the data sparsity problem which often arises because each user typically only rates very few items and hence the rating matrix is extremely sparse. In this paper, we address this problem by considering multiple collaborative filtering tasks in different domains simultaneously and exploiting the relationships between domains. We refer to it as a multi-domain collaborative filtering (MCF) problem. To solve the MCF problem, we propose a probabilistic framework which uses probabilistic matrix factorization to model the rating problem in each domain and allows the knowledge to be adaptively transferred across different domains by automatically learning the correlation between domains. We also introduce the link function for different domains to correct their biases. Experiments conducted on several real-world applications demonstrate the effectiveness of our methods when compared with some representative methods.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {725–732},
+numpages = {8},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023636,
+author = {Zhang, Yu and Yeung, Dit-Yan},
+title = {A Convex Formulation for Learning Task Relationships in Multi-Task Learning},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {Multi-task learning is a learning paradigm which seeks to improve the generalization performance of a learning task with the help of some other related tasks. In this paper, we propose a regularization formulation for learning the relationships between tasks in multi-task learning. This formulation can be viewed as a novel generalization of the regularization framework for single-task learning. Besides modeling positive task correlation, our method, called multi-task relationship learning (MTRL), can also describe negative task correlation and identify outlier tasks based on the same underlying principle. Under this regularization framework, the objective function of MTRL is convex. For efficiency, we use an alternating method to learn the optimal model parameters for each task as well as the relationships between tasks. We study MTRL in the symmetric multi-task learning setting and then generalize it to the asymmetric setting as well. We also study the relationships between MTRL and some existing multi-task learning methods. Experiments conducted on a toy problem as well as several benchmark data sets demonstrate the effectiveness of MTRL.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {733–742},
+numpages = {10},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
+@inproceedings{10.5555/3023549.3023637,
+author = {Zhu, Qian and Kveton, Branislav and Mummert, Lily and Pillai, Padmanabhan},
+title = {Automatic Tuning of Interactive Perception Applications},
+year = {2010},
+isbn = {9780974903965},
+publisher = {AUAI Press},
+address = {Arlington, Virginia, USA},
+abstract = {Interactive applications incorporating high-data rate sensing and computer vision are becoming possible due to novel runtime systems and the use of parallel computation resources. To allow interactive use, such applications require careful tuning of multiple application parameters to meet required fidelity and latency bounds. This is a nontrivial task, often requiring expert knowledge, which becomes intractable as resources and application load characteristics change. This paper describes a method for automatic performance tuning that learns application characteristics and effects of tunable parameters online, and constructs models that are used to maximize fidelity for a given latency constraint. The paper shows that accurate latency models can be learned online, knowledge of application structure can be used to reduce the complexity of the learning task, and operating points can be found that achieve 90% of the optimal fidelity by exploring the parameter space only 3% of the time.},
+booktitle = {Proceedings of the Twenty-Sixth Conference on Uncertainty in Artificial Intelligence},
+pages = {743–751},
+numpages = {9},
+location = {Catalina Island, CA},
+series = {UAI'10}
+}
+
