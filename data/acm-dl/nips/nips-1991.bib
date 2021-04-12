@@ -1,0 +1,2169 @@
+@inproceedings{10.5555/2986916.2987060,
+author = {Hamey, Leonard G. C.},
+title = {Benchmarking Feed-Forward Neural Networks: Models and Measures},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {Existing metrics for the learning performance of feed-forward neural networks do not provide a satisfactory basis for comparison because the choice of the training epoch limit can determine the results of the comparison. I propose new metrics which have the desirable property of being independent of the training epoch limit. The efficiency measures the yield of correct networks in proportion to the training effort expended. The optimal epoch limit provides the greatest efficiency. The learning performance is modelled statistically, and asymptotic performance is estimated. Implementation details may be found in (Hamey, 1992).},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {1167–1174},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987059,
+author = {Hwang, Jenq-Neng and Li, Hang and Maechler, Martin and Martin, R. Douglas and Schimert, Jim},
+title = {A Comparison of Projection Pursuit and Neural Network Regression Modeling},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {Two projection based feedforward network learning methods for model-free regression problems are studied and compared in this paper: one is the popular back-propagation learning (BPL); the other is the projection pursuit learning (PPL). Unlike the totally parametric BPL method, the PPL non-parametrically estimates unknown nonlinear functions sequentially (neuron-by-neuron and layer-by-Iayer) at each iteration while jointly estimating the interconnection weights. In terms of learning efficiency, both methods have comparable training speed when based on a Gauss-Newton optimization algorithm while the PPL is more parsimonious. In terms of learning robustness toward noise outliers, the BPL is more sensitive to the outliers.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {1159–1166},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987058,
+author = {Bernasconi, Jakob and Gustafson, Karl},
+title = {Human and Machine 'Quick Modeling'},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {We present here an interesting experiment in 'quick modeling' by humans, performed independently on small samples, in several languages and two continents, over the last three years. Comparisons to decision tree procedures and neural net processing are given. From these, we conjecture that human reasoning is better represented by the latter, but substantially different from both. Implications for the 'strong convergence hypothesis' between neural networks and machine learning are discussed, now expanded to include human reasoning comparisons.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {1151–1158},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987057,
+author = {Bauer, Hans-Ulrich and Pawelzik, Klaus and Geisel, Theo},
+title = {A Topographic Product for the Optimization of Self-Organizing Feature Maps},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {Optimizing the performance of self-organizing feature maps like the Kohonen map involves the choice of the output space topology. We present a topographic product which measures the preservation of neighborhood relations as a criterion to optimize the output space topology of the map with regard to the global dimensionality DA as well as to the dimensions in the individual directions. We test the topographic product method not only on synthetic mapping examples, but also on speech data. In the latter application our method suggests an output space dimensionality of DA = 3, in coincidence with recent recognition results on the same data set.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {1141–1147},
+numpages = {7},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987056,
+author = {Wettschereck, Dietrich and Dietterich, Thomas},
+title = {Improving the Performance of Radial Basis Function Networks by Learning Center Locations},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {Three methods for improving the performance of (gaussian) radial basis function (RBF) networks were tested on the NETtalk task. In RBF, a new example is classified by computing its Euclidean distance to a set of centers chosen by unsupervised methods. The application of supervised learning to learn a non-Euclidean distance metric was found to reduce the error rate of RBF networks, while supervised learning of each center's variance resulted in inferior performance. The best improvement in accuracy was achieved by networks called generalized radial basis function (GRBF) networks. In GRBF, the center locations are determined by supervised learning. After training on 1000 words, RBF classifies 56.5% of letters correct, while GRBF scores 73.4% letters correct (on a separate test set). From these and other experiments, we conclude that supervised learning of center locations can be very important for radial basis function learning.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {1133–1140},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987055,
+author = {Hampshire, J. B. and Kumar, B. V. K. Vijaya},
+title = {Shooting Craps in Search of an Optimal Strategy for Training Connectionist Pattern Classifiers},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {We compare two strategies for training connectionist (as well as non-connectionist) models for statistical pattern recognition. The probabilistic strategy is based on the notion that Bayesian discrimination (i.e., optimal classification) is achieved when the classifier learns the a posteriori class distributions of the random feature vector. The differential strategy is based on the notion that the identity of the largest class a posteriori probability of the feature vector is all that is needed to achieve Bayesian discrimination. Each strategy is directly linked to a family of objective functions that can be used in the supervised training procedure. We prove that the probabilistic strategy - linked with error measure objective functions such as mean-squared-error and cross-entropy - typically used to train classifiers necessarily requires larger training sets and more complex classifier architectures than those needed to approximate the Bayesian discriminant function. In contrast. we prove that the differential strategy - linked with classificationfigure-of-merit objective functions (CFMmono) [3] - requires the minimum classifier functional complexity and the fewest training examples necessary to approximate the Bayesian discriminant function with specified precision (measured in probability of error). We present our proofs in the context of a game of chance in which an unfair C-sided die is tossed repeatedly. We show that this rigged game of dice is a paradigm at the root of all statistical pattern recognition tasks, and demonstrate how a simple extension of the concept leads us to a general information-theoretic model of sample complexity for statistical pattern recognition.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {1125–1132},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987054,
+author = {Grebert, Igor and Stork, David G. and Keesing, Ron and Mims, Steve},
+title = {Network Generalization for Production: Learning and Producing Styled Letterforms},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {We designed and trained a connectionist network to generate letterforms in a new font given just a few exemplars from that font. During learning, our network constructed a distributed internal representation of fonts as well as letters, despite the fact that each training instance exemplified both a font and a letter. It was necessary to have separate but interconnected hidden units for "letter" and "font" representations - several alternative architectures were not successful.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {1118–1124},
+numpages = {7},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987053,
+author = {Montana, David},
+title = {A Weighted Probabilistic Neural Network},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {The Probabilistic Neural Network (PNN) algorithm represents the likelihood function of a given class as the sum of identical, isotropic Gaussians. In practice, PNN is often an excellent pattern classifier, outperforming other classifiers including backpropagation. However, it is not robust with respect to affine transformations of feature space, and this can lead to poor performance on certain data. We have derived an extension of PNN called Weighted PNN (WPNN) which compensates for this flaw by allowing anisotropic Gaussians, i.e. Gaussians whose covariance is not a multiple of the identity matrix. The covariance is optimized using a genetic algorithm, some interesting features of which are its redundant, logarithmic encoding and large population size. Experimental results validate our claims.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {1110–1117},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987052,
+author = {Glassman, Martin S.},
+title = {A Network of Localized Linear Discriminants},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {The localized linear discriminant network (LLDN) has been designed to address classification problems containing relatively closely spaced data from different classes (encounter zones [1], the accuracy problem [2]). Locally trained hyperplane segments are an effective way to define the decision boundaries for these regions [3]. The LLD uses a modified perceptron training algorithm for effective discovery of separating hyperplane/sigmoid units within narrow boundaries. The basic unit of the network is the discriminant receptive field (DRF) which combines the LLD function with Gaussians representing the dispersion of the local training data with respect to the hyperplane. The DRF implements a local distance measure [4], and obtains the benefits of networks of localized units [5]. A constructive algorithm for the two-class case is described which incorporates DRF's into the hidden layer to solve local discrimination problems. The output unit produces a smoothed, piecewise linear decision boundary. Preliminary results indicate the ability of the LLDN to efficiently achieve separation when boundaries are narrow and complex, in cases where both the "standard" multilayer perceptron (MLP) and k-nearest neighbor (KNN) yield high error rates on training data.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {1102–1109},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987051,
+author = {Bridle, John S. and Heading, Anthony J .R. and MacKay, David J. C.},
+title = {Unsupervised Classifiers, Mutual Information and 'Phantom Targets'},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {We derive criteria for training adaptive classifier networks to perform unsupervised data analysis. The first criterion turns a simple Gaussian classifier into a simple Gaussian mixture analyser. The second criterion, which is much more generally applicable, is based on mutual information. It simplifies to an intuitively reasonable difference between two entropy functions, one encouraging 'decisiveness,' the other 'fairness' to the alternative interpretations of the input. This 'firm but fair' criterion can be applied to any network that produces probability-type outputs, but it does not necessarily lead to useful behavior.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {1096–1101},
+numpages = {6},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987050,
+author = {Rogers, David},
+title = {Data Analysis Using G/SPLINES},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {G/SPLINES is an algorithm for building functional models of data. It uses genetic search to discover combinations of basis functions which are then used to build a least-squares regression model. Because it produces a population of models which evolve over time rather than a single model, it allows analysis not possible with other regression-based approaches.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {1088–1095},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987049,
+author = {Ramachandran, Sowmya and Pratt, Lorien Y.},
+title = {Information Measure Based Skeletonisation},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {Automatic determination of proper neural network topology by trimming over-sized networks is an important area of study, which has previously been addressed using a variety of techniques. In this paper, we present Information Measure Based Skeletonisation (IMBS), a new approach to this problem where superfluous hidden units are removed based on their information measure (IM). This measure, borrowed from decision tree induction techniques, reflects the degree to which the hyperplane formed by a hidden unit discriminates between training data classes. We show the results of applying IMBS to three classification tasks and demonstrate that it removes a substantial number of hidden units without significantly affecting network performance.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {1080–1087},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987048,
+author = {Wynne-Jones, Mike},
+title = {Node Splitting: A Constructive Algorithm for Feed-Forward Neural Networks},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {A constructive algorithm is proposed for feed-forward neural networks, which uses node-splitting in the hidden layers to build large networks from smaller ones. The small network forms an approximate model of a set of training data, and the split creates a larger more powerful network which is initialised with the approximate solution already found. The insufficiency of the smaller network in modelling the system which generated the data leads to oscillation in those hidden nodes whose weight vectors cover regions in the input space where more detail is required in the model. These nodes are identified and split in two using principal component analysis, allowing the new nodes to cover the two main modes of each oscillating vector. Nodes are selected for splitting using principal component analysis on the oscillating weight vectors, or by examining the Hessian matrix of second derivatives of the network error with respect to the weights. The second derivative method can also be applied to the input layer, where it provides a useful indication of the relative importances of parameters for the classification task. Node splitting in a standard Multi Layer Perceptron is equivalent to introducing a hinge in the decision boundary to allow more detail to be learned. Initial results were promising, but further evaluation indicates that the long range effects of decision boundaries cause the new nodes to slip back to the old node position, and nothing is gained. This problem does not occur in networks of localised receptive fields such as radial basis functions or gaussian mixtures, where the technique appears to work well.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {1072–1079},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987047,
+author = {Sanger, Terence D. and Sutton, Richard S. and Matheus, Christopher J.},
+title = {Iterative Construction of Sparse Polynomial Approximations},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {We present an iterative algorithm for nonlinear regression based on construction of sparse polynomials. Polynomials are built sequentially from lower to higher order. Selection of new terms is accomplished using a novel look-ahead approach that predicts whether a variable contributes to the remaining error. The algorithm is based on the tree-growing heuristic in LMS Trees which we have extended to approximation of arbitrary polynomials of the input features. In addition, we provide a new theoretical justification for this heuristic approach. The algorithm is shown to discover a known polynomial from samples, and to make accurate estimates of pixel values in an image-processing task.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {1064–1071},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987046,
+author = {Redding, Nicholas J. and Downs, T.},
+title = {Learning in Feedforward Networks with Nonsmooth Functions},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {This paper is concerned with the problem of learning in networks where some or all of the functions involved are not smooth. Examples of such networks are those whose neural transfer functions are piecewise-linear and those whose error function is defined in terms of the l∞ norm.Up to now, networks whose neural transfer functions are piecewise-linear have received very little consideration in the literature, but the possibility of using an error function defined in terms of the l∞ norm has received some attention. In this latter work, however, the problems that can occur when gradient methods are used for non smooth error functions have not been addressed.In this paper we draw upon some recent results from the field of nonsmooth optimization (NSO) to present an algorithm for the non smooth case. Our motivation for this work arose out of the fact that we have been able to show that, in backpropagation, an error function based upon the l∞ norm overcomes the difficulties which can occur when using the l2 norm.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {1056–1063},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987045,
+author = {Moody, John and Yarvin, Norman},
+title = {Networks with Learned Unit Response Functions},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {Feedforward networks composed of units which compute a sigmoidal function of a weighted sum of their inputs have been much investigated. We tested the approximation and estimation capabilities of networks using functions more complex than sigmoids. Three classes of functions were tested: polynomials, rational functions, and flexible Fourier series. Unlike sigmoids, these classes can fit non-monotonic functions. They were compared on three problems: prediction of Boston housing prices, the sunspot count, and robot arm inverse dynamics. The complex units attained clearly superior performance on the robot arm problem, which is a highly non-monotonic, pure approximation problem. On the noisy and only mildly nonlinear Boston housing and sunspot problems, differences among the complex units were revealed; polynomials did poorly, whereas rationals and flexible Fourier series were comparable to sigmoids.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {1048–1055},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987044,
+author = {Williamson, Robert C. and Bartlett, Peter L.},
+title = {Splines, Rational Functions and Neural Networks},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {Connections between spline approximation, approximation with rational functions, and feedforward neural networks are studied. The potential improvement in the degree of approximation in going from single to two hidden layer networks is examined. Some results of Birman and Solomjak regarding the degree of approximation achievable when knot positions are chosen on the basis of the probability distribution of examples rather than the function values are extended.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {1040–1047},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987043,
+author = {Koistinen, Petri and Holmstr\"{o}m, Lasse},
+title = {Kernel Regression and Backpropagation Training with Noise},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {One method proposed for improving the generalization capability of a feedforward network trained with the backpropagation algorithm is to use artificial training vectors which are obtained by adding noise to the original training vectors. We discuss the connection of such backpropagation training with noise to kernel density and kernel regression estimation. We compare by simulated examples (1) backpropagation, (2) backpropagation with noise, and (3) kernel regression in mapping estimation and pattern classification contexts.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {1033–1039},
+numpages = {7},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987042,
+author = {Stolorz, Paul},
+title = {Merging Constrained Optimisation with Deterministic Annealing to "Solve" Combinatorially Hard Problems},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {Several parallel analogue algorithms, based upon mean field theory (MFT) approximations to an underlying statistical mechanics formulation, and requiring an externally prescribed annealing schedule, now exist for finding approximate solutions to difficult combinatorial optimisation problems. They have been applied to the Travelling Salesman Problem (TSP), as well as to various issues in computational vision and cluster analysis. I show here that any given MFT algorithm can be combined in a natural way with notions from the areas of constrained optimisation and adaptive simulated annealing to yield a single homogenous and efficient parallel relaxation technique, for which an externally prescribed annealing schedule is no longer required. The results of numerical simulations on 50-city and 100-city TSP problems are presented, which show that the ensuing algorithms are typically an order of magnitude faster than the MFT algorithms alone, and which also show, on occasion, superior solutions as well.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {1025–1032},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987041,
+author = {Schraudolph, Nicol N. and Sejnowski, Terrence J.},
+title = {Competitive Anti-Hebbian Learning of Invariants},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {Although the detection of invariant structure in a given set of input patterns is vital to many recognition tasks, connectionist learning rules tend to focus on directions of high variance (principal components). The prediction paradigm is often used to reconcile this dichotomy; here we suggest a more direct approach to invariant learning based on an anti-Hebbian learning rule. An unsupervised two-layer network implementing this method in a competitive setting learns to extract coherent depth information from random-dot stereograms.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {1017–1024},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987040,
+author = {Darken, Christian and Moody, John},
+title = {Towards Faster Stochastic Gradient Search},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {Stochastic gradient descent is a general algorithm which includes LMS, on-line backpropagation, and adaptive k-means clustering as special cases. The standard choices of the learning rate η (both adaptive and fixed functions of time) often perform quite poorly. In contrast, our recently proposed class of "search then converge" learning rate schedules (Darken and Moody, 1990) display the theoretically optimal asymptotic convergence rate and a superior ability to escape from poor local minima. However, the user is responsible for setting a key parameter. We propose here a new methodology for creating the first completely automatic adaptive learning rates which achieve the optimal rate of convergence.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {1009–1016},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987039,
+author = {Munro, Paul W.},
+title = {Repeat until Bored: A Pattern Selection Strategy},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {An alternative to the typical technique of selecting training examples independently from a fixed distribution is formulated and analyzed, in which the current example is presented repeatedly until the error for that item is reduced to some criterion value, β; then, another item is randomly selected. The convergence time can be dramatically increased or decreased by this heuristic, depending on the task, and is very sensitive to the value of β.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {1001–1008},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987038,
+author = {Nowlan, Steven J. and Hinton, Geoffrey E.},
+title = {Adaptive Soft Weight Tying Using Gaussian Mixtures},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {One way of simplifying neural networks so they generalize better is to add an extra term to the error function that will penalize complexity. We propose a new penalty term in which the distribution of weight values is modelled as a mixture of multiple gaussians. Under this model, a set of weights is simple if the weights can be clustered into subsets so that the weights in each cluster have similar values. We allow the parameters of the mixture model to adapt at the same time as the network learns. Simulations demonstrate that this complexity term is more effective than previous complexity terms.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {993–1000},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987037,
+author = {Jordan, Michael I. and Jacobs, Robert A.},
+title = {Hierarchies of Adaptive Experts},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {In this paper we present a neural network architecture that discovers a recursive decomposition of its input space. Based on a generalization of the modular architecture of Jacobs, Jordan, Nowlan, and Hinton (1991), the architecture uses competition among networks to recursively split the input space into nested regions and to learn separate associative mappings within each region. The learning algorithm is shown to perform gradient ascent in a log likelihood function that captures the architecture's hierarchical structure.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {985–992},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987036,
+author = {Towell, Geoffrey and Shavlik, Jude W.},
+title = {Interpretation of Artificial Neural Networks: Mapping Knowledge-Based Neural Networks into Rules},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {We propose and empirically evaluate a method for the extraction of expert-comprehensible rules from trained neural networks. Our method operates in the context of a three-step process for learning that uses rule-based domain knowledge in combination with neural networks. Empirical tests using real-worlds problems from molecular biology show that the rules our method extracts from trained neural networks: closely reproduce the accuracy of the network from which they came, are superior to the rules derived by a learning system that directly refines symbolic rules, and are expert-comprehensible.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {977–984},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987035,
+author = {McMillan, Clayton and Mozer, Michael C. and Smolensky, Paul},
+title = {Rule Induction through Integrated Symbolic and Subsymbolic Processing},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {We describe a neural network, called RuleNet, that learns explicit, symbolic condition-action rules in a formal string manipulation domain. RuleNet discovers functional categories over elements of the domain, and, at various points during learning, extracts rules that operate on these categories. The rules are then injected back into RuleNet and training continues, in a process called iterative projection. By incorporating rules in this way, RuleNet exhibits enhanced learning and generalization performance over alternative neural net approaches. By integrating symbolic rule learning and subsymbolic category learning, RuleNet has capabilities that go beyond a purely symbolic system. We show how this architecture can be applied to the problem of case-role assignment in natural language processing, yielding a novel rule-based solution.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {969–976},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987034,
+author = {Omohundro, Stephen M.},
+title = {Best-First Model Merging for Dynamic Learning and Recognition},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {"Best-first model merging" is a general technique for dynamically choosing the structure of a neural or related architecture while avoiding overfitting. It is applicable to both learning and recognition tasks and often generalizes significantly better than fixed structures. We demonstrate the approach applied to the tasks of choosing radial basis functions for function learning, choosing local affine models for curve and constraint surface modelling, and choosing the structure of a balltree or bumptree to maximize efficiency of access.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {958–965},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987033,
+author = {Krogh, Anders and Hertz, John A.},
+title = {A Simple Weight Decay Can Improve Generalization},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {It has been observed in numerical simulations that a weight decay can improve generalization in a feed-forward neural network. This paper explains why. It is proven that a weight decay has two effects in a linear network. First, it suppresses any irrelevant components of the weight vector by choosing the smallest vector that solves the learning problem. Second, if the size is chosen right, a weight decay can suppress some of the effects of static noise on the targets, which improves generalization quite a lot. It is then shown how to extend these results to networks with hidden layers and non-linear units. Finally the theory is confirmed by some numerical simulations using the data from NetTalk.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {950–957},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987032,
+author = {Siu, Kai-Yeung and Bruck, Jehoshua},
+title = {Neural Computing with Small Weights},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {An important issue in neural computation is the dynamic range of weights in the neural networks. Many experimental results on learning indicate that the weights in the networks can grow prohibitively large with the size of the inputs. Here we address this issue by studying the tradeoffs between the depth and the size of weights in polynomial-size networks of linear threshold elements (LTEs). We show that there is an efficient way of simulating a network of LTEs with large weights by a network of LTEs with small weights. In particular, we prove that every depth-d, polynomial-size network of LTEs with exponentially large integer weights can be simulated by a depth-(2d + 1), polynomial-size network of LTEs with polynomially bounded integer weights. To prove these results, we use tools from harmonic analysis of Boolean functions. Our technique is quite general, it provides insights to some other problems. For example, we are able to improve the best known results on the depth of a network of linear threshold elements that computes the COMPARISON, SUM and PRODUCT of two n-bits numbers, and the MAXIMUM and the SORTING of n n-bit numbers.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {944–949},
+numpages = {6},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987031,
+author = {Zhao, Ying and Atkeson, Christopher G.},
+title = {Some Approximation Properties of Projection Pursuit Learning Networks},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {This paper will address an important question in machine learning: What kind of network architectures work better on what kind of problems? A projection pursuit learning network has a very similar structure to a one hidden layer sigmoidal neural network. A general method based on a continuous version of projection pursuit regression is developed to show that projection pursuit regression works better on angular smooth functions than on Laplacian smooth functions. There exists a ridge function approximation scheme to avoid the curse of dimensionality for approximating functions in L2(θd).},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {936–943},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987030,
+author = {Ji, Chuanyi and Psaltis, Demetri},
+title = {The VC-Dimension versus the Statistical Capacity of Multilayer Networks},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {A general relationship is developed between the VC-dimension and the statistical lower epsilon-capacity which shows that the VC-dimension can be lower bounded (in order) by the statistical lower epsilon-capacity of a network trained with random samples. This relationship explains quantitatively how generalization takes place after memorization, and relates the concept of generalization (consistency) with the capacity of the optimal classifier over a class of classifiers with the same structure and the capacity of the Bayesian classifier. Furthermore, it provides a general methodology to evaluate a lower bound for the VC-dimension of feedforward multilayer neural networks.This general methodology is applied to two types of networks which are important for hardware implementations: two layer (N - 2L - 1) networks with binary weights, integer thresholds for the hidden units and zero threshold for the output unit, and a single neuron ((N - 1) networks) with binary weigths and a zero threshold. Specifically, we obtain O(W/lnL) ≤ d2 ≤ O(W), and d1 - O(N). Here W is the total number of weights of the (N - 2L - 1) networks. d1 and d2 represent the VC-dimensions for the (N - 1) and (N - 2L - 1) networks respectively.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {928–935},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987029,
+author = {Kuh, Anthony and Petsche, Thomas and Rivest, Ronald L.},
+title = {Incrementally Learning Time-Varying Half-Planes},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {We present a distribution-free model for incremental learning when concepts vary with time. Concepts are caused to change by an adversary while an incremental learning algorithm attempts to track the changing concepts by minimizing the error between the current target concept and the hypothesis. For a single half-plane and the intersection of two half-planes, we show that the average mistake rate depends on the maximum rate at which an adversary can modify the concept. These theoretical predictions are verified with simulations of several learning algorithms including back propagation.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {920–927},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987028,
+author = {Freund, Yoav and Haussler, David},
+title = {Unsupervised Learning of Distributions on Binary Vectors Using Two Layer Networks},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {We study a particular type of Boltzmann machine with a bipartite graph structure called a harmonium. Our interest is in using such a machine to model a probability distribution on binary input vectors. We analyze the class of probability distributions that can be modeled by such machines, showing that for each n ≥ 1 this class includes arbitrarily good approximations to any distribution on the set of all n-vectors of binary inputs. We then present two learning algorithms for these machines. The first learning algorithm is the standard gradient ascent heuristic for computing maximum likelihood estimates for the parameters (i.e. weights and thresholds) of the model. Here we give a closed form for this gradient that is significantly easier to compute than the corresponding gradient for the general Boltzmann machine. The second learning algorithm is a greedy method that creates the hidden units and computes their weights one at a time. This method is a variant of the standard method for projection pursuit density estimation. We give experimental results for these learning methods on synthetic data and natural data from the domain of handwritten digits.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {912–919},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987027,
+author = {Bertoni, Alberto and Campadelli, Paola and Morpurgo, Anna and Panizza, Sandra},
+title = {Polynomial Uniform Convergence of Relative Frequencies to Probabilities},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {We define the concept of polynomial uniform convergence of relative frequencies to probabilities in the distribution-dependent context. Let Xn = {0,1}n, let Pn be a probability distribution on Xn and let Fn ⊂ 2Xn be a family of events. The family {(Xn, Pn, Fn)}n≥1 has the property of polynomial uniform convergence if the probability that the maximum difference (over Fn) between the relative frequency and the probability of an event exceed a given positive ε be at most δ (0 &lt; δ &lt; 1), when the sample on which the frequency is evaluated has size polynomial in n, 1/ε, 1/δ. Given a t-sample (x1, ..., xt), let Cn(t) (x1, ..., xt) be the Vapnik-Chervonenkis dimension of the family {{x1, ..., xt} ∩ f | f ∈ Fn} and M(n, t) the expectation E(Cn(t)/t). We show that {(Xn, Pn, Fn)}n≥1 has the property of polynomial uniform convergence iff there exists β &gt; 0 such that M(n, t) = O(n/tβ). Applications to distribution-dependent PAC learning are discussed.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {904–911},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987026,
+author = {Simard, Patrice and Victorri, Bernard and Le Cun, Yann and Denker, John},
+title = {Tangent Prop: A Formalism for Specifying Selected Invariances in an Adaptive Network},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {In many machine learning applications, one has access, not only to training data, but also to some high-level a priori knowledge about the desired behavior of the system. For example, it is known in advance that the output of a character recognizer should be invariant with respect to small spatial distortions of the input images (translations, rotations, scale changes, etcetera).We have implemented a scheme that allows a network to learn the derivative of its outputs with respect to distortion operators of our choosing. This not only reduces the learning time and the amount of training data, but also provides a powerful language for specifying what generalizations we wish the network to perform.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {895–903},
+numpages = {9},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987025,
+author = {Pearlmutter, Barak},
+title = {Gradient Descent: Second-Order Momentum and Saturating Error},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {Batch gradient descent, Δw(t) = -νdE/dw(t), converges to a minimum of quadratic form with a time constant no better than 1/4λmax/λmin where λmin and λmax are the minimum and maximum eigenvalues of the Hessian matrix of E with respect to w. It was recently shown that adding a momentum term Δw(t) = -νdE/dw(t) + αΔw(t - 1) improves this to 1/4√λmax/λmin, although only in the batch case. Here we show that second-order momentum, Δw(t) = -νdE/dw(t) + αΔw(t -1) + βΔw(t - 2), can lower this no further. We then regard gradient descent with momentum as a dynamic system and explore a non quadratic error surface, showing that saturation of the error accounts for a variety of effects observed in simulations and justifies some popular heuristics.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {887–894},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987024,
+author = {Shawe-Taylor, John},
+title = {Threshold Network Learning in the Presence of Equivalences},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {This paper applies the theory of Probably Approximately Correct (PAC) learning to multiple output feedforward threshold networks in which the weights conform to certain equivalences. It is shown that the sample size for reliable learning can be bounded above by a formula similar to that required for single output networks with no equivalences. The best previously obtained bounds are improved for all cases.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {879–886},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987023,
+author = {Alspector, Joshua and Jayakumar, Anthony and Luna, Stephan},
+title = {Experimental Evaluation of Learning in a Neural Microsystem},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {We report learning measurements from a system composed of a cascadable learning chip, data generators and analyzers for training pattern presentation, and an X-windows based software interface. The 32 neuron learning chip has 496 adaptive synapses and can perform Boltzmann and mean-field learning using separate noise and gain controls. We have used this system to do learning experiments on the parity and replication problem. The system settling time limits the learning speed to about 100,000 patterns per second roughly independent of system size.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {871–878},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987022,
+author = {Judd, Stephen},
+title = {Constant-Time Loading of Shallow 1-Dimensional Networks},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {The complexity of learning in shallow 1-Dimensional neural networks has been shown elsewhere to be linear in the size of the network. However, when the network has a huge number of units (as cortex has) even linear time might be unacceptable. Furthermore, the algorithm that was given to achieve this time was based on a single serial processor and was biologically implausible.In this work we consider the more natural parallel model of processing and demonstrate an expected-time complexity that is constant (i.e. independent of the size of the network). This holds even when internode communication channels are short and local, thus adhering to more biological and VLSI constraints.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {863–870},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987021,
+author = {Haussler, David and Kearns, Michael and Opper, Manfred and Schapire, Robert},
+title = {Estimating Average-Case Learning Curves Using Bayesian, Statistical Physics and VC Dimension Methods},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {In this paper we investigate an average-case model of concept learning, and give results that place the popular statistical physics and VC dimension theories of learning curve behavior in a common framework.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {855–862},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987020,
+author = {Moody, John E.},
+title = {The Effective Number of Parameters: An Analysis of Generalization and Regularization in Nonlinear Learning Systems},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {We present an analysis of how the generalization performance (expected test set error) relates to the expected training set error for nonlinear learning systems, such as multilayer perceptrons and radial basis functions. The principal result is the following relationship (computed to second order) between the expected test set and training set errors: 〈εtest(λ)〉ξξ′ ≈ 〈εtrain(λ)〉ξ + 2σeff2 peff(λ)/n (1) Here, n is the size of the training sample ξ, σeff2 is the effective noise variance in the response variable(s), λ, is a regularization or weight decay parameter, and Peff(λ) is the effective number of parameters in the nonlinear model. The expectations 〈 〉 of training set and test set errors are taken over possible training sets ξ and training and test sets ξ′ respectively. The effective number of parameters peff(λ) usually differs from the true number of model parameters p for nonlinear or regularized models; this theoretical conclusion is supported by Monte Carlo experiments. In addition to the surprising result that peff(λ) ≠ p, we propose an estimate of (1) called the generalized prediction error (GPE) which generalizes well established estimates of prediction risk such as Akaike's F P E and AIC, Mallows Cp, and Barron's P S E to the nonlinear setting.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {847–854},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987019,
+author = {MacKay, David J. C.},
+title = {Bayesian Model Comparison and Backprop Nets},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {The Bayesian model comparison framework is reviewed, and the Bayesian Occam's razor is explained. This framework can be applied to feedforward networks, making possible (1) objective comparisons between solutions using alternative network architectures; (2) objective choice of magnitude and type of weight decay terms; (3) quantified estimates of the error bars on network parameters and on network output. The framework also generates a measure of the effective number of parameters determined by the data.The relationship of Bayesian model comparison to recent work on prediction of generalisation ability (Guyon et al., 1992, Moody, 1992) is discussed.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {839–846},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987018,
+author = {Vapnik, V.},
+title = {Principles of Risk Minimization for Learning Theory},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {Learning is posed as a problem of function estimation, for which two principles of solution are considered: empirical risk minimization and structural risk minimization. These two principles are applied to two different statements of the function estimation problem: global and local. Systematic improvements in prediction power are illustrated in application to zip-code recognition.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {831–838},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987017,
+author = {Anderson, Dana Z. and Benkert, Claus and Hebler, Verena and Jang, Ju-Seog and Montgomery, Don and Saffiman, Mark},
+title = {Optical Implementation of a Self-Organizing Feature Extractor},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {We demonstrate a self-organizing system based on photorefractive ring oscillators. We employ the system in two ways that can both be thought of as feature extractors; one acts on a set of images exposed repeatedly to the system strictly as a linear feature extractor, and the other serves as a signal demultiplexer for fiber optic communications. Both systems implement unsupervised competitive learning embedded within the mode interaction dynamics between the modes of a set of ring oscillators. After a training period, the modes of the rings become associated with the different image features or carrier frequencies within the incoming data stream.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {821–828},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987016,
+author = {Lazzaro, John},
+title = {Temporal Adaptation in a Silicon Auditory Nerve},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {Many auditory theorists consider the temporal adaptation of the auditory nerve a key aspect of speech coding in the auditory periphery. Experiments with models of auditory localization and pitch perception also suggest temporal adaptation is an important element of practical auditory processing. I have designed, fabricated, and successfully tested an analog integrated circuit that models many aspects of auditory nerve response, including temporal adaptation.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {813–820},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987015,
+author = {Cohen, Marc H. and Pouliquen, Philippe O. and Andreou, Andreas G.},
+title = {Analog LSI Implementation of an Auto-Adaptive Network for Real-Time Separation of Independent Signals},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {We present experimental data from an analog CMOS LSI chip that implements the Herault-Jutten adaptive neural network. Testing procedures and results in time and frequency-domain are described. These include weight convergence trajectories, extraction of a signal in noise, and separation of statistically complex signals such as speech.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {805–812},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987014,
+author = {Harris, John G.},
+title = {Segmentation Circuits Using Constrained Optimization},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {A novel segmentation algorithm has been developed utilizing an absolute-value smoothness penalty instead of the more common quadratic regularizer. This functional imposes a piece-wise constant constraint on the segmented data. Since the minimized energy is guaranteed to be convex, there are no problems with local minima and no complex continuation methods are necessary to find the unique global minimum. By interpreting the minimized energy as the generalized power of a nonlinear resistive network, a continuous-time analog segmentation circuit was constructed.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {797–804},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987013,
+author = {Kirk, David and Fleischer, Kurt and Watts, Lloyd and Barr, Alan},
+title = {Constrained Optimization Applied to the Parameter Setting Problem for Analog Circuits},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {We use constrained optimization to select operating parameters for two circuits: a simple 3-transistor square root circuit, and an analog VLSI artificial cochlea. This automated method uses computer controlled measurement and test equipment to choose chip parameters which minimize the difference between the actual circuit's behavior and a specified goal behavior. Choosing the proper circuit parameters is important to compensate for manufacturing deviations or adjust circuit performance within a certain range. As biologically-motivated analog VLSI circuits become increasingly complex, implying more parameters, setting these parameters by hand will become more cumbersome. Thus an automated parameter setting method can be of great value [Fleischer 90]. Automated parameter setting is an integral part of a goal-based engineering design methodology in which circuits are constructed with parameters enabling a wide range of behaviors, and are then "tuned" to the desired behaviors automatically.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {789–796},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987012,
+author = {Kohn, Phil and Bilmes, Jeff and Morgan, Nelson and Beck, James},
+title = {Software for ANN Training on a Ring Array Processor},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {Experimental research on Artificial Neural Network (ANN) algorithms requires either writing variations on the same program or making one monolithic program with many parameters and options. By using an object-oriented library, the size of these experimental programs is reduced while making them easier to read, write and modify. An efficient and flexible realization of this idea is Connectionist Layered Object-oriented Network Simulator (CLONES). CLONES runs on UNIX workstations and on the 100-1000 MFLOP Ring Array Processor (RAP) that we built with ANN algorithms in mind. In this report we describe CLONES and show how it is implemented on the RAP.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {781–788},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987011,
+author = {S\"{a}ckinger, Eduard and Boser, Bernhard E. and Jackel, Lawrence D.},
+title = {A Neurocomputer Board Based on the ANNA Neural Network Chip},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {A board is described that contains the ANNA neural-network chip, and a DSP32C digital signal processor. The ANNA (Analog Neural Network Arithmetic unit) chip performs mixed analog/digital processing. The combination of ANNA with the DSP allows high-speed, end-to-end execution of numerous signal-processing applications, including the preprocessing, the neural-net calculations, and the postprocessing steps. The ANNA board evaluates neural networks 10 to 100 times faster than the DSP alone. The board is suitable for implementing large (million connections) networks with sparse weight matrices. Three applications have been implemented on the board: a convolver network for slant detection of text blocks, a handwritten digit recognizer, and a neural network for recognition-based segmentation.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {773–780},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987010,
+author = {Boahen, Kwabena A. and Andreou, Andreas G.},
+title = {A Contrast Sensitive Silicon Retina with Reciprocal Synapses},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {The goal of perception is to extract invariant properties of the underlying world. By computing contrast at edges, the retina reduces incident light intensities spanning twelve decades to a twentyfold variation. In one stroke, it solves the dynamic range problem and extracts relative reflectivity, bringing us a step closer to the goal. We have built a contrast-sensitive silicon retina that models all major synaptic interactions in the outer-plexiform layer of the vertebrate retina using current-mode CMOS circuits: namely, reciprocal synapses between cones and horizontal cells, which produce the antagonistic center/surround receptive field, and cone and horizontal cell gap junctions, which determine its size. The chip has 90 \texttimes{} 92 pixels on a 6.8 \texttimes{} 6.9mm die in 2µm n-well technology and is fully functional.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {764–770},
+numpages = {7},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987009,
+author = {Benson, Ronald G. and Delbr\"{u}ck, Tobi},
+title = {Direction Selective Silicon Retina That Uses Null Inhibition},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {Biological retinas extract spatial and temporal features in an attempt to reduce the complexity of performing visual tasks. We have built and tested a silicon retina which encodes several useful temporal features found in vertebrate retinas. The cells in our silicon retina are selective to direction, highly sensitive to positive contrast changes around an ambient light level, and tuned to a particular velocity. Inhibitory connections in the null direction perform the direction selectivity we desire. This silicon retina is on a 4.6 \texttimes{} 6.8mm die and consists of a 47 \texttimes{} 41 array of photoreceptors.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {756–763},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987008,
+author = {Neugebauer, Charles F. and Yariv, Amnon},
+title = {A Parallel Analog CCD/CMOS Signal Processor},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {A CCD based signal processing IC that computes a fully parallel single quadrant vector-matrix multiplication has been designed and fabricated with a 2µm CCD/CMOS process. The device incorporates an array of Charge Coupled Devices (CCD) which hold an analog matrix of charge encoding the matrix elements. Input vectors are digital with 1 - 8 bit accuracy.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {748–755},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987007,
+author = {Chiang, Alice M. and Chuang, Michael L. and LaFranchise, Jeffrey R.},
+title = {CCD Neural Network Processors for Pattern Recognition},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {A CCD-based processor that we call the NNC2 is presented. The NNC2 implements a fully connected 192-input, 32-output two-layer network and can be cascaded to form multilayer networks or used in parallel for additional input or output nodes. The device computes 1.92 \texttimes{} 109 connections/ sec when clocked at 10 MHz. Network weights can be specified to six bits of accuracy and are stored on-chip in programmable digital memories. A neural network pattern recognition system using NNC2 and CCD image feature extractor (IFE) devices is described. Additionally, we report a CCD output circuit that exploits inherent nonlinearities in the charge injection process to realize an adjustable-threshold sigmoid in a chip area of 40 \texttimes{} 80 µm2.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {741–747},
+numpages = {7},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987006,
+author = {Platt, John C. and Faggin, Federico},
+title = {Networks for the Separation of Sources That Are Superimposed and Delayed},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {We have created new networks to unmix signals which have been mixed either with time delays or via filtering. We first show that a subset of the H\'{e}rault-Jutten learning rules fulfills a principle of minimum output power. We then apply this principle to extensions of the H\'{e}rault-Jutten network which have delays in the feedback path. Our networks perform well on real speech and music signals that have been mixed using time delays or filtering.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {730–737},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987005,
+author = {Goudreau, Mark W. and Giles, C. Lee},
+title = {Neural Network Routing for Random Multistage Interconnection Networks},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {A routing scheme that uses a neural network has been developed that can aid in establishing point-to-point communication routes through multistage interconnection networks (MINs). The neural network is a network of the type that was examined by Hopfield (Hopfield, 1984 and 1985). In this work, the problem of establishing routes through random MINs (RMINs) in a shared-memory, distributed computing system is addressed. The performance of the neural network routing scheme is compared to two more traditional approaches - exhaustive search routing and greedy routing. The results suggest that a neural network router may be competitive for certain RMINs.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {722–729},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987004,
+author = {Tunley, Hilary},
+title = {A Neural Network for Motion Detection of Drift-Balanced Stimuli},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {This paper briefly describes an artificial neural network for preattentive visual processing. The network is capable of determining image motion in a type of stimulus which defeats most popular methods of motion detection - a subset of second-order visual motion stimuli known as drift-balanced stimuli(DBS). The processing stages of the network described in this paper are integratable into a model capable of simultaneous motion extraction, edge detection, and the determination of occlusion.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {714–721},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987003,
+author = {Freeman, Donald T.},
+title = {Computer Recognition of Wave Location in Graphical Data by a Neural Network},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {Five experiments were performed using several neural network architectures to identify the location of a wave in the time ordered graphical results from a medical test. Baseline results from the first experiment found correct identification of the target wave in 85% of cases (n=20). Other experiments investigated the effect of different architectures and preprocessing the raw data on the results. The methods used seem most appropriate for time oriented graphical data which has a clear starting point such as electrophoresis Or spectrometry rather than continuous tests such as ECGs and EEGs.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {706–713},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987002,
+author = {Tsoi, Ah Chung},
+title = {Application of Neural Network Methodology to the Modelling of the Yield Strength in a Steel Rolling Plate Mill},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {In this paper, a tree based neural network viz. MARS (Friedman, 1991) for the modelling of the yield strength of a steel rolling plate mill is described. The inputs to the time series model are temperature, strain, strain rate, and interpass time and the output is the corresponding yield stress. It is found that the MARS-based model reveals which variable's functional dependence is nonlinear, and significant. The results are compared with those obtained by using a Kalman filter based online tuning method and other classification methods, e.g. CART, C4.5, Bayesian classification. It is found that the MARS-based method consistently outperforms the other methods.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {698–705},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987001,
+author = {Gish, Sheri L. and Blaum, Mario},
+title = {Adaptive Development of Connectionist Decoders for Complex Error-Correcting Codes},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {We present an approach for development of a decoder for any complex binary error-correcting code (ECC) via training from examples of decoded received words. Our decoder is a connectionist architecture. We describe two separate solutions: A system-level solution (the Cascaded Networks Decoder); and the ECC-Enhanced Decoder, a solution which simplifies the mapping problem which must be solved for decoding. Although both solutions meet our basic approach constraint for simplicity and compactness, only the ECC-Enhanced Decoder meets our second basic constraint of being a generic solution.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {691–697},
+numpages = {7},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2987000,
+author = {Moody, John and Utans, Joachim},
+title = {Principled Architecture Selection for Neural Networks: Application to Corporate Bond Rating Prediction},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {The notion of generalization ability can be defined precisely as the prediction risk, the expected performance of an estimator in predicting new observations. In this paper, we propose the prediction risk as a measure of the generalization ability of multi-layer perceptron networks and use it to select an optimal network architecture from a set of possible architectures. We also propose a heuristic search strategy to explore the space of possible architectures. The prediction risk is estimated from the available data; here we estimate the prediction risk by v-fold cross-validation and by asymptotic approximations of generalized cross-validation or Akaike's final prediction error. We apply the technique to the problem of predicting corporate bond ratings. This problem is very attractive as a case study, since it is characterized by the limited availability of the data and by the lack of a complete a priori model which could be used to impose a structure to the network architecture.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {683–690},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986999,
+author = {Thiria, Sylvie and Mejia, Carlos and Badran, Fouad and Cr\'{e}pon, Michel},
+title = {Multimodular Architecture for Remote Sensing Operations},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {This paper deals with an application of Neural Networks to satellite remote sensing observations. Because of the complexity of the application and the large amount of data, the problem cannot be solved by using a single method. The solution we propose is to build multimodules NN architectures where several NN cooperate together. Such system suffer from generic problem for whom we propose solutions. They allow to reach accurate performances for multi-valued function approximations and probability estimations. The results are compared with six other methods which have been used for this problem. We show that the methodology we have developed is general and can be used for a large variety of applications.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {675–682},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986998,
+author = {Smyth, Padhraic and Mellstrom, Jeff},
+title = {Fault Diagnosis of Antenna Pointing Systems Using Hybrid Neural Network and Signal Processing Models},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {We describe in this paper a novel application of neural networks to system health monitoring of a large antenna for deep space communications. The paper outlines our approach to building a monitoring system using hybrid signal processing and neural network techniques, including autoregressive modelling, pattern recognition, and Hidden Markov models. We discuss several problems which are somewhat generic in applications of this kind - in particular we address the problem of detecting classes which were not present in the training data. Experimental results indicate that the proposed system is sufficiently reliable for practical implementation.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {667–674},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986997,
+author = {R\"{o}scheisen, Martin and Hofmann, Reimar and Tresp, Volker},
+title = {Neural Control for Rolling Mills: Incorporating Domain Theories to Overcome Data Deficiency},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {In a Bayesian framework, we give a principled account of how domain-specific prior knowledge such as imperfect analytic domain theories can be optimally incorporated into networks of locally-tuned units: by choosing a specific architecture and by applying a specific training regimen. Our method proved successful in overcoming the data deficiency problem in a large-scale application to devise a neural control for a hot line rolling mill. It achieves in this application significantly higher accuracy than optimally-tuned standard algorithms such as sigmoidal backpropagation, and outperforms the state-of-the-art solution.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {659–666},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986996,
+author = {Venturini, Rita and Lytton, William W. and Sejnowski, Terrence J.},
+title = {Neural Network Analysis of Event Related Potentials and Electroencephalogram Predicts Vigilance},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {Automated monitoring of vigilance in attention intensive tasks such as air traffic control or sonar operation is highly desirable. As the operator monitors the instrument, the instrument would monitor the operator, insuring against lapses. We have taken a first step toward this goal by using feedforward neural networks trained with backpropagation to interpret event related potentials (ERPs) and electroencephalogram (EEG) associated with periods of high and low vigilance. The accuracy of our system on an ERP data set averaged over 28 minutes was 96%, better than the 83% accuracy obtained using linear discriminant analysis. Practical vigilance monitoring will require prediction over shorter time periods. We were able to average the ERP over as little as 2 minutes and still get 90% correct prediction of a vigilance measure. Additionally, we achieved similarly good performance using segments of EEG power spectrum as short as 56 sec.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {651–658},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986995,
+author = {Manduca, Armando and Christy, Paul and Ehman, Richard},
+title = {Neural Network Diagnosis of Avascular Necrosis from Magnetic Resonance Images},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {A vascular necrosis (AVN) of the femoral head is a common yet potentially serious disorder which can be detected in its very early stages with magnetic resonance imaging. We have developed multi-layer perceptron networks, trained with conjugate gradient optimization, which diagnose AVN from single magnetic resonance images of the femoral head with 100% accuracy on training data and 97% accuracy on test data.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {645–650},
+numpages = {6},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986994,
+author = {Jabri, M. and Pickard, S. and Leong, P. and Chi, Z. and Flower, B. and Xie, Y.},
+title = {ANN Based Classification for Heart Defibrillators},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {Current Intra-Cardia defibrillators make use of simple classification algorithms to determine patient conditions and subsequently to enable proper therapy. The simplicity is primarily due to the constraints on power dissipation and area available for implementation. Sub-threshold implementation of artificial neural networks offer potential classifiers with higher performance than commercially available defibrillators. In this paper we explore several classifier architectures and discuss micro-electronic implementation issues.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {637–644},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986993,
+author = {Dornay, Menashe and Uno, Yoji and Kawato, Mitsuo and Suzuki, Ryoji},
+title = {Simulation of Optimal Movements Using the Minimum-Muscle-Tension-Change Model},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {This work discusses various optimization techniques which were proposed in models for controlling arm movements. In particular, the minimum-muscle-tension-change model is investigated. A dynamic simulator of the monkey's arm, including seventeen single and double joint muscles, is utilized to generate horizontal hand movements. The hand trajectories produced by this algorithm are discussed.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {627–634},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986992,
+author = {Henis, Ealan A. and Flash, Tamar},
+title = {A Computational Mechanism to Account for Averaged Modified Hand Trajectories},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {Using the double-step target displacement paradigm the mechanisms underlying arm trajectory modification were investigated. Using short (10- 110 msec) inter-stimulus intervals the resulting hand motions were initially directed in between the first and second target locations. The kinematic features of the modified motions were accounted for by the superposition scheme, which involves the vectorial addition of two independent point-to-point motion units: one for moving the hand toward an internally specified location and a second one for moving between that location and the final target location. The similarity between the inferred internally specified locations and previously reported measured end-points of the first saccades in double-step eye-movement studies may suggest similarities between perceived target locations in eye and hand motor control.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {619–626},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986991,
+author = {Berthier, N. E. and Singh, S. P. and Barto, A. G. and Honk, J. C.},
+title = {A Cortico-Cerebellar Model That Learns to Generate Distributed Motor Commands to Control a Kinematic Arm},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {A neurophysiologically-based model is presented that controls a simulated kinematic arm during goal-directed reaches. The network generates a quasi-feedforward motor command that is learned using training signals generated by corrective movements. For each target, the network selects and sets the output of a subset of pattern generators. During the movement, feedback from proprioceptors turns off the pattern generators. The task facing individual pattern generators is to recognize when the arm reaches the target and to turn off. A distributed representation of the motor command that resembles population vectors seen in vivo was produced naturally by these simulations.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {611–618},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986990,
+author = {Anastasio, Thomas J.},
+title = {Learning in the Vestibular System: Simulations of Vestibular Compensation Using Recurrent Back-Propagation},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {Vestibular compensation is the process whereby normal functioning is regained following destruction of one member of the pair of peripheral vestibular receptors. Compensation was simulated by lesioning a dynamic neural network model of the vestibulo-ocular reflex (VOR) and retraining it using recurrent back-propagation. The model reproduced the pattern of VOR neuron activity experimentally observed in compensated animals, but only if connections heretofore considered uninvolved were allowed to be plastic. Because the model incorporated nonlinear units, it was able to reconcile previously conflicting, linear analyses of experimental results on the dynamic properties of VOR neurons in normal and compensated animals.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {603–610},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986989,
+author = {Dean, Paul and Mayhew, John E. W. and Langdon, Pat},
+title = {A Neural Net Model for Adaptive Control of Saccadic Accuracy by Primate Cerebellum and Brainstem},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {Accurate saccades require interaction between brainstem circuitry and the cerebellum. A model of this interaction is described, based on Kawato's principle of feedback-error-learning. In the model a part of the brainstem (the superior colliculus) acts as a simple feedback controller with no knowledge of initial eye position, and provides an error signal for the cerebellum to correct for eye-muscle nonlinearities. This teaches the cerebellum, modelled as a CMAC, to adjust appropriately the gain on the brainstem burst-generator's internal feedback loop and so alter the size of burst sent to the motoneurons. With direction-only errors the system rapidly learns to make accurate horizontal eye movements from any starting position, and adapts realistically to subsequent simulated eye-muscle weakening or displacement of the saccadic target.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {595–602},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986988,
+author = {DeMers, David and Kreutz-Delgado, Kenneth},
+title = {Learning Global Direct Inverse Kinematics},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {We introduce and demonstrate a bootstrap method for construction of an inverse function for the robot kinematic mapping using only sample configuration--space/ workspace data. Unsupervised learning (clustering) techniques are used on pre-image neighborhoods in order to learn to partition the configuration space into subsets over which the kinematic mapping is invertible. Supervised learning is then used separately on each of the partitions to approximate the inverse function. The ill-posed inverse kinematics function is thereby regularized, and a global inverse kinematics solution for the wristless Puma manipulator is developed.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {589–594},
+numpages = {6},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986987,
+author = {Simard, Patrice and Le Cun, Yann},
+title = {Reverse TDNN: An Architecture for Trajectory Generation},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {The backpropagation algorithm can be used for both recognition and generation of time trajectories. When used as a recognizer, it has been shown that the performance of a network can be greatly improved by adding structure to the architecture. The same is true in trajectory generation. In particular a new architecture corresponding to a "reversed" TDNN is proposed. Results show dramatic improvement of performance in the generation of hand-written characters. A combination of TDNN and reversed TDNN for compact encoding is also suggested.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {579–588},
+numpages = {10},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986986,
+author = {Moore, Andrew W.},
+title = {Fast, Robust Adaptive Control by Learning Only Forward Models},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {A large class of motor control tasks requires that on each cycle the controller is told its current state and must choose an action to achieve a specified, state-dependent, goal behaviour. This paper argues that the optimization of learning rate, the number of experimental control decisions before adequate performance is obtained, and robustness is of prime importance--if necessary at the expense of computation per control cycle and memory requirement. This is motivated by the observation that a robot which requires two thousand learning steps to achieve adequate performance, or a robot which occasionally gets stuck while learning, will always be undesirable, whereas moderate computational expense can be accommodated by increasingly powerful computer hardware. It is not unreasonable to assume the existence of inexpensive 100 Mflop controllers within a few years and so even processes with control cycles in the low tens of milliseconds will have millions of machine instructions in which to make their decisions. This paper outlines a learning control scheme which aims to make effective use of such computational power.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {571–578},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986985,
+author = {Brody, Carlos},
+title = {Fast Learning with Predictive Forward Models},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {A method for transforming performance evaluation signals distal both in space and time into proximal signals usable by supervised learning algorithms, presented in [Jordan &amp; Jacobs 90], is examined. A simple observation concerning differentiation through models trained with redundant inputs (as one of their networks is) explains a weakness in the original architecture and suggests a modification: an internal world model that encodes action-space exploration and, crucially, cancels input redundancy to the forward model is added. Learning time on an example task, cartpole balancing, is thereby reduced about 50 to 100 times.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {563–570},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986984,
+author = {Scott, Gary M. and Shavlik, Jude W.},
+title = {Refining PID Controllers Using Neural Networks},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {The KBANN approach uses neural networks to refine knowledge that can be written in the form of simple propositional rules. We extend this idea further by presenting the MANNCON algorithm by which the mathematical equations governing a PID controller determine the topology and initial weights of a network, which is further trained using backpropagation. We apply this method to the task of controlling the outflow and temperature of a water tank, producing statistically-significant gains in accuracy over both a standard neural network approach and a non-learning PID controller. Furthermore, using the PID knowledge to initialize the weights of the network produces statistically less variation in testset accuracy when compared to networks initialized with small random numbers.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {555–562},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986983,
+author = {Gomi, Hiroaki and Kawato, Mitsuo},
+title = {Recognition of Manipulated Objects by Motor Learning},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {We present two neural network controller learning schemes based on feedback-error-learning  and modular architecture for recognition and control of multiple manipulated objects. In the first scheme, a Gating Network is trained to acquire object-specific representations for recognition of a number of objects (or sets of objects). In the second scheme, an Estimation Network is trained to acquire function-specific, rather than object-specific, representations which directly estimate physical parameters. Both recognition networks are trained to identify manipulated objects using somatic and/or visual information. After learning, appropriate motor commands for manipulation of each object are issued by the control networks.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {547–554},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986982,
+author = {Lemmon, Michael},
+title = {Oscillatory Neural Fields for Globally Optimal Path Planning},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {A neural network solution is proposed for solving path planning problems faced by mobile robots. The proposed network is a two-dimensional sheet of neurons forming a distributed representation of the robot's workspace. Lateral interconnections between neurons are "cooperative", so that the network exhibits oscillatory behaviour. These oscillations are used to generate solutions of Bellman's dynamic programming equation in the context of path planning. Simulation experiments imply that these networks locate global optimal paths even in the presence of substantial levels of circuit nOlse.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {539–546},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986981,
+author = {Thrun, Sebastian B. and M\"{o}ller, Knut},
+title = {Active Exploration in Dynamic Environments},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {Whenever an agent learns to control an unknown environment, two opposing principles have to be combined, namely: exploration (long-term optimization) and exploitation (short-term optimization). Many real-valued connectionist approaches to learning control realize exploration by randomness in action selection. This might be disadvantageous when costs are assigned to "negative experiences". The basic idea presented in this paper is to make an agent explore unknown regions in a more directed manner. This is achieved by a so-called competence map, which is trained to predict the controller's accuracy, and is used for guiding exploration. Based on this, a bistable system enables smoothly switching attention between two behaviors - exploration and exploitation - depending on expected costs and knowledge gain.The appropriateness of this method is demonstrated by a simple robot navigation task.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {531–538},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986980,
+author = {Prescott, Tony J. and Mayhew, John E. W.},
+title = {Obstacle Avoidance through Reinforcement Learning},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {A method is described for generating plan-like, reflexive, obstacle avoidance behaviour in a mobile robot. The experiments reported here use a simulated vehicle with a primitive range sensor. Avoidance behaviour is encoded as a set of continuous functions of the perceptual input space. These functions are stored using CMACs and trained by a variant of Barto and Sutton's adaptive critic algorithm. As the vehicle explores its surroundings it adapts its responses to sensory stimuli so as to minimise the negative reinforcement arising from collisions. Strategies for local navigation are therefore acquired in an explicitly goal-driven fashion. The resulting trajectories form elegant collision-free paths through the environment.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {523–530},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986979,
+author = {Hinton, Geoffrey E. and Williams, Christopher K. I. and Revow, Michael D.},
+title = {Adaptive Elastic Models for Hand-Printed Character Recognition},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {Hand-printed digits can be modeled as splines that are governed by about 8 control points. For each known digit, the control points have preferred "home" locations, and deformations of the digit are generated by moving the control points away from their home locations. Images of digits can be produced by placing Gaussian ink generators uniformly along the spline. Real images can be recognized by finding the digit model most likely to have generated the data. For each digit model we use an elastic matching algorithm to minimize an energy function that includes both the deformation energy of the digit model and the log probability that the model would generate the inked pixels in the image. The model with the lowest total energy wins. If a uniform noise process is included in the model of image generation, some of the inked pixels can be rejected as noise as a digit model is fitting a poorly segmented image. The digit models learn by modifying the home locations of the control points.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {512–519},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986978,
+author = {Martin, Gale L. and Rashid, Mosfeq},
+title = {Recognizing Overlapping Hand-Printed Characters by Centered-Object Integrated Segmentation and Recognition},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {This paper describes an approach, called centered object integrated segmentation and recognition (COISR), for integrating object segmentation and recognition within a single neural network. The application is hand-printed character recognition. Two versions of the system are described. One uses a backpropagation network that scans exhaustively over a field of characters and is trained to recognize whether it is centered over a single character or between characters. When it is centered over a character, the net classifies the character. The approach is tested on a dataset of hand-printed digits. Very low error rates are reported. The second version, COISR-SACCADE, avoids the need for exhaustive scans. The net is trained as before, but also is trained to compute ballistic 'eye' movements that enable the input window to jump from one character to the next.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {504–511},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986977,
+author = {Keeler, Jim and Rumelhart, David E.},
+title = {A Self-Organizing Integrated Segmentation and Recognition Neural Net},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {We present a neural network algorithm that simultaneously performs segmentation and recognition of input patterns that self-organizes to detect input pattern locations and pattern boundaries. We demonstrate this neural network architecture on character recognition using the NIST database and report on results herein. The resulting system simultaneously segments and recognizes touching or overlapping characters, broken characters, and noisy images with high accuracy.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {496–503},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986976,
+author = {Matan, Ofer and Burges, Christopher J. C. and Le Cun, Yann and Denker, John S.},
+title = {Multi-Digit Recognition Using a Space Displacement Neural Network},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {We present a feed-forward network architecture for recognizing an unconstrained handwritten multi-digit string. This is an extension of previous work on recognizing isolated digits. In this architecture a single digit recognizer is replicated over the input. The output layer of the network is coupled to a Viterbi alignment module that chooses the best interpretation of the input. Training errors are propagated through the Viterbi module. The novelty in this procedure is that segmentation is done on the feature maps developed in the Space Displacement Neural Network (SDNN) rather than the input (pixel) space.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {488–495},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986975,
+author = {Graf, Hans P. and Nohl, Craig R. and Ben, Jan},
+title = {Image Segmentation with Networks of Variable Scales},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {We developed a neural net architecture for segmenting complex images, i.e., to localize two-dimensional geometrical shapes in a scene, without prior knowledge of the objects' positions and sizes. A scale variation is built into the network to deal with varying sizes. This algorithm has been applied to video images of railroad cars, to find their identification numbers. Over 95% of the characters were located correctly in a data base of 300 images, despite a large variation in lighting conditions and often a poor quality of the characters. A part of the network is executed on a processor board containing an analog neural net chip (Graf et al. 1991), while the rest is implemented as a software model on a workstation or a digital signal processor.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {480–487},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986974,
+author = {Guyon, I. and Vapnik, V. and Boser, B. and Bottou, L. and Solla, S. A.},
+title = {Structural Risk Minimization for Character Recognition},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {The method of Structural Risk Minimization refers to tuning the capacity of the classifier to the available amount of training data. This capacity is influenced by several factors, including: (1) properties of the input space, (2) nature and structure of the classifier, and (3) learning algorithm. Actions based on these three factors are combined here to control the capacity of linear classifiers and improve generalization on the problem of handwritten digit recognition.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {471–479},
+numpages = {9},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986973,
+author = {Intrator, Nathan and Gold, Josh I. and B\"{u}lthoff, Heinrich H. and Edelman, Shimon},
+title = {3D Object Recognition Using Unsupervised Feature Extraction},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {Intrator (1990) proposed a feature extraction method that is related to recent statistical theory (Huber, 1985; Friedman, 1987), and is based on a biologically motivated model of neuronal plasticity (Bienenstock et al., 1982). This method has been recently applied to feature extraction in the context of recognizing 3D objects from single 2D views (Intrator and Gold, 1991). Here we describe experiments designed to analyze the nature of the extracted features, and their relevance to the theory and psychophysics of object recognition.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {460–467},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986972,
+author = {Basri, Ronen and Ullman, Shimon},
+title = {Linear Operator for Object Recognition},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {Visual object recognition involves the identification of images of 3-D objects seen from arbitrary viewpoints. We suggest an approach to object recognition in which a view is represented as a collection of points given by their location in the image. An object is modeled by a set of 2-D views together with the correspondence between the views. We show that any novel view of the object can be expressed as a linear combination of the stored views. Consequently, we build a linear operator that distinguishes between views of a specific object and views of other objects. This operator can be implemented using neural network architectures with relatively simple structures.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {452–459},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986971,
+author = {Greenspan, Hayit K. and Goodman, Rodney and Chellappa, Rama},
+title = {Combined Neural Network and Rule-Based Framework for Probabilistic Pattern Recognition and Discovery},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {A combined neural network and rule-based approach is suggested as a general framework for pattern recognition. This approach enables unsupervised and supervised learning, respectively, while providing probability estimates for the output classes. The probability maps are utilized for higher level analysis such as a feedback for smoothing over the output label maps and the identification of unknown patterns (pattern "discovery"). The suggested approach is presented and demonstrated in the texture - analysis task. A correct classification rate in the 90 percentile is achieved for both unstructured and structured natural texture mosaics. The advantages of the probabilistic approach to pattern analysis are demonstrated.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {444–451},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986970,
+author = {Mozer, Michael C. and Zemel, Richard S. and Behrmann, Marlene},
+title = {Learning to Segment Images Using Dynamic Feature Binding},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {Despite the fact that complex visual scenes contain multiple, overlapping objects, people perform object recognition with ease and accuracy. One operation that facilitates recognition is an early segmentation process in which features of objects are grouped and labeled according to which object they belong. Current computational systems that perform this operation are based on predefined grouping heuristics. We describe a system called MAGIC that learns how to group features based on a set of presegmented examples. In many cases, MAGIC discovers grouping heuristics similar to those previously proposed, but it also has the capability of finding nonintuitive structural regularities in images. Grouping is performed by a relaxation network that attempts to dynamically bind related features. Features transmit a complex-valued signal (amplitude and phase) to one another; binding can thus be represented by phase locking related features. MAGIC's training procedure is a generalization of recurrent back propagation to complex-valued units.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {436–443},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986969,
+author = {Mjolsness, Eric},
+title = {Visual Grammars and Their Neural Nets},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {I exhibit a systematic way to derive neural nets for vision problems. It involves formulating a vision problem as Bayesian inference or decision on a comprehensive model of the visual domain given by a probabilistic grammar.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {428–435},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986968,
+author = {Ahmad, Subutai},
+title = {VISIT: A Neural Model of Covert Visual Attention},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {Visual attention is the ability to dynamically restrict processing to a subset of the visual field. Researchers have long argued that such a mechanism is necessary to efficiently perform many intermediate level visual tasks. This paper describes VISIT, a novel neural network model of visual attention. The current system models the search for target objects in scenes containing multiple distractors. This is a natural task for people, it is studied extensively by psychologists, and it requires attention. The network's behavior closely matches the known psychophysical data on visual search and visual attention. VISIT also matches much of the physiological data on attention and provides a novel view of the functionality of a number of visual areas. This paper concentrates on the biological plausibility of the model and its relationship to the primary visual cortex, pulvinar, superior colliculus and posterior parietal areas.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {420–427},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986967,
+author = {Pouget, Alexandre and Fisher, Stephen A. and Sejnowski, Terrence J.},
+title = {Hierarchical Transformation of Space in the Visual System},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {Neurons encoding simple visual features in area V1 such as orientation, direction of motion and color are organized in retinotopic maps. However, recent physiological experiments have shown that the responses of many neurons in V1 and other cortical areas are modulated by the direction of gaze. We have developed a neural network model of the visual cortex to explore the hypothesis that visual features are encoded in head-centered coordinates at early stages of visual processing. New experiments are suggested for testing this hypothesis using electrical stimulations and psychophysical observations.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {412–419},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986966,
+author = {Shashua, Amnon},
+title = {Illumination and View Position in 3D Visual Recognition},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {It is shown that both changes in viewing position and illumination conditions can be compensated for, prior to recognition, using combinations of images taken from different viewing positions and different illumination conditions. It is also shown that, in agreement with psychophysical findings, the computation requires at least a sign-bit image as input -- contours alone are not sufficient.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {404–411},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986965,
+author = {Cooper, Paul R. and Prokopowicz, Peter N.},
+title = {Markov Random Fields Can Bridge Levels of Abstraction},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {Network vision systems must make inferences from evidential information across levels of representational abstraction, from low level invariants, through intermediate scene segments, to high level behaviorally relevant object descriptions. This paper shows that such networks can be realized as Markov Random Fields (MRFs). We show first how to construct an MRF functionally equivalent to a Hough transform parameter network, thus establishing a principled probabilistic basis for visual networks. Second, we show that these MRF parameter networks are more capable and flexible than traditional methods. In particular, they have a well-defined probabilistic interpretation, intrinsically incorporate feedback, and offer richer representations and decision capabilities.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {396–403},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986964,
+author = {Darrell, Trevor and Pentland, Alex},
+title = {Against Edges: Function Approximation with Multiple Support Maps},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {Networks for reconstructing a sparse or noisy function often use an edge field to segment the function into homogeneous regions, This approach assumes that these regions do not overlap or have disjoint parts, which is often false. For example, images which contain regions split by an occluding object can't be properly reconstructed using this type of network. We have developed a network that overcomes these limitations, using support maps to represent the segmentation of a signal. In our approach, the support of each region in the signal is explicitly represented. Results from an initial implementation demonstrate that this method can reconstruct images and motion sequences which contain complicated occlusion.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {388–395},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986963,
+author = {Viola, P. A. and Lisberger, S. G. and Sejnowski, T. J.},
+title = {Recurrent Eye Tracking Network Using a Distributed Representation of Image Motion},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {We have constructed a recurrent network that stabilizes images of a moving object on the retina of a simulated eye. The structure of the network was motivated by the organization of the primate visual target tracking system. The basic components of a complete target tracking system were simulated, including visual processing, sensory-motor interface, and motor control. Our model is simpler in structure, function and performance than the primate system, but many of the complexities inherent in a complete system are present.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {380–387},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986962,
+author = {Becker, Suzanna and Hinton, Geoffrey E.},
+title = {Learning to Make Coherent Predictions in Domains with Discontinuities},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {We have previously described an unsupervised learning procedure that discovers spatially coherent properties of the world by maximizing the information that parameters extracted from different parts of the sensory input convey about some common underlying cause. When given random dot stereograms of curved surfaces, this procedure learns to extract surface depth because that is the property that is coherent across space. It also learns how to interpolate the depth at one location from the depths at nearby locations (Becker and Hinton, 1992). In this paper, we propose two new models which handle surfaces with discontinuities. The first model attempts to detect cases of discontinuities and reject them. The second model develops a mixture of expert interpolators. It learns to detect the locations of discontinuities and to invoke specialized, asymmetric interpolators that do not cross the discontinuities.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {372–379},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986961,
+author = {Geiger, Davi and Pereira, Ricardo A. Marques},
+title = {Learning How to Teach or Selecting Minimal Surface Data},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {Learning a map from an input set to an output set is similar to the problem of reconstructing hypersurfaces from sparse data (Poggio and Girosi, 1990). In this framework, we discuss the problem of automatically selecting "minimal" surface data. The objective is to be able to approximately reconstruct the surface from the selected sparse data. We show that this problem is equivalent to the one of compressing information by data removal and the one of learning how to teach. Our key step is to introduce a process that statistically selects the data according to the model. During the process of data selection (learning how to teach) our system (teacher) is capable of predicting the new surface, the approximated one provided by the selected data. We concentrate on piecewise smooth surfaces, e.g. images, and use mean field techniques to obtain a deterministic network that is shown to compress image data.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {364–370},
+numpages = {7},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986960,
+author = {Eskandar, Emad N. and Richmond, Barry J.},
+title = {Decoding of Neuronal Signals in Visual Pattern Recognition},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {We have investigated the properties of neurons in inferior temporal (IT) cortex in monkeys performing a pattern matching task. Simple back-propagation networks were trained to discriminate the various stimulus conditions on the basis of the measured neuronal signal. We also trained networks to predict the neuronal response waveforms from the spatial patterns of the stimuli. The results indicate that IT neurons convey temporally encoded information about both current and remembered patterns, as well as about their behavioral context.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {356–363},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986959,
+author = {Robinson, David A.},
+title = {Information Processing to Create Eye Movements},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {Because eye muscles never cocontract and do not deal with external loads, one can write an equation that relates motoneuron firing rate to eye position and velocity - a very uncommon situation in the CNS. The semicircular canals transduce head velocity in a linear manner by using a high background discharge rate, imparting linearity to the premotor circuits that generate eye movements. This has allowed deducing some of the signal processing involved, including a neural network that integrates. These ideas are often summarized by block diagrams. Unfortunately, they are of little value in describing the behavior of single neurons - a finding supported by neural network models.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {351–355},
+numpages = {5},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986958,
+author = {Lange, Trent E.},
+title = {Dynamically-Adaptive Winner-Take-All Networks},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {Winner-Take-All (WTA) networks, in which inhibitory interconnections are used to determine the most highly-activated of a pool of units, are an important part of many neural network models. Unfortunately, convergence of normal WTA networks is extremely sensitive to the magnitudes of their weights, which must be hand-tuned and which generally only provide the right amount of inhibition across a relatively small range of initial conditions. This paper presents Dynamically Adaptive Winner-Teke-All (DAWTA) networks, which use a regulatory unit to provide the competitive inhibition to the units in the network. The DAWTA regulatory unit dynamically adjusts its level of activation during competition to provide the right amount of inhibition to differentiate between competitors and drive a single winner. This dynamic adaptation allows DAWTA networks to perform the winner-take-all function for nearly any network size or initial condition. using O(N) connections. In addition, the DAWTA regulatory unit can be biased to find the level of inhibition necessary to settle upon the K most highly-activated units, and therefore serve as a K-Winners-Take-All network.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {341–348},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986957,
+author = {Sun, Guo-Zheng and Chen, Hsing-Hen and Lee, Yee-Chun},
+title = {Green's Function Method for Fast on-Line Learning Algorithm of Recurrent Neural Networks},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {The two well known learning algorithms of recurrent neural networks are the back-propagation (Rumelhart &amp; et. al., Werbos) and the forward propagation (Williams and Zipser). The main drawback of back-propagation is its off-line backward path in time for error cumulation. This violates the on-line requirement in many practical applications. Although the forward propagation algorithm can be used in an on-line manner, the annoying drawback is the heavy computation load required to update the high dimensional sensitivity matrix (O(N4) operations for each time step). Therefore, to develop a fast forward algorithm is a challenging task. In this paper we proposed a forward learning algorithm which is one order faster (only O(N3) operations for each time step) than the sensitivity matrix algorithm. The basic idea is that instead of integrating the high dimensional sensitivity dynamic equation we solve forward in time for its Green's function to avoid the redundant computations, and then update the weights whenever the error is to be corrected.A Numerical example for classifying state trajectories using a recurrent network is presented. It substantiated the faster speed of the proposed algorithm than the Williams and Zipser's algorithm.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {333–340},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986956,
+author = {Wiles, Janet and Bloesch, Anthony},
+title = {Operators and Curried Functions: Training and Analysis of Simple Recurrent Networks},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {We present a framework for programming tbe bidden unit representations of simple recurrent networks based on the use of hint units (additional targets at the output layer). We present two ways of analysing a network trained within this framework: Input patterns act as operators on the information encoded by the context units; symmetrically, patterns of activation over tbe context units act as curried functions of the input sequences. Simulations demonstrate that a network can learn to represent three different functions simultaneously and canonical discriminant analysis is used to investigate how operators and curried functions are represented in the space of hidden unit activations.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {325–332},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986955,
+author = {Giles, C. L. and Miller, C. B. and Chen, D. and Sun, G. Z. and Chen, H. H. and Lee, Y. C.},
+title = {Extracting and Learning an Unknown Grammar with Recurrent Neural Networks},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {Simple second-order recurrent networks are shown to readily learn small known regular grammars when trained with positive and negative strings examples. We show that similar methods are appropriate for learning unknown grammars from examples of their strings. The training algorithm is an incremental real-time, recurrent learning (RTRL) method that computes the complete gradient and updates the weights at the end of each string. After or during training, a dynamic clustering algorithm extracts the production rules that the neural network has learned. The methods are illustrated by extracting rules from unknown deterministic regular grammars. For many cases the extracted grammar outperforms the neural net from which it was extracted in correctly classifying unseen strings.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {317–324},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986954,
+author = {Watrous, Raymond L. and Kuhn, Gary M.},
+title = {Induction of Finite-State Automata Using Second-Order Recurrent Networks},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {Second-order recurrent networks that recognize simple finite state languages over {0,1}* are induced from positive and negative examples. Using the complete gradient of the recurrent network and sufficient training examples to constrain the definition of the language to be induced, solutions are obtained that correctly recognize strings of arbitrary length. A method for extracting a finite state automaton corresponding to an optimized network is demonstrated.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {309–316},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986953,
+author = {Connor, Jerome and Atlas, Les E. and Martin, Douglas R.},
+title = {Recurrent Networks and NARMA Modeling},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {There exist large classes of time series, such as those with nonlinear moving average components, that are not well modeled by feedforward networks or linear models, but can be modeled by recurrent networks. We show that recurrent neural networks are a type of nonlinear autoregressive-moving average (NARMA) model. Practical ability will be shown in the results of a competition sponsored by the Puget Sound Power and Light Company, where the recurrent networks gave the best performance on electric load forecasting.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {301–308},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986952,
+author = {Schmidhuber, J\"{u}rgen},
+title = {Learning Unambiguous Reduced Sequence Descriptions},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {Do you want your neural net algorithm to learn sequences? Do not limit yourself to conventional gradient descent (or approximations thereof). Instead, use your sequence learning algorithm (any will do) to implement the following method for history compression. No matter what your final goals are, train a network to predict its next input from the previous ones. Since only unpredictable inputs convey new information, ignore all predictable inputs but let all unexpected inputs (plus information about the time step at which they occurred) become inputs to a higher-level network of the same kind (working on a slower, self-adjusting time scale). Go on building a hierarchy of such networks. This principle reduces the descriptions of event sequences without loss of information, thus easing supervised or reinforcement learning tasks. Alternatively, you may use two recurrent networks to collapse a multi-level predictor hierarchy into a single recurrent net. Experiments show that systems based on these principles can require less computation per time step and many fewer training sequences than conventional training algorithms for recurrent nets. Finally you can modify the above method such that predictability is not defined in a yes-or-no fashion but in a continuous fashion.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {291–298},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986951,
+author = {Sutton, Jeffrey P. and Mamelak, Adam N. and Hobson, J. Allan},
+title = {Network Model of State-Dependent Sequencing},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {A network model with temporal sequencing and state-dependent modulatory features is described. The model is motivated by neurocognitive data characterizing different states of waking and sleeping. Computer studies demonstrate how unique states of sequencing can exist within the same network under different aminergic and cholinergic modulatory influences. Relationships between state-dependent modulation, memory, sequencing and learning are discussed.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {283–290},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986950,
+author = {Mozer, Michael C.},
+title = {Induction of Multiscale Temporal Structure},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {Learning structure in temporally-extended sequences is a difficult computational problem because only a fraction of the relevant information is available at any instant. Although variants of back propagation can in principle be used to find structure in sequences, in practice they are not sufficiently powerful to discover arbitrary contingencies, especially those spanning long temporal intervals or involving high order statistics. For example, in designing a connectionist network for music composition, we have encountered the problem that the net is able to learn musical structure that occurs locally in time--e.g., relations among notes within a musical phrase--but not structure that occurs over longer time periods--e.g., relations among phrases. To address this problem, we require a means of constructing a reduced description of the sequence that makes global aspects more explicit or more readily detectable. I propose to achieve this using hidden units that operate with different time constants. Simulation experiments indicate that slower time-scale hidden units are able to pick up global structure, structure that simply can not be learned by standard back propagation.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {275–282},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986949,
+author = {Hild, Hermann and Feulner, Johannes and Menzel, Wolfram},
+title = {HARMONET: A Neural Net for Harmonizing Chorales in the Style of J.S.Bach},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {HARMONET, a system employing connectionist networks for music processing, is presented. After being trained on some dozen Bach chorales using error backpropagation, the system is capable of producing four-part chorales in the style of J.S. Bach, given a one-part melody. Our system solves a musical real-world problem on a performance level appropriate for musical practice. HARMONET's power is based on (a) a new coding scheme capturing musically relevant information and (b) the integration of backpropagation and symbolic algorithms in a hierarchical system, combining the advantages of both.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {267–274},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986948,
+author = {Tesauro, Gerald},
+title = {Practical Issues in Temporal Difference Learning},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {This paper examines whether temporal difference methods for training connectionist networks, such as Suttons's TD(λ) algorithm, can be successfully applied to complex real-world problems. A number of important practical issues are identified and discussed from a general theoretical perspective. These practical issues are then examined in the context of a case study in which TD(λ) is applied to learning the game of backgammon from the outcome of self-play. This is apparently the first application of this algorithm to a complex nontrivial task. It is found that, with zero knowledge built in, the network is able to learn from scratch to play the entire game at a fairly strong intermediate level of performance, which is clearly better than conventional commercial programs, and which in fact surpasses comparable networks trained on a massive human expert data set. The hidden units in these network have apparently discovered useful features, a longstanding goal of computer games research. Furthermore, when a set of hand-crafted features is added to the input representation, the resulting networks reach a near-expert level of performance, and have achieved good results against world-class human play.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {259–266},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986947,
+author = {Singh, Satinder P.},
+title = {The Efficient Learning of Multiple Task Sequences},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {I present a modular network architecture and a learning algorithm based on incremental dynamic programming that allows a single learning agent to learn to solve multiple Markovian decision tasks (MDTs) with significant transfer of learning across the tasks. I consider a class of MDTs, called composite tasks, formed by temporally concatenating a number of simpler, elemental MDTs. The architecture is trained on a set of composite and elemental MDTs. The temporal structure of a composite task is assumed to be unknown and the architecture learns to produce a temporal decomposition. It is shown that under certain conditions the solution of a composite MDT can be constructed by computationally inexpensive modifications of the solutions of its constituent elemental MDTs.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {251–258},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986946,
+author = {Muthusamy, Yeshwant K. and Cole, Ronald A.},
+title = {A Segment-Based Automatic Language Identification System},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {We have developed a four-language automatic language identification system for high-quality speech. The system uses a neural network-based segmentation algorithm to segment speech into seven broad phonetic categories. Phonetic and prosodic features computed on these categories are then input to a second network that performs the language classification. The system was trained and tested on separate sets of speakers of American English, Japanese, Mandarin Chinese and Tamil. It currently performs with an accuracy of 89.5% on the utterances of the test set.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {241–248},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986945,
+author = {Sumida, Ronald A. and Dyer, Michael G.},
+title = {Propagation Filters in PDS Networks for Sequencing and Ambiguity Resolution},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {We present a Parallel Distributed Semantic (PDS) Network architecture that addresses the problems of sequencing and ambiguity resolution in natural language understanding. A PDS Network stores phrases and their meanings using multiple PDP networks, structured in the form of a semantic net. A mechanism called Propagation Filters is employed: (1) to control communication between networks, (2) to properly sequence the components of a phrase, and (3) to resolve ambiguities. Simulation results indicate that PDS Networks and Propagation Filters can successfully represent high-level knowledge, can be trained relatively quickly, and provide for parallel inferencing at the knowledge level.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {233–240},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986944,
+author = {Gupta, Prahlad and Touretzky, David S.},
+title = {A Connectionist Learning Approach to Analyzing Linguistic Stress},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {We use connectionist modeling to develop an analysis of stress systems in terms of ease of learnability. In traditional linguistic analyses, learnability arguments determine default parameter settings based on the feasibilty of logically deducing correct settings from an initial state. Our approach provides an empirical alternative to such arguments. Based on perceptron learning experiments using data from nineteen human languages, we develop a novel characterization of stress patterns in terms of six parameters. These provide both a partial description of the stress pattern itself and a prediction of its learnability, without invoking abstract theoretical constructs such as metrical feet. This work demonstrates that machine learning methods can provide a fresh approach to understanding linguistic phenomena.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {225–232},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986943,
+author = {Pinkas, Gadi},
+title = {Constructing Proofs in Symmetric Networks},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {This paper considers the problem of expressing predicate calculus in connectionist networks that are based on energy minimization. Given a first-order-logic knowledge base and a bound k, a symmetric network is constructed (like a Boltzman machine or a Hopfield network) that searches for a proof for a given query. If a resolution-based proof of length no longer than k exists, then the global minima of the energy function that is associated with the network represent such proofs. The network that is generated is of size cubic in the bound k and linear in the knowledge size. There are no restrictions on the type of logic formulas that can be represented. The network is inherently fault tolerant and can cope with inconsistency and nonmonotonicity.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {217–224},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986942,
+author = {Jain, Ajay N.},
+title = {Generalization Performance in PARSE: A Structured Connectionist Parsing Architecture},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {This paper presents PARSEC--a system for generating connectionist parsing networks from example parses. PARSEC is not based on formal grammar systems and is geared toward spoken language tasks. PARSEC networks exhibit three strengths important for application to speech processing: 1) they learn to parse, and generalize well compared to hand-coded grammars; 2) they tolerate several types of noise; 3) they can learn to use multi-modal input. Presented are the PARSEC architecture and performance analyses along several dimensions that demonstrate PARSEC's features. PARSEC's performance is compared to that of traditional grammar-based parsing systems.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {209–216},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986941,
+author = {Fanty, Mark and Cole, Ronald A. and Roginski, Krist},
+title = {English Alphabet Recognition with Telephone Speech},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {A recognition system is reported which recognizes names spelled over the telephone with brief pauses between letters. The system uses separate neural networks to locate segment boundaries and classify letters. The letter scores are then used to search a database of names to find the best scoring name. The speaker-independent classification rate for spoken letters is 89%. The system retrieves the correct name, spelled with pauses between letters, 91% of the time from a database of 50,000 names.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {199–206},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986940,
+author = {Hirayama, Makoto and Vatikiotis-Bateson, Eric and Kawato, Mitsuo and Jordan, Michael I.},
+title = {Forward Dynamics Modeling of Speech Motor Control Using Physiological Data},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {We propose a paradigm for modeling speech production based on neural networks. We focus on characteristics of the musculoskeletal system. Using real physiological data - articulator movements and EMG from muscle activity - a neural network learns the forward dynamics relating motor commands to muscles and the ensuing articulator behavior. After learning, simulated perturbations, were used to asses properties of the acquired model, such as natural frequency, damping, and interarticulator couplings. Finally, a cascade neural network is used to generate continuous motor commands from a sequence of discrete articulatory targets.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {191–198},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986939,
+author = {Waibel, Alex and Jain, Ajay N. and McNair, Arthur and Tebelskis, Joe and OsterhoItz, Louise and Saito, Hiroaki and Schmidbauer, Otto and Sloboda, Tilo and Woszczyna, Monika},
+title = {JANUS: Speech-to-Speech Translation Using Connectionist and Non-Connectionist Techniques},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {We present JANUS, a speech-to-speech translation system that utilizes diverse processing strategies, including connectionist learning, traditional AI knowledge representation approaches, dynamic programming, and stochastic techniques. JANUS translates continuously spoken English and German into German, English, and Japanese. JANUS currently achieves 87% translation fidelity from English speech and 97% from German speech. We present the JANUS system along with comparative evaluations of its interchangeable processing components, with special emphasis on the connectionist modules.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {183–190},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986938,
+author = {Bengio, Yoshua and De Mori, Renato and Flammia, Giovanni and Kompe, Ralf},
+title = {Neural Network: Gaussian Mixture Hybrid for Speech Recognition or Density Estimation},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {The subject of this paper is the integration of multi-layered Artificial Neural Networks (ANN) with probability density functions such as Gaussian mixtures found in continuous density Hidden Markov Models (HMM). In the first part of this paper we present an ANN/HMM hybrid in which all the parameters of the system are simultaneously optimized with respect to a single criterion. In the second part of this paper, we study the relationship between the density of the inputs of the network and the density of the outputs of the networks. A few experiments are presented to explore how to perform density estimation with ANNs.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {175–182},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986937,
+author = {Renals, Steve and Morgan, Nelson and Bourlard, Herv\'{e} and Franco, Horacio and Cohen, Michael},
+title = {Connectionist Optimisation of Tied Mixture Hidden Markov Models},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {Issues relating to the estimation of hidden Markov model (HMM) local probabilities are discussed. In particular we note the isomorphism of radial basis functions (RBF) networks to tied mixture density modelling; additionally we highlight the differences between these methods arising from the different training criteria employed. We present a method in which connectionist training can be modified to resolve these differences and discuss some preliminary experiments. Finally, we discuss some outstanding problems with discriminative training.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {167–174},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986936,
+author = {Singer, Elliot and Lippmann, Richard P.},
+title = {Improved Hidden Markov Model Speech Recognition Using Radial Basis Function Networks},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {A high performance speaker-independent isolated-word hybrid speech recognizer was developed which combines Hidden Markov Models (HMMs) and Radial Basis Function (RBF) neural networks. In recognition experiments using a speaker-independent E-set database, the hybrid recognizer had an error rate of 11.5% compared to 15.7% for the robust unimodal Gaussian HMM recognizer upon which the hybrid system was based. These results and additional experiments demonstrate that RBF networks can be successfully incorporated in hybrid recognizers and suggest that they may be capable of good performance with fewer parameters than required by Gaussian mixture classifiers. A global parameter optimization method designed to minimize the overall word error rather than the frame recognition error failed to reduce the error rate.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {159–166},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986935,
+author = {Levin, Esther and Pieraccini, Roberto and Bocchieri, Enrico},
+title = {Time-Warping Network: A Hybrid Framework for Speech Recognition},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {Recently, much interest has been generated regarding speech recognition systems based on Hidden Markov Models (HMMs) and neural network (NN) hybrids. Such systems attempt to combine the best features of both models: the temporal structure of HMMs and the discriminative power of neural networks. In this work we define a time-warping (TW) neuron that extends the operation of the formal neuron of a back-propagation network by warping the input pattern to match it optimally to its weights. We show that a single-layer network of TW neurons is equivalent to a Gaussian density HMM-based recognition system, and we propose to improve the discriminative power of this system by using back-propagation discriminative training, and/or by generalizing the structure of the recognizer to a multi-layered net. The performance of the proposed network was evaluated on a highly confusable, isolated word, multi speaker recognition task. The results indicate that not only does the recognition performance improve, but the separation between classes is enhanced also, allowing us to set up a rejection criterion to improve the confidence of the system.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {151–158},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986934,
+author = {Principe, Jose C. and De Vries, Bert and Kuo, Jyh-Ming and De Oliveira, Pedro Guedes},
+title = {Modeling Applications with the Focused Gamma Net},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {The focused gamma network is proposed as one of the possible implementations of the gamma neural model. The focused gamma network is compared with the focused backpropagation network and TDNN for a time series prediction problem, and with ADALINE in a system identification problem.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {143–150},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986933,
+author = {Haffner, Patrick and Waibel, Alex},
+title = {Multi-State Time Delay Neural Networks for Continuous Speech Recognition},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {We present the "Multi-State Time Delay Neural Network" (MS-TDNN) as an extension of the TDNN to robust word recognition. Unlike most other hybrid methods, the MS-TDNN embeds an alignment search procedure into the connectionist architecture, and allows for word level supervision. The resulting system has the ability to manage the sequential order of subword units, while optimizing for the recognizer performance. In this paper we present extensive new evaluations of this approach over speaker-dependent and speaker-independent connected alphabet.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {135–142},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986932,
+author = {Horn, David and Usher, Marius},
+title = {Oscillatory Model of Short Term Memory},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {We investigate a model in which excitatory neurons have dynamical thresholds which display both fatigue and potentiation. The fatigue property leads to oscillatory behavior. It is responsible for the ability of the model to perform segmentation, i.e., decompose a mixed input into staggered oscillations of the activities of the cell-assemblies (memories) affected by it. Potentiation is responsible for sustaining these staggered oscillations after the input is turned off, i.e. the system serves as a model for short term memory. It has a limited STM capacity, reminiscent of the magical number 7±2.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {125–132},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986931,
+author = {Schuster, Heinz and Koch, Christof},
+title = {Burst Synchronization without Frequency-Locking in a Completely Solvable Network Model},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {The dynamic behavior of a network model consisting of all-to-all excitatory coupled binary neurons with global inhibition is studied analytically and numerically. We prove that for random input signals, the output of the network consists of synchronized bursts with apparently random intermissions of noisy activity. Our results suggest that synchronous bursts can be generated by a simple neuronal architecture which amplifies incoming coincident signals. This synchronization process is accompanied by dampened oscillations which, by themselves, however, do not play any constructive role in this and can therefore be considered to be an epiphenomenon.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {117–124},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986930,
+author = {Doya, Kenji and Yoshizawa, Shuji},
+title = {Adaptive Synchronization of Neural and Physical Oscillators},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {Animal locomotion patterns are controlled by recurrent neural networks called central pattern generators (CPGs). Although a CPG can oscillate autonomously, its rhythm and phase must be well coordinated with the state of the physical system using sensory inputs. In this paper we propose a learning algorithm for synchronizing neural and physical oscillators with specific phase relationships. Sensory input connections are modified by the correlation between cellular activities and input signals. Simulations show that the learning rule can be used for setting sensory feedback connections to a CPG as well as coupling connections between CPGs.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {109–116},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986929,
+author = {Buchanan, James T.},
+title = {Locomotion in a Lower Vertebrate: Studies of the Cellular Basis of Rhythmogenesis and Oscillator Coupling},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {To test whether the known connectivies of neurons in the lamprey spinal cord are sufficient to account for locomotor rhythmogenesis, a "connectionist" neural network simulation was done using identical cells connected according to experimentally established patterns. It was demonstrated that the network oscillates in a stable manner with the same phase relationships among the neurons as observed in the lamprey. The model was then used to explore coupling between identical oscillators. It was concluded that the neurons can have a dual role as rhythm generators and as coordinators between oscillators to produce the phase relations observed among segmental oscillators during swimming.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {101–108},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986928,
+author = {Keesing, Ron and Stork, David G. and Shatz, Carla J.},
+title = {Retinogeniculate Development: The Role of Competition and Correlated Retinal Activity},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {During visual development, projections from retinal ganglion cells (RGCs) to the lateral geniculate nucleus (LGN) in cat are refined to produce ocular dominance layering and precise topographic mapping. Normal development depends upon activity in RGCs, suggesting a key role for activity-dependent synaptic plasticity. Recent experiments on prenatal retina show that during early development, "waves" of activity pass across RGCs (Meister, et al., 1991). We provide the first simulations to demonstrate that such retinal waves, in conjunction with Hebbian synaptic competition and early arrival of contralateral axons, can account for observed patterns of retinogeniculate projections in normal and experimentally-treated animals.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {91–97},
+numpages = {7},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986927,
+author = {Obermayer, K. and Schulten, K. and Blasdel, G. G.},
+title = {A Comparison between a Neural Network Model for the Formation of Brain Maps and Experimental Data},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {Recently, high resolution images of the simultaneous representation of orientation preference, orientation selectivity and ocular dominance have been obtained for large areas in monkey striate cortex by optical imaging [1-3]. These data allow for the first time a "local" as well as "global" description of the spatial patterns and provide strong evidence for correlations between orientation selectivity and ocular dominance.A quantitative analysis reveals that these correlations arise when a five-dimensional feature space (two dimensions for retinotopic space, one each for orientation preference, orientation specificity, and ocular dominance) is mapped into the two available dimensions of cortex while locally preserving topology. These results provide strong evidence for the concept of topology preserving maps which have been suggested as a basic design principle of striate cortex [4-7].},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {83–90},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986926,
+author = {Bonds, A. B.},
+title = {Dual Inhibitory Mechanisms for Definition of Receptive Field Characteristics in Cat Striate Cortex},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {In single cells of the cat striate cortex, lateral inhibition across orientation and/or spatial frequency is found to enhance pre-existing biases. A contrast-dependent but spatially non-selective inhibitory component is also found. Stimulation with ascending and descending contrasts reveals the latter as a response hysteresis that is sensitive, powerful and rapid, suggesting that it is active in day-to-day vision. Both forms of inhibition are not recurrent but are rather network properties. These findings suggest two fundamental inhibitory mechanisms: a global mechanism that limits dynamic range and creates spatial selectivity through thresholding and a local mechanism that specifically refines spatial filter properties. Analysis of burst patterns in spike trains demonstrates that these two mechanisms have unique physiological origins.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {75–82},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986925,
+author = {Bulsara, A. R. and Jacobs, E. W. and Moss, F.},
+title = {Single Neuron Model: Response to Weak Modulation in the Presence of Noise},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {We consider a noisy bistable single neuron model driven by a periodic external modulation. The modulation introduces a correlated switching between states driven by the noise. The information flow through the system from the modulation to the output switching events, leads to a succession of strong peaks in the power spectrum. The signal-to-noise ratio (SNR) obtained from this power spectrum is a measure of the information content in the neuron response. With increasing noise intensity, the SNR passes through a maximum, an effect which has been called stochastic resonance. We treat the problem within the framework of a recently developed approximate theory, valid in the limits of weak noise intensity, weak periodic forcing and low forcing frequency. A comparison of the results of this theory with those obtained from a linear system FFT is also presented.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {67–74},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986924,
+author = {Bell, Anthony J.},
+title = {Self-Organisation in Real Neurons: Anti-Hebb in 'Channel Space'?},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {Ion channels are the dynamical systems of the nervous system. Their distribution within the membrane governs not only communication of information between neurons, but also how that information is integrated within the cell. Here, an argument is presented for an 'anti-Hebbian' rule for changing the distribution of voltage-dependent ion channels in order to flatten voltage curvatures in dendrites. Simulations show that this rule can account for the self-organisation of dynamical receptive field properties such as resonance and direction selectivity. It also creates the conditions for the faithful conduction within the cell of signals to which the cell has been exposed. Various possible cellular implementations of such a learning rule are proposed, including activity-dependent migration of channel proteins in the plane of the membrane.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {59–66},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986923,
+author = {Zador, Anthony M. and Claiborne, Brenda J. and Brown, Thomas H.},
+title = {Nonlinear Pattern Separation in Single Hippocampal Neurons with Active Dendritic Membrane},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {The dendritic trees of cortical pyramidal neurons seem ideally suited to perform local processing on inputs. To explore some of the implications of this complexity for the computational power of neurons, we simulated a realistic biophysical model of a hippocampal pyramidal cell in which a "cold spot"--a high density patch of inhibitory Ca-dependent K channels and a colocalized patch of Ca channels--was present at a dendritic branch point. The cold spot induced a non monotonic relationship between the strength of the synaptic input and the probability of neuronal firing. This effect could also be interpreted as an analog stochastic XOR.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {51–58},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986922,
+author = {Bernander, \"{O}jvind and Koch, Christof and Douglas, Rodney J.},
+title = {Network Activity Determines Spatio-Temporal Integration in Single Cells},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {Single nerve cells with static properties have traditionally been viewed as the building blocks for networks that show emergent phenomena. In contrast to this approach, we study here how the overall network activity can control single cell parameters such as input resistance, as well as time and space constants, parameters that are crucial for excitability and spatio-temporal integration. Using detailed computer simulations of neocortical pyramidal cells, we show that the spontaneous background firing of the network provides a means for setting these parameters. The mechanism for this control is through the large conductance change of the membrane that is induced by both non-NMDA and NMDA excitatory and inhibitory synapses activated by the spontaneous background activity.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {43–50},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986921,
+author = {Mel, Bartlett W.},
+title = {The Clusteron: Toward a Simple Abstraction for a Complex Neuron},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {Are single neocortical neurons as powerful as multi-layered networks? A recent compartmental modeling study has shown that voltage-dependent membrane nonlinearities present in a complex dendritic tree can provide a virtual layer of local nonlinear processing elements between synaptic inputs and the final output at the cell body, analogous to a hidden layer in a multi-layer network. In this paper, an abstract model neuron is introduced, called a clusteron, which incorporates aspects of the dendritic "cluster-sensitivity" phenomenon seen in these detailed biophysical modeling studies. It is shown, using a clusteron, that a Hebb-type learning rule can be used to extract higher-order statistics from a set of training patterns, by manipulating the spatial ordering of synaptic connections onto the dendritic tree. The potential neurobiological relevance of these higher-order statistics for nonlinear pattern discrimination is then studied within a full compartmental model of a neocortical pyramidal cell, using a training set of 1000 high-dimensional sparse random patterns.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {35–42},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986920,
+author = {De Ruyter Van Steveninck, Rob and Bialek, William},
+title = {Statistical Reliability of a Blowfly Movement-Sensitive Neuron},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {We develop a model-independent method for characterizing the reliability of neural responses to brief stimuli. This approach allows us to measure the discriminability of similar stimuli, based on the real-time response of a single neuron. Neurophysiological data were obtained from a movement-sensitive neuron (H1) in the visual system of the blowfly Calliphora erythrocephala. Furthermore, recordings were made from blowfly photoreceptor cells to quantify the signal to noise ratios in the peripheral visual system. As photoreceptors form the input to the visual system, the reliability of their signals ultimately determines the reliability of any visual discrimination task. For the case of movement detection, this limit can be computed, and compared to the H1 neuron's reliability. Under favorable conditions, the performance of the H1 neuron closely approaches the theoretical limit, which means that under these conditions the nervous system adds little noise in the process of computing movement from the correlations of signals in the photoreceptor array.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {27–34},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986919,
+author = {Dayan, Peter and Goodhill, Geoffrey},
+title = {Perturbing Hebbian Rules},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {Recently Linsker [2] and MacKay and Miller [3,4] have analysed Hebbian correlational rules for synaptic development in the visual system, and Miller [5,8] has studied such rules in the case of two populations of fibres (particularly two eyes). Miller's analysis has so far assumed that each of the two populations has exactly the same correlational structure. Relaxing this constraint by considering the effects of small perturbative correlations within and between eyes permits study of the stability of the solutions. We predict circumstances in which qualitative changes are seen, including the production of binocularly rather than monocularly driven units.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {19–26},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986918,
+author = {Sydorenko, Mark R. and Young, Eric D.},
+title = {Stationarity of Synaptic Coupling Strength between Neurons with Nonstationary Discharge Properties},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {Based on a general non-stationary point process model, we computed estimates of the synaptic coupling strength (efficacy) as a function of time after stimulus onset between an inhibitory interneuron and its target postsynaptic cell in the feline dorsal cochlear nucleus. The data consist of spike trains from pairs of neurons responding to brief tone bursts recorded in vivo. Our results suggest that the synaptic efficacy is non-stationary. Further. synaptic efficacy is shown to be inversely and approximately linearly related to average presynaptic spike rate. A second-order analysis suggests that the latter result is not due to non-linear interactions. Synaptic efficacy is less strongly correlated with postsynaptic rate and the correlation is not consistent across neural pairs.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {11–18},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@inproceedings{10.5555/2986916.2986917,
+author = {Hobson, J. Allan and Mamelak, Adam N. and Sutton, Jeffrey P.},
+title = {Models Wanted: Must Fit Dimensions of Sleep and Dreaming},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+abstract = {During waking and sleep, the brain and mind undergo a tightly linked and precisely specified set of changes in state. At the level of neurons, this process has been modeled by variations of Volterra-Lotka equations for cyclic fluctuations of brainstem cell populations. However, neural network models based upon rapidly developing knowledge of the specific population connectivities and their differential responses to drugs have not yet been developed. Furthermore, only the most preliminary attempts have been made to model across states. Some of our own attempts to link rapid eye movement (REM) sleep neurophysiology and dream cognition using neural network approaches are summarized in this paper.},
+booktitle = {Proceedings of the 4th International Conference on Neural Information Processing Systems},
+pages = {3–10},
+numpages = {8},
+location = {Denver, Colorado},
+series = {NIPS'91}
+}
+
+@proceedings{10.5555/2986916,
+title = {NIPS'91: Proceedings of the 4th International Conference on Neural Information Processing Systems},
+year = {1991},
+isbn = {1558602224},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+location = {Denver, Colorado}
+}
+

@@ -1,0 +1,2109 @@
+@inproceedings{10.5555/3009055.3009205,
+author = {Williams, John K. and Singh, Satinder},
+title = {Experimental Results on Learning Stochastic Memoryless Policies for Partially Observable Markov Decision Processes},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Partially Observable Markov Decision Processes (POMOPs) constitute an important class of reinforcement learning problems which present unique theoretical and computational difficulties. In the absence of the Markov property, popular reinforcement learning algorithms such as Q-Iearning may no longer be effective, and memory-based methods which remove partial observability via state-estimation are notoriously expensive. An alternative approach is to seek a stochastic memoryless policy which for each observation of the environment prescribes a probability distribution over available actions that maximizes the average reward per timestep. A reinforcement learning algorithm which learns a locally optimal stochastic memoryless policy has been proposed by Jaakkola, Singh and Jordan, but not empirically verified. We present a variation of this algorithm, discuss its implementation, and demonstrate its viability using four test problems.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {1073–1079},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009204,
+author = {Sutton, Richard S. and Singh, Satinder and Precup, Doina and Ravindran, Balaraman},
+title = {Improved Switching among Temporally Abstract Actions},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {In robotics and other control applications it is commonplace to have a preexisting set of controllers for solving subtasks, perhaps hand-crafted or previously learned or planned, and still face a difficult problem of how to choose and switch among the controllers to solve an overall task as well as possible. In this paper we present a framework based on Markov decision processes and semi-Markov decision processes for phrasing this problem, a basic theorem regarding the improvement in performance that can be obtained by switching flexibly between given controllers, and example applications of the theorem. In particular, we show how an agent can plan with these high-level controllers and then use the results of such planning to find an even better plan, by modifying the existing controllers, with negligible additional cost and no re-planning. In one of our examples, the complexity of the problem is reduced from 24 billion state-action pairs to less than a million state-controller pairs.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {1066–1072},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009203,
+author = {Suematsu, Nobuo and Hayashi, Akira},
+title = {A Reinforcement Learning Algorithm in Partially Observable Environments Using Short-Term Memory},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {We describe a Reinforcement Learning algorithm for partially observable environments using short-term memory, which we call BLHT. Since BLHT learns a stochastic model based on Bayesian Learning, the over-fitting problem is reasonably solved. Moreover, BLHT has an efficient implementation. This paper shows that the model learned by BLHT converges to one which provides the most accurate predictions of percepts and rewards, given short-term memory.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {1059–1065},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009202,
+author = {Sato, Masa-Aki and Ishii, Shin},
+title = {Reinforcement Learning Based on On-Line EM Algorithm},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {In this article, we propose a new reinforcement learning (RL) method based on an actor-critic architecture. The actor and the critic are approximated by Normalized Gaussian Networks (NGnet), which are networks of local linear regression units. The NGnet is trained by the on-line EM algorithm proposed in our previous paper. We apply our RL method to the task of swinging-up and stabilizing a single pendulum and the task of balancing a double pendulum near the upright position. The experimental results show that our RL method can be applied to optimal control problems having continuous state/action spaces and that the method achieves good control with a small number of trial-and-errors.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {1052–1058},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009201,
+author = {Randl\o{}v, Jette},
+title = {Learning Macro-Actions in Reinforcement Learning},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {We present a method for automatically constructing macro-actions from scratch from primitive actions during the reinforcement learning process. The overall idea is to reinforce the tendency to perform action b after action a if such a pattern of actions has been rewarded. We test the method on a bicycle task, the car-on-the-hill task, the race-track task and some grid-world tasks. For the bicycle and race-track tasks the use of macro-actions approximately halves the learning time, while for one of the grid-world tasks the learning time is reduced by a factor of 5. The method did not work for the car-on-the-hill task for reasons we discuss in the conclusion.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {1045–1051},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009200,
+author = {Oyama, Eimei and Tachi, Susumu},
+title = {Coordinate Transformation Learning of Hand Position Feedback Controller by Using Change of Position Error Norm},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {In order to grasp an object, we need to solve the inverse kinematics problem, i.e., the coordinate transformation from the visual coordinates to the joint angle vector coordinates of the arm. Although several models of coordinate transformation learning have been proposed, they suffer from a number of drawbacks. In human motion control, the learning of the hand position error feedback controller in the inverse kinematics solver is important. This paper proposes a novel model of the coordinate transformation learning of the human visual feedback controller that uses the change of the joint angle vector and the corresponding change of the square of the hand position error norm. The feasibility of the proposed model is illustrated using numerical simulations.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {1038–1044},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009199,
+author = {Neuneier, Ralph and Mihatsch, Oliver},
+title = {Risk Sensitive Reinforcement Learning},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {As already known, the expected return of a policy in Markov Decision Problems is not always the most suitable optimality criterion. For many applications control strategies have to meet various constraints like avoiding very bad states (risk-avoiding) or generating high profit within a short time (risk-seeking) although this might probably cause significant costs. We propose a modified Q-learning algorithm which uses a single continuous parameter κ ∈ [-1, 1] to determine in which sense the resulting policy is optimal. For κ = 0, the policy is optimal with respect to the usual expected return criterion, while κ → 1 generates a solution which is optimal in worst case. Analogous, the closer κ is to -1 the more risk seeking the policy becomes. In contrast to other related approaches in the field of MDPs we do not have to transform the cost model or to increase the state space in order to take risk into account. Our new approach is evaluated by computing optimal investment strategies for an artificial stock market.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {1031–1037},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009198,
+author = {Munos, R\'{e}mi and Moore, Andrew},
+title = {Barycentric Interpolators for Continuous Space &amp; Time Reinforcement Learning},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {In order to find the optimal control of continuous state-space and time reinforcement learning (RL) problems, we approximate the value function (VF) with a particular class of functions called the barycentric interpolators. We establish sufficient conditions under which a RL algorithm converges to the optimal VF, even when we use approximate models of the state dynamics and the reinforcement functions.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {1024–1030},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009197,
+author = {Moll, Robert and Barto, Andrew G. and Perkins, Theodore J. and Sutton, Richard S.},
+title = {Learning Instance-Independent Value Functions to Enhance Local Search},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Reinforcement learning methods can be used to improve the performance of local search algorithms for combinatorial optimization by learning an evaluation function that predicts the outcome of search. The evaluation function is therefore able to guide search to low-cost solutions better than can the original cost function. We describe a reinforcement learning method for enhancing local search that combines aspects of previous work by Zhang and Dietterich (1995) and Boyan and Moore (1997, Boyan 1998). In an off-line learning phase, a value function is learned that is useful for guiding search for multiple problem sizes and instances. We illustrate our technique by developing several such functions for the Dial-A-Ride Problem. Our learning-enhanced local search algorithm exhibits an improvement of more then 30% over a standard local search algorithm.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {1017–1023},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009196,
+author = {Loch, John},
+title = {The Effect of Eligibility Traces on Finding Optimal Memoryless Policies in Partially Observable Markov Decision Processes},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Agents acting in the real world are confronted with the problem of making good decisions with limited knowledge of the environment. Partially observable Markov decision processes (POMDPs) model decision problems in which an agent tries to maximize its reward in the face of limited sensor feedback. Recent work has shown empirically that a reinforcement learning (RL) algorithm called Sarsa(λ) can efficiently find optimal memoryless policies, which map current observations to actions, for POMDP problems (Loch and Singh 1998). The Sarsa(λ) algorithm uses a form of short-term memory called an eligibility trace, which distributes temporally delayed rewards to observation-action pairs which lead up to the reward. This paper explores the effect of eligibility traces on the ability of the Sarsa(λ) algorithm to find optimal memoryless policies. A variant of Sarsa(λ) called k-step truncated Sarsa(λ) is applied to four test problems taken from the recent work of Littman, Littman, Cassandra and Kaelbling, Parr and Russell, and Chrisman. The empirical results show that eligibility traces can be significantly truncated without affecting the ability of Sarsa(λ) to find optimal memoryless policies for POMDPs.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {1010–1016},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009195,
+author = {Koenig, Sven},
+title = {Exploring Unknown Environments with Real-Time Search or Reinforcement Learning},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Learning Real-Time A* (LRTA*) is a popular control method that interleaves planning and plan execution and has been shown to solve search problems in known environments efficiently. In this paper, we apply LRTA * to the problem of getting to a given goal location in an initially unknown environment. Uninformed LRTA * with maximal lookahead always moves on a shortest path to the closest unvisited state, that is, to the closest potential goal state. This was believed to be a good exploration heuristic, but we show that it does not minimize the worst-case plan-execution time compared to other uninformed exploration methods. This result is also of interest to reinforcement-learning researchers since many reinforcement learning methods use asynchronous dynamic programming, interleave planning and plan execution, and exhibit optimism in the face of uncertainty, just like LRTA *.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {1003–1009},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009194,
+author = {Kearns, Michael and Singh, Satinder},
+title = {Finite-Sample Convergence Rates for Q-Learning and Indirect Algorithms},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {In this paper, we address two issues of long-standing interest in the reinforcement learning literature. First, what kinds of performance guarantees can be made for Q-learning after only a finite number of actions? Second, what quantitative comparisons can be made between Q-learning and model-based (indirect) approaches, which use experience to estimate next-state distributions for off-line value iteration?We first show that both Q-learning and the indirect approach enjoy rather rapid convergence to the optimal policy as a function of the number of state transitions observed. In particular, on the order of only (N log(1/ε)/ε2)(log(N) + loglog(l/ε)) transitions are sufficient for both algorithms to come within ε of the optimal policy, in an idealized model that assumes the observed transitions are "well-mixed" throughout an N-state MDP. Thus, the two approaches have roughly the same sample complexity. Perhaps surprisingly, this sample complexity is far less than what is required for the model-based approach to actually construct a good approximation to the next-state distribution. The result also shows that the amount of memory required by the model-based approach is closer to N than to N2.For either approach, to remove the assumption that the observed transitions are well-mixed, we consider a model in which the transitions are determined by a fixed, arbitrary exploration policy. Bounds on the number of transitions required in order to achieve a desired level of performance are then related to the stationary distribution and mixing time of this policy.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {996–1002},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009193,
+author = {Hayashi, Akira and Suematsu, Nobuo},
+title = {Viewing Classifier Systems as Model Free Learning in POMDPs},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Classifier systems are now viewed disappointing because of their problems such as the rule strength vs rule set performance problem and the credit assignment problem. In order to solve the problems, we have developed a hybrid classifier system: GLS (Generalization Learning System). In designing GLS, we view CSs as model free learning in POMDPs and take a hybrid approach to finding the best generalization, given the total number of rules. GLS uses the policy improvement procedure by Jaakkola et al. for an locally optimal stochastic policy when a set of rule conditions is given. GLS uses GA to search for the best set of rule conditions.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {989–995},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009192,
+author = {Brown, Timothy X. and Tong, Hui and Singh, Satinder},
+title = {Optimizing Admission Control While Ensuring Quality of Service in Multimedia Networks via Reinforcement Learning},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {This paper examines the application of reinforcement learning to a telecommunications networking problem. The problem requires that revenue be maximized while simultaneously meeting a quality of service constraint that forbids entry into certain states. We present a general solution to this multi-criteria problem that is able to earn significantly higher revenues than alternatives.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {982–988},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009191,
+author = {Brown, Lyndon J. and Gonye, Gregory E. and Schwaber, James S.},
+title = {Non-Linear PI Control Inspired by Biological Control Systems},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {A non-linear modification to PI control is motivated by a model of a signal transduction pathway active in mammalian blood pressure regulation. This control algorithm, labeled PII (proportional with intermittent integral), is appropriate for plants requiring exact set-point matching and disturbance attenuation in the presence of infrequent step changes in load disturbances or set-point. The proportional aspect of the controller is independently designed to be a disturbance attenuator and set-point matching is achieved by intermittently invoking an integral controller. The mechanisms observed in the Angiotensin II/AT1 signaling pathway are used to control the switching of the integral control. Improved performance over PI control is shown on a model of cyclopentenol production. A sign change in plant gain at the desirable operating point causes traditional PI control to result in an unstable system. Application of this new approach to this problem results in stable exact set-point matching for achievable set-points.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {975–981},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009190,
+author = {Baird, Leemon and Moore, Andrew},
+title = {Gradient Descent for General Reinforcement Learning},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {A simple learning rule is derived, the VAPS algorithm, which can be instantiated to generate a wide range of new reinforcement-learning algorithms. These algorithms solve a number of open problems, define several new approaches to reinforcement learning, and unify different approaches to reinforcement learning under a single theory. These algorithms all have guaranteed convergence, and include modifications of several existing algorithms that were known to fail to converge on simple MOPs. These include Q-learning, SARSA, and advantage learning. In addition to these value-based algorithms it also generates pure policy-search reinforcement-learning algorithms, which learn optimal policies without learning a value function. In addition, it allows policy-search and value-based algorithms to be combined, thus unifying two very different approaches to reinforcement learning into a single Value and Policy Search (VAPS) algorithm. And these algorithms converge for POMDPs without requiring a proper belief state. Simulations results are given, and several areas for future research are discussed.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {968–974},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009189,
+author = {Al-Ansari, Mohammad A. and Williams, Ronald J.},
+title = {Robust, Efficient, Globally-Optimized Reinforcement Learning with the Parti-Game Algorithm},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Parti-game (Moore 1994a; Moore 1994b; Moore and Atkeson 1995) is a reinforcement learning (RL) algorithm that has a lot of promise in overcoming the curse of dimensionality that can plague RL algorithms when applied to high-dimensional problems. In this paper we introduce modifications to the algorithm that further improve its performance and robustness. In addition, while parti-game solutions can be improved locally by standard local path-improvement techniques, we introduce an add-on algorithm in the same spirit as parti-game that instead tries to improve solutions in a non-local manner.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {961},
+numpages = {1},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009188,
+author = {Wolpert, David H. and Tumer, Kagan and Frank, Jeremy},
+title = {Using Collective Intelligence to Route Internet Traffic},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {A COllective INtelligence (COIN) is a set of interacting reinforcement learning (RL) algorithms designed in an automated fashion so that their collective behavior optimizes a global utility function. We summarize the theory of COINs, then present experiments using that theory to design COINs to control internet traffic routing. These experiments indicate that COINs outperform all previously investigated RL-based, shortest path routing algorithms.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {952–958},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009187,
+author = {Williamson, Matthew and Murray-Smith, Roderick and Hansen, Volker},
+title = {Robot Docking Using Mixtures of Gaussians},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {This paper applies the Mixture of Gaussians probabilistic model, combined with Expectation Maximization optimization to the task of summarizing three dimensional range data for a mobile robot. This provides a flexible way of dealing with uncertainties in sensor information, and allows the introduction of prior knowledge into low-level perception modules. Problems with the basic approach were solved in several ways: the mixture of Gaussians was reparameterized to reflect the types of objects expected in the scene, and priors on model parameters were included in the optimization process. Both approaches force the optimization to find 'interesting' objects, given the sensor and object characteristics. A higher level classifier was used to interpret the results provided by the model, and to reject spurious solutions.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {945–951},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009186,
+author = {Spence, Clay D. and Sajda, Paul},
+title = {Applications of Multi-Resolution Neural Networks to Mammography},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {We have previously presented a coarse-to-fine hierarchical pyramid/ neural network (HPNN) architecture which combines multi-scale image processing techniques with neural networks. In this paper we present applications of this general architecture to two problems in mammographic Computer-Aided Diagnosis (CAD). The first application is the detection of microcalcifications. The coarse-to-fine HPNN was designed to learn large-scale context information for detecting small objects like microcalcifications. Receiver operating characteristic (ROC) analysis suggests that the hierarchical architecture improves detection performance of a well established CAD system by roughly 50%. The second application is to detect mammographic masses directly. Since masses are large, extended objects, the coarse-to-fine HPNN architecture is not suitable for this problem. Instead we construct a fine-to-coarse HPNN architecture which is designed to learn small-scale detail structure associated with the extended objects. Our initial results applying the fine-to-coarse HPNN to mass detection are encouraging, with detection performance improvements of about 36%. We conclude that the ability of the HPNN architecture to integrate information across scales, both coarse-to-fine and fine-to-coarse, makes it well suited for detecting objects which may have contextual clues or detail structure occurring at scales other than the natural scale of the object.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {938–944},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009185,
+author = {Prank, Klaus and B\"{o}rger, Julia and Von Zur M\"{u}hlen, Alexander and Brabant, Georg and Sch\"{o}fl, Christof},
+title = {Independent Component Analysis of Intracellular Calcium Spike Data},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Calcium (Ca2+)is an ubiquitous intracellular messenger which regulates cellular processes, such as secretion, contraction, and cell proliferation. A number of different cell types respond to hormonal stimuli with periodic oscillations of the intracellular free calcium concentration ([Ca2+]i). These Ca2+ signals are often organized in complex temporal and spatial patterns even under conditions of sustained stimulation. Here we study the spatio-temporal aspects of intracellular calcium ([Ca2+]i) oscillations in clonal β-cells (hamster insulin secreting cells, HIT) under pharmacological stimulation (Sch\"{o}fl et al., 1996). We use a novel fast fixed-point algorithm (Hyv\"{a}rinen and Oja, 1997) for Independent Component Analysis (ICA) to blind source separation of the spatio-temporal dynamics of [Ca2+]i in a HIT-cell. Using this approach we find two significant independent components out of five differently mixed input signals: one [Ca2+]i signal with a mean oscillatory period of 68s and a high frequency signal with a broadband power spectrum with considerable spectral density. This results is in good agreement with a study on high-frequency [Ca2+]i oscillations (Palu\v{s} et al., 1998) Further theoretical and experimental studies have to be performed to resolve the question on the functional impact of intracellular signaling of these independent [Ca2+]i signals.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {931–937},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009184,
+author = {Oliver, Nuria M. and Rosario, Barbara and Pentland, Alex},
+title = {Graphical Models for Recognizing Human Interactions},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {We describe a real-time computer vision and machine learning system for modeling and recognizing human actions and interactions. Two different domains are explored: recognition of two-handed motions in the martial art 'Tai Chi', and multiple-person interactions in a visual surveillance task. Our system combines top-down with bottom-up information using a feedback loop, and is formulated with a Bayesian framework. Two different graphical models (HMMs and Coupled HMMs) are used for modeling both individual actions and multiple-agent interactions, and CHMMs are shown to work more efficiently and accurately for a given amount of training. Finally, to overcome the limited amounts of training data, we demonstrate that 'synthetic agents' (Alife-style agents) can be used to develop flexible prior models of the person-to-person interactions.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {924–930},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009183,
+author = {Moody, John and Saffell, Matthew},
+title = {Reinforcement Learning for Trading},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {We propose to train trading systems by optimizing financial objective functions via reinforcement learning. The performance functions that we consider are profit or wealth, the Sharpe ratio and our recently proposed differential Sharpe ratio for online learning. In Moody &amp; Wu (1997), we presented empirical results that demonstrate the advantages of reinforcement learning relative to supervised learning. Here we extend our previous work to compare Q-Learning to our Recurrent Reinforcement Learning (RRL) algorithm. We provide new simulation results that demonstrate the presence of predictability in the monthly S&amp;P 500 Stock Index for the 25 year period 1970 through 1994, as well as a sensitivity analysis that provides economic insight into the trader's structure.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {917–923},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009182,
+author = {Moghaddam, Baback and Jebara, Tony and Pentland, Alex},
+title = {Bayesian Modeling of Facial Similarity},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {In previous work [6, 9, 10], we advanced a new technique for direct visual matching of images for the purposes of face recognition and image retrieval, using a probabilistic measure of similarity based primarily on a Bayesian (MAP) analysis of image differences, leading to a "dual" basis similar to eigenfaces [13]. The performance advantage of this probabilistic matching technique over standard Euclidean nearest-neighbor eigenface matching was recently demonstrated using results from DARPA's 1996 "FERET" face recognition competition, in which this probabilistic matching algorithm was found to be the top performer. We have further developed a simple method of replacing the costly compution of nonlinear (online) Bayesian similarity measures by the relatively inexpensive computation of linear (offline) subspace projections and simple (online) Euclidean norms, thus resulting in a significant computational speed-up for implementation with very large image databases as typically encountered in real-world applications.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {910–916},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009181,
+author = {McGovern, Amy and Moss, Eliot},
+title = {Scheduling Straight-Line Code Using Reinforcement Learning and Rollouts},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {The execution order of a block of computer instructions can make a difference in its running time by a factor of two or more. In order to achieve the best possible speed, compilers use heuristic schedulers appropriate to each specific architecture implementation. However, these heuristic schedulers are time-consuming and expensive to build. In this paper, we present results using both rollouts and reinforcement learning to construct heuristics for scheduling basic blocks. The rollout scheduler outperformed a commercial scheduler, and the reinforcement learning scheduler performed almost as well as the commercial scheduler.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {903–909},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009180,
+author = {Huet, Benoit and Cross, Andrew D. J. and Hancock, Edwin R.},
+title = {Graph Matching for Shape Retrieval},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {This paper describes a Bayesian graph matching algorithm for data-mining from large structural data-bases. The matching algorithm uses edge-consistency and node attribute similarity to determine the a posteriori probability of a query graph for each of the candidate matches in the data-base. The node feature-vectors are constructed by computing normalised histograms of pairwise geometric attributes. Attribute similarity is assessed by computing the Bhattacharyya distance between the histograms. Recognition is realised by selecting the candidate from the data-base which has the largest a posteriori probability. We illustrate the recognition technique on a data-base containing 2500 line patterns extracted from real-world imagery. Here the recognition technique is shown to significantly outperform a number of algorithm alternatives.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {896–902},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009179,
+author = {Hollm\'{e}n, Jaakko and Tresp, Volker},
+title = {Call-Based Fraud Detection in Mobile Communication Networks Using a Hierarchical Regime-Switching Model},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Fraud causes substantial losses to telecommunication carriers. Detection systems which automatically detect illegal use of the network can be used to alleviate the problem. Previous approaches worked on features derived from the call patterns of individual users. In this paper we present a call-based detection system based on a hierarchical regime-switching model. The detection problem is formulated as an inference problem on the regime probabilities. Inference is implemented by applying the junction tree algorithm to the underlying graphical model. The dynamics are learned from data using the EM algorithm and subsequent discriminative training. The methods are assessed using fraud data from a real mobile communication network.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {889–895},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009178,
+author = {Grzeszczuk, Radek and Terzopoulos, Demetri and Hinton, Geoffrey},
+title = {Fast Neural Network Emulation of Dynamical Systems for Computer Animation},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Computer animation through the numerical simulation of physics-based graphics models offers unsurpassed realism, but it can be computationally demanding. This paper demonstrates the possibility of replacing the numerical simulation of nontrivial dynamic models with a dramatically more efficient "NeuroAnimator" that exploits neural networks. NeuroAnimators are automatically trained off-line to emulate physical dynamics through the observation of physics-based models in action. Depending on the model, its neural network emulator can yield physically realistic animation one or two orders of magnitude faster than conventional numerical simulation. We demonstrate NeuroAnimators for a variety of physics-based models.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {882–888},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009177,
+author = {Granger, Eric and Grossberg, Stephen and Rubin, Mark A. and Streilein, William W.},
+title = {Familiarity Discrimination of Radar Pulses},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {The ARTMAP-FD neural network performs both identification (placing test patterns in classes encountered during training) and familiarity discrimination (judging whether a test pattern belongs to any of the classes encountered during training). The performance of ARTMAP-FD is tested on radar pulse data obtained in the field, and compared to that of the nearest-neighbor-based NEN algorithm and to a k &gt; 1 extension of NEN.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {875–881},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009176,
+author = {Dror, Gideon and Abramowicz, Halina and Horn, David},
+title = {Vertex Identification in High Energy Physics Experiments},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {In High Energy Physics experiments one has to sort through a high flux of events, at a rate of tens of MHz, and select the few that are of interest. One of the key factors in making this decision is the location of the vertex where the interaction, that led to the event, took place. Here we present a novel solution to the problem of finding the location of the vertex, based on two feedforward neural networks with fixed architectures, whose parameters are chosen so as to obtain a high accuracy. The system is tested on simulated data sets, and is shown to perform better than conventional algorithms.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {868–874},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009175,
+author = {Cornford, Dan and Nabney, Ian T. and Williams, Christopher K. I.},
+title = {Adding Constrained Discontinuities to Gaussian Process Models of Wind Fields},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Gaussian Processes provide good prior models for spatial data, but can be too smooth. In many physical situations there are discontinuities along bounding surfaces, for example fronts in near-surface wind fields. We describe a modelling method for such a constrained discontinuity and demonstrate how to infer the model parameters in wind fields with MCMC sampling.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {861–867},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009174,
+author = {Baluja, Shumeet},
+title = {Probabilistic Modeling for Face Orientation Discrimination: Learning from Labeled and Unlabeled Data},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {This paper presents probabilistic modeling methods to solve the problem of discriminating between five facial orientations with very little labeled data. Three models are explored. The first model maintains no inter-pixel dependencies, the second model is capable of modeling a set of arbitrary pair-wise dependencies, and the last model allows dependencies only between neighboring pixels. We show that for all three of these models, the accuracy of the learned models can be greatly improved by augmenting a small number of labeled training images with a large set of unlabeled images using Expectation-Maximization. This is important because it is often difficult to obtain image labels, while many unlabeled images are readily available. Through a large set of empirical tests, we examine the benefits of unlabeled data for each of the models. By using only two randomly selected labeled examples per class, we can discriminate between the five facial orientations with an accuracy of 94%; with six labeled examples, we achieve an accuracy of 98%.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {854–860},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009173,
+author = {Baluja, Shurneet},
+title = {Making Templates Rotationally Invariant: An Application to Rotated Digit Recognition},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {This paper describes a simple and efficient method to make template-based object classification invariant to in-plane rotations. The task is divided into two parts: orientation discrimination and classification. The key idea is to perform the orientation discrimination before the classification. This can be accomplished by hypothesizing, in turn, that the input image belongs to each class of interest. The image can then be rotated to maximize its similarity to the training images in each class (these contain the prototype object in an upright orientation). This process yields a set of images, at least one of which will have the object in an upright position. The resulting images can then be classified by models which have been trained with only upright examples. This approach has been successfully applied to two real-world vision-based tasks: rotated handwritten digit recognition and rotated face detection in cluttered scenes.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {847–853},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009172,
+author = {Weinshall, Daphna and Jacobs, David W. and Gdalyahu, Yoram},
+title = {Classification in Non-Metric Spaces},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {A key question in vision is how to represent our knowledge of previously encountered objects to classify new ones. The answer depends on how we determine the similarity of two objects. Similarity tells us how relevant each previously seen object is in determining the category to which a new object belongs. Here a dichotomy emerges. Complex notions of similarity appear necessary for cognitive models and applications, while simple notions of similarity form a tractable basis for current computational approaches to classification. We explore the nature of this dichotomy and why it calls for new approaches to well-studied problems in learning. We begin this process by demonstrating new computational methods for supervised learning that can handle complex notions of similarity. (1) We discuss how to implement parametric methods that represent a class by its mean when using non-metric similarity functions; and (2) We review non-parametric methods that we have developed using nearest neighbor classification in non-metric spaces. Point (2), and some of the background of our work have been described in more detail in [8].},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {838–844},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009171,
+author = {Thornber, Karvel K. and Williams, Lance R.},
+title = {Orientation, Scale, and Discontinuity as Emergent Properties of Illusory Contour Shape},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {A recent neural model of illusory contour formation is based on a distribution of natural shapes traced by particles moving with constant speed in directions given by Brownian motions. The input to that model consists of pairs of position and direction constraints and the output consists of the distribution of contours joining all such pairs. In general, these contours will not be closed and their distribution will not be scale-invariant. In this paper, we show how to compute a scale-invariant distribution of closed contours given position constraints alone and use this result to explain a well known illusory contour effect.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {831–837},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009170,
+author = {Sharma, Ravi K. and Leen, Todd K. and Pavel, Misha},
+title = {Probabilistic Image Sensor Fusion},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {We present a probabilistic method for fusion of images produced by multiple sensors. The approach is based on an image formation model in which the sensor images are noisy, locally linear functions of an underlying, true scene. A Bayesian framework then provides for maximum likelihood or maximum a posteriori estimates of the true scene from the sensor images. Maximum likelihood estimates of the parameters of the image formation model involve (local) second order image statistics, and thus are related to local principal component analysis. We demonstrate the efficacy of the method on images from visible-band and infrared sensors.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {824–830},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009169,
+author = {Rosenboltz, Ruth},
+title = {General-Purpose Localization of Textured Image Regions},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {We suggest a working definition of texture: Texture is stuff that is more compactly represented by its statistics than by specifying the configuration of its parts. This definition suggests that to find texture we look for outliers to the local statistics, and label as texture the regions with no outliers. We present a method, based upon this idea, for labeling points in natural scenes as belonging to texture regions, while simultaneously allowing us to label lowlevel, bottom-up cues for visual attention. This method is based upon recent psychophysics results on processing of texture and popout.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {817–823},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009168,
+author = {Rao, Rajesb P. N. and Ruderman, Daniel L.},
+title = {Learning Lie Groups for Invariant Visual Perception},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {One of the most important problems in visual perception is that of visual invariance: how are objects perceived to be the same despite undergoing transformations such as translations, rotations or scaling? In this paper, we describe a Bayesian method for learning invariances based on Lie group theory. We show that previous approaches based on first-order Taylor series expansions of inputs can be regarded as special cases of the Lie group approach, the latter being capable of handling in principle arbitrarily large transfonnations. Using a matrix-exponential based generative model of images, we derive an unsupervised algorithm for learning Lie group operators from input data containing infinitesimal transfonnations. The on-line unsupervised learning algorithm maximizes the posterior probability of generating the training data. We provide experimental results suggesting that the proposed method can learn Lie group operators for handling reasonably large 1-D translations and 2-D rotations.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {810–816},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009167,
+author = {Phillips, P. Jonathon},
+title = {Support Vector Machines Applied to Face Recognition},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Face recognition is a K class problem. where K is the number of known individuals; and support vector machines (SVMs) are a binary classification method. By reformulating the face recognition problem and reinterpreting the output of the SVM classifier. we developed a SVM -based face recognition algorithm. The face recognition problem is formulated as a problem in difference space. which models dissimilarities between two facial images. In difference space we formulate face recognition as a two class problem. The classes are: dissimilarities between faces of the same person. and dissimilarities between faces of different people. By modifying the interpretation of the decision surface generated by SVM. we generated a similarity metric between faces that is learned from examples of differences between faces. The SVM-based algorithm is compared with a principal component analysis (PCA) based algorithm on a difficult set of images from the FERET database. Performance was measured for both verification and identification scenarios. The identification performance for SVM is 77-78% versus 54% for PCA. For verification. the equal error rate is 7% for SVM and 13% for PCA.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {803–809},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009166,
+author = {Li, Zhaoping},
+title = {A V1 Model of Pop out and Asymmetry in Visual Search},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Visual search is the task of finding a target in an image against a background of distractors. Unique features of targets enable them to pop out against the background, while targets defined by lacks of features or conjunctions of features are more difficult to spot. It is known that the ease of target detection can change when the roles of figure and ground are switched. The mechanisms underlying the ease of pop out and asymmetry in visual search have been elusive. This paper shows that a model of segmentation in V1 based on intracortical interactions can explain many of the qualitative aspects of visual search.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {796–802},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009165,
+author = {Itti, Laurent and Braun, Jochen and Lee, Dale K. and Koch, Christof},
+title = {Attentional Modulation of Human Pattern Discrimination Psychophysics Reproduced by a Quantitative Model},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {We previously proposed a quantitative model of early visual processing in primates, based on non-linearly interacting visual filters and statistically efficient decision. We now use this model to interpret the observed modulation of a range of human psychophysical thresholds with and without focal visual attention. Our model - calibrated by an automatic fitting procedure - simultaneously reproduces thresholds for four classical pattern discrimination tasks, performed while attention was engaged by another concurrent task. Our model then predicts that the seemingly complex improvements of certain thresholds, which we observed when attention was fully available for the discrimination tasks, can best be explained by a strengthening of competition among early visual filters.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {789–795},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009164,
+author = {Ioffe, Sergey and Forsyth, David},
+title = {Learning to Find Pictures of People},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Finding articulated objects, like people, in pictures presents a particularly difficult object recognition problem. We show how to find people by finding putative body segments, and then constructing assemblies of those segments that are consistent with the constraints on the appearance of a person that result from kinematic properties. Since a reasonable model of a person requires at least nine segments, it is not possible to present every group to a classifier. Instead, the search can be pruned by using projected versions of a classifier that accepts groups corresponding to people. We describe an efficient projection algorithm for one popular classifier, and demonstrate that our approach can be used to determine whether images of real scenes contain people.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {782–788},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009163,
+author = {Freeman, William T. and Pasztor, Egon C.},
+title = {Learning to Estimate Scenes from Images},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {We seek the scene interpretation that best explains image data. For example, we may want to infer the projected velocities (scene) which best explain two consecutive image frames (image). From synthetic data, we model the relationship between image and scene patches, and between a scene patch and neighboring scene patches. Given a new image, we propagate likelihoods in a Markov network (ignoring the effect of loops) to infer the underlying scene. This yields an efficient method to form low-level scene interpretations. We demonstrate the technique for motion analysis and estimating high resolution images from low-resolution ones.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {775–781},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009162,
+author = {Darrell, Trevor},
+title = {Example Based Image Synthesis of Articulated Figures},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {We present a method for learning complex appearance mappings. such as occur with images of articulated objects. Traditional interpolation networks fail on this case since appearance is not necessarily a smooth function nor a linear manifold for articulated objects. We define an appearance mapping from examples by constructing a set of independently smooth interpolation networks; these networks can cover overlapping regions of parameter space. A set growing procedure is used to find example clusters which are well-approximated within their convex hull; interpolation then proceeds only within these sets of examples. With this method physically valid images are produced even in regions of parameter space where nearby examples have different appearances. We show results generating both simulated and real arm images.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {768–774},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009161,
+author = {Coughlan, James M. and Yuille, A. L.},
+title = {A Phase Space Approach to Minimax Entropy Learning and the Minutemax Approximations},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {There has been much recent work on measuring image statistics and on learning probability distributions on images. We observe that the mapping from images to statistics is many-to-one and show it can be quantified by a phase space factor. This phase space approach throws light on the Minimax Entropy technique for learning Gibbs distributions on images with potentials derived from image statistics and elucidates the ambiguities that are inherent to determining the potentials. In addition, it shows that if the phase factor can be approximated by an analytic distribution then this approximation yields a swift "Minutemax" algorithm that vastly reduces the computation time for Minimax entropy learning. An illustration of this concept, using a Gaussian to approximate the phase factor, gives a good approximation to the results of Zhu and Mumford (1997) in just seconds of CPU time. The phase space approach also gives insight into the multi-scale potentials found by Zhu and Mumford (1997) and suggests that the forms of the potentials are influenced greatly by phase space considerations. Finally, we prove that probability distributions learned in feature space alone are equivalent to Minimax Entropy learning with a multinomial approximation of the phase factor.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {761–767},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009160,
+author = {Saul, Lawrence and Rahim, Mazin},
+title = {Markov Processes on Curves for Automatic Speech Recognition},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {We investigate a probabilistic framework for automatic speech recognition based on the intrinsic geometric properties of curves. In particular, we analyze the setting in which two variables-one continuous (x), one discrete (s)-evolve jointly in time. We suppose that the vector x traces out a smooth multidimensional curve and that the variable s evolves stochastically as a function of the arc length traversed along this curve. Since arc length does not depend on the rate at which a curve is traversed, this gives rise to a family of Markov processes whose predictions, Pr[s|x], are invariant to nonlinear warpings of time. We describe the use of such models, known as Markov processes on curves (MPCs), for automatic speech recognition, where x are acoustic feature trajectories and s are phonetic transcriptions. On two tasks--recognizing New Jersey town names and connected alpha-digits--we find that MPCs yield lower word error rates than comparably trained hidden Markov models.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {751–757},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009159,
+author = {Nix, David A. and Hogden, John E.},
+title = {Maximum-Likelihood Continuity Mapping (MALCOM): An Alternative to HMMs},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {We describe Maximum-Likelihood Continuity Mapping (MALCOM), an alternative to hidden Markov models (HMMs) for processing sequence data such as speech. While HMMs have a discrete "hidden" space constrained by a fixed finite-automaton architecture, MALCOM has a continuous hidden space--a continuity map--that is constrained only by a smoothness requirement on paths through the space. MALCOM fits into the same probabilistic framework for speech recognition as HMMs, but it represents a more realistic model of the speech production process. To evaluate the extent to which MALCOM captures speech production information, we generated continuous speech continuity maps for three speakers and used the paths through them to predict measured speech articulator data. The median correlation between the MALCOM paths obtained from only the speech acoustics and articulator measurements was 0.77 on an independent test set not used to train MALCOM or the predictor. This unsupervised model achieved correlations over speakers and articulators only 0.02 to 0.15 lower than those obtained using an analogous supervised method which used articulatory measurements as well as acoustics.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {744–750},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009158,
+author = {Neukirchen, Christoph and Rigoll, Gerhard},
+title = {Controlling the Complexity of HMM Systems by Regularization},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {This paper introduces a method for regularization of HMM systems that avoids parameter overfitting caused by insufficient training data. Regularization is done by augmenting the EM training method by a penalty term that favors simple and smooth HMM systems. The penalty term is constructed as a mixture model of negative exponential distributions that is assumed to generate the state dependent emission probabilities of the HMMs. This new method is the successful transfer of a well known regularization approach in neural networks to the HMM domain and can be interpreted as a generalization of traditional state-tying for HMM systems. The effect of regularization is demonstrated for continuous speech recognition tasks by improving overfitted triphone models and by speaker adaptation with limited training data.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {737–743},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009157,
+author = {Lewicki, Michael S. and Sejnowski, Terrence J.},
+title = {Coding Time-Varying Signals Using Sparse, Shift-Invariant Representations},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {A common way to represent a time series is to divide it into short-duration blocks, each of which is then represented by a set of basis functions. A limitation of this approach, however, is that the temporal alignment of the basis functions with the underlying structure in the time series is arbitrary. We present an algorithm for encoding a time series that does not require blocking the data. The algorithm finds an efficient representation by inferring the best temporal positions for functions in a kernel basis. These can have arbitrary temporal extent and are not constrained to be orthogonal. This allows the model to capture structure in the signal that may occur at arbitrary temporal positions and preserves the relative temporal structure of underlying events. The model is shown to be equivalent to a very sparse and highly overcomplete basis. Under this model, the mapping from the data to the representation is nonlinear, but can be computed efficiently. This form also allows the use of existing methods for adapting the basis itself to data. This approach is applied to speech data and results in a shift invariant, spikelike representation that resembles coding in the cochlear nerve.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {730–736},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009156,
+author = {Brand, Matthew},
+title = {An Entropic Estimator for Structure Discovery},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {We introduce a novel framework for simultaneous structure and parameter learning in hidden-variable conditional probability models, based on an entropic prior and a solution for its maximum a posteriori (MAP) estimator. The MAP estimate minimizes uncertainty in all respects: cross-entropy between model and data; entropy of the model; entropy of the data's descriptive statistics. Iterative estimation extinguishes weakly supported parameters, compressing and sparsifying the model. Trimming operators accelerate this process by removing excess parameters and, unlike most pruning schemes, guarantee an increase in posterior probability. Entropic estimation takes a overcomplete random model and simplifies it, inducing the structure of relations between hidden and observed variables. Applied to hidden Markov models (HMMs), it finds a concise finite-state machine representing the hidden structure of a signal. We entropically model music, handwriting, and video time-series, and show that the resulting models are highly concise, structured, predictive, and interpretable: Surviving states tend to be highly correlated with meaningful partitions of the data, while surviving transitions provide a low-perplexity model of the signal dynamics.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {723–729},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009155,
+author = {Zhou, Ping and Austin, Jim and Kennedy, John},
+title = {A High Performance K-NN Classifier Using a Binary Correlation Matrix Memory},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {This paper presents a novel and fast k-NN classifier that is based on a binary CMM (Correlation Matrix Memory) neural network. A robust encoding method is developed to meet CMM input requirements. A hardware implementation of the CMM is described, which gives over 200 times the speed of a current mid-range workstation, and is scaleable to very large problems. When tested on several benchmarks and compared with a simple k-NN method, the CMM classifier gave less than 1% lower accuracy and over 4 and 12 times speed-up in software and hardware respectively.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {713–719},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009154,
+author = {Stocker, Alan and Douglas, Rodney},
+title = {Computation of Smooth Optical Flow in a Feedback Connected Analog Network},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {In 1986, Tanner and Mead [1] implemented an interesting constraint satisfaction circuit for global motion sensing in a VLSI. We report here a new and improved a VLSI implementation that provides smooth optical flow as well as global motion in a two dimensional visual field. The computation of optical flow is an ill-posed problem, which expresses itself as the aperture problem. However, the optical flow can be estimated by the use of regularization methods, in which additional constraints are introduced in terms of a global energy functional that must be minimized . We show how the algorithmic constraints of Hom and Schunck [2] on computing smooth optical flow can be mapped onto the physical constraints of an equivalent electronic network.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {706–712},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009153,
+author = {Higgins, Charles M. and Koch, Christof},
+title = {An Integrated Vision Sensor for the Computation of Optical Flow Singular Points},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {A robust, integrative algorithm is presented for computing the position of the focus of expansion or axis of rotation (the singular point) in optical flow fields such as those generated by self-motion. Measurements are shown of a fully parallel CMOS analog VLSI motion sensor array which computes the direction of local motion (sign of optical flow) at each pixel and can directly implement this algorithm. The flow field singular point is computed in real time with a power consumption of less than 2 mW. Computation of the singular point for more general flow fields requires measures of field expansion and rotation, which it is shown can also be computed in real-time hardware, again using only the sign of the optical flow field. These measures, along with the location of the singular point, provide robust real-time self-motion information for the visual guidance of a moving platform such as a robot.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {699–705},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009152,
+author = {Harris, John G. and Pu, Chiang-Jung and Principe, Jose C.},
+title = {A Neuromorphic Monaural Sound Localizer},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {We describe the first single microphone sound localization system and its inspiration from theories of human monaural sound localization. Reflections and diffractions caused by the external ear (pinna) allow humans to estimate sound source elevations using only one ear. Our single microphone localization model relies on a specially shaped reflecting structure that serves the role of the pinna. Specially designed analog VLSI circuitry uses echo-time processing to localize the sound. A CMOS integrated circuit has been designed, fabricated, and successfully demonstrated on actual sounds.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {692–698},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009151,
+author = {Etienne-Cummings, Ralph and Gruev, Viktor and Ghani, Mohammed Abdel},
+title = {VLSI Implementation of Motion Centroid Localization for Autonomous Navigation},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {A circuit for fast, compact and low-power focal-plane motion centroid localization is presented. This chip, which uses mixed signal CMOS components to implement photodetection, edge detection, ON-set detection and centroid localization, models the retina and superior colliculus. The centroid localization circuit uses time-windowed asynchronously triggered row and column address events and two linear resistive grids to provide the analog coordinates of the motion centroid. This VLSI chip is used to realize fast lightweight autonavigating vehicles. The obstacle avoiding line-following algorithm is discussed.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {685–691},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009150,
+author = {Edwards, R. Timothy and Pineda, Fernando J.},
+title = {Optimizing Correlation Algorithms for Hardware-Based Transient Classification},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {The perfonnance of dedicated VLSI neural processing hardware depends critically on the design of the implemented algorithms. We have previously proposed an algorithm for acoustic transient classification [1]. Having implemented and demonstrated this algorithm in a mixed-mode architecture, we now investigate variants on the algorithm, using time and frequency channel differencing, input and output nonnalization, and schemes to binarize and train the template values, with the goal of achieving optimal classification perfonnance for the chosen hardware.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {678–684},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009149,
+author = {Coggins, Richard J. and Wang, Raymond J. W. and Jabri, Marwan A.},
+title = {A Micropower CMOS Adaptive Amplitude and Shift Invariant Vector Quantiser},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {In this paper we describe the architecture, implementation and experimental results for an Intracardiac Electrogram (ICEG) classification and compression chip. The chip processes and vector-quantises 30 dimensional analogue vectors while consuming a maximum of 2.5 µW power for a heart rate of 60 beats per minute (1 vector per second) from a 3.3 V supply. This represents a significant advance on previous work which achieved ultra low power supervised morphology classification since the template matching scheme used in this chip enables unsupervised blind classification of abnonnal rhythms and the computational support for low bit rate data compression. The adaptive template matching scheme used is tolerant to amplitude variations, and inter- and intra-sample time shifts.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {671–677},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009148,
+author = {Cho, Jung-Wook and Lee, Soo-Young},
+title = {Active Noise Canceling Using Analog Neurochip with On-Chip Learning Capability},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {A modular analogue neuro-chip set with on-chip learning capability is developed for active noise canceling. The analogue neuro-chip set incorporates the error backpropagation learning rule for practical applications, and allows pin-to-pin interconnections for multi-chip boards. The developed neuro-board demonstrated active noise canceling without any digital signal processor. Multi-path fading of acoustic channels, random noise, and nonlinear distortion of the loud speaker are compensated by the adaptive learning circuits of the neuro-chips. Experimental results are reported for cancellation of car noise in real time.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {664–670},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009147,
+author = {Cauwenberghs, Gert and Waskiewicz, James},
+title = {Analog VLSI Cellular Implementation of the Boundary Contour System},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {We present an analog VLSI cellular architecture implementing a simplified version of the Boundary Contour System (BCS) for real-time image processing. Inspired by neuromorphic models across several layers of visual cortex, the design integrates in each pixel the functions of simple cells, complex cells, hyper-complex cells, and bipole cells, in three orientations interconnected on a hexagonal grid. Analog current-mode CMOS circuits are used throughout to perform edge detection, local inhibition, directionally selective long-range diffusive kernels, and renormalizing global gain control. Experimental results from a fabricated 12 \texttimes{} 10 pixel prototype in 1.2 µm CMOS technology demonstrate the robustness of the architecture in selecting image contours in a cluttered and noisy background.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {657–663},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009146,
+author = {Zhang, Liqing and Cichocki, Andrzej},
+title = {Blind Separation of Filtered Sources Using State-Space Approach},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {In this paper we present a novel approach to multichannel blind separation/generalized deconvolution, assuming that both mixing and demixing models are described by stable linear state-space systems. We decompose the blind separation problem into two process: separation and state estimation. Based on the minimization of Kullback-Leibler Divergence, we develop a novel learning algorithm to train the matrices in the output equation. To estimate the state of the demixing model, we introduce a new concept, called hidden innovation, to numerically implement the Kalman filter. Computer simulations are given to show the validity and high effectiveness of the state-space approach.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {648–654},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009145,
+author = {Yuille, A. L. and Coughlan, James M.},
+title = {Convergence Rates of Algorithms for Visual Search: Detecting Visual Contours},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {This paper formulates the problem of visual search as Bayesian inference and defines a Bayesian ensemble of problem instances. In particular, we address the problem of the detection of visual contours in noise/clutter by optimizing a global criterion which combines local intensity and geometry information. We analyze the convergence rates of A* search algorithms using results from information theory to bound the probability of rare events within the Bayesian ensemble. This analysis determines characteristics of the domain, which we call order parameters, that determine the convergence rates. In particular, we present a specific admissible A* algorithm with pruning which converges, with high probability, with expected time O(N) in the size of the problem. In addition, we briefly summarize extensions of this work which address fundamental limits of target contour detectability (i.e. algorithm independent results) and the use of non-admissible heuristics.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {641–647},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009144,
+author = {Williams, Christopher K. I. and Adams, Nicholas J.},
+title = {DTs: Dynamic Trees},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {In this paper we introduce a new class of image models, which we call dynamic trees or DTs. A dynamic tree model specifies a prior over a large number of trees, each one of which is a tree-structured belief net (TSBN). Experiments show that DTs are capable of generating images that are less blocky, and the models have better translation invariance properties than a fixed, "balanced" TSBN. We also show that Simulated Annealing is effective at finding trees which have high posterior probability.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {634–640},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009143,
+author = {Wheeler, Kevin R. and Dhawan, Atam P.},
+title = {Basis Selection for Wavelet Regression},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {A wavelet basis selection procedure is presented for wavelet regression. Both the basis and threshold are selected using cross-validation. The method includes the capability of incorporating prior knowledge on the smoothness (or shape of the basis functions) into the basis selection procedure. The results of the method are demonstrated using widely published sampled functions. The results of the method are contrasted with other basis function based methods.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {627–633},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009142,
+author = {Wahba, Grace and Lin, Xiwu and Gao, Fangyu and Xiang, Dong and Klein, Ronald and Klein, Barbara},
+title = {The Bias-Variance Tradeoff and the Randomized GACV},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {We propose a new in-sample cross validation based method (randomized GACV) for choosing smoothing or bandwidth parameters that govern the bias-variance or fit-complexity tradeoff in 'soft' classification. Soft classification refers to a learning procedure which estimates the probability that an example with a given attribute vector is in class 1 vs class O. The target for optimizing the the tradeoff is the Kullback-Liebler distance between the estimated probability distribution and the 'true' probability distribution, representing knowledge of an infinite population. The method uses a randomized estimate of the trace of a Hessian and mimics cross validation at the cost of a single relearning with perturbed outcome data.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {620–626},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009141,
+author = {Vasconcelos, Nuno and Lippman, Andrew},
+title = {Learning Mixture Hierarchies},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {The hierarchical representation of data has various applications in domains such as data mining, machine vision, or information retrieval. In this paper we introduce an extension of the Expectation-Maximization (EM) algorithm that learns mixture hierarchies in a computationally efficient manner. Efficiency is achieved by progressing in a bottom-up fashion, i.e. by clustering the mixture components of a given level in the hierarchy to obtain those of the level above. This cl ustering requires only knowledge of the mixture parameters, there being no need to resort to intermediate samples. In addition to practical applications, the algorithm allows a new interpretation of EM that makes clear the relationship with non-parametric kernel-based estimation methods, provides explicit control over the trade-off between the bias and variance of EM estimates, and offers new insights about the behavior of deterministic annealing methods commonly used with EM to escape local minima of the likelihood.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {606–612},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009140,
+author = {Ueda, Naonori and Nakano, Ryohei and Ghahramani, Zoubin and Hinton, Geoffrey E.},
+title = {SMEM Algorithm for Mixture Models},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {We present a split and merge EM (SMEM) algorithm to overcome the local maximum problem in parameter estimation of finite mixture models. In the case of mixture models, non-global maxima often involve having too many components of a mixture model in one part of the space and too few in another, widely separated part of the space. To escape from such configurations we repeatedly perform simultaneous split and merge operations using a new criterion for efficiently selecting the split and merge candidates. We apply the proposed algorithm to the training of Gaussian mixtures and mixtures of factor analyzers using synthetic and real data and show the effectiveness of using the split and merge operations to improve the likelihood of both the training data and of held-out test data.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {599–605},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009139,
+author = {Tipping, Michael E.},
+title = {Probabilistic Visualisation of High-Dimensional Binary Data},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {We present a probabilistic latent-variable framework for data visualisation, a key feature of which is its applicability to binary and categorical data types for which few established methods exist. A variational approximation to the likelihood is exploited to derive a fast algorithm for determining the model parameters. Illustrations of application to real and synthetic binary data sets are given.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {592–598},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009138,
+author = {Smola, Alex J. and Frie\ss{}, Thilo T. and Sch\"{o}lkopf, Bernhard},
+title = {Semiparametric Support Vector and Linear Programming Machines},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Semiparametric models are useful tools in the case where domain knowledge exists about the function to be estimated or emphasis is put onto understandability of the model. We extend two learning algorithms - Support Vector machines and Linear Programming machines to this case and give experimental results for SV machines.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {585–591},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009137,
+author = {Singer, Yoram and Warmuth, Manfred K.},
+title = {Batch and On-Line Parameter Estimation of Gaussian Mixtures Based on the Joint Entropy},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {We describe a new iterative method for parameter estimation of Gaussian mixtures. The new method is based on a framework developed by Kivinen and Warmuth for supervised on-line learning. In contrast to gradient descent and EM, which estimate the mixture's covariance matrices, the proposed method estimates the inverses of the covariance matrices. Furthennore, the new parameter estimation procedure can be applied in both on-line and batch settings. We show experimentally that it is typically faster than EM, and usually requires about half as many iterations as EM.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {578–584},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009136,
+author = {Simard, Patrice Y. and Botton, L\'{e}on and Haffner, Patrick and LeCnn, Yann},
+title = {Boxlets: A Fast Convolution Algorithm for Signal Processing and Neural Networks},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Signal processing and pattern recognition algorithms make extensive use of convolution. In many cases, computational accuracy is not as important as computational speed. In feature extraction, for instance, the features of interest in a signal are usually quite distorted. This form of noise justifies some level of quantization in order to achieve faster feature extraction. Our approach consists of approximating regions of the signal with low degree polynomials, and then differentiating the resulting signals in order to obtain impulse functions (or derivatives of impulse functions). With this representation, convolution becomes extremely simple and can be implemented quite effectively. The true convolution can be recovered by integrating the result of the convolution. This method yields substantial speed up in feature extraction and is applicable to convolutional neural networks.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {571–577},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009135,
+author = {R\"{a}tsch, Gunnar and Onoda, Takashi and M\"{u}ller, Klaus R.},
+title = {Regularizing Adaboost},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Boosting methods maximize a hard classification margin and are known as powerful techniques that do not exhibit overfitting for low noise cases. Also for noisy data boosting will try to enforce a hard margin and thereby give too much weight to outliers, which then leads to the dilemma of non-smooth fits and overfitting. Therefore we propose three algorithms to allow for soft margin classification by introducing regularization with slack variables into the boosting concept: (1) AdaBoostreg and regularized versions of (2) linear and (3) quadratic programming AdaBoost. Experiments show the usefulness of the proposed algorithms in comparison to another soft margin classifier: the support vector machine.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {564–570},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009134,
+author = {Platt, John C.},
+title = {Using Analytic QP and Sparseness to Speed Training of Support Vector Machines},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Training a Support Vector Machine (SVM) requires the solution of a very large quadratic programming (QP) problem. This paper proposes an algorithm for training SVMs: Sequential Minimal Optimization, or SMO. SMO breaks the large QP problem into a series of smallest possible QP problems which are analytically solvable. Thus, SMO does not require a numerical QP library. SMO's computation time is dominated by evaluation of the kernel, hence kernel optimizations substantially quicken SMO. For the MNIST database, SMO is 1.7 times as fast as PCG chunking; while for the UCI Adult database and linear SVMs, SMO can be 1500 times faster than the PCG chunking algorithm.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {557–563},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009133,
+author = {Pelillo, Marcello},
+title = {Replicator Equations, Maximal Cliques, and Graph Isomorphism},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {We present a new energy-minimization framework for the graph isomorphism problem which is based on an equivalent maximum clique formulation. The approach is centered around a fundamental result proved by Motzkin and Straus in the mid-1960s, and recently expanded in various ways, which allows us to formulate the maximum clique problem in terms of a standard quadratic program. To solve the program we use "replicator" equations, a class of simple continuous- and discrete-time dynamical systems developed in various branches of theoretical biology. We show how, despite their inability to escape from local solutions, they nevertheless provide experimental results which are competitive with those obtained using more elaborate mean-field annealing heuristics.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {550–556},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009132,
+author = {Moore, Andrew W.},
+title = {Very Fast EM-Based Mixture Model Clustering Using Multiresolution Kd-Trees},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Clustering is important in many fields including manufacturing, biology, finance, and astronomy. Mixture models are a popular approach due to their statistical foundations, and EM is a very popular method for finding mixture models. EM, however, requires many accesses of the data, and thus has been dismissed as impractical (e.g. [9]) for data mining of enormous datasets. We present a new algorithm, based on the multiresolution kd-trees of [5], which dramatically reduces the cost of EM-based clustering, with savings rising linearly with the number of datapoints. Although presented here for maximum likelihood estimation of Gaussian mixture models, it is also applicable to non-Gaussian models (provided class densities are monotonic in Mahalanobis distance), mixed categorical/ numeric clusters. and Bayesian methods such as Antoclass [1].},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {543–549},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009131,
+author = {Mika, Sebastian and Sch\"{o}lkopf, Bernhard and Smola, Alex and M\"{u}ller, Klaus-Robert and Scholz, Matthias and R\"{a}tsch, Gunnar},
+title = {Kernel PCA and De-Noising in Feature Spaces},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Kernel PCA as a nonlinear feature extractor has proven powerful as a preprocessing step for classification algorithms. But it can also be considered as a natural generalization of linear principal component analysis. This gives rise to the question how to use nonlinear features for data compression, reconstruction, and de-noising, applications common in linear PCA. This is a nontrivial task, as the results provided by kernel PCA live in some high dimensional feature space and need not have pre-images in input space. This work presents ideas for finding approximate pre-images, focusing on Gaussian kernels, and shows experimental results using these pre-images in data reconstruction and de-noising on toy examples as well as on real world data.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {536–542},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009130,
+author = {Marrs, Alan D. and Webb, Andrew R.},
+title = {Exploratory Data Analysis Using Radial Basis Function Latent Variable Models},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Two developments of nonlinear latent variable models based on radial basis functions are discussed: in the first, the use of priors or constraints on allowable models is considered as a means of preserving data structure in low-dimensional representations for visualisation purposes. Also, a resampling approach is introduced which makes more effective use of the latent samples in evaluating the likelihood.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {529–535},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009129,
+author = {Magdon-Ismail, Malik and Atiya, Amir},
+title = {Neural Networks for Density Estimation},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {We introduce two new techniques for density estimation. Our approach poses the problem as a supervised learning task which can be performed using Neural Networks. We introduce a stochastic method for learning the cumulative distribution and an analogous deterministic technique. We demonstrate convergence of our methods both theoretically and experimentally, and provide comparisons with the Parzen estimate. Our theoretical results demonstrate better convergence properties than the Parzen estimate.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {522–528},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009128,
+author = {Lee, Daniel D. and Sompolinsky, Haim},
+title = {Learning a Continuous Hidden Variable Model for Binary Data},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {A directed generative model for binary data using a small number of hidden continuous units is investigated. A clipping nonlinearity distinguishes the model from conventional principal components analysis. The relationships between the correlations of the underlying continuous Gaussian variables and the binary output variables are utilized to learn the appropriate weights of the network. The advantages of this approach are illustrated on a translationally invariant binary distribution and on handwritten digit images.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {515–521},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009127,
+author = {Lee, Te-Won and Lewicki, Michael S. and Sejnowski, Terrence},
+title = {Unsupervised Classification with Non-Gaussian Mixture Models Using ICA},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {We present an unsupervised classification algorithm based on an ICA mixture model. The ICA mixture model assumes that the observed data can be categorized into several mutually exclusive data classes in which the components in each class are generated by a linear mixture of independent sources. The algorithm finds the independent sources, the mixing matrix for each class and also computes the class membership probability for each data point. This approach extends the Gaussian mixture model so that the classes can have non-Gaussian structure. We demonstrate that this method can learn efficient codes to represent images of natural scenes and text. The learned classes of basis functions yield a better approximation of the underlying distributions of the data, and thus can provide greater coding efficiency. We believe that this method is well suited to modeling structure in high-dimensional data and has many potential applications.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {508–514},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009126,
+author = {K\'{e}gl, Bal\'{a}zs and Krzyzak, Adam and Linder, Tam\'{a}s and Zeger, Kenneth},
+title = {A Polygonal Line Algorithm for Constructing Principal Curves},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Principal curves have been defined as "self consistent" smooth curves which pass through the "middle" of a d-dimensional probability distribution or data cloud. Recently, we [1] have offered a new approach by defining principal curves as continuous curves of a given length which minimize the expected squared distance between the curve and points of the space randomly chosen according to a given distribution. The new definition made it possible to carry out a theoretical analysis of learning principal curves from training data. In this paper we propose a practical construction based on the new definition. Simulation results demonstrate that the new algorithm compares favorably with previous methods both in terms of performance and computational complexity.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {501–507},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009125,
+author = {Jebara, Tony and Pentland, Alex},
+title = {Maximum Conditional Likelihood via Bound Maximization and the CEM Algorithm},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {We present the CEM (Conditional Expectation Maximization) algorithm as an extension of the EM (Expectation Maximization) algorithm to conditional density estimation under missing data. A bounding and maximization process is given to specifically optimize conditional likelihood instead of the usual joint likelihood. We apply the method to conditioned mixture models and use bounding techniques to derive the model's update rules. Monotonic convergence, computational efficiency and regression results superior to EM are demonstrated.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {494–500},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009124,
+author = {Jaakkola, Tommi S. and Haussler, David},
+title = {Exploiting Generative Models in Discriminative Classifiers},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Generative probability models such as hidden Markov models provide a principled way of treating missing information and dealing with variable length sequences. On the other hand, discriminative methods such as support vector machines enable us to construct flexible decision boundaries and often result in classification performance superior to that of the model based approaches. An ideal classifier should combine these two complementary approaches. In this paper, we develop a natural way of achieving this combination by deriving kernel functions for use in discriminative methods such as support vector machines from generative probability models. We provide a theoretical justification for this combination as well as demonstrate a substantial improvement in the classification performance in the context of DNA and protein sequence analysis.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {487–493},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009123,
+author = {Isbell, Charles Lee and Viola, Paul},
+title = {Restructuring Sparse High Dimensional Data for Effective Retrieval},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {The task in text retrieval is to find the subset of a collection of documents relevant to a user's information request, usually expressed as a set of words. Classically, documents and queries are represented as vectors of word counts. In its simplest form, relevance is defined to be the dot product between a document and a query vector-a measure of the number of common terms. A central difficulty in text retrieval is that the presence or absence of a word is not sufficient to determine relevance to a query. Linear dimensionality reduction has been proposed as a technique for extracting underlying structure from the document collection. In some domains (such as vision) dimensionality reduction reduces computational complexity. In text retrieval it is more often used to improve retrieval performance. We propose an alternative and novel technique that produces sparse representations constructed from sets of highly-related words. Documents and queries are represented by their distance to these sets, and relevance is measured by the number of common clusters. This technique significantly improves retrieval performance, is efficient to compute and shares properties with the optimal linear projection operator and the independent components of documents.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {480–486},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009122,
+author = {Hyv\"{a}rinen, Aapo and Hoyer, Patrik and Oja, Erkki},
+title = {Sparse Code Shrinkage: Denoising by Nonlinear Maximum Likelihood Estimation},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Sparse coding is a method for finding a representation of data in which each of the components of the representation is only rarely significantly active. Such a representation is closely related to redundancy reduction and independent component analysis, and has some neurophysiological plausibility. In this paper, we show how sparse coding can be used for denoising. Using maximum likelihood estimation of nongaussian variables corrupted by gaussian noise, we show how to apply a shrinkage nonlinearity on the components of sparse coding so as to reduce noise. Furthermore, we show how to choose the optimal sparse coding basis for denoising. Our method is closely related to the method of wavelet shrinkage, but has the important benefit over wavelet methods that both the features and the shrinkage parameters are estimated directly from the data.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {473–478},
+numpages = {6},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009121,
+author = {Hofmann, Thomas and Puzicha, Jan and Jordan, Michael I.},
+title = {Learning from Dyadic Data},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Dyadzc data refers to a domain with two finite sets of objects in which observations are made for dyads, i.e., pairs with one element from either set. This type of data arises naturally in many application ranging from computational linguistics and information retrieval to preference analysis and computer vision. In this paper, we present a systematic, domain-independent framework of learning from dyadic data by statistical mixture models. Our approach covers different models with fiat and hierarchical latent class structures. We propose an annealed version of the standard EM algorithm for model fitting which is empirically evaluated on a variety of data sets from different domains.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {466–472},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009120,
+author = {Hochreiter, Sepp and Schmidhuber, J\"{u}rgen},
+title = {Source Separation as a By-Product of Regularization},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {This paper reveals a previously ignored connection between two important fields: regularization and independent component analysis (ICA). We show that at least one representative of a broad class of algorithms (regularizers that reduce network complexity) extracts independent features as a by-product. This algorithm is Flat Minimum Search (FMS), a recent general method for finding low-complexity networks with high generalization capability. FMS works by minimizing both training error and required weight precision. According to our theoretical analysis the hidden layer of an FMS-trained autoassociator attempts at coding each input by a sparse code with as few simple features as possible. In experiments the method extracts optimal codes for difficult versions of the "noisy bars" benchmark problem by separating the underlying sources, whereas ICA and PCA fail. Real world images are coded with fewer bits per pixel than by ICA or PCA.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {459–465},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009119,
+author = {Held, Marcus and Puzicha, Jan and Buhmann, Joachim M.},
+title = {Visualizing Group Structure},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Cluster analysis is a fundamental principle in exploratory data analysis, providing the user with a description of the group structure of given data. A key problem in this context is the interpretation and visualization of clustering solutions in high-dimensional or abstract data spaces. In particular, probabilistic descriptions of the group structure, essential to capture inter-cluster relationships, are hardly assessable by simple inspection ofthe probabilistic assignment variables. We present a novel approach to the visualization of group structure. It is based on a statistical model of the object assignments which have been observed or estimated by a probabilistic clustering procedure. The objects or data points are embedded in a low dimensional Euclidean space by approximating the observed data statistics with a Gaussian mixture model. The algorithm provides a new approach to the visualization of the inherent structure for a broad variety of data types, e.g. histogram data, proximity data and co-occurrence data. To demonstrate the power of the approach, histograms of textured images are visualized as an example of a large-scale data mining application.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {452–458},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009118,
+author = {Grandvalet, Yves and Canu, St\'{e}phane},
+title = {Outcomes of the Equivalence of Adaptive Ridge with Least Absolute Shrinkage},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Adaptive Ridge is a special form of Ridge regression, balancing the quadratic penalization on each parameter of the model. It was shown to be equivalent to Lasso (least absolute shrinkage and selection operator), in the sense that both procedures produce the same estimate. Lasso can thus be viewed as a particular quadratic penalizer.From this observation, we derive a fixed point algorithm to compute the Lasso solution. The analogy provides also a new hyper-parameter for tuning effectively the model complexity. We finally present a series of possible extensions of lasso performing sparse regression in kernel smoothing, additive modeling and neural net training.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {445–451},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009117,
+author = {Graepel, Thore and Herbrich, Ralf and Bollmann-Sdorra, Peter and Obermayer, Klaus},
+title = {Classification on Pairwise Proximity Data},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {We investigate the problem of learning a classification task on data represented in terms of their pairwise proximities. This representation does not refer to an explicit feature representation of the data items and is thus more general than the standard approach of using Euclidean feature vectors, from which pairwise proximities can always be calculated. Our first approach is based on a combined linear embedding and classification procedure resulting in an extension of the Optimal Hyperplane algorithm to pseudo-Euclidean data. As an alternative we present another approach based on a linear threshold model in the proximity values themselves, which is optimized using Structural Risk Minimization. We show that prior knowledge about the problem can be incorporated by the choice of distance measures and examine different metrics W.r.t. their generalization. Finally, the algorithms are successfully applied to protein structure data and to data from the cat's cerebral cortex. They show better performance than K-nearest-neighbor classification.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {438–444},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009116,
+author = {Ghahramani, Zoubin and Roweis, Sam T.},
+title = {Learning Nonlinear Dynamical Systems Using an EM Algorithm},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {The Expectation-Maximization (EM) algorithm is an iterative procedure for maximum likelihood parameter estimation from data sets with missing or hidden variables [2]. It has been applied to system identification in linear stochastic state-space models, where the state variables are hidden from the observer and both the state and the parameters of the model have to be estimated simultaneously [9]. We present a generalization of the EM algorithm for parameter estimation in nonlinear dynamical systems. The "expectation" step makes use of Extended Kalman Smoothing to estimate the state, while the "maximization" step re-estimates the parameters using these uncertain state estimates. In general, the nonlinear maximization step is difficult because it requires integrating out the uncertainty in the states. However, if Gaussian radial basis function (RBF) approximators are used to model the nonlinearities, the integrals become tractable and the maximization step can be solved via systems of linear equations.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {431–437},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009115,
+author = {Gdalyahu, Yoram and Weinshall, Daphna and Werman, Michael},
+title = {A Randomized Algorithm for Pairwise Clustering},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {We present a stochastic clustering algorithm based on pairwise similarity of datapoints. Our method extends existing deterministic methods, including agglomerative algorithms, min-cut graph algorithms, and connected components. Thus it provides a common framework for all these methods. Our graph-based method differs from existing stochastic methods which are based on analogy to physical systems. The stochastic nature of our method makes it more robust against noise, including accidental edges and small spurious clusters. We demonstrate the superiority of our algorithm using an example with 3 spiraling bands and a lot of noise.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {424–430},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009114,
+author = {Friedman, Nir and Singer, Yoram},
+title = {Efficient Bayesian Parameter Estimation in Large Discrete Domains},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {We examine the problem of estimating the parameters of a multinomial distribution over a large number of discrete outcomes, most of which do not appear in the training data. We analyze this problem from a Bayesian perspective and develop a hierarchical prior that incorporates the assumption that the observed outcomes constitute only a small subset of the possible outcomes. We show how to efficiently perform exact inference with this form of hierarchical prior and compare it to standard approaches.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {417–423},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009113,
+author = {De Freitas, Jo\~{a}o FG and Doucet, Arnaud and Niranjan, Mahesan and Gee, Andrew H.},
+title = {Global Optimisation of Neural Network Models via Sequential Sampling},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {We propose a novel strategy for training neural networks using sequential sampling-importance resampling algorithms. This global optimisation strategy allows us to learn the probability distribution of the network weights in a sequential framework. It is well suited to applications involving on-line, nonlinear, non-Gaussian or non-stationary signal processing.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {410–416},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009112,
+author = {Briegel, Thomas and Tresp, Volker},
+title = {Fisher Scoring and a Mixture of Modes Approach for Approximate Inference and Learning in Nonlinear State Space Models},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {We present Monte-Carlo generalized EM equations for learning in nonlinear state space models. The difficulties lie in the Monte-Carlo E-step which consists of sampling from the posterior distribution of the hidden variables given the observations. The new idea presented in this paper is to generate samples from a Gaussian approximation to the true posterior from which it is easy to obtain independent samples. The parameters of the Gaussian approximation are either derived from the extended Kalman filter or the Fisher scoring algorithm. In case the posterior density is multimodal we propose to approximate the posterior by a sum of Gaussians (mixture of modes approach). We show that sampling from the approximate posterior densities obtained by the above algorithms leads to better models than using point estimates for the hidden states. In our experiment, the Fisher scoring algorithm obtained a better approximation of the posterior mode than the EKF. For a multimodal distribution, the mixture of modes approach gave superior results.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {403–409},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009111,
+author = {Boyen, Xavier and Koller, Daphne},
+title = {Approximate Learning of Dynamic Models},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Inference is a key component in learning probabilistic models from partially observable data. When learning temporal models, each of the many inference phases requires a traversal over an entire long data sequence; furthermore, the data structures manipulated are exponentially large, making this process computationally expensive. In [2], we describe an approximate inference algorithm for monitoring stochastic processes, and prove bounds on its approximation error. In this paper, we apply this algorithm as an approximate forward propagation step in an EM algorithm for learning temporal Bayesian networks. We provide a related approximation for the backward step, and prove error bounds for the combined algorithm. We show empirically that, for a real-life domain, EM using our inference algorithm is much faster than EM using exact inference, with almost no degradation in quality of the learned model. We extend our analysis to the online learning task, showing a bound on the error resulting from restricting attention to a small window of observations. We present an online EM learning algorithm for dynamic systems, and show that it learns much faster than standard offline EM.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {396–402},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009110,
+author = {Blake, A. and North, B. and Isard, M.},
+title = {Learning Multi-Class Dynamics},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Standard techniques (eg. Yule-Walker) are available for learning Auto-Regressive process models of simple, directly observable, dynamical processes. When sensor noise means that dynamics are observed only approximately, learning can still been achieved via Expectation-Maximisation (EM) together with Kalman Filtering. However, this does not handle more complex dynamics, involving multiple classes of motion. For that problem, we show here how EM can be combined with the CONDENSATION algorithm, which is based on propagation of random sample-sets. Experiments have been performed with visually observed juggling, and plausible dynamical models are found to emerge from the learning process.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {389–395},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009109,
+author = {Bishop, Christopher M.},
+title = {Bayesian PCA},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {The technique of principal component analysis (PCA) has recently been expressed as the maximum likelihood solution for a generative latent variable model. In this paper we use this probabilistic reformulation as the basis for a Bayesian treatment of PCA. Our key result is that effective dimensionality of the latent space (equivalent to the number of retained principal components) can be determined automatically as part of the Bayesian inference procedure. An important application of this framework is to mixtures of probabilistic PCA models, in which each component can determine its own effective complexity.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {382–388},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009108,
+author = {Birattari, Mauro and Bontempi, Gianluca and Bersini, Hugues},
+title = {Lazy Learning Meets the Recursive Least Squares Algorithm},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Lazy learning is a memory-based technique that, once a query is received, extracts a prediction interpolating locally the neighboring examples of the query which are considered relevant according to a distance measure. In this paper we propose a data-driven method to select on a query-by-query basis the optimal number of neighbors to be considered for each prediction. As an efficient way to identify and validate local models, the recursive least squares algorithm is introduced in the context of local approximation and lazy learning. Furthermore, beside the winner-takes-all strategy for model selection, a local combination of the most promising models is explored. The method proposed is tested on six different datasets and compared with a state-of-the-art approach.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {375–381},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009107,
+author = {Bennett, Kristin P. and Demiriz, Ayhan},
+title = {Semi-Supervised Support Vector Machines},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {We introduce a semi-supervised support vector machine (S3VM) method. Given a training set of labeled data and a working set of unlabeled data, S3VM constructs a support vector machine using both the training and working sets. We use S3VM to solve the transduction problem using overall risk minimization (ORM) posed by Vapnik. The transduction problem is to estimate the value of a classification function at the given points in the working set. This contrasts with the standard inductive learning problem of estimating the classification function at all possible values and then using the fixed function to deduce the classes of the working set data. We propose a general S3VM model that minimizes both the misclassification error and the function capacity based on all the available data. We show how the S3VM model for 1-norm linear support vector machines can be converted to a mixed-integer program and then solved exactly using integer programming. Results of S3VM and the standard 1-norm support vector machine approach are compared on ten data sets. Our computational results support the statistical learning theory results showing that incorporating working data improves generalization when insufficient training information is available. In every case, S3VM either improved or showed no significant difference in generalization compared to the traditional approach.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {368–374},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009106,
+author = {Attias, H.},
+title = {Learning a Hierarchical Belief Network of Independent Factor Analyzers},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Many belief networks have been proposed that are composed of binary units. However, for tasks such as object and speech recognition which produce real-valued data, binary network models are usually inadequate. Independent component analysis (ICA) learns a model from real data, but the descriptive power of this model is severly limited. We begin by describing the independent factor analysis (IFA) technique, which overcomes some of the limitations of ICA. We then create a multilayer network by cascading singlelayer IFA models. At each level, the IFA network extracts realvalued latent variables that are non-linear functions of the input data with a highly adaptive functional form, resulting in a hierarchical distributed representation of these data. Whereas exact maximum-likelihood learning of the network is intractable, we derive an algorithm that maximizes a lower bound on the likelihood, based on a variational approach.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {361–367},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009105,
+author = {Tanaka, T.},
+title = {A Theory of Mean Field Approximation},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {I present a theory of mean field approximation based on information geometry. This theory includes in a consistent way the naive mean field approximation, as well as the TAP approach and the linear response theorem in statistical physics, giving clear information-theoretic interpretations to them.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {351–357},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009104,
+author = {Sollich, Peter},
+title = {Learning Curves for Gaussian Processes},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {I consider the problem of calculating learning curves (i.e., average generalization performance) of Gaussian processes used for regression. A simple expression for the generalization error in terms of the eigenvalue decomposition of the covariance function is derived, and used as the starting point for several approximation schemes. I identify where these become exact, and compare with existing bounds on learning curves; the new approximations, which can be used for any input space dimension, generally get substantially closer to the truth.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {344–350},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009103,
+author = {Skantzos, N. S. and Beckmann, C. F. and Coolen, A. C. C.},
+title = {Discontinuous Recall Transitions Induced by Competition between Short- and Long-Range Interactions in Recurrent Networks},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {We present exact analytical equilibrium solutions for a class of recurrent neural network models, with both sequential and parallel neuronal dynamics, in which there is a tunable competition between nearest-neighbour and long-range synaptic interactions. This competition is found to induce novel coexistence phenomena as well as discontinuous transitions between pattern recall states, 2-cycles and non-recall states.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {337–343},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009102,
+author = {Sch\"{o}lkopf, Bernhard and Bartlett, Peter and Smola, Alex and Williamson, Robert},
+title = {Shrinking the Tube: A New Support Vector Regression Algorithm},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {A new algorithm for Support Vector regression is described. For a priori chosen ν, it automatically adjusts a flexible tube of minimal radius to the data such that at most a fraction ν of the data points lie outside. Moreover, it is shown how to use parametric tube shapes with non-constant radius. The algorithm is analysed theoretically and experimentally.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {330–336},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009101,
+author = {Sakurai, Akito},
+title = {Tight Bounds for the VC-Dimension of Piecewise Polynomial Networks},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {O(ws(s log d+log(dqh/s))) and O(ws((h/s) log q) +log(dqh/s)) are upper bounds for the VC-dimension of a set of neural networks of units with piecewise polynomial activation functions, where s is the depth of the network, h is the number of hidden units, w is the number of adjustable parameters, q is the maximum of the number of polynomial segments of the activation function, and d is the maximum degree of the polynomials; also Ω (ws log(dqh/s)) is a lower bound for the VC-dimension of such a network set, which are tight for the cases s = Θ(h) and s is constant. For the special case q = 1, the VC-dimension is Θ(ws log d).},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {323–329},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009100,
+author = {Rae, H. C. and Sollich, P. and Coolen, A. C. C.},
+title = {On-Line Learning with Restricted Training Sets: Exact Solution as Benchmark for General Theories},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {We solve the dynamics of on-line Hebbian learning in perceptrons exactly, for the regime where the size of the training set scales linearly with the number of inputs. We consider both noiseless and noisy teachers. Our calculation cannot be extended to non-Hebbian rules, but the solution provides a nice benchmark to test more general and advanced theories for solving the dynamics of learning with restricted training sets.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {316–322},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009099,
+author = {Opper, Manfred and Winther, Ole},
+title = {Mean Field Methods for Classification with Gaussian Processes},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {We discuss the application of TAP mean field methods known from the Statistical Mechanics of disordered systems to Bayesian classification models with Gaussian processes. In contrast to previous approaches, no knowledge about the distribution of inputs is needed. Simulation results for the Sonar data set are given.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {309–315},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009098,
+author = {Opper, Manfred and Vivarelli, Francesco},
+title = {General Bounds on Bayes Errors for Regression with Gaussian Processes},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Based on a simple convexity lemma, we develop bounds for different types of Bayesian prediction errors for regression with Gaussian processes. The basic bounds are formulated for a fixed training set. Simpler expressions are obtained for sampling from an input distribution which equals the weight function of the covariance kernel, yielding asymptotically tight results. The results are compared with numerical experiments.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {302–308},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009097,
+author = {Meir, Ron and Maiorov, Vitaly},
+title = {On the Optimality of Incremental Neural Network Algorithms},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {We study the approximation of functions by two-layer feedforward neural networks, focusing on incremental algorithms which greedily add units, estimating single unit parameters at each stage. As opposed to standard algorithms for fixed architectures, the optimization at each stage is performed over a small number of parameters, mitigating many of the difficult numerical problems inherent in high-dimensional non-linear optimization. We establish upper bounds on the error incurred by the algorithm, when approximating functions from the Sobolev class, thereby extending previous results which only provided rates of convergence for functions in certain convex hulls of functional spaces. By comparing our results to recently derived lower bounds, we show that the greedy algorithms are nearly optimal. Combined with estimation error results for greedy algorithms, a strong case can be made for this type of approach.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {295–301},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009096,
+author = {Mason, Llew and Bartlett, Peter and Baxter, Jonathan},
+title = {Direct Optimization of Margins Improves Generalization in Combined Classifiers},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Cumulative training margin distributions for AdaBoost versus our "Direct Optimization Of Margins" (DOOM) algorithm. The dark curve is AdaBoost, the light curve is DOOM. DOOM sacrifices significant training error for improved test error (horizontal marks on margin = 0 line).},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {288–294},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009095,
+author = {Maass, Wolfgang and Sontag, Eduardo D.},
+title = {A Precise Characterization of the Class of Languages Recognized by Neural Nets under Gaussian and Other Common Noise Distributions},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {We consider recurrent analog neural nets where each gate is subject to Gaussian noise, or any other common noise distribution whose probability density function is nonzero on a large set. We show that many regular languages cannot be recognized by networks of this type, for example the language {w ε {O, I}*| w begins with O}, and we give a precise characterization of those languages which can be recognized. This result implies severe constraints on possibilities for constructing recurrent analog neural nets that are robust against realistic types of analog noise. On the other hand we present a method for constructing feed forward analog neural nets that are robust with regard to analog noise of this type.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {281–287},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009094,
+author = {Li, Zhaoping and Dayan, Peter},
+title = {Computational Differences between Asymmetrical and Symmetrical Networks},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Symmetrically connected recurrent networks have recently been used as models of a host of neural computations. However, because of the separation between excitation and inhibition, biological neural networks are asymmetrical. We study characteristic differences between asymmetrical networks and their symmetrical counterparts, showing that they have dramatically different dynamical behavior and also how the differences can be exploited for computational ends. We illustrate our results in the case of a network that is a selective amplifier.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {274–280},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009093,
+author = {Leisch, Friedrich and Trapletti, Adrian and Hornik, Kurt},
+title = {Stationarity and Stability of Autoregressive Neural Network Processes},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {We analyze the asymptotic behavior of autoregressive neural network (AR-NN) processes using techniques from Markov chains and non-linear time series analysis. It is shown that standard AR-NNs without shortcut connections are asymptotically stationary. If linear shortcut connections are allowed, only the shortcut weights determine whether the overall system is stationary, hence standard conditions for linear AR processes can be used.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {267–273},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009092,
+author = {Kearns, Michael and Saul, Lawrence},
+title = {Inference in Multilayer Networks via Large Deviation Bounds},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {We study probabilistic inference in large, layered Bayesian networks represented as directed acyclic graphs. We show that the intractability of exact inference in such networks does not preclude their effective use. We give algorithms for approximate probabilistic inference that exploit averaging phenomena occurring at nodes with large numbers of parents. We show that these algorithms compute rigorous lower and upper bounds on marginal probabilities of interest, prove that these bounds become exact in the limit of large networks, and provide rates of convergence.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {260–266},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009091,
+author = {Karakoulas, Grigoris and Shawe-Taylor, John},
+title = {Optimizing Classifiers for Imbalanced Training Sets},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Following recent results[9, 8] showing the importance of the fat-shattering dimension in explaining the beneficial effect of a large margin on generalization performance, the current paper investigates the implications of these results for the case of imbalanced datasets and develops two approaches to setting the threshold. The approaches are incorporated into ThetaBoost, a boosting algorithm for dealing with unequal loss functions. The performance of ThetaBoost and the two approaches are tested experimentally.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {253–259},
+numpages = {7},
+keywords = {pac estimates, generalization, imbalanced datasets, unequal loss, computational learning theory, large margin, fat-shattering},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009090,
+author = {Kabashima, Yoshiyuki and Saad, David},
+title = {The Belief in TAP},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {We show the similarity between belief propagation and TAP, for decoding corrupted messages encoded by Sourlas's method. The latter is a special case of the Gallager error-correcting code, where the code word comprises products of K bits selected randomly from the original message. We examine the efficacy of solutions obtained by the two methods for various values of K and show that solutions for K ≥ 3 may be sensitive to the choice of initial conditions in the case of unbiased patterns. Good approximations are obtained generally for K = 2 and for biased patterns in the case of K ≥ 3, especially when Nishimori's temperature is being used.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {246–252},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009089,
+author = {Ikeda, Shiro and Amari, Shun-Ichi and Nakahara, Hiroyuki},
+title = {Convergence of the Wake-Sleep Algorithm},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {The W-S (Wake-Sleep) algorithm is a simple learning rule for the models with hidden variables. It is shown that this algorithm can be applied to a factor analysis model which is a linear version of the Helmholtz machine. But even for a factor analysis model, the general convergence is not proved theoretically. In this article, we describe the geometrical understanding of the W-S algorithm in contrast with the EM (Expectation-Maximization) algorithm and the em algorithm. As the result, we prove the convergence of the W-S algorithm for the factor analysis model. We also show the condition for the convergence in general models.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {239–245},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009088,
+author = {Herschkowitz, Didier and Nadal, Jean-Pierre},
+title = {Unsupervised and Supervised Clustering: The Mutual Information between Parameters and Observations},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Recent works in parameter estimation and neural coding have demonstrated that optimal performance are related to the mutual information between parameters and data. We consider the mutual information in the case where the dependency in the parameter (a vector θ) of the conditional p.d.f. of each observation (a vector ξ, is through the scalar product θξ only. We derive bounds and asymptotic behaviour for the mutual information and compare with results obtained on the same model with the "replica technique".},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {232–238},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009087,
+author = {Gentile, Claudio and Warmuth, Manfred K.},
+title = {Linear Hinge Loss and Average Margin},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {We describe a unifying method for proving relative loss bounds for online linear threshold classification algorithms, such as the Perceptron and the Winnow algorithms. For classification problems the discrete loss is used, i.e., the total number of prediction mistakes. We introduce a continuous loss function, called the "linear hinge loss", that can be employed to derive the updates of the algorithms. We first prove bounds w.r.t. the linear hinge loss and then convert them to the discrete loss. We introduce a notion of "average margin" of a set of examples. We show how relative loss bounds based on the linear hinge loss can be converted to relative loss bounds i.t.o. the discrete loss using the average margin.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {225–231},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009086,
+author = {Trecate, Giancarlo Ferrari and Williams, Christopher K. I. and Opper, Manfred},
+title = {Finite-Dimensional Approximation of Gaussian Processes},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Gaussian process (GP) prediction suffers from O(n3) scaling with the data set size n. By using a finite-dimensional basis to approximate the GP predictor, the computational complexity can be reduced. We derive optimal finite-dimensional predictors under a number of assumptions, and show the superiority of these predictors over the Projected Bayes Regression method (which is asymptotically optimal). We also show how to calculate the minimal model size for a given n. The calculations are backed up by numerical experiments.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {218–224},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009085,
+author = {D\"{u}ring, A. and Coolen, A. C. C. and Sherrington, D.},
+title = {Phase Diagram and Storage Capacity of Sequence Storing Neural Networks},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {We solve the dynamics of Hopfield-type neural networks which store sequences of patterns, close to saturation. The asymmetry of the interaction matrix in such models leads to violation of detailed balance, ruling out an equilibrium statistical mechanical analysis. Using generating functional methods we derive exact closed equations for dynamical order parameters, viz. the sequence overlap and correlation and response functions. in the limit of an infinite system size. We calculate the time translation invariant solutions of these equations. describing stationary limit-cycles. which leads to a phase diagram. The effective retarded self-interaction usually appearing in symmetric models is here found to vanish, which causes a significantly enlarged storage capacity of αc ≈ 0.269. compared to αc ≈ 0.139 for Hopfield networks storing static patterns. Our results are tested against extensive computer simulations and excellent agreement is found.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {211–217},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009084,
+author = {Cristianini, Nello and Campbell, Colin and Shawe-Taylor, John},
+title = {Dynamically Adapting Kernels in Support Vector Machines},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {The kernel-parameter is one of the few tunable parameters in Support Vector machines, controlling the complexity of the resulting hypothesis. Its choice amounts to model selection and its value is usually found by means of a validation set. We present an algorithm which can automatically perform model selection with little additional computational cost and with no need of a validation set. In this procedure model selection and learning are not separate, but kernels are dynamically adjusted during the learning process to find the kernel parameter which provides the best possible upper bound on the generalisation error. Theoretical results motivating the approach and experimental results confirming its validity are presented.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {204–210},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009083,
+author = {Coolen, A. C. C. and Saad, D.},
+title = {Dynamics of Supervised Learning with Restricted Training Sets},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {We study the dynamics of supervised learning in layered neural networks, in the regime where the size p of the training set is proportional to the number N of inputs. Here the local fields are no longer described by Gaussian distributions. We use dynamical replica theory to predict the evolution of macroscopic observables, including the relevant error measures, incorporating the old formalism in the limit piN → ∞.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {197–203},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009082,
+author = {Bartlett, Peter L. and Maiorov, Vitaly and Meir, Ron},
+title = {Almost Linear VC Dimension Bounds for Piecewise Polynomial Networks},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {We compute upper and lower bounds on the VC dimension of feedforward networks of units with piecewise polynomial activation functions. We show that if the number of layers is fixed, then the VC dimension grows as W log W, where W is the number of parameters in the network. This result stands in opposition to the case where the number of layers is unbounded, in which case the VC dimension grows as W2},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {190–196},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009081,
+author = {Barber, David and Wiegerinck, Wim},
+title = {Tractable Variational Structures for Approximating Graphical Models},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Graphical models provide a broad probabilistic framework with applications in speech recognition (Hidden Markov Models), medical diagnosis (Belief networks) and artificial intelligence (Boltzmann Machines). However, the computing time is typically exponential in the number of nodes in the graph. Within the variational framework for approximating these models, we present two classes of distributions, decimatable Boltzmann Machines and Tractable Belief Networks that go beyond the standard factorized approach. We give generalised mean-field equations for both these directed and undirected approximations. Simulation results on a small benchmark problem suggest using these richer approximations compares favorably against others previously reported in the literature.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {183–189},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009080,
+author = {Zemel, Richard S. and Dayan, Peter},
+title = {Distributional Population Codes and Multiple Motion Models},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Most theoretical and empirical studies of population codes make the assumption that underlying neuronal activities is a unique and unambiguous value of an encoded quantity. However, population activities can contain additional information about such things as multiple values of or uncertainty about the quantity. We have previously suggested a method to recover extra information by treating the activities of the population of cells as coding for a complete distribution over the coded quantity rather than just a single value. We now show how this approach bears on psychophysical and neurophysiological studies of population codes for motion direction in tasks involving transparent motion stimuli. We show that, unlike standard approaches, it is able to recover multiple motions from population responses, and also that its output is consistent with both correct and erroneous human performance on psychophysical tasks.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {174–180},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009079,
+author = {Yoon, Hyoungsoo and Sompolinsky, Haim},
+title = {The Effect of Correlations on the Fisher Information of Population Codes},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {We study the effect of correlated noise on the accuracy of population coding using a model of a population of neurons that are broadly tuned to an angle in two-dimension. The fluctuations in the neuronal activity is modeled as a Gaussian noise with pairwise correlations which decays exponentially with the difference between the preferred orientations of the pair. By calculating the Fisher information of the system, we show that in the biologically relevant regime of parameters positive correlations decrease the estimation capability of the network relative to the uncorrelated population. Moreover strong positive correlations result in information capacity which saturates to a finite value as the number of cells in the population grows. In contrast, negative correlations substantially increase the information capacity of the neuronal population.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {167–173},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009078,
+author = {Stemmler, Martin and Koch, Christof},
+title = {Information Maximization in Single Neurons},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Information from the senses must be compressed into the limited range of firing rates generated by spiking nerve cells. Optimal compression uses all firing rates equally often, implying that the nerve cell's response matches the statistics of naturally occurring stimuli. Since changing the voltage-dependent ionic conductances in the cell membrane alters the flow of information, an unsupervised, non-Hebbian, developmental learning rule is derived to adapt the conductances in Hodgkin-Huxley model neurons. By maximizing the rate of information transmission, each firing rate within the model neuron's limited dynamic range is used equally often.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {160–166},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009077,
+author = {Simoncelli, Eero P. and Schwartz, Odelia},
+title = {Modeling Surround Suppression in V1 Neurons with a Statistically-Derived Normalization Model},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {We examine the statistics of natural monochromatic images decomposed using a multi-scale wavelet basis. Although the coefficients of this representation are nearly decorrelated, they exhibit important higher-order statistical dependencies that cannot be eliminated with purely linear procssing. In particular, rectified coefficients corresponding to basis functions at neighboring spatial positions, orientations and scales are highly correlated. A method of removing these dependencies is to divide each coefficient by a weighted combination of its rectified neighbors. Several successful models of the steady -state behavior of neurons in primary visual cortex are based on such "divisive normalization" computations, and thus our analysis provides a theoretical justification for these models. Perhaps more importantly, the statistical measurements explicitly specify the weights that should be used in computing the normalization signal. We demonstrate that this weighting is qualitatively consistent with recent physiological experiments that characterize the suppressive effect of stimuli presented outside of the classical receptive field. Our observations thus provide evidence for the hypothesis that early visual neural processing is well matched to these statistical properties of images.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {153–154},
+numpages = {2},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009076,
+author = {Rinberg, Dmitry and Davidowitz, Hanan and Tishby, Naftali},
+title = {Multi-Electrode Spike Sorting by Clustering Transfer Functions},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {A new paradigm is proposed for sorting spikes in multielectrode data using ratios of transfer functions between cells and electrodes. It is assumed that for every cell and electrode there is a stable linear relation. These are dictated by the properties of the tissue, the electrodes and their relative geometries. The main advantage of the method is that it is insensitive to variations in the shape and amplitude of a spike. Spike sorting is carried out in two separate steps. First, templates describing the statistics of each spike type are generated by clustering transfer function ratios then spikes are detected in the data using the spike statistics. These techniques were applied to data generated in the escape response system of the cockroach.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {146–152},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009075,
+author = {Piepenbrock, Christian and Obermayer, Klaus},
+title = {The Role of Lateral Cortical Competition in Ocular Dominance Development},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Lateral competition within a layer of neurons sharpens and localizes the response to an input stimulus. Here, we investigate a model for the activity dependent development of ocular dominance maps which allows to vary the degree of lateral competition. For weak competition, it resembles a correlation-based learning model and for strong competition, it becomes a self-organizing map. Thus, in the regime of weak competition the receptive fields are shaped by the second order statistics of the input patterns, whereas in the regime of strong competition, the higher moments and "features" of the individual patterns become important. When correlated localized stimuli from two eyes drive the cortical development we find (i) that a topographic map and binocular, localized receptive fields emerge when the degree of competition exceeds a critical value and (ii) that receptive fields exhibit eye dominance beyond a second critical value. For anti-correlated activity between the eyes, the second order statistics drive the system to develop ocular dominance even for weak competition, but no topography emerges. Topography is established only beyond a critical degree of competition.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {139–145},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009074,
+author = {Manwani, Amit and Koch, Christof},
+title = {Signal Detection in Noisy Weakly-Active Dendrites},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Here we derive measures quantifying the information loss of a synaptic signal due to the presence of neuronal noise sources, as it electrotonically propagates along a weakly-active dendrite. We model the dendrite as an infinite linear cable, with noise sources distributed along its length. The noise sources we consider are thermal noise, channel noise arising from the stochastic nature of voltage-dependent ionic channels (K+ and Na+) and synaptic noise due to spontaneous background activity. We assess the efficacy of information transfer using a signal detection paradigm where the objective is to detect the presence/absence of a presynaptic spike from the post-synaptic membrane voltage. This allows us to analytically assess the role of each of these noise sources in information transfer. For our choice of parameters, we find that the synaptic noise is the dominant noise source which limits the maximum length over which information be reliably transmitted.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {132–138},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009073,
+author = {Kempter, Richard and Gerstner, Wulfram and Van Hemmen, J. Leo},
+title = {Spike-Based Compared to Rate-Based Hebbian Learning},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {A correlation-based learning rule at the spike level is formulated, mathematically analyzed, and compared to learning in a firing-rate description. A differential equation for the learning dynamics is derived under the assumption that the time scales of learning and spiking can be separated. For a linear Poissonian neuron model which receives time-dependent stochastic input we show that spike correlations on a millisecond time scale play indeed a role. Correlations between input and output spikes tend to stabilize structure formation, provided that the form of the learning window is in accordance with Hebb's principle. Conditions for an intrinsic normalization of the average synaptic weight are discussed.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {125–131},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009072,
+author = {Jung, Tzyy-Ping and Makeig, Scott and Westerfield, Marissa and Townsend, Jeanne and Courchesne, Eric and Sejnowskp, Terrence J.},
+title = {Analyzing and Visualizing Single-Trial Event-Related Potentials},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Event-related potentials (ERPs), are portions of electroencephalographic (EEG) recordings that are both time- and phase-locked to experimental events. ERPs are usually averaged to increase their signal/noise ratio relative to non-phase locked EEG activity, regardless of the fact that response activity in single epochs may vary widely in time course and scalp distribution. This study applies a linear decomposition tool, Independent Component Analysis (ICA) [1], to multichannel single-trial EEG records to derive spatial filters that decompose single-trial EEG epochs into a sum of temporally independent and spatially fixed components arising from distinct or overlapping brain or extra-brain networks. Our results on normal and autistic subjects show that ICA can separate artifactual, stimulus-locked, response-locked, and. nonevent related background EEG activities into separate components, allowing (1) removal of pervasive artifacts of all types from single-trial EEG records, and (2) identification of both stimulus- and response-locked EEG components. Second, this study proposes a new visualization tool, the 'ERP image', for investigating variability in latencies and amplitudes of event-evoked responses in spontaneous EEG or MEG records. We show that sorting single-trial ERP epochs in order of reaction time and plotting the potentials in 2-D clearly reveals underlying patterns of response variability linked to performance. These analysis and visualization tools appear broadly applicable to electrophyiological research on both normal and clinical populations.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {118–124},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009071,
+author = {Gat, Itay and Tishby, Naftali},
+title = {Synergy and Redundancy among Brain Cells of Behaving Monkeys},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Determining the relationship between the activity of a single nerve cell to that of an entire population is a fundamental question that bears on the basic neural computation paradigms. In this paper we apply an information theoretic approach to quantify the level of cooperative activity among cells in a behavioral context. It is possible to discriminate between synergetic activity of the cells vs. redundant activity, depending on the difference between the information they provide when measured jointly and the information they provide independently. We define a synergy value that is positive in the first case and negative in the second and show that the synergy value can be measured by detecting the behavioral mode of the animal from simultaneously recorded activity of the cells. We observe that among cortical cells positive synergy can be found, while cells from the basal ganglia, active during the same task, do not exhibit similar synergetic activity.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {111–117},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009070,
+author = {Deneve, Sophie and Pouget, Alexandre and Latham, P. E.},
+title = {Divisive Normalization, Line Attractor Networks and Ideal Observers},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Gain control by divisive inhibition, a.k.a. divisive normalization, has been proposed to be a general mechanism throughout the visual cortex. We explore in this study the statistical properties of this normalization in the presence of noise. Using simulations, we show that divisive normalization is a close approximation to a maximum likelihood estimator, which, in the context of population coding, is the same as an ideal observer. We also demonstrate analytically that this is a general property of a large class of nonlinear recurrent networks with line attractors. Our work suggests that divisive normalization plays a critical role in noise filtering, and that every cortical layer may be an ideal observer of the activity in the preceding layer.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {104–110},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009069,
+author = {Chechik, Gal and Meilijson, Isaac and Ruppin, Eytan},
+title = {Neuronal Regulation Implements Efficient Synaptic Pruning},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Human and animal studies show that mammalian brain undergoes massive synaptic pruning during childhood, removing about half of the synapses until puberty. We have previously shown that maintaining network memory performance while synapses are deleted, requires that synapses are properly modified and pruned, removing the weaker synapses. We now show that neuronal regulation, a mechanism recently observed to maintain the average neuronal input field, results in weight-dependent synaptic modification. Under the correct range of the degradation dimension and synaptic upper bound, neuronal regulation removes the weaker synapses and judiciously modifies the remaining synapses. It implements near optimal synaptic modification, and maintains the memory performance of a network undergoing massive synaptic pruning. Thus, this paper shows that in addition to the known effects of Hebbian changes, neuronal regulation may play an important role in the self-organization of brain networks during development.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {97–103},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009068,
+author = {Chance, Frances S. and Nelson, Sacha B. and Abbott, L. F.},
+title = {Recurrent Cortical Amplification Produces Complex Cell Responses},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Cortical amplification has been proposed as a mechanism for enhancing the selectivity of neurons in the primary visual cortex. Less appreciated is the fact that the same form of amplification can also be used to detune or broaden selectivity. Using a network model with recurrent cortical circuitry, we propose that the spatial phase invariance of complex cell responses arises through recurrent amplification of feedforward input. Neurons in the network respond like simple cells at low gain and complex ceUs at high gain. Similar recurrent mechanisms may play a role in generating invariant representations of feedforward input elsewhere in the visual processing pathway.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {90–96},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009067,
+author = {Baraduc, Pierre and Guigon, Emmanuel and Burnod, Yves},
+title = {Where Does the Population Vector of Motor Cortical Cells Point during Reaching Movements?},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Visually-guided arm reaching movements are produced by distributed neural networks within parietal and frontal regions of the cerebral cortex. Experimental data indicate that (1) single neurons in these regions are broadly tuned to parameters of movement; (2) appropriate commands are elaborated by populations of neurons; (3) the coordinated action of neurons can be visualized using a neuronal population vector (NPV). However, the NPV provides only a rough estimate of movement parameters (direction, velocity) and may even fail to reflect the parameters of movement when arm posture is changed. We designed a model of the cortical motor command to investigate the relation between the desired direction of the movement, the actual direction of movement and the direction of the NPV in motor cortex. The model is a two-layer self-organizing neural network which combines broadly-tuned (muscular) proprioceptive and (cartesian) visual information to calculate (angular) motor commands for the initial part of the movement of a two-link arm. The network was trained by motor babbling in 5 positions. Simulations showed that (1) the network produced appropriate movement direction over a large part of the workspace; (2) small deviations of the actual trajectory from the desired trajectory existed at the extremities of the workspace; (3) these deviations were accompanied by large deviations of the NPV from both trajectories. These results suggest the NPV does not give a faithful image of cortical processing during arm reaching movements.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {83–89},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009066,
+author = {Adorj\'{a}n, P\'{e}ter and Obennayer, Klaus},
+title = {Contrast Adaptation in Simple Cells by Changing the Transmitter Release Probability},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {The contrast response function (CRF) of many neurons in the primary visual cortex saturates and shifts towards higher contrast values following prolonged presentation of high contrast visual stimuli. Using a recurrent neural network of excitatory spiking neurons with adapting synapses we show that both effects could be explained by a fast and a slow component in the synaptic adaptation. (i) Fast synaptic depression leads to saturation of the CRF and phase advance in the cortical response to high contrast stimuli. (ii) Slow adaptation of the synaptic transmitter release probability is derived such that the mutual information between the input and the output of a cortical neuron is maximal. This component--given by infomax learning rule--explains contrast adaptation of the averaged membrane potential (DC component) as well as the surprising experimental result, that the stimulus modulated component (F1 component) of a cortical cell's membrane potential adapts only weakly. Based on our results, we propose a new experiment to estimate the strength of the effective excitatory feedback to a cortical neuron, and we also suggest a relatively simple experimental test to justify our hypothesized synaptic mechanism for contrast adaptation.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {76–82},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009065,
+author = {Abbott, L. F. and Song, Sen},
+title = {Temporally Asymmetric Hebbian Learning, Spike Timing and Neuronal Response Variability},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Recent experimental data indicate that the strengthening or weakening of synaptic connections between neurons depends on the relative timing of pre- and postsynaptic action potentials. A Hebbian synaptic modification rule based on these data leads to a stable state in which the excitatory and inhibitory inputs to a neuron are balanced, producing an irregular pattern of firing. It has been proposed that neurons in vivo operate in such a mode.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {69–75},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009064,
+author = {Tenenbaum, Joshua B.},
+title = {Bayesian Modeling of Human Concept Learning},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {I consider the problem of learning concepts from small numbers of positive examples, a feat which humans perform routinely but which computers are rarely capable of. Bridging machine learning and cognitive science perspectives, I present both theoretical analysis and an empirical study with human subjects for the simple task oflearning concepts corresponding to axis-aligned rectangles in a multidimensional feature space. Existing learning models, when applied to this task, cannot explain how subjects generalize from only a few examples of the concept. I propose a principled Bayesian model based on the assumption that the examples are a random sample from the concept to be learned. The model gives precise fits to human behavior on this simple task and provides qualitative insights into more complex, realistic cases of concept learning.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {59–65},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009063,
+author = {Mozer, Michael C.},
+title = {A Principle for Unsupervised Hierarchical Decomposition of Visual Scenes},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Structure in a visual scene can be described at many levels of granularity. At a coarse level, the scene is composed of objects; at a finer level, each object is made up of parts, and the parts of subparts. In this work, I propose a simple principle by which such hierarchical structure can be extracted from visual scenes: Regularity in the relations among different parts of an object is weaker than in the internal structure of a part. This principle can be applied recursively to define part-whole relationships among elements in a scene. The principle does not make use of object models, categories, or other sorts of higher-level knowledge; rather, part-whole relationships can be established based on the statistics of a set of sample visual scenes. I illustrate with a model that performs unsupervised decomposition of simple scenes. The model can account for the results from a human learning experiment on the ontogeny of part-whole relationships.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {52–58},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009062,
+author = {Liu, Zili and Weinshall, Daphna},
+title = {Mechanisms of Generalization in Perceptual Learning},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {The learning of many visual perceptual tasks has been shown to be specific to practiced stimuli, while new stimuli require re-Iearning from scratch. Here we demonstrate generalization using a novel paradigm in motion discrimination where learning has been previously shown to be specific. We trained subjects to discriminate the directions of moving dots, and verified the previous results that learning does not transfer from the trained direction to a new one. However, by tracking the subjects' performance across time in the new direction, we found that their rate of learning doubled. Therefore, learning generalized in a task previously considered too difficult for generalization. We also replicated, in the second experiment, transfer following training with "easy" stimuli.The specificity of perceptual learning and the dichotomy between learning of "easy" vs. "difficult" tasks were hypothesized to involve different learning processes, operating at different visual cortical areas. Here we show how to interpret these results in terms of signal detection theory. With the assumption of limited computational resources, we obtain the observed phenomena - direct transfer and change of learning rate - for increasing levels of task 'difficulty. It appears that human generalization concurs with the expected behavior of a generic discrimination system.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {45–51},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009061,
+author = {Love, Bradley C.},
+title = {Utilizing Time: Asynchronous Binding},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Historically, connectionist systems have not excelled at representing and manipulating complex structures. How can a system composed of simple neuron-like computing elements encode complex relations? Recently, researchers have begun to appreciate that representations can extend in both time and space. Many researchers have proposed that the synchronous firing of units can encode complex representations. I identify the limitations of this approach and present an asynchronous model of binding that effectively represents complex structures. The asynchronous model extends the synchronous approach. I argue that our cognitive architecture utilizes a similar mechanism.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {38–44},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009060,
+author = {Haruno, Masahiko and Wolpert, Daniel M. and Kawato, Mitsuo},
+title = {Multiple Paired Forward-Inverse Models for Human Motor Learning and Control},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Humans demonstrate a remarkable ability to generate accurate and appropriate motor behavior under many different and oftpn uncprtain environmental conditions. This paper describes a new modular approach to human motor learning and control, based on multiple pairs of inverse (controller) and forward (prpdictor) models. This architecture simultaneously learns the multiple inverse models necessary for control as well as how to select the inverse models appropriate for a given environment. Simulations of object manipulation demonstrates the ability to learn mUltiple objects, appropriate generalization to novel objects and the inappropriate activation of motor programs based on visual cues, followed by on-line correction, seen in the "size-weight illusion".},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {31–37},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009059,
+author = {Dailey, Matthew N. and Cottrell, Garrison W. and Busey, Thomas A.},
+title = {Facial Memory is Kernel Density Estimation (Almost)},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {We compare the ability of three exemplar-based memory models, each using three different face stimulus representations, to account for the probability a human subject responded "old" in an old/new facial memory experiment. The models are 1) the Generalized Context Model, 2) SimSample, a probabilistic sampling model, and 3) MMOM, a novel model related to kernel density estimation that explicitly encodes stimulus distinctiveness. The representations are 1) positions of stimuli in MDS "face space," 2) projections of test faces onto the "eigenfaces" of the study set, and 3) a representation based on response to a grid of Gabor filter jets. Of the 9 model/representation combinations, only the distinctiveness model in MDS space predicts the observed "morph familiarity inversion" effect, in which the subjects' false alarm rate for morphs between similar faces is higher than their hit rate for many of the studied faces. This evidence is consistent with the hypothesis that human memory for faces is a kernel density estimation task, with the caveat that distinctive faces require larger kernels than do typical faces.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {24–30},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009058,
+author = {Christianson, G. Bj\"{o}rn and Becker, Suzanna},
+title = {A Model for Associative Multiplication},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Despite the fact that mental arithmetic is based on only a few hundred basic facts and some simple algorithms, humans have a difficult time mastering the subject, and even experienced individuals make mistakes. Associative multiplication, the process of doing multiplication by memory without the use of rules or algorithms, is especially problematic. Humans exhibit certain characteristic phenomena in performing associative multiplications, both in the type of error and in the error frequency. We propose a model for the process of associative multiplication, and compare its performance in both these phenomena with data from normal humans and from the model proposed by Anderson et al (1994).},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {17–23},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009057,
+author = {Chen, Ke and Wang, DeLiang L.},
+title = {Perceiving without Learning: From Spirals to inside/Outside Relations},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {As a benchmark task, the spiral problem is well known in neural networks. Unlike previous work that emphasizes learning, we approach the problem from a generic perspective that does not involve learning. We point out that the spiral problem is intrinsically connected to the inside/ outside problem. A generic solution to both problems is proposed based on oscillatory correlation using a time delay network. Our simulation results are qualitatively consistent with human performance, and we interpret human limitations in terms of synchrony and time delays, both biologically plausible. As a special case, our network without time delays can always distinguish these figures regardless of shape, position, size, and orientation.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {10–16},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@inproceedings{10.5555/3009055.3009056,
+author = {Bhushan, Nikhil and Shadmehr, Reza},
+title = {Evidence for a Forward Dynamics Model in Human Adaptive Motor Control},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Based on computational principles, the concept of an internal model for adaptive control has been divided into a forward and an inverse model. However, there is as yet little evidence that learning control by the CNS is through adaptation of one or the other. Here we examine two adaptive control architectures, one based only on the inverse model and other based on a combination of forward and inverse models. We then show that for reaching movements of the hand in novel force fields, only the learning of the forward model results in key characteristics of performance that match the kinematics of human subjects. In contrast, the adaptive control system that relies only on the inverse model fails to produce the kinematic patterns observed in the subjects, despite the fact that it is more stable. Our results provide evidence that learning control of novel dynamics is via formation of a forward model.},
+booktitle = {Proceedings of the 11th International Conference on Neural Information Processing Systems},
+pages = {3–9},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'98}
+}
+
+@proceedings{10.5555/3009055,
+title = {NIPS'98: Proceedings of the 11th International Conference on Neural Information Processing Systems},
+year = {1998},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+location = {Denver, CO}
+}
+

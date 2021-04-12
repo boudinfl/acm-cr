@@ -11,7 +11,7 @@
 		<context id="02" section="introduction">
 			<s>At the same time, automated recommender systems have recently proliferated.</s>
 			<s cites="1,18">This has increased attention on explainable and transparent AI, both from technical and ethical perspectives [1, 18].</s>
-			<s cites="5,19">While explainable system design is not new (dating back to rule-based expert systems of the 1980s [5]), the role of explanations has gained more attention in the past decade [29].</s>
+			<s cites="5,29">While explainable system design is not new (dating back to rule-based expert systems of the 1980s [5]), the role of explanations has gained more attention in the past decade [29].</s>
 		</context>
 		<context id="03" section="">
 			<s cites="26" anonymised="true">Our work starts with seven main goals of explanations, proposed by [26]: transparency, intended to explain how the system works; scrutability, allowing users to tell the system if it is wrong; trust, increasing users’ confidence in the system; effectiveness, helping users to make good decisions; efficiency, helping users to make decisions faster; persuasiveness, trying to convince users to select the given item; and satisfaction, increasing the ease of use of a system.</s>

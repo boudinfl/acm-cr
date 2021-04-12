@@ -15,7 +15,7 @@ pip install -r requirements.txt
 
 ### Documents 
 
-Documents are BibTeX reference files of papers about IR-related topics collected from the [ACM Digital Library](https://dl.acm.org/). We use the SIGs IR, KDD, CHI, WEB and MOD sponsored conferences and journals as filter. BibTeX files are grouped by year (e.g. 'sigir/sigir-1999' contains all citations from SIGIR-1999). Details about the venues are presented in ['data/acm-dl/venues.md'](venues). An example of document is given below:
+Documents are BibTeX reference files of papers about IR-related topics collected from the [ACM Digital Library](https://dl.acm.org/). We use the SIGs IR, KDD, CHI, WEB and MOD sponsored conferences and journals as filter. BibTeX files are grouped by year (e.g. 'sigir/sigir-1999' contains all citations from SIGIR-1999). Details about the venues are presented in [`data/acm-dl/venues.md`](data/acm-dl/venues.md). An example of document is given below:
 
 ```bibtex
 @inproceedings{10.1145/3383583.3398517,
@@ -103,23 +103,23 @@ python3 src/cc_stats.py --input data/topics+qrels/papers/ \
                         --collection data/topics+qrels/collection.txt
 
 avg number of cited documents: 31.82 [8 - 71]
-avg number of cited documents in collection: 15.62 [1 - 37]
-avg coverage of collection: 0.5011 [0.0909 - 0.8333]
+avg number of cited documents in collection: 16.64 [2 - 37]
+avg coverage of collection: 0.5330 [0.0968 - 0.8333]
 ```
 
 - number of citation contexts (s): 835
-- number of 1+/all citation contexts (s): 550
+- number of 1+/all citation contexts (s): 570
 
 |     0 |    1+ |   All |
 | -----:| -----:| -----:|
-| 34.13 | 21.20 | 44.67 |
+| 31.74 | 20.84 | 47.43 |
 
 - number of citation contexts (p): 341
-- number of 1+/all citation contexts (p): 268
+- number of 1+/all citation contexts (p): 279
 
 |     0 |    1+ |   All |
 | -----:| -----:| -----:|
-| 21.41 | 53.67 | 24.93 |
+| 18.18 | 55.43 | 26.39 |
 
 ## Document retrieval
 

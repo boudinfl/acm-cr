@@ -76,6 +76,17 @@ Summarily, we see that use of aggregated eye-tracking features and traditional c
 </top>
 
 <top>
+<num> Number: 337796012
+<title> Relevance Prediction from Eye-movements Using Semi-interpretable Convolutional Neural Networks
+
+<desc> Description:
+An interesting feature of CNN based image-classifiers is that the ‘knowledge’ learnt by the network for solving one problem can be reused to solve another related problem. This is called transfer learning. The initial layers of a CNN based image classifier learns low-level image-features (edges, shapes, and corners), while the final layers learn increasingly abstract and task specific features [37, 65, 66]. Since low-level image-feature detection is required in all forms of automated image-understanding, transfer learning works well for research problems having relatively low-sized datasets. For this reason, popular deep-learning frameworks (e.g., Keras, PyTorch etc.) include many benchmark CNN architectures, with their weights pre-trained on the ImageNet challenge. In this work, we utilize several such benchmark CNN image classifiers to predict the perceived-relevance of documents from scanpath images.
+
+<narr> Narrative:
+
+</top>
+
+<top>
 <num> Number: 337797701
 <title> Effects of Past Interactions on User Experience with Recommended Documents
 
@@ -483,17 +494,6 @@ Although much work has been devoted towards studying single-turn conversations, 
 </top>
 
 <top>
-<num> Number: 337796803
-<title> Harnessing Evolution of Multi-Turn Conversations for Effective Answer Retrieval
-
-<desc> Description:
-Conversational search has been a long standing research problem in the IR community. However, with the recent advances in automatic voice recognition and the proliferation of Intelligent Personal Assistants such as Siri, Alexa, Google Assitant, and Cortana on personal devices, the area of Conversational search has received renewed attention in the past few years. One of the earliest attempts towards conversational mode in IR can be traced back to the work of [27] who proposed the introduction of dialogue for searching documents. [23] later proposed a system for retrieving airline information and ticket reservation using speech. Another IR system directed towards medical health professionals within a conversational setting was put forward by [9] in 1985 for searching documents related to Gastroenterology. However, it was the work by [12] on I3R, an expert interface communicating with the user in a search session, which laid the foundation for conversational IR. A few years later [7] characterized information-seeking strategies for conversational IR, offering users choices in a search session based on case-based reasoning. Since then, the problem of conversational systems has been studied by researchers from both the fields of IR and Natural Language Processing (NLP) with varied interests. Conversational Agents have forayed their applications in various domains ranging from conversational recommender systems [11, 34], human memory augmentation [6], e-Health systems [25], personality recognition [31] to museum tour guidance [22]. [17] provides a systematic review on neural approaches to conversational AI developed in the last few years. Recently, rule-based conversational IR system [24, 38, 39] have given way to learning based approaches [20] and even more recent methods based on deep learning [41]. Among the several facets of conversational IR systems, one research direction is focused on analyzing user-behavior and interaction with voice-only systems [33]. Along the same line, [30] proposed a theoretical framework for conversational search highlighting the need for multi-turn interactions with users for narrowing down their specific information needs. [35] studied conversations of real users to determine the frequently-used interactions and inform a conversational search system design. A close line of research deals with identifying user-intent while searching for information. Much work has been done in this direction, some of which include query suggestion to clarify users’ intent in a traditional IR setting [30], asking clarifying questions from users to understand users’ intent and redirect the search [3], clarifying user-intent by eliminating non-relevant items through negative user feedback in a conversational search [8]. On the other end of the spectrum, [5] posited that while understanding user intent and actions is important, little work has been addressed towards understanding the action taken by a conversational agent in the same context. They thus provided a framework for understanding the human-computer interaction from an agent’s point of view. [37] listed the important factors to consider while designing a conversational assistant. One of their key findings was that it is essential to maintain the conversational context which is one of the focal points of our paper.
-
-<narr> Narrative:
-
-</top>
-
-<top>
 <num> Number: 337795701
 <title> Enabling Predictive Number Entry and Editing on Touchscreen-Based Mobile Devices
 
@@ -576,17 +576,6 @@ Classically, assessing relevance of documents based on relevant parts has been s
 
 <desc> Description:
 Recommendations are part of everyday life. Be they made by a person, or by an automated system, the recommendations are often accompanied with an explanation, or reason, underlying the suggestions provided. Explanations are known to strongly impact how the recipient of a recommendation responds [13, 14, 23, 28], yet the effect is still not well understood.
-
-<narr> Narrative:
-
-</top>
-
-<top>
-<num> Number: 340103202
-<title> Measuring Recommendation Explanation Quality: The Conflicting Goals of Explanations
-
-<desc> Description:
-At the same time, automated recommender systems have recently proliferated. This has increased attention on explainable and transparent AI, both from technical and ethical perspectives [1, 18]. While explainable system design is not new (dating back to rule-based expert systems of the 1980s [5]), the role of explanations has gained more attention in the past decade [29].
 
 <narr> Narrative:
 
@@ -1110,17 +1099,6 @@ To understand and capture student interests on MOOCs platforms, multiple efforts
 </top>
 
 <top>
-<num> Number: 340105703
-<title> Attentional Graph Convolutional Networks for Knowledge Concept Recommendation in MOOCs in a Heterogeneous View
-
-<desc> Description:
-Traditional recommendation strategy, such as collaborative filtering (CF), which considers user (students) historical interactions and makes recommendations based on potential common preferences from users with similar interests, has achieved great success. However, CF based methods suffer from the sparsity of user-item (student-knowledge concept) relationships, which limits the recommendation performance. To overcome this problem, a number of efforts have been done by leveraging side information, such as social networks [11], user/item attributes [27], images [33], contexts [25], etc. In a MOOCs platform, we observe that in addition to the user and knowledge concept, there exist multiple types of entities (video, course, teacher) and multiple types of relationships between pair of different entities. Table 1 shows the statistics of the real-world XuetangX data collected between January 1st, 2018 and March 31st, 2018. This data consists of 9,986 users, 43,405 videos, 7,020 courses, 5,038 teachers, 1,029 knowledge concepts, and corresponding multiple types of relationships. As shown in Figure 1, the “course: V_9e77179” includes the “knowledge concept: c++”, the “student: 207256” is taking the “course: CaltechX”, the “video: V_1a9aa686” is related to the “knowledge concept: binary tree”, and the “course: CaltechX” is taught by the “teacher: Smith”. Further more, taking users’ behavior history into consideration, we can discover additional relationships. For example, the “user: 207256” clicked the “knowledge concept: c++”, “knowledge concept: binary tree”, and “knowledge concept: depth-first search”. Accounting for above multiple types of relationships, we can get much more fruitful facts and interactions between the user and knowledge concepts. If we merely depend on the basic structures, it is difficult to find the significant interaction between “knowledge concept: depth-first search” and “knowledge concept: time complexity”, which belong to different courses but are clicked by one user. As shown in Figure 1, different knowledge concepts contain different context. Only utilizing single type of interaction may overlook the significant relations between user and knowledge concept. For example, “knowledge concept: c++” and “knowledge concept: binary tree” have dissimilar semantics even though they are included in the same video. These heterogeneous relationships provide rich side information and can benefit the recommendation system in three folds: (1) semantic relatedness among knowledge concepts can be introduced and help to identify the latent interaction; (2) a user’s interests can be reasonably extended and the diversity of recommended knowledge concepts can be increased; and (3) a user’s interest can be interpreted by tracking a user’s historical records along these relationships. Thus, it requires to incorporate these heterogeneous relationships into the representation learning of the entities.
-
-<narr> Narrative:
-
-</top>
-
-<top>
 <num> Number: 340105704
 <title> Attentional Graph Convolutional Networks for Knowledge Concept Recommendation in MOOCs in a Heterogeneous View
 
@@ -1583,6 +1561,17 @@ In the recommendation literature, transfer learning has been implemented by exte
 </top>
 
 <top>
+<num> Number: 340116406
+<title> Web-to-Voice Transfer for Product Recommendation on Voice
+
+<desc> Description:
+This paper introduces TransV, a novel neural network-based recommendation method for transferring customers’ shopping behaviors from Web to Voice while considering the uniqueness of voice shopping. TransV is designed to learn shared customer and product representations across both channels and to carefully transfer the purchase patterns from Web to Voice by modeling their relationships explicitly. Specifically, our method is built on the state-of-the-art self-attention neural architecture [41, 49] to learn customer and product representations. To enable effective transfer of customers’ purchase patterns from Web to Voice, TransV adopts a multi-level tri-factorization approach that models web and voice purchase patterns with both shared and separated neural parts. By doing so, TransV distinguishes channel-specific purchase patterns from channel-independent ones. To account for customers’ repeated purchase behaviors that are prevalent in voice shopping, TransV adopts a recency-biased copy mechanism, which leverages the copy mechanism [16, 36] and extends it by considering the impact of the recency of historical purchases on repeated purchases.
+
+<narr> Narrative:
+
+</top>
+
+<top>
 <num> Number: 340116407
 <title> Web-to-Voice Transfer for Product Recommendation on Voice
 
@@ -1753,6 +1742,17 @@ The present state-of-the-art for this task is BiCut [9], a recurrent-based neura
 
 <desc> Description:
 While BiCut outperforms non-neural methods [1], we argue it has several drawbacks. Firstly, the model is trained with teacher-forcing, i.e. with ground truth context, but it is deployed auto-regressively at test time, where it is conditioned on its own pre-dictions. Thus, the model suffers from a train / test distribution mismatch, often referred to as exposure bias [12], resulting in poor model generalization. Secondly, the loss function used does not capture the mutual exclusivity among the candidate cut positions. In other words, the loss does not capture the condition that the list can only be cut in at most one position. Furthermore, the proposed training loss is unaligned with the user-defined evaluation metric. Last but not least, BiCut employs BiLSTMs which are not only slow and non-parallelizable, but also do not take into account global long-range dependencies.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340118804
+<title> Choppy: Cut Transformer for Ranked List Truncation
+
+<desc> Description:
+This paper proposes Choppy, a new method that not only ameliorates the limitations of the BiCut model but also achieves state-of-the-art performance on the ranked list truncation task. Our method comprises two core technical contributions. The first is a Transformer model [15] that is able to capture long-range dyadic interactions between relevance scores. To the best of our knowledge, this is the first successful application of self-attentive models on scalar ranking scores. The second technical contribution is the development of a loss function that optimizes the expected metric value over all candidate cut positions. Overall, Choppy not only improves the predictive performance on this task but also improves the model inference speed by > 3 times.
 
 <narr> Narrative:
 
@@ -2177,6 +2177,17 @@ There are two settings for modeling cross-document interactions: re-ranking and 
 </top>
 
 <top>
+<num> Number: 340981905
+<title> Permutation Equivariant Document Interaction Network for Neural Learning to Rank
+
+<desc> Description:
+Using attention mechanisms for ranking has been explored by several works. [16] and [18] use RNN-based approaches, whereas this paper uses Transformer self-attention [17]. AttRN [18] also uses an attention mechanism to capture listwise interactions, but the final ranking is generated by selecting documents one by one sequentially, making it sensitive to the input document order, and hence not applicable to full set ranking. SetRank [13] is a recent approach that uses attention for cross-document interactions, and is subsumed by our method.
+
+<narr> Narrative:
+
+</top>
+
+<top>
 <num> Number: 340984701
 <title> Using Sentiment Analysis for Pseudo-Relevance Feedback in Social Book Search
 
@@ -2292,6 +2303,17 @@ In this paper, we study the effect of the user’s feedback in mixed-initiative 
 
 <desc> Description:
 Deep pre-trained language models (LM) are large neural networks trained on surrounding text signals from large text corpora [3]. These models can then be fine-tuned over other target tasks. Notably, deep LMs such as BERT [3] have achieved state-of-the-art performance in several natural language tasks, including text search [2, 7]. In general, BERT rankers are trained by fine-tuning BERT over search logs, using query and passage as the two input sentences and making relevance prediction conditioned on the output sentence/word representations. Using hundreds of millions of parameters, BERT learns rich language patterns that are useful for ranking. However, the high complexity makes it computationally expensive to run BERT rankers at a large scale [8].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340983804
+<title> Understanding BERT Rankers Under Distillation
+
+<desc> Description:
+To compress a large neural network, [4] propose distillation. They use the large network as a teacher to train a small network (student) by minimizing the distance between the two models’ output prediction probability distributions. Recently, a family of distillation algorithms have been proposed for distilling large teacher transformers to small student transformers [5, 10]. Compared to [4], they also minimize the distance between student and teacher self attention distributions in the intermediate layers [11]. To the best of our knowledge, there is no prior work studying distilling BERT for search ranking.
 
 <narr> Narrative:
 
@@ -2782,6 +2804,28 @@ There are also studies on understanding and leveraging query intent information 
 </top>
 
 <top>
+<num> Number: 337177508
+<title> Separate and Attend in Personal Email Search
+
+<desc> Description:
+Recently, neural attention mechanisms have demonstrated enormous power on sequence modeling. They derived the optimal sequence representation by learning to focus on the important tokens in the sequence and down-weighting unimportant ones for downstream tasks. The attention mechanism was first proposed by [3] in machine translation, where attention was used on top of RNN encoders for input-output alignment. Later, the attention mechanism has been adapted to a wide range of compelling sequence modeling tasks, including image caption generation [49], text classification [50] and natural language question answering [20, 26, 43].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177509
+<title> Separate and Attend in Personal Email Search
+
+<desc> Description:
+The above studies employ attention mechanism in conjunction with RNN or CNN models. [46] proposed the Transformer, which used self-attention along with positional encoding. Later, [16] proposed a deep bidirectional Transformer structure, BERT, which becomes one of the state-of-the-art pre-trained language models benefiting many downstream tasks with fine-tuning. The attention mechanism has also been generalized to attend to a group of structurally adjacent items instead of single ones, as studied by [30].
+
+<narr> Narrative:
+
+</top>
+
+<top>
 <num> Number: 337178501
 <title> Interpretable Click-Through Rate Prediction through Hierarchical Attention
 
@@ -2826,6 +2870,17 @@ The second defect of existing approaches is the poor efficiency since the high-o
 </top>
 
 <top>
+<num> Number: 337178506
+<title> Interpretable Click-Through Rate Prediction through Hierarchical Attention
+
+<desc> Description:
+To accommodate the polysemy of feature interactions in different semantic subspaces, InterHAt leverages a Transformer [29] with multi-head self-attention to comprehensively study different possible feature-wise interactions. Transformer has been popularly employed in natural language processing tasks such as sentiment analysis, natural language inference [6], and machine translation [28]. The multiple attention heads can capture the manifold mutual effects of words that jointly compose the semantics of text from different latent subspaces. We utilize this great property of Transformer to detect the complex polysemy of feature interactions and learn a polysemy-augmented feature list which serves as the input of hierarchical attention layers. Note that despite the strong capability of Transformer in feature learning, the model efficiency is retained according to [29].
+
+<narr> Narrative:
+
+</top>
+
+<top>
 <num> Number: 337178507
 <title> Interpretable Click-Through Rate Prediction through Hierarchical Attention
 
@@ -2859,22 +2914,44 @@ Wide&Deep [4] consists of a wide and a deep component, which are essentially a g
 </top>
 
 <top>
-<num> Number: 337181401
-<title> Listwise Learning to Rank by Exploring Unique Ratings
+<num> Number: 337178511
+<title> Interpretable Click-Through Rate Prediction through Hierarchical Attention
 
 <desc> Description:
-Learning-to-rank is one of the most classical research topics in information retrieval, and researchers have put tremendous efforts into modeling ranking behaviors. In training, existing ranking models learn a scoring function from query-document features and multi-level ratings/labels, e.g., 0, 1, 2. During inference, the learned scoring function is used to obtain prediction scores for ordering documents. There are two major challenges for learning-to-rank. The first challenge is that there can be a mismatch between ratings and the correct ranking orders in training. Although it is straightforward to infer partial ranking orders from ratings and prediction scores, it is not easy to design loss functions modeling the order of ratings and the order of prediction scores. Many prediction scores indicate the same ranking, i.e., the order of documents. This implies that a model does not necessarily have to match ratings, opening opportunities and ambiguities. Moreover, the top ranking positions are more important. The second challenge is that raw features may not be representative enough for learning a reasonable scoring function. Existing ranking models tackle the two challenges by: (1) designing loss functions or reward functions to map prediction scores with correct ranking orders in training, and (2) tuning loss functions with evaluation metrics such as NDCG [24], or ERR [10], and (3) calculating prediction scores using richer features such as a local ranking context [1, 3, 5, 18, 38].
+Due to its capability to pinpoint and amplify salient features that greatly affect the predictions [8], attention mechanism is regarded as a reasonable and reliable way to explain the decision-making procedure in many tasks such as recommender systems [32, 35], health care systems [5], computer vision [33], visual question answering (VQA) [14, 21], etc.
 
 <narr> Narrative:
 
 </top>
 
 <top>
-<num> Number: 337181402
+<num> Number: 337178512
+<title> Interpretable Click-Through Rate Prediction through Hierarchical Attention
+
+<desc> Description:
+For example, RETAIN [5] studies Electric Health Records (EHR) of patients with a two-layer attention network that identifies and explains influential hospital visits and significant clinical diagnoses associated with the visits. Co-attention mechanism [14] in VQA proposes question-guided visual attention and visual-guided question attention on word level, phrase level, and question level. Three levels of information are combined to predict the answer with improved performance while retaining the explainability of the outcomes.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337178513
+<title> Interpretable Click-Through Rate Prediction through Hierarchical Attention
+
+<desc> Description:
+In natural language domain, language-specific and across-language attention networks based on linguistic hierarchy [22, 34] such as words and sentences are proposed for document classification tasks. Another form of attention in NLP is self-attention. Researchers from Google design Transformer [29] based on multi-head self-attention in which tokens in a sentence attend to other tokens within a same sentence to learn the compound sentence semantics. Using the strong learning power of Transformer, BERT [6], built by stacking a number of bi-directional Transformer layers, achieves state-of-the-art performance on 11 major NLP tasks. The success of BERT shows the outstanding feature interaction power of Transformer.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337181401
 <title> Listwise Learning to Rank by Exploring Unique Ratings
 
 <desc> Description:
-Depending on how prediction scores in training are compared with ratings, there are three types of loss functions: pointwise, pairwise, and listwise. Pointwise learning maps the prediction scores of individual documents with their exact ratings [31], which is not necessary for obtaining correct orders. Pairwise learning [7, 8, 14, 20, 28, 43, 44, 46, 50] naturally compares pairs of documents to minimize the number of inversions. Earlier pairwise models such as RankSVM [20], RankBoost [14], RankNet [7], and Ordinal Regression [28] may overly update weights for different pairs as they treat all pairs with equal importance. For instance, suppose the correct order is (a -> b -> c -> d). When a pairwise model catches an inversion (c -> b) in a predicted order (a -> c -> b -> d), it tries to update weights to increase the score of b and decrease the score of c. However, if the score of b becomes too high – higher than a – this causes another inversion (b, a). LambdaMart [8, 22, 43] and NDCG-LOSS++ [46] largely limit this issue by assigning different weights for different pairs when calculating their gradients [8]. Their best models rely on using gradient boosting regression trees [11, 26, 35], which are effective but very sensitive to hyper-parameters. Listwise learning [9, 17, 25, 27, 34, 36, 45, 48] tries to learn the best document permutation based on permutation probabilities proposed by [40] and [32]. The classical Plackett-Luce model has a constraint that the permutation probabilities are targeted for unique ratings. For instance, maximizing the likelihood of choosing a document from a set of documents that have the same rating can confuse a model. Since the number of unique rating levels is typically much smaller than the number of candidate documents per query, there can be a large number of ties. Also, in order to calculate the joint probability of a ranking sequence, the number of steps a Plackett-Luce model, such as ListMLE [48], needs to go through is bound by the number of candidate documents per query. Therefore, obtaining one permutation can be computationally inefficient. Furthermore, top documents are more important, but each step of a Plackett-Luce model is equally important along the entire sequence. Variants such as SoftRank [45], p-ListMLE [27], and ApproxNDCG [6] use NDCG or ranking positions to tune their loss functions. Nevertheless, when the number of documents in a permutation is large, gradients can vanish or explode very fast as the product of their permutation probabilities is close to 0. Highlights from research studies in recent years for scoring functions include ensemble scoring functions [2, 16, 31], ranking refinement [1], and reinforcement learning [13, 30, 33, 37, 47, 49]. Despite being effective, training efficiency is still their common bottleneck, which limits their usage in real-world applications.
+Learning-to-rank is one of the most classical research topics in information retrieval, and researchers have put tremendous efforts into modeling ranking behaviors. In training, existing ranking models learn a scoring function from query-document features and multi-level ratings/labels, e.g., 0, 1, 2. During inference, the learned scoring function is used to obtain prediction scores for ordering documents. There are two major challenges for learning-to-rank. The first challenge is that there can be a mismatch between ratings and the correct ranking orders in training. Although it is straightforward to infer partial ranking orders from ratings and prediction scores, it is not easy to design loss functions modeling the order of ratings and the order of prediction scores. Many prediction scores indicate the same ranking, i.e., the order of documents. This implies that a model does not necessarily have to match ratings, opening opportunities and ambiguities. Moreover, the top ranking positions are more important. The second challenge is that raw features may not be representative enough for learning a reasonable scoring function. Existing ranking models tackle the two challenges by: (1) designing loss functions or reward functions to map prediction scores with correct ranking orders in training, and (2) tuning loss functions with evaluation metrics such as NDCG [24], or ERR [10], and (3) calculating prediction scores using richer features such as a local ranking context [1, 3, 5, 18, 38].
 
 <narr> Narrative:
 

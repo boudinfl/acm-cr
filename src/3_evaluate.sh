@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 BASENAME="data/topics+qrels/contexts"
+#BASENAME="data/topics+qrels/naacl-21"
 
 for RUN in output/*.txt
 do

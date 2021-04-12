@@ -99,8 +99,8 @@ print('*'*80)
 
 nb_s_citation_contexts = s_citation_contexts_all+s_citation_contexts_1plus+s_citation_contexts_0
 
-print('number of citation contexts (s): {}'.format(nb_s_citation_contexts))
-print('number of 1+/all citation contexts (s): {}'.format(s_citation_contexts_all+s_citation_contexts_1plus))
+print('- number of citation contexts (s): {}'.format(nb_s_citation_contexts))
+print('- number of 1+/all citation contexts (s): {}'.format(s_citation_contexts_all+s_citation_contexts_1plus))
 print("|     0 |    1+ |   All |")
 print("| -----:| -----:| -----:|")
 print("| {:.2f} | {:.2f} | {:.2f} |".format(100*s_citation_contexts_0/nb_s_citation_contexts, 100*s_citation_contexts_1plus/nb_s_citation_contexts, 100*s_citation_contexts_all/nb_s_citation_contexts))
@@ -108,8 +108,8 @@ print("| {:.2f} | {:.2f} | {:.2f} |".format(100*s_citation_contexts_0/nb_s_citat
 print('*'*80)
 
 nb_p_citation_contexts = p_citation_contexts_all+p_citation_contexts_1plus+p_citation_contexts_0
-print('number of citation contexts (p): {}'.format(nb_p_citation_contexts))
-print('number of 1+/all citation contexts (p): {}'.format(p_citation_contexts_all+p_citation_contexts_1plus))
+print('- number of citation contexts (p): {}'.format(nb_p_citation_contexts))
+print('- number of 1+/all citation contexts (p): {}'.format(p_citation_contexts_all+p_citation_contexts_1plus))
 print("|     0 |    1+ |   All |")
 print("| -----:| -----:| -----:|")
 print("| {:.2f} | {:.2f} | {:.2f} |".format(100*p_citation_contexts_0/nb_p_citation_contexts, 100*p_citation_contexts_1plus/nb_p_citation_contexts, 100*p_citation_contexts_all/nb_p_citation_contexts))

@@ -18,10 +18,14 @@ BASENAME="data/topics+qrels/contexts"
 python3 src/contexts_to_queries.py \
         --input data/topics+qrels/papers/ \
         --collection data/topics+qrels/collection.txt \
-        --output ${BASENAME}
+        --output ${BASENAME} #\
+        #--sentences
 
 TOPICS="${BASENAME}.topics"
 QRELS="${BASENAME}.qrels"
+
+#TOPICS="data/topics+qrels/naacl-21.topics"
+#QRELS="data/topics+qrels/naacl-21.qrels"
 
 #TOPICFIELD="title"
 TOPICFIELD="description"
