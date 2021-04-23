@@ -37,7 +37,7 @@
 			<s cites="6,28">Transformer has been popularly employed in natural language processing tasks such as sentiment analysis, natural language inference [6], and machine translation [28].</s>
 			<s>The multiple attention heads can capture the manifold mutual effects of words that jointly compose the semantics of text from different latent subspaces.</s>
 			<s>We utilize this great property of Transformer to detect the complex polysemy of feature interactions and learn a polysemy-augmented feature list which serves as the input of hierarchical attention layers.</s>
-			<s cite="29" anonymised="true">Note that despite the strong capability of Transformer in feature learning, the model efficiency is retained according to [29].</s>
+			<s cites="29" anonymised="true">Note that despite the strong capability of Transformer in feature learning, the model efficiency is retained according to [29].</s>
 		</context>
 		<context id="07" section="related work">
 			<s cites="4,7,12,18,19,23,24,26,30,31,32,36,37,38">CTR prediction has drawn great attention from both academia and industry [4, 7, 12, 18, 19, 23, 24, 26, 30–32, 36–38] due to its significant impact on online advertisements.</s>

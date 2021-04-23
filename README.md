@@ -103,23 +103,23 @@ python3 src/cc_stats.py --input data/topics+qrels/papers/ \
                         --collection data/topics+qrels/collection.txt
 
 avg number of cited documents: 31.82 [8 - 71]
-avg number of cited documents in collection: 15.62 [1 - 37]
-avg coverage of collection: 0.5011 [0.0909 - 0.8333]
+avg number of cited documents in collection: 15.86 [1 - 37]
+avg coverage of collection: 0.5074 [0.0909 - 0.8333]
 ```
 
-- number of citation contexts (s): 835
-- number of 1+/all citation contexts (s): 550
+- number of citation contexts (s): 837
+- number of 1+/all citation contexts (s): 552
 
 |     0 |    1+ |   All |
 | -----:| -----:| -----:|
-| 34.13 | 21.20 | 44.67 |
+| 34.05 | 20.91 | 45.04 |
 
 - number of citation contexts (p): 341
-- number of 1+/all citation contexts (p): 268
+- number of 1+/all citation contexts (p): 269
 
 |     0 |    1+ |   All |
 | -----:| -----:| -----:|
-| 21.41 | 53.67 | 24.93 |
+| 21.11 | 53.67 | 25.22 |
 
 ## Document retrieval
 
@@ -128,17 +128,27 @@ avg coverage of collection: 0.5011 [0.0909 - 0.8333]
 Here, we use the open-source information retrieval toolkit 
 [anserini](http://anserini.io/) which is built on 
 [Lucene](https://lucene.apache.org/).
-Below are the installation steps for a mac computer (tested on OSX 10.14) based
+Below are the installation steps for a mac computer (tested on OSX 11.2.3) based
 on their [colab demo](https://colab.research.google.com/drive/1s44ylhEkXDzqNgkJSyXDYetGIxO9TWZn).
 
 ```bash
 # install maven
-brew cask install adoptopenjdk
+brew install adoptopenjdk
 brew install maven
 
 # cloning / installing anserini
 git clone https://github.com/castorini/anserini.git --recurse-submodules
 cd anserini/
+# for 11.1 issues -> add the following in pom.xml
+# <plugin>
+#   <groupId>org.apache.maven.plugins</groupId>
+#   <artifactId>maven-surefire-plugin</artifactId>
+#   <configuration>
+#     <forkCount>3</forkCount>
+#     <reuseForks>true</reuseForks>
+#     <argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
+#   </configuration>
+# </plugin>
 # for 10.14 issues -> changing jacoco from 0.8.2 to 0.8.3 in pom.xml to build correctly
 # for 10.13 issues -> https://github.com/castorini/anserini/issues/648
 mvn clean package appassembler:assemble

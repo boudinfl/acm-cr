@@ -35,7 +35,7 @@
 			<s>Neural models for AS2 typically apply a series of non-linear transformations to the input question and answer, represented as compositions of word or character embeddings and then measure the similarity between the obtained representations.</s>
 			<s cites="16">For example, the Rel-CNN [16] has two separate embedding layers for the question and answer, and relational embedding, which aims at connecting them.</s>
 			<s cites="5">Recent work has shown that Transformer-based models, e.g., BERT [5], can highly improve inference.</s>
-			<s ciets="23" anonymised="true">[23] applied it to Ad Hoc Document Retrieval, obtaining significant improvement.</s>
+			<s cites="23" anonymised="true">[23] applied it to Ad Hoc Document Retrieval, obtaining significant improvement.</s>
 			<s cites="8" anonymised="true">[8] fine-tuned BERT for AS2, achieving the state of the art.</s>
 			<s>However, BERT’s high computational cost prevents its use in most real-word applications.</s>
 			<s cites="15">Some solutions rely on leveraging knowledge distillation in the pre-training step, e.g., [15].</s>
