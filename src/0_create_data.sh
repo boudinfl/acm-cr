@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-# create gold keyphrases files
-mkdir -p data/keyphrases/
-if [[ ! -f "data/keyphrases/acm-dl.gold.all.json.gz" ]]
-    then
-        python3 src/bib_to_gold.py --directory data/acm-dl/ --output data/keyphrases/acm-dl.gold
-fi
+# # create gold keyphrases files
+# mkdir -p data/keyphrases/
+# if [[ ! -f "data/keyphrases/acm-dl.gold.all.json.gz" ]]
+#     then
+#         python3 src/bib_to_gold.py --directory data/acm-dl/ --output data/keyphrases/acm-dl.gold
+# fi
 
 # produce T+A documents
 mkdir -p data/docs/t+a/
