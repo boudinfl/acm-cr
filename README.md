@@ -39,6 +39,8 @@ Documents are BibTeX reference files of papers about IR-related topics collected
 
 Statistics of the test collection:
 
+80757 T+A+K, 23408 T+A, 14648 T over 118524 entries
+
 | #docs (T+A) | #docs (+K) |   %P |   %R |   %M |   %U | %exp | #kps |
 | -----------:| ----------:| ----:| ----:| ----:| ----:| ----:| ----:|
 |      102510 |      70956 | 53.6 | 11.7 | 19.3 | 15.4 | 13.4 |  4.5 |
