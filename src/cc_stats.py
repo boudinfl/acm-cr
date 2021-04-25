@@ -7,6 +7,7 @@ import glob
 import statistics
 import argparse
 import xml.etree.ElementTree as ET
+from nltk.tokenize import word_tokenize
 
 # get the command line arguments
 parser = argparse.ArgumentParser()
@@ -39,6 +40,14 @@ s_citation_contexts_0 = 0
 s_citation_contexts_1plus = 0
 s_citation_contexts_all = 0
 
+nb_sentences = 0
+s_lengths = []
+p_lengths = []
+s_char_lengths = []
+p_char_lengths = []
+s_number_of_citations = []
+p_number_of_citations = []
+
 for filename in glob.iglob(args.input+"/**", recursive=True):
     if os.path.isfile(filename) and filename.endswith(".xml"):
 
@@ -63,7 +72,13 @@ for filename in glob.iglob(args.input+"/**", recursive=True):
 
             context_markers = []
             context_markers_in_collection = []
+            p_lengths.append(0)
+            p_char_lengths.append(0)
+
             for sentence in context.findall('s'):
+
+                sentence_length = len(word_tokenize(sentence.text))
+
                 # if sentence is citation context
                 if sentence.get("cites"):
                     markers = sentence.get("cites").split(",")
@@ -78,6 +93,15 @@ for filename in glob.iglob(args.input+"/**", recursive=True):
 
                     context_markers.extend(markers)
                     context_markers_in_collection.extend(markers_in_collection)
+                    s_lengths.append(sentence_length)
+                    s_char_lengths.append(len(sentence.text))
+
+                    s_number_of_citations.append(len(markers))
+
+                
+                p_lengths[-1] += sentence_length
+                p_char_lengths[-1] += len(sentence.text)
+                nb_sentences += 1
 
             if len(context_markers):
                 if len(context_markers) == len(context_markers_in_collection):
@@ -86,6 +110,11 @@ for filename in glob.iglob(args.input+"/**", recursive=True):
                     p_citation_contexts_1plus += 1
                 else:
                     p_citation_contexts_0 += 1
+
+            p_number_of_citations.append(len(context_markers))
+
+
+
 
 print('*'*80)
 
@@ -104,6 +133,11 @@ print('number of 1+/all citation contexts (s): {}'.format(s_citation_contexts_al
 print("|     0 |    1+ |   All |")
 print("| -----:| -----:| -----:|")
 print("| {:.2f} | {:.2f} | {:.2f} |".format(100*s_citation_contexts_0/nb_s_citation_contexts, 100*s_citation_contexts_1plus/nb_s_citation_contexts, 100*s_citation_contexts_all/nb_s_citation_contexts))
+print("| {} | {} | {} |".format(s_citation_contexts_0, s_citation_contexts_1plus, s_citation_contexts_all))
+print(len(s_lengths), sum(s_lengths)/len(s_lengths))
+print(len(s_char_lengths), sum(s_char_lengths)/len(s_char_lengths))
+print(len(s_number_of_citations), sum(s_number_of_citations)/len(s_number_of_citations))
+print(nb_sentences)
 
 print('*'*80)
 
@@ -113,8 +147,10 @@ print('number of 1+/all citation contexts (p): {}'.format(p_citation_contexts_al
 print("|     0 |    1+ |   All |")
 print("| -----:| -----:| -----:|")
 print("| {:.2f} | {:.2f} | {:.2f} |".format(100*p_citation_contexts_0/nb_p_citation_contexts, 100*p_citation_contexts_1plus/nb_p_citation_contexts, 100*p_citation_contexts_all/nb_p_citation_contexts))
-
-
+print("| {} | {} | {} |".format(p_citation_contexts_0, p_citation_contexts_1plus, p_citation_contexts_all))
+print(len(p_lengths), sum(p_lengths)/len(p_lengths))
+print(len(p_char_lengths), sum(p_char_lengths)/len(p_char_lengths))
+print(len(p_number_of_citations), sum(p_number_of_citations)/len(p_number_of_citations))
 
 
 

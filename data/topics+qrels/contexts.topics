@@ -2782,6 +2782,17 @@ There are also studies on understanding and leveraging query intent information 
 </top>
 
 <top>
+<num> Number: 337177508
+<title> Separate and Attend in Personal Email Search
+
+<desc> Description:
+Recently, neural attention mechanisms have demonstrated enormous power on sequence modeling. They derived the optimal sequence representation by learning to focus on the important tokens in the sequence and down-weighting unimportant ones for downstream tasks. The attention mechanism was first proposed by [3] in machine translation, where attention was used on top of RNN encoders for input-output alignment. Later, the attention mechanism has been adapted to a wide range of compelling sequence modeling tasks, including image caption generation [49], text classification [50] and natural language question answering [20, 26, 43].
+
+<narr> Narrative:
+
+</top>
+
+<top>
 <num> Number: 337178501
 <title> Interpretable Click-Through Rate Prediction through Hierarchical Attention
 

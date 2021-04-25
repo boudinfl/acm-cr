@@ -20,11 +20,6 @@ parser.add_argument("--output",
                     help="output file in TREC format.",
                     type=str)
 
-parser.add_argument('--path_to_keyphrases',
-                    help='path to the (json formatted) keyphrases.',
-                    type=str,
-                    default=None)
-
 parser.add_argument('--blacklist',
                     help='path to a blacklist of files.',
                     type=str,
@@ -37,13 +32,6 @@ parser.add_argument('--collection',
 
 args = parser.parse_args()
 
-# loading keyphrases if provided
-keyphrases = {}
-if args.path_to_keyphrases:
-    with gzip.open(args.path_to_keyphrases, "rt") as f:
-        keyphrases = json.loads(f.read())
-        print("{} docids loaded for keyphrases".format(len(keyphrases)))
-
 # loading a blacklist if provided
 blacklist = {}
 if args.blacklist:
@@ -52,9 +40,6 @@ if args.blacklist:
         print("{} docids loaded for blacklist".format(len(blacklist)))
 
 collection = {}
-nb_entries_with_t = 0
-nb_entries_with_t_a = 0
-nb_entries_with_t_a_k = 0
 for filename in glob.iglob(args.directory+"/**", recursive=True):
     if os.path.isfile(filename):
         print('loading documents from {}'.format(filename))
@@ -70,18 +55,9 @@ for filename in glob.iglob(args.directory+"/**", recursive=True):
 
             collection[key] = reference
 
-            if {'title', 'abstract', 'keywords'} <= set(reference.fields):
-                nb_entries_with_t_a_k += 1
-            elif {'title', 'abstract'} <= set(reference.fields):
-                nb_entries_with_t_a += 1
-            else:
-                nb_entries_with_t += 1
-
             # dd url
             #url = "https://dl.acm.org/doi/pdf/"+key
         #break
-
-print('{} T+A+K, {} T+A, {} T over {} entries'.format(nb_entries_with_t_a_k, nb_entries_with_t_a, nb_entries_with_t, len(collection)))
 
 with gzip.open(args.output, 'wt') as o:
     for doc_id in collection:
@@ -91,10 +67,8 @@ with gzip.open(args.output, 'wt') as o:
         o.write("<TITLE>{}</TITLE>\n".format(entry.fields['title'].strip()))
         if 'abstract' in entry.fields:
             o.write("<TEXT>{}</TEXT>\n".format(entry.fields['abstract'].strip()))
-        if doc_id in keyphrases:
-            kps = keyphrases[doc_id]
-            kps = [k[0] for k in kps]
-            o.write("<HEAD>{}</HEAD>\n".format(' // '.join(kps)))
+        if 'keywords' in entry.fields:
+            o.write("<HEAD>{}</HEAD>\n".format(entry.fields['keywords'].strip()))
         o.write("</DOC>\n\n")
 
 # writing doc_ids if necessary
