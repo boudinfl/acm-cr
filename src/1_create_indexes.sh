@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 for EXP in data/docs/t+a*
 do
     if [[ ! -d "data/indexes/lucene-index.${EXP##*/}" ]]

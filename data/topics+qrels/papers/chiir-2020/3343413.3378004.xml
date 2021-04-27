@@ -16,10 +16,10 @@
 		<context id="03" section="related work">
 			<s>Another approach is to seek metrics that admit statistically unbiased estimators with observable data.</s>
 			<s cites="19,17">If ratings for relevant items are missing at random, recall [19] and unnormalized DCG [17] are unbiased.</s>
-			<s>But these results limit choice of metrics and depend on assumptions unlikely to hold in actual use, as relevance is not the only influence on users’ choice of items to consume or rate.</s>
+			<s>But these results limit choice of metrics and depend on assumptions unlikely to hold in actual use, as relevance is not the only influence on users' choice of items to consume or rate.</s>
 		</context>
 		<context id="04" section="related work">
-			<s cites="5,11,20">Counterfactual evaluation [5, 11, 20] uses causal inference techniques — often inverse propensity scoring — to estimate how users would have responded to a different recommender algorithm.</s>
+			<s cites="5,11,20">Counterfactual evaluation [5, 11, 20] uses causal inference techniques - often inverse propensity scoring - to estimate how users would have responded to a different recommender algorithm.</s>
 			<s>However, it is difficult to apply to commonly-used data sets and does not yield insight into the reliability of existing evaluations.</s>
 			<s>It also cannot address the fundamental problem that concerns us in this work: if the user was never exposed to an item under the logging policy, the historical log data contains no information on its relevance.</s>
 			<s>Such items are precisely where a recommender system can produce the most benefit in many discovery-oriented applications.</s>

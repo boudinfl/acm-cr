@@ -4,7 +4,7 @@
 	<abstract>Information overload is a problem many of us can relate to nowadays. The deluge of user generated content on the Internet, and the easy accessibility to a vast amount of data compounds the problem of remembering and retaining information that is consumed. To make information consumed more memorable, strategies such as note-taking have been found to be effective by augmenting human memory under specific conditions. This is based on the rationale that humans tend to recall information better if they have produced the information themselves. Previous works in online education have shown that conversational systems can improve learning effects. Although memorization is an important part of learning, the effect of conversation on human memorability remains unexplored. We aim to address this knowledge gap through an experimental study, by investigating human memorability in a classical information retrieval setup. We explore the impact of note-taking affordances and conversational interfaces on the memorability of information consumed by users. Our results show that traditional web search and note-taking have positive effects on knowledge gain, while the search engine with a conversational interface has the potential to augment long-term memorability. This work highlights the benefits of using note-taking and conversational interfaces to aid human memorability. Our findings have important implications on building information retrieval systems that cater to optimizing memorability of information consumed.</abstract>
 	<contexts>
 		<context id="01" section="introduction">
-			<s cites="26">To improve human memorability, researchers in the field of experimental psychology have studied the “generation effect” [26].</s>
+			<s cites="26">To improve human memorability, researchers in the field of experimental psychology have studied the "generation effect" [26].</s>
 			<s>By comparing memory for words, experiments revealed that humans could better recall information if they produced it themselves rather than if they received it.</s>
 			<s cites="7,27">Based on the generation effect, prior studies have shown that note-taking, a simple way to re-produce received information, can improve human memorability, particularly for text-based learning and comprehension [7, 27].</s>
 			<s>However, the effects of note-taking in a classic information retrieval setup remain unexplored.</s>
@@ -21,8 +21,8 @@
 			<s>Different theories for augmenting human memory have been studied in the field of psychology.</s>
 			<s cites="18,20" anonymised="true">The memory consolidation theory proposed by [18, 20] explained the processes to make information memory.</s>
 			<s cites="1">The Atkinson-Shiffrin memory model shows that the long-term memory can be consolidated by repeatedly rehearsing short-term memory [1].</s>
-			<s cites="6">To study how the ‘remembering information’ relates to one’s self, previous work has revealed that the memory could be enhanced if it relates to one’s self-concept or an episode from one’s life [6].</s>
-			<s cites="26">A prior study in experimental psychology has shown evidence of the existence of the “generation effect” [26].</s>
+			<s cites="6">To study how the ‘remembering information' relates to one's self, previous work has revealed that the memory could be enhanced if it relates to one's self-concept or an episode from one's life [6].</s>
+			<s cites="26">A prior study in experimental psychology has shown evidence of the existence of the "generation effect" [26].</s>
 			<s>Authors conducted experiments at the word-level to show that people could remember information better if the information was produced by themselves.</s>
 			<s>A simple and direct application of the generation effect is the use of note-taking.</s>
 			<s cites="7,10,19,27">Previous studies have shown that note-taking can improve human memorability in different scenarios [7, 10, 19, 27].</s>
@@ -33,10 +33,10 @@
 		<context id="04" section="related work">
 			<s>Augmenting human memory has also been studied from an information systems standpoint.</s>
 			<s cites="9,23">Many previous studies have used context as a key aspect to improve human memorability [9, 23].</s>
-			<s cites="23">The ‘Remembrance Agent’ is an automatic system which uses the role of context in memory to augment human memory, by listing documents related to the user’s current context [23].</s>
+			<s cites="23">The ‘Remembrance Agent' is an automatic system which uses the role of context in memory to augment human memory, by listing documents related to the user's current context [23].</s>
 			<s cites="5" anonymised="true">[5] have performed experiments to find the attributes (e.g. file name, time, title, location, size, etc.) that help memorability for a document search tool.</s>
 			<s cites="8,29,24">Previous works have also shown that many strategies, such as time-aware contextualization [8, 29], and optimizing recollection by generating analogies [24], have a positive effect on human memorability.</s>
-			<s cites="25">Furthermore, a recent study built an application named ReflectiveDiary’, to investigate how self-generated daily summaries can improve memorability [25].</s>
+			<s cites="25">Furthermore, a recent study built an application named ReflectiveDiary', to investigate how self-generated daily summaries can improve memorability [25].</s>
 			<s cites="3">Predictive methods have also been proposed to consolidate human memory in the workplace environment [3].</s>
 			<s cites="4,15">Since memorization is an essential element of the learning process [4, 15], we also examined relevant literature in online learning.</s>
 			<s cites="13,16,28,22">Across multiple studies, conversational systems were found to be useful in facilitating learning effects [13, 16, 28] and in effectively improving user engagement in information retrieval tasks [22].</s>

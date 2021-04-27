@@ -5,23 +5,23 @@
 	<contexts>
 		<context id="01" section="introduction">
 			<s cites="34,36">Personalization to improve web search result ranking has been a long-standing theme in information retrieval [34, 36].</s>
-			<s>With the increasing availability of individual users’ online traces and derived traits, personalization is again gaining importance for chatbots, recommender systems, product search, and more.</s>
-			<s cites="5">[5] has formulated a vision and research agenda for constructing and leveraging personal knowledge graphs (PKG’s) in such settings.</s>
-			<s>In this paper, we investigate the role of PKG’s for topical entity search, with the challenging case that the only per-user knowledge is a sparse profile obtained from a short questionnaire.</s>
-			<s>In contrast to the “data-hungry” approaches of prior works, we focus on this “minimal PKG” case to strengthen the user’s ability to understand and control her user profile, similar to what major search engines offer for controlling the personalization of ads (e.g., adssettings.google.com).</s>
+			<s>With the increasing availability of individual users' online traces and derived traits, personalization is again gaining importance for chatbots, recommender systems, product search, and more.</s>
+			<s cites="5">[5] has formulated a vision and research agenda for constructing and leveraging personal knowledge graphs (PKG's) in such settings.</s>
+			<s>In this paper, we investigate the role of PKG's for topical entity search, with the challenging case that the only per-user knowledge is a sparse profile obtained from a short questionnaire.</s>
+			<s>In contrast to the "data-hungry" approaches of prior works, we focus on this "minimal PKG" case to strengthen the user's ability to understand and control her user profile, similar to what major search engines offer for controlling the personalization of ads (e.g., adssettings.google.com).</s>
 			<s>Note that our case is more ambitious, though: minimal-PKG profiles aim to capture the bare necessities, whereas ads controls often comprise a hundred or more tags for the same user.</s>
 			<s>The fewer traits the profile contains and the more explicit they are (as opposed to learned latent models), the more scrutable and actionable the personalization model becomes from a user perspective.</s>
 		</context>
 		<context id="02" section="introduction">
 			<s cites="30,34">The most important line of exploiting user information for general web search is based on query-and-click logs (e.g., [30, 34]).</s>
 			<s cites="29">This helps in interpreting user interests and intents for ambiguous queries as well as for identifying salient pages for popular queries, and for suggestions for query auto-completion (e.g., [29]).</s>
-			<s cites="8">In all this, cues about the user’s location and daytime are a major asset, too (e.g., [8]).</s>
+			<s cites="8">In all this, cues about the user's location and daytime are a major asset, too (e.g., [8]).</s>
 		</context>
 		<context id="03" section="introduction">
 			<s cites="17,26,31">Recommender systems have incorporated personalization as well, for ads, products and other contents (e.g., [17, 26, 31]).</s>
 			<s>Here, structured data is leveraged, most notably, purchases or ratings of products, likes of news, YouYube videos, Instagram photos, etc.</s>
 			<s cites="6,25,38">This field has recently paid attention to scrutable recommendations that are comprehensible by end-users and pinpoint the specific data that explains how the recommended item was computed [6, 25, 38].</s>
-			<s>However, these approaches are at least as “data-hungry” as the search engines, and require extensive user-specific data.</s>
+			<s>However, these approaches are at least as "data-hungry" as the search engines, and require extensive user-specific data.</s>
 		</context>
 		<context id="04" section="introduction">
 			<s cites="4,7">Entity search about people, products or events has received great attention and has been incorporated into major search engines (see, e.g., [4, 7] and further references there).</s>
@@ -33,23 +33,23 @@
 		</context>
 		<context id="06" section="related work">
 			<s cites="34">On the first dimension, [34] pioneered the analysis of user interests and activities reflected in query, click and mail histories, and possibly even other online contents written or read by a user.</s>
-			<s cites="28">[28] focused on short-term context, like browser sessions, to infer the user’s interest and personalize interactive search.</s>
+			<s cites="28">[28] focused on short-term context, like browser sessions, to infer the user's interest and personalize interactive search.</s>
 			<s>Numerous followup works addressed the analysis and usage of query-and-click logs and browsing sessions.</s>
 			<s cites="1,15,33">To learn from this kind of expressive but highly noisy data, [1] introduced predictive models with learning-to-rank features, whereas [15] and [33] explored the use of similarity signals from taxonomies and ontologies.</s>
-			<s cites="37">[37] learned models of user interests for proactive “zero-query” search.</s>
+			<s cites="37">[37] learned models of user interests for proactive "zero-query" search.</s>
 			<s cites="8">[8] studied the important role of user location.</s>
 		</context>
 		<context id="07" section="related work">
 			<s>On the second dimension, prior works explored personalization for ranking as well as query expansion and query suggestions.</s>
 			<s cites="32">For personalized ranking, [32] developed methods for incorporating user-specific priors into language models.</s>
-			<s cites="8,10">The interplay of a user’s long-term behavior and short-term context for personalized ranking has been investigated in [8, 10].</s>
+			<s cites="8,10">The interplay of a user's long-term behavior and short-term context for personalized ranking has been investigated in [8, 10].</s>
 			<s cites="35,9">[35] and [9] addressed the issue of selective personalization: when to incorporate user profiles.</s>
 		</context>
 		<context id="08" section="related work">
 			<s>Another line of research addresses query expansion for personalization.</s>
-			<s cites="11,39">[11, 39] utilize folksonomy data, like user-provided tags in social bookmarking communities, as a source for expanding a user’s queries.</s>
+			<s cites="11,39">[11, 39] utilize folksonomy data, like user-provided tags in social bookmarking communities, as a source for expanding a user's queries.</s>
 			<s cites="22">[22] personalizes email search via word embeddings learned from email histories.</s>
-			<s cites="14">[14] proposes methods for harnessing a user’s desktop files (incl. email).</s>
+			<s cites="14">[14] proposes methods for harnessing a user's desktop files (incl. email).</s>
 			<s>The viability of all these methods relies on the availability of large collections of user data.</s>
 		</context>
 		<context id="09" section="related work">

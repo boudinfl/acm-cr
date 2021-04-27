@@ -11,7 +11,7 @@
 		</context>
 		<context id="02" section="related work">
 			<s cites="20,4">It is true then that learning-to-rank can be formulated as classification or regression—in fact, many early learning-to-rank methods such as RankSVM [20] or RankNet [4] take a very similar approach.</s>
-			<s cites="13,4,5,20">These algorithms reduce the ranking problem to one of correctly predicting relevance scores by optimizing a “pointwise” loss [13] or correctly classifying ordered pairs of documents by optimizing a “pairwise” loss [4, 5, 20].</s>
+			<s cites="13,4,5,20">These algorithms reduce the ranking problem to one of correctly predicting relevance scores by optimizing a "pointwise" loss [13] or correctly classifying ordered pairs of documents by optimizing a "pairwise" loss [4, 5, 20].</s>
 			<s>These simplified reformulations of learning-to-rank are, however, misaligned with the ranking utilities.</s>
 		</context>
 		<context id="03" section="related work">
@@ -22,7 +22,7 @@
 			<s>The non-smoothness of ranking utilities pose a challenge that the learning-to-rank community has sought to study.</s>
 			<s cites="29,41,7,32,36,38,40">The literature offers a range of methods from direct optimization of metrics using coordinate ascent over parameters of linear models [29], to optimizing an exponential upper-bound of ranking metrics using boosted weak learners [41], to optimizing a differentiable surrogate loss function [7, 32, 36, 38, 40].</s>
 			<s cites="6,12,39">Other methods, such as LambdaRank [6] and its gradient boosted regression tree-based [12] variant LambdaMART [39], assume the existence of an unknown loss function whose gradients are however designed based on some heuristic.</s>
-			<s>The list of so-called “listwise” algorithms goes on but the individual methods fall into one of the above categories.</s>
+			<s>The list of so-called "listwise" algorithms goes on but the individual methods fall into one of the above categories.</s>
 		</context>
 		<context id="05" section="related work">
 			<s>Despite these differences, existing listwise learning-to-rank algorithms agree on one element: scores computed by the learned scoring function are deterministically mapped to a ranked list by way of a sort operation.</s>

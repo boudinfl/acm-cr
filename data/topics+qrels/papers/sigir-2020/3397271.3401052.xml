@@ -24,7 +24,7 @@
 			<s>This approach is more efficient than post-retrieval methods, inducing less overhead to the search system.</s>
 			<s>Upon receiving a transcribed query q, our QR framework applies a two step process of alternative queries generation and alternative queries ranking.</s>
 			<s cites="20">As voice-user interface introduces a strong presentation bias towards the top-ranked offer [20], in most cases, only a single offer is communicated back to the customer.</s>
-			<s>Therefore, practically, it is sufficient to identify a single “hero” alternative query to amend the customer query.</s>
+			<s>Therefore, practically, it is sufficient to identify a single "hero" alternative query to amend the customer query.</s>
 			<s>The top-ranked alternative is passed along with the original query to a controller, which ensures the quality of the selected alternative.</s>
 			<s>Specifically, the controller implements quality safeguards that prevent replacing the original query with an alternative query that is likely to retrieve irrelevant results to the intent of the original query.</s>
 			<s>Then, the original query q is sent along with the selected alternative query r∗ for retrieving offers from the e-commerce search engine.</s>
@@ -46,7 +46,7 @@
 			<s>While our alternative queries generation component aims to improve the recall, the alternative queries ranking component is in charge of tuning the precision.</s>
 			<s cites="41">For instance, in an e-commerce rewriting scenario, it is essential for the alternative queries to retrieve offers that capture the same intent as the originating query [41].</s>
 			<s>Rewriting that leads to offers that do not respect the desired product type are clearly poor.</s>
-			<s>Our ranking approach considers features that help preserve the original customer’s intent (like, extracting the product type from queries), and by that, provides quality guarantees on the alternatives.</s>
+			<s>Our ranking approach considers features that help preserve the original customer's intent (like, extracting the product type from queries), and by that, provides quality guarantees on the alternatives.</s>
 		</context>
 		<context id="06" section="">
 			<s>We provide an experimental evaluation for both voice and web null queries based on data logs of a commercial voice assistant and an e-commerce website.</s>
@@ -81,7 +81,7 @@
 			<s cites="6,7,16">Other ideas for substitution-based solutions, using the query-flow graph [6], were also proposed [7, 16].</s>
 			<s cites="16">However, finding good recommendations for tail e-commerce queries based on session co-occurrence turns to be difficult [16].</s>
 			<s cites="8" anonymised="true">For addressing also the long tail of the query distribution, [8] conceptually extend the query-flow graph with term nodes in addition to query nodes.</s>
-			<s cites="9" anonymised="true">[9] generate an inverted index of “successful” queries, i.e., ending query of a session with a click on its search result, and recommends queries retrieved from that index.</s>
+			<s cites="9" anonymised="true">[9] generate an inverted index of "successful" queries, i.e., ending query of a session with a click on its search result, and recommends queries retrieved from that index.</s>
 			<s>Our approach has similarities with the later in using an index of successful queries, and extends the use of inverted index to include phonetic, sub-words, and semantic similarities upon retrieval.</s>
 		</context>
 		<context id="09" section="related work">
@@ -102,7 +102,7 @@
 		<context id="10" section="related work">
 			<s>One related direction in QR focuses on improving its precision by narrowing down a search query.</s>
 			<s>In this case, the goal is to refine the query such that the refined alternative retrieves a more relevant subset of results.</s>
-			<s cites="2,31,3,10,29,33,45">Approaches towards this task include learning rewritings based on past users’ query refinements [2, 31, 32] and applying pseudo-relevance feedback techniques [10, 29, 33, 45].</s>
+			<s cites="2,31,3,10,29,33,45">Approaches towards this task include learning rewritings based on past users' query refinements [2, 31, 32] and applying pseudo-relevance feedback techniques [10, 29, 33, 45].</s>
 			<s cites="12,35">Those latter techniques commonly employ post-retrieval methods and iteratively query the search engine for newly added terms [12, 35].</s>
 			<s>In general, this direction is not suitable for handling null queries since the main problem with those queries is recall rather than precision.</s>
 			<s>Those query refinement and rewriting techniques are mostly applicable to head queries.</s>

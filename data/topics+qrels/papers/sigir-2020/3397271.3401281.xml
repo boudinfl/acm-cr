@@ -5,8 +5,8 @@
 	<contexts>
 		<context id="01" section="introduction">
 			<s>Previously, there largely have been two schools of thought regarding employing user reviews for better recommendation.</s>
-			<s>The first type considers reviews as “explanations" for the user giving that specific rating and tries to incorporate them into matrix factorization (MF).</s>
-			<s cites="9,1">HFT [9] is such a model which tries to regularize the latent features being learned through MF by reusing the same latent features for modeling the reviews’ likelihood using LDA [1].</s>
+			<s>The first type considers reviews as "explanations" for the user giving that specific rating and tries to incorporate them into matrix factorization (MF).</s>
+			<s cites="9,1">HFT [9] is such a model which tries to regularize the latent features being learned through MF by reusing the same latent features for modeling the reviews' likelihood using LDA [1].</s>
 			<s>The other type of methods are based on the philosophy that textual reviews are much more expressive than a single rating, and can be used to learn better latent features to perform better MF.</s>
 			<s cites="2,3,11,13,7">[2, 3, 11, 13] are all popular methods which, in some different way, try to extract features from user reviews and item reviews through deep learning architectures like TextCNN [7], and use these extracted features to perform MF.</s>
 			<s>All the methods used for analysis in this paper are discussed in more detail in Section 2.2.</s>

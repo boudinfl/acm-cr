@@ -12,8 +12,8 @@
 		<context id="02" section="related work">
 			<s>In terms of dealing with tail ratings, there have been a few complementary works.</s>
 			<s cites="1">For example, Gediminas et al. investigated the impact of rating characteristics like rating density, rating frequency distribution, and value distribution, on the accuracy of popular collaborative filtering techniques [1].</s>
-			<s cites="15" anonymised="true">[15] observed that product ratings tend to fit a ‘J-shaped’ distribution since users provide reviews are more likely to “brag or moan” compared to all purchasers.</s>
-			<s>As an extreme case of the ‘J-shaped’ distribution is the ‘U-shape’ of controversial items with many extreme ratings on both sides of the distribution.</s>
+			<s cites="15" anonymised="true">[15] observed that product ratings tend to fit a ‘J-shaped' distribution since users provide reviews are more likely to "brag or moan" compared to all purchasers.</s>
+			<s>As an extreme case of the ‘J-shaped' distribution is the ‘U-shape' of controversial items with many extreme ratings on both sides of the distribution.</s>
 			<s cites="36" anonymised="true">[36] formalized the concept of controversial items in recommendation systems and then compared the performance of several trust-enhanced techniques for personalized recommendations for controversial items with polarized ratings (bi-modal distribution) versus other items.</s>
 			<s>Similar to our observations, they showed that predicting ratings for controversial items is much worse than for other items.</s>
 			<s cites="2,11,27,30,35" anonymised="true">[2] surveyed state-of-the-art research on the polarization, finding that many trust-based RS attempts to improve recommendation for controversial items by defining a trusted network for each user, e.g., [11, 27, 30, 35].</s>
@@ -29,7 +29,7 @@
 		<context id="04" section="related work">
 			<s cites="14">More recently, neural variants like Neural Collaborative Filtering (NCF) have been proposed to combine deep learning architectures with traditional matrix factorization [14].</s>
 			<s>In particular, NCF is structured with two sub-models: Generalized Matrix Factorization (GMF) and a Multi-Layer Perceptron.</s>
-			<s>The GMF submodel corresponds to a neural version of MF, and so also relies on a single latent vector for representing a user’s preference or an item’s characteristics.</s>
+			<s>The GMF submodel corresponds to a neural version of MF, and so also relies on a single latent vector for representing a user's preference or an item's characteristics.</s>
 		</context>
 	</contexts>
 	<references>

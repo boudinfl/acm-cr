@@ -17,7 +17,7 @@
 		<context id="03" section="introduction">
 			<s>To address these research questions, we conducted an eye tracking study with 27 participants (14 with dyslexia, 13 control).</s>
 			<s>Each participant completed 6 informational search tasks using a modern, English-language, interactive search engine.</s>
-			<s>Our analysis of eye tracking data, together with participants’ self-reports about their experiences, extend fndings from prior studies and contribute new insight into the diferences in search behavior between people with and without dyslexia.</s>
+			<s>Our analysis of eye tracking data, together with participants' self-reports about their experiences, extend fndings from prior studies and contribute new insight into the diferences in search behavior between people with and without dyslexia.</s>
 			<s cites="37,43">Our fndings validate prior self-report findings that Searchers with Dyslexia (SWD) struggle with all stages of the search process: query formulation, search results triage, and information extraction [37, 43].</s>
 			<s>Adding to prior work, we find SWD visually attend to pages in a markedly diferent fxation pattern than searchers without dyslexia (for e.g. see Figure 1).</s>
 			<s>We conclude the paper by discussing the design implications of our fndings to improve cognitive accessibility of search for people with dyslexia.</s>
@@ -33,9 +33,9 @@
 			<s cites="22,23,36,52">Several researchers have begun to use eye tracking to understand which aspects of the SERP users attend to [22, 23, 36, 52].</s>
 			<s>Eye tracking allows us to log and track the amount of attention paid to specifc parts of the pages and interactions at a granular level of space and time.</s>
 			<s cites="45,46">For example, eye tracking studies have revealed that searchers usually fxate on SERPs and webpages in an F-shape pattern [45, 46].</s>
-			<s cites="24,17">These studies have also shown that searchers distribute their visual attention diferently across organic and ad results on a SERP [24], and that one can determine a webpage’s most salient parts by looking at the amount of visual attention paid to its diferent elements [17].</s>
+			<s cites="24,17">These studies have also shown that searchers distribute their visual attention diferently across organic and ad results on a SERP [24], and that one can determine a webpage's most salient parts by looking at the amount of visual attention paid to its diferent elements [17].</s>
 			<s>This paper builds on prior eye-tracking studies to understand how diferent searchers attend to diferent elements of SERPs and webpages.</s>
-			<s>We complement our eye tracking data with participants’ comments immediately after searching to gain qualitative insight into the meaning of the eye tracking results.</s>
+			<s>We complement our eye tracking data with participants' comments immediately after searching to gain qualitative insight into the meaning of the eye tracking results.</s>
 		</context>
 		<context id="06" section="related work">
 			<s>Query Formulation: Since spelling and query formulation are closely related, this stage of search has been reported to be challenging for those with dyslexia.</s>
@@ -56,7 +56,7 @@
 		</context>
 		<context id="08" section="related work">
 			<s cites="10,38">Furthermore, prior work suggests a strong correlation between dyslexia and lower phonological working memory (i.e., the ability to hold words in short-term memory) [10, 38].</s>
-			<s>Work done to investigate the efects of working memory on search results triage echoes MacFarlane et al.’s findings.</s>
+			<s>Work done to investigate the efects of working memory on search results triage echoes MacFarlane et al.'s findings.</s>
 			<s cites="18">In 2019, a search log study of participants with low and high working memory found that those with lower working memory take more time to frst click on the SERP, open fewer links, and take more time between events [18].</s>
 		</context>
 		<context id="09" section="related work">
@@ -68,9 +68,9 @@
 			<s>However, the small number of participants (2 SWD) makes it hard to extrapolate definitive quantitative diferences from these results.</s>
 		</context>
 		<context id="10" section="">
-			<s cites="25" anonymised="true">In 2018 [25] found SWD’s relevance ratings of webpages were highly correlated with their readability scores.</s>
-			<s>They identifed several visual and textual features such as line length, number of headings, and ratio of images to text, that impact SWDs’ readability and relevance judgements of webpages.</s>
-			<s cites="35" anonymised="true">In 2019, [35] found using the "Reader View" mode in Firefox web browser, which simplifes a page’s visual structure, improved reading speed for SWD without reducing comprehension.</s>
+			<s cites="25" anonymised="true">In 2018 [25] found SWD's relevance ratings of webpages were highly correlated with their readability scores.</s>
+			<s>They identifed several visual and textual features such as line length, number of headings, and ratio of images to text, that impact SWDs' readability and relevance judgements of webpages.</s>
+			<s cites="35" anonymised="true">In 2019, [35] found using the "Reader View" mode in Firefox web browser, which simplifes a page's visual structure, improved reading speed for SWD without reducing comprehension.</s>
 		</context>
 	</contexts>
 	<references>

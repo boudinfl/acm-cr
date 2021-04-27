@@ -50,6 +50,10 @@ for filename in glob.iglob(args.directory+"/**", recursive=True):
             if reference.type not in ["inproceedings", "article"]:
                 continue
 
+            # remove session papers
+            if reference.fields['title'].lower().startswith("session") and 'abstract' not in reference.fields:
+                continue
+
             if key in blacklist:
                 continue
 
@@ -57,7 +61,7 @@ for filename in glob.iglob(args.directory+"/**", recursive=True):
 
             # dd url
             #url = "https://dl.acm.org/doi/pdf/"+key
-        #break
+        # break
 
 with gzip.open(args.output, 'wt') as o:
     for doc_id in collection:
@@ -74,7 +78,10 @@ with gzip.open(args.output, 'wt') as o:
 # writing doc_ids if necessary
 if args.collection:
     with open(args.collection, "wt") as o:
-        o.write('\n'.join(collection.keys()))
+        # o.write('\n'.join(collection.keys()))
+        for doc_id in collection:
+            entry = collection[doc_id]
+            o.write("{}\n".format(json.dumps({'id': doc_id, 'title': entry.fields['title'].strip(), 'abstract': entry.fields.get('abstract', "").strip()})))
 
 
 

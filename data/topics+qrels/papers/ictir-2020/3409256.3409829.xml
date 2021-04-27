@@ -11,7 +11,7 @@
 		<context id="02" section="introduction">
 			<s>Yet reproducibility is key to impactful science.</s>
 			<s cites="10" anonymised="true">[10] define reproducibility as the ability for a different team to reproduce the measurement in a different experimental setup.</s>
-			<s cites="25">Therefore, focussing evaluation solely on datasets that extract key aspects of a problem using a standard dataset – for instance, evaluating LTR techniques solely on LETOR datasets [25] with common features – does not allow us to understand the wider context, such as how an approach will fare when integrated into a fully-fledged search engine’s retrieval stack.</s>
+			<s cites="25">Therefore, focussing evaluation solely on datasets that extract key aspects of a problem using a standard dataset – for instance, evaluating LTR techniques solely on LETOR datasets [25] with common features – does not allow us to understand the wider context, such as how an approach will fare when integrated into a fully-fledged search engine's retrieval stack.</s>
 			<s cites="19">This highlights the importance of end-to-end retrieval experiments – understanding what data are needed for a given approach, and how it interacts with others components (e.g., how many documents should be re-ranked [19] for a LTR approach), reduces the uncertainties when a technique should be deployed to an operational search engine.</s>
 		</context>
 		<context id="03" section="related work">
@@ -22,7 +22,7 @@
 		</context>
 		<context id="04" section="related work">
 			<s cites="4,18,21">Among the other commonly used academic platform are Lemur/Indri (implemented in C) – along the closely related Galago (implemented in Java) [4] – as well as Terrier (implemented in Java) [18] and PISA [21] (implemented in C++).</s>
-			<s> We note that while Python “bindings” exist for various platforms, including Indri, Galago and Anserini, there are no serious contenders for IR platforms written natively in Python.</s>
+			<s> We note that while Python "bindings" exist for various platforms, including Indri, Galago and Anserini, there are no serious contenders for IR platforms written natively in Python.</s>
 			<s>We believe there are several reasons for this, including the challenge of indexing and retrieving from corpora that contains 1-10 million documents, as well as the more recent maturity of Python. Indri and its modern replacement Galago also have rich (domain-specific) query languages that allow the expression of complex retrieval operations.</s>
 		</context>
 		<context id="05" section="related work">

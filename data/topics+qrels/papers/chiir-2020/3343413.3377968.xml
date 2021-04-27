@@ -20,7 +20,7 @@
 			<s>The track contains 80 conversations on different topics, each of which consists of 8-12 turns (or utterances).</s>
 			<s cites="10,16">Much work has been done on multi-turn conversational question answering [10, 16].</s>
 			<s>However, not much is known about how users interact with a machine in a multi-turn conversation and how their utterances can help the system to understand their information needs.</s>
-			<s>Moreover, various aspects of multi-turn conversations are yet to be investigated, such as the way a user’s information need and intent evolves as the conversation develops.</s>
+			<s>Moreover, various aspects of multi-turn conversations are yet to be investigated, such as the way a user's information need and intent evolves as the conversation develops.</s>
 		</context>
 		<context id="03" section="related work">
 			<s>Conversational search has been a long standing research problem in the IR community.</s>
@@ -38,9 +38,9 @@
 			<s cites="30" anonymised="true">Along the same line, [30] proposed a theoretical framework for conversational search highlighting the need for multi-turn interactions with users for narrowing down their specific information needs.</s>
 			<s cites="35" anonymised="true">[35] studied conversations of real users to determine the frequently-used interactions and inform a conversational search system design.</s>
 			<s>A close line of research deals with identifying user-intent while searching for information.</s>
-			<s cites="30,3,8">Much work has been done in this direction, some of which include query suggestion to clarify users’ intent in a traditional IR setting [30], asking clarifying questions from users to understand users’ intent and redirect the search [3], clarifying user-intent by eliminating non-relevant items through negative user feedback in a conversational search [8].</s>
+			<s cites="30,3,8">Much work has been done in this direction, some of which include query suggestion to clarify users' intent in a traditional IR setting [30], asking clarifying questions from users to understand users' intent and redirect the search [3], clarifying user-intent by eliminating non-relevant items through negative user feedback in a conversational search [8].</s>
 			<s cites="5" anonymised="true">On the other end of the spectrum, [5] posited that while understanding user intent and actions is important, little work has been addressed towards understanding the action taken by a conversational agent in the same context.</s>
-			<s>They thus provided a framework for understanding the human-computer interaction from an agent’s point of view.</s>
+			<s>They thus provided a framework for understanding the human-computer interaction from an agent's point of view.</s>
 			<s cites="37" anonymised="true">[37] listed the important factors to consider while designing a conversational assistant.</s>
 			<s>One of their key findings was that it is essential to maintain the conversational context which is one of the focal points of our paper.</s>
 		</context>

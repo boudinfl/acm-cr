@@ -3,6 +3,7 @@
 """Convert citation contexts into queries / qrels."""
 
 import os
+import json
 import glob
 import argparse
 import xml.etree.ElementTree as ET
@@ -28,10 +29,15 @@ def flatten_list(a):
     return [item for sublist in a for item in sublist]
 
 with open(args.collection, "rt") as f:
-    collection = set([line.strip() for line in f])
+    # collection = set([line.strip() for line in f])
+    collection = []
+    for i, line in enumerate(f):
+        doc = json.loads(line.strip())
+        collection.append(doc["id"])
     print('{} doc_ids in the collection'.format(len(collection)))
 
 topics = []
+json_topics = []
 qrels = []
 nb_papers = 0
 
@@ -74,12 +80,17 @@ for filename in glob.iglob(args.input+"/**", recursive=True):
                 topics.append("<top>\n<num> Number: {}\n<title> {}\n\n<desc> Description:\n{}\n\n<narr> Narrative:\n{}\n</top>\n".format(context_id, title, " ".join(sentences), ""))
                 for mark, rel_doc_id in set(context_qrels):
                     qrels.append("{}\t{}\t{}\t{}".format(context_id, mark, rel_doc_id, "1"))
+                json_topics.append(json.dumps({"id": context_id, "context": " ".join(sentences)}))
+
 
 with open(args.output+".topics", "wt") as o:
     o.write("\n".join(topics))
 
 with open(args.output+".qrels", "wt") as o:
     o.write("\n".join(qrels))
+
+with open(args.output+".jsonl", "wt") as o:
+    o.write("\n".join(json_topics))
 
 print('overall: {} queries and {} qrels from {} papers'.format(len(topics), len(qrels), nb_papers))
 

@@ -8,3 +8,4 @@ data/indexes/
 data/docs/
 output/
 anserini/
+data/topics+qrels/contexts.jsonl

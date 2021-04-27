@@ -25,7 +25,7 @@
 			<s cites="21,33,3,36,42,5">Previous work has explored the fairness problem in recommendation from the perspective of selection aspects [21, 33, 35], marketing bias [36], popularity bias [42], multiple stakeholders [5] in terms of consumers and providers, among others.</s>
 			<s>Existing research on fairness has shown that protected groups, defined as the population of vulnerable individuals in terms of sensitive features such as gender, age, race, religion, etc., are easily treated in a discriminatory way.</s>
 			<s>However, it is generally not easy to obtain access to such sensitive attributes, as users often prefer not to disclose such personal information.</s>
-			<s>In this study, we instead consider a directly observable property, the visibility of the user to the explainable RS model, which relates to a user’s level of activity on the platform, and may directly entail subpar treatment by the recommendation engine.</s>
+			<s>In this study, we instead consider a directly observable property, the visibility of the user to the explainable RS model, which relates to a user's level of activity on the platform, and may directly entail subpar treatment by the recommendation engine.</s>
 		</context>
 		<context id="04" section="introduction">
 			<s>We are interested in solving the fairness problem on the user side specifically for knowledge graph (KG) enhanced explainable recommender systems.</s>
@@ -33,7 +33,7 @@
 			<s>KG-based approaches have thus grown substantially in popularity in explainable recommendation.</s>
 			<s>Their explicit explanations take the form of reasoning paths, consisting of a sequence of relationships that start from a user and ultimately lead to a recommended item.</s>
 			<s cites="1,37,38,40,41,44">State-of-the-art KG-based explainable RS methods [1, 37, 38, 40, 41, 44] utilize rich entity and relation information within the KG to augment the modeling of user–item interactions, so as to better understand the user preferences to make satisfactory recommendation decisions, accompanied by explainable reasoning paths.</s>
-			<s>However, due to the fundamental nature of collaborative filtering, current KG-based explainable recommendation methods heavily rely on users’ collective historical interactions for model learning, so the recommendations and corresponding explanations tend to be more consistent with the dominating historical user interactions.</s>
+			<s>However, due to the fundamental nature of collaborative filtering, current KG-based explainable recommendation methods heavily rely on users' collective historical interactions for model learning, so the recommendations and corresponding explanations tend to be more consistent with the dominating historical user interactions.</s>
 			<s>Because of this, current RS methods tend to neglect the user–item interactions of less visible, inactive users, since they are easily overwhelmed by more visible, active users.</s>
 		</context>
 		<context id="05" section="related work">

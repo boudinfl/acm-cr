@@ -5,8 +5,8 @@
 	<contexts>
 		<context id="01" section="introduction">
 			<s>With the technological advances in developing mobile devices, we witnessed an evolution of mobile devices as well as the ways people access information through these devices.</s>
-			<s cites="8">Research on mobile information retrieval (mobile IR) is aimed at “enabling users to carry out, using a mobile device, all the classical IR operations that they were used to carry out on a desktop” [8].</s>
-			<s>The evolution of mobile devices as well as their applications (a.k.a. apps) not only enables users to carry out the “classical IR” tasks on their mobile devices, but also identifies new methods of interaction and information access.</s>
+			<s cites="8">Research on mobile information retrieval (mobile IR) is aimed at "enabling users to carry out, using a mobile device, all the classical IR operations that they were used to carry out on a desktop" [8].</s>
+			<s>The evolution of mobile devices as well as their applications (a.k.a. apps) not only enables users to carry out the "classical IR" tasks on their mobile devices, but also identifies new methods of interaction and information access.</s>
 		</context>
 		<context id="02" section="introduction">
 			<s cites="11" anonymised="true">Research on mobile IR started as early as 2006 when [11] studied query logs of Google mobile search.</s>
@@ -16,10 +16,10 @@
 			<s cites="15" anonymised="true">For instance, [15] studied and found significant differences in search patterns done using iPhone, iPad, and desktop.</s>
 			<s cites="7" anonymised="true">[7] conducted a comparative study on mobile spoken and written queries showing that spoken queries are longer and closer to natural language.</s>
 			<s cites="14" anonymised="true">[14] conducted a diary study in which they found that contextual features such as activity and time influence 72% of mobile information needs.</s>
-			<s cites="5" anonymised="true">[5] studied user interactions concerning mobile apps and mobile search, finding that users’ interactions with apps have an impact on search.</s>
+			<s cites="5" anonymised="true">[5] studied user interactions concerning mobile apps and mobile search, finding that users' interactions with apps have an impact on search.</s>
 			<s cites="9" anonymised="true">[9] found that fragmented attention of users while searching on-the-go, affects their search objective and performance perception.</s>
-			<s cites="1" anonymised="true">Also, [1] confirmed the findings of this study by studying people’s behavior while searching in different contexts through a field study.</s>
-			<s cites="3">More recently, researchers indicated the need for a universal mobile search framework and found that commercial mobile search engines such as Google and Bing are not the preferred means of information access for the majority of users’ information needs [3].</s>
+			<s cites="1" anonymised="true">Also, [1] confirmed the findings of this study by studying people's behavior while searching in different contexts through a field study.</s>
+			<s cites="3">More recently, researchers indicated the need for a universal mobile search framework and found that commercial mobile search engines such as Google and Bing are not the preferred means of information access for the majority of users' information needs [3].</s>
 			<s>As it is obvious, above-mentioned studies either had access to commercial search logs or developed a specific app for their study.</s>
 		</context>
 	</contexts>

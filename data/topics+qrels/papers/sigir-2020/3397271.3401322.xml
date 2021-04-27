@@ -41,7 +41,7 @@
 		</context>
 		<context id="07" section="related work">
 			<s cites="9,10">The MatchPyramid [9, 10] (MP for short) is one of the earliest models that starts with capturing word-level matching patterns for retrieval.</s>
-			<s>It casts the ad-hoc retrieval task as a series of image recognition problems, where the “image” is the matching matrix of a query-document pair (q,d), and each “pixel” is the interaction value of a query term qi and a document term dj.</s>
+			<s>It casts the ad-hoc retrieval task as a series of image recognition problems, where the "image" is the matching matrix of a query-document pair (q,d), and each "pixel" is the interaction value of a query term qi and a document term dj.</s>
 			<s>Typical interaction functions are cosine similarity, dot product, Gaussian kernel, and indicator function (for exact match).</s>
 			<s>The intuition behind hierarchical convolutions and pooling is to model phrase, sentence and even paragraph level matching patterns.</s>
 		</context>
@@ -52,18 +52,18 @@
 			<s>DRMM is not position-preserving, as the authors claim that relevance matching is not related to term order.</s>
 		</context>
 		<context id="09" section="related work">
-			<s cites="15">The KNRM [15] model takes matrix representation for query-document interaction (similar to MP), but “categorizes” interactions into different levels of cosine similarities (similar to DRMM), using Gaussian kernels with different mean value μ.</s>
+			<s cites="15">The KNRM [15] model takes matrix representation for query-document interaction (similar to MP), but "categorizes" interactions into different levels of cosine similarities (similar to DRMM), using Gaussian kernels with different mean value μ.</s>
 			<s>The distinct advantage of KNRM over DRMM is that the former allows gradient to pass through Gaussian kernels, and therefore supports end-to-end learning of embeddings.</s>
 		</context>
 		<context id="10" section="related work">
 			<s cites="5,10,15">According to results reported in respective studies [5, 10, 15], the relative performance of three models for mono-lingual IR should be KNRM > DRMM > MP, even when embedding learning is turned off with KNRM.</s>
-			<s>Tweaking a neural model for support of CLIR is trivial: instead of considering interaction value as two terms’ similarity in a mono-lingual embedded space, we consider the proximity of their representations in the shared cross-lingual embedded space.</s>
+			<s>Tweaking a neural model for support of CLIR is trivial: instead of considering interaction value as two terms' similarity in a mono-lingual embedded space, we consider the proximity of their representations in the shared cross-lingual embedded space.</s>
 			<s>However, there are several matters to consider while making the transition:</s>
 		</context>
 		<context id="11" section="related work">
 			<s cites="8">Query translation based CLIR methods (e.g., TbT-QT [8]) first translate queries fromLs to Lt, then use mono-lingual retrieval in Lt.</s>
 			<s>Apart from the inherent vocabulary mismatch problem within Lt, the translation error from Ls to Lt has to be also counted.</s>
-			<s>Looking at the example in Table 1, TbT-QT would look for occurrence of “telefónicos” in the collection, and documents containing only the correct translation (“teléfono”) would be overlooked.</s>
+			<s>Looking at the example in Table 1, TbT-QT would look for occurrence of "telefónicos" in the collection, and documents containing only the correct translation ("teléfono") would be overlooked.</s>
 			<s>Interaction-based neural matching models alleviate this issue by giving partial credit to suboptimal nearest neighbors, which in many cases are the correct translations.</s>
 			<s>To demonstrate the necessity of directly using cross-lingual word embedding similarity as interaction for neural models, we conduct comparative experiments where queries are first translated term-by-term like TbT-QT using CLWEs, then used for retrieval in mono-lingual setting.</s>
 			<s>Such models are referred to as {MP,DRMM,K-NRM}-TbT-QT, respectively.</s>

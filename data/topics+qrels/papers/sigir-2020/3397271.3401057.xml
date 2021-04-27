@@ -15,8 +15,8 @@
 			<s cites="13,35,20,34">To understand and capture student interests on MOOCs platforms, multiple efforts have been done, including course recommendation [13, 35], behavior prediction [20], user intentions understanding [34], etc.</s>
 			<s>Among these efforts, recommendation system is applied by MOOCs provider to recommend courses to students.</s>
 			<s>However, a course usually consists of a number of video lectures with each one covering some specific knowledge concepts.</s>
-			<s>Direct course recommendation overlooks students’ interest to specific knowledge concept, e.g., computer vision courses taught by different instructors may be quite different in a microscopic view (cover different sets of knowledge concepts): someone instructor may only cover geometry based methods while other one may only cover deep learning based methods, and thus recommending the computer vision course only covering geometry based methods to the student interested in the deep learning based methods will not be a good match.</s>
-			<s>Therefore, it requires to study students’ online learning interests from a microscopic view and conduct knowledge concept recommendation.</s>
+			<s>Direct course recommendation overlooks students' interest to specific knowledge concept, e.g., computer vision courses taught by different instructors may be quite different in a microscopic view (cover different sets of knowledge concepts): someone instructor may only cover geometry based methods while other one may only cover deep learning based methods, and thus recommending the computer vision course only covering geometry based methods to the student interested in the deep learning based methods will not be a good match.</s>
+			<s>Therefore, it requires to study students' online learning interests from a microscopic view and conduct knowledge concept recommendation.</s>
 		</context>
 		<context id="03" section="introduction">
 			<s>Traditional recommendation strategy, such as collaborative filtering (CF), which considers user (students) historical interactions and makes recommendations based on potential common preferences from users with similar interests, has achieved great success.</s>
@@ -25,15 +25,15 @@
 			<s>In a MOOCs platform, we observe that in addition to the user and knowledge concept, there exist multiple types of entities (video, course, teacher) and multiple types of relationships between pair of different entities.</s>
 			<s>Table 1 shows the statistics of the real-world XuetangX data collected between January 1st, 2018 and March 31st, 2018.</s>
 			<s>This data consists of 9,986 users, 43,405 videos, 7,020 courses, 5,038 teachers, 1,029 knowledge concepts, and corresponding multiple types of relationships.</s>
-			<s>As shown in Figure 1, the “course: V_9e77179” includes the “knowledge concept: c++”, the “student: 207256” is taking the “course: CaltechX”, the “video: V_1a9aa686” is related to the “knowledge concept: binary tree”, and the “course: CaltechX” is taught by the “teacher: Smith”.</s>
-			<s>Further more, taking users’ behavior history into consideration, we can discover additional relationships.</s>
-			<s>For example, the “user: 207256” clicked the “knowledge concept: c++”, “knowledge concept: binary tree”, and “knowledge concept: depth-first search”.</s>
+			<s>As shown in Figure 1, the "course: V_9e77179" includes the "knowledge concept: c++", the "student: 207256" is taking the "course: CaltechX", the "video: V_1a9aa686" is related to the "knowledge concept: binary tree", and the "course: CaltechX" is taught by the "teacher: Smith".</s>
+			<s>Further more, taking users' behavior history into consideration, we can discover additional relationships.</s>
+			<s>For example, the "user: 207256" clicked the "knowledge concept: c++", "knowledge concept: binary tree", and "knowledge concept: depth-first search".</s>
 			<s>Accounting for above multiple types of relationships, we can get much more fruitful facts and interactions between the user and knowledge concepts.</s>
-			<s>If we merely depend on the basic structures, it is difficult to find the significant interaction between “knowledge concept: depth-first search” and “knowledge concept: time complexity”, which belong to different courses but are clicked by one user.</s>
+			<s>If we merely depend on the basic structures, it is difficult to find the significant interaction between "knowledge concept: depth-first search" and "knowledge concept: time complexity", which belong to different courses but are clicked by one user.</s>
 			<s>As shown in Figure 1, different knowledge concepts contain different context.</s>
 			<s>Only utilizing single type of interaction may overlook the significant relations between user and knowledge concept.</s>
-			<s>For example, “knowledge concept: c++” and “knowledge concept: binary tree” have dissimilar semantics even though they are included in the same video.</s>
-			<s>These heterogeneous relationships provide rich side information and can benefit the recommendation system in three folds: (1) semantic relatedness among knowledge concepts can be introduced and help to identify the latent interaction; (2) a user’s interests can be reasonably extended and the diversity of recommended knowledge concepts can be increased; and (3) a user’s interest can be interpreted by tracking a user’s historical records along these relationships.</s>
+			<s>For example, "knowledge concept: c++" and "knowledge concept: binary tree" have dissimilar semantics even though they are included in the same video.</s>
+			<s>These heterogeneous relationships provide rich side information and can benefit the recommendation system in three folds: (1) semantic relatedness among knowledge concepts can be introduced and help to identify the latent interaction; (2) a user's interests can be reasonably extended and the diversity of recommended knowledge concepts can be increased; and (3) a user's interest can be interpreted by tracking a user's historical records along these relationships.</s>
 			<s>Thus, it requires to incorporate these heterogeneous relationships into the representation learning of the entities.</s>
 		</context>
 		<context id="04" section="introduction">

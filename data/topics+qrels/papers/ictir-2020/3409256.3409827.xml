@@ -17,7 +17,7 @@
 			<s>Put another way, out-of-KG facts or entities can not be processed with their system.</s>
 			<s>Our approach solves this issue by relying on a data model that can represent n-grams, skip-grams, and sentence boundaries.</s>
 			<s>Relying on our data model, we can then retrieve text regions as evidences for KG facts.</s>
-			<s cites="17">[17] investigate how to model query execution plans with respect to recall of relevant documents and the query’s execution time.</s>
+			<s cites="17">[17] investigate how to model query execution plans with respect to recall of relevant documents and the query's execution time.</s>
 			<s>Their approach contrasts between two models: inverted index based approach versus scanning the entire document collection.</s>
 			<s cites="7">[7] describes an algorithm that identifies a relevant set of documents for named entities by finding a token-set-cover for various surface forms of the named entity and computing a join of the retrieved documents.</s>
 			<s cites="21,23">[21, 23] describe approaches to query phrases using combinations of inverted, phrase, nextword, and direct indexes.</s>

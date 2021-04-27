@@ -10,11 +10,11 @@
 			<s>While much room for improvement remains in the current implementations of the conversational AI systems, the potential for intelligent, empathetic and broad-coverage conversational systems is widely recognized.</s>
 		</context>
 		<context id="02" section="introduction">
-			<s>However, for open-domain conversational system to be engaging and intelligent, it must keep the user’s interest for extended periods, without sounding “boring” or “annoying”, which unfortunately is the case for current voice-based assistants.</s>
-			<s cites="25">In this paper, we investigate one natural approach to handle “boring” responses, which is to modulate response prosody via commonly available Speech Synthesis Markup Language (SSML) [25].</s>
+			<s>However, for open-domain conversational system to be engaging and intelligent, it must keep the user's interest for extended periods, without sounding "boring" or "annoying", which unfortunately is the case for current voice-based assistants.</s>
+			<s cites="25">In this paper, we investigate one natural approach to handle "boring" responses, which is to modulate response prosody via commonly available Speech Synthesis Markup Language (SSML) [25].</s>
 			<s>For our experiments, we replaced common phrases (i.e. filter words or interjections) with prerecorded Speechcons from Alexa Skills Kit APIs.</s>
 			<s>In some cases, the pitch and rate of these Speechcons are additioanlly tuned to convey excitement, hesitation and emphasis, allowing the agent to deliver a variety of empathetic responses to users.</s>
-			<s>The example conversation provided in Figure 1 shows how our system utilized prerecorded Speechcons such as “Allright” or “Aw Man” to improve naturalness in conversations.</s>
+			<s>The example conversation provided in Figure 1 shows how our system utilized prerecorded Speechcons such as "Allright" or "Aw Man" to improve naturalness in conversations.</s>
 		</context>
 		<context id="03" section="related work">
 			<s>Recently, conversational systems research has experienced dramatic progress.</s>
@@ -30,7 +30,7 @@
 		<context id="05" section="related work">
 			<s cites="8">Speech synthesis is an active research field that studies the artificial production of human speech [8].</s>
 			<s>Speech synthesizers, also known as text-to-speech (TTS) synthesizers, are placed at the final phase of modern dialogue systems to transform textual output into a natural voice output.</s>
-			<s>In conversation-related speech strategies, several work focused on analyzing the impact of interjections and filter words such as “Um”, “Uh” and “Wow” to user behaviors.</s>
+			<s>In conversation-related speech strategies, several work focused on analyzing the impact of interjections and filter words such as "Um", "Uh" and "Wow" to user behaviors.</s>
 			<s cites="20,26">For instance, [20, 26] reported the change in eye gaze behavior when conversations start with these filter words.</s>
 			<s cites="24">Another study [24] showed that speech models trained on positive exclamations achieved higher satisfaction from listening tests.</s>
 			<s cites="3,4,9,15">Based on these empirical findings, recent dialogue systems [3, 4, 9, 15] incorporated liveliness by adjusting the prosodies of interjections and filter words using SSML.</s>

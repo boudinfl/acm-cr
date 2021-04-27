@@ -23,7 +23,7 @@
 		</context>
 		<context id="04" section="related work">
 			<s cites="4" anonymised="true">To compress a large neural network, [4] propose distillation.</s>
-			<s>They use the large network as a teacher to train a small network (student) by minimizing the distance between the two models’ output prediction probability distributions.</s>
+			<s>They use the large network as a teacher to train a small network (student) by minimizing the distance between the two models' output prediction probability distributions.</s>
 			<s cites="5,10">Recently, a family of distillation algorithms have been proposed for distilling large teacher transformers to small student transformers [5, 10].</s>
 			<s cites="4,11" anonymised="true">Compared to [4], they also minimize the distance between student and teacher self attention distributions in the intermediate layers [11].</s>
 			<s>To the best of our knowledge, there is no prior work studying distilling BERT for search ranking.</s>

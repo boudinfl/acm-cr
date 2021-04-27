@@ -14,14 +14,14 @@
 			<s cites="5,19">While explainable system design is not new (dating back to rule-based expert systems of the 1980s [5]), the role of explanations has gained more attention in the past decade [29].</s>
 		</context>
 		<context id="03" section="">
-			<s cites="26" anonymised="true">Our work starts with seven main goals of explanations, proposed by [26]: transparency, intended to explain how the system works; scrutability, allowing users to tell the system if it is wrong; trust, increasing users’ confidence in the system; effectiveness, helping users to make good decisions; efficiency, helping users to make decisions faster; persuasiveness, trying to convince users to select the given item; and satisfaction, increasing the ease of use of a system.</s>
+			<s cites="26" anonymised="true">Our work starts with seven main goals of explanations, proposed by [26]: transparency, intended to explain how the system works; scrutability, allowing users to tell the system if it is wrong; trust, increasing users' confidence in the system; effectiveness, helping users to make good decisions; efficiency, helping users to make decisions faster; persuasiveness, trying to convince users to select the given item; and satisfaction, increasing the ease of use of a system.</s>
 			<s cites="26">They argued that these goals should be identified as distinct, even if they may interact [26].</s>
 			<s cites="20,8,13,26">Most previous studies on generating explanations optimize a single goal [20], and only a handful consider multiple goals [8, 13, 26].</s>
 			<s>Yet, depending on the perspective of the explanation generator, different goals may be appropriate, and may need to be traded off.</s>
 		</context>
 		<context id="04" section="related work">
 			<s cites="13,14,23,28">The ability for an artificially intelligent system to explain recommendations has been shown to be an important factor for user acceptance and satisfaction [13, 14, 23, 28].</s>
-			<s cites="20">Explanations can be characterized along a number of dimensions, including their content, form of presentation, and system’s intended purpose [20].</s>
+			<s cites="20">Explanations can be characterized along a number of dimensions, including their content, form of presentation, and system's intended purpose [20].</s>
 			<s>Our interest is in the latter category, where we use the term goal to refer to the objective or purpose of the explanation.</s>
 			<s cites="20,2,6,19">Specifically, our focus is on natural language explanations, the most commonly used way of presentation both historically [20] and recently [2, 6, 19].</s>
 		</context>
@@ -31,7 +31,7 @@
 			<s cites="20">For example, in [20] satisfaction is not considered as a single objective, but is split into ease to use, enjoyment, and usefulness.</s>
 			<s>Nonetheless, these seven goals are regarded as the canonical categorization within explainability research for recommender systems, accurately reflecting the goals that have been studied in the past.</s>
 			<s>Certain goals may be measured objectively and quantitatively.</s>
-			<s cites="3,6,13,30">For example, effectiveness may be measured as the change of a user’s rating of (or reported interest in) an item before and after consuming that item [3, 6], efficiency may be measured by time spent on rating an item [13] or reading an explanation [6], and persuasiveness may be measured in terms of click through rate [30].</s>
+			<s cites="3,6,13,30">For example, effectiveness may be measured as the change of a user's rating of (or reported interest in) an item before and after consuming that item [3, 6], efficiency may be measured by time spent on rating an item [13] or reading an explanation [6], and persuasiveness may be measured in terms of click through rate [30].</s>
 			<s>Here, we aim to compare different goals on equal footing, and thus focus on the subjective perception of the recipient—measured at the time when a recommendation and explanation are shown.</s>
 		</context>
 		<context id="06" section="related work">

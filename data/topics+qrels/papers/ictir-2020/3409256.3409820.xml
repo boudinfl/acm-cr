@@ -6,7 +6,7 @@
 		<context id="01" section="introduction">
 			<s cites="8,14">Evaluation is essential for the development of search and recommendation systems [8, 14].</s>
 			<s>Before any ranking model is widely deployed it is important to first verify whether it is a true improvement over the currently-deployed model.</s>
-			<s>A traditional way of evaluating relative differences between systems is through A/B testing, where part of the user population is exposed to the current system (“control") and the rest to the altered system (“treatment") during the same time period.</s>
+			<s>A traditional way of evaluating relative differences between systems is through A/B testing, where part of the user population is exposed to the current system ("control") and the rest to the altered system ("treatment") during the same time period.</s>
 			<s cites="4">Differences in behavior between these groups can then indicate if the alterations brought improvements, e.g. if the treatment group showed a higher Click-Through-Rate (CTR) or more revenue was made with this system [4].</s>
 		</context>
 		<context id="02" section="introduction">

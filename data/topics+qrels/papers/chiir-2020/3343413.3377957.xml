@@ -7,7 +7,7 @@
 			<s cites="3">Although the acquirement, input, and editing of numeric values (represented either by digits or text) are important parts of mobile text entry [3], these have not been well explored in the literature.</s>
 			<s>This negligence is evident in the suggestion bars of virtual keyboards.</s>
 			<s cites="7,21,25">Nowadays, almost all virtual keyboards come with suggestion bars that present the most probable next words and seldom phrases using linguistic models [7, 21, 25].</s>
-			<s>However, none of these models provide the support for numeric values, thus the suggestion bars remain “blank” when these values are being entered or edited.</s>
+			<s>However, none of these models provide the support for numeric values, thus the suggestion bars remain "blank" when these values are being entered or edited.</s>
 		</context>
 		<context id="02" section="introduction">
 			<s>The findings of an informal survey and user feedback from our previous studies revealed that mobile users desire an effective and user friendly method for interacting with numbers since they often work with numeric values on mobile devices.</s>

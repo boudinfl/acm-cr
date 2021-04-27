@@ -48,7 +48,7 @@
 			<s cites="3">Although FM can be generalized to high-order cases, it suffers from computational cost of exponential complexity [3] and low model capability of shallow architecture.</s>
 			<s cites="16">Field-aware Factorization Machine (FFM) [16] assumes that features may have dissimilar semantics under distinct fields and extends the idea of FM by making the feature representation field-specific.</s>
 			<s>Although it achieves better CTR result than FM, the parameter size and complexity are also increased and overfitting is easier to happen.</s>
-			<s cites="32">Attentional Factorization Machine (AFM) [32] extends FM with an “attention net” that improves not only the performance but also interpretability.</s>
+			<s cites="32">Attentional Factorization Machine (AFM) [32] extends FM with an "attention net" that improves not only the performance but also interpretability.</s>
 			<s>The authors argue that the feature salience provided by the attention network greatly enhance the transparency of FM.</s>
 			<s>That said, AFM can only learn up to the second-order attention-based salience due to the inherit architectural limit of FM.</s>
 		</context>
@@ -59,8 +59,8 @@
 			<s cites="31">Deep&amp;Cross Network (DCN) [31] slightly differs from Wide&amp;Deep in that DCN replaces the linear model with a cross-product transformation to integrate high-order information with non-linear deep features.</s>
 			<s cites="9">DeepFM [9] improves these two models by replacing the polynomial production with an FM component.</s>
 			<s>The deep MLP component captures the high-order feature interaction and the FM analyzes the second-order feature interaction.</s>
-			<s cites="19">xDeepFM [19] claims that MLP parameters are actually arbitrarily modeling the “implicit” feature interactions.</s>
-			<s>The authors hence introduce compressed interaction network (CIN) to model the “explicit” features alongside the implicit ones.</s>
+			<s cites="19">xDeepFM [19] claims that MLP parameters are actually arbitrarily modeling the "implicit" feature interactions.</s>
+			<s>The authors hence introduce compressed interaction network (CIN) to model the "explicit" features alongside the implicit ones.</s>
 			<s cites="38,37">Recent works from industry practice include DIN [38] and DIEN [37] that respectively model the static and dynamic shopping interest of users.</s>
 			<s>Both work heavily rely on deep feed-forward networks which are typically unexplainable.</s>
 		</context>

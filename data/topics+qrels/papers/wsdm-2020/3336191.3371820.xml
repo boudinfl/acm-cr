@@ -66,7 +66,7 @@
 			<s>In our work, we demonstrate how to leverage partial knowledge of the system to improve parameter tuning efforts.</s>
 		</context>
 		<context id="11" section="related work">
-			<s>Offline evaluation is critical for production search systems to sanity check any new experiments and prevent system behavior that may be detrimental to the users’ experience.</s>
+			<s>Offline evaluation is critical for production search systems to sanity check any new experiments and prevent system behavior that may be detrimental to the users' experience.</s>
 			<s cites="14">[14] use previously collected click data in order to perform interleaved comparison methods between various rankers and find that it can be less expensive than running live interleaving experiments.</s>
 			<s cites="18">[18] provides a method of doing offline evaluation of different contextual bandit based article recommendations, where a primary motivation is to not hurt user experience by exposing potentially poor-quality algorithms.</s>
 		</context>

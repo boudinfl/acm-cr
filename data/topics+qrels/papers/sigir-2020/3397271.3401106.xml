@@ -13,8 +13,8 @@
 			<s>This paper aims to investigate the neural underpinnings of graded relevance directly.</s>
 		</context>
 		<context id="02" section="introduction">
-			<s cites="48,8,57">Relevance is also known to be subjective and difficult to quantify [48] since it depends on a searcher’s perception of information relating to a specific Information Need (IN) at a certain point in time [8, 57].</s>
-			<s cites="7,27,52,2">However, given the semantic gap between a searcher’s IN and their formulated queries [7, 27, 52], IR systems have employed various techniques to capture the subjective aspect of relevance [2] to improve the effectiveness of retrieved results.</s>
+			<s cites="48,8,57">Relevance is also known to be subjective and difficult to quantify [48] since it depends on a searcher's perception of information relating to a specific Information Need (IN) at a certain point in time [8, 57].</s>
+			<s cites="7,27,52,2">However, given the semantic gap between a searcher's IN and their formulated queries [7, 27, 52], IR systems have employed various techniques to capture the subjective aspect of relevance [2] to improve the effectiveness of retrieved results.</s>
 			<s cites="38,24,36,47">Examples of such techniques are explicit [38], implicit (e.g. [24, 36]) and physiological [47] feedback.</s>
 			<s cites="2,15,16,22,25,28,33,37,48,65">More recently, researchers have shown the possibility of capturing the neural processes associated with relevance, using brain imaging techniques [2, 15, 16, 22, 25, 28, 33, 37, 48, 65].</s>
 			<s cites="15,16,65">These studies have either investigated relevance in the context of word associations (i.e. relevance of a word with respect to another) [15, 16, 65] without subjects experiencing any IN; or investigated relevance in the context of Information Retrieval (IR) when IN has been introduced to subjects.</s>
@@ -64,7 +64,7 @@
 			<s cites="15,16,65">Another line of research has examined relevance in the context of word associations, employing EEG in isolation, or in combination with eye gaze [15, 16, 65].</s>
 			<s>In these scenarios, participants did not experience IN, but they engaged in judging word association to the topic.</s>
 			<s cites="16">The findings of these studies have shown that brain signals differ when subjects process relevant vs. non-relevant words across time [16].</s>
-			<s cites="15" anonymised="true">Later, [15] introduced a brain-relevance paradigm enabling recommendation of information to users without any explicit user interaction, based on EEG signals alone evoked by users’ engagement with the textual content.</s>
+			<s cites="15" anonymised="true">Later, [15] introduced a brain-relevance paradigm enabling recommendation of information to users without any explicit user interaction, based on EEG signals alone evoked by users' engagement with the textual content.</s>
 		</context>
 	</contexts>
 	<references>

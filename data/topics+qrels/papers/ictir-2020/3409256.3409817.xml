@@ -11,15 +11,15 @@
 			<s cites="8,1">Such a system can assist users to refine their information need, i.e., by disclosing new information to them [8], or posing clarifying questions [1].</s>
 		</context>
 		<context id="02" section="introduction">
-			<s cites="1,2,6,9">Clarifying questions trigger users’ explicit feedback in the form of an answer, and have been shown to improve user experience [1, 2, 6, 9].</s>
+			<s cites="1,2,6,9">Clarifying questions trigger users' explicit feedback in the form of an answer, and have been shown to improve user experience [1, 2, 6, 9].</s>
 			<s cites="1">In Figure 1, we demonstrate examples of clarification-based conversations appearing in the conversational search dataset Qulac [1].</s>
 			<s>Specifically, we plot the most frequent user responses (4−grams) to clarifying questions.</s>
-			<s>Responses can be read starting from the circle centre (START) and moving outwards (e.g., “no I am looking...”).</s>
-			<s>We observe that user responses often start with a “yes” or a “no”, but frequently provide additional information (e.g., “No, I want...”).</s>
+			<s>Responses can be read starting from the circle centre (START) and moving outwards (e.g., "no I am looking...").</s>
+			<s>We observe that user responses often start with a "yes" or a "no", but frequently provide additional information (e.g., "No, I want...").</s>
 			<s>We hypothesise that this explicit feedback can be used to improve ranking, even when the question asked ranges from being partially relevant to completely irrelevant w.r.t. the information need.</s>
 		</context>
 		<context id="03" section="introduction">
-			<s>In this paper, we study the effect of the user’s feedback in mixed-initiative conversations.</s>
+			<s>In this paper, we study the effect of the user's feedback in mixed-initiative conversations.</s>
 			<s>We categorise answers w.r.t. their polarity and length. Answer polarity indicates whether the question points to a relevant direction or not, while answer length enables us to (noisily) identify the presence of additional information in the response.</s>
 			<s cites="1,7">We conduct our analysis on the Qulac dataset [1], using a query likelihood model chosen because of its simplicity and transparency [7].</s>
 		</context>

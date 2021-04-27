@@ -4,10 +4,10 @@
 	<abstract>Term frequency is a common method for identifying the importance of a term in a document. But term frequency ignores how a term interacts with its text context, which is key to estimating document-specific term weights. This paper proposes a Deep Contextualized Term Weighting framework (DeepCT) that maps the contextualized term representations from BERT to into context-aware term weights for passage retrieval. The new, deep term weights can be stored in an ordinary inverted index for efficient retrieval. Experiments on two datasets demonstrate that DeepCT greatly improves the accuracy of first-stage passage retrieval algorithms.</abstract>
 	<contexts>
 		<context id="01" section="introduction">
-			<s cites="3">This paper seeks to improve term importance estimation in first-stage retrieval models by using deep language models like BERT [3] to capture a term’s contextual features.</s>
+			<s cites="3">This paper seeks to improve term importance estimation in first-stage retrieval models by using deep language models like BERT [3] to capture a term's contextual features.</s>
 			<s>We present the Deep Contextualized Term Weighting framework (DeepCT).</s>
 			<s>DeepCT learns a contextualized term representation model based on BERT, and a mapping function from representations to term weights.</s>
-			<s>The transformer encoder of BERT allows DeepCT to capture semantic and syntactic features from a term’s linguistic context, helping DeepCT to identify semantically important terms from the text.</s>
+			<s>The transformer encoder of BERT allows DeepCT to capture semantic and syntactic features from a term's linguistic context, helping DeepCT to identify semantically important terms from the text.</s>
 			<s>DeepCT generates deep, context-aware document-specific term weights that can replace the standard tf.</s>
 		</context>
 		<context id="02" section="related work">

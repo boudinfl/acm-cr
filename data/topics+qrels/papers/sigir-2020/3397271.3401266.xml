@@ -37,7 +37,7 @@
 			<s cites="5">Recent work has shown that Transformer-based models, e.g., BERT [5], can highly improve inference.</s>
 			<s cites="23" anonymised="true">[23] applied it to Ad Hoc Document Retrieval, obtaining significant improvement.</s>
 			<s cites="8" anonymised="true">[8] fine-tuned BERT for AS2, achieving the state of the art.</s>
-			<s>However, BERT’s high computational cost prevents its use in most real-word applications.</s>
+			<s>However, BERT's high computational cost prevents its use in most real-word applications.</s>
 			<s cites="15">Some solutions rely on leveraging knowledge distillation in the pre-training step, e.g., [15].</s>
 			<s cites="19">In contrast, we propose an alternative (and compatible with the initiatives above) approach following previous work in document retrieval, e.g., the use of sequential rerankers [19].</s>
 			<s cites="21" anonymised="true">[21] focused on quickly identifying a set of good candidate documents to be passed to the second and further rerankers of the cascade.</s>

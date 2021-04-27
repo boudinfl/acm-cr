@@ -5,13 +5,13 @@
 	<contexts>
 		<context id="01" section="introduction">
 			<s cites="4">Recent years have witnessed the increased popularity and explosive growth of the World Wide Web, which has generated huge amounts of data and leaded to progressively severe information overload problem [4].</s>
-			<s>In consequence, how to extract information (products or services) that satisfy users’ information requirements at the proper time and place has become increasingly important.</s>
+			<s>In consequence, how to extract information (products or services) that satisfy users' information requirements at the proper time and place has become increasingly important.</s>
 			<s>This motivates several information retrieval mechanisms, such as search, recommendation, and online advertising.</s>
-			<s cites="10">These retrieval mechanisms could generate a set of objects that best match users’ explicit or implicit preferences [10].</s>
+			<s cites="10">These retrieval mechanisms could generate a set of objects that best match users' explicit or implicit preferences [10].</s>
 			<s cites="21">Efforts have been made on developing supervised or unsupervised methods for these information retrieval mechanisms [21].</s>
 			<s cites="41">However, since the widely use of mobile applications during the recent years, more and more information retrieval services have provided interactive functionality and products [41], these conventional techniques typically face several common challenges.</s>
-			<s>First, most of traditional approaches consider information retrieval tasks in a static environment and extract information via a fixed greedy strategy, which may fail to catch the dynamic characteristics of users’ preferences (or environment).</s>
-			<s cites="24">Second, the majority of existing methods aims to maximize user’s immediate satisfaction, while completely overlooking whether the generate information can benefit more to user’s preference in the long run [24].</s>
+			<s>First, most of traditional approaches consider information retrieval tasks in a static environment and extract information via a fixed greedy strategy, which may fail to catch the dynamic characteristics of users' preferences (or environment).</s>
+			<s cites="24">Second, the majority of existing methods aims to maximize user's immediate satisfaction, while completely overlooking whether the generate information can benefit more to user's preference in the long run [24].</s>
 			<s cites="27">Thus, learning from interaction becomes a crucial machine learning paradigm for interactive IR, which is based on reinforcement learning [27].</s>
 		</context>
 		<context id="02" section="introduction">
@@ -20,9 +20,9 @@
 			<s>Under the DRL schema, complex problems are addressed by acquiring experiences through interactions with a dynamic environment.</s>
 			<s cites="13">The result is an optimal policy that can provide decision making solutions to complex tasks without any specific instructions [13].</s>
 			<s>Introducing DRL to information retrieval community can naturally tackle the above-mentioned challenges.</s>
-			<s>First, DRL considers information retrieval tasks as sequential interactions between an RL agent (system) and users (environment), where the agent continuously update the information retrieval strategies based on users’ real-time feedback, so as to generate information best match users’ dynamic preferences.</s>
-			<s>Second, the DRL-based techniques targets to optimize users’ long-term satisfaction or engagement.</s>
-			<s>Therefore, the agent could identify information to achieve the trade-off between users’ short-term and long-term satisfaction.</s>
+			<s>First, DRL considers information retrieval tasks as sequential interactions between an RL agent (system) and users (environment), where the agent continuously update the information retrieval strategies based on users' real-time feedback, so as to generate information best match users' dynamic preferences.</s>
+			<s>Second, the DRL-based techniques targets to optimize users' long-term satisfaction or engagement.</s>
+			<s>Therefore, the agent could identify information to achieve the trade-off between users' short-term and long-term satisfaction.</s>
 		</context>
 		<context id="03" section="introduction">
 			<s cites="3,5,11,12,15,38,39,40">Given the advantages of reinforcement learning, there have been tremendous interests in developing RL based information retrieval techniques [3, 5, 11, 12, 15, 38–40].</s>
@@ -38,13 +38,13 @@
 			<s cites="34">MDP-DIV [34] formalized diverse ranking as a continuous state Markov decision process, and policy gradient algorithm of REINFORCE is leveraged to maximize the accumulated long-term rewards in terms of the diversity metric.</s>
 		</context>
 		<context id="05" section="related work">
-			<s>Recommender systems aim to learn users’ preferences based on their feedback and suggest items to match their preferences.</s>
-			<s>User’s preference is assumed to be static in traditional recommendation algorithms such as collaborative filtering, which is usually not true in real-world recommender systems where users’ preferences are highly dynamic.</s>
+			<s>Recommender systems aim to learn users' preferences based on their feedback and suggest items to match their preferences.</s>
+			<s>User's preference is assumed to be static in traditional recommendation algorithms such as collaborative filtering, which is usually not true in real-world recommender systems where users' preferences are highly dynamic.</s>
 			<s cites="33,37">Bandit methods [33, 37] usually utilizes a variable reward function to delineate the dynamic nature of the environment (reward distributions).</s>
-			<s cites="6,9,42">Another solution is to introduce the MDP setting [6, 9, 42], where state represents user’s preference and state transition depicts the dynamic nature of user’s preference over time.</s>
-			<s cites="39">In [39], a user’s dynamic preference (state) is learned from her browsing history and feedback.</s>
-			<s>Each time a user provides feedback (skip, click or purchase) to an item, the recommender system will update the state to capture user’s new preferences.</s>
-			<s>Conventional recommender algorithms also suffer from the exploitation-exploration dilemma, where exploitation is to suggest items that best match users’ preferences, while exploration is to randomly suggest items to mine more users’ possible preferences.</s>
+			<s cites="6,9,42">Another solution is to introduce the MDP setting [6, 9, 42], where state represents user's preference and state transition depicts the dynamic nature of user's preference over time.</s>
+			<s cites="39">In [39], a user's dynamic preference (state) is learned from her browsing history and feedback.</s>
+			<s>Each time a user provides feedback (skip, click or purchase) to an item, the recommender system will update the state to capture user's new preferences.</s>
+			<s>Conventional recommender algorithms also suffer from the exploitation-exploration dilemma, where exploitation is to suggest items that best match users' preferences, while exploration is to randomly suggest items to mine more users' possible preferences.</s>
 			<s cites="30,2,1">The contextual bandit method is introduced to achieve the trade-off between exploitation and exploration with strategies such as ε-greedy [30], EXP3 [2], and UCB1 [1].</s>
 		</context>
 		<context id="06" section="related work">
@@ -55,7 +55,7 @@
 			<s cites="20,28,35,36">The ad selection task is typically modeled as multi-armed bandit (MAB) problem [20, 28, 35, 36], which neglects the fact that bidding actions would continuously occur before the budget running out.</s>
 			<s>Thus, the MDP setting is introduced.</s>
 			<s cites="3">For example, a model-based RL framework is proposed in RTB setting [3], where the state value is approximated by neural network to address the scalability problem of large auction amounts and the limited budget.</s>
-			<s cites="12">In [12], a multi-agent bidding model is proposed to jointly consider all the advertisers’ biddings in the system, and a clustering approach is introduced to deal with a large number of advertisers.</s>
+			<s cites="12">In [12], a multi-agent bidding model is proposed to jointly consider all the advertisers' biddings in the system, and a clustering approach is introduced to deal with a large number of advertisers.</s>
 		</context>
 	</contexts>
 	<references>

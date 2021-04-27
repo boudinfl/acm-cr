@@ -6,23 +6,23 @@
 		<context id="01" section="introduction">
 			<s cites="6,7,25">Recommender systems have been well integrated into many aspects of our lives [6, 7, 25].</s>
 			<s cites="11,16,20,23,33">In many domains such as e-commerce, entertainment, news feeds, hiring platforms, and social networks, these systems are primarily used to help users discover new items that might be of interest to them [11, 16, 20, 23, 33].</s>
-			<s cites="26">Document recommendation however, is a unique domain in that its chief concern is to facilitate re-finding of user’s items [26].</s>
+			<s cites="26">Document recommendation however, is a unique domain in that its chief concern is to facilitate re-finding of user's items [26].</s>
 		</context>
 		<context id="02" section="introduction">
 			<s cites="15,26">In comparison with other recommendation domains, document recommendation has been less examined with only few studies in this area focusing on improving the accuracy of the recommender algorithm behind the scenes [15, 26].</s>
-			<s>While the algorithm is an important aspect of the system, knowing about the effects of other aspects, for instance, presentation, explanations, and users’ interaction with the recommended items on user experience helps with designing more effective recommender systems.</s>
+			<s>While the algorithm is an important aspect of the system, knowing about the effects of other aspects, for instance, presentation, explanations, and users' interaction with the recommended items on user experience helps with designing more effective recommender systems.</s>
 		</context>
 		<context id="03" section="introduction">
-			<s>In this work, we focus on user’s experience with recommended documents.</s>
+			<s>In this work, we focus on user's experience with recommended documents.</s>
 			<s>Because individuals and their collaborators are likely to have had previous interactions with the document, the extent to which they recognize the recommended documents or how useful they find the documents may depend on these past interactions.</s>
-			<s cites="2,13">Inspired by previous work in personal information management and refinding [2, 13], our study seeks to investigate the effects of three important dimensions of users’ past interactions with documents recommended to them on their recognition of, prior intent to open, and interest in the documents.</s>
+			<s cites="2,13">Inspired by previous work in personal information management and refinding [2, 13], our study seeks to investigate the effects of three important dimensions of users' past interactions with documents recommended to them on their recognition of, prior intent to open, and interest in the documents.</s>
 			<s>The three dimensions are: recency of access, richness of prior interaction, and the presentation of interactions in document summaries.</s>
 		</context>
 		<context id="04" section="related work">
 			<s cites="18">Personal information management (PIM) seeks to understand and support the activities people perform to acquire, organize, maintain, retrieve, and use personal information [18].</s>
 			<s>Personal information can come in many forms including documents, web pages, email messages, notes, etc.</s>
 			<s>People use personal information to complete tasks and fulfil different roles.</s>
-			<s cites="18" anonymised="true">[18] outlines six ways in which information can be personal: Owned by, about, directed toward, sent by, experienced by, or relevant to “me”.</s>
+			<s cites="18" anonymised="true">[18] outlines six ways in which information can be personal: Owned by, about, directed toward, sent by, experienced by, or relevant to "me".</s>
 		</context>
 		<context id="05" section="related work">
 			<s>Several studies have looked into characterizing and supporting personal information management strategies.</s>
@@ -47,7 +47,7 @@
 		</context>
 		<context id="07" section="related work">
 			<s>Another body of work investigates how people recall and refind previously seen information.</s>
-			<s cites="10,27,29">Research has shown that a significant portion of an individual’s web accesses tends to be revisits [10, 27, 29].</s>
+			<s cites="10,27,29">Research has shown that a significant portion of an individual's web accesses tends to be revisits [10, 27, 29].</s>
 			<s cites="17" anonymised="true">[17] study how people retain web information they have found for future use.</s>
 			<s cites="28" anonymised="true">In a user study on search, [28] reports that what makes a search result memorable is the rank and whether it was clicked on.</s>
 		</context>
@@ -61,9 +61,9 @@
 		</context>
 		<context id="09" section="related work">
 			<s>Other studies have been concerned with finding presentations that help with better recognition.</s>
-			<s cites="9" anonymised="true">[9] design thumbnails that show a person’s interaction with webpages for instance, by marking pages they have visited close together in time and those they have frequently accessed.</s>
+			<s cites="9" anonymised="true">[9] design thumbnails that show a person's interaction with webpages for instance, by marking pages they have visited close together in time and those they have frequently accessed.</s>
 			<s cites="30" anonymised="true">In another work, [30] examine how different representations of web pages affect refinding and finding new information that the user has never seen before.</s>
-			<s>They find for example, that thumbnails help with refinding, but only when the page’s thumbnail has been seen before.</s>
+			<s>They find for example, that thumbnails help with refinding, but only when the page's thumbnail has been seen before.</s>
 		</context>
 		<context id="10" section="related work">
 			<s cites="11,19,32,35,25,34,16,23">Personalized recommendations are increasingly employed in a variety of areas, most commonly in entertainment to for instance recommend music or videos [11, 19, 32, 35], product recommendation in online shopping platforms [25, 34], and social media platforms [16, 23].</s>

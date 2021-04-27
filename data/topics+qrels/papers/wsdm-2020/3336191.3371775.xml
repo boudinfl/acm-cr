@@ -17,7 +17,7 @@
 		</context>
 		<context id="03" section="introduction">
 			<s>In the personal email search scenario, user queries impose different requirements on different aspects of email documents to be retrieved.</s>
-			<s>For example, the query “my recent flight to the US” requires the email search system to focus on both the textual contents and the recency of email documents, while queries such as “medical history” expect emails to be retrieved regardless of the recency.</s>
+			<s>For example, the query "my recent flight to the US" requires the email search system to focus on both the textual contents and the recency of email documents, while queries such as "medical history" expect emails to be retrieved regardless of the recency.</s>
 			<s>In email search models, different properties of email documents are reflected by different types of features, including dense numerical ones (e.g., document age) and sparse categorical ones (e.g., n-grams).</s>
 			<s>However, there have been few efforts that study how to effectively exploit both dense and sparse features in the learning-to-rank setting, probably because a natural approach exists—simply concatenating dense features with embedded sparse features and feeding them into the DNNs.</s>
 			<s cites="15,38,39,45">Indeed, many previous deep neural email search models use direct concatenation of dense features with embedded sparse features [15, 38, 39, 45].</s>

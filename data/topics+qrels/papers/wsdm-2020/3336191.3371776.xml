@@ -14,7 +14,7 @@
 			<s>In these platforms, user-generated item lists are manually created, curated, and managed by users.</s>
 			<s>Typically, users must first identify candidate items, determine if they are a good fit for a list, add them to a list, and then potentially provide ongoing updates to the list (e.g., by adding or deleting items over time).</s>
 			<s>To accelerate this process and assist users to explore more related items for their lists, we study the important yet challenging problem of user-generated item list continuation.</s>
-			<s>That is, how can we recommend items that are related to the list and fit the user’s preferences?</s>
+			<s>That is, how can we recommend items that are related to the list and fit the user's preferences?</s>
 			<s cites="34">Compared with traditional item-based recommendation [34], list continuation faces complexities, since the length of lists varies from several items to even thousands of items and the user preference on items may dynamically evolve as a list develops.</s>
 			<s>Moreover, the individual preference of how items are grouped together also varies for each user and across different platforms.</s>
 			<s>Facing these challenges, we propose a consistency-aware recommender for user-generated item list continuation that is motivated by three key observations.</s>
@@ -26,7 +26,7 @@
 			<s>Indeed, some user-generated item lists may be organized around a specific theme, genre, or mood.</s>
 			<s>However, some lists are organized by more personalized patterns and are seemingly inconsistent.</s>
 			<s>To illustrate, List A in Figure 1(a) has strong consistency between recent books and previous books.</s>
-			<s>The books are from either the Harry Potter series or the Twilight series, organized around genres like “Fantasy".</s>
+			<s>The books are from either the Harry Potter series or the Twilight series, organized around genres like "Fantasy".</s>
 			<s>List B in Figure 1(b) is only weakly consistent with a mystery book Binds That Tie following two books about dogs.</s>
 			<s>Indeed, we find in Figure 2 that list consistency varies greatly both within a single platform and across different platforms.</s>
 			<s>As a result, we require new methods that can dynamically adapt to this heterogeneity of list consistency.</s>

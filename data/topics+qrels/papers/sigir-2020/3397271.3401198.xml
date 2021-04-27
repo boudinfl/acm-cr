@@ -10,7 +10,7 @@
 		</context>
 		<context id="02" section="related work">
 			<s>Although bundles are currently widely used everywhere, few efforts have been made in solving the bundle recommendation problem.</s>
-			<s cites="6,2">List Recommendation Model (LIRE) [6] and Embedding Factorization Machine (EFM) [2] simultaneously utilized the users’ interactions with both items and bundles under the BPR framework.</s>
+			<s cites="6,2">List Recommendation Model (LIRE) [6] and Embedding Factorization Machine (EFM) [2] simultaneously utilized the users' interactions with both items and bundles under the BPR framework.</s>
 			<s cites="7">The Bundle BPR (BBPR) Model [7] made use of the parameter previously learned through an item BPR model.</s>
 			<s cites="3">Recently, Deep Attentive Multi-Task Model (DAM) [3] jointly modeled user-bundle interactions and user-item interactions in a multi-task manner.</s>
 		</context>
