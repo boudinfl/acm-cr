@@ -23,6 +23,10 @@ parser.add_argument("--collection",
                     help="dois for the document collection.",
                     type=str)
 
+parser.add_argument("--sentences",
+                    help="use sentences as queries.",
+                    action='store_true')
+
 args = parser.parse_args()
 
 def flatten_list(a):
@@ -68,6 +72,8 @@ for filename in glob.iglob(args.input+"/**", recursive=True):
                 if sentence.get("cites"):
                     markers = sentence.get("cites")
                     rel_documents.append([(mark, citations[mark]) for mark in markers.split(",") if citations[mark] in collection])
+                else:
+                    rel_documents.append([])
 
             # context id is doc_id (after /)+ context number
             context_id = doi.split(".")[-1] + context.get("id")
@@ -77,10 +83,20 @@ for filename in glob.iglob(args.input+"/**", recursive=True):
 
             # consider query if there is at least one relevant document in the collection
             if context_qrels:
-                topics.append("<top>\n<num> Number: {}\n<title> {}\n\n<desc> Description:\n{}\n\n<narr> Narrative:\n{}\n</top>\n".format(context_id, title, " ".join(sentences), ""))
-                for mark, rel_doc_id in set(context_qrels):
-                    qrels.append("{}\t{}\t{}\t{}".format(context_id, mark, rel_doc_id, "1"))
-                json_topics.append(json.dumps({"id": context_id, "context": " ".join(sentences)}))
+                if args.sentences:
+                    for i, sentence_qrels in enumerate(rel_documents):
+                        if len(sentence_qrels):
+                            sentence_id = doi.split(".")[-1][:6] + str(len(topics))
+                            topics.append("<top>\n<num> Number: {}\n<title> {}\n\n<desc> Description:\n{}\n\n<narr> Narrative:\n{}\n</top>\n".format(sentence_id, title, sentences[i], ""))
+                            for mark, rel_doc_id in set(sentence_qrels):
+                                qrels.append("{}\t{}\t{}\t{}".format(sentence_id, mark, rel_doc_id, "1"))
+                            json_topics.append(json.dumps({"id": sentence_id, "context": sentences[i]}))
+
+                else:
+                    topics.append("<top>\n<num> Number: {}\n<title> {}\n\n<desc> Description:\n{}\n\n<narr> Narrative:\n{}\n</top>\n".format(context_id, title, " ".join(sentences), ""))
+                    for mark, rel_doc_id in set(context_qrels):
+                        qrels.append("{}\t{}\t{}\t{}".format(context_id, mark, rel_doc_id, "1"))
+                    json_topics.append(json.dumps({"id": context_id, "context": " ".join(sentences)}))
 
 
 with open(args.output+".topics", "wt") as o:

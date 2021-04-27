@@ -1,12 +1,23 @@
 #!/usr/bin/env bash
 
-BASENAME="data/topics+qrels/contexts"
+# CONTEXTS="paragraphs"
+# BASENAME="data/topics+qrels/contexts"
+
+# # create topics/qrels from xml files
+# python3 src/contexts_to_queries.py \
+#         --input data/topics+qrels/papers/ \
+#         --collection data/docs/collection.jsonl \
+#         --output ${BASENAME}
+
+CONTEXTS="sentences"
+BASENAME="data/topics+qrels/sentences"
 
 # create topics/qrels from xml files
 python3 src/contexts_to_queries.py \
         --input data/topics+qrels/papers/ \
         --collection data/docs/collection.jsonl \
-        --output ${BASENAME}
+        --output ${BASENAME} \
+        --sentences
 
 TOPICS="${BASENAME}.topics"
 QRELS="${BASENAME}.qrels"
@@ -20,14 +31,14 @@ do
     EXP=${INDEX##*/lucene-index.}
     for MODEL in "bm25" # "qld"
     do
-        if [[ ! -f "output/run.${EXP}.${TOPICFIELD}.${MODEL}.txt" ]]
+        if [[ ! -f "output/run.${EXP}.${TOPICFIELD}.${CONTEXTS}.${MODEL}.txt" ]]
         then
             # retrieve documents using the given model
             sh anserini/target/appassembler/bin/SearchCollection \
                -topicreader Trec \
                -index ${INDEX} \
                -topics ${TOPICS} \
-               -output output/run.${EXP}.${TOPICFIELD}.${MODEL}.txt -${MODEL} \
+               -output output/run.${EXP}.${TOPICFIELD}.${CONTEXTS}.${MODEL}.txt -${MODEL} \
                -topicfield ${TOPICFIELD} \
                -hits 20
         fi

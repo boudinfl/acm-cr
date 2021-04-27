@@ -62,7 +62,7 @@ print("Inferring embeddings for contexts ...")
 reranked_contexts = {}
 contexts_embeddings = {}
 for context_id in contexts:
-    print(" - Processing {} ...".format(context_id), end='', flush=True)
+    print(" - Processing {} ({}) ...".format(context_id, len(reranked_contexts)+1), end='', flush=True)
     with torch.no_grad():
         outputs = model(**contexts[context_id][1])
         context_embedding = torch.mean(outputs.last_hidden_state, dim=1).squeeze()
@@ -76,7 +76,7 @@ for context_id in contexts:
             outputs = model(**inputs)
             document_embedding = torch.mean(outputs.last_hidden_state, dim=1).squeeze()
             document_embeddings.append(document_embedding)
-            cosine_similarities[doc_id] = cosine(context_embedding, document_embedding)
+            cosine_similarities[doc_id] = 1.0 - cosine(context_embedding, document_embedding)
     print("... {} document embeddings done".format(len(document_embeddings)))
 
     reranked_documents = {k: v for k, v in sorted(cosine_similarities.items(), key=lambda item: item[1], reverse=True)}
@@ -87,8 +87,10 @@ for context_id in contexts:
 
 with open(args.output, 'w') as o:
     for context_id in reranked_contexts:
+        rank = 1
         for rel_doc, score in reranked_contexts[context_id].items():
             # 337177001 Q0 10.1145/2213556.2213568 1 74.030197 Anserini
-            o.write("{}\t{}\t{}\t{}\t{}\t{}\n".format(context_id, 'Q0', rel_doc, '1', score, "SciBert"))
+            o.write("{}\t{}\t{}\t{}\t{}\t{}\n".format(context_id, 'Q0', rel_doc, rank, score, "SciBert"))
+            rank += 1
 
 

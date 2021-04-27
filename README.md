@@ -125,6 +125,20 @@ avg coverage of collection: 0.5074 [0.0909 - 0.8333]
 
 ## Document retrieval
 
+### Reranking using SciBERT
+
+```
+  python3 src/rerank.py --collection data/docs/collection.jsonl \
+                        --contexts data/topics+qrels/contexts.jsonl \
+                        --input output/run.t+a+k.description.paragraphs.bm25.txt \
+                        --output output/run.t+a+k.description.paragraphs.bm25+scibert.txt
+
+  python3 src/rerank.py --collection data/docs/collection.jsonl \
+                        --contexts data/topics+qrels/sentences.jsonl \
+                        --input output/run.t+a+k.description.sentences.bm25.txt \
+                        --output output/run.t+a+k.description.sentences.bm25+scibert.txt
+```
+
 ### Installing anserini
 
 Here, we use the open-source information retrieval toolkit 

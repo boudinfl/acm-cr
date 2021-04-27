@@ -1,0 +1,6071 @@
+<top>
+<num> Number: 3377960
+<title> Relevance Prediction from Eye-movements Using Semi-interpretable Convolutional Neural Networks
+
+<desc> Description:
+Information relevance is one of the fundamental concepts in Information Science in general, and Information Retrieval (IR) in particular [46, 47].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3377961
+<title> Relevance Prediction from Eye-movements Using Semi-interpretable Convolutional Neural Networks
+
+<desc> Description:
+In a human-centred perspective, relevance arises from interactions between a user's information need and information objects [3].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3377962
+<title> Relevance Prediction from Eye-movements Using Semi-interpretable Convolutional Neural Networks
+
+<desc> Description:
+This interaction results in several manifestations of relevance [48], and becomes meaningful "only ... in relation to goals and tasks" [29].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3377963
+<title> Relevance Prediction from Eye-movements Using Semi-interpretable Convolutional Neural Networks
+
+<desc> Description:
+For instance, some variants of aggregated fixation-count and fixation-duration were used in studies reported in [14, 15, 19, 21, 39, 41, 59, 63].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3377964
+<title> Relevance Prediction from Eye-movements Using Semi-interpretable Convolutional Neural Networks
+
+<desc> Description:
+[6] used reading-to-skimming ratio to infer when participants were reading relevant text.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3377965
+<title> Relevance Prediction from Eye-movements Using Semi-interpretable Convolutional Neural Networks
+
+<desc> Description:
+Over a group of studies, [19–22] reported that reading speed, number of fixations on words, count and length of reading sequences, count and percentage of words fixated upon, durations of reading and scanning, and distance covered by scanning proved to be good indicators of perceived-relevance for textual documents.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3377966
+<title> Relevance Prediction from Eye-movements Using Semi-interpretable Convolutional Neural Networks
+
+<desc> Description:
+For instance, relevance of images have been studied in [5, 16, 17, 24, 26, 36, 67], while that of live webpages were studied in [23, 40, 64].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3377967
+<title> Relevance Prediction from Eye-movements Using Semi-interpretable Convolutional Neural Networks
+
+<desc> Description:
+Though most studies used aggregate features for the whole stimuli duration, the authors of [22] report that features from two-second windows near the end of viewing had more discriminating power than those obtained near the beginning of viewing.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3377968
+<title> Relevance Prediction from Eye-movements Using Semi-interpretable Convolutional Neural Networks
+
+<desc> Description:
+For instance, [64] predicted user-satisfaction while examining search results.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 3377969
+<title> Relevance Prediction from Eye-movements Using Semi-interpretable Convolutional Neural Networks
+
+<desc> Description:
+While statistical tests were significant at the p < .01 level, the classification and prediction accuracies were rarely more than 70% [23, 50, 52, 59].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779710
+<title> Effects of Past Interactions on User Experience with Recommended Documents
+
+<desc> Description:
+In many domains such as e-commerce, entertainment, news feeds, hiring platforms, and social networks, these systems are primarily used to help users discover new items that might be of interest to them [11, 16, 20, 23, 33].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779711
+<title> Effects of Past Interactions on User Experience with Recommended Documents
+
+<desc> Description:
+Document recommendation however, is a unique domain in that its chief concern is to facilitate re-finding of user's items [26].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779712
+<title> Effects of Past Interactions on User Experience with Recommended Documents
+
+<desc> Description:
+In comparison with other recommendation domains, document recommendation has been less examined with only few studies in this area focusing on improving the accuracy of the recommender algorithm behind the scenes [15, 26].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779713
+<title> Effects of Past Interactions on User Experience with Recommended Documents
+
+<desc> Description:
+Inspired by previous work in personal information management and refinding [2, 13], our study seeks to investigate the effects of three important dimensions of users' past interactions with documents recommended to them on their recognition of, prior intent to open, and interest in the documents.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779714
+<title> Effects of Past Interactions on User Experience with Recommended Documents
+
+<desc> Description:
+[4] study whether improvements in search have changed this fundamental aspect of PIM.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779715
+<title> Effects of Past Interactions on User Experience with Recommended Documents
+
+<desc> Description:
+[24] study email use in the context of everyday work practices.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779716
+<title> Effects of Past Interactions on User Experience with Recommended Documents
+
+<desc> Description:
+Folder navigation to retrieve documents is studied in detail in [5].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779717
+<title> Effects of Past Interactions on User Experience with Recommended Documents
+
+<desc> Description:
+An empirical study to compare two methods of organizing documents – placing them into folders or tagging them with labels – is described in [5].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779718
+<title> Effects of Past Interactions on User Experience with Recommended Documents
+
+<desc> Description:
+Research has shown that a significant portion of an individual's web accesses tends to be revisits [10, 27, 29].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779719
+<title> Effects of Past Interactions on User Experience with Recommended Documents
+
+<desc> Description:
+In a user study on search, [28] reports that what makes a search result memorable is the rank and whether it was clicked on.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779720
+<title> Effects of Past Interactions on User Experience with Recommended Documents
+
+<desc> Description:
+[14] show that, with the increase of email messages over time, users tend to rely on search for refinding emails as opposed to using human-generated folders and tags.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779721
+<title> Effects of Past Interactions on User Experience with Recommended Documents
+
+<desc> Description:
+[13] describe the design of a system that facilitates information re-use.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779722
+<title> Effects of Past Interactions on User Experience with Recommended Documents
+
+<desc> Description:
+More recently, researchers have also studied re-visitation patterns [1] and refinding strategies [21] employed by users to go back to previously seen email messages.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779723
+<title> Effects of Past Interactions on User Experience with Recommended Documents
+
+<desc> Description:
+Personalized recommendations are increasingly employed in a variety of areas, most commonly in entertainment to for instance recommend music or videos [11, 19, 32, 35], product recommendation in online shopping platforms [25, 34], and social media platforms [16, 23].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779724
+<title> Effects of Past Interactions on User Experience with Recommended Documents
+
+<desc> Description:
+[15] studied document recommendation in the context of social tagging.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779725
+<title> Effects of Past Interactions on User Experience with Recommended Documents
+
+<desc> Description:
+In more recent work, a document recommendation system to provide quick access to documents on the Google Drive platform was described in [26].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779726
+<title> Effects of Past Interactions on User Experience with Recommended Documents
+
+<desc> Description:
+Several important aspects such as item popularity, recency of access [2], user reconsumption patterns [8] and interconsumption frequency [3] were highlighted.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779827
+<title> Update Delivery Mechanisms for Prospective Information Needs: A Reproducibility Study
+
+<desc> Description:
+Previous work has explored two mechanisms for delivering updates to users: In the so-called "push" approach, an update is delivered to a user's mobile device as a push notification, designed to attract the user's attention with an alert [14].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779828
+<title> Update Delivery Mechanisms for Prospective Information Needs: A Reproducibility Study
+
+<desc> Description:
+[10] compared these two approaches with data drawn from a two-year study in the context of the TREC Real-Time Summarization (RTS) Tracks [11, 12].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779829
+<title> Update Delivery Mechanisms for Prospective Information Needs: A Reproducibility Study
+
+<desc> Description:
+In their paper, [10] noted a number of interesting findings about user attention and information consumption behavior, providing concrete guidance to system designers.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779830
+<title> Update Delivery Mechanisms for Prospective Information Needs: A Reproducibility Study
+
+<desc> Description:
+This paper describes a reproducibility study following the same basic design as [10], but correcting for the methodological shortcomings.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779831
+<title> Update Delivery Mechanisms for Prospective Information Needs: A Reproducibility Study
+
+<desc> Description:
+The context of experiments by [10] was the Real-Time Summarization (RTS) Tracks at TREC 2016 [12] and TREC 2017 [11] (RTS16 and RTS17, for short), whose setup is shown in Figure 1.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779832
+<title> Update Delivery Mechanisms for Prospective Information Needs: A Reproducibility Study
+
+<desc> Description:
+This "living labs" setup [7, 13, 15, 17] attempts to faithfully mimic the real-world deployment of real-time summarization systems.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779833
+<title> Update Delivery Mechanisms for Prospective Information Needs: A Reproducibility Study
+
+<desc> Description:
+Thus, [10] analyzed push vs. pull differences across two evaluations, where delivery differences were conflated with interface changes.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33780034
+<title> Estimating Error and Bias in Offline Evaluation Results
+
+<desc> Description:
+The existence of this problem (and related problems with missing data in recommender evaluation) is well-documented [3, 6, 7, 10].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33780035
+<title> Estimating Error and Bias in Offline Evaluation Results
+
+<desc> Description:
+[2] proposed data splitting and analysis strategies to address popularity bias; these methods affect absolute metric values, but not necessarily the relative performance of algorithms [3].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33780036
+<title> Estimating Error and Bias in Offline Evaluation Results
+
+<desc> Description:
+Using random subsets of the item space as candidates for recommendation may reduce the impact of unknown relevant items [7], but it relies on unrealistically strong assumptions and likely exacerbates popularity bias [10].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33780037
+<title> Estimating Error and Bias in Offline Evaluation Results
+
+<desc> Description:
+If ratings for relevant items are missing at random, recall [19] and unnormalized DCG [17] are unbiased.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33780038
+<title> Estimating Error and Bias in Offline Evaluation Results
+
+<desc> Description:
+Counterfactual evaluation [5, 11, 20] uses causal inference techniques - often inverse propensity scoring - to estimate how users would have responded to a different recommender algorithm.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33780039
+<title> Estimating Error and Bias in Offline Evaluation Results
+
+<desc> Description:
+[6] used probabilistic models to better understand the impact of popularity bias, finding relationships between popularity bias and structural assumptions about the underlying data and inversions in the relative performance of collaborative filtering algorithms between complete and observable data in some cases.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33780140
+<title> The Role of Word-Eye-Fixations for Query Term Prediction
+
+<desc> Description:
+It has been applied to understand the user interest [1], knowledge level [5], a viewed document's relevance [14] or the overall task type [13].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33780141
+<title> The Role of Word-Eye-Fixations for Query Term Prediction
+
+<desc> Description:
+Resulting insights from gaze behavior has been used, for example, for re-ranking results or query expansion [4].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33780142
+<title> The Role of Word-Eye-Fixations for Query Term Prediction
+
+<desc> Description:
+With the open source software Reading Protocol [7] it is possible to automatically process all eye fixations on individual words of viewed web pages in a search session resulting in precise data about word-eye-fixations (duration, frequency, and timestamps).
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33780143
+<title> The Role of Word-Eye-Fixations for Query Term Prediction
+
+<desc> Description:
+[14] studied the user's gaze behavior while reading a list of titles from scientific articles.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33780144
+<title> The Role of Word-Eye-Fixations for Query Term Prediction
+
+<desc> Description:
+[4] used eye-gazed features, e.g. eye movements, fixations, and saccades to find relevant paragraphs.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33780145
+<title> The Role of Word-Eye-Fixations for Query Term Prediction
+
+<desc> Description:
+[1] trained a SVM classifier based on eye-gaze features on short topical documents from Wikipedia which the user has marked as relevant or not.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33780146
+<title> The Role of Word-Eye-Fixations for Query Term Prediction
+
+<desc> Description:
+Lately, [9] introduce a model for predicting document relevance in literature search with signals from EEG and eye-tracking.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33780147
+<title> The Role of Word-Eye-Fixations for Query Term Prediction
+
+<desc> Description:
+[6] found that terms acquired in web search queries are fixated longer than non-query terms.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33780148
+<title> Personalized Entity Search by Sparse and Scrutable User Profiles
+
+<desc> Description:
+Personalization to improve web search result ranking has been a long-standing theme in information retrieval [34, 36].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33780149
+<title> Personalized Entity Search by Sparse and Scrutable User Profiles
+
+<desc> Description:
+[5] has formulated a vision and research agenda for constructing and leveraging personal knowledge graphs (PKG's) in such settings.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33780150
+<title> Personalized Entity Search by Sparse and Scrutable User Profiles
+
+<desc> Description:
+The most important line of exploiting user information for general web search is based on query-and-click logs (e.g., [30, 34]).
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33780151
+<title> Personalized Entity Search by Sparse and Scrutable User Profiles
+
+<desc> Description:
+This helps in interpreting user interests and intents for ambiguous queries as well as for identifying salient pages for popular queries, and for suggestions for query auto-completion (e.g., [29]).
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33780152
+<title> Personalized Entity Search by Sparse and Scrutable User Profiles
+
+<desc> Description:
+In all this, cues about the user's location and daytime are a major asset, too (e.g., [8]).
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33780153
+<title> Personalized Entity Search by Sparse and Scrutable User Profiles
+
+<desc> Description:
+Recommender systems have incorporated personalization as well, for ads, products and other contents (e.g., [17, 26, 31]).
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33780154
+<title> Personalized Entity Search by Sparse and Scrutable User Profiles
+
+<desc> Description:
+This field has recently paid attention to scrutable recommendations that are comprehensible by end-users and pinpoint the specific data that explains how the recommended item was computed [6, 25, 38].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33780155
+<title> Personalized Entity Search by Sparse and Scrutable User Profiles
+
+<desc> Description:
+Entity search about people, products or events has received great attention and has been incorporated into major search engines (see, e.g., [4, 7] and further references there).
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33780156
+<title> Personalized Entity Search by Sparse and Scrutable User Profiles
+
+<desc> Description:
+However, except for special cases such as music recommendation [13] and consumer product search [2], there is hardly any work on personalized entity search with individual user traits.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33780157
+<title> Personalized Entity Search by Sparse and Scrutable User Profiles
+
+<desc> Description:
+Prior works covered two major dimensions [16]: 1. Creating user models from explicit signals like queries, clicks, likes, social links, etc. [1] or/and rich contents like email histories or desktop data [14, 22]. 2. Leveraging this background knowledge for answer ranking, query expansion, and auto-completion suggestion [12, 24, 29].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33780158
+<title> Personalized Entity Search by Sparse and Scrutable User Profiles
+
+<desc> Description:
+On the first dimension, [34] pioneered the analysis of user interests and activities reflected in query, click and mail histories, and possibly even other online contents written or read by a user.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33780159
+<title> Personalized Entity Search by Sparse and Scrutable User Profiles
+
+<desc> Description:
+[28] focused on short-term context, like browser sessions, to infer the user's interest and personalize interactive search.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33780160
+<title> Personalized Entity Search by Sparse and Scrutable User Profiles
+
+<desc> Description:
+To learn from this kind of expressive but highly noisy data, [1] introduced predictive models with learning-to-rank features, whereas [15] and [33] explored the use of similarity signals from taxonomies and ontologies.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33780161
+<title> Personalized Entity Search by Sparse and Scrutable User Profiles
+
+<desc> Description:
+[8] studied the important role of user location.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33780162
+<title> Personalized Entity Search by Sparse and Scrutable User Profiles
+
+<desc> Description:
+For personalized ranking, [32] developed methods for incorporating user-specific priors into language models.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33780163
+<title> Personalized Entity Search by Sparse and Scrutable User Profiles
+
+<desc> Description:
+The interplay of a user's long-term behavior and short-term context for personalized ranking has been investigated in [8, 10].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33780164
+<title> Personalized Entity Search by Sparse and Scrutable User Profiles
+
+<desc> Description:
+[35] and [9] addressed the issue of selective personalization: when to incorporate user profiles.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33780165
+<title> Personalized Entity Search by Sparse and Scrutable User Profiles
+
+<desc> Description:
+[11, 39] utilize folksonomy data, like user-provided tags in social bookmarking communities, as a source for expanding a user's queries.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33780166
+<title> Personalized Entity Search by Sparse and Scrutable User Profiles
+
+<desc> Description:
+[22] personalizes email search via word embeddings learned from email histories.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33780167
+<title> Personalized Entity Search by Sparse and Scrutable User Profiles
+
+<desc> Description:
+[14] proposes methods for harnessing a user's desktop files (incl. email).
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33780168
+<title> Personalized Entity Search by Sparse and Scrutable User Profiles
+
+<desc> Description:
+The same assumption holds for prior work on query auto-completion [12, 29], perhaps the most successful line of personalization in major search engines.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33780169
+<title> Personalized Entity Search by Sparse and Scrutable User Profiles
+
+<desc> Description:
+The closest to our work is [3] on personalized product search.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33780070
+<title> Quantifying the Effects of Prosody Modulation on User Engagement and Satisfaction in Conversational Systems
+
+<desc> Description:
+For instance, there have been successful attempts to predict satisfaction once conversations (sessions) are completed, using traditional methods [17, 22] and neural-based models [13, 14].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33780071
+<title> Quantifying the Effects of Prosody Modulation on User Engagement and Satisfaction in Conversational Systems
+
+<desc> Description:
+Lastly, one recent work [5] proposed a unified neural framework to predict offline (session-level) and online (turn-level) satisfaction simultaneously.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33780072
+<title> Quantifying the Effects of Prosody Modulation on User Engagement and Satisfaction in Conversational Systems
+
+<desc> Description:
+Thus, our work extends the ideas here by first train a state of the art immediate- and offline- satisfaction prediction model [5] and quantify both immediate and longer-term effects on user satisfaction and engagement using our proposed metrics, which are described later.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779873
+<title> A Tool for Conducting User Studies on Mobile Devices
+
+<desc> Description:
+Research on mobile IR started as early as 2006 when [11] studied query logs of Google mobile search.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779874
+<title> A Tool for Conducting User Studies on Mobile Devices
+
+<desc> Description:
+Early studies mainly focused on understanding users information needs on mobile devices [12] and exploring conventional Web-based IR approaches on these devices [6].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779875
+<title> A Tool for Conducting User Studies on Mobile Devices
+
+<desc> Description:
+For instance, [15] studied and found significant differences in search patterns done using iPhone, iPad, and desktop.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779876
+<title> A Tool for Conducting User Studies on Mobile Devices
+
+<desc> Description:
+[7] conducted a comparative study on mobile spoken and written queries showing that spoken queries are longer and closer to natural language.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779877
+<title> A Tool for Conducting User Studies on Mobile Devices
+
+<desc> Description:
+[14] conducted a diary study in which they found that contextual features such as activity and time influence 72% of mobile information needs.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779878
+<title> A Tool for Conducting User Studies on Mobile Devices
+
+<desc> Description:
+[5] studied user interactions concerning mobile apps and mobile search, finding that users' interactions with apps have an impact on search.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779879
+<title> A Tool for Conducting User Studies on Mobile Devices
+
+<desc> Description:
+[9] found that fragmented attention of users while searching on-the-go, affects their search objective and performance perception.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779880
+<title> A Tool for Conducting User Studies on Mobile Devices
+
+<desc> Description:
+Also, [1] confirmed the findings of this study by studying people's behavior while searching in different contexts through a field study.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779881
+<title> A Tool for Conducting User Studies on Mobile Devices
+
+<desc> Description:
+More recently, researchers indicated the need for a universal mobile search framework and found that commercial mobile search engines such as Google and Bing are not the preferred means of information access for the majority of users' information needs [3].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779682
+<title> Harnessing Evolution of Multi-Turn Conversations for Effective Answer Retrieval
+
+<desc> Description:
+Conversational assistants have been employed for information seeking [35] and recommendation [34] among other information systems applications.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779683
+<title> Harnessing Evolution of Multi-Turn Conversations for Effective Answer Retrieval
+
+<desc> Description:
+Moreover, such systems can be used as home assistants, e.g., Alexa and Google Home; or be integrated in a smartphone [1, 2] or wearable devices, e.g., Apple Siri.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779684
+<title> Harnessing Evolution of Multi-Turn Conversations for Effective Answer Retrieval
+
+<desc> Description:
+Some examples include response ranking [40], item recommendation [11], evaluation [19, 21], and asking clarifying questions for users intent disambiguation [3].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779685
+<title> Harnessing Evolution of Multi-Turn Conversations for Effective Answer Retrieval
+
+<desc> Description:
+Multiple turns in a conversation can be used to understand the user information need more effectively [30].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779686
+<title> Harnessing Evolution of Multi-Turn Conversations for Effective Answer Retrieval
+
+<desc> Description:
+Much work has been done on multi-turn conversational question answering [10, 16].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779687
+<title> Harnessing Evolution of Multi-Turn Conversations for Effective Answer Retrieval
+
+<desc> Description:
+Conversational Agents have forayed their applications in various domains ranging from conversational recommender systems [11, 34], human memory augmentation [6], e-Health systems [25], personality recognition [31] to museum tour guidance [22].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779688
+<title> Harnessing Evolution of Multi-Turn Conversations for Effective Answer Retrieval
+
+<desc> Description:
+[17] provides a systematic review on neural approaches to conversational AI developed in the last few years.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779689
+<title> Harnessing Evolution of Multi-Turn Conversations for Effective Answer Retrieval
+
+<desc> Description:
+Recently, rule-based conversational IR system [24, 38, 39] have given way to learning based approaches [20] and even more recent methods based on deep learning [41].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779690
+<title> Harnessing Evolution of Multi-Turn Conversations for Effective Answer Retrieval
+
+<desc> Description:
+Among the several facets of conversational IR systems, one research direction is focused on analyzing user-behavior and interaction with voice-only systems [33].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779691
+<title> Harnessing Evolution of Multi-Turn Conversations for Effective Answer Retrieval
+
+<desc> Description:
+Along the same line, [30] proposed a theoretical framework for conversational search highlighting the need for multi-turn interactions with users for narrowing down their specific information needs.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779692
+<title> Harnessing Evolution of Multi-Turn Conversations for Effective Answer Retrieval
+
+<desc> Description:
+[35] studied conversations of real users to determine the frequently-used interactions and inform a conversational search system design.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779693
+<title> Harnessing Evolution of Multi-Turn Conversations for Effective Answer Retrieval
+
+<desc> Description:
+Much work has been done in this direction, some of which include query suggestion to clarify users' intent in a traditional IR setting [30], asking clarifying questions from users to understand users' intent and redirect the search [3], clarifying user-intent by eliminating non-relevant items through negative user feedback in a conversational search [8].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779694
+<title> Harnessing Evolution of Multi-Turn Conversations for Effective Answer Retrieval
+
+<desc> Description:
+[37] listed the important factors to consider while designing a conversational assistant.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779595
+<title> Enabling Predictive Number Entry and Editing on Touchscreen-Based Mobile Devices
+
+<desc> Description:
+Nowadays, almost all virtual keyboards come with suggestion bars that present the most probable next words and seldom phrases using linguistic models [7, 21, 25].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779596
+<title> Enabling Predictive Number Entry and Editing on Touchscreen-Based Mobile Devices
+
+<desc> Description:
+This process is not only time-consuming and tedious but also distracts the user from the task at hand by forcing her to switch between different apps [1].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779597
+<title> Enabling Predictive Number Entry and Editing on Touchscreen-Based Mobile Devices
+
+<desc> Description:
+[11] designed a gesture-based method for number entry on touchscreens.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779598
+<title> Enabling Predictive Number Entry and Editing on Touchscreen-Based Mobile Devices
+
+<desc> Description:
+[8] proposed a method for automatically adjusting the layout and position of a virtual keypad based on how the user is holding a mobile device.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 33779599
+<title> Enabling Predictive Number Entry and Editing on Touchscreen-Based Mobile Devices
+
+<desc> Description:
+[4] designed a keypad that enables the user to actively select digits and directional gestures as her passwords.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337795100
+<title> Enabling Predictive Number Entry and Editing on Touchscreen-Based Mobile Devices
+
+<desc> Description:
+In a follow-up work, [27] proposed thirteen different codes for classifying errors, and using checksums to detect these errors [29].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340122101
+<title> Local Self-Attention over Long Text for Efficient Document Retrieval
+
+<desc> Description:
+Neural models have shown successful results in a number of IR tasks [9, 10, 17].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340122102
+<title> Local Self-Attention over Long Text for Efficient Document Retrieval
+
+<desc> Description:
+[23] proposed a kernel pooling approach (KNRM) based on a bag-of-words representation of words.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340122103
+<title> Local Self-Attention over Long Text for Efficient Document Retrieval
+
+<desc> Description:
+This was further extended by [5] to incorporate n-gram representations using convolutional architecture.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340122104
+<title> Local Self-Attention over Long Text for Efficient Document Retrieval
+
+<desc> Description:
+Several others [8, 14] have highlighted important considerations for designing neural ranking models for documents that are distinct from dealing with passages and other short text.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340122105
+<title> Local Self-Attention over Long Text for Efficient Document Retrieval
+
+<desc> Description:
+[26] have emphasized on efficiency in neural ranking models and introduced neural models for retrieving documents from a large corpus.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340122106
+<title> Local Self-Attention over Long Text for Efficient Document Retrieval
+
+<desc> Description:
+[16] use pretrained contextual embeddings, without fine-tuning, in downstream ranking models.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340122107
+<title> Local Self-Attention over Long Text for Efficient Document Retrieval
+
+<desc> Description:
+Classically, assessing relevance of documents based on relevant parts has been studied in many forms [3, 21] and this study continues that exploration in the context of neural models.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340122108
+<title> Local Self-Attention over Long Text for Efficient Document Retrieval
+
+<desc> Description:
+Unlike [16, 24], our proposed model is trained in a fully-supervised setting and only requires query-document relevance labels for training.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340103109
+<title> Measuring Recommendation Explanation Quality: The Conflicting Goals of Explanations
+
+<desc> Description:
+Explanations are known to strongly impact how the recipient of a recommendation responds [13, 14, 23, 28], yet the effect is still not well understood.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340103110
+<title> Measuring Recommendation Explanation Quality: The Conflicting Goals of Explanations
+
+<desc> Description:
+While explainable system design is not new (dating back to rule-based expert systems of the 1980s [5]), the role of explanations has gained more attention in the past decade [29].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340103111
+<title> Measuring Recommendation Explanation Quality: The Conflicting Goals of Explanations
+
+<desc> Description:
+Most previous studies on generating explanations optimize a single goal [20], and only a handful consider multiple goals [8, 13, 26].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340103112
+<title> Measuring Recommendation Explanation Quality: The Conflicting Goals of Explanations
+
+<desc> Description:
+The ability for an artificially intelligent system to explain recommendations has been shown to be an important factor for user acceptance and satisfaction [13, 14, 23, 28].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340103113
+<title> Measuring Recommendation Explanation Quality: The Conflicting Goals of Explanations
+
+<desc> Description:
+Explanations can be characterized along a number of dimensions, including their content, form of presentation, and system's intended purpose [20].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340103114
+<title> Measuring Recommendation Explanation Quality: The Conflicting Goals of Explanations
+
+<desc> Description:
+Specifically, our focus is on natural language explanations, the most commonly used way of presentation both historically [20] and recently [2, 6, 19].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340103115
+<title> Measuring Recommendation Explanation Quality: The Conflicting Goals of Explanations
+
+<desc> Description:
+For example, in [20] satisfaction is not considered as a single objective, but is split into ease to use, enjoyment, and usefulness.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340103116
+<title> Measuring Recommendation Explanation Quality: The Conflicting Goals of Explanations
+
+<desc> Description:
+For example, effectiveness may be measured as the change of a user's rating of (or reported interest in) an item before and after consuming that item [3, 6], efficiency may be measured by time spent on rating an item [13] or reading an explanation [6], and persuasiveness may be measured in terms of click through rate [30].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340103117
+<title> Measuring Recommendation Explanation Quality: The Conflicting Goals of Explanations
+
+<desc> Description:
+Most past studies are concerned with a single goal [20], and there is evidence each can be achieved individually [26].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340103118
+<title> Measuring Recommendation Explanation Quality: The Conflicting Goals of Explanations
+
+<desc> Description:
+The most common explanation purpose, according to a large-scale literature review by [20], is transparency, which is also considered key to building user trust [12].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340103119
+<title> Measuring Recommendation Explanation Quality: The Conflicting Goals of Explanations
+
+<desc> Description:
+Concerning the relationship between the two, one previous study indicates that transparency increases user trust [23], while another study finds that transparency and trust are not related [8].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340103120
+<title> Measuring Recommendation Explanation Quality: The Conflicting Goals of Explanations
+
+<desc> Description:
+The second most frequent explanation purpose is effectiveness [20], which can be conflicting with persuasiveness [7].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340103121
+<title> Measuring Recommendation Explanation Quality: The Conflicting Goals of Explanations
+
+<desc> Description:
+There is an important recognized difference between explanations (why a certain suggestion is given) and justifications (why the user may be interested in the item) [19, 27].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340103122
+<title> Measuring Recommendation Explanation Quality: The Conflicting Goals of Explanations
+
+<desc> Description:
+Given a sophisticated recommendation system, justifications may often be provided by filling in natural language templates, for example, by considering simple features such as actor and director names [24] or by extracting relevant and distinguishing characteristics from reviews [19].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340103123
+<title> Measuring Recommendation Explanation Quality: The Conflicting Goals of Explanations
+
+<desc> Description:
+Justifications have in the past been created manually using crowdsourcing [6].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340103124
+<title> Measuring Recommendation Explanation Quality: The Conflicting Goals of Explanations
+
+<desc> Description:
+A main difference between that and ours, is that we ask humans to pick the recommendation as well as explain it, while [6] perform only the latter.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340103125
+<title> Measuring Recommendation Explanation Quality: The Conflicting Goals of Explanations
+
+<desc> Description:
+Subjective perceptions of explanations are often evaluated qualitatively based on user surveys, with responses typically given on Likert scales [6, 8, 10, 17, 21–23].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340119126
+<title> Hier-SPCNet: A Legal Statute Hierarchy-based Heterogeneous Network for Computing Legal Case Document Similarity
+
+<desc> Description:
+A key step for developing these legal IR systems is to estimate the similarity between two legal case documents, which is challenging because legal documents are long, complicated and unstructured [3, 4, 6, 8].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340119127
+<title> Hier-SPCNet: A Legal Statute Hierarchy-based Heterogeneous Network for Computing Legal Case Document Similarity
+
+<desc> Description:
+Existing methodologies for finding similar legal documents are hence unsupervised [3, 4, 6, 8].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340119128
+<title> Hier-SPCNet: A Legal Statute Hierarchy-based Heterogeneous Network for Computing Legal Case Document Similarity
+
+<desc> Description:
+The existing methods for computing legal document similarity and can be broadly classified into network-based methods that rely on citation to prior case documents [3, 8], and text-based methods that rely on the textual content of the documents [6], and hybrid [4].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340119129
+<title> Hier-SPCNet: A Legal Statute Hierarchy-based Heterogeneous Network for Computing Legal Case Document Similarity
+
+<desc> Description:
+To estimate the similarity between legal documents, we propose to apply the graph embedding algorithm Metapath2vec [1] on the heterogeneous Hier-SPCNet.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340119130
+<title> Hier-SPCNet: A Legal Statute Hierarchy-based Heterogeneous Network for Computing Legal Case Document Similarity
+
+<desc> Description:
+We also compare our proposed network-based method with a state-of-the-art text-based method for computing legal document similarity using document embeddings [6].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340119131
+<title> Hier-SPCNet: A Legal Statute Hierarchy-based Heterogeneous Network for Computing Legal Case Document Similarity
+
+<desc> Description:
+Bibliographic Coupling [3]: It is defined as the Jaccard similarity index between the sets of precedent citations (out-citations) from the two documents whose similarity is to be inferred.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340119132
+<title> Hier-SPCNet: A Legal Statute Hierarchy-based Heterogeneous Network for Computing Legal Case Document Similarity
+
+<desc> Description:
+Co-citation [3]: Similar to bibliographic coupling, but it is defined on the sets of in-citations from the two documents.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340119133
+<title> Hier-SPCNet: A Legal Statute Hierarchy-based Heterogeneous Network for Computing Legal Case Document Similarity
+
+<desc> Description:
+Dispersion [8]: This measure measures to what extent the out-neighbours (out-citation documents) of the two documents are themselves similar, i.e., occurs in the same community/cluster.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105134
+<title> Query Rewriting for Voice Shopping Null Queries
+
+<desc> Description:
+Such interactions clearly have negative impact on customers shopping experience [40–42].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105135
+<title> Query Rewriting for Voice Shopping Null Queries
+
+<desc> Description:
+The main motivation for this approach comes from the fact that head queries are known to exhibit much better performance than tail queries, due to richer historical behavioral features [23].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105136
+<title> Query Rewriting for Voice Shopping Null Queries
+
+<desc> Description:
+For instance, in an e-commerce rewriting scenario, it is essential for the alternative queries to retrieve offers that capture the same intent as the originating query [41].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105137
+<title> Query Rewriting for Voice Shopping Null Queries
+
+<desc> Description:
+For example, it was observed that voice queries are closer to natural language than text queries in general search [15], voice reformulations are distinguishable from textual reformulations [17, 22], and that shopping categories and behavioral patterns defer between voice and web e-commerce search [20].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105138
+<title> Query Rewriting for Voice Shopping Null Queries
+
+<desc> Description:
+Most of the previous methods are not particularly suitable for e-commerce queries, which are shorter and more sensitive to context [34], let alone voice e-commerce queries.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105139
+<title> Query Rewriting for Voice Shopping Null Queries
+
+<desc> Description:
+Focusing on tail low-frequency e-commerce queries highlights additional unique challenges and opportunities, especially around finding and ranking good query alternatives [13].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105140
+<title> Query Rewriting for Voice Shopping Null Queries
+
+<desc> Description:
+Using voice as a new medium for search also reveals differences from traditional search in both web [15, 17, 22] and e-commerce [20, 21].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105141
+<title> Query Rewriting for Voice Shopping Null Queries
+
+<desc> Description:
+Alternative queries are generated by dropping [4, 24, 28, 46, 47] or substituting [7, 16, 25] tokens from the original query.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105142
+<title> Query Rewriting for Voice Shopping Null Queries
+
+<desc> Description:
+For example, [25] proposed generating query alternatives by using a large set of ordered query pairs obtained from consecutive queries in web-search sessions.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105143
+<title> Query Rewriting for Voice Shopping Null Queries
+
+<desc> Description:
+For dealing with null e-commerce queries, [41] suggested a post-retrieval approach for dropping terms from a given query that restricts the search results to the same taxonomy of results returned in the past for the original query.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105144
+<title> Query Rewriting for Voice Shopping Null Queries
+
+<desc> Description:
+Other ideas for substitution-based solutions, using the query-flow graph [6], were also proposed [7, 16].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105145
+<title> Query Rewriting for Voice Shopping Null Queries
+
+<desc> Description:
+However, finding good recommendations for tail e-commerce queries based on session co-occurrence turns to be difficult [16].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105146
+<title> Query Rewriting for Voice Shopping Null Queries
+
+<desc> Description:
+For addressing also the long tail of the query distribution, [8] conceptually extend the query-flow graph with term nodes in addition to query nodes.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105147
+<title> Query Rewriting for Voice Shopping Null Queries
+
+<desc> Description:
+[14] proposed to use embedding techniques to expand a query via a k-nearest neighbor search.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105148
+<title> Query Rewriting for Voice Shopping Null Queries
+
+<desc> Description:
+[19] proposed a framework that learns to rewrite queries by unsupervised candidate generation and supervised candidate ranking.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105149
+<title> Query Rewriting for Voice Shopping Null Queries
+
+<desc> Description:
+[44] applied a similar technique based on post-retrieval method for e-commerce web search.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105150
+<title> Query Rewriting for Voice Shopping Null Queries
+
+<desc> Description:
+Indeed, users do not tend to switch between voice and text when reformulating queries [39].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105151
+<title> Query Rewriting for Voice Shopping Null Queries
+
+<desc> Description:
+[22] showed that reformulation patterns of voice queries are different from those in conventional textual searches using both lexical and phonetic changes.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105152
+<title> Query Rewriting for Voice Shopping Null Queries
+
+<desc> Description:
+[17] developed classifiers for distinguishing reformulation of voice query pairs from textual query pairs.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105153
+<title> Query Rewriting for Voice Shopping Null Queries
+
+<desc> Description:
+Approaches towards this task include learning rewritings based on past users' query refinements [2, 31, 32] and applying pseudo-relevance feedback techniques [10, 29, 33, 45].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340133154
+<title> Sentiment-guided Sequential Recommendation
+
+<desc> Description:
+This method illustrates the important role of recurrent neural networks (RNNs) [7] in sequential recommendation.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340133155
+<title> Sentiment-guided Sequential Recommendation
+
+<desc> Description:
+Taking this research as a starting point, subsequent advanced approaches, such as memory-based RNNs [3, 12] and self-attention-based RNNs [5, 11], have taken sequential recommendation technology to a new level.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340133156
+<title> Sentiment-guided Sequential Recommendation
+
+<desc> Description:
+These advanced technologies not only complete the modeling of pure behavior (item) sequences but also fully characterize additional information such as knowledge [3] and features [11] related to items to improve the sequence prediction performance.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340133157
+<title> Sentiment-guided Sequential Recommendation
+
+<desc> Description:
+However, most of the existing models based on sentiment factors [4, 10] focus only on non-sequential recommendations.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105158
+<title> Fairness-Aware Explainable Recommendation over Knowledge Graphs
+
+<desc> Description:
+For instance, on e-commerce platforms such as Amazon, eBay, or Taobao, economically disadvantaged groups often make fewer purchases in light of their limited income and credit opportunities [20].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105159
+<title> Fairness-Aware Explainable Recommendation over Knowledge Graphs
+
+<desc> Description:
+Previous work has explored the fairness problem in recommendation from the perspective of selection aspects [21, 33, 35], marketing bias [36], popularity bias [42], multiple stakeholders [5] in terms of consumers and providers, among others.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105160
+<title> Fairness-Aware Explainable Recommendation over Knowledge Graphs
+
+<desc> Description:
+State-of-the-art KG-based explainable RS methods [1, 37, 38, 40, 41, 44] utilize rich entity and relation information within the KG to augment the modeling of user–item interactions, so as to better understand the user preferences to make satisfactory recommendation decisions, accompanied by explainable reasoning paths.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105161
+<title> Fairness-Aware Explainable Recommendation over Knowledge Graphs
+
+<desc> Description:
+Most notably, for data-driven decision-making algorithms, there are concerns about biases in data and models affecting minority groups and individuals [13].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105162
+<title> Fairness-Aware Explainable Recommendation over Knowledge Graphs
+
+<desc> Description:
+Group fairness, also known as demographic parity, requires that the protected groups be treated equally to advantaged groups or the general population [23, 31, 35].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105163
+<title> Fairness-Aware Explainable Recommendation over Knowledge Graphs
+
+<desc> Description:
+In contrast, individual fairness requires that similar individuals with similar attributes be treated similarly [4, 14, 27, 28].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105164
+<title> Fairness-Aware Explainable Recommendation over Knowledge Graphs
+
+<desc> Description:
+Model bias has in fact been shown to amplify biases in the original data [2, 18, 47].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105165
+<title> Fairness-Aware Explainable Recommendation over Knowledge Graphs
+
+<desc> Description:
+[29] defined fairness measures in recommendation and proposed a Pareto optimization framework for fair recommendation.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105166
+<title> Fairness-Aware Explainable Recommendation over Knowledge Graphs
+
+<desc> Description:
+[30] addresses the supplier fairness in two-sided marketplace platforms and proposed heuristic strategies to jointly optimize fairness and relevance.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105167
+<title> Fairness-Aware Explainable Recommendation over Knowledge Graphs
+
+<desc> Description:
+[3] investigated pairwise recommendation with fairness constraints.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105168
+<title> Fairness-Aware Explainable Recommendation over Knowledge Graphs
+
+<desc> Description:
+[6] addressed the polarization in personalized recommendations, formalized as a multi-armed bandit problem.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105169
+<title> Fairness-Aware Explainable Recommendation over Knowledge Graphs
+
+<desc> Description:
+As for the fairness ranking, [43] proposed a fair top-k ranking task that ensures that the proportion of protected groups in the top-k list remains above a given threshold.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105170
+<title> Fairness-Aware Explainable Recommendation over Knowledge Graphs
+
+<desc> Description:
+[35] presented a conceptual and computational framework for fairness ranking that maximizes the utility for the user while satisfying specific fairness constraints.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105171
+<title> Fairness-Aware Explainable Recommendation over Knowledge Graphs
+
+<desc> Description:
+[21] developed a fairness-aware ranking framework that improves the fairness for individuals without affecting business metrics.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105172
+<title> Fairness-Aware Explainable Recommendation over Knowledge Graphs
+
+<desc> Description:
+[39] draw on causal graphs to detect and remove both direct and indirect rank bias, and show that a casual graph approach outperforms statistical parity-based approaches in terms of the identification and mitigation of rank discrimination.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105173
+<title> Fairness-Aware Explainable Recommendation over Knowledge Graphs
+
+<desc> Description:
+Past work has considered explaining latent factor models [46], explainable deep models [19], social explainable recommendations [32], visual explanations [10], sequential explanations [11], and dynamic explanations [12].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105174
+<title> Fairness-Aware Explainable Recommendation over Knowledge Graphs
+
+<desc> Description:
+[38] proposed an attention-based knowledge-aware model to infer user preferences over KGs for recommendation.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105175
+<title> Fairness-Aware Explainable Recommendation over Knowledge Graphs
+
+<desc> Description:
+[41] adopted reinforcement learning for path inference in knowledge graphs.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105176
+<title> Fairness-Aware Explainable Recommendation over Knowledge Graphs
+
+<desc> Description:
+[7] improved the efficiency of KG-based recommendation based on non-sampling learning.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340133177
+<title> Feature Transformation for Neural Ranking Models
+
+<desc> Description:
+Recently, neural network based deep learning models attract lots of attention for learning-to-rank tasks [1, 5].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340133178
+<title> Feature Transformation for Neural Ranking Models
+
+<desc> Description:
+For example, the YAHOO Learning to Rank Challenge data set [8] applies cumulative distribution-based transformation on all features; the LETOR [23] data set also applies query-level min-max scaling on each feature.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340128179
+<title> How Useful are Reviews for Recommendation? A Critical Review and Potential Improvements
+
+<desc> Description:
+HFT [9] is such a model which tries to regularize the latent features being learned through MF by reusing the same latent features for modeling the reviews' likelihood using LDA [1].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340128180
+<title> How Useful are Reviews for Recommendation? A Critical Review and Potential Improvements
+
+<desc> Description:
+[2, 3, 11, 13] are all popular methods which, in some different way, try to extract features from user reviews and item reviews through deep learning architectures like TextCNN [7], and use these extracted features to perform MF.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340128181
+<title> How Useful are Reviews for Recommendation? A Critical Review and Potential Improvements
+
+<desc> Description:
+Our work also connects to recent discussions [4] on the reproducibility of recent neural methods for recommendation.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340128182
+<title> How Useful are Reviews for Recommendation? A Critical Review and Potential Improvements
+
+<desc> Description:
+Note that the topic of this paper is different from [4] since, in addition to the correctness of recent works, we also deal with a more general meta-question about the utility of reviews for recommendation.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340132183
+<title> A Study of Neural Matching Models for Cross-lingual IR
+
+<desc> Description:
+The increasing popularity of projection-based weakly-supervised [4, 6, 14] and unsupervised [1, 2] cross-lingual word embeddings has spurred unsupervised frameworks [8] for CLIR, while in the realm of monolingual IR, interaction-based neural matching models [5, 10, 15] that utilize semantics contained in word embeddings have been the dominant force.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340132184
+<title> A Study of Neural Matching Models for Cross-lingual IR
+
+<desc> Description:
+A number of researchers [12, 13] later investigated utilizing translation table to build a probabilistic structured query [3] in the target language.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340132185
+<title> A Study of Neural Matching Models for Cross-lingual IR
+
+<desc> Description:
+Recently, [8] showed that CLWEs are good translation resources by experimenting with a CLIR method (dubbed TbT-QT) that translates each query term in the source language to the nearest target language term in the CLWE space.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340132186
+<title> A Study of Neural Matching Models for Cross-lingual IR
+
+<desc> Description:
+TbT-QT takes only the top-1 translation of a query term and uses the query likelihood model [11] for retrieval.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340132187
+<title> A Study of Neural Matching Models for Cross-lingual IR
+
+<desc> Description:
+Representation learning: models in which interaction features are built with differentiable operations (e.g., kernel pooling [15]) allow customizing word embeddings via end-to-end learning from large-scale training data.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340132188
+<title> A Study of Neural Matching Models for Cross-lingual IR
+
+<desc> Description:
+Although representation learning is capable of further improving overall retrieval performance [15], it was shown in the same study that updating word embeddings requires large-scale training data to work well (more than 100k search sessions in their case).
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340132189
+<title> A Study of Neural Matching Models for Cross-lingual IR
+
+<desc> Description:
+Two unsupervised CLIR approaches using CLWEs are proposed by [8].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340132190
+<title> A Study of Neural Matching Models for Cross-lingual IR
+
+<desc> Description:
+For interaction-based matching models, we select three representative models (MatchPyramid [9, 10], DRMM [5] and KNRM [15]) from the literature for analysis and experiments.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340132191
+<title> A Study of Neural Matching Models for Cross-lingual IR
+
+<desc> Description:
+The DRMM [5] model uses a matching histogram to capture the interactions of a query term with the whole document.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340132192
+<title> A Study of Neural Matching Models for Cross-lingual IR
+
+<desc> Description:
+The KNRM [15] model takes matrix representation for query-document interaction (similar to MP), but "categorizes" interactions into different levels of cosine similarities (similar to DRMM), using Gaussian kernels with different mean value μ.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340132193
+<title> A Study of Neural Matching Models for Cross-lingual IR
+
+<desc> Description:
+According to results reported in respective studies [5, 10, 15], the relative performance of three models for mono-lingual IR should be KNRM > DRMM > MP, even when embedding learning is turned off with KNRM.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340132194
+<title> A Study of Neural Matching Models for Cross-lingual IR
+
+<desc> Description:
+Query translation based CLIR methods (e.g., TbT-QT [8]) first translate queries fromLs to Lt, then use mono-lingual retrieval in Lt.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105195
+<title> Attentional Graph Convolutional Networks for Knowledge Concept Recommendation in MOOCs in a Heterogeneous View
+
+<desc> Description:
+In China, millions of users study in XuetangX, which is one of the largest MOOC platforms [20], where thousands of courses are offered on various subjects.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105196
+<title> Attentional Graph Convolutional Networks for Knowledge Concept Recommendation in MOOCs in a Heterogeneous View
+
+<desc> Description:
+A challenging problem for MOOCs is how to attract students to study continuously and efficiently on the platforms, where the overall course completion rate is lower than 5% [34].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105197
+<title> Attentional Graph Convolutional Networks for Knowledge Concept Recommendation in MOOCs in a Heterogeneous View
+
+<desc> Description:
+To understand and capture student interests on MOOCs platforms, multiple efforts have been done, including course recommendation [13, 35], behavior prediction [20], user intentions understanding [34], etc.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105198
+<title> Attentional Graph Convolutional Networks for Knowledge Concept Recommendation in MOOCs in a Heterogeneous View
+
+<desc> Description:
+To overcome this problem, a number of efforts have been done by leveraging side information, such as social networks [11], user/item attributes [27], images [33], contexts [25], etc.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105199
+<title> Attentional Graph Convolutional Networks for Knowledge Concept Recommendation in MOOCs in a Heterogeneous View
+
+<desc> Description:
+To address this issue, we use meta-paths [25] as the guidance to capture the heterogeneous context information in a HIN via GCN.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105200
+<title> Attentional Graph Convolutional Networks for Knowledge Concept Recommendation in MOOCs in a Heterogeneous View
+
+<desc> Description:
+Recently, graph neural networks [1, 4, 15, 26, 30, 31, 36] have become recurrent topics in machine learning, and both have broad applicability.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105201
+<title> Attentional Graph Convolutional Networks for Knowledge Concept Recommendation in MOOCs in a Heterogeneous View
+
+<desc> Description:
+Additionally, the GEM [17] model, a heterogeneous graph neural network approach for detecting malicious accounts at Alipay, has been presented.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105202
+<title> Attentional Graph Convolutional Networks for Knowledge Concept Recommendation in MOOCs in a Heterogeneous View
+
+<desc> Description:
+[32] proposed to use meta-paths based latent features to represent the connectivity between users and items along with different types of paths.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340105203
+<title> Attentional Graph Convolutional Networks for Knowledge Concept Recommendation in MOOCs in a Heterogeneous View
+
+<desc> Description:
+Additionally, Follow previous work, [10, 23, 24] proposed to use meta-path concept to mode the heterogeneous information in HIN.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110204
+<title> The Cortical Activity of Graded Relevance
+
+<desc> Description:
+Relevance is a key concept in Information Science and Retrieval [45, 57, 59, 66].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110205
+<title> The Cortical Activity of Graded Relevance
+
+<desc> Description:
+While relevance is considered to be multidimensional [12, 45, 57], dynamic and complex [11, 20, 46, 60], there are still debates around the granularity level of relevance judgements that should be collected [44].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110206
+<title> The Cortical Activity of Graded Relevance
+
+<desc> Description:
+The value of evaluating information based on graded relevance has begun to receive attention in recent years both from system [40, 55] and user [2, 15, 48] point of views.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110207
+<title> The Cortical Activity of Graded Relevance
+
+<desc> Description:
+This is particularly important since the granularity of relevance judgements in previous studies have been based on investigating this phenomenon indirectly, via some sort of mediator [29, 71].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110208
+<title> The Cortical Activity of Graded Relevance
+
+<desc> Description:
+This, therefore, limits the understanding of how searchers perceive different degrees of information relevance [55].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110209
+<title> The Cortical Activity of Graded Relevance
+
+<desc> Description:
+Relevance is also known to be subjective and difficult to quantify [48] since it depends on a searcher's perception of information relating to a specific Information Need (IN) at a certain point in time [8, 57].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110210
+<title> The Cortical Activity of Graded Relevance
+
+<desc> Description:
+However, given the semantic gap between a searcher's IN and their formulated queries [7, 27, 52], IR systems have employed various techniques to capture the subjective aspect of relevance [2] to improve the effectiveness of retrieved results.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110211
+<title> The Cortical Activity of Graded Relevance
+
+<desc> Description:
+Examples of such techniques are explicit [38], implicit (e.g. [24, 36]) and physiological [47] feedback.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110212
+<title> The Cortical Activity of Graded Relevance
+
+<desc> Description:
+More recently, researchers have shown the possibility of capturing the neural processes associated with relevance, using brain imaging techniques [2, 15, 16, 22, 25, 28, 33, 37, 48, 65].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110213
+<title> The Cortical Activity of Graded Relevance
+
+<desc> Description:
+These studies have either investigated relevance in the context of word associations (i.e. relevance of a word with respect to another) [15, 16, 65] without subjects experiencing any IN; or investigated relevance in the context of Information Retrieval (IR) when IN has been introduced to subjects.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110214
+<title> The Cortical Activity of Graded Relevance
+
+<desc> Description:
+In the latter scenario, relevance was investigated only as a binary notion [2, 19, 22, 24, 25, 28, 37, 48, 49] leaving the graded nature of it unexplored.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110215
+<title> The Cortical Activity of Graded Relevance
+
+<desc> Description:
+Relevance is the fundamental concept in IR [45, 57–59].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110216
+<title> The Cortical Activity of Graded Relevance
+
+<desc> Description:
+It plays a crucial role in the user-system interaction since it is a substantial indicator of system retrieval performance [8, 57].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110217
+<title> The Cortical Activity of Graded Relevance
+
+<desc> Description:
+Past research has investigated the concept of relevance at different granularity levels from both the user [29, 71] and system [35, 40] perspective.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110218
+<title> The Cortical Activity of Graded Relevance
+
+<desc> Description:
+Within the system side, graded relevance (in comparison to the binary one) has been shown to improve ranking functions [34, 55].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110219
+<title> The Cortical Activity of Graded Relevance
+
+<desc> Description:
+Explicit feedback is easy to use, however, difficult to obtain due to the cognitive burden associated with it [47], as the user is required to explicitly state whether presented content is subjectively perceived as relevant or not [67].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110220
+<title> The Cortical Activity of Graded Relevance
+
+<desc> Description:
+Popular techniques used to measure implicit relevance feedback are, for example, dwell time (i.e. [36]), eye-tracking and pupillometry [24], and/or the measurements of affective [4, 47] and physiological signals [47].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110221
+<title> The Cortical Activity of Graded Relevance
+
+<desc> Description:
+However, implicit feedback is often found to be noisy, which decreases its accuracy [2].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110222
+<title> The Cortical Activity of Graded Relevance
+
+<desc> Description:
+One particular area of emphasis for this research has been to examine the IN process [50, 51].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110223
+<title> The Cortical Activity of Graded Relevance
+
+<desc> Description:
+In addition, it has been found that prediction of the IN state experienced by a user is possible using brain signals [50].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110224
+<title> The Cortical Activity of Graded Relevance
+
+<desc> Description:
+Apart from IN, recent studies have employed brain imaging techniques to gain a better understanding of other parts of the information seeking and retrieval process, such as query formulation [28], search [49, 70] and relevance (e.g. [33]).
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110225
+<title> The Cortical Activity of Graded Relevance
+
+<desc> Description:
+For instance, [48] employed functional magnetic resonance imaging (fMRI), to localise differences in brain activity in cortical regions during the processing of relevant vs non-relevant images.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110226
+<title> The Cortical Activity of Graded Relevance
+
+<desc> Description:
+The research was able to identify regions engaged in the relevance judgement processing and the increased activation of these regions for relevant items was related to visuospatial working memory [49, 51].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110227
+<title> The Cortical Activity of Graded Relevance
+
+<desc> Description:
+Relevance has been inferred using EEG [25] or in combination with pupillometry or/and eye-tracking devices [22] within the context of the IR task, not only for textual stimuli but also for videos [37] and images [2].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110228
+<title> The Cortical Activity of Graded Relevance
+
+<desc> Description:
+For instance, [2] examined the processing of relevant vs non-relevant images, finding the most significant differences to occur between 500 – 800ms.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110229
+<title> The Cortical Activity of Graded Relevance
+
+<desc> Description:
+[37] explored the ERPs associated with topical relevance of video skims and classified the data based on two specific ERP components (N400 and P600), which have been shown to be indicators of relevant and non-relevant judgements.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110230
+<title> The Cortical Activity of Graded Relevance
+
+<desc> Description:
+Moreover, recent findings have shown that relevance can be predicted in real-time from EEG brain signals and eye movements while the user engages with the system and IR task [28].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110231
+<title> The Cortical Activity of Graded Relevance
+
+<desc> Description:
+Another line of research has examined relevance in the context of word associations, employing EEG in isolation, or in combination with eye gaze [15, 16, 65].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110232
+<title> The Cortical Activity of Graded Relevance
+
+<desc> Description:
+The findings of these studies have shown that brain signals differ when subjects process relevant vs. non-relevant words across time [16].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340126233
+<title> Reranking for Efficient Transformer-based Answer Selection
+
+<desc> Description:
+Our main idea follows the successful cascade approach for ad-hoc document retrieval [19], which considers fast but less accurate rerankers together with more accurate but slower models.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340126234
+<title> Reranking for Efficient Transformer-based Answer Selection
+
+<desc> Description:
+For example, the Rel-CNN [16] has two separate embedding layers for the question and answer, and relational embedding, which aims at connecting them.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340126235
+<title> Reranking for Efficient Transformer-based Answer Selection
+
+<desc> Description:
+In contrast, we propose an alternative (and compatible with the initiatives above) approach following previous work in document retrieval, e.g., the use of sequential rerankers [19].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340126236
+<title> Reranking for Efficient Transformer-based Answer Selection
+
+<desc> Description:
+[21] focused on quickly identifying a set of good candidate documents to be passed to the second and further rerankers of the cascade.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340126237
+<title> Reranking for Efficient Transformer-based Answer Selection
+
+<desc> Description:
+[4] proposed two stage approaches using a limited set of textual features and a final model trained using a larger set of query- and document-dependent features.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340126238
+<title> Reranking for Efficient Transformer-based Answer Selection
+
+<desc> Description:
+[7] presented a new general framework for learning an end-to-end cascade of rankers using backpropagation.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340126239
+<title> Reranking for Efficient Transformer-based Answer Selection
+
+<desc> Description:
+[1] studied effectiveness/efficiency trade-offs with three candidate selection approaches.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340106240
+<title> Guided Transformer: Leveraging Multiple External Sources for Representation Learning in Conversational Search
+
+<desc> Description:
+Similarly, conversational question answering based on a set of related questions about a given passage has been explored in the natural language processing (NLP) literature [7, 40, 44].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340106241
+<title> Guided Transformer: Leveraging Multiple External Sources for Representation Learning in Conversational Search
+
+<desc> Description:
+Recent conversational information seeking platforms, such as Macaw [59], provide support for multi-turn, multi-modal, and mixed-initiative interactions.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340106242
+<title> Guided Transformer: Leveraging Multiple External Sources for Representation Learning in Conversational Search
+
+<desc> Description:
+There have been recent efforts to go beyond the "user asks, system responds" paradigm by asking clarifying questions from the users, including offline evaluation of search clarification [1], clarifying question generation for open-domain search queries [61], and preference elicitation in conversational recommender systems [8, 46, 64].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340106243
+<title> Guided Transformer: Leveraging Multiple External Sources for Representation Learning in Conversational Search
+
+<desc> Description:
+Motivated by previous research on improving query representation by employing other information sources, such as the top retrieved documents in pseudo-relevance feedback [2, 14, 27], we propose a neural network architecture that uses multiple information sources for learning accurate representations of user-system conversations.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340106244
+<title> Guided Transformer: Leveraging Multiple External Sources for Representation Learning in Conversational Search
+
+<desc> Description:
+We evaluate our models using the public Qulac dataset and follow the offline evaluation methodology recently proposed by [1].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340106245
+<title> Guided Transformer: Leveraging Multiple External Sources for Representation Learning in Conversational Search
+
+<desc> Description:
+More recently, [42] introduced a theoretical framework and a set of potentially desirable features for a conversational information retrieval system.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340106246
+<title> Guided Transformer: Leveraging Multiple External Sources for Representation Learning in Conversational Search
+
+<desc> Description:
+[50] studied real user conversations and provided suggestions for building conversational systems based on human conversations.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340106247
+<title> Guided Transformer: Leveraging Multiple External Sources for Representation Learning in Conversational Search
+
+<desc> Description:
+The recent improvements in neural models has made it possible to train conversation models for different applications, such as recommendation [64], user intent prediction [41], next user query prediction [58], and response ranking [57].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340106248
+<title> Guided Transformer: Leveraging Multiple External Sources for Representation Learning in Conversational Search
+
+<desc> Description:
+To name a few, [6] studied user intents, and clarification in community question answering (CQA) websites.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340106249
+<title> Guided Transformer: Leveraging Multiple External Sources for Representation Learning in Conversational Search
+
+<desc> Description:
+In the realm of IR, the user study done by [24] showed that clarifying questions do not cause user dissatisfaction, and in fact, they sometimes increase the satisfaction.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340106250
+<title> Guided Transformer: Leveraging Multiple External Sources for Representation Learning in Conversational Search
+
+<desc> Description:
+More recently, [1] introduced an offline evaluation methodology and a benchmark for studying the task of clarification in information seeking conversational systems.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340106251
+<title> Guided Transformer: Leveraging Multiple External Sources for Representation Learning in Conversational Search
+
+<desc> Description:
+[61] proposed an approach based on weak supervision to generate clarifying questions for open-domain search queries.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340106252
+<title> Guided Transformer: Leveraging Multiple External Sources for Representation Learning in Conversational Search
+
+<desc> Description:
+User interaction with clarifying questions has been later analyzed in [62].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340106253
+<title> Guided Transformer: Leveraging Multiple External Sources for Representation Learning in Conversational Search
+
+<desc> Description:
+For instance, [8] designed an interactive system for venue recommendation.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340106254
+<title> Guided Transformer: Leveraging Multiple External Sources for Representation Learning in Conversational Search
+
+<desc> Description:
+[48] utilized facet-value pairs to represent a conversation history for conversational recommendation, and [64] extracted facet-value pairs from product reviews automatically, and considered them as questions and answers.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340106255
+<title> Guided Transformer: Leveraging Multiple External Sources for Representation Learning in Conversational Search
+
+<desc> Description:
+[57] studied the use of community question answering data as external knowledge base for response ranking in information seeking conversations.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340106256
+<title> Guided Transformer: Leveraging Multiple External Sources for Representation Learning in Conversational Search
+
+<desc> Description:
+For example, we use the top retrieved documents as one information source, which is similar to the pseudo-relevance feedback (PRF) methods [2, 14, 27, 60].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340146257
+<title> Deep Reinforcement Learning for Information Retrieval: Fundamentals and Advances
+
+<desc> Description:
+Efforts have been made on developing supervised or unsupervised methods for these information retrieval mechanisms [21].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340146258
+<title> Deep Reinforcement Learning for Information Retrieval: Fundamentals and Advances
+
+<desc> Description:
+However, since the widely use of mobile applications during the recent years, more and more information retrieval services have provided interactive functionality and products [41], these conventional techniques typically face several common challenges.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340146259
+<title> Deep Reinforcement Learning for Information Retrieval: Fundamentals and Advances
+
+<desc> Description:
+Second, the majority of existing methods aims to maximize user's immediate satisfaction, while completely overlooking whether the generate information can benefit more to user's preference in the long run [24].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340146260
+<title> Deep Reinforcement Learning for Information Retrieval: Fundamentals and Advances
+
+<desc> Description:
+The result is an optimal policy that can provide decision making solutions to complex tasks without any specific instructions [13].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340146261
+<title> Deep Reinforcement Learning for Information Retrieval: Fundamentals and Advances
+
+<desc> Description:
+Given the advantages of reinforcement learning, there have been tremendous interests in developing RL based information retrieval techniques [3, 5, 11, 12, 15, 38–40].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340146262
+<title> Deep Reinforcement Learning for Information Retrieval: Fundamentals and Advances
+
+<desc> Description:
+Search targets at retrieving and ranking a set of items (e.g. documents, records) according to a user query [7, 29].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340146263
+<title> Deep Reinforcement Learning for Information Retrieval: Fundamentals and Advances
+
+<desc> Description:
+MDPRank [31] is proposed to address this problem by using the metrics calculated upon all the positions as reward function, and the model parameters are be optimized via maximizing the accumulated rewards for all decisions.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340146264
+<title> Deep Reinforcement Learning for Information Retrieval: Fundamentals and Advances
+
+<desc> Description:
+MDP-DIV [34] formalized diverse ranking as a continuous state Markov decision process, and policy gradient algorithm of REINFORCE is leveraged to maximize the accumulated long-term rewards in terms of the diversity metric.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340146265
+<title> Deep Reinforcement Learning for Information Retrieval: Fundamentals and Advances
+
+<desc> Description:
+Bandit methods [33, 37] usually utilizes a variable reward function to delineate the dynamic nature of the environment (reward distributions).
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340146266
+<title> Deep Reinforcement Learning for Information Retrieval: Fundamentals and Advances
+
+<desc> Description:
+Another solution is to introduce the MDP setting [6, 9, 42], where state represents user's preference and state transition depicts the dynamic nature of user's preference over time.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340146267
+<title> Deep Reinforcement Learning for Information Retrieval: Fundamentals and Advances
+
+<desc> Description:
+In [39], a user's dynamic preference (state) is learned from her browsing history and feedback.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340146268
+<title> Deep Reinforcement Learning for Information Retrieval: Fundamentals and Advances
+
+<desc> Description:
+The contextual bandit method is introduced to achieve the trade-off between exploitation and exploration with strategies such as ε-greedy [30], EXP3 [2], and UCB1 [1].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340146269
+<title> Deep Reinforcement Learning for Information Retrieval: Fundamentals and Advances
+
+<desc> Description:
+In guaranteed delivery setting, ads that grouped into campaigns are charged on a pay-per-campaign basis for the pre-specified number of deliveries [23].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340146270
+<title> Deep Reinforcement Learning for Information Retrieval: Fundamentals and Advances
+
+<desc> Description:
+The ad selection task is typically modeled as multi-armed bandit (MAB) problem [20, 28, 35, 36], which neglects the fact that bidding actions would continuously occur before the budget running out.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340146271
+<title> Deep Reinforcement Learning for Information Retrieval: Fundamentals and Advances
+
+<desc> Description:
+For example, a model-based RL framework is proposed in RTB setting [3], where the state value is approximated by neural network to address the scalability problem of large auction amounts and the limited budget.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340146272
+<title> Deep Reinforcement Learning for Information Retrieval: Fundamentals and Advances
+
+<desc> Description:
+In [12], a multi-agent bidding model is proposed to jointly consider all the advertisers' biddings in the system, and a clustering approach is introduced to deal with a large number of advertisers.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110273
+<title> An Eye Tracking Study of Web Search by People With and Without Dyslexia
+
+<desc> Description:
+These challenges often manifest in a slower reading rate and lower reading comprehension [35].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110274
+<title> An Eye Tracking Study of Web Search by People With and Without Dyslexia
+
+<desc> Description:
+Interviews with people with dyslexia suggest that search engine use -including query formulation, search result triage and information extraction from target webpages- is particularly challenging for this population [4, 19, 35, 37, 43].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110275
+<title> An Eye Tracking Study of Web Search by People With and Without Dyslexia
+
+<desc> Description:
+Online experiments comparing search behaviors of people with and without dyslexia have identifed some features of webpages, such as average line length and the ratio of images to text, that impact page readability for people with dyslexia [25].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110276
+<title> An Eye Tracking Study of Web Search by People With and Without Dyslexia
+
+<desc> Description:
+Our fndings validate prior self-report findings that Searchers with Dyslexia (SWD) struggle with all stages of the search process: query formulation, search results triage, and information extraction [37, 43].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110277
+<title> An Eye Tracking Study of Web Search by People With and Without Dyslexia
+
+<desc> Description:
+Researchers in information retrieval and HCI have extensively studied user interaction with web search systems, particularly for complex informational [16] or exploratory [55] search tasks.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110278
+<title> An Eye Tracking Study of Web Search by People With and Without Dyslexia
+
+<desc> Description:
+Such tasks typically comprise three stages [3, 43]: query formulation (i.e., generating and refining search keywords), search results triage (i.e., determining which parts of the search engine results page - the SERP - are most relevant to the task at hand, and which link to open), and information extraction (i.e., gathering and making sense of the sought-after content).
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110279
+<title> An Eye Tracking Study of Web Search by People With and Without Dyslexia
+
+<desc> Description:
+Researchers have employed a variety of methods to study web search, including analyzing search engine and web browser logs (e.g., [32, 53, 54]), gathering self-report data from surveys, interviews, or diary studies of end-users (e.g., [42, 43]), and recruiting participants to perform controlled search tasks (e.g., [3, 25, 44]).
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110280
+<title> An Eye Tracking Study of Web Search by People With and Without Dyslexia
+
+<desc> Description:
+Several researchers have begun to use eye tracking to understand which aspects of the SERP users attend to [22, 23, 36, 52].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110281
+<title> An Eye Tracking Study of Web Search by People With and Without Dyslexia
+
+<desc> Description:
+These studies have also shown that searchers distribute their visual attention diferently across organic and ad results on a SERP [24], and that one can determine a webpage's most salient parts by looking at the amount of visual attention paid to its diferent elements [17].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110282
+<title> An Eye Tracking Study of Web Search by People With and Without Dyslexia
+
+<desc> Description:
+From their interview study, [43] reported SWD have trouble spelling words at the phonetic level.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110283
+<title> An Eye Tracking Study of Web Search by People With and Without Dyslexia
+
+<desc> Description:
+However, in 2016, [14] found that when SWD used Google, a modern interactive search engine with query formulation aids, for formulating Norwegian queries, there were no diferences in query formulation behavior.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110284
+<title> An Eye Tracking Study of Web Search by People With and Without Dyslexia
+
+<desc> Description:
+Furthermore, prior work suggests a strong correlation between dyslexia and lower phonological working memory (i.e., the ability to hold words in short-term memory) [10, 38].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110285
+<title> An Eye Tracking Study of Web Search by People With and Without Dyslexia
+
+<desc> Description:
+In 2019, a search log study of participants with low and high working memory found that those with lower working memory take more time to frst click on the SERP, open fewer links, and take more time between events [18].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110286
+<title> An Eye Tracking Study of Web Search by People With and Without Dyslexia
+
+<desc> Description:
+A follow-up analysis reported SWD changed scan direction more on the webpage than the control group [39].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110287
+<title> An Eye Tracking Study of Web Search by People With and Without Dyslexia
+
+<desc> Description:
+In 2018 [25] found SWD's relevance ratings of webpages were highly correlated with their readability scores.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340110288
+<title> An Eye Tracking Study of Web Search by People With and Without Dyslexia
+
+<desc> Description:
+In 2019, [35] found using the "Reader View" mode in Firefox web browser, which simplifes a page's visual structure, improved reading speed for SWD without reducing comprehension.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340120289
+<title> Retrieving Potential Causes from a Query Event
+
+<desc> Description:
+A number of existing approaches extract cause-effect patterns using lexical, syntactic, and more recently, semantic relations [3–5, 12], primarily taken from headlines or single sentences (refer to [1] for a survey).
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340120290
+<title> Retrieving Potential Causes from a Query Event
+
+<desc> Description:
+The cause-effect pattern approach was extended in [7], where a set of patterns are initially used to create a network of causes and effects, and then a relational embedding method (similar to TransE [2]) is used to jointly embed causes and effects.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340120291
+<title> Retrieving Potential Causes from a Query Event
+
+<desc> Description:
+Causal IR works in the reverse direction, where a query describes a cause (e.g., current situation or proposed action) and the results provide a list of possible effects was studied in [9, 10].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340116292
+<title> Web-to-Voice Transfer for Product Recommendation on Voice
+
+<desc> Description:
+While a growing body of research has addressed the voice-based recommendation problem from the dialogue perspective, i.e., improving the effectiveness of question-answering between the customer and system [7, 8, 11, 23, 25, 44, 45], relatively little work has been focused on addressing the specific challenges arising in recommendation on Voice [40].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340116293
+<title> Web-to-Voice Transfer for Product Recommendation on Voice
+
+<desc> Description:
+Due to the unique characteristics of voice interfaces (e.g., narrow information channel), customers tend to explore fewer products and choose fewer long-tail products, as compared to Web-based channels [45].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340116294
+<title> Web-to-Voice Transfer for Product Recommendation on Voice
+
+<desc> Description:
+We note that repeated purchase behaviors have also been observed on the Web, which is mainly driven by customers' loyalty to certain brands [5, 10, 42].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340116295
+<title> Web-to-Voice Transfer for Product Recommendation on Voice
+
+<desc> Description:
+In the recommendation literature, transfer learning has been implemented by extending recommendation models, e.g., factorization models [28, 29, 33] or neural networks [14, 21, 26], with shared user1 representations for cross-domain recommendation tasks.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340116296
+<title> Web-to-Voice Transfer for Product Recommendation on Voice
+
+<desc> Description:
+More recent work [18] attempts to address the problem by modeling the transfer of the purchase patterns from one domain to another using a linear transformation.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340116297
+<title> Web-to-Voice Transfer for Product Recommendation on Voice
+
+<desc> Description:
+The focal point of research efforts has been enabling the system to effectively and efficiently infer users' intents and satisfy their information needs [35, 47].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340116298
+<title> Web-to-Voice Transfer for Product Recommendation on Voice
+
+<desc> Description:
+Due to the complexity of the problem, it has been studied by several research communities including natural language processing [11, 23, 25], human-computer interaction [7, 45], and information retrieval (including recommender systems) [8, 44].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340116299
+<title> Web-to-Voice Transfer for Product Recommendation on Voice
+
+<desc> Description:
+For example, [47] studies the effect of in-session aspect-based questions for product recommendation using memory networks [39].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340116300
+<title> Web-to-Voice Transfer for Product Recommendation on Voice
+
+<desc> Description:
+[25] introduce a neural dialogue model that classifies the sentiment of a user with respect to movies discussed in the conversation session, and based on that, it generates movie recommendations with a pre-trained autoencoder recommender [37].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340116301
+<title> Web-to-Voice Transfer for Product Recommendation on Voice
+
+<desc> Description:
+A recent paper by [40] shows that the integration of users' past purchasing behaviors boosts the effectiveness of voice-based recommendation.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340116302
+<title> Web-to-Voice Transfer for Product Recommendation on Voice
+
+<desc> Description:
+Transfer learning has been a popular approach for tackling the data sparsity problem by transferring the knowledge (e.g., user preferences) in a source domain to the task in the target domain [6, 24].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340116303
+<title> Web-to-Voice Transfer for Product Recommendation on Voice
+
+<desc> Description:
+Early work focuses on adapting matrix factorization techniques for transfer learning [28, 29, 33].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340116304
+<title> Web-to-Voice Transfer for Product Recommendation on Voice
+
+<desc> Description:
+[28] introduce a model based on collective matrix factorization [38], where user latent factors are shared across different domains.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340116305
+<title> Web-to-Voice Transfer for Product Recommendation on Voice
+
+<desc> Description:
+Neural network-based methods are more capable of learning non-linear latent representations for users and items and potentially also their interactions (see a recent survey [46]).
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340116306
+<title> Web-to-Voice Transfer for Product Recommendation on Voice
+
+<desc> Description:
+Specific to neural transfer learning for cross-domain recommendation, [14] introduce a multi-view deep learning method that learns shared user representations from user-item interactions in different domains.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340116307
+<title> Web-to-Voice Transfer for Product Recommendation on Voice
+
+<desc> Description:
+[26] propose to incorporate content information into the multi-view neural network.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340116308
+<title> Web-to-Voice Transfer for Product Recommendation on Voice
+
+<desc> Description:
+A recent paper [18], perhaps the most closely related work to ours, models the transfer of interactions across multiple domains as a linear transformation using cross-stitch networks [30].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340116309
+<title> Web-to-Voice Transfer for Product Recommendation on Voice
+
+<desc> Description:
+In the context of Web-to-Voice transfer, since the same products appear in both Web and Voice, we adopt a tri-factorization approach [12, 31] that fixes the product representations across channels, and extend the approach into a multi-level scheme, which allows to capture channel-independent and channel-specific interaction patterns.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340116310
+<title> Web-to-Voice Transfer for Product Recommendation on Voice
+
+<desc> Description:
+In Web-based information systems, repeated item consumption has been shown to be most affected by the recency and quality of the item, with recency being more critical [1].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340116311
+<title> Web-to-Voice Transfer for Product Recommendation on Voice
+
+<desc> Description:
+[4] study such a behavior in more detail and reveals the increasing inter-arrival gaps of repeated item consumption that eventually lead to abandonment.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340116312
+<title> Web-to-Voice Transfer for Product Recommendation on Voice
+
+<desc> Description:
+In online shopping, [5] study repeated purchases for consumable products, e.g., toothpaste and diapers, and propose a prediction model that helps increase the product click-through rate.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340116313
+<title> Web-to-Voice Transfer for Product Recommendation on Voice
+
+<desc> Description:
+[42] introduce a recommendation algorithm, adaLoyal, a personalized grocery recommender.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340120314
+<title> Context-Aware Term Weighting For First Stage Passage Retrieval
+
+<desc> Description:
+A few recent work investigated using word embeddings [5] for document term weighting, but most of them only learn a global idf -like term weight because the word embeddings are context-independent.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340120315
+<title> Context-Aware Term Weighting For First Stage Passage Retrieval
+
+<desc> Description:
+Most neural ranking models are cost-prohibitive to be used in the first stage [1, 2, 10].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340119316
+<title> Bundle Recommendation with Graph Convolutional Networks
+
+<desc> Description:
+Most existing works for bundle recommendation [2, 6, 7] regard item and bundle recommendation as two separate tasks, and associate them by sharing model parameters.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340119317
+<title> Bundle Recommendation with Graph Convolutional Networks
+
+<desc> Description:
+List Recommendation Model (LIRE) [6] and Embedding Factorization Machine (EFM) [2] simultaneously utilized the users' interactions with both items and bundles under the BPR framework.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340119318
+<title> Bundle Recommendation with Graph Convolutional Networks
+
+<desc> Description:
+The Bundle BPR (BBPR) Model [7] made use of the parameter previously learned through an item BPR model.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340119319
+<title> Bundle Recommendation with Graph Convolutional Networks
+
+<desc> Description:
+The basic idea of graph convolutional networks (GCN) [5] is to reduce the high-dimensional adjacency information of a node in the graph to a low-dimensional vector representation.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340119320
+<title> Bundle Recommendation with Graph Convolutional Networks
+
+<desc> Description:
+[10] extended it to web-scale recommender systems with neighbor-sampling.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340119321
+<title> Bundle Recommendation with Graph Convolutional Networks
+
+<desc> Description:
+Recently, [9] further approached a more general model that uses high-level connectivity learned by GCN to encode CF signals.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340118322
+<title> Choppy: Cut Transformer for Ranked List Truncation
+
+<desc> Description:
+While much of the work in information retrieval has been centered around ranking, there is growing interest in methods for ranked list truncation - the problem of determining the appropriate cutoff 𝑘 of candidate results [1, 9].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340118323
+<title> Choppy: Cut Transformer for Ranked List Truncation
+
+<desc> Description:
+This problem has garnered attention in fields like legal search [14] and sponsored search [3, 16], where there could be a monetary cost for users looking into an irrelevant tail of documents or where showing too many irrelevant ads could result in ad blindness.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340118324
+<title> Choppy: Cut Transformer for Ranked List Truncation
+
+<desc> Description:
+The fundamental importance of this problem has led to development of methods that are automatically able to learn 𝑘 in a data-driven fashion [9].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340118325
+<title> Choppy: Cut Transformer for Ranked List Truncation
+
+<desc> Description:
+The present state-of-the-art for this task is BiCut [9], a recurrent-based neural model that formulates the problem as a sequential decision process over the list.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340118326
+<title> Choppy: Cut Transformer for Ranked List Truncation
+
+<desc> Description:
+While BiCut outperforms non-neural methods [1], we argue it has several drawbacks.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340118327
+<title> Choppy: Cut Transformer for Ranked List Truncation
+
+<desc> Description:
+Early work in this area primarily focused on fitting parametric probability distributions to score distributions [1, 10].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340118328
+<title> Choppy: Cut Transformer for Ranked List Truncation
+
+<desc> Description:
+For instance, cascade-style IR systems [17] seek to achieve a balance between efficiency and effectiveness.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340118329
+<title> Choppy: Cut Transformer for Ranked List Truncation
+
+<desc> Description:
+Notably, [5] investigates a number of machine learning approaches for learning dynamic cutoffs within cascade-style ranking systems.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340118330
+<title> Choppy: Cut Transformer for Ranked List Truncation
+
+<desc> Description:
+Another recent study investigated how to leverage bidirectional Long Short-Term Memory (LSTM) models to identify the best position to truncate a given list [9].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340118331
+<title> Choppy: Cut Transformer for Ranked List Truncation
+
+<desc> Description:
+Our work is closely related to the task of query performance prediction [4].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340118332
+<title> Choppy: Cut Transformer for Ranked List Truncation
+
+<desc> Description:
+Methods for query performance prediction include pre-retrieval-based approaches [7], relevance-based approaches [4, 19], and neural approaches [18].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340118333
+<title> Choppy: Cut Transformer for Ranked List Truncation
+
+<desc> Description:
+This motivated research that investigated whether any ads should be displayed at all [3].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340118334
+<title> Choppy: Cut Transformer for Ranked List Truncation
+
+<desc> Description:
+Finally, the ability to calibrate scores across queries and different corpora has also been studied in the context of federated search tasks [13] such as meta-search [11].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982335
+<title> Taking the Counterfactual Online: Efficient and Unbiased Online Evaluation for Ranking
+
+<desc> Description:
+Evaluation is essential for the development of search and recommendation systems [8, 14].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982336
+<title> Taking the Counterfactual Online: Efficient and Unbiased Online Evaluation for Ranking
+
+<desc> Description:
+Differences in behavior between these groups can then indicate if the alterations brought improvements, e.g. if the treatment group showed a higher Click-Through-Rate (CTR) or more revenue was made with this system [4].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982337
+<title> Taking the Counterfactual Online: Efficient and Unbiased Online Evaluation for Ranking
+
+<desc> Description:
+Repeating this process over a large number of queries and averaging the results, leads to an estimate of which ranker would receive the highest CTR [10].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982338
+<title> Taking the Counterfactual Online: Efficient and Unbiased Online Evaluation for Ranking
+
+<desc> Description:
+Previous studies have found that interleaving requires fewer interactions than A/B testing, which enables them to make consistent comparisons in a much shorter timespan [4, 21].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982339
+<title> Taking the Counterfactual Online: Efficient and Unbiased Online Evaluation for Ranking
+
+<desc> Description:
+More recently, counterfactual evaluation for rankings has been proposed by [13] to evaluate a ranking model based on clicks gathered using a different model.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982340
+<title> Taking the Counterfactual Online: Efficient and Unbiased Online Evaluation for Ranking
+
+<desc> Description:
+To achieve this, counterfactual evaluation makes use of Inverse-Propensity-Scoring (IPS), where clicks are weighted inversely to the probability that a user examined them during logging [22].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982341
+<title> Taking the Counterfactual Online: Efficient and Unbiased Online Evaluation for Ranking
+
+<desc> Description:
+Team-draft interleaving (TDI) randomly selects one ranker to place their top document first, then the other ranker places their top (unplaced) document next [20].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982342
+<title> Taking the Counterfactual Online: Efficient and Unbiased Online Evaluation for Ranking
+
+<desc> Description:
+Probabilistic interleaving (PI) treats each ranking as a probability distribution over documents; at each rank a distribution is randomly selected and a document is drawn from it [9].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982343
+<title> Taking the Counterfactual Online: Efficient and Unbiased Online Evaluation for Ranking
+
+<desc> Description:
+Optimized interleaving (OI) casts the randomization as an optimization problem, and displays rankings so that if all documents are equally relevant no preferences are found [19].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982344
+<title> Taking the Counterfactual Online: Efficient and Unbiased Online Evaluation for Ranking
+
+<desc> Description:
+This may be confusing because previous work on interleaving makes claims of unbiasedness [9, 10, 19].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982345
+<title> Taking the Counterfactual Online: Efficient and Unbiased Online Evaluation for Ranking
+
+<desc> Description:
+More precisely, TDI, PI, and OI provably converge on the correct outcome if all documents are equally relevant [9, 10, 19, 20].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982346
+<title> Taking the Counterfactual Online: Efficient and Unbiased Online Evaluation for Ranking
+
+<desc> Description:
+Moreover, if one assumes binary relevance and π1 ranks all relevant documents equal to or higher than π2, the binary outcome of PI and OI is proven to be correct in expectation [10, 19].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982347
+<title> Taking the Counterfactual Online: Efficient and Unbiased Online Evaluation for Ranking
+
+<desc> Description:
+Counterfactual evaluation is based on the idea that if certain biases can be estimated well, they can also be adjusted [12, 22].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982348
+<title> Taking the Counterfactual Online: Efficient and Unbiased Online Evaluation for Ranking
+
+<desc> Description:
+By randomizing rankings, e.g., by swapping pairs of documents [12] or exploiting data logged during A/B testing [1], differences in CTR for the same item on different positions can be observed directly.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982349
+<title> Taking the Counterfactual Online: Efficient and Unbiased Online Evaluation for Ranking
+
+<desc> Description:
+Alternatively, using Expectation Maximization (EM) optimization [23] or a dual learning objective [2], position bias can be estimated from logged data as well.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982350
+<title> Taking the Counterfactual Online: Efficient and Unbiased Online Evaluation for Ranking
+
+<desc> Description:
+We follow [16] and use as propensity scores the probability of observance in expectation over the displayed rankings:
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982351
+<title> Taking the Counterfactual Online: Efficient and Unbiased Online Evaluation for Ranking
+
+<desc> Description:
+Besides Requirement 15 the existing counterfactual method [12, 22] is completely indifferent to π0 and hence we do not consider it to be an online method.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340983352
+<title> Efficient Test Collection Construction via Active Learning
+
+<desc> Description:
+This is typically accomplished by running a shared task campaign, such as NIST TREC, then pooling search results from many participating systems (and often interactive runs) to identify the most likely relevant documents for judging [10].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340983353
+<title> Efficient Test Collection Construction via Active Learning
+
+<desc> Description:
+Shared tasks have many other benefits, but if one's primary goal is merely to build a new test collection, it would be useful if this could be achieved without needing to run a shared task [24].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340983354
+<title> Efficient Test Collection Construction via Active Learning
+
+<desc> Description:
+Firstly, we apply AL to select which documents assessors should judge, and we explore two document selection strategies [6]: continuous active learning (CAL) and simple active learning (SAL).
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340983355
+<title> Efficient Test Collection Construction via Active Learning
+
+<desc> Description:
+Though others have pursued automatic or semi-automatic relevance labeling [1, 2, 9, 12, 13], prior studies do not use AL for i) selecting documents for annotations and ii) inferring relevance labels for unjudged documents simultaneously in constructing IR test collections.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340983356
+<title> Efficient Test Collection Construction via Active Learning
+
+<desc> Description:
+RDS, on the other hand, assumes a scenario like the TREC Million Query Track [4] in which topic formation is extremely brief and assessors are not provided an IS system in which to explore the collection.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340983357
+<title> Efficient Test Collection Construction via Active Learning
+
+<desc> Description:
+In contrast, we want to be able to construct a new test collection without needing to run a shared task [24, 26].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340983358
+<title> Efficient Test Collection Construction via Active Learning
+
+<desc> Description:
+[1] propose labeling unjudged documents using a classifier trained on a subset of pool documents.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340983359
+<title> Efficient Test Collection Construction via Active Learning
+
+<desc> Description:
+We both report results for the same 2006 Terabyte Track run, but our results are not directly comparable to theirs because they assume a traditional machine learning setup, whereas we motivate and adopt the finite-pool evaluation setting proposed in [6].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340983360
+<title> Efficient Test Collection Construction via Active Learning
+
+<desc> Description:
+While [13] use document rankings information in their own proposed method, they also reproduce [1]'s SVM method as a baseline, reporting results on the same WebTrack 2013 and 2014 collections we use in this study.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340983361
+<title> Efficient Test Collection Construction via Active Learning
+
+<desc> Description:
+However, as with [1], they do not evaluate their approach under a finite-pool scenario.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340983362
+<title> Efficient Test Collection Construction via Active Learning
+
+<desc> Description:
+For AL document selection, we evaluate the same CAL and SAL methods [21] that [6] assess in the domain of e-discovery, where they focus on set-based rather than ranked retrieval.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340983363
+<title> Efficient Test Collection Construction via Active Learning
+
+<desc> Description:
+Recently, [8] propose a variant of "S-CAL" [7], which rather than selecting the highest-scoring documents for relevance judgment, randomly samples some documents from those the highest-scoring documents for annotation.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340983364
+<title> Efficient Test Collection Construction via Active Learning
+
+<desc> Description:
+[2] apply [3]'s document selection method to iteratively collect relevance judgments.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340983365
+<title> Efficient Test Collection Construction via Active Learning
+
+<desc> Description:
+[22] develop a framework for constructing a test collection using an iterative process between updating nuggets and annotating documents.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340983366
+<title> Efficient Test Collection Construction via Active Learning
+
+<desc> Description:
+[17] also utilize a shared task by inducing a probability distribution from the participating systems and a probability distribution over the ranks of the documents.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982367
+<title> Optimizing Hyper-Phrase Queries
+
+<desc> Description:
+A recent work on spotting KG facts uses regular expression based operators at word-level [15, 16].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982368
+<title> Optimizing Hyper-Phrase Queries
+
+<desc> Description:
+[13, 19] propose a system that retrieves witness documents given a KG fact as a query.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982369
+<title> Optimizing Hyper-Phrase Queries
+
+<desc> Description:
+[17] investigate how to model query execution plans with respect to recall of relevant documents and the query's execution time.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982370
+<title> Optimizing Hyper-Phrase Queries
+
+<desc> Description:
+[7] describes an algorithm that identifies a relevant set of documents for named entities by finding a token-set-cover for various surface forms of the named entity and computing a join of the retrieved documents.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982371
+<title> Optimizing Hyper-Phrase Queries
+
+<desc> Description:
+[21, 23] describe approaches to query phrases using combinations of inverted, phrase, nextword, and direct indexes.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340983372
+<title> Towards Memorable Information Retrieval
+
+<desc> Description:
+A recent study has investigated the role of text-based conversational interfaces in online information finding tasks [22].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340983373
+<title> Towards Memorable Information Retrieval
+
+<desc> Description:
+Many previous studies have used context as a key aspect to improve human memorability [9, 23].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340983374
+<title> Towards Memorable Information Retrieval
+
+<desc> Description:
+[5] have performed experiments to find the attributes (e.g. file name, time, title, location, size, etc.) that help memorability for a document search tool.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340983375
+<title> Towards Memorable Information Retrieval
+
+<desc> Description:
+Previous works have also shown that many strategies, such as time-aware contextualization [8, 29], and optimizing recollection by generating analogies [24], have a positive effect on human memorability.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340983376
+<title> Towards Memorable Information Retrieval
+
+<desc> Description:
+Furthermore, a recent study built an application named ReflectiveDiary', to investigate how self-generated daily summaries can improve memorability [25].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340983377
+<title> Towards Memorable Information Retrieval
+
+<desc> Description:
+Predictive methods have also been proposed to consolidate human memory in the workplace environment [3].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340983378
+<title> Towards Memorable Information Retrieval
+
+<desc> Description:
+Across multiple studies, conversational systems were found to be useful in facilitating learning effects [13, 16, 28] and in effectively improving user engagement in information retrieval tasks [22].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982379
+<title> Cluster-Based Document Retrieval with Multiple Queries
+
+<desc> Description:
+There are two main categories of cluster-based document retrieval methods [22].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982380
+<title> Cluster-Based Document Retrieval with Multiple Queries
+
+<desc> Description:
+The first includes methods that rank document clusters by the estimated percentage of relevant documents they contain; then, the cluster ranking is transformed to document ranking [11, 14, 17, 20–23, 27–30, 35, 43–45].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982381
+<title> Cluster-Based Document Retrieval with Multiple Queries
+
+<desc> Description:
+One of the main motivations for pursuing the cluster ranking task is the optimal cluster phenomenon [12, 20, 28, 36, 43]: if the documents most highly ranked by an initial search are clustered, some of the clusters tend to contain a high percentage of relevant documents; the cluster with the highest percentage is referred to as the optimal cluster.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982382
+<title> Cluster-Based Document Retrieval with Multiple Queries
+
+<desc> Description:
+Positioning the constituent documents of the optimal cluster at the top of the final result list results in much higher precision at top ranks performance than that of other commonly used document-based retrieval methods [20, 28, 43].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982383
+<title> Cluster-Based Document Retrieval with Multiple Queries
+
+<desc> Description:
+A case in point, for a standard TREC corpus, the average precision of the top five (P@5) that results from identifying the optimal cluster can reach 0.8 in comparison to 0.46 attained with standard language model retrieval [20].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982384
+<title> Cluster-Based Document Retrieval with Multiple Queries
+
+<desc> Description:
+The second category of cluster-based document retrieval methods includes those that enrich the document representation with information induced from the clusters [19, 22, 27, 39]; e.g., in the language modeling framework, document language models can be smoothed using cluster language models [19, 22, 27].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982385
+<title> Cluster-Based Document Retrieval with Multiple Queries
+
+<desc> Description:
+However, combining multiple queries which represent the same information need can dramatically improve retrieval effectiveness [4, 5].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982386
+<title> Cluster-Based Document Retrieval with Multiple Queries
+
+<desc> Description:
+Recently, there has been a renewed interest in the importance of the multiple-queries retrieval setting [2, 3, 6, 7, 26, 31, 42, 47], with growing evidence to its operational feasibility and importance.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982387
+<title> Cluster-Based Document Retrieval with Multiple Queries
+
+<desc> Description:
+The feasibility of operationalizing this idea was initially explored nearly a decade ago in the Bing search engine [38].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982388
+<title> Cluster-Based Document Retrieval with Multiple Queries
+
+<desc> Description:
+It was recently shown that query variations automatically selected from a query log of a commercial search engine can be, on average, as effective as human curated query variations [26].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982389
+<title> Cluster-Based Document Retrieval with Multiple Queries
+
+<desc> Description:
+The merits of applying fusion to document lists retrieved for queries representing the same information need is now well understood [3–7, 34]; reciprocal rank fusion (RRF) [10] consistently yields state-of-the-art performance in this setting [6].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982390
+<title> Cluster-Based Document Retrieval with Multiple Queries
+
+<desc> Description:
+One could potentially further improve the performance of our methods that utilize fusion of document lists by using supervised fusion (e.g., [38]).
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982391
+<title> Cluster-Based Document Retrieval with Multiple Queries
+
+<desc> Description:
+It was recently shown that the relative prediction quality posted by various query performance predictors can significantly vary when varying the effectiveness of a query used to represent an information need [47].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982392
+<title> Cluster-Based Document Retrieval with Multiple Queries
+
+<desc> Description:
+There was work on improving search efficiency when using multiple queries by clustering queries offline [7].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982393
+<title> Cluster-Based Document Retrieval with Multiple Queries
+
+<desc> Description:
+Work on (i) studying the cluster hypothesis [13, 15, 17, 36, 40, 44], (ii) analyzing optimal document clusters [12, 20, 28, 36, 43], and (iii) devising cluster-based document retrieval methods (e.g., [11, 17, 19–23, 28–30, 32, 33, 35, 43–45]) was confined to the standard setting of using a single query to represent an information need.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982394
+<title> Cluster-Based Document Retrieval with Multiple Queries
+
+<desc> Description:
+Clusters of documents in lists retrieved by applying different retrieval approaches for a single query were used to fuse the lists [18].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982395
+<title> Cluster-Based Document Retrieval with Multiple Queries
+
+<desc> Description:
+Cluster-based document retrieval methods can also be used to improve search results diversification [35].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982396
+<title> Cluster-Based Document Retrieval with Multiple Queries
+
+<desc> Description:
+Integrating fusion of ranked lists and topic modeling was also shown to be effective in improving diversification [25].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340981397
+<title> Permutation Equivariant Document Interaction Network for Neural Learning to Rank
+
+<desc> Description:
+While much of the research in LTR has been devoted to the evolution of ranking loss functions [11], the nature of the learned scoring function has largely remained the same: a univariate scoring function that computes a relevance score for a document in isolation.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340981398
+<title> Permutation Equivariant Document Interaction Network for Neural Learning to Rank
+
+<desc> Description:
+Recently, neural network based approaches have proven effective for LTR applications [4, 14, 15].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340981399
+<title> Permutation Equivariant Document Interaction Network for Neural Learning to Rank
+
+<desc> Description:
+Most of the previous work in LTR [11] focuses on designing loss functions, ranging from pointwise to pairwise to listwise ones.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340981400
+<title> Permutation Equivariant Document Interaction Network for Neural Learning to Rank
+
+<desc> Description:
+Recently, neural network based models have attracted considerable attention [8, 12].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340981401
+<title> Permutation Equivariant Document Interaction Network for Neural Learning to Rank
+
+<desc> Description:
+For example, [1] applies sequence modeling on the top k documents of the base ranking and then uses the final state vector to enrich each document for the re-ranking scoring.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340981402
+<title> Permutation Equivariant Document Interaction Network for Neural Learning to Rank
+
+<desc> Description:
+For example, RankProb [6] takes a pair of documents as input and uses a DNN to produce a preference score for the input documents, while [2] propose a groupwise scoring function to model document interactions, sampling a subset of all permutations of each group and thus not guaranteeing permutation equivariance.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340984403
+<title> Using Sentiment Analysis for Pseudo-Relevance Feedback in Social Book Search
+
+<desc> Description:
+Pseudo-relevance feedback (PRF), also known as blind relevance feedback, is considered as one of the most effective techniques for improving retrieval performance by query reformulation [13, 16].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340984404
+<title> Using Sentiment Analysis for Pseudo-Relevance Feedback in Social Book Search
+
+<desc> Description:
+However, in the context of book search, where the goal is to rank books given a query [8], the usual application of PRF [4, 18] may not be appropriate, considering that the book's descriptions may not adequately convey the experience and emotion attached to the story line that a reader may be looking to enjoy.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340984405
+<title> Using Sentiment Analysis for Pseudo-Relevance Feedback in Social Book Search
+
+<desc> Description:
+To alleviate these problems, a number of methods have been proposed, not for query expansion, but to reduce the subset of reviews to be presented to users or for selecting which parts of the reviews to present [3, 17].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340984406
+<title> Using Sentiment Analysis for Pseudo-Relevance Feedback in Social Book Search
+
+<desc> Description:
+While [3] made use of SA to identify emotionally loaded characters and entities given their proximity to emotional terms (e.g., love, hate) for the purpose of extracting interesting aspects from user comments.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340984407
+<title> Using Sentiment Analysis for Pseudo-Relevance Feedback in Social Book Search
+
+<desc> Description:
+Those works, and others before [19], deduced that the SA can be a key factor in the mining and summarization of reviews.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340984408
+<title> Using Sentiment Analysis for Pseudo-Relevance Feedback in Social Book Search
+
+<desc> Description:
+On the other hand, using sentiment or emotion in documents to improve the effectiveness of the system has been explored in the past in other domains, such as recommender systems, where [11, 12] used the emotion in reviews to improve the effectiveness of their recommender systems, while in this work we focus on terms' sentiment intensity rather than general emotion.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340984409
+<title> Using Sentiment Analysis for Pseudo-Relevance Feedback in Social Book Search
+
+<desc> Description:
+Also, in the opinion retrieval domain, [7] employed a query expansion method by adding a set of extracted opinion words (e.g., good, like) to the query, extracted from the top retrieved documents in a pseudo relevance feedback method.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340984410
+<title> Using Sentiment Analysis for Pseudo-Relevance Feedback in Social Book Search
+
+<desc> Description:
+In their suggestion, [7] served of terms frequency and word weighting techniques, but they did not use any SA methods to classify the documents terms, and they did not go beyond the opinion words extraction to explore the extraction of informative words.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982411
+<title> Declarative Experimentation in Information Retrieval using PyTerrier
+
+<desc> Description:
+[10] define reproducibility as the ability for a different team to reproduce the measurement in a different experimental setup.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982412
+<title> Declarative Experimentation in Information Retrieval using PyTerrier
+
+<desc> Description:
+This highlights the importance of end-to-end retrieval experiments – understanding what data are needed for a given approach, and how it interacts with others components (e.g., how many documents should be re-ranked [19] for a LTR approach), reduces the uncertainties when a technique should be deployed to an operational search engine.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982413
+<title> Declarative Experimentation in Information Retrieval using PyTerrier
+
+<desc> Description:
+However, its ability to handle standard test collections was for many years a known limitation [8], and has been advanced by efforts such as Anserini [29].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982414
+<title> Declarative Experimentation in Information Retrieval using PyTerrier
+
+<desc> Description:
+For example, [23] show that different implementations of the same BM25 weighting models in different IR platforms result in different values for the same effectiveness metric.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340982415
+<title> Declarative Experimentation in Information Retrieval using PyTerrier
+
+<desc> Description:
+The most similar work to our own is that in Terrier-Spark [16, 17], where retrieval pipelines for the Terrier platform were created in Scala using Apache Spark.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340981416
+<title> Analysing the Effect of Clarifying Questions on Document Ranking in Conversational Search
+
+<desc> Description:
+This makes the ability of a conversational search system to support mixed-initiative interactions imperative [6, 8].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340981417
+<title> Analysing the Effect of Clarifying Questions on Document Ranking in Conversational Search
+
+<desc> Description:
+Such a system can assist users to refine their information need, i.e., by disclosing new information to them [8], or posing clarifying questions [1].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340981418
+<title> Analysing the Effect of Clarifying Questions on Document Ranking in Conversational Search
+
+<desc> Description:
+Clarifying questions trigger users' explicit feedback in the form of an answer, and have been shown to improve user experience [1, 2, 6, 9].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340981419
+<title> Analysing the Effect of Clarifying Questions on Document Ranking in Conversational Search
+
+<desc> Description:
+In Figure 1, we demonstrate examples of clarification-based conversations appearing in the conversational search dataset Qulac [1].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340981420
+<title> Analysing the Effect of Clarifying Questions on Document Ranking in Conversational Search
+
+<desc> Description:
+We conduct our analysis on the Qulac dataset [1], using a query likelihood model chosen because of its simplicity and transparency [7].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 340983421
+<title> Understanding BERT Rankers Under Distillation
+
+<desc> Description:
+Notably, deep LMs such as BERT [3] have achieved state-of-the-art performance in several natural language tasks, including text search [2, 7].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337185422
+<title> Addressing Marketing Bias in Product Recommendations
+
+<desc> Description:
+Among recommendation algorithms used in practice, many fall under the umbrella of collaborative filtering [13, 17, 20, 25], which collect and generalize users' preference patterns from logged consumer-product interactions (e.g. purchases, ratings).
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337185423
+<title> Addressing Marketing Bias in Product Recommendations
+
+<desc> Description:
+Such phenomena have already raised some attention from the recommender system community: a handful of types of algorithmic biases have been addressed, including selection bias [26], popularity bias [29], and several fairness-aware recommendation algorithms have been proposed [3, 6].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337185424
+<title> Addressing Marketing Bias in Product Recommendations
+
+<desc> Description:
+Our analysis is related to previous work which examines particular types of biases in real-world interactions and their effects in recommendation algorithms, including the popularity effect and catalog coverage [14], the bias regarding the book author gender for book recommenders [7], and the herding effect in product ratings [31].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337185425
+<title> Addressing Marketing Bias in Product Recommendations
+
+<desc> Description:
+‘Unbiased' recommender systems with missing-not-at-random training data are developed by considering the propensity of each item [15, 26].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337185426
+<title> Addressing Marketing Bias in Product Recommendations
+
+<desc> Description:
+A fairness-aware tensor-based algorithm is proposed to address the absolute statistical parity (i.e., items are expected to be presented at the same rate across groups) [32].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337185427
+<title> Addressing Marketing Bias in Product Recommendations
+
+<desc> Description:
+Several fairness metrics and their corresponding algorithms are proposed for both pointwise prediction frameworks [6, 30] and pairwise ranking frameworks [3].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337185428
+<title> Addressing Marketing Bias in Product Recommendations
+
+<desc> Description:
+Methodologically, these algorithms can be summarized as reweighting schemes where underrepresented samples are upweighted [6, 15, 26] or schemes where additional fairness terms are added to regularize the model [1, 3, 30].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337185429
+<title> Addressing Marketing Bias in Product Recommendations
+
+<desc> Description:
+Multi-sided fairness is addressed by [3] by considering C(onsumer)-fairness and P(rovider)-fairness.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337185430
+<title> Addressing Marketing Bias in Product Recommendations
+
+<desc> Description:
+Trade-off between accuracy and fairness in two-sided marketplaces is further explored and a counterfactual framework is proposed to evaluate different recommendation policies without extensive A/B tests [22].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337184431
+<title> A Stochastic Treatment of Learning to Rank Scoring Functions
+
+<desc> Description:
+Learning-to-rank algorithms generally address the ranking problem using a score-and-sort approach [4, 5, 7, 20, 21, 25, 40].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337184432
+<title> A Stochastic Treatment of Learning to Rank Scoring Functions
+
+<desc> Description:
+However, virtually all learning-to-rank methods with a few exceptions [1, 10, 33] simplify the problem further by learning a univariate function that produces a relevance score for a document independently of other documents in the input set.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337184433
+<title> A Stochastic Treatment of Learning to Rank Scoring Functions
+
+<desc> Description:
+It is true then that learning-to-rank can be formulated as classification or regression—in fact, many early learning-to-rank methods such as RankSVM [20] or RankNet [4] take a very similar approach.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337184434
+<title> A Stochastic Treatment of Learning to Rank Scoring Functions
+
+<desc> Description:
+These algorithms reduce the ranking problem to one of correctly predicting relevance scores by optimizing a "pointwise" loss [13] or correctly classifying ordered pairs of documents by optimizing a "pairwise" loss [4, 5, 20].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337184435
+<title> A Stochastic Treatment of Learning to Rank Scoring Functions
+
+<desc> Description:
+Ranking utilities such as Normalized Discounted Cumulative Gain [19] or Expected Reciprocal Rank [9] work with permutations (i.e., ranked lists) which are discrete structures.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337184436
+<title> A Stochastic Treatment of Learning to Rank Scoring Functions
+
+<desc> Description:
+The literature offers a range of methods from direct optimization of metrics using coordinate ascent over parameters of linear models [29], to optimizing an exponential upper-bound of ranking metrics using boosted weak learners [41], to optimizing a differentiable surrogate loss function [7, 32, 36, 38, 40].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337184437
+<title> A Stochastic Treatment of Learning to Rank Scoring Functions
+
+<desc> Description:
+Other methods, such as LambdaRank [6] and its gradient boosted regression tree-based [12] variant LambdaMART [39], assume the existence of an unknown loss function whose gradients are however designed based on some heuristic.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337184438
+<title> A Stochastic Treatment of Learning to Rank Scoring Functions
+
+<desc> Description:
+One exception is SoftRank [36].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337184439
+<title> A Stochastic Treatment of Learning to Rank Scoring Functions
+
+<desc> Description:
+[36] consider a score to be the mean of a Gaussian distribution.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337184440
+<title> A Stochastic Treatment of Learning to Rank Scoring Functions
+
+<desc> Description:
+Another work that uses additive noise is YetiRank [16].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337184441
+<title> A Stochastic Treatment of Learning to Rank Scoring Functions
+
+<desc> Description:
+Finally, another related work is the LambdaLoss framework [38].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337184442
+<title> A Stochastic Treatment of Learning to Rank Scoring Functions
+
+<desc> Description:
+[38] propose a probabilistic framework to model ranking loss functions and show that existing ranking losses are instances of LambdaLoss.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337184443
+<title> A Stochastic Treatment of Learning to Rank Scoring Functions
+
+<desc> Description:
+In their work, however, [38] use a degenerate distribution where this probability is 1 for a permutation (deterministically) obtained by sorting scores in decreasing order.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177444
+<title> JNET: Learning User Representations via Joint Network Embedding and Topic Embedding
+
+<desc> Description:
+Inferring user intent from recorded user behavior data has been studied extensively for user modeling [11, 22, 31, 39, 40].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177445
+<title> JNET: Learning User Representations via Joint Network Embedding and Topic Embedding
+
+<desc> Description:
+Essentially, user modeling builds up conceptual representations of users, which help automated systems to better capture users' needs and enhance user experience in such systems [9, 17].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177446
+<title> JNET: Learning User Representations via Joint Network Embedding and Topic Embedding
+
+<desc> Description:
+The rapid development of social media enables users to participate in online activities and create vast amount of observational data, such as social interactions [15, 16] and opinionated text content [8, 12, 27], which in turn provides informative signs about user intents and enables more accurate user representation learning.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177447
+<title> JNET: Learning User Representations via Joint Network Embedding and Topic Embedding
+
+<desc> Description:
+Extensive efforts have proved the value of user representation learning in various real-world applications, such as latent factor models for collaborative filtering [18, 29], topic models for content modeling [23, 38], network embedding models for social link prediction [5, 20], and many more [31, 42].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177448
+<title> JNET: Learning User Representations via Joint Network Embedding and Topic Embedding
+
+<desc> Description:
+First, user-generated data is noisy, incomplete, highly unstructured, and tied with social interactions [34], which imposes serious challenges in modeling such data.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177449
+<title> JNET: Learning User Representations via Joint Network Embedding and Topic Embedding
+
+<desc> Description:
+For example, in an environment where users are connected, e.g., social network, user-generated data is potentially related, which directly breaks the popularly imposed independent and identically distributed assumptions in most learning solutions [10, 20, 32].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177450
+<title> JNET: Learning User Representations via Joint Network Embedding and Topic Embedding
+
+<desc> Description:
+For example, users' social interactions [5, 28] and their generated text data [4, 23, 38] have been extensively studied for user representation learning, but they are largely modeled in isolation.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177451
+<title> JNET: Learning User Representations via Joint Network Embedding and Topic Embedding
+
+<desc> Description:
+Even among a few attempts for joint modeling of different types of user-generated data [12, 43], explicit modeling of dependency among multiple behavior modalities is still missing.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177452
+<title> JNET: Learning User Representations via Joint Network Embedding and Topic Embedding
+
+<desc> Description:
+[12] paired the task of sentiment classification with that of social network modeling, and represented each user as a mixture over the instances of these paired tasks.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177453
+<title> JNET: Learning User Representations via Joint Network Embedding and Topic Embedding
+
+<desc> Description:
+Due to the unstructured nature of text, we appeal to statistical topic models to model user-generated text content [4, 38], with a goal to capture the underlying semantics.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177454
+<title> JNET: Learning User Representations via Joint Network Embedding and Topic Embedding
+
+<desc> Description:
+Inspired from word embedding techniques [25], random walk models are exploited to generate random paths over a network to learn dense, continuous and low-dimensional representations of users [13, 28, 35].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177455
+<title> JNET: Learning User Representations via Joint Network Embedding and Topic Embedding
+
+<desc> Description:
+Matrix factorization technique is also commonly used to learn user embeddings [26, 41], as learning a low-rank space for an adjacency matrix representing the network naturally fits the need of learning low-rank user/node embeddings.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177456
+<title> JNET: Learning User Representations via Joint Network Embedding and Topic Embedding
+
+<desc> Description:
+For instance, [36] factorize an input network's modularity matrix and use discriminative training to extract representative dimensions for learning user representation.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177457
+<title> JNET: Learning User Representations via Joint Network Embedding and Topic Embedding
+
+<desc> Description:
+Typical solutions model individual users as a bag of topics [30], which govern the generation of associated text documents.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177458
+<title> JNET: Learning User Representations via Joint Network Embedding and Topic Embedding
+
+<desc> Description:
+[38] combine topic modeling with collaborative filtering to estimate topical user representations with additional observations from user-item ratings.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177459
+<title> JNET: Learning User Representations via Joint Network Embedding and Topic Embedding
+
+<desc> Description:
+[39] use topic modeling to estimate users' detailed aspect-level preferences from their opinionated review content.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177460
+<title> JNET: Learning User Representations via Joint Network Embedding and Topic Embedding
+
+<desc> Description:
+[21] learn users' personalized topical compositions to differentiate user's subjectivity from item's intrinsic property in the review documents.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177461
+<title> JNET: Learning User Representations via Joint Network Embedding and Topic Embedding
+
+<desc> Description:
+[23] uncover the implicit preferences of each user as well as the properties of each product by mapping users and items into a shared topic space.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177462
+<title> JNET: Learning User Representations via Joint Network Embedding and Topic Embedding
+
+<desc> Description:
+Earlier work [24] regularizes a statistical topic model with a harmonic regularizer defined on the network structure.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177463
+<title> JNET: Learning User Representations via Joint Network Embedding and Topic Embedding
+
+<desc> Description:
+[12] pair tasks of opinionated content modeling and network structure modeling in a group-wise fashion, and model each user as a mixture over the tasks.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337182464
+<title> User Recommendation in Content Curation Platforms
+
+<desc> Description:
+Indeed, around 50% of Spotify's 100 million users listen to human-curated playlists [37] and researchers have shown how the power of human curation can serve as a significant component of modern recommender systems to connect users to items [16, 24].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337182465
+<title> User Recommendation in Content Curation Platforms
+
+<desc> Description:
+This challenge of user recommendation in content curation platforms is vitally important and yet most existing methods that rely on traditional item-level recommendation [2, 3, 9, 35, 38] or on expert-finding approaches [8, 12, 26, 29] may not capture the important relationships among both curators and the items they curate.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337182466
+<title> User Recommendation in Content Curation Platforms
+
+<desc> Description:
+Compared to previous works on friend recommendation [10, 32], topical user recommendation (e.g., finding other users interested in fashion) [14, 30], and expert finding [8, 12, 26, 29], there is a research gap in curator recommendation that carefully balances user preferences for specific item types and preferences for different curator specialties.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337182467
+<title> User Recommendation in Content Curation Platforms
+
+<desc> Description:
+In [5, 25], the authors recommend user-generated lists based on the occurrences of items among lists and interactions of users on items.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337182468
+<title> User Recommendation in Content Curation Platforms
+
+<desc> Description:
+Work in [18, 44] focuses on "board" recommendation in Pinterest.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337182469
+<title> User Recommendation in Content Curation Platforms
+
+<desc> Description:
+Somewhat similar to our notion of curator is research on finding expertise to improve search and recommendation, including topical user recommendation [14, 30, 45, 46] and expert finding [8, 12, 26, 29].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337182470
+<title> User Recommendation in Content Curation Platforms
+
+<desc> Description:
+CuRe jointly learns user preferences on curators and items akin to multitask learning [6], which has been widely adopted in different recommendation scenarios [2, 5, 19, 27, 34, 40].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337182471
+<title> User Recommendation in Content Curation Platforms
+
+<desc> Description:
+[19] set item correlation prediction and next interaction prediction as supplementary tasks, to improve the performance of sequential item recommendation.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337182472
+<title> User Recommendation in Content Curation Platforms
+
+<desc> Description:
+In GRU-MTL [2], they train the recurrent model with two tasks – tag prediction and text recommendation, to ultimately improve the text recommendation.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337182473
+<title> User Recommendation in Content Curation Platforms
+
+<desc> Description:
+Similarly, in [27, 40], they combine personalized item recommendation with opinionated text content modeling together to achieve better results in the recommendation.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337182474
+<title> User Recommendation in Content Curation Platforms
+
+<desc> Description:
+Enhanced with transferring knowledge between different social media sites, Crossfire [34] generates recommendations of friends and items at the same time.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337182475
+<title> Parameter Tuning in Personal Search Systems
+
+<desc> Description:
+This approach is especially impactful for the retrieval stage – while a large amount of work focuses on optimizing the parameters of the ranking stage, relatively little work [3, 8] covers parameter tuning at the retrieval stage.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337182476
+<title> Parameter Tuning in Personal Search Systems
+
+<desc> Description:
+Whereas retrieval work in the literature primarily studies approaches such as BM25 [26], search engines in industry have an entirely different set of challenges.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337182477
+<title> Parameter Tuning in Personal Search Systems
+
+<desc> Description:
+As [7, 13] note that even small variations in parameters of information retrieval systems lead to large variations in retrieval effectiveness, it motivates thoroughly tuning parameters.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337182478
+<title> Parameter Tuning in Personal Search Systems
+
+<desc> Description:
+Given that an industrial search system can be very complex, a natural and common approach for parameter tuning is to treat the entire system as a black box and run A/B experiments with either some sort of parameter sweep (e.g. grid search, coordinate ascent) [22] or black-box optimization [17] over various parameters in a guess-and-check manner.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337182479
+<title> Parameter Tuning in Personal Search Systems
+
+<desc> Description:
+Offline tuning using a validation set is another option [21].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337182480
+<title> Parameter Tuning in Personal Search Systems
+
+<desc> Description:
+However, in the personal search setting [2, 5, 12, 28], where both queries and documents are private, building a representative validation set is a challenge, as it involves either relying upon donated data (which can be limited and biased) or utilizing a validation set that only contains partial information (where any sensitive raw data is not logged).
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337182481
+<title> Parameter Tuning in Personal Search Systems
+
+<desc> Description:
+[7, 13] discuss the importance of parameter tuning, and [27] gives more insight into the difficulty of parameter management.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337182482
+<title> Parameter Tuning in Personal Search Systems
+
+<desc> Description:
+Typical approaches include Bayesian optimization [11, 17] as well as hybrid methods using random search alongside multi-armed bandit techniques [19].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337182483
+<title> Parameter Tuning in Personal Search Systems
+
+<desc> Description:
+In particular, [17] discusses how Bayesian optimization can be used for optimizing retrieval systems.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337182484
+<title> Parameter Tuning in Personal Search Systems
+
+<desc> Description:
+Other Bayesian optimization work consists of that of [15], which remarks on the importance of determining the impactfulness of different hyperparameters in order to reduce the exploration needed and speed up the optimization process.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337182485
+<title> Parameter Tuning in Personal Search Systems
+
+<desc> Description:
+[14] use previously collected click data in order to perform interleaved comparison methods between various rankers and find that it can be less expensive than running live interleaving experiments.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337182486
+<title> Parameter Tuning in Personal Search Systems
+
+<desc> Description:
+[18] provides a method of doing offline evaluation of different contextual bandit based article recommendations, where a primary motivation is to not hurt user experience by exposing potentially poor-quality algorithms.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177487
+<title> Consistency-Aware Recommendation for User-Generated Item List Continuation
+
+<desc> Description:
+For example, more than 50% of Spotify users listen to playlists, accounting for more than 1 billion plays per week [38]; and Pinterest users have curated more than 3 billion pins to about 4 billion boards [10].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177488
+<title> Consistency-Aware Recommendation for User-Generated Item List Continuation
+
+<desc> Description:
+Compared with traditional item-based recommendation [34], list continuation faces complexities, since the length of lists varies from several items to even thousands of items and the user preference on items may dynamically evolve as a list develops.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177489
+<title> Consistency-Aware Recommendation for User-Generated Item List Continuation
+
+<desc> Description:
+Traditional song-based playlist continuation usually aims to generate strongly consistent lists, where each new song naturally fits with the previous ones [1, 4, 6, 12, 13, 21, 29– 31, 33, 37].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177490
+<title> Consistency-Aware Recommendation for User-Generated Item List Continuation
+
+<desc> Description:
+Prior work in song-based playlists has found that neither audio signal-based similarity nor social tag-based similarity accurately reflect the consistency of manually constructed playlists [6, 30].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177491
+<title> Consistency-Aware Recommendation for User-Generated Item List Continuation
+
+<desc> Description:
+For example, [30, 31] apply a first-order Markov Chain for modeling playlists, which is improved by [6] via introducing metric embeddings.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177492
+<title> Consistency-Aware Recommendation for User-Generated Item List Continuation
+
+<desc> Description:
+These approaches often are enhanced by content-based methods [13, 21, 33, 40–42].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177493
+<title> Consistency-Aware Recommendation for User-Generated Item List Continuation
+
+<desc> Description:
+A typical example by [21] uses collaborative filtering and incorporates content features like social tags from Last.fm and popularity of songs.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177494
+<title> Consistency-Aware Recommendation for User-Generated Item List Continuation
+
+<desc> Description:
+Second, most traditional playlist continuation work assumes lists are always consistent [6, 12, 13, 21, 29–31, 33].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177495
+<title> Consistency-Aware Recommendation for User-Generated Item List Continuation
+
+<desc> Description:
+Except for [33] introduced in the introduction, examples include [6, 30, 31] that apply language models to generate coherent playlists and [21] that recommends a set of songs whose tempo distribution is as similar as possible to the current playlist.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177496
+<title> Consistency-Aware Recommendation for User-Generated Item List Continuation
+
+<desc> Description:
+[27] analyze the growth of image collections on Pinterest.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177497
+<title> Consistency-Aware Recommendation for User-Generated Item List Continuation
+
+<desc> Description:
+[25] and [10] distill user preference from Pinterest image-based lists to enhance individual image recommendation.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177498
+<title> Consistency-Aware Recommendation for User-Generated Item List Continuation
+
+<desc> Description:
+[17] propose a hierarchical self-attentive model for recommending user-generated item lists (e.g., book lists and playlists) to right users.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177499
+<title> Consistency-Aware Recommendation for User-Generated Item List Continuation
+
+<desc> Description:
+Besides, the List Recommending Model in [26] is proposed for recommending book lists and the Embedding Factorization Model in [3] is for recommending song playlists.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177500
+<title> Consistency-Aware Recommendation for User-Generated Item List Continuation
+
+<desc> Description:
+[16] apply multilayer perceptron and generalized matrix factorization for implicit top-k recommendation.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177501
+<title> Consistency-Aware Recommendation for User-Generated Item List Continuation
+
+<desc> Description:
+[9] apply memory networks for recommendation.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177502
+<title> Consistency-Aware Recommendation for User-Generated Item List Continuation
+
+<desc> Description:
+[18] propose a GRU-based model for session-based recommendation and [36] propose a CNN-based model for sequential recommendation.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177503
+<title> Consistency-Aware Recommendation for User-Generated Item List Continuation
+
+<desc> Description:
+[5] propose an attentive collaborative filtering framework, where each item is segmented into component-level elements, and attention scores are learned for these components for obtaining a better representation of items.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177504
+<title> Consistency-Aware Recommendation for User-Generated Item List Continuation
+
+<desc> Description:
+Attention networks are also applied in group recommendation [2] and sequential recommendation [19, 22].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177505
+<title> Separate and Attend in Personal Email Search
+
+<desc> Description:
+Email search is formulated as a learning-to-rank problem, which has been tackled with different learning models, such as boosted trees [8], SVM-based linear models [10, 12, 23], and shallow neural networks [9, 11].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177506
+<title> Separate and Attend in Personal Email Search
+
+<desc> Description:
+They significantly improve the performance of search engines in the presence of large-scale query logs in both web search [19] and email settings [39, 45, 51].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177507
+<title> Separate and Attend in Personal Email Search
+
+<desc> Description:
+Indeed, many previous deep neural email search models use direct concatenation of dense features with embedded sparse features [15, 38, 39, 45].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177508
+<title> Separate and Attend in Personal Email Search
+
+<desc> Description:
+In early years, learning-to-rank has been studied with different models, such as boosted trees [8], SVM-based linear models [10, 12, 23] and shallow neural networks [9, 11].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177509
+<title> Separate and Attend in Personal Email Search
+
+<desc> Description:
+Recent years have witnessed great success of applying DNNs to learning-to-rank, such as [7, 15, 36, 38].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177510
+<title> Separate and Attend in Personal Email Search
+
+<desc> Description:
+The Enterprise tracks of TREC 2005 [40] and TREC 2006 [41] provide public datasets containing email data and summarize some early explorations [14, 31, 35].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177511
+<title> Separate and Attend in Personal Email Search
+
+<desc> Description:
+[12] proposed an email search framework with a learning-to-rank re-ranking module that combines freshness with relevance signals of emails as well as other features such as user actions.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177512
+<title> Separate and Attend in Personal Email Search
+
+<desc> Description:
+Alternatively, [13] studied to present users with both the relevance-ranked results as well as the time-ranked results in two separate lists for better user experience.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177513
+<title> Separate and Attend in Personal Email Search
+
+<desc> Description:
+[27] explored several methods to expand the usually short and sparse queries by finding more related terms to improve the relevance results.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177514
+<title> Separate and Attend in Personal Email Search
+
+<desc> Description:
+[29] studied a more specific synonym expansion problem to improve email search performance.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177515
+<title> Separate and Attend in Personal Email Search
+
+<desc> Description:
+[4] leveraged user interactions by attribute parameterization.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177516
+<title> Separate and Attend in Personal Email Search
+
+<desc> Description:
+[48] mitigated the position bias in click data for better training of the model.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177517
+<title> Separate and Attend in Personal Email Search
+
+<desc> Description:
+In addition, [51] showed that contexts such as search request time and location of users were helpful for email search quality.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177518
+<title> Separate and Attend in Personal Email Search
+
+<desc> Description:
+[2] conducted a thorough survey of search intent by analyzing user logs of email search.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177519
+<title> Separate and Attend in Personal Email Search
+
+<desc> Description:
+[39] categorized email search queries into different clusters before adding the query cluster information to improve email ranking.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337177520
+<title> Separate and Attend in Personal Email Search
+
+<desc> Description:
+Later, the attention mechanism has been adapted to a wide range of compelling sequence modeling tasks, including image caption generation [49], text classification [50] and natural language question answering [20, 26, 43].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337178521
+<title> Interpretable Click-Through Rate Prediction through Hierarchical Attention
+
+<desc> Description:
+It plays a significant role in recommender systems, such as online advertising, since it directly affects the revenue of advertising agencies [7, 12, 13, 16, 25, 25, 30, 37, 38].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337178522
+<title> Interpretable Click-Through Rate Prediction through Hierarchical Attention
+
+<desc> Description:
+Specifically, a k-th order feature (k ∈ N) refers to a latent variable that is a k-th degree polynomial of the raw features [4, 31].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337178523
+<title> Interpretable Click-Through Rate Prediction through Hierarchical Attention
+
+<desc> Description:
+For example, DeepFM [9] and xDeepFM [19] learn high-order features by multi-layer feedforward neural networks (FNN) and multi-block compressed interaction networks (CIN).
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337178524
+<title> Interpretable Click-Through Rate Prediction through Hierarchical Attention
+
+<desc> Description:
+For example, the wide component of Wide&Deep [4] applies cross-product transformations to feature embeddings but fails to quantify and justify its effectiveness to the actual click-through rate prediction performance.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337178525
+<title> Interpretable Click-Through Rate Prediction through Hierarchical Attention
+
+<desc> Description:
+For example, the compressed interaction network (CIN) in xDeepFM [19] computes the (k + 1)-th order feature matrix by an outer product layer and a fully-connected layer which entails a cubic complexity to the embedding dimension.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337178526
+<title> Interpretable Click-Through Rate Prediction through Hierarchical Attention
+
+<desc> Description:
+CTR prediction has drawn great attention from both academia and industry [4, 7, 12, 18, 19, 23, 24, 26, 30–32, 36–38] due to its significant impact on online advertisements.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337178527
+<title> Interpretable Click-Through Rate Prediction through Hierarchical Attention
+
+<desc> Description:
+The advancement of CTR prediction algorithms essentially shows a trend towards deeper model architectures since they are more powerful in feature interaction learning [27].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337178528
+<title> Interpretable Click-Through Rate Prediction through Hierarchical Attention
+
+<desc> Description:
+Field-aware Factorization Machine (FFM) [16] assumes that features may have dissimilar semantics under distinct fields and extends the idea of FM by making the feature representation field-specific.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337178529
+<title> Interpretable Click-Through Rate Prediction through Hierarchical Attention
+
+<desc> Description:
+Wide&Deep [4] consists of a wide and a deep component, which are essentially a generalized linear model and a multi-layer perceptron (MLP), respectively.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337178530
+<title> Interpretable Click-Through Rate Prediction through Hierarchical Attention
+
+<desc> Description:
+Deep&Cross Network (DCN) [31] slightly differs from Wide&Deep in that DCN replaces the linear model with a cross-product transformation to integrate high-order information with non-linear deep features.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337178531
+<title> Interpretable Click-Through Rate Prediction through Hierarchical Attention
+
+<desc> Description:
+xDeepFM [19] claims that MLP parameters are actually arbitrarily modeling the "implicit" feature interactions.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337178532
+<title> Interpretable Click-Through Rate Prediction through Hierarchical Attention
+
+<desc> Description:
+Recent works from industry practice include DIN [38] and DIEN [37] that respectively model the static and dynamic shopping interest of users.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337181533
+<title> Listwise Learning to Rank by Exploring Unique Ratings
+
+<desc> Description:
+Existing ranking models tackle the two challenges by: (1) designing loss functions or reward functions to map prediction scores with correct ranking orders in training, and (2) tuning loss functions with evaluation metrics such as NDCG [24], or ERR [10], and (3) calculating prediction scores using richer features such as a local ranking context [1, 3, 5, 18, 38].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337181534
+<title> Listwise Learning to Rank by Exploring Unique Ratings
+
+<desc> Description:
+Pointwise learning maps the prediction scores of individual documents with their exact ratings [31], which is not necessary for obtaining correct orders.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337181535
+<title> Listwise Learning to Rank by Exploring Unique Ratings
+
+<desc> Description:
+Pairwise learning [7, 8, 14, 20, 28, 43, 44, 46, 50] naturally compares pairs of documents to minimize the number of inversions.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337181536
+<title> Listwise Learning to Rank by Exploring Unique Ratings
+
+<desc> Description:
+Earlier pairwise models such as RankSVM [20], RankBoost [14], RankNet [7], and Ordinal Regression [28] may overly update weights for different pairs as they treat all pairs with equal importance.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337181537
+<title> Listwise Learning to Rank by Exploring Unique Ratings
+
+<desc> Description:
+LambdaMart [8, 22, 43] and NDCG-LOSS++ [46] largely limit this issue by assigning different weights for different pairs when calculating their gradients [8].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337181538
+<title> Listwise Learning to Rank by Exploring Unique Ratings
+
+<desc> Description:
+Their best models rely on using gradient boosting regression trees [11, 26, 35], which are effective but very sensitive to hyper-parameters.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337181539
+<title> Listwise Learning to Rank by Exploring Unique Ratings
+
+<desc> Description:
+Listwise learning [9, 17, 25, 27, 34, 36, 45, 48] tries to learn the best document permutation based on permutation probabilities proposed by [40] and [32].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337181540
+<title> Listwise Learning to Rank by Exploring Unique Ratings
+
+<desc> Description:
+Also, in order to calculate the joint probability of a ranking sequence, the number of steps a Plackett-Luce model, such as ListMLE [48], needs to go through is bound by the number of candidate documents per query.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337181541
+<title> Listwise Learning to Rank by Exploring Unique Ratings
+
+<desc> Description:
+Variants such as SoftRank [45], p-ListMLE [27], and ApproxNDCG [6] use NDCG or ranking positions to tune their loss functions.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337181542
+<title> Listwise Learning to Rank by Exploring Unique Ratings
+
+<desc> Description:
+Highlights from research studies in recent years for scoring functions include ensemble scoring functions [2, 16, 31], ranking refinement [1], and reinforcement learning [13, 30, 33, 37, 47, 49].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337181543
+<title> Listwise Learning to Rank by Exploring Unique Ratings
+
+<desc> Description:
+ListNet Since learning the complete n! permutations is intractable, ListNet [9] generally minimizes the cross-entropy of top-one probabilities of prediction scores and ratings using a softmax function.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337181544
+<title> Listwise Learning to Rank by Exploring Unique Ratings
+
+<desc> Description:
+A common practice of applying RNNs in learning-to-rank is by refining the top positions of a ranked list using two training phases [1].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337181545
+<title> Improving the Estimation of Tail Ratings in Recommender System with Multi-Latent Representations
+
+<desc> Description:
+While the importance of the distribution of ratings on RS has been long recognized, e.g., [1, 2, 15, 36], many popular methods based on latent factor models and recently introduced neural variants [3, 14, 20, 22, 25, 39] optimize for the head of these distributions, potentially leading to large estimation errors for tail ratings.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337181546
+<title> Improving the Estimation of Tail Ratings in Recommender System with Multi-Latent Representations
+
+<desc> Description:
+For example, Gediminas et al. investigated the impact of rating characteristics like rating density, rating frequency distribution, and value distribution, on the accuracy of popular collaborative filtering techniques [1].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337181547
+<title> Improving the Estimation of Tail Ratings in Recommender System with Multi-Latent Representations
+
+<desc> Description:
+[2] surveyed state-of-the-art research on the polarization, finding that many trust-based RS attempts to improve recommendation for controversial items by defining a trusted network for each user, e.g., [11, 27, 30, 35].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337181548
+<title> Improving the Estimation of Tail Ratings in Recommender System with Multi-Latent Representations
+
+<desc> Description:
+Recently, [4] proposed a focused learning model to improve the recommendation quality for a specified subset of items, through hyper-parameter optimization and a customized matrix factorization objective.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337181549
+<title> Improving the Estimation of Tail Ratings in Recommender System with Multi-Latent Representations
+
+<desc> Description:
+Latent factor model is one of the cornerstones of RS, critical for traditional approaches [6, 19] as well as recent neural variants like NCF [14] and others [3, 14, 21, 23, 33, 39].
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337181550
+<title> Improving the Estimation of Tail Ratings in Recommender System with Multi-Latent Representations
+
+<desc> Description:
+Furthermore, these latent factor models have been adapted in a number of directions, including location-aware recommendation systems [5, 26, 29], aspect-aware latent factor models [8], and bioinspired approaches [31, 32], among many others.
+
+<narr> Narrative:
+
+</top>
+
+<top>
+<num> Number: 337181551
+<title> Improving the Estimation of Tail Ratings in Recommender System with Multi-Latent Representations
+
+<desc> Description:
+More recently, neural variants like Neural Collaborative Filtering (NCF) have been proposed to combine deep learning architectures with traditional matrix factorization [14].
+
+<narr> Narrative:
+
+</top>
