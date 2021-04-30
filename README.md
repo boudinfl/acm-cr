@@ -1,11 +1,12 @@
-# Context-aware Citation Recommendation
+# ACM-CR: A Manually Annotated Test Collection for Citation Recommendation
 
-This repository presents the test collection for context-aware (or local)
-citation recommendation constructed for running document retrieval experiments.
+This repository contains the test collection for (context-aware)
+citation recommendation constructed from bibliographic records and
+open-access papers collected from the ACM Digital Library.
 
 ## Requirements
 
-### Installing required Python modules 
+### Installing required Python modules
 
 ```
 pip install -r requirements.txt 
@@ -13,9 +14,9 @@ pip install -r requirements.txt
 
 ## Test collection
 
-### Documents 
+### Document collection
 
-Documents are BibTeX reference files of papers about IR-related topics collected from the [ACM Digital Library](https://dl.acm.org/). We use the SIGs IR, KDD, CHI, WEB and MOD sponsored conferences and journals as filter. BibTeX files are grouped by year (e.g. 'sigir/sigir-1999' contains all citations from SIGIR-1999). Details about the venues are presented in ['data/acm-dl/venues.md'](venues). An example of document is given below:
+Documents are bibliographic records of scientific papers (BibTeX entries) about IR-related topics collected from the [ACM Digital Library](https://dl.acm.org/). We use the SIGs IR, KDD, CHI, WEB and MOD sponsored conferences and journals as filter. BibTeX files are grouped by venue-year (e.g. 'sigir/sigir-1999' contains all citations from SIGIR-1999). Details about the venues are presented in [here]('data/acm-dl/venues.md'). An example of document is given below:
 
 ```bibtex
 @inproceedings{10.1145/3383583.3398517,
@@ -37,20 +38,10 @@ Documents are BibTeX reference files of papers about IR-related topics collected
 }
 ```
 
-Statistics of the test collection:
+Some statistics of the document collection (2021-04-30): 114,882 records, from which 103,990 (91%) have abstracts and 83,517 have author-assigned keyphrases (73%).
+We only consider 'article' and 'inproceedings' citations, and remove session papers (title starting with "Session" and empty abstract)
 
-80757 T+A+K, 23408 T+A, 14648 T over 118524 entries
-
-| #docs (T+A) | #docs (+K) |   %P |   %R |   %M |   %U | %exp | #kps |
-| -----------:| ----------:| ----:| ----:| ----:| ----:| ----:| ----:|
-|      102510 |      70956 | 53.6 | 11.7 | 19.3 | 15.4 | 13.4 |  4.5 |
-
-### Queries (citation contexts)
-
-Following the methodology proposed in [[1]](https://doi.org/10.1145/3132847.3133085), 
-we selected open-access (on ACM or Arxiv) (for data sharing reasons) papers from 
-conferences and manually extracted the citation contexts and cited references (relevant
-documents).
+### Queries (citation contexts) and relevance judgments
 
 Papers used for generating queries are in the `data/topics+qrels`
 directory. They are grouped by venue (e.g. sigir-2020), and each of
@@ -71,10 +62,7 @@ doi `10.1145/3397271.3401032`:
 3397271.3401032.xml   # manually extracted citation contexts
 ```
 
-Actually, there are 50 papers (list of selected papers is in 
-[`data/topics+qrels/papers/list.md`](data/topics+qrels/papers/list.md) and
-their manually extracted and curated citation contexts are in the
-following xml format:
+Actually, there are 50 papers (the list of selected papers is [`data/topics+qrels/papers/list.md`](here)) and their manually extracted and curated citation contexts are in the following xml format:
 
 ```xml
 <doc>
@@ -98,7 +86,7 @@ following xml format:
 </doc>
 ```
 
-## Some statistics
+Some statistics of the manually extracted citations and relevance judgements
 
 ```
 python3 src/cc_stats.py --input data/topics+qrels/papers/ \
@@ -123,21 +111,7 @@ avg coverage of collection: 0.5074 [0.0909 - 0.8333]
 | -----:| -----:| -----:|
 | 21.11 | 53.67 | 25.22 |
 
-## Document retrieval
-
-### Reranking using SciBERT
-
-```
-  python3 src/rerank.py --collection data/docs/collection.jsonl \
-                        --contexts data/topics+qrels/contexts.jsonl \
-                        --input output/run.t+a+k.description.paragraphs.bm25.txt \
-                        --output output/run.t+a+k.description.paragraphs.bm25+scibert.txt
-
-  python3 src/rerank.py --collection data/docs/collection.jsonl \
-                        --contexts data/topics+qrels/sentences.jsonl \
-                        --input output/run.t+a+k.description.sentences.bm25.txt \
-                        --output output/run.t+a+k.description.sentences.bm25+scibert.txt
-```
+## Document retrieval (TODO)
 
 ### Installing anserini
 
@@ -174,48 +148,62 @@ cd tools/eval && tar xvfz trec_eval.9.0.4.tar.gz && cd trec_eval.9.0.4 && make &
 cd tools/eval/ndeval && make && cd ../../..
 ```
 
-### Benchmarking IR models
+### Converting citations and building indexes
 
 ```
 ./src/0_create_data.sh
-
-75369 entries with T+A+K
-present: 0.5341884786642571
-absent: 0.46581152133573894
-|-> c1/Reordored (i.e. all words): 0.11652164544805718
-|-> c2/Mixed (i.e. some words): 0.19352479545861326
-|-> c3/Unseen (i.e. no words): 0.15576508042908255
-|-> exp. : 0.1349176087261396
-avg nb kps : 4.537906424525423
-
-75333 T+A+K, 20043 T+A, 13313 T over 108400 entries
-
 ./src/1_create_indexes.sh
-./src/2_retrieve.sh
-./src/3_evaluate.sh
-
 ```
 
-| index | nDCG@10 | recall@10 |
-| -----:| -------:| ---------:| 
-|   T+A |   30.35 |     35.64 |
-| ----- | ------- | --------- |
-|    +P |   30.81 |     36.02 |
-|    +R |   29.95 |     35.43 |
-|    +M |   29.77 |     36.22 |
-|    +U |   30.82 |     36.24 |
-| ----- | ------- | --------- |
-|    +A |   30.47 |     36.62 |
-| ----- | ------- | --------- |
-|  +P+R |   30.47 |     35.82 |
-|  +M+U |   30.38 |     37.21 |
-| ----- | ------- | --------- |
-| T+A+K |   30.94 |     36.65 |
+### Creating queries/qrels and retrieving citations using BM25
 
-## References
+```
+./src/2_retrieve.sh
+```
 
-1. Dwaipayan Roy. 2017. An Improved Test Collection and Baselines for
-   Bibliographic Citation Recommendation. In Proceedings of the 2017 ACM on 
-   Conference on Information and Knowledge Management (CIKM '17). Association 
-   for Computing Machinery, New York, NY, USA, 2271–2274. 
-   DOI:https://doi.org/10.1145/3132847.3133085
+
+### Reranking using SciBERT
+
+```
+python3 src/scibert_reranker.py --collection data/docs/collection.jsonl \
+                                --contexts data/topics+qrels/contexts.jsonl \
+                                --input output/run.t+a+k.description.paragraphs.bm25.txt \
+                                --output output/run.t+a+k.description.paragraphs.scibert.txt
+
+python3 src/scibert_reranker.py --collection data/docs/collection.jsonl \
+                                --contexts data/topics+qrels/sentences.jsonl \
+                                --input output/run.t+a+k.description.sentences.bm25.txt \
+                                --output output/run.t+a+k.description.sentences.scibert.txt
+
+python3 src/add-reranker.py output/run.t+a+k.description.paragraphs.bm25.txt \
+                            output/run.t+a+k.description.paragraphs.scibert.txt \
+                            output/run.t+a+k.description.paragraphs.bm25+scibert.txt
+                            
+python3 src/add-reranker.py output/run.t+a+k.description.sentences.bm25.txt \
+                            output/run.t+a+k.description.sentences.scibert.txt \
+                            output/run.t+a+k.description.sentences.bm25+scibert.txt
+```
+
+### Evaluating the retrieval models
+
+```
+./src/3_evaluate.sh
+
+recall_10               all 0.3440
+ndcg_cut_10             all 0.2937
+Evaluating output/run.t+a+k.description.paragraphs.bm25.txt
+recall_10               all 0.3358
+ndcg_cut_10             all 0.2827
+Evaluating output/run.t+a+k.description.paragraphs.scibert.txt
+recall_10               all 0.3397
+ndcg_cut_10             all 0.2307
+Evaluating output/run.t+a+k.description.sentences.bm25+scibert.txt
+recall_10               all 0.4030
+ndcg_cut_10             all 0.3231
+Evaluating output/run.t+a+k.description.sentences.bm25.txt
+recall_10               all 0.3903
+ndcg_cut_10             all 0.3156
+Evaluating output/run.t+a+k.description.sentences.scibert.txt
+recall_10               all 0.3340
+ndcg_cut_10             all 0.1761
+```

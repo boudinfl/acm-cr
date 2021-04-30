@@ -2,12 +2,27 @@
 
 BASENAME="data/topics+qrels/contexts"
 
-for RUN in output/*.txt
+for RUN in output/run.t+a+k.description.paragraphs*.txt
 do
     echo "Evaluating ${RUN}"
     # -m P.30
     # -q
-    anserini/tools/eval/trec_eval.9.0.4/trec_eval -m recall.10 -q \
+    anserini/tools/eval/trec_eval.9.0.4/trec_eval -m ndcg_cut.10 -q \
+                                            ${BASENAME}.qrels \
+                                            ${RUN} > ${RUN%.*}.results
+    anserini/tools/eval/trec_eval.9.0.4/trec_eval -m ndcg_cut.10 -m recall.10 \
+                                            ${BASENAME}.qrels \
+                                            ${RUN}
+done
+
+BASENAME="data/topics+qrels/sentences"
+
+for RUN in output/run.t+a+k.description.sentences*.txt
+do
+    echo "Evaluating ${RUN}"
+    # -m P.30
+    # -q
+    anserini/tools/eval/trec_eval.9.0.4/trec_eval -m ndcg_cut.10 -q \
                                             ${BASENAME}.qrels \
                                             ${RUN} > ${RUN%.*}.results
     anserini/tools/eval/trec_eval.9.0.4/trec_eval -m ndcg_cut.10 -m recall.10 \

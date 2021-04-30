@@ -9,3 +9,4 @@ data/docs/
 output/
 anserini/
 data/topics+qrels/contexts.jsonl
+data/topics+qrels/sentences.jsonl
